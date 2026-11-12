@@ -1,0 +1,19 @@
+{
+  "records": [
+    {
+      "version": "v34_contrasts_spatial",
+      "default_accuracy": 0.8192407247627265,
+      "oracle_single_threshold_accuracy": 0.8201035375323554,
+      "oracle_net_extra_correct": 6,
+      "oracle_separate_outer_fold_accuracy": 0.8232671843543284
+    },
+    {
+      "version": "v44_seed_ensemble",
+      "default_accuracy": 0.8198159332758125,
+      "oracle_single_threshold_accuracy": 0.82053494391717,
+      "oracle_net_extra_correct": 5,
+      "oracle_separate_outer_fold_accuracy": 0.8232671843543284
+    }
+  ],
+  "note": "Intentionally optimistic upper bounds using the same development labels for threshold choice and scoring. Not valid performance estimates, not an independent validation, never an exportable model. Used only to reject threshold-only improvement as the main path to >83%."
+}
