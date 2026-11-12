@@ -1,0 +1,105 @@
+{
+  "status": "complete",
+  "kind": "candidates",
+  "key": "mirror",
+  "version": "v74_Mitra_mirror4",
+  "phase_sha256": "a4e9acfadd6701543f4708b94be566a71fc0fb8da7c85f8b44db5827b5675f8d",
+  "execution_protocol_sha256": "bee85a7efaa983e04016cf5ed05c9790c628b1e085605436490e6da0bb501731",
+  "results": [
+    {
+      "seed": 20261112,
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.38273719736346345,
+      "oof_path": "artifacts/top5_group_phase/candidates/mirror/group_20261112.npz",
+      "oof_sha256": "2a217a59ff23661d54d47c650f6ddb1d3b4bc864a5c2944b62c11835391cd65b",
+      "legacy_reused": true,
+      "legacy_evidence": {
+        "oof": "artifacts/run_040/stability/group_20261112.npz",
+        "files": {
+          "artifacts/run_040/stability/protocol.json": "613cd0292b6c21368b5d0375c728d721d5f92de2512b4196fc7b36226b55e7f3",
+          "artifacts/run_040/stability/eligibility.json": "77f7f2c07f0cb8eadd5254e99472db10c2a03899eb21244777659c00d3feba2a",
+          "artifacts/run_040/protocol.json": "9509f502e03caaf0fcbf76c3ed68f16d6e7fdd1c5f35883d2d0d386884e012c4",
+          "artifacts/run_040/stability/group_20261112.json": "780cd3c69bd771255bf51da05c917714aaac823f0511c98d56f22ea91ac613f7",
+          "artifacts/run_040/stability/group_20261112.npz": "2a217a59ff23661d54d47c650f6ddb1d3b4bc864a5c2944b62c11835391cd65b"
+        },
+        "recorded_accuracy": 0.819672131147541,
+        "kind": "candidates",
+        "key": "mirror",
+        "seed": 20261112,
+        "sha_provenance": "OOF SHA pinned at new phase freeze, not retrospectively claimed as an old signed hash"
+      },
+      "folds": []
+    },
+    {
+      "seed": 20261115,
+      "accuracy": 0.8146390566580385,
+      "log_loss": 0.38132409746025847,
+      "oof_path": "artifacts/top5_group_phase/candidates/mirror/group_20261115.npz",
+      "oof_sha256": "ee83c76a96666f7177e0aba737b9c900ad32156321e804216acc0b5ed37b3ac0",
+      "legacy_reused": false,
+      "legacy_evidence": null,
+      "folds": [
+        {
+          "fold": 0,
+          "fit_seed": 20261115,
+          "train_ids_sha256": "6e7a22cb12c673293269f2ba7b4cc3e731e0ff5215279786e6952d1ff5f41b7f",
+          "query_ids_sha256": "6e79cf4a47c1e9d45ee29fc0277c60dc6fec5154a0dd50e4b9ca78448438c232",
+          "group_overlap": 0,
+          "seconds": 74.82079608296044
+        },
+        {
+          "fold": 1,
+          "fit_seed": 20261116,
+          "train_ids_sha256": "253404980cb66c10726f394771a84f59f863193a534a7044ff79637aa740cb5c",
+          "query_ids_sha256": "df84d4edd82d3b0e44ac1b42b1730ba923a374e88e165e7574634f7b18e81ace",
+          "group_overlap": 0,
+          "seconds": 45.842445999966
+        },
+        {
+          "fold": 2,
+          "fit_seed": 20261117,
+          "train_ids_sha256": "a993153f05cbc2a7de6173278c0a48b3ce237f79083c10cccc95cc37f1e1fe5e",
+          "query_ids_sha256": "1ffe6b4650af68cd218633208833c38352d1eb685c6db398c357e6def99fe6df",
+          "group_overlap": 0,
+          "seconds": 46.49319466704037
+        }
+      ]
+    },
+    {
+      "seed": 20261116,
+      "accuracy": 0.8134886396318666,
+      "log_loss": 0.3829008747594302,
+      "oof_path": "artifacts/top5_group_phase/candidates/mirror/group_20261116.npz",
+      "oof_sha256": "ba2315218ed6caf7f2dfe9729f25464a2354694806e159a9701a99bb5e558c1c",
+      "legacy_reused": false,
+      "legacy_evidence": null,
+      "folds": [
+        {
+          "fold": 0,
+          "fit_seed": 20261116,
+          "train_ids_sha256": "fd0fb36b0e8c5c3020270ce4dff6344e86d412e682edaccc1e276976483c3836",
+          "query_ids_sha256": "fceb6b3fa7ad7cfeb68875c07a79d55d2df834c4fc73fdfa9b3db3616d4f5344",
+          "group_overlap": 0,
+          "seconds": 79.26717383298092
+        },
+        {
+          "fold": 1,
+          "fit_seed": 20261117,
+          "train_ids_sha256": "6fecbd9b5e0b05b7037b7533d2d8cb9d02167ee8b10c368c40635438631fb3cb",
+          "query_ids_sha256": "352ab75dc44675e720460b2747140d4f78d76692b4c005d56f26aa82608ddeca",
+          "group_overlap": 0,
+          "seconds": 49.972315457998775
+        },
+        {
+          "fold": 2,
+          "fit_seed": 20261118,
+          "train_ids_sha256": "51a90ecbfbf06d74865fc36c26e577209848deff9e0e989861fd8789f2dab54b",
+          "query_ids_sha256": "3a6f2fe1b7c17514cc16d6edff0acadc7f9458b6cd961e80caf5cd24c92a1c56",
+          "group_overlap": 0,
+          "seconds": 50.331128874910064
+        }
+      ]
+    }
+  ],
+  "total_seconds": 348.0126776670804
+}
