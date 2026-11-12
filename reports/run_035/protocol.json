@@ -1,0 +1,144 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v67_FTTransformer_default": {
+      "context": false,
+      "model": "ft_transformer",
+      "package": "rtdl_revisiting_models",
+      "package_version": "0.0.2",
+      "n_blocks": 3,
+      "d_block": 192,
+      "attention_n_heads": 8,
+      "attention_dropout": 0.2,
+      "ffn_d_hidden_multiplier": 1.3333333333333333,
+      "ffn_dropout": 0.1,
+      "residual_dropout": 0.0,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "batch_size": 256,
+      "max_epochs": 500,
+      "patience": 40,
+      "inner_validation_fraction": 0.2,
+      "epoch_metric": "log_loss",
+      "refit_policy": "fresh_model_same_selected_epoch_count",
+      "missing_flags": "seven_binary_categorical_tokens",
+      "optimizer": "official_make_default_optimizer",
+      "device_policy": "mps_if_available_else_cpu",
+      "stage_budget_seconds": {
+        "probe": 300,
+        "screen": 3600,
+        "confirm": 10800,
+        "export": 3600
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "ft_transformer_candidate.py": "591d3eb4dec0f6f9408e4767a7b64d470b84b837645d44b0105438a12b80fdfc",
+    "test_ft_transformer_candidate.py": "02dc1d2aa20bb07ba06306bba8202e1b75ece18185389920e6dbdaf0da9ff3dd",
+    "reports/ft_transformer_protocol.json": "bf9a166420f8bb76ba669972b1fcda32a32c70e157d72afa6534017ab0302f4f"
+  },
+  "ft_transformer_environment_sha256": "437cea530e93ac354f0215b95e18008d2d9bdf7dbceb556dc38ac990b4321a68",
+  "ft_transformer_policy": {
+    "candidate": "v67_FTTransformer_default",
+    "settings": {
+      "package": "rtdl_revisiting_models",
+      "package_version": "0.0.2",
+      "n_blocks": 3,
+      "d_block": 192,
+      "attention_n_heads": 8,
+      "attention_dropout": 0.2,
+      "ffn_d_hidden_multiplier": 1.3333333333333333,
+      "ffn_dropout": 0.1,
+      "residual_dropout": 0.0,
+      "learning_rate": 0.0001,
+      "weight_decay": 1e-05,
+      "batch_size": 256,
+      "max_epochs": 500,
+      "patience": 40,
+      "inner_validation_fraction": 0.2,
+      "epoch_metric": "log_loss",
+      "refit_policy": "fresh_model_same_selected_epoch_count",
+      "missing_flags": "seven_binary_categorical_tokens",
+      "optimizer": "official_make_default_optimizer",
+      "device_policy": "mps_if_available_else_cpu",
+      "stage_budget_seconds": {
+        "probe": 300,
+        "screen": 3600,
+        "confirm": 10800,
+        "export": 3600
+      }
+    },
+    "input": {
+      "numeric": [
+        "Age",
+        "CabinNumber",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck"
+      ],
+      "categorical": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "VIP",
+        "Deck",
+        "Side"
+      ],
+      "missing_tokens": {
+        "source": [
+          "Age",
+          "CabinNumber",
+          "RoomService",
+          "FoodCourt",
+          "ShoppingMall",
+          "Spa",
+          "VRDeck"
+        ],
+        "cardinalities": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "policy": "Same compact13 input and preprocessing as run016 TabM; seven missing indicators are categorical tokens, not seven extra scaled continuous features. No passenger IDs, names, spatial expert or ensemble."
+    },
+    "preprocessing": "Training-only medians (all-missing fallback zero), log1p spending, constant numerical filtering, StandardScaler and categorical vocabularies; unknown=0, missing=1. Refit all preprocessing on full outertrain after epoch selection.",
+    "validation": "Existing dev and fixed outer3 folds. Stratified inner20% chooses minimum-logloss epoch, earlier wins exact tie. Reinitialize all weights, optimizer and preprocessing; refit full outertrain for exactly selected epochs. Outer validation labels never enter model fitting or epoch selection. Record actual optimizer steps in both stages.",
+    "budget": "500 epochs, patience40; explicit stage wall-clock budgets probe300/screen3600/confirm10800/export3600 seconds, checked between batches/prediction batches. Epoch-cap termination is recorded as budget_capped and cannot support a method-family rejection. Interrupted candidate has no completed CV score.",
+    "reporting": "Single initialization per outer fold for first method screen. Report every fold, pooled accuracy/logloss and training curves. Historical TabM shares input/preprocessing but differs in model/training recipe; v44 has extra engineering and is a practical best baseline, not a pure architecture control. Failure only evaluates this recipe.",
+    "resources": "Float32 MPS when available, otherwise CPU; backend failure aborts rather than silently changing training mid-run. MPS memory values are snapshots; RSS is process-lifetime maximum. Full model stored on CPU with preprocessing and selected-epoch metadata.",
+    "sources": [
+      "https://github.com/yandex-research/rtdl-revisiting-models/blob/main/package/rtdl_revisiting_models.py",
+      "https://github.com/yandex-research/rtdl-revisiting-models/blob/main/package/README.md",
+      "https://github.com/yandex-research/rtdl-revisiting-models/blob/main/package/example.ipynb"
+    ],
+    "notes": "Official library defaults and optimizer parameter groups. Random initialization, no pretrained weights, no downloaded predictions. Probe is resource/backprop/serialization only, not accuracy or CV."
+  }
+}

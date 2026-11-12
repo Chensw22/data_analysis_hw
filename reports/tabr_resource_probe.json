@@ -1,0 +1,55 @@
+{
+  "training_rows": 4636,
+  "query_rows": 128,
+  "epochs": 3,
+  "epoch_log": [
+    {
+      "epoch": 1,
+      "training_bce": 0.5114970755947367,
+      "optimizer_steps": 19,
+      "seconds": 6.470288374985103,
+      "resources": {
+        "max_rss_bytes": 535134208,
+        "mps_current_allocated_bytes": 18204160,
+        "mps_driver_allocated_bytes": 1178419200,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "epoch": 2,
+      "training_bce": 0.43626419524883175,
+      "optimizer_steps": 19,
+      "seconds": 2.0494939999771304,
+      "resources": {
+        "max_rss_bytes": 535134208,
+        "mps_current_allocated_bytes": 18204160,
+        "mps_driver_allocated_bytes": 1178419200,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "epoch": 3,
+      "training_bce": 0.4266956068247531,
+      "optimizer_steps": 19,
+      "seconds": 2.178854208032135,
+      "resources": {
+        "max_rss_bytes": 535134208,
+        "mps_current_allocated_bytes": 18204160,
+        "mps_driver_allocated_bytes": 1178419200,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    }
+  ],
+  "optimizer_steps": 57,
+  "training_seconds": 10.699138500029221,
+  "total_seconds": 10.927626292046625,
+  "retrieval_key_weight_max_change": 0.012742910534143448,
+  "device": "mps",
+  "parameters": 649781,
+  "max_rss_bytes": 535134208,
+  "serialization_max_absolute_difference": 0.0,
+  "valid_probabilities": true,
+  "accuracy_computed": false,
+  "note": "Resource probe only; weights are discarded and never reused by formal CV.",
+  "mps_driver_allocated_bytes": 1178419200
+}
