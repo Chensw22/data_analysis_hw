@@ -1,0 +1,238 @@
+{
+  "A_eligible": false,
+  "S_supported": false,
+  "A_checks": {
+    "original_screen_in_band": true,
+    "both_new_gains_mitra_positive": false,
+    "mean_new_gain_mitra_at_least_point1pp": false,
+    "old_group_gain_mitra_nonnegative": true,
+    "all_three_within_one_pp_v44": true,
+    "both_random_gains_mitra_nonnegative": true
+  },
+  "S_checks": {
+    "original_screen_above83": false,
+    "new_mean_above83": false,
+    "both_new_gains_v44_positive": true,
+    "mean_new_gain_v44_above_one_pp": false,
+    "old_group_gain_v44_positive": true,
+    "new_mean_cluster_lower_positive": false
+  },
+  "automatic_upload_ready": false,
+  "submission_checks_pending": [
+    "export/source identity",
+    "duplicate file",
+    "official allowance"
+  ],
+  "status": "complete",
+  "candidate": "v80_MitraCat_mean",
+  "results": [
+    {
+      "kind": "screen",
+      "seed": 20261112,
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3758781139960661,
+      "vs_v44": {
+        "gain": -0.0001438021282714984,
+        "reference_accuracy": 0.8198159332758125,
+        "corrections": 85,
+        "regressions": 86
+      },
+      "vs_mitra": {
+        "gain": 0.0031636468219729654,
+        "reference_accuracy": 0.816508484325568,
+        "corrections": 108,
+        "regressions": 86
+      },
+      "oof_sha256": "8a06302dc967275ca2399a798badc05bc225e15bfa0e233b05e21e1787a3a240"
+    },
+    {
+      "kind": "random",
+      "seed": 20261113,
+      "accuracy": 0.8166522864538395,
+      "log_loss": 0.3763424629415028,
+      "vs_v44": {
+        "gain": 0.0030198446937014668,
+        "reference_accuracy": 0.813632441760138,
+        "corrections": 81,
+        "regressions": 60
+      },
+      "vs_mitra": {
+        "gain": 0.0012942191544434857,
+        "reference_accuracy": 0.8153580672993961,
+        "corrections": 101,
+        "regressions": 92
+      },
+      "oof_sha256": "317c452042ee3de0c67f34d495b11a5826262c704a972a70e3df4c579f6f647a"
+    },
+    {
+      "kind": "random",
+      "seed": 20261114,
+      "accuracy": 0.8166522864538395,
+      "log_loss": 0.37790982066659473,
+      "vs_v44": {
+        "gain": 0.001725625539257981,
+        "reference_accuracy": 0.8149266609145815,
+        "corrections": 91,
+        "regressions": 79
+      },
+      "vs_mitra": {
+        "gain": 0.0008628127696289905,
+        "reference_accuracy": 0.8157894736842105,
+        "corrections": 100,
+        "regressions": 94
+      },
+      "oof_sha256": "a9dcb5d5f4e08c3234d1daa81d3ed8f10d7ba0b60165212b088b39b9cd8d9548"
+    },
+    {
+      "kind": "group",
+      "seed": 20261112,
+      "accuracy": 0.81765890135174,
+      "log_loss": 0.3790543007633912,
+      "vs_v44": {
+        "gain": 0.0031636468219729654,
+        "reference_accuracy": 0.814495254529767,
+        "corrections": 98,
+        "regressions": 76
+      },
+      "vs_mitra": {
+        "gain": 0.0007190106413574921,
+        "reference_accuracy": 0.8169398907103825,
+        "corrections": 94,
+        "regressions": 89
+      },
+      "oof_sha256": "c86e3c7cbf2a4819f4fc2b30249d49dd8e97fa152ceab2b4d6a54c592701e18e"
+    },
+    {
+      "kind": "group",
+      "seed": 20261115,
+      "accuracy": 0.8133448375035951,
+      "log_loss": 0.37788048451438294,
+      "vs_v44": {
+        "gain": 0.0001438021282714984,
+        "reference_accuracy": 0.8132010353753235,
+        "corrections": 86,
+        "regressions": 85
+      },
+      "vs_mitra": {
+        "gain": -0.0011504170261719873,
+        "reference_accuracy": 0.814495254529767,
+        "corrections": 93,
+        "regressions": 101
+      },
+      "oof_sha256": "a486f268abf0f5bbc5991e5acc3e29b1e0c5fbbbe0c6a8c56b58e2cbc9d8f0af"
+    },
+    {
+      "kind": "group",
+      "seed": 20261116,
+      "accuracy": 0.8137762438884095,
+      "log_loss": 0.37955197320400197,
+      "vs_v44": {
+        "gain": 0.0023008340523439745,
+        "reference_accuracy": 0.8114754098360656,
+        "corrections": 84,
+        "regressions": 68
+      },
+      "vs_mitra": {
+        "gain": 0.0001438021282714984,
+        "reference_accuracy": 0.813632441760138,
+        "corrections": 96,
+        "regressions": 95
+      },
+      "oof_sha256": "a555b78fc51dbcb31975c8e1640f9da17f255c375687f4709841ab1812b4d7e0"
+    }
+  ],
+  "paired_cluster_sensitivity": {
+    "20261112_vs_v44": {
+      "point_gain": 0.0031636468219729654,
+      "lower95": -0.00043209143076522233,
+      "upper95": 0.0068699750198822854,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "20261115_vs_v44": {
+      "point_gain": 0.0001438021282714984,
+      "lower95": -0.003488017466575948,
+      "upper95": 0.003954891300296442,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "20261116_vs_v44": {
+      "point_gain": 0.0023008340523439745,
+      "lower95": -0.0012898373036498412,
+      "upper95": 0.0058299893673491735,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "new_mean_vs_v44": {
+      "point_gain": 0.0012223180903077366,
+      "lower95": -0.0015877884834465828,
+      "upper95": 0.004048883465227498,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "20261112_vs_mitra": {
+      "point_gain": 0.0007190106413574921,
+      "lower95": -0.0031273211835175715,
+      "upper95": 0.004643283785207816,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "20261115_vs_mitra": {
+      "point_gain": -0.0011504170261719873,
+      "lower95": -0.005177770274279107,
+      "upper95": 0.0027489543114543025,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "20261116_vs_mitra": {
+      "point_gain": 0.0001438021282714984,
+      "lower95": -0.0038978053210409567,
+      "upper95": 0.004208052591113974,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    },
+    "new_mean_vs_mitra": {
+      "point_gain": -0.0005033074489502444,
+      "lower95": -0.0036715547703252732,
+      "upper95": 0.002517370035119369,
+      "replicates": 2000,
+      "seed": 20261119,
+      "groups": 5201,
+      "unit": "whole PassengerId group",
+      "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+    }
+  },
+  "phase_sha256": "8b6af37d1eebd773cfb13f649ba28162feb30b7cafb2218d4ec8aeb263470b2c",
+  "policy_sha256": "1335b701c831ab3d070a5b1c3968a252249ee1dc74e97752b7f92fc84aff8e63",
+  "authorization_sha256": "75719319f7c29dd839f465187196591c0dc736e5b650c5bc148ff921e551f6b2",
+  "weights": {
+    "v44": 0.5,
+    "mitra": 0.5
+  },
+  "threshold": 0.5,
+  "disclosure": "All models and partitions have been observed before. Blend recipe is newly fixed; recycled development validation is adaptive, not independent confirmation. Old failures and phases unchanged. A is an experimental online-test gate, not a claim of >1pp practical superiority.",
+  "seconds": 0.9890735419467092,
+  "model_fits": 0,
+  "upload_attempted": false
+}

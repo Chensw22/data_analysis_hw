@@ -267,6 +267,18 @@
       "log_loss": 0.39458476745499454,
       "seconds": 1.2282606250373647,
       "gain_vs_v44_pp": -0.8196721311475419
+    },
+    {
+      "method": "CatBoost spatial / Mitra-v2 equal mean",
+      "run": "run_045",
+      "version": "v80_MitraCat_mean",
+      "inputs": "two frozen pipelines",
+      "scope": "fixed .5/.5 probability mean of matched OOF; no model refit or weight search",
+      "status": "completed",
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3758781139960661,
+      "seconds": 0.9890735419467092,
+      "gain_vs_v44_pp": -0.01438021282714752
     }
   ]
 }

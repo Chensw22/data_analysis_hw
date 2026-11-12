@@ -1,0 +1,148 @@
+{
+  "status": "complete",
+  "version": "v79_Mitra12_mean",
+  "seed": 20261112,
+  "generations": [
+    "v1",
+    "v2"
+  ],
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "checkpoints": {
+    "v1": {
+      "directory": "artifacts/pretrained/mitra-v1",
+      "revision": "c425e9fa0910a6be1c494321792e7ba2a1367b1a",
+      "sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+      "bytes": 302717904
+    },
+    "v2": {
+      "directory": "artifacts/pretrained/mitra-v2",
+      "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+      "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "bytes": 302717904
+    }
+  },
+  "full_support_rows": 4636,
+  "query_rows": 2318,
+  "training_ids_sha256": "7265b7317950b309b0250fd85c2fde8e0c98893feef8305c4ab6e9e93acf5299",
+  "prediction_ids_sha256": "4940d09cb53b57c4b98757a8b46215ba26976600623ce4d5836aa58f4a2f1b56",
+  "input_columns": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side"
+  ],
+  "query_chunk": 2318,
+  "components": [
+    {
+      "generation": "v1",
+      "cache_hit": false,
+      "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+      "full_support_rows": 4636,
+      "preprocessing_mirror": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "fit_metadata": {
+        "generation": "v1",
+        "seed": 20261112,
+        "optimizer_steps": 0,
+        "full_support_rows": 4636,
+        "training_ids_sha256": "7265b7317950b309b0250fd85c2fde8e0c98893feef8305c4ab6e9e93acf5299",
+        "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19"
+      },
+      "seconds": 11.576319625019096,
+      "resources_after_release": {
+        "max_rss_bytes": 1041022976,
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 737280,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      },
+      "probabilities_sha256": "056a41f7cbd6356797d61cbafce9f3a203bfe12181478c87bdf5855ed6dfe884"
+    },
+    {
+      "generation": "v2",
+      "cache_hit": false,
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "full_support_rows": 4636,
+      "preprocessing_mirror": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "fit_metadata": {
+        "status": "fit_complete",
+        "recipe": "zero-shot",
+        "seed": 20261112,
+        "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+        "training_rows": 4636,
+        "training_ids_sha256": "7265b7317950b309b0250fd85c2fde8e0c98893feef8305c4ab6e9e93acf5299",
+        "full_prediction_support": true,
+        "query_chunk": 2318,
+        "precision": "mps_bfloat16_autocast",
+        "inner_history": [],
+        "refit_history": [],
+        "selected_steps": 0,
+        "validation_support_order": "fixed_training_order_no_episode_rng_consumption",
+        "refit_optimizer_steps": 0,
+        "refit_seconds": 3.330642357468605e-07,
+        "parameters": 75670026,
+        "feature_count": 13,
+        "resources_after_refit": {
+          "max_rss_bytes": 1041022976,
+          "mps_current_bytes": 302958592,
+          "mps_driver_bytes": 311115776,
+          "mps_recommended_max_bytes": 12713115648,
+          "mps_measurement": "snapshots_not_peak"
+        },
+        "seconds": 0.28396258305292577,
+        "fresh_refit_from_original_checkpoint": true
+      },
+      "seconds": 11.50222979101818,
+      "resources_after_release": {
+        "max_rss_bytes": 1041022976,
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 737280,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      },
+      "probabilities_sha256": "bbe2d69ae4e83a4a9dc2835ede2c4dd589c421cb78a07667ce58a94d9ee07d49"
+    }
+  ],
+  "completed_components": 2,
+  "seconds": 23.310395334032364,
+  "probability_sha256": "f8f965cd05be97a6dd3c26a940852ada199c16c48045892bedd65095a0b38b68"
+}

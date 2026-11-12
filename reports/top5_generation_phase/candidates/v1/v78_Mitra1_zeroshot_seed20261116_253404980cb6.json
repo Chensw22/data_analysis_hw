@@ -1,0 +1,88 @@
+{
+  "status": "complete",
+  "version": "v78_Mitra1_zeroshot",
+  "seed": 20261116,
+  "generations": [
+    "v1"
+  ],
+  "weights": [
+    1.0
+  ],
+  "checkpoints": {
+    "v1": {
+      "directory": "artifacts/pretrained/mitra-v1",
+      "revision": "c425e9fa0910a6be1c494321792e7ba2a1367b1a",
+      "sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+      "bytes": 302717904
+    },
+    "v2": {
+      "directory": "artifacts/pretrained/mitra-v2",
+      "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+      "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "bytes": 302717904
+    }
+  },
+  "full_support_rows": 4636,
+  "query_rows": 2318,
+  "training_ids_sha256": "253404980cb66c10726f394771a84f59f863193a534a7044ff79637aa740cb5c",
+  "prediction_ids_sha256": "df84d4edd82d3b0e44ac1b42b1730ba923a374e88e165e7574634f7b18e81ace",
+  "input_columns": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side"
+  ],
+  "query_chunk": 2318,
+  "components": [
+    {
+      "generation": "v1",
+      "cache_hit": false,
+      "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+      "full_support_rows": 4636,
+      "preprocessing_mirror": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "fit_metadata": {
+        "generation": "v1",
+        "seed": 20261116,
+        "optimizer_steps": 0,
+        "full_support_rows": 4636,
+        "training_ids_sha256": "253404980cb66c10726f394771a84f59f863193a534a7044ff79637aa740cb5c",
+        "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19"
+      },
+      "seconds": 11.406847457983531,
+      "resources_after_release": {
+        "max_rss_bytes": 1181270016,
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 737280,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      },
+      "probabilities_sha256": "28bdbde065734727b50feec164a16e92a89c4001e9a6296c02ba5cc4f562ac2b"
+    }
+  ],
+  "completed_components": 1,
+  "seconds": 11.521152624976821,
+  "probability_sha256": "28bdbde065734727b50feec164a16e92a89c4001e9a6296c02ba5cc4f562ac2b"
+}

@@ -28,6 +28,7 @@ RECIPES = [
     ('Mitra-v2 unlabeled-roster context', '043', 'v77_Mitra_context20', 'compact13 + seven peer/context fields', 'fixed transductive attribute bundle; no target propagation'),
     ('Mitra-v1 pretrained inference', '044', 'v78_Mitra1_zeroshot', 'compact13', 'different pinned pretraining generation; zero-shot'),
     ('Mitra-v1/v2 fixed equal mean', '044', 'v79_Mitra12_mean', 'compact13', 'fixed equal probability mean; no learned weights'),
+    ('CatBoost spatial / Mitra-v2 equal mean', '045', 'v80_MitraCat_mean', 'two frozen pipelines', 'fixed .5/.5 probability mean of matched OOF; no model refit or weight search'),
 ]
 
 

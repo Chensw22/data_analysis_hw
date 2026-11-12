@@ -1,0 +1,338 @@
+{
+  "status": "complete",
+  "fixed_queue_complete": true,
+  "phase_sha256": "7b5cdad7d7a2df852ea2bcb98053d7f3a575a59347edd600bc71cd5ca51ccd71",
+  "policy_sha256": "ff5311f3467efb8db282729ed5a115f20781c7a22f46ad9b465b5fa231f071ca",
+  "authorization_sha256": "a6ace6e80c9c311dbcfe53bdf2e926e7cf6652829ada92b63d1720f5bbf28091",
+  "component_summary_sha256": {
+    "refs/mitra": "d78cb379487570fb8586a796875edaffd394eef7df12751e3efe75eb7e5f4e59",
+    "refs/v44": "aa0ad8208da61628b55d1e67b6897c0de5c827ae4816761805e8e18129651201",
+    "candidates/v1": "93ea6ad32996a3daa97c9bff19f53d4e4ad56c84100714f9237e90ab7fd73b85",
+    "candidates/mean": "22608dbce0aebce216186ad2b3b7fbaf50e1c7103715d90bac494eda24ffa2d2"
+  },
+  "candidates": {
+    "v1": {
+      "A_eligible": false,
+      "S_supported": false,
+      "A_checks": {
+        "original_screen_in_band": false,
+        "both_new_gains_mitra_positive": false,
+        "mean_new_gain_mitra_at_least_point1pp": false,
+        "old_group_gain_mitra_nonnegative": false,
+        "all_three_within_one_pp_v44": false
+      },
+      "S_checks": {
+        "original_screen_above83": false,
+        "new_mean_above83": false,
+        "both_new_gains_v44_positive": false,
+        "mean_new_gain_v44_above_one_pp": false,
+        "old_group_gain_v44_positive": false,
+        "new_mean_cluster_lower_positive": false
+      },
+      "automatic_upload_ready": false,
+      "submission_checks_pending": [
+        "export/source identity",
+        "duplicate file",
+        "official allowance"
+      ],
+      "candidate": "v78_Mitra1_zeroshot",
+      "original_screen_accuracy": 0.7995398331895313,
+      "results": [
+        {
+          "seed": 20261112,
+          "accuracy": 0.7991084268047167,
+          "vs_mitra": {
+            "gain": -0.017831463905665805,
+            "reference_accuracy": 0.8169398907103825,
+            "corrections": 151,
+            "regressions": 275
+          },
+          "vs_v44": {
+            "gain": -0.015386827725050331,
+            "reference_accuracy": 0.814495254529767,
+            "corrections": 212,
+            "regressions": 319
+          }
+        },
+        {
+          "seed": 20261115,
+          "accuracy": 0.8019844693701467,
+          "vs_mitra": {
+            "gain": -0.012510785159620362,
+            "reference_accuracy": 0.814495254529767,
+            "corrections": 159,
+            "regressions": 246
+          },
+          "vs_v44": {
+            "gain": -0.011216566005176877,
+            "reference_accuracy": 0.8132010353753235,
+            "corrections": 228,
+            "regressions": 306
+          }
+        },
+        {
+          "seed": 20261116,
+          "accuracy": 0.7991084268047167,
+          "vs_mitra": {
+            "gain": -0.014524014955421341,
+            "reference_accuracy": 0.813632441760138,
+            "corrections": 173,
+            "regressions": 274
+          },
+          "vs_v44": {
+            "gain": -0.012366983031348864,
+            "reference_accuracy": 0.8114754098360656,
+            "corrections": 214,
+            "regressions": 300
+          }
+        }
+      ],
+      "paired_cluster_sensitivity": {
+        "20261112_vs_mitra": {
+          "point_gain": -0.017831463905665805,
+          "lower95": -0.023563753192809705,
+          "upper95": -0.0119132120311033,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261115_vs_mitra": {
+          "point_gain": -0.012510785159620362,
+          "lower95": -0.017967339025540888,
+          "upper95": -0.006774237731808202,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261116_vs_mitra": {
+          "point_gain": -0.014524014955421341,
+          "lower95": -0.020164809705255294,
+          "upper95": -0.008984922759782297,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "new_mean_vs_mitra": {
+          "point_gain": -0.013517400057520852,
+          "lower95": -0.018244964229607936,
+          "upper95": -0.00882011121433097,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261112_vs_v44": {
+          "point_gain": -0.015386827725050331,
+          "lower95": -0.021682940838598508,
+          "upper95": -0.009123658268982291,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261115_vs_v44": {
+          "point_gain": -0.011216566005176877,
+          "lower95": -0.017826679381182365,
+          "upper95": -0.004730962756430379,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261116_vs_v44": {
+          "point_gain": -0.012366983031348864,
+          "lower95": -0.01831149160258081,
+          "upper95": -0.0061277569027253535,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "new_mean_vs_v44": {
+          "point_gain": -0.01179177451826287,
+          "lower95": -0.01716460170695065,
+          "upper95": -0.006167687580414443,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        }
+      },
+      "disclosure": "A new fixed model batch under unchanged group-primary rules, not another validation-design revision. All6954 development labels and group partitions12/15/16 have already been used. Previous mirror/context A_false decisions remain unchanged. No independent confirmation is claimed.",
+      "old_eligibility_unchanged": true
+    },
+    "mean": {
+      "A_eligible": false,
+      "S_supported": false,
+      "A_checks": {
+        "original_screen_in_band": true,
+        "both_new_gains_mitra_positive": false,
+        "mean_new_gain_mitra_at_least_point1pp": false,
+        "old_group_gain_mitra_nonnegative": false,
+        "all_three_within_one_pp_v44": true
+      },
+      "S_checks": {
+        "original_screen_above83": false,
+        "new_mean_above83": false,
+        "both_new_gains_v44_positive": false,
+        "mean_new_gain_v44_above_one_pp": false,
+        "old_group_gain_v44_positive": false,
+        "new_mean_cluster_lower_positive": false
+      },
+      "automatic_upload_ready": false,
+      "submission_checks_pending": [
+        "export/source identity",
+        "duplicate file",
+        "official allowance"
+      ],
+      "candidate": "v79_Mitra12_mean",
+      "original_screen_accuracy": 0.8116192119643371,
+      "results": [
+        {
+          "seed": 20261112,
+          "accuracy": 0.8117630140926085,
+          "vs_mitra": {
+            "gain": -0.005176876617773943,
+            "reference_accuracy": 0.8169398907103825,
+            "corrections": 85,
+            "regressions": 121
+          },
+          "vs_v44": {
+            "gain": -0.00273224043715847,
+            "reference_accuracy": 0.814495254529767,
+            "corrections": 191,
+            "regressions": 210
+          }
+        },
+        {
+          "seed": 20261115,
+          "accuracy": 0.8106125970664366,
+          "vs_mitra": {
+            "gain": -0.003882657463330457,
+            "reference_accuracy": 0.814495254529767,
+            "corrections": 90,
+            "regressions": 117
+          },
+          "vs_v44": {
+            "gain": -0.0025884383088869713,
+            "reference_accuracy": 0.8132010353753235,
+            "corrections": 195,
+            "regressions": 213
+          }
+        },
+        {
+          "seed": 20261116,
+          "accuracy": 0.8091745757837217,
+          "vs_mitra": {
+            "gain": -0.004457865976416451,
+            "reference_accuracy": 0.813632441760138,
+            "corrections": 97,
+            "regressions": 128
+          },
+          "vs_v44": {
+            "gain": -0.0023008340523439745,
+            "reference_accuracy": 0.8114754098360656,
+            "corrections": 188,
+            "regressions": 204
+          }
+        }
+      ],
+      "paired_cluster_sensitivity": {
+        "20261112_vs_mitra": {
+          "point_gain": -0.005176876617773943,
+          "lower95": -0.009476651909933952,
+          "upper95": -0.0011670070604529357,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261115_vs_mitra": {
+          "point_gain": -0.003882657463330457,
+          "lower95": -0.007639116604894364,
+          "upper95": 0.00028608312874779326,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261116_vs_mitra": {
+          "point_gain": -0.004457865976416451,
+          "lower95": -0.008608395530779744,
+          "upper95": -0.00028846041935047246,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "new_mean_vs_mitra": {
+          "point_gain": -0.004170261719873454,
+          "lower95": -0.0073859061372847324,
+          "upper95": -0.0009286214639025886,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261112_vs_v44": {
+          "point_gain": -0.00273224043715847,
+          "lower95": -0.008350858503607948,
+          "upper95": 0.002851501009722238,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261115_vs_v44": {
+          "point_gain": -0.0025884383088869713,
+          "lower95": -0.008599038674805319,
+          "upper95": 0.003183759286732466,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "20261116_vs_v44": {
+          "point_gain": -0.0023008340523439745,
+          "lower95": -0.00833366311699525,
+          "upper95": 0.0033396526723812347,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        },
+        "new_mean_vs_v44": {
+          "point_gain": -0.002444636180615473,
+          "lower95": -0.0071975688460345225,
+          "upper95": 0.0022436379060309635,
+          "replicates": 2000,
+          "seed": 20261119,
+          "groups": 5201,
+          "unit": "whole PassengerId group",
+          "limitation": "Fixed adaptively selected development OOF; not independent or multiplicity-corrected evidence."
+        }
+      },
+      "disclosure": "A new fixed model batch under unchanged group-primary rules, not another validation-design revision. All6954 development labels and group partitions12/15/16 have already been used. Previous mirror/context A_false decisions remain unchanged. No independent confirmation is claimed.",
+      "old_eligibility_unchanged": true
+    }
+  },
+  "disclosure": "A new fixed model batch under unchanged group-primary rules, not another validation-design revision. All6954 development labels and group partitions12/15/16 have already been used. Previous mirror/context A_false decisions remain unchanged. No independent confirmation is claimed."
+}

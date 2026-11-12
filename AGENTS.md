@@ -23,3 +23,5 @@
 - 用户随后要求“A的还有几个没跑，都跑一下”：按上一张A档代表方案表，授权尚未线上评测的TabPFN8、LightGBM线性叶+空间模型、TabICL工程特征版各一次提交，保留原配置并全数据拟合；这是新的三次批次例外，记录见reports/a_tier_batch_20261112/authorization.json，不扩展为51个A档微调/对照配置批量上传。
 - A档补齐批次也已全部完成并消耗授权：LightGBM线性叶+空间模型58276576得0.80289，TabPFN8提交58276627得0.80687，TabICL提交58276759得0.80734。8个A档代表都有线上结果，Mitra仍最高0.81155；2026-11-12T15:03:57Z账号最佳142/2039。最新汇总reports/a_tier_batch_20261112/RESULTS.md；当时每日剩余2次不代表有继续上传授权。
 - 2026-11-12用户质疑过早陷入微调，当前切换为方法级广度筛选：先完成FT-Transformer、TabR检索网络、SCARF自监督及匹配scratch对照，再统一决定值得调参的路线。冻结合理首轮recipe，未收敛或资源中断标记inconclusive；一次配置失败不能否定整个模型族。已有未运行的structure_counts保留代码但暂不启动，以免继续扩张小特征路线。
+
+- 后续固定模型批次沿用group-primary门槛，不改写此前失败：v78/v79两代Mitra队列已全部完成均A/S=false；v80树模型与Mitra各半平均额外要求两次random不低于Mitra，完整六套OOF完成后仍A/S=false。证据分别见reports/top5_generation_phase和reports/top5_crossfamily_phase。这些划分均已使用，不能称独立验证。
