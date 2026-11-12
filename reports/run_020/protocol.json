@@ -1,0 +1,282 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v46_nested_structure_search": {
+      "context": false,
+      "model": "nested_structure_search",
+      "inner_folds": 3,
+      "inner_seed_offset": 10000,
+      "learning_rate": 0.045,
+      "paths": [
+        {
+          "grow_policy": "SymmetricTree",
+          "depth": 6,
+          "l2_leaf_reg": 5
+        },
+        {
+          "grow_policy": "SymmetricTree",
+          "depth": 6,
+          "l2_leaf_reg": 15
+        },
+        {
+          "grow_policy": "Depthwise",
+          "depth": 6,
+          "min_data_in_leaf": 30,
+          "l2_leaf_reg": 5
+        },
+        {
+          "grow_policy": "Depthwise",
+          "depth": 6,
+          "min_data_in_leaf": 30,
+          "l2_leaf_reg": 15
+        },
+        {
+          "grow_policy": "Lossguide",
+          "depth": 8,
+          "max_leaves": 31,
+          "min_data_in_leaf": 30,
+          "l2_leaf_reg": 5
+        },
+        {
+          "grow_policy": "Lossguide",
+          "depth": 8,
+          "max_leaves": 31,
+          "min_data_in_leaf": 30,
+          "l2_leaf_reg": 15
+        }
+      ],
+      "checkpoints": [
+        350,
+        700,
+        1400
+      ],
+      "threshold": 0.5,
+      "spatial": {
+        "knots": 5,
+        "C": 0.1,
+        "weight": 0.5
+      },
+      "selection_order": [
+        "pooled_correct_count_desc",
+        "pooled_log_loss_asc",
+        "configuration_index_asc"
+      ],
+      "stage_budget_seconds": 1200
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "nested_structure_search.py": "70e5639a7658e600ceee624f0c52b8dc7fec322ed42b83b96a60f58b66171612",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "nested_structure_policy": "Fixed outer3 folds unchanged. Within each outer training set, inner3-fold OOF selects one of 18 complete v34 spatial pipelines using pooled accuracy, then Logloss, then frozen configuration index. Six Cat paths train to1400; ntree_end350/700/1400 reuses checkpoints. Every inner split fits its own training-only spatial expert, shared only across that split's six paths. Fresh complete outer-training Cat and spline refits use chosen exact tree count. No outer-validation labels for selection. Threshold .5 throughout. The 1200s budget covers the entire invoked stage, including baseline, all outer folds and confirmations. Timeout marks incomplete and cannot create selection, gate, or export outputs for that stage. Existing iterate gate compares original v6; any >83% candidate still requires v44 stability comparison before online approval.",
+  "nested_search_settings": {
+    "inner_folds": 3,
+    "inner_seed_offset": 10000,
+    "learning_rate": 0.045,
+    "paths": [
+      {
+        "grow_policy": "SymmetricTree",
+        "depth": 6,
+        "l2_leaf_reg": 5
+      },
+      {
+        "grow_policy": "SymmetricTree",
+        "depth": 6,
+        "l2_leaf_reg": 15
+      },
+      {
+        "grow_policy": "Depthwise",
+        "depth": 6,
+        "min_data_in_leaf": 30,
+        "l2_leaf_reg": 5
+      },
+      {
+        "grow_policy": "Depthwise",
+        "depth": 6,
+        "min_data_in_leaf": 30,
+        "l2_leaf_reg": 15
+      },
+      {
+        "grow_policy": "Lossguide",
+        "depth": 8,
+        "max_leaves": 31,
+        "min_data_in_leaf": 30,
+        "l2_leaf_reg": 5
+      },
+      {
+        "grow_policy": "Lossguide",
+        "depth": 8,
+        "max_leaves": 31,
+        "min_data_in_leaf": 30,
+        "l2_leaf_reg": 15
+      }
+    ],
+    "checkpoints": [
+      350,
+      700,
+      1400
+    ],
+    "threshold": 0.5,
+    "spatial": {
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "selection_order": [
+      "pooled_correct_count_desc",
+      "pooled_log_loss_asc",
+      "configuration_index_asc"
+    ],
+    "stage_budget_seconds": 1200
+  },
+  "nested_configurations_in_tie_order": [
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 5,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 5,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 5,
+      "iterations": 1400
+    },
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 15,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 15,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "SymmetricTree",
+      "depth": 6,
+      "l2_leaf_reg": 15,
+      "iterations": 1400
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 1400
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "Depthwise",
+      "depth": 6,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 1400
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 5,
+      "iterations": 1400
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 350
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 700
+    },
+    {
+      "grow_policy": "Lossguide",
+      "depth": 8,
+      "max_leaves": 31,
+      "min_data_in_leaf": 30,
+      "l2_leaf_reg": 15,
+      "iterations": 1400
+    }
+  ]
+}
