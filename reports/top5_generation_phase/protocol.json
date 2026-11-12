@@ -1,0 +1,368 @@
+{
+  "status": "frozen_before_new_group_fits",
+  "committed_at": "3203139a702e593cfbb89de6d75dfc124dab1ab4",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "test_mitra_candidate.py": "35a76996da1026f57565d987cbc3c1bb3dd62d19585f21009a41a54af842a65d",
+    "reports/mitra_protocol.json": "fda5f03e70d8f98429e09ff9c57c8e7a7cec9df96e0d575fb816756ab1de5767",
+    "third_party/mitra/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/enums.py": "c2bdead8e881820e63cbabc7cb45f0edf12827bc1ca12b0f6cadc2e987c4bec3",
+    "third_party/mitra/_internal/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "third_party/mitra/_internal/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/models/base.py": "a6fa64692b6e70093e83b91d188b981ee2c3759d7cace051a129c9b9714209a6",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "third_party/mitra/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra/NOTICE": "be9e15b71071b6d9a86114088883706817f5ce14fb2539ee382df5413ace2fa4",
+    "third_party/mitra/MODEL_CARD.md": "baab54ff0be437c82b1ae616cf19a41820815e274cdda017f0046dd541c86ca8",
+    "reports/mitra_adaptation_review.json": "39a3edb8098422da148b084fdc731a16d5dd365f59295abc0ccbca6936cbb3f9",
+    "seed_ensemble.py": "807f9a9467101fc5af509a43a3301f6a6598fdf2c923cc04ff0ae4ae9f58f647",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "mitra_mirror_ensemble.py": "719fc2e55a458e05bb0649cc9b433ac9313a86e9871f850019549d1e28aa2066",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_mirror_ensemble_review.json": "9e5bf976dbdff352050749048b6e336236ed2af28c632a5ccf174c1817f47437",
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "test_audit_top5_references.py": "1b965877abcad8ace4d431de775886ac5d74416d9dce73e3133ea30e32fef4e9",
+    "test_mitra_mirror_ensemble.py": "26668c31a3867ef67fa46c7e7d13e5b18f48d1de7aec211f202d009d65ffc300",
+    "test_top5_validate.py": "61cdab38f1f65a2330100b5c02bbff73f3c99d9d05d2e80d9576ab21cbfa9dcf",
+    "top5_validate.py": "9fd5877070da3ae1cf451415362c9dc7f7bab8ed0f87c024c922be3be0bda8e1",
+    "mitra_context_candidate.py": "57d1315247e650cfed7deb864dd450b73fe7410acab89cb76b0b6cd3d161b801",
+    "reports/top5_mitra_context_review.json": "a27409ab64bbcebac847e2dc03c7c4b7dc4adbdf56efb7cd9df25defaa0e7012",
+    "test_mitra_context_candidate.py": "f2cedb05af418d76dfde030a2a1fd6c3ffbe72149b105e4d8180cf9feba45e83",
+    "top5_group_evaluate.py": "d76686f4557e58358edc7c3966d4862f4442c2839390d42cb86458b5558055ef",
+    "test_top5_group_evaluate.py": "811cb8b41b848898e6088f9e7ecaa703e5415efc18fb92bdb8657a21d7fd5500",
+    "reports/top5_group_validation_review.json": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+    "reports/top5_group_authorization.json": "24b0c5fd8563afa3a92d305040b6c413ff6367a953f10ef9cfaf9f91a9e1d831",
+    "mitra_generation_candidate.py": "62ee16502ea986880666efb269fcbccb54d59ebf3d0126f2730e6ffe7b42c845",
+    "reports/mitra_v1_checkpoint.json": "a9feb63342c1d9086f13d4041312f7c362eb5dc36c2d29108bb39d826e0f8dc2",
+    "reports/top5_generation_authorization.json": "a6ace6e80c9c311dbcfe53bdf2e926e7cf6652829ada92b63d1720f5bbf28091",
+    "reports/top5_generation_validation_review.json": "ff5311f3467efb8db282729ed5a115f20781c7a22f46ad9b465b5fa231f071ca",
+    "reports/top5_mitra_v1_review.json": "c47d7c0501377de62ce790fa3e2aea1a023d470118c43edb3a510147f10f36bc",
+    "test_mitra_generation_candidate.py": "83301f49669be3cf43522e89df7016f056ca0b6d968d05e8c7ae9d450bc97f10",
+    "test_top5_generation_evaluate.py": "9603f0fae2d08cb825cdca37f36906b8d995c2227fbb4dca9f34ac481024cf67",
+    "third_party/mitra_v1/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra_v1/MODEL_CARD.md": "dff241257f8b5306844c5d1d7cc1ca409bda7638e25b3b634949e13f77c447ad",
+    "third_party/mitra_v1/NOTICE": "7206fc3bf5fc6bb4b6b8292a7f24ac0fe02fc70fc8c75b18c21bfbd326101897",
+    "top5_generation_evaluate.py": "80d85b65ccd64b1f0015e4d71a37edc805ff8005837c3ea85f7b030aa1e382b7"
+  },
+  "historical_files": {
+    "artifacts/run_038/protocol.json": "894695fb8803a480d89f4acf99229b93a395d286b66273d80c90fe91665bbb92",
+    "artifacts/run_019/protocol.json": "3e352df50c912a594b25554640d41e2c4fd22646417dfe18d6b95a3b2bc0d0b6",
+    "artifacts/run_040/protocol.json": "9509f502e03caaf0fcbf76c3ed68f16d6e7fdd1c5f35883d2d0d386884e012c4",
+    "artifacts/run_040/screen_results.csv": "88a9f7f40f85cc5a0d31526ab72a6f166be4c1bbd65bf8e2deecf596d87b33d4",
+    "artifacts/run_040/stability/eligibility.json": "77f7f2c07f0cb8eadd5254e99472db10c2a03899eb21244777659c00d3feba2a",
+    "artifacts/run_040/stability/protocol.json": "613cd0292b6c21368b5d0375c728d721d5f92de2512b4196fc7b36226b55e7f3",
+    "artifacts/run_043/protocol.json": "9edfbf9951e27faea0033063ff3e7fab1bec33789bc509015c1b6636fa236789",
+    "artifacts/run_043/screen_results.csv": "77246c0891c5e1990ecc8894a9ec1ef357330a16d0a461fd9c40f64753296f33",
+    "artifacts/run_040/v74_Mitra_mirror4_seed20261112.npz": "50e813bedd513d4b37a000cd7bb553addbfe31759840d2618e118f81e96e1185",
+    "artifacts/run_043/v77_Mitra_context20_seed20261112.npz": "58a2555346fed49b9e1505dcbcc771b0a57a1408d9a9edebc5c2ed9983a70968",
+    "artifacts/run_044/protocol.json": "9d376e20c007f301315ec0cbe7ba68e347cd5399832661a521ccb9fcaf1597a0",
+    "artifacts/run_044/screen_results.csv": "ce097a6799360495c6e6ecb21cae6b19734dbf9b04ceeb3e957fa6def273c9da",
+    "artifacts/top5_group_phase/protocol.json": "a4e9acfadd6701543f4708b94be566a71fc0fb8da7c85f8b44db5827b5675f8d",
+    "artifacts/top5_group_phase/protocol.sha256": "6af9fc30938fd23a4eef3fa21266576b0673b1ae91df346bf711b71e40a7bd49",
+    "artifacts/top5_group_phase/eligibility.json": "39d6cd5d419ffe6224fb25967cd33d1567546bb204163ac150cd0a39b7fe55b7",
+    "artifacts/top5_group_phase/eligibility.sha256": "928ebe27466d16de149ff4febc0b63a2fae0fe0e26fea35fa9170a739d25bcc6",
+    "artifacts/run_044/v78_Mitra1_zeroshot_seed20261112.npz": "e1769cac62f597bf243390da65346f7385f97f9313612366422a014f45fa7563",
+    "artifacts/run_044/v79_Mitra12_mean_seed20261112.npz": "c7ef45cd32532f5bd9faf3df217d0c30a7130e9a1d107b31cd57f5dcff787e41",
+    "artifacts/top5_group_phase/refs/mitra/summary.json": "435650d0ff78f3a93901a6d7c017761559bdb1e5f0a77f236692d2b679762569",
+    "artifacts/top5_group_phase/refs/mitra/protocol.json": "1619151b6cda26eb1ae29c8ee4769a6ca8508f3795782cfdb8ad6289e2b3a483",
+    "artifacts/top5_group_phase/refs/mitra/group_20261112.npz": "3c1d861c6af5e7a67d5750aedf2dc3b5d2200a63f0a5840c624aefa313f73569",
+    "artifacts/top5_group_phase/refs/mitra/group_20261115.npz": "5770d54efe0d27c6ec92cfebe94414a92551a5bd288522b77b54ecacb2dadf90",
+    "artifacts/top5_group_phase/refs/mitra/group_20261116.npz": "8f7840fbd7627b2161bae6913dd08c66ef61be04147d68eb1a1c1805cca709ab",
+    "artifacts/top5_group_phase/refs/v44/summary.json": "2fbf542360e21de0a755d57f32b3fc857cbab2707e9d512e991b52a9f56ace02",
+    "artifacts/top5_group_phase/refs/v44/protocol.json": "58c99350b34804b1c8c8e0883be8fecb7cbea61e6b685150f330e3a0f1aea0a2",
+    "artifacts/top5_group_phase/refs/v44/group_20261112.npz": "6f5f64b60ff5d383451d990f6c41d68c0250c60aa2c87405c4aecfac77e83ebe",
+    "artifacts/top5_group_phase/refs/v44/group_20261115.npz": "8a4f15961dc037b271a42d2dd6543ea7167334a5e82086e4c5cdb29563e6d202",
+    "artifacts/top5_group_phase/refs/v44/group_20261116.npz": "1276ae0436827f630a260eb529844f85f71e68716898716a320d501cd35e453f"
+  },
+  "candidates": {
+    "v1": {
+      "version": "v78_Mitra1_zeroshot",
+      "module": "mitra_generation_candidate",
+      "run": "run_044"
+    },
+    "mean": {
+      "version": "v79_Mitra12_mean",
+      "module": "mitra_generation_candidate",
+      "run": "run_044"
+    }
+  },
+  "references": {
+    "mitra": {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038"
+    },
+    "v44": {
+      "version": "v44_seed_ensemble",
+      "run": "run_019"
+    }
+  },
+  "seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "budgets_seconds": {
+    "refs": {
+      "v44": 1800,
+      "mitra": 1800
+    },
+    "candidates": {
+      "v1": 3600,
+      "mean": 3600
+    }
+  },
+  "environments": {
+    "v44": {
+      "PyYAML": "6.0.3",
+      "attrs": "26.1.0",
+      "bleach": "6.4.0",
+      "catboost": "1.2.10",
+      "certifi": "2026.10.23",
+      "charset-normalizer": "3.5.2",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "fastjsonschema": "2.22.3",
+      "fonttools": "4.68.0",
+      "graphviz": "0.21",
+      "idna": "3.20",
+      "joblib": "1.6.0",
+      "jsonschema": "4.26.0",
+      "jsonschema-specifications": "2025.9.1",
+      "jupyter_core": "5.9.1",
+      "jupytext": "1.19.6",
+      "kaggle": "2.2.5",
+      "kagglesdk": "0.1.38",
+      "kiwisolver": "1.5.1",
+      "lightgbm": "4.7.0",
+      "markdown-it-py": "4.3.0",
+      "matplotlib": "3.11.2",
+      "mdit-py-plugins": "0.7.0",
+      "mdurl": "0.1.2",
+      "narwhals": "2.28.0",
+      "nbformat": "5.11.1",
+      "numpy": "2.5.4",
+      "packaging": "26.3",
+      "pandas": "3.1.1",
+      "pillow": "13.0.0",
+      "platformdirs": "4.14.5",
+      "plotly": "7.1.0",
+      "protobuf": "7.36.2",
+      "pyparsing": "3.3.3",
+      "python-dateutil": "4.0.0",
+      "python-dotenv": "1.2.4",
+      "python-slugify": "9.1.3",
+      "referencing": "0.37.0",
+      "requests": "2.34.2",
+      "rpds-py": "2026.9.1",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "six": "1.17.0",
+      "text-unidecode": "1.3",
+      "threadpoolctl": "3.8.0",
+      "tqdm": "4.70.1",
+      "traitlets": "5.16.1",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.6",
+      "urllib3": "2.8.0",
+      "webencodings": "0.6.1",
+      "xgboost": "3.4.1"
+    },
+    "mitra": {
+      "Jinja2": "3.1.6",
+      "MarkupSafe": "3.0.4",
+      "PyYAML": "6.0.3",
+      "Pygments": "2.21.0",
+      "anyio": "4.16.0",
+      "catboost": "1.2.10",
+      "click": "8.5.1",
+      "cloudpickle": "3.1.2",
+      "contourpy": "1.4.0",
+      "cycler": "0.12.1",
+      "einops": "0.8.2",
+      "einx": "0.4.3",
+      "filelock": "4.2.10",
+      "fonttools": "4.68.0",
+      "frozendict": "2.5.1",
+      "fsspec": "2026.9.0",
+      "graphviz": "0.21",
+      "h11": "0.16.0",
+      "hf-xet": "1.8.0",
+      "httpcore2": "2.16.0",
+      "httpx2": "2.16.0",
+      "huggingface_hub": "2.4.0",
+      "idna": "3.20",
+      "iniconfig": "2.3.1",
+      "joblib": "1.6.0",
+      "kiwisolver": "1.5.1",
+      "loguru": "0.8.0",
+      "matplotlib": "3.11.2",
+      "mpmath": "1.3.0",
+      "narwhals": "2.28.0",
+      "networkx": "3.7",
+      "numpy": "2.5.4",
+      "packaging": "26.3",
+      "pandas": "3.1.1",
+      "pillow": "13.0.0",
+      "plotly": "7.1.0",
+      "pluggy": "1.7.0",
+      "pyparsing": "3.3.3",
+      "pytest": "9.2.0",
+      "python-dateutil": "4.0.0",
+      "safetensors": "0.8.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1",
+      "setuptools": "84.2.1",
+      "six": "1.17.0",
+      "sympy": "1.14.0",
+      "threadpoolctl": "3.8.0",
+      "torch": "2.13.0",
+      "tqdm": "4.70.1",
+      "truststore": "0.10.5",
+      "typing_extensions": "4.16.0",
+      "tzdata": "2026.6"
+    }
+  },
+  "data": {
+    "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+    "targets_sha256": "ff43be5be386a1dfa85e87009c7a8510cde267e94cd6e447efc7ce5a953825f4",
+    "group_ids_sha256": "7e7e02c4a762fc8c887e5ff26c64ed463066f8b2c3f159eddc3ba90f7a819dfc",
+    "passenger_ids_sha256": "805deca7c937af787fc8164ec2ef50512abf8c0e736f7ab1418bd460bf16cf41",
+    "engineered_schema": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side",
+      "MissingCount",
+      "TotalSpend",
+      "AllSpendingZero",
+      "SpendMissingCount",
+      "PaidServices",
+      "LuxurySpend",
+      "RoomService_log1p",
+      "RoomService_missing",
+      "FoodCourt_log1p",
+      "FoodCourt_missing",
+      "ShoppingMall_log1p",
+      "ShoppingMall_missing",
+      "Spa_log1p",
+      "Spa_missing",
+      "VRDeck_log1p",
+      "VRDeck_missing",
+      "Age_missing"
+    ],
+    "engineered_values_sha256": "2d61de518d77ac0aeb710bffc6e06641b59909d08d2c7d0c00ba475f5fed64b9"
+  },
+  "fold_hashes": {
+    "20261112": "b25ede216d418006be2d00d2635156898283325dcfacb17a58e7e160a8cce1e3",
+    "20261115": "87b9122523ac79ee7e321ceaf0aea5e46dc57c1d683a841b997a6396a66f5b8f",
+    "20261116": "109dfca37a9c113347406ac86e9bf374edae99e06ce9ac7227512ccce332d765"
+  },
+  "screen_evidence": {
+    "v1": {
+      "version": "v78_Mitra1_zeroshot",
+      "oof_path": "artifacts/run_044/v78_Mitra1_zeroshot_seed20261112.npz",
+      "oof_sha256": "e1769cac62f597bf243390da65346f7385f97f9313612366422a014f45fa7563",
+      "accuracy": 0.7995398331895313,
+      "log_loss": 0.41970895779031236,
+      "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071"
+    },
+    "mean": {
+      "version": "v79_Mitra12_mean",
+      "oof_path": "artifacts/run_044/v79_Mitra12_mean_seed20261112.npz",
+      "oof_sha256": "c7ef45cd32532f5bd9faf3df217d0c30a7130e9a1d107b31cd57f5dcff787e41",
+      "accuracy": 0.8116192119643371,
+      "log_loss": 0.39458476745499454,
+      "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071"
+    }
+  },
+  "legacy_caches": {
+    "refs/mitra": {
+      "oof": "artifacts/top5_reference_audit/mitra/group_20261112.npz",
+      "files": {
+        "artifacts/top5_reference_audit/mitra/summary.json": "d6849f2bb7e01e13bb7d477805028959ac5d7f5a2a7f5ec353857714b9efc123",
+        "artifacts/top5_reference_audit/mitra/protocol.json": "8b6207eacf7f9096e4ac1ae2351268a79153b6dfbee49509d3f6f2958ce84f8d",
+        "artifacts/run_038/protocol.json": "894695fb8803a480d89f4acf99229b93a395d286b66273d80c90fe91665bbb92",
+        "artifacts/top5_reference_audit/mitra/group_20261112.npz": "a3a2ea3df09a8eb2126bb62163698b0890cb66444d0730d8edeaf462e7bc0787"
+      },
+      "recorded_accuracy": 0.8169398907103825,
+      "kind": "refs",
+      "key": "mitra",
+      "seed": 20261112
+    },
+    "refs/v44": {
+      "oof": "artifacts/top5_reference_audit/v44/group_20261112.npz",
+      "files": {
+        "artifacts/top5_reference_audit/v44/summary.json": "a2ce8a6b7609b7a5e3c506959b5fe494c2838a5105393099e97ad89c06380ab9",
+        "artifacts/top5_reference_audit/v44/protocol.json": "db8275523c096ffe336654781bd924e1e1c7b4992fac0f6da9b527e2cf55e450",
+        "artifacts/run_019/protocol.json": "3e352df50c912a594b25554640d41e2c4fd22646417dfe18d6b95a3b2bc0d0b6",
+        "artifacts/top5_reference_audit/v44/group_20261112.npz": "d9f181c7053cef3b974e52c4f8459d031747a9cc6163b98145b82a1fc0a329b2"
+      },
+      "recorded_accuracy": 0.814495254529767,
+      "kind": "refs",
+      "key": "v44",
+      "seed": 20261112
+    }
+  },
+  "disclosure": "A new fixed model batch under unchanged group-primary rules, not another validation-design revision. All6954 development labels and group partitions12/15/16 have already been used. Previous mirror/context A_false decisions remain unchanged. No independent confirmation is claimed.",
+  "queue_completion_required_before_any_eligibility": true,
+  "fixed_primary_metric": "accuracy at0.5",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261119,
+  "reference_copy_policy": "All3seeds copied bitwise; legacy_reused describes original provenance, not new training.",
+  "reference_copy_manifest": {
+    "mitra": [
+      {
+        "seed": 20261112,
+        "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261112.npz",
+        "oof_sha256": "3c1d861c6af5e7a67d5750aedf2dc3b5d2200a63f0a5840c624aefa313f73569"
+      },
+      {
+        "seed": 20261115,
+        "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261115.npz",
+        "oof_sha256": "5770d54efe0d27c6ec92cfebe94414a92551a5bd288522b77b54ecacb2dadf90"
+      },
+      {
+        "seed": 20261116,
+        "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261116.npz",
+        "oof_sha256": "8f7840fbd7627b2161bae6913dd08c66ef61be04147d68eb1a1c1805cca709ab"
+      }
+    ],
+    "v44": [
+      {
+        "seed": 20261112,
+        "original_oof_path": "artifacts/top5_group_phase/refs/v44/group_20261112.npz",
+        "oof_sha256": "6f5f64b60ff5d383451d990f6c41d68c0250c60aa2c87405c4aecfac77e83ebe"
+      },
+      {
+        "seed": 20261115,
+        "original_oof_path": "artifacts/top5_group_phase/refs/v44/group_20261115.npz",
+        "oof_sha256": "8a4f15961dc037b271a42d2dd6543ea7167334a5e82086e4c5cdb29563e6d202"
+      },
+      {
+        "seed": 20261116,
+        "original_oof_path": "artifacts/top5_group_phase/refs/v44/group_20261116.npz",
+        "oof_sha256": "1276ae0436827f630a260eb529844f85f71e68716898716a320d501cd35e453f"
+      }
+    ]
+  },
+  "reference_phase_sha256": "a4e9acfadd6701543f4708b94be566a71fc0fb8da7c85f8b44db5827b5675f8d",
+  "reference_training_allowed": false
+}
