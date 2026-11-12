@@ -1,0 +1,109 @@
+{
+  "reviewed_at_utc": "2026-11-12T17:20:47.871512+00:00",
+  "decision": "Recommend at most one fixed zero-shot20-column context bundle versus original13-column v71, after a full-shape resource-only probe. No implementation or experiment approved by this report.",
+  "scope": "Only source/history review plus label-free attribute coverage. No Transported CSV column read, no target association, GPU, training, new scoring, environment or source edits.",
+  "coverage_audit": {
+    "already_tested_same_Mitra_recipe": false,
+    "evidence": "run038 fit uses matrices[False], MitraPreprocessor explicitly selects COMPACT13; mirror and lastblock also read matrices[False] and inherit13-column preprocessing.",
+    "earlier_negative_evidence": "run003 CatBoost group-context .813057/.810469 versus v6 .815789; HGB group .802991 versus plainHGB .809750. Different full engineered inputs and learners, so meaningful counterevidence but not a matched test of this Mitra20-column recipe."
+  },
+  "fixed_recipe": {
+    "candidate_input": "iterate.build_features(roster,True)[0][columns] with all existing group statistics and existing unanimous HomePlanet/Destination/Deck/Side filling retained exactly.",
+    "columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side",
+      "GroupSize",
+      "SurnameCount",
+      "CabinOccupants",
+      "PeerCryoSleepRate",
+      "PeerKnownCryoCount",
+      "PeerMeanAge",
+      "GroupChildren"
+    ],
+    "control_input": "iterate.build_features(roster,False)[0][columns[:13]]; preserve original missing values. Never overwrite the control frame with candidate imputations.",
+    "categorical_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "VIP",
+      "Deck",
+      "Side"
+    ],
+    "numeric_columns": "Original7 numerical columns plus all7 added statistics; no discretization/encoding search.",
+    "model": "Original v71 same SHA5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09, single preprocessing view, zero optimizer updates, identical fold seed/FP32weights/MPSbf16/query2318/.5threshold/full support. No mirror4, LR change, extra seeds or threshold search.",
+    "preprocessing": "Mitra vocab/imputation/constant filter/random mirror fit only current training rows. New wrapper must explicitly persist20-column schema; passing20 columns into existing MitraPreprocessor alone silently selects13 and is NOT implementation.",
+    "scope_of_inference": "A bundle experiment:7 extra attributes AND four-column conditional imputation. Any gain cannot be attributed separately to counts or imputation without another predeclared study."
+  },
+  "mechanism_and_counterevidence": [
+    "Other-traveller age/cryo attributes and group/cabin population are absent from the individual13-column row; this changes available information rather than optimizing LR on the same information.",
+    "Conditional unanimity is a heuristic, not a physical invariance. Destination/Deck may differ within groups; currently unanimous observed members do not prove a missing member has that value.",
+    "Only PeerCryoSleepRate/PeerKnownCryoCount/PeerMeanAge explicitly exclude the row itself. GroupChildren includes self and counts known Age<13; missing ages count0, so it is a known-child lower bound.",
+    "SurnameCount spans multiple PassengerId groups. Several joint group summaries can fingerprint families even without rawID/Name. Random-fold improvement alone can be optimistic; whole-group validation is essential.",
+    "Related aggregate columns add redundancy and missingness under a synthetic pretraining prior. More features can harm attention/preprocessing; historical Cat/HGB negatives warrant a cheap fixed falsification, not presumed gain."
+  ],
+  "label_free_coverage": {
+    "roster_rows": 12970,
+    "training_attribute_rows": 8693,
+    "test_attribute_rows": 4277,
+    "development_rows": 6954,
+    "train_test_GroupId_intersection": 0,
+    "development_multi_person_group_rows": 3137,
+    "development_known_peer_cryo_rows": 3097,
+    "development_known_peer_age_rows": 3107,
+    "development_any_of_four_imputations_changed": 201,
+    "development_fills": {
+      "HomePlanet": 82,
+      "Destination": 45,
+      "Deck": 68,
+      "Side": 78
+    },
+    "interpretation": "Coverage only, not a score or evidence of residual predictive signal."
+  },
+  "roster_and_split_contract": {
+    "construction": "Read all train/test attributes using an explicit allowlist excludingTransported; original builder also dropsTransported. All12970 roster rows are fixed before split. Old holdout contributes only attributes, never labels to dev fits or decisions.",
+    "random_CV": "Known validation attributes may contribute group statistics for train rows; no validation targets enter statistics/preprocessor/support. This is explicitly transductive, matching an available full unlabelled passenger manifest.",
+    "GroupCV": "Alldevelopment GroupIds remain disjoint between fit-target support and validation-target queries. Unlabelled attributes of a withheld group remain available. Call this transductive group validation, not fully inductive unseen-roster evaluation.",
+    "test_roster": "Train/test GroupIds do not intersect, but same-group test peers and cross-group surname counts still use the complete known roster. No test target exists or is read.",
+    "persistence": "Persist stable PassengerId-to-derived-row mapping or the exact attribute-only roster+builder/sourcehash. A single query or chunk must never recompute peer counts on only that chunk. Save column order, full-row IDs, rosterhash and preprocessing state.",
+    "necessary_checks": [
+      "Changing/removing anyTransported column leaves features bitwise equal.",
+      "Chunk/permuted/subset prediction preserves precomputed feature rows byPassengerId.",
+      "Control13 frame remains exactly historical v71 input; category missing sentinels remain supported.",
+      "Explicit GroupId nonoverlap and full support row counts before eachfit."
+    ]
+  },
+  "resource_gate": {
+    "why_new_probe": "Row-attention independent feature/label batches rise14→21 (about1.5x work); feature-attention token-square rises14²→21² (2.25x component work). These are operation-shape ratios, not measured total time or peak-memory predictions. Weight memory unchanged; backend independent-batch chunk1 may bound some attention peaks but does not guarantee all activation memory fits.",
+    "one_off_sequence": [
+      "Small synthetic20-column forward, category/unknown/missing and saved-schema tests.",
+      "Full4636support+2318query single-view no-score forward, then full8693support+2318query synthetic no-score forward under originalMPS.65cap; shared128query consistency and samebackend full-model reload."
+    ],
+    "unchanged": "MPSbf16/weightsFP32/query2318/CPU4/original batch-chunk backend/full context. Fail closed on OOM/nonfinite; no hidden feature or row removal. No backward probe needed for zero-shot.",
+    "budget": "Root sets one resource-stage budget before probe;1200s suggested ceiling. Resolve actual retained-feature count after constant filtering and log time/RSS/driver memory. Freeze screen budget from measured forward cost before scoring."
+  },
+  "evaluation_and_stop": "One complete fixeddev3fold screen with exact v71 matched control; existing repeat/group A eligibility protocol if selected for continuation. No choosing individual fields, imputation routes, weights or thresholds from OOF. If incomplete, label inconclusive; if it fails the fixed eligibility, archive this20-column bundle without automatic variants.",
+  "independent_review": {
+    "reviewer": "/root/review_current",
+    "conclusion": "Supports one fixed bundle, with exact unchanged13-column control, transductive disclosure, whole-group target isolation, heuristic-imputation caveat and real20-column final-shape resource gate. No additional candidate or feature selection."
+  },
+  "source_sha256": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_mirror_ensemble.py": "719fc2e55a458e05bb0649cc9b433ac9313a86e9871f850019549d1e28aa2066",
+    "mitra_lastblock_candidate.py": "d5a07610c5c59bdba0bd2b4470955d6e727a7ce439db3236650765ed201f3e94",
+    "reports/mitra_protocol.json": "fda5f03e70d8f98429e09ff9c57c8e7a7cec9df96e0d575fb816756ab1de5767",
+    "artifacts/run_003/screen_results.csv": "5c06fe367ee1a981ac098d366ce8288de0180d82408bcf54c5abf88d6f794acc",
+    "artifacts/run_038/protocol.json": "894695fb8803a480d89f4acf99229b93a395d286b66273d80c90fe91665bbb92"
+  }
+}
