@@ -1,0 +1,95 @@
+{
+  "status": "design_proposal_only_not_executed",
+  "purpose": "Method-level comparison of contrastive self-supervised pretraining against an otherwise matched supervised MLP. This is not another feature ablation or a claim that SCARF will beat the current model.",
+  "sources": [
+    {
+      "title": "SCARF: Self-Supervised Contrastive Learning using Random Feature Corruption",
+      "url": "https://arxiv.org/abs/2106.15147",
+      "full_text": "https://ar5iv.labs.arxiv.org/html/2106.15147",
+      "use": "Algorithm 1, preprocessing and architecture/training section. Implement the published algorithm independently in existing PyTorch; do not describe it as an author-provided PyTorch implementation."
+    },
+    {
+      "title": "VIME author implementation, alternative considered",
+      "url": "https://github.com/jsyoon0823/VIME",
+      "use": "The reference uses legacy Keras/TensorFlow and a frozen pretrained encoder. Its mixed-type reconstruction and consistency adaptation would add more implementation choices than the selected SCARF experiment."
+    }
+  ],
+  "comparison": {
+    "candidate": "SCARF pretrained encoder plus supervised fine-tuning of encoder and classification head",
+    "matched_control": "Identical encoder and classification head, preprocessing, supervised optimizer and stopping protocol, trained from scratch without contrastive pretraining",
+    "business_reference": "v44_seed_ensemble on the same fixed development folds",
+    "historical_references_only": ["run005 MLP", "run016 TabM"],
+    "interpretation": "Historical MLP/TabM recipes are not matched controls. v44 includes different engineered features and spatial priors, so it is a practical performance reference rather than a pure architecture control."
+  },
+  "data_and_validation": {
+    "development_rows": 6954,
+    "outer_folds": 3,
+    "outer_seed": 20261112,
+    "outer_split": "Exactly the existing fixed development StratifiedKFold; reuse its indices, never redraw to improve a score.",
+    "supervised_inner_split": "Stratified 80/20 of outer-training rows, random_state equal to that outer model seed. Reuse the same split for scratch and SCARF and record index hashes.",
+    "early_stopping_labels": "Only the inner validation labels; outer validation labels are used only for the completed outer prediction metrics.",
+    "unlabeled_pool": "Current supervised training rows with Transported removed, plus the actual 4277 test rows. Exclude the corresponding inner/outer validation rows and the old holdout from pretraining.",
+    "unlabeled_validation": "A fixed seeded 10 percent partition of the actual test attributes, with no labels, monitors contrastive pretraining. Donor values come only from the remaining pretraining pool. This partition never determines a classification threshold or feature choice.",
+    "pool_size_note": "Outer refit uses approximately 4636 training attributes plus 4277 test attributes, or 8913 rows. Final full-label fitting uses 8693 plus 4277, or 12970. Full-roster transductive pretraining including validation attributes is deliberately not part of this proposal.",
+    "prohibited": ["old holdout label selection", "test labels or other submissions", "reusing a global development-fitted encoder across outer folds", "outer-OOF-driven corruption or feature selection"]
+  },
+  "input": {
+    "original_semantic_columns": ["HomePlanet", "CryoSleep", "Destination", "Age", "VIP", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck", "Deck", "CabinNumber", "Side"],
+    "numeric_columns": ["Age", "RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck", "CabinNumber"],
+    "categorical_columns": ["HomePlanet", "CryoSleep", "Destination", "VIP", "Deck", "Side"],
+    "numeric_processing": "Record original missing flags; log1p the five spending columns; median imputation and StandardScaler fitted only on the current supervised training partition. An all-missing numeric column has fixed fallback zero and its missing flag remains present.",
+    "categorical_processing": "Training-only vocabulary with explicit unknown and missing categories, followed by one-hot encoding. Unknown values do not silently become an observed category.",
+    "excluded": ["PassengerId", "Name", "target statistics", "spatial expert", "new spending contrasts", "group counts"],
+    "fairness_note": "The original 13 semantic fields and seven numeric missing flags match the NN input scope; SCARF uses paper-style one-hot categorical inputs rather than transformer tokens. Both SCARF and its scratch control use exactly the same encoded input."
+  },
+  "corruption": {
+    "rate": 0.6,
+    "original_feature_groups": 13,
+    "groups_corrupted_per_row": 7,
+    "selection": "Uniformly choose exactly floor(0.6 * 13) original feature groups without replacement per row; regenerate on each training pass.",
+    "donors": "For each selected group independently sample a donor row uniformly from the pretraining training pool. Copy that group's value from the donor; never use Transported or teacher predictions.",
+    "categorical_integrity": "Replace a categorical value before one-hot encoding, equivalently copy its entire one-hot group. Never corrupt individual one-hot bits.",
+    "missing_integrity": "Copy a numeric value and its original missing flag together as one semantic group. Other fields remain unchanged.",
+    "validation_views": "Precompute and freeze ten deterministic corruption passes and batch memberships over the unlabeled validation partition; use the same validation pairs every epoch.",
+    "known_risks": ["Independent marginal replacement can break CryoSleep/spending relationships.", "Similar passengers can become contrastive negatives.", "A corruption recipe that works on other tables is not guaranteed to preserve information useful for this target."]
+  },
+  "network": {
+    "encoder": "Four Linear-to-256 plus ReLU layers, no dropout or BatchNorm in this initial recipe.",
+    "projection_head": "Linear 256-to-256, ReLU, Linear 256-to-256, then L2 normalization.",
+    "classification_head": "Linear 256-to-256, ReLU, Linear 256-to-1; use a binary logit.",
+    "head_convention": "The two-layer head means two affine layers including its output layer. This explicit binary-output convention must be documented as part of the local implementation.",
+    "pretraining_loss": "Temperature-one directional N-by-N cross-view InfoNCE: clean anchors against corrupted views, diagonal positive pairs, off-diagonal negatives. Cross entropy on similarity logits; the additive log(N) convention does not alter gradients.",
+    "fine_tuning_loss": "BCEWithLogitsLoss on clean labeled inputs; discard the projection head and update the full encoder and classification head.",
+    "initialization": "Record separate deterministic encoder, projection, classification-head and corruption RNG seeds. Scratch and SCARF use matched initial encoder/head seeds; the intended difference is pretraining."
+  },
+  "training": {
+    "device": "Existing local PyTorch, float32 MPS after a resource/gradient probe. No cloud inference, pretrained checkpoint downloads or new dependency installation are required by this design.",
+    "optimizer": {"name": "Adam", "learning_rate": 0.001, "betas": [0.9, 0.999], "eps": 1e-8, "weight_decay": 0.0},
+    "batch_size": 128,
+    "pretraining": {"max_epochs": 1000, "patience": 10, "minimum_epochs": 10, "metric": "fixed unlabeled validation InfoNCE", "min_delta": 0.0001},
+    "supervised": {"max_epochs": 500, "patience": 40, "minimum_epochs": 30, "metric": "inner validation logloss", "min_delta": 0.0001},
+    "refit_sequence": [
+      "Fit preprocessing on inner supervised training rows only.",
+      "For SCARF, select a pretraining epoch on fixed unlabeled validation InfoNCE and restore that encoder checkpoint. No target label is used in pretraining.",
+      "Select supervised epochs separately for SCARF and scratch using the same inner validation rows and logloss rule. Fine-tune the entire encoder for SCARF.",
+      "Freshly fit preprocessing on all outer-training rows and reinitialize the appropriate network. For SCARF pretrain on all outer-training attributes plus all actual test attributes for the selected pretraining epoch count, without early stopping on outer validation.",
+      "Train on all outer-training labels for that candidate's selected supervised epoch count, then predict the outer validation once. Scratch follows the same fresh-refit protocol without pretraining."
+    ],
+    "paper_vs_local_protocol": "Width, encoder depth, corruption rate, temperature, optimizer learning rate and batch size follow the paper recipe. The paper's pretraining patience is3, supervised patience is3 with classification-error stopping and cap200, and ten refers to static validation corruption passes. Our pretraining patience10, supervised patience40/cap500/logloss, and explicit missing categories/flags are local adaptations, not an exact reproduction of the paper benchmark.",
+    "resource_budget": "Set and freeze stage wall-clock budgets only after an exclusive-device, non-scoring resource probe. Do not use artificially short budgets to declare a family ineffective. If interrupted or still improving at the cap, mark training adequacy inconclusive rather than silently reporting a completed weak baseline."
+  },
+  "required_evidence": [
+    "No labels reach the pretraining pool or corruption routine; outer validation rows do not reach fitted preprocessing or pretraining.",
+    "One real finite backward step changes encoder parameters; a missing/category group is copied intact during corruption.",
+    "Pretraining and fine-tuning train/validation curves, selected epoch, last epoch, effective optimizer steps and cap-hit flag for every fold.",
+    "Parameter count, train/predict time, process lifetime RSS and MPS snapshots; snapshots must not be described as continuous peak GPU memory.",
+    "Complete fixed-fold OOF accuracy, logloss, per-fold results and paired differences against matched scratch and v44; threshold remains 0.5.",
+    "Serialized CPU weights, fitted preprocessing, category vocabularies and schema reproduce predictions; export follows the same declared training recipe."
+  ],
+  "continuation_rule": {
+    "worth_follow_up": "A trained-to-adequacy recipe with consistent gains over matched scratch and competitive performance against v44 merits a predeclared small tuning study or three-initialization stability check.",
+    "not_a_family_rejection": "One converged recipe losing means this recipe did not help on these data; it does not establish that every SCARF/MLP configuration fails.",
+    "inconclusive": "Budget exhaustion, unresolved nonfinite gradients, unverified reconstruction, or a best epoch at a still-improving cap require implementation/budget diagnosis rather than score-based family rejection.",
+    "online_gate_unchanged": "The existing greater-than-83-percent local gate and explicit user approval for a future Kaggle submission remain unchanged."
+  }
+}
