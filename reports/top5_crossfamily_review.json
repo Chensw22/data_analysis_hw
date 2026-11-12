@@ -1,0 +1,62 @@
+{
+  "status": "fixed_before_any_new_blend_score",
+  "candidate": "v80_MitraCat_mean",
+  "weights": {
+    "v44": 0.5,
+    "mitra": 0.5
+  },
+  "threshold": 0.5,
+  "scope": "Exactly one cross-family probability mean. No model refit, weight search, threshold search or additions after scores.",
+  "development_rows": 6954,
+  "group_seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "random_seeds": [
+    20261113,
+    20261114
+  ],
+  "references": {
+    "v44": "v44_seed_ensemble",
+    "mitra": "v71_Mitra2_zeroshot"
+  },
+  "additional_A_conditions": [
+    "Both matched random13/14 accuracies must be at least the matched Mitra reference accuracy."
+  ],
+  "disclosure": "All models and partitions have been observed before. Blend recipe is newly fixed; recycled development validation is adaptive, not independent confirmation. Old failures and phases unchanged. A is an experimental online-test gate, not a claim of >1pp practical superiority.",
+  "source_policy": "Authenticate original screen train/fold/row and source evidence, audit random OOF, and completed group reference OOF. Freeze code, policy, environment and every input hash before computing blend scores.",
+  "budget_seconds": 600,
+  "weekly_reserve_percent": 12,
+  "A_research_online_gate": {
+    "all_conditions_required": [
+      "Originalscreen accuracy is within thefrozenA practicalband: accuracy>=0.8198159332758125-0.01. Thisscreen is retained as priorrandomrowevidence, not relabelledgroupvalidation.",
+      "Candidateaccuracy strictlyexceeds matchedMitraaccuracy separately on groupseed20261115 and20261116.",
+      "Mean pairedgain versusMitra over those two newprimarygroupseeds is at least0.001 (0.10percentagepoint).",
+      "On groupseed20261112, candidateaccuracy is at leastmatchedMitraaccuracy. Thisrequirement applies equallyto bothcandidates.",
+      "On eachof allthreegroupseeds, candidategain versusmatchedv44 is at least-0.01.",
+      "Everyrequiredmodel/fold completesunder itsfrozenrecipe andresourcegate; OOFrow/group/foldalignment, source/environment/checkpoint/datahashes andprobabilityvalidity pass.",
+      "The proposedsubmission does not duplicate an alreadytestedpredictionfile; export/sourcehashes and latestofficialsubmissionallowance are checked."
+    ],
+    "claim": "A means a qualifiedgroup-primary onlineexperiment. A0.10pp selectionthreshold is not aclaim of practicalsuperiority or statisticalequivalence. Report alloldrandomresults and reasonstheyfailed alongside the newdecision.",
+    "paired_interval_role": "Report passenger-weighted pairedwhole-group bootstrap sensitivity for eachseed andtheaverage ofthenewprimaryseeds. Do not require a falselyindependentpvalue or advertise statisticalnoninferiority from these reusedtargets."
+  },
+  "S_stable_local_superiority_gate": {
+    "preserve_absolute_bar": "Require originalscreenaccuracy>0.83 and meanaccuracy across newprimarygroupseeds>0.83; do not silentlyrelax thelegacy83highbar forS.",
+    "practical_gain": "Both newprimarygroupgains versusv44 arepositive andtheirmean exceeds0.01. Aconditions versusMitra alsohold.",
+    "consistency": "Oldgroup12 gain versusv44 mustalso bepositive; theknown stressresult is disclosed, not reused asindependentconfirmation.",
+    "uncertainty_summary": "Pairedwhole-group bootstrap lower95%bound formeannewgroup candidate-v44 gain isabove0; reporteffect/interval andits adaptive-selectionlimitations. Mean>1pp pluslowerbound>0 doesnot prove thepopulationgain itselfexceeds1pp.",
+    "interpretation": "Stablelarger localgroup-primary evidence underthisfixedprocedure; not a privateleaderboard guarantee or a formalpostselectionsignificanceclaim."
+  },
+  "bootstrap_recipe": {
+    "replicates": 2000,
+    "seed": 20261119,
+    "paired_statistic": "Average per-passenger candidate-minus-reference correctness acrossgroupseeds15/16; resamplecompletePassengerIdgroups withreplacement whilekeeping model/repeatpairing; compute passenger-weightedmean ineachdraw.",
+    "prohibitions": [
+      "Do nottreat sixoverlappingfoldmetrics as independentobservations.",
+      "Do not poololdandnewgroupseeds whilecalling allof themunseen.",
+      "Do not tuneweights,thresholds,subgroups or seedchoice frombootstrapoutcomes."
+    ]
+  },
+  "inherited_policy_sha256": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596"
+}
