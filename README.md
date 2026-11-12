@@ -8,7 +8,7 @@
 
 开发集三折 OOF 为 81.58%，独立留出集为 81.20%；这些本地指标与线上分数分别报告。尚未达到前 10% 的项目目标。
 
-后续本地迭代目前最高为 `run_006 / v25_spatial_blend` 的 **81.87%**（相同开发集三折 OOF）。旧留出集未再次用于选模型，此结果也尚未通过新的划分复核。`run_003` 至 `run_007` 的完整结果和失败方案保存在对应 `reports/` 子目录。
+后续本地迭代目前最高为 `run_012 / v34_contrasts_spatial` 的 **81.92%**（相同开发集三折 OOF）。旧留出集未再次用于选模型，此结果也尚未通过新的划分复核。每轮完整结果和失败方案保存在对应 `reports/` 子目录。汇总见 [迭代数据](reports/local_iterations.csv) 和 [进度图](reports/iteration_progress.png)，可运行 `summarize_iterations.py` 更新。
 
 ## 数据与线上成绩
 
