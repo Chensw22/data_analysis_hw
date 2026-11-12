@@ -25,6 +25,7 @@ import experiment as base
 ROOT = Path(__file__).resolve().parent
 SEEDS = [base.SEED, base.SEED+1, base.SEED+2]
 BASELINE = 'v6_no_id_features'
+MIN_LOCAL_ACCURACY = .83
 CAT = dict(depth=6, iterations=700, learning_rate=.045, l2_leaf_reg=5)
 CONFIGS = {
     BASELINE: dict(context=False, model='catboost', **CAT),
@@ -148,7 +149,7 @@ def screen(out):
         development_rows=len(dev),configs=CONFIGS,blend=BLEND,
         target_policy='Development labels only; no holdout scoring. Full train labels used only for final fit.',
         context_policy='Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.',
-        gate='Screen improvement >=0.001; both new split seeds improve; confirmation mean gain >=0.001. Candidate frozen before confirmation.',
+        gate='Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.',
         sources={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in ['iterate.py','experiment.py']})
     (out/'protocol.json').write_text(json.dumps(protocol,indent=2)+'\n')
     y=train.Transported.iloc[dev].astype(int).to_numpy()
@@ -165,7 +166,7 @@ def screen(out):
     winner=results.iloc[0]
     baseline=results[results.version==BASELINE].iloc[0]
     selection=dict(version=winner.version,components=BLEND if winner.version=='v15_context_blend' else [winner.version],
-                   screen_gain=float(winner.accuracy-baseline.accuracy),stage='frozen_for_confirmation')
+                   screen_accuracy=float(winner.accuracy),screen_gain=float(winner.accuracy-baseline.accuracy),stage='frozen_for_confirmation')
     (out/'selection.json').write_text(json.dumps(selection,indent=2)+'\n')
     print('FROZEN',json.dumps(selection),flush=True)
 
@@ -178,7 +179,11 @@ def confirm(out):
     selection=json.loads((out/'selection.json').read_text())
     name=selection['version']
     rows=[]
-    if selection['screen_gain'] >= .001:
+    screen_accuracy=selection.get('screen_accuracy')
+    if screen_accuracy is None:
+        screen=pd.read_csv(out/'screen_results.csv')
+        screen_accuracy=float(screen.loc[screen.version.eq(name),'accuracy'].iloc[0])
+    if screen_accuracy > MIN_LOCAL_ACCURACY and selection['screen_gain'] >= .001:
         for seed in SEEDS[1:]:
             baseline,_,_=evaluate(BASELINE,matrices,train,dev,seed,out)
             candidate,_,_=evaluate(name,matrices,train,dev,seed,out)
@@ -186,8 +191,9 @@ def confirm(out):
             rows.append(dict(seed=seed,baseline_accuracy=a,candidate_accuracy=b,gain=b-a,
                 corrections=int(((candidate>=.5)==y)[(baseline>=.5)!=y].sum()),
                 regressions=int(((candidate>=.5)!=y)[(baseline>=.5)==y].sum())))
-    passed=bool(len(rows)==2 and all(r['gain']>0 for r in rows) and np.mean([r['gain'] for r in rows])>=.001)
-    gate=dict(passed=passed,confirmation=rows,
+    passed=bool(len(rows)==2 and all(r['gain']>0 for r in rows) and np.mean([r['gain'] for r in rows])>=.001
+                and np.mean([r['candidate_accuracy'] for r in rows]) > MIN_LOCAL_ACCURACY)
+    gate=dict(passed=passed,minimum_local_accuracy_exclusive=MIN_LOCAL_ACCURACY,screen_accuracy=screen_accuracy,confirmation=rows,
               note='Repeated CV on the same development rows: stability evidence, not an independent holdout or a probability of leaderboard success.')
     (out/'gate.json').write_text(json.dumps(gate,indent=2)+'\n')
     print('GATE',json.dumps(gate),flush=True)

@@ -1,0 +1,82 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v9_more_trees": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 1400,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 8
+    },
+    "v10_shallow": {
+      "context": false,
+      "model": "catboost",
+      "depth": 5,
+      "iterations": 1500,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 8
+    },
+    "v11_group_context": {
+      "context": true,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 1100,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 8
+    },
+    "v12_group_deeper": {
+      "context": true,
+      "model": "catboost",
+      "depth": 7,
+      "iterations": 1200,
+      "learning_rate": 0.03,
+      "l2_leaf_reg": 8
+    },
+    "v13_histogram": {
+      "context": false,
+      "model": "histogram",
+      "max_iter": 500,
+      "max_leaf_nodes": 15,
+      "learning_rate": 0.05,
+      "l2_regularization": 5,
+      "min_samples_leaf": 25
+    },
+    "v14_histogram_group": {
+      "context": true,
+      "model": "histogram",
+      "max_iter": 500,
+      "max_leaf_nodes": 15,
+      "learning_rate": 0.05,
+      "l2_regularization": 5,
+      "min_samples_leaf": 25
+    }
+  },
+  "blend": [
+    "v11_group_context",
+    "v12_group_deeper",
+    "v14_histogram_group"
+  ],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen improvement >=0.001; both new split seeds improve; confirmation mean gain >=0.001. Candidate frozen before confirmation.",
+  "sources": {
+    "iterate.py": "4a385de01eb6bef87660e4387b23da8548eb660284e64e11d82792b98af29ccc",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67"
+  }
+}
