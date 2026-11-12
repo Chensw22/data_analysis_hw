@@ -1,0 +1,63 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v53_compact_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5,
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side",
+        "DiningShoppingMinusLuxury",
+        "LogDiningShoppingLuxuryRatio"
+      ]
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "compact_spatial.py": "247dd85460a2c7c4c5bc96d3dc51db9eb62ea4ce38b61705033f01015be0eb40",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352"
+  },
+  "compact_policy": "One frozen ablation retaining13 original semantic fields plus2 fixed v34 spending contrasts. Remove duplicate amount transforms, aggregate amounts/counts and missing indicators, retaining native NaN/missing category. Same fixed CatBoost and spatial expert settings. No target-driven feature selection or successive subset search."
+}

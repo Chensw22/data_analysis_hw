@@ -1,0 +1,48 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v52_order_coordinate": {
+      "context": false,
+      "model": "order_coordinate",
+      "coordinate": "SpatialGroupCoordinate",
+      "eligible": "original_Earth_CryoSleep_known_CabinNumber_and_Side",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "order_coordinate.py": "186af13f069cc894f13e8c54764c0c62a5641d09e723f4d62d325afca993c57b",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "order_coordinate_policy": "Only the existing Earth/CryoSleep=True/known CabinNumber and P-or-S expert coordinate changes from CabinNumber to numeric PassengerId group prefix. Eligibility, 5 cubic knots, side interactions, LogisticRegression C=.1, and .5 probability weight stay unchanged. All spline fitting uses outer-training eligible rows only. Full-roster attributes explicitly drop Transported before adding a row-local coordinate; roster positional alignment is checked. The coordinate is removed for v6/v34 controls and never enters the candidate global CatBoost, whose exact original v34 column names/order are saved in its wrapper. predict_proba_raw constructs features from original attributes without any global roster/index lookup. This is an empirical ordering-coordinate experiment, not a claim that group ID is time or physical distance. No missing-cabin recovery, wider routing, target encoding, or simultaneous knot/regularization/weight search. Existing gate compares v6; comparison with v44 and stability verification remain necessary before any submission approval."
+}
