@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-11-12T19:31:53.648376+00:00",
+  "user_instruction": "继续迭代方案吧，如果出现稳定好的模型，就提交线上测试。现在目标是进入5%，同时注意额度限制，给我留下周限额的12%",
+  "target": "official online rank fraction <=0.05",
+  "eligibility_policy": "reports/top5_group_validation_review.json",
+  "eligibility_policy_sha256": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+  "automatic_submission_scope": "Only the fixed two-candidate group-primary queue, after every model/split is complete and the individual candidate meets every A_research_online_gate condition in the bound policy. This is qualified experimental testing, not an S superiority claim.",
+  "fixed_candidates": [
+    "v74_Mitra_mirror4",
+    "v77_Mitra_context20"
+  ],
+  "fixed_references": [
+    "v71_Mitra2_zeroshot",
+    "v44_seed_ensemble"
+  ],
+  "budgets_seconds": {
+    "refs": {
+      "v44": 1800,
+      "mitra": 1800
+    },
+    "candidates": {
+      "mirror": 3600,
+      "context": 3600
+    }
+  },
+  "all_fixed_queue_must_complete_before_submission": true,
+  "weekly_reserve_percent": 12,
+  "desktop_reminder_required": true,
+  "no_duplicate_or_blind_retry_upload": true,
+  "prior_policy_and_authorization_unchanged": true,
+  "previous_authorization_sha256": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+  "revision_disclosure": "One adaptive design revision based on previously documented deployment group separation, after observing some old group results. New seeds15/16 still reuse the6954 development labels. Never relabel old failed random eligibility as passing.",
+  "latest_user_authorization_applies": true,
+  "no_additional_external_account_or_license_acceptance": true
+}

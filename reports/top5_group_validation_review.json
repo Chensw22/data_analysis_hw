@@ -1,0 +1,106 @@
+{
+  "status": "conditionally_supported_pre_score_design_review_not_candidate_eligibility",
+  "scope": "Read-only protocol review and peer battle. No newgroupfit, newgroup-score inspection, GPU use, labelassociation analysis, threshold/weight fitting or edits to oldpolicy/failedgates.",
+  "historical_record_sha256": {
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_peer_target_review.json": "a20465ef02220583cb542c3f9e04d7d0db937e4dfb687d2e0783e18149eee969",
+    "reports/run_003/REVIEW.md": "c01de4f35b1b36b078f3b80786f170d590ff4f575713b608752148c3e854b24a"
+  },
+  "scientific_assessment": {
+    "reason_to_change_primary": "Training and test PassengerId group sets do not overlap. Holding out entiregroups better reproduces the absence of known same-group support labels than randomrowCV. This supports group-primary validation as a deployment-aligned design choice, not a guarantee of matching everyaspect of testdistribution.",
+    "required_disclosure": "Zero groupoverlap was documented earlier, and oldv74group12 performance has alreadybeen observed. Do not describe this revision as caused by a newlydiscovered fact, unrelated to observeddevelopmentresults, or as an independentconfirmatory test. It is one transparent adaptivevalidation-design revision.",
+    "why_not_retroactive_pass": "Keep oldrandomscreen/stability outputs, failedeligibility and legacy83gate intact. Newgroup-primary results live in a separateversioneddecision. A pass under the newprotocol does not turn an oldfailure into apass.",
+    "dependence": "Seeds20261115/16 create previouslyunusedgroup partitions, not unseenlabels or a newholdout. All6954targets have been reused manytimes. Pairedcluster intervals cannot erase adaptivecandidate/protocolselection bias.",
+    "suggested_public_wording": "重新确认此前已记录的组分离事实，并据此调整验证主次。这是一次明确披露、前瞻冻结的适应性协议修订；旧随机验证失败仍保留，新分组结果也不称独立留出验证。"
+  },
+  "fixed_scope_before_new_scores": {
+    "candidates": [
+      "v74_Mitra_mirror4",
+      "v77_Mitra_context20"
+    ],
+    "references": [
+      "v71_Mitra2_zeroshot",
+      "v44_seed_ensemble"
+    ],
+    "group_split_seeds": [
+      20261112,
+      20261115,
+      20261116
+    ],
+    "new_primary_seeds": [
+      20261115,
+      20261116
+    ],
+    "folds_per_seed": 3,
+    "splitter": "StratifiedGroupKFold(n_splits=3,shuffle=True,random_state=seed)",
+    "group_key": "PassengerId prefix before underscore",
+    "fit_seed": "splitseed+zero_basedfold; preserve everycandidate ownfrozenoffsets/preprocessing/weights",
+    "data": "Originalfixed6954developmentrows only; originalopenedholdouttargets excluded. Fullunlabelledrosterattributes remainavailable exactlyas alreadyfrozen byeachcandidate. Context20 groupvalidation istransductive withrespect toattributes, buttraining-supportlabels aregroup-disjoint.",
+    "identical_folds": "Cache fixedfold membership once perseed; everycandidate/reference receives identicaltrain/queryIDs. Assertgroupintersectionempty, eachrowcoveredonce, schemas/provenancechecked.",
+    "fair_queue": "Bothcandidates require all3groupsplits. Inparticularv77 mustobtain group12 evidence; do notexempt it because itcurrentlyhas nooldgroupresult. Provenance-matchingexistinggroup12reference/candidateOOF maybereused. Keepfailures/incompletecandidates in thecomparisonrecord, neverdrop them to make therevisedqueue appear successful.",
+    "no_expansion": "No additionalcandidate/seed, reroutedsubgroup, seedselection, threshold,weight orLR/feature change afterviewingnewgroupresults. This is oneboundedprotocolrevision, not a loop ofvalidationdesignsearch."
+  },
+  "A_research_online_gate": {
+    "all_conditions_required": [
+      "Originalscreen accuracy is within thefrozenA practicalband: accuracy>=0.8198159332758125-0.01. Thisscreen is retained as priorrandomrowevidence, not relabelledgroupvalidation.",
+      "Candidateaccuracy strictlyexceeds matchedMitraaccuracy separately on groupseed20261115 and20261116.",
+      "Mean pairedgain versusMitra over those two newprimarygroupseeds is at least0.001 (0.10percentagepoint).",
+      "On groupseed20261112, candidateaccuracy is at leastmatchedMitraaccuracy. Thisrequirement applies equallyto bothcandidates.",
+      "On eachof allthreegroupseeds, candidategain versusmatchedv44 is at least-0.01.",
+      "Everyrequiredmodel/fold completesunder itsfrozenrecipe andresourcegate; OOFrow/group/foldalignment, source/environment/checkpoint/datahashes andprobabilityvalidity pass.",
+      "The proposedsubmission does not duplicate an alreadytestedpredictionfile; export/sourcehashes and latestofficialsubmissionallowance are checked."
+    ],
+    "claim": "A means a qualifiedgroup-primary onlineexperiment. A0.10pp selectionthreshold is not aclaim of practicalsuperiority or statisticalequivalence. Report alloldrandomresults and reasonstheyfailed alongside the newdecision.",
+    "paired_interval_role": "Report passenger-weighted pairedwhole-group bootstrap sensitivity for eachseed andtheaverage ofthenewprimaryseeds. Do not require a falselyindependentpvalue or advertise statisticalnoninferiority from these reusedtargets."
+  },
+  "S_stable_local_superiority_gate": {
+    "preserve_absolute_bar": "Require originalscreenaccuracy>0.83 and meanaccuracy across newprimarygroupseeds>0.83; do not silentlyrelax thelegacy83highbar forS.",
+    "practical_gain": "Both newprimarygroupgains versusv44 arepositive andtheirmean exceeds0.01. Aconditions versusMitra alsohold.",
+    "consistency": "Oldgroup12 gain versusv44 mustalso bepositive; theknown stressresult is disclosed, not reused asindependentconfirmation.",
+    "uncertainty_summary": "Pairedwhole-group bootstrap lower95%bound formeannewgroup candidate-v44 gain isabove0; reporteffect/interval andits adaptive-selectionlimitations. Mean>1pp pluslowerbound>0 doesnot prove thepopulationgain itselfexceeds1pp.",
+    "interpretation": "Stablelarger localgroup-primary evidence underthisfixedprocedure; not a privateleaderboard guarantee or a formalpostselectionsignificanceclaim."
+  },
+  "bootstrap_recipe": {
+    "replicates": 2000,
+    "seed": 20261119,
+    "paired_statistic": "Average per-passenger candidate-minus-reference correctness acrossgroupseeds15/16; resamplecompletePassengerIdgroups withreplacement whilekeeping model/repeatpairing; compute passenger-weightedmean ineachdraw.",
+    "prohibitions": [
+      "Do nottreat sixoverlappingfoldmetrics as independentobservations.",
+      "Do not poololdandnewgroupseeds whilecalling allof themunseen.",
+      "Do not tuneweights,thresholds,subgroups or seedchoice frombootstrapoutcomes."
+    ]
+  },
+  "authorization_and_records": {
+    "additional_user_question_required": false,
+    "reason": "Thelatestexplicitinstruction authorizescontinuingiteration andsubmitting stablegoodmodels. Choosing andpreregistering a scientificallydefensiblevalidationdesign iswithinthat ongoingtask. Thereis no newexternalrecipient, credentialagreement or additional irreversibleaction beyond thealreadyconditionalonline-testauthorization.",
+    "new_record_required": "Theexistingtop5_authorization.json isbound to theoldpolicySHA. Do notoverwrite it or reuseit as ifitalreadycovered a newpolicyhash. Rootmustcreate a newgroup-primarypolicy andnewauthorizationrecord referencing the sameoriginaluserinstruction, explainthescope/change, bind thenewSHA andpreservealloldrecords.",
+    "before_submission": "AnoldA_false plus anewgroupA_true mustbe reported exactlyas such. Upload onlyafter thenewfrozenqualification passes; noautomaticcandidateacceptancefromthisdesignreview. Preserve no-blindretry andnoduplicatesubmissionchecks.",
+    "candidate_queue_completion": "Evaluate thefixedqueue consistently; resource/quotalimits may stopwork but mustyieldincompleteevidence, not waive anunfavorableorunfinishedrequiredcheck."
+  },
+  "battle": {
+    "peer": "fresh_strategy",
+    "consensus": [
+      "Conditionalapproval ofgroup-primary on deploymentstructure grounds.",
+      "Explicitlyacknowledge earlierknowledge ofgroupdisjointness andalreadyseenoldgroupresults.",
+      "Requiregroup12 forv77 aswellasv74; samefixedseeds/references/thresholds.",
+      "Noautomaticneed to re-asktheuser, butnewpolicy-boundauthorizationrecord ismandatory.",
+      "Oldrandomfailures remainvisible; newpartitions are notindependentholdout."
+    ],
+    "next_action": "Rootfreezes theconcreteprotocol/newauthorization beforeanynewgroup15/16modelscore. Thenrun thefixedpairedqueue ormarkincomplete; do notalterconditions afterward."
+  },
+  "earlier_documented_group_disjointness": [
+    {
+      "path": "reports/run_003/REVIEW.md",
+      "line": 7,
+      "text": "官方 train/test 的 GroupId 前缀和完整 Cabin 交集均为零。真实测试是新群组，不存在“训练集中有该测试乘客同行标签”的条件。",
+      "followup_line": 14,
+      "followup": "Reports research and review agents independently verifying this fact and rejecting group-target transfer."
+    },
+    {
+      "path": "reports/top5_validation_review.json",
+      "line": 74,
+      "text": "Actualtrain/test GroupIds are disjoint. Random row CV can put group mates on both sides and give misleading transfer evidence even without explicitGroupId features."
+    }
+  ]
+}
