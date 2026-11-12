@@ -1,0 +1,73 @@
+{
+  "seed": 20261112,
+  "threshold": 0.5,
+  "folds": 3,
+  "development_rows": 6954,
+  "holdout_rows": 1739,
+  "selection": "maximum development OOF accuracy; log loss breaks ties",
+  "holdout_policy": "One audit after candidate selection; no further tuning on holdout results.",
+  "configs": {
+    "v0_logistic": {
+      "features": "raw",
+      "model": "logistic"
+    },
+    "v1_catboost_raw": {
+      "features": "raw",
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v2_features": {
+      "features": "engineered",
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v3_regularized": {
+      "features": "engineered",
+      "model": "catboost",
+      "depth": 5,
+      "iterations": 1100,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 8
+    },
+    "v4_deeper": {
+      "features": "engineered",
+      "model": "catboost",
+      "depth": 7,
+      "iterations": 900,
+      "learning_rate": 0.035,
+      "l2_leaf_reg": 8
+    },
+    "v6_no_id_features": {
+      "features": "engineered_no_ids",
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v7_no_spend_features": {
+      "features": "engineered_no_spend",
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v8_cryo_rules": {
+      "features": "engineered_rules",
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    }
+  },
+  "python": "3.12.13",
+  "source_sha256": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67"
+}
