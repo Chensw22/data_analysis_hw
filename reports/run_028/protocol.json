@@ -1,0 +1,153 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v25_spatial_blend": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v44_seed_ensemble": {
+      "context": false,
+      "model": "seed_ensemble",
+      "seed_offsets": [
+        0,
+        100,
+        200
+      ]
+    },
+    "v54_TabPFN_architecture_ensemble": {
+      "context": false,
+      "model": "tabpfn_architecture",
+      "components": [
+        {
+          "checkpoint": "default",
+          "n_estimators": 2,
+          "weight": 0.5
+        },
+        {
+          "checkpoint": "gn2p4bpt",
+          "n_estimators": 2,
+          "weight": 0.16666666666666666
+        },
+        {
+          "checkpoint": "vutqq28w",
+          "n_estimators": 2,
+          "weight": 0.16666666666666666
+        },
+        {
+          "checkpoint": "znskzxi4",
+          "n_estimators": 2,
+          "weight": 0.16666666666666666
+        }
+      ],
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "inference_config": {
+        "ENABLE_GPU_PREPROCESSING": false,
+        "TRANSFORM_TEXT": false,
+        "TRANSFORM_DATES": false,
+        "SUBSAMPLE_SAMPLES": null
+      },
+      "checkpoints": {
+        "default": {
+          "filename": "tabpfn-v2-classifier-v2_default.ckpt",
+          "bytes": 29009539,
+          "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+          "features_per_group": 2,
+          "emsize": 192,
+          "nhead": 6,
+          "nlayers": 12
+        },
+        "gn2p4bpt": {
+          "filename": "tabpfn-v2-classifier-gn2p4bpt.ckpt",
+          "bytes": 12926661,
+          "sha256": "de01a095da7a083b25a74d1f7d85de524e8bd6137936092feab9790673ad9215",
+          "features_per_group": 1,
+          "emsize": 128,
+          "nhead": 4,
+          "nlayers": 12
+        },
+        "vutqq28w": {
+          "filename": "tabpfn-v2-classifier-vutqq28w.ckpt",
+          "bytes": 12926661,
+          "sha256": "c060b5f61480e8a6ec8cbf909a0fc236563eb4628df75b7b8c2d1f8fc1b9cf4e",
+          "features_per_group": 1,
+          "emsize": 128,
+          "nhead": 4,
+          "nlayers": 12
+        },
+        "znskzxi4": {
+          "filename": "tabpfn-v2-classifier-znskzxi4.ckpt",
+          "bytes": 12926661,
+          "sha256": "fadb46928ddd70a53c6e1b205772e78784bf7bea5132ba6adbd48f201d8e9076",
+          "features_per_group": 1,
+          "emsize": 128,
+          "nhead": 4,
+          "nlayers": 12
+        }
+      }
+    },
+    "v57_seed_architecture_fusion": {
+      "context": false,
+      "model": "fixed_fusion",
+      "cat_weight": 0.5,
+      "components": [
+        "v44_seed_ensemble",
+        "v54_TabPFN_architecture_ensemble"
+      ]
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "architecture_fusion.py": "a05766e1ce0f60983511ed2d2802231368186efe13a8bc417239e05bf0575365",
+    "seed_ensemble.py": "807f9a9467101fc5af509a43a3301f6a6598fdf2c923cc04ff0ae4ae9f58f647",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "tabpfn_architecture.py": "61c1db09e5a39271587fba00a675220435ed1ba6c5bf74422f37b3ba813f1cfa",
+    "reports/pretrained_architecture_sources.json": "3406c57cfda59b21caf8e13841fc21a193ebf89262a531ef334cf523a73f8f80"
+  },
+  "architecture_environment_sha256": "0e4a8e54a729d6409e4cf620abc21864fff68e00b7a08add083b3211e73ecb10",
+  "fusion_policy": "One predeclared50/50 probability average: v44 seed ensemble and v54 family-balanced TabPFN ensemble. No member/weight/threshold search. Development screen was motivated by lower v54 logloss but weights frozen before combined scores. All components refitted in this run; same-run OOF components reused for deterministic fusion only. Repeated/group/full-data fitting reconstructs the entire model graph."
+}
