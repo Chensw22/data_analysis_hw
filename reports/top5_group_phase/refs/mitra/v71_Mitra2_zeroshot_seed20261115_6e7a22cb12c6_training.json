@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "recipe": "zero-shot",
+  "seed": 20261115,
+  "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+  "training_rows": 4635,
+  "training_ids_sha256": "6e7a22cb12c673293269f2ba7b4cc3e731e0ff5215279786e6952d1ff5f41b7f",
+  "full_prediction_support": true,
+  "query_chunk": 2318,
+  "precision": "mps_bfloat16_autocast",
+  "inner_history": [],
+  "refit_history": [],
+  "selected_steps": 0,
+  "validation_support_order": "fixed_training_order_no_episode_rng_consumption",
+  "refit_optimizer_steps": 0,
+  "refit_seconds": 1.00000761449337e-06,
+  "parameters": 75670026,
+  "feature_count": 13,
+  "resources_after_refit": {
+    "max_rss_bytes": 441974784,
+    "mps_current_bytes": 302958592,
+    "mps_driver_bytes": 310870016,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "seconds": 0.3041574159869924,
+  "fresh_refit_from_original_checkpoint": true,
+  "prediction_seconds": 18.548463916988112,
+  "prediction_rows": 2319,
+  "resources_after_prediction": {
+    "max_rss_bytes": 881426432,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 3616243712,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  }
+}
