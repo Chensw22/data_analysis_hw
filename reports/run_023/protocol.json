@@ -1,0 +1,62 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v51_hierarchical_spend": {
+      "context": false,
+      "model": "spatial_shares",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5,
+      "shares": {
+        "FoodWithinDiningShare": [
+          "FoodCourt",
+          "ShoppingMall"
+        ],
+        "RoomWithinLuxuryShare": [
+          "RoomService",
+          "Spa",
+          "VRDeck"
+        ],
+        "SpaWithinSpaVRShare": [
+          "Spa",
+          "VRDeck"
+        ]
+      },
+      "missing": "any_required_missing_or_zero_denominator_is_nan"
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "spending_shares.py": "0b17cb59968a20a9e263cbace2833b37cc40308f7aac81bb70b8a3713716f1a9",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "spending_share_policy": "One predeclared candidate: v34 plus Food/(Food+Shopping), Room/(Room+Spa+VR), and Spa/(Spa+VR). Each ratio is NaN if any required amount is missing or its denominator is zero. No pseudocounts, clipping, imputation, learned weights, target use, or row aggregation. Original amounts, missing flags, totals and contrasts remain. Same v6 CatBoost and original 5-knot/C=.1/.5-weight spatial expert; v6 and exact v34 are controls. These are allocation shares, not CLR/ILR coordinates or a fixed-budget model."
+}
