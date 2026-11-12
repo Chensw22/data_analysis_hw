@@ -4,11 +4,13 @@
 
 ## 当前实际成绩
 
-2026-11-12 首次自动提交 `run_002 / v6_no_id_features`：Kaggle Public Score **0.80687**（80.687%），当时账号排名 **517 / 2,032，约前 25.4%**。这是滚动榜快照，不是永久最终名次。参见 [线上评测记录](reports/run_002/ONLINE_RESULT.md)。
+2026-11-12 用户批准一次例外提交 `proposal_run012 / v34_contrasts_spatial`：Kaggle Public Score **0.80967**（80.967%），当时账号排名 **225 / 2,030，约前 11.08%**。这是滚动榜快照，不是永久最终名次；尚未进入前10%。参见 [最新线上评测记录](reports/proposal_run012/ONLINE_RESULT.md)。
+
+首次 `run_002 / v6_no_id_features` 线上为0.80687（80.687%），当时517/2032、约前25.4%。本次线上提升0.28个百分点；[首次记录](reports/run_002/ONLINE_RESULT.md)保留。
 
 开发集三折 OOF 为 81.58%，独立留出集为 81.20%；这些本地指标与线上分数分别报告。尚未达到前 10% 的项目目标。
 
-后续本地迭代目前最高为 `run_012 / v34_contrasts_spatial` 的 **81.92%**（相同开发集三折 OOF）。旧留出集未再次用于选模型，此结果也尚未通过新的划分复核。每轮完整结果和失败方案保存在对应 `reports/` 子目录。汇总见 [迭代数据](reports/local_iterations.csv) 和 [进度图](reports/iteration_progress.png)，可运行 `summarize_iterations.py` 更新。
+后续本地迭代目前最高为 `run_012 / v34_contrasts_spatial` 的 **81.92%**（相同开发集三折 OOF）。两次新随机划分为81.48%、81.62%，均好于原基线；同行隔离为81.39%，比基线低0.22个百分点，稳定性结论混合。旧留出集未再次用于选模型。每轮完整结果和失败方案保存在对应 `reports/` 子目录。汇总见 [迭代数据](reports/local_iterations.csv) 和 [进度图](reports/iteration_progress.png)，可运行 `summarize_iterations.py` 更新。
 
 ## 数据与线上成绩
 
