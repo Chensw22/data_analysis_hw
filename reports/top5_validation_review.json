@@ -1,0 +1,171 @@
+{
+  "status": "completed_predeclared_validation_proposal_root_accepted_dual_track_no_new_training_or_submission",
+  "scope": "Independent review of existing reports, OOF diagnostics and frozen Mitra implementation. No new training, GPU use, installation, old-holdout scoring, public-score fitting or online submissions.",
+  "sources_sha256": {
+    "reports/method_tiers.csv": "22568eeb9a7069b7c84415188e4dea2157156edc660cf1292091238071fe7bd8",
+    "reports/a_tier_batch_20261112/RESULTS.md": "f5f855a038906e8c9c705d43bf779a6c66fd936d02770c11f47ccf759025a54b",
+    "reports/online_batch_20261112/RESULTS.md": "c3297719e664c48f74548a6a2e14cacc10927ddd7dc1a59bb2fcaf899c3ed073",
+    "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
+    "reports/run_039/screen_results.csv": "730026123eb8a2f4eef670f1aa29bc7b14cf3ecb489c18e14d51ebfd628df11d",
+    "reports/strong_model_complementarity_review.json": "39dba104086bbef723a5c406f2ee162ae1ec46aec497a31a83889005e22806f1",
+    "reports/mitra_resource_probes/mitra4636_result.json": "db6f2fe95cc7fb03e11781b186ef72b8791232f7f8245190a02ac48d4e5e6bb9",
+    "reports/mitra_resource_probes/mitra_chunked4636_result.json": "4698b3a5d3f4fc0a0d448a154b6eaccc2a19730d8269d3967efe730e7c083b70",
+    "reports/mitra_resource_probes/mitra_finalbatch2318_result.json": "a08091f2b633f7a5ce70908bfb0eecfcfdd74aef63154e0784120b7027165f19",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465"
+  },
+  "current_evidence": {
+    "frozen_local_anchor": {
+      "version": "v44_seed_ensemble",
+      "accuracy": 0.8198159332758125,
+      "source": "reports/method_tiers.csv"
+    },
+    "online_reference": {
+      "version": "v71_Mitra2_zeroshot",
+      "local_accuracy": 0.816508484325568,
+      "local_log_loss": 0.38019593489424935,
+      "public_accuracy": 0.81155,
+      "submission_id": 58276251,
+      "historical_rank": 142,
+      "historical_entries": 2039,
+      "historical_timestamp": "2026-11-12T15:03:57Z",
+      "rank_is_historical_snapshot_not_current_guarantee": true
+    },
+    "public_comparison": "Eight A representatives observed public scores within0.866percentagepoints; this does not prove statistical equivalence. v44 local lead did not translate to public lead. Public best is itself selected among submissions and can be optimistic.",
+    "complementarity": "Existing diagnostic reports show three strong models share1023errors; all-label oracle is not implementable and is not a basis for selecting test rows or fitting ensemble weights."
+  },
+  "instruction_interpretation": {
+    "latest_goal": "Online top5%, verified on the official complete ranking at a stated timestamp; no fixed score guarantees a rolling percentile.",
+    "latest_submission_request": "继续迭代，如果出现稳定好的模型就提交线上测试",
+    "policy": "Root accepted a new explicit dual-track research-eligibility policy before new adaptation scores. A-eligible means stable enough for one controlled online experiment, not statistically equivalent, S-tier or already superior. The latest request supplies prospective authorization only to candidates meeting this recorded policy; consumed earlier batches supply no authorization.",
+    "legacy_83": "Preserve all original83% gate settings and historical failed gate.json files. Do not change their result to passed. Record new top5 eligibility in a separate decision artifact with legacy_gate_passed and new_policy_eligible as distinct fields. A may qualify below83 under the newer research submission instruction. S retains83 as an additional absolute requirement.",
+    "user_communication": "State the changed interpretation explicitly: stable A research tests may be uploaded under the latest request while83 remains the legacy stronger gate; never describe the previous exceptions alone as a permanent waiver.",
+    "budget_policy": "Use current authorized12% weekly reserve with fresh quota checks managed byroot; this report records no private live quota balance."
+  },
+  "frozen_validation_protocol": {
+    "candidate_scope": "One preregistered mechanism-level candidate per cycle. No outer-OOF weight/threshold fitting; any inner model/step choice is part of the frozen program. Freeze source, model hashes, feature schema, precision, seeds, budgets and export logic before its first score.",
+    "data": "Same6954 development passengers. Original1739 opened holdout remains excluded from tuning/confirmation. Full8693 training labels are allowed only for final frozen export after eligibility, never to measure that old holdout again.",
+    "screen": {
+      "split_seed": 20261112,
+      "folds": 3,
+      "splitter": "StratifiedKFold(shuffle=True)",
+      "decision_threshold": 0.5,
+      "initial_A_lower_accuracy": 0.8098159332758125,
+      "note": "1pp is a practical screening band around the fixed pre-cycle v44 anchor, not a statistical equivalence margin that has been proven."
+    },
+    "repeated_random_validation": {
+      "split_seeds": [
+        20261113,
+        20261114
+      ],
+      "folds_per_seed": 3,
+      "matched_references": [
+        "v71_Mitra2_zeroshot",
+        "v44_seed_ensemble"
+      ],
+      "note": "These seeds/development labels have previously been used. Call this repeated-split stability evidence, never unseen holdout or independent confirmation. Recompute fresh candidate models and exact same-split controls or use provenance-verified identical cached controls."
+    },
+    "whole_group_validation": {
+      "split_seed": 20261112,
+      "folds": 3,
+      "splitter": "StratifiedGroupKFold(shuffle=True)",
+      "group": "PassengerId prefix before underscore",
+      "membership_assertion": "No group ID occurs in both training and validation in any fold. Use onlydevelopment targets. All training context, adaptation episodes and model-selection steps stay within outertrain.",
+      "reason": "Actualtrain/test GroupIds are disjoint. Random row CV can put group mates on both sides and give misleading transfer evidence even without explicitGroupId features."
+    },
+    "required_outputs": [
+      "Per-passenger OOF probability, correctness and prediction ID alignment for each model/split",
+      "Development-index andgroup-ID hashes; frozen source/checkpoint/environment/seed manifest",
+      "Accuracy/logloss/time/memory and candidate-v-reference corrections/regressions bysplit",
+      "Full training histories, selected steps including0, completion/resource status",
+      "Separate eligibility decision with every threshold and measured value, legacy gate status, artifact/commit/file hashes"
+    ],
+    "no_retry_policy": "Failed validation is a result. Do not try additional split seeds, loosen margins, increase layers/steps or choose a public-score rescue weight under the same frozen candidate. A changed recipe is a new disclosed experiment."
+  },
+  "A_online_research_gate": {
+    "interpretation": "Stable qualified research candidate in the A practical band; not S and not a claim of practical/statistical superiority.",
+    "all_conditions_required": [
+      "Complete fixed original3fold screen and meet initial A band.",
+      "On each repeated random split20261113 and20261114, candidate accuracy strictly exceeds matched Mitra accuracy; average of those two paired gains is at least0.001 (0.10percentagepoint).",
+      "On the whole-group split, candidate accuracy is at least matched Mitra accuracy; no directional reversal.",
+      "On each repeated random split and whole-group split, candidate accuracy is no more than0.01 below matchedv44; this is an operational practical-range check, not demonstrated statistical noninferiority.",
+      "Every fold/required model completed under frozen resource protocol; probabilities are finite, aligned and reproducible; no target/source contamination.",
+      "Candidate represents the preregistered substantive mechanism. If all adaptation selections returnstep0 and outputs reproducezero-shot, do not submit another identical prediction file.",
+      "Preserve fixed0.5 threshold. Report logloss and calibration tradeoffs; do not optimize them on the public leaderboard."
+    ],
+    "reviewer_assessment": "The tightened requirement improves over accepting any A model: it demands repeatable small positive change against the current online reference and survives the more realistic group split. The0.10pp threshold is a screening convention only and must not be marketed as a meaningful standalone win.",
+    "bootstrap_role": "Report paired whole-group resampling sensitivity, including bounds relative to0 and -1pp, but do not require or advertise formal statistical equivalence based on adaptively reused development data."
+  },
+  "S_stable_local_superiority_gate": {
+    "all_conditions_required": [
+      "Candidate originalscreen accuracy and mean repeated-random accuracy both exceed0.83.",
+      "Both repeated random split gains versusmatchedv44 are positive; their mean exceeds0.01 (strictly more than1percentagepoint).",
+      "Mean repeated-random gain versusmatchedMitra is positive; candidate whole-group gains versusbothreferences are positive.",
+      "Paired GroupId-cluster bootstrap lower95% bound for the average repeated-random candidate-v44 gain is above0, and the separate whole-group gain lower95% bound versusv44 is above0.",
+      "All A integrity/completion/reproducibility conditions hold."
+    ],
+    "claim_limit": "This supports a stable, practically larger local gain under the fixed protocol. It does not establish population equivalence/superiority, private leaderboard performance or that the true gain necessarily exceeds1pp; the confidence calculation is not corrected for many prior adaptive searches."
+  },
+  "paired_cluster_sensitivity": {
+    "bootstrap_replicates": 2000,
+    "rng_seed": 20261119,
+    "unit": "Whole PassengerId group, paired across candidate/reference and all stored repeats.",
+    "statistic": "For each dev passenger compute paired correctness difference and average over the two repeated random splits. Resample complete groups with replacement, keep every passenger and model/repeat pairing, and compute passenger-weighted overallmean. Apply separately to the whole-group OOF difference.",
+    "interval": "2.5/97.5percentiles; report effect inpercentagepoints with interval and corrections/regressions.",
+    "prohibitions": [
+      "Do not treat9 overlapping fold accuracies as9 independent observations.",
+      "Do not average independent per-model bootstrap intervals instead of paired differences.",
+      "Do not use this same diagnostic to search model weights, subgroups, thresholds or seeds."
+    ],
+    "limitations": "Fixed fitted OOF probabilities, correlated training sets, reused targets and adaptively selected models remain. Group bootstrap is a sensitivity summary, not a new holdout or multiplicity-corrected proof."
+  },
+  "submission_and_top5_decision": {
+    "sequence": [
+      "Root freezes the new validationpolicy and solecandidate before scoring.",
+      "Complete all required local paired validations and recordeligibility; preserve original failed83gate ifapplicable.",
+      "Commit/push candidate, finalfit8693labels with frozenexport, validate4277uniquePassengerIds andbooleanTransported, saveCSV/model/environmentSHA.",
+      "Check official current daily allowance and submissionhistory, then upload exactlyonce under thelatestqualified-candidate authorization. Network uncertainty triggers statuslookup, notblind resubmission.",
+      "Log submissionID, rawscore, completionstatus, commit, filehash and official full-ranking timestamp/size/rank.",
+      "Verify top5 by actualrank/entries<=0.05; tiedscores and ranking order matter, and thepercentile is time-specific."
+    ],
+    "public_feedback_limit": "Use each public score as aggregate external evidence for the frozen method. Do not reverse-engineer labels, mutate subsets or sweep weights/thresholds to recoverpublicscore. Any next method requires a new prespecified mechanism and local protocol.",
+    "historical_batch_authorizations": "Previously used batches remain consumed. A remaining daily quota is not itselfauthorization."
+  },
+  "Mitra_partial_adaptation_acceptance": {
+    "scientific_status": "New local parameter-efficient adaptation, not the official full-parameter50step×8bag benchmark. Currentzero-shot has no optimization-convergence issue; previous fullparameter attempt was resource-inconclusive, not a negative trained-model score.",
+    "current_resource_evidence": "Original and independent-batch checkpoint backends both failed representative3708support/928query fullparameter AdamW under fixedMPS.65cap. Full8693-context zero-shot inference succeeds. A300MB checkpoint is not a training-memory estimate.",
+    "single_candidate": "Freeze embeddings andfirst11transformerblocks; trainlastblock+finalnorm+native10classhead only, with one declared optimizer/step/sampler recipe and selection includingstep0. Do not add head-only/LoRA/deepervariants after seeing this candidate score.",
+    "query_only_final_block_review": "Pinned nonflash Layer.forward uses entranceLN1(support) forquery cross-attention. Later support updates do not feed back into the sameblockquery andfinalsupport is discarded. Omitting that lastblocksupport-update branch is mathematically valid ifquery path andtrainable supportLN1/KV gradients remain intact. Modelhasnodropout.",
+    "gradient_and_equivalence_tests": [
+      "Zero-step forward and classprobabilities agree with frozenv71 for sameweights/preprocessor/support/query/backend.",
+      "Compare fullfrozen-prefix reference versusoptimizedquery-only outputs, loss, everytrainablegradient and oneAdamWupdatedstate onCPU, including nondivisiblequerychunklength.",
+      "Supportprefix isdetached, but trainable lastblockLN1(support),K/V projections must remain inautograd. Recompute them perquerychunk ifneeded rather than retaining thewholegraph or detaching gradients.",
+      "Sum CE overeachquerychunk divided bytotalepisodequerycount; zero_grad once, backwardallchunks, exactlyoneoptimizer.step. No equalweighting ofunequalsizedchunkmeans.",
+      "Frozenparameter hashes unchanged andgradsNone aftersteps; declaredtrainableparameters have expectedfinitegradients andactualupdates. Optimizer includes onlydeclaredtrainables.",
+      "Preserve full10logit CE, actualtwo-logit probabilitymapping, originalsupportlabelencoding andquerylabelmasking. Querytargets appear only inloss."
+    ],
+    "data_and_selection": [
+      "Fresh train-only preprocessing at each inner/fullrefit; support/query unique IDs disjoint within currenttrainingportion.",
+      "Prefixcontext depends on supportattributes/labels/partition; do not reusecachedprefix across different episodes. Fixed validation-prefix caching is permissible only with identicalfrozenweights, support/querycontent/order, preprocessing andprecision, and must be equivalencechecked.",
+      "Inner80/20 selects amongstep0..50 on validationlogloss; evaluate everydeclaredstep and retain fullhistory. Then resetoriginalcheckpoint/preprocessor/optimizer/RNG andtrainfullouter forselectedsteps. Outerval never selectssteps orlayers.",
+      "Allowstep0 towin. If beststep50 or validationcurve stillimproves atcap, reportbudget-limitedrecipe; do not silentlyextend afterouterresults. A single50step localrecipe cannot prove thefamilyconverged."
+    ],
+    "resource_prerequisites_before_real_score": [
+      "Fullouter3708support/928query synthetic oralloweddev episode: at leasttwooptimizersteps plusrepresentativeinner-validation forward, measuringstateswhilelive andpostcleanup memory.",
+      "Final8693-row training-shaped episode6954support/1024query withfullysyntheticdata/independentlabels; nooldholdouttargetprobe.",
+      "Full8693-context inference withfrozenquerychunk andsameCPUartifactsave/reload parity.",
+      "Recordweights/input/autocastprecision,actualtrainablecount, optimizerstatebytes,RSS/MPS snapshots,elapsedtime andestimatedcomplete50step+selection+refitbudget. KeepMPS.65cap andfullsupport; nohiddenprecision/device/contextfallback."
+    ],
+    "failure_behavior": "OOM,nonfinitegradient,incompletevalidation,brokenparity ormissingfullfinalshape support meansresource-inconclusive andnoteligible. Do not restore disabledoldadapt50 entrypoint or claimtrainingworked becausezero-shotforwardfits."
+  },
+  "battle_outcome": {
+    "peer": "research_improvements",
+    "agreed": [
+      "One lastblock+norm/head candidate, step0 eligible; no extra identicalprediction submission ifadaptationselects0.",
+      "Finalblockquery-only branch is valid bysource dependency inspection, subject toall-gradient/update equivalence.",
+      "NewA eligibility is repeateddevelopment stability, not unseenconfirmation/equivalence; groupnonreversal is againstmatchedMitra."
+    ],
+    "parent_decision": "Root tightened A from broadwithin1pp acceptance to two positiveMitra repeats withmean>=.10pp plusgroupnonreversal; reviewer accepts this correction. Rootfroze repeatedseeds20261113/14 rather than initiallyproposed17/18.",
+    "pending_execution": "Baseline pairedseed/group audits assigned toanotheragent; no newbaseline orcandidatevalidation results areclaimed inthisreport."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "status": "research_complete; one_fixed_candidate_recommended_subject_to_resource_and_equivalence_gates; no_training_performed",
+  "decision": "下一条重大路线推荐Mitra-v2最后1个Transformer块+输出层的任务适配，而非重试全参数AdamW、全层LoRA或同时扫描冻结层数。现有零梯度Mitra线上代表最好使其值得研究，但这不是局部适配一定改善的证据。",
+  "motivation": {
+    "current_parent_report": "Mitra-v2 zero-shot线上0.81155；v34 0.80967、v44 0.80944。这里只记录主agent给出的观察，不据此拟合层数/学习率或推导目标排名。",
+    "untested": "此前adapt50在代表尺寸AdamW资源探针OOM而被禁用，没有适配准确率。因此适配路线尚未被效果实验否决。",
+    "mechanism": "零样本模型只通过support X/y进行in-context推断，参数不变；候选用外层训练集中的disjoint support/query episodes更新最后一层的跨行检索、跨特征组合和输出映射。前11层保留合成任务预训练表征。"
+  },
+  "checkpoint": {
+    "directory": "artifacts/pretrained/mitra-v2",
+    "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+    "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "bytes": 302717904,
+    "license": "Apache-2.0",
+    "pretraining": "官方模型卡声明纯合成任务预训练；不声称独立逐样本审计。",
+    "policy": "每次freshfit校验本地SHA，无新权重、云服务或凭据。"
+  },
+  "static_resource_evidence": {
+    "method": "仅读取本地safetensors JSON头部统计shape，未实例化/运行模型。",
+    "total_parameters": 75670026,
+    "trainable_parameters": 6310922,
+    "trainable_fraction": 0.08340055281598556,
+    "trainable_fp32_bytes": 25243688,
+    "adam_two_moment_bytes": 50487376,
+    "caveat": "这些不包含激活、完整基础权重和MPS缓存，不是峰值显存保证；原全参OOM不能只归因optimizer。"
+  },
+  "frozen_recipe": {
+    "inputs": "沿用mitra_candidate.py现有compact13及相同train-only预处理、categorical映射、random_mirror_x固定seed、全量support上下文。",
+    "trainable_names": [
+      "layers.11.*",
+      "final_layer_norm.*",
+      "final_layer.*"
+    ],
+    "frozen_names": "所有embedding和layers.0至layers.10；requires_grad=False并显式no_grad前缀，边界support/query detach。",
+    "loss": "原生10输出logits上的query交叉熵；监督query标签只进入loss，不进入模型输入。评估截取真实二类并softmax，与现有zero-shot一致。",
+    "optimizer": {
+      "name": "AdamW",
+      "parameters": "仅上述36个trainable tensor",
+      "base_learning_rate": 3e-06,
+      "weight_decay": 0.3,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "gradient_clipping": null
+    },
+    "learning_rate_schedule": "沿原已审官方literal warmup：第step>=1次更新lr=3e-6*(0.1+0.09*min(step-1,9))；第10步及以后为2.73e-6。保留而不悄悄修正上游off-by-one。",
+    "max_steps": 50,
+    "query_microbatch": 128,
+    "precision": "沿当前backend：权重/输入FP32，MPS BF16 autocast，loss/logits转FP32；不新增精度或CPU训练回退。",
+    "memory_cap": "保留当前MPS recommended maximum的0.65；不关闭watermark。",
+    "no_grid": "不同时试head-only/最后2层/LoRA或其他学习率；50steps是预声明初试，不是已知收敛保证。"
+  },
+  "exact_query_only_final_layer": {
+    "source_fact": "vendored tab2d.py非Flash Layer.forward中，query的row cross-attention只使用该块入口经过layer_norm1的support；同一块稍后更新的support不回流query。最后块输出support随后未被分类head使用。",
+    "optimization": "保留前11块原运算；最后块仅计算query路径及其所需support入口LN1/K/V，跳过最终块support自身row-attention/MLP/feature-attention更新。这是此冻结结构的代数消除，不是稀疏/截断上下文近似。",
+    "gradient_requirement": "prefix support可detach，但最后块support上的layer_norm1与attention1.k/v必须有梯度。不能预计算后detach这些可训练投影。",
+    "microbatch_semantics": "同一episode只zero_grad一次。对每128条query重算可训练support LN1/KV，计算sum CE/完整episode query数并backward，所有query完成才optimizer.step一次。最后短块不能与完整128块等权平均。完整support keys保留，不能沿key维截断softmax。",
+    "why_lower_memory": "最后块反向图从support自注意力S×S转为query微批Qmicro×S；冻结前缀只需前向workspace，且Adam双矩状态从全部75.7M参数降至6.31M。",
+    "not_automatic": "仅设置requires_gradFalse仍未明确去掉最终support无用分支；应通过独立adapter实现并用等价测试证明。旧vendor和旧候选源不可修改。",
+    "prefix_batching": "每个训练episode把完整support和完整query通过冻结前11块一次，得到detach边界表示；只在可训练最后块将query切128累积梯度。不能每个query微批重新运行前11块，否则约增加7–8倍重复前缀工作。当前完整928query冻结前向已被已有zero-shot尺寸覆盖，仍在资源probe实测。"
+  },
+  "episode_and_validation_protocol": {
+    "outer": "沿项目固定outer3fold，outervalidation只在完整适配结束后预测。旧holdout和Kaggle测试标签完全不读。",
+    "inner": "outertrain固定stratified80/20；只innertrain用于预处理拟合和梯度episode抽样。inner20%标签只选step，不入support/梯度loss。",
+    "sampler": "保留现有official_episode_indices：仅相应训练池随机置换，StratifiedKFold5 shuffle固定私有RNG取一折query，其余support；support cap16384，query cap1024，support/query ID必须不交。每步重新抽episode，不把自身query标签带入support。",
+    "representative_sizes": {
+      "inner_selection_episode": "约2966support/742query (innertrain约3708)",
+      "outer_refit_episode": "3708support/928query (outertrain4636)",
+      "final_export_episode": "约6954support/1024query (8693train；query按官方cap)等精确数由sampler记录"
+    },
+    "selection": "评估step0和每次完整optimizer更新后的step1..50；完整innertrain作support，inner20%作query；选择最小有限二类logloss，平分取最早，允许0。不得按outerval选step或选择有利训练检查点。",
+    "fresh_refit": "丢弃selection的参数、optimizer和预处理；重新SHA校验原checkpoint，在完整outertrain重新拟合预处理，重置所有RNG，按同规则恰好训练selected_steps。所有outertrain成为最终预测support。",
+    "full_export": "确认后的全8693训练仍用内部80/20选step再fresh全8693refit同样程序，不能借用外层验证标签作新的选步验证集。",
+    "caching": "训练prefix依赖support特征/标签、supportquery分配和预处理，不能跨变化episode复用。固定inner验证的prefix可在同一fit缓存，因为前11块冻结且support/query不变；缓存需带ID/标签/预处理/权重hash，不缓存最后块可训练LN/KV。不要跨outerfold共享。"
+  },
+  "required_gates_before_formal_cv": {
+    "cpu_equivalence": "小型真实上游模型：原完整forward(冻前n-1块)与拆分prefix+最后块query-only的10logits、loss、每个trainable梯度及一步AdamW后权重一致；包括query总数非128倍数、support标签置换。允许数学本来为零的梯度，不强求每tensor非零。",
+    "isolation_tests": "support/query ID交集立即拒绝；训练函数不接outerval标签；prefix无梯度且state hash不变；零步拆分输出匹配原同backend。",
+    "small_mps_probe": "synthetic labels，小尺寸执行至少两次完整AdamW更新，记录finitegrad/finiteparams、lastblock有真实非零更新、prefix unchanged及optimizer state bytes。无accuracy。",
+    "representative_outer_probe": "完整3708support/928query，两次更新，128microbatch完整loss累积；加完整4636support推理检查。必须记录实际更新数、RSS/current/driver/recommended MPS内存和秒数。小probe不能替代此项。",
+    "final_export_shape_probe": "synthetic labels完整6954support/1024query至少两次AdamW更新，再8693support+代表query前向；确认最终全量任务也可执行，不能只证明开发折可执行。",
+    "roundtrip": "保存原checkpoint hash+adapter结构版本+适配权重+trainonly预处理+全support，重新加载后概率一致；不可只保存临时模块/内存对象。",
+    "failure": "任一OOM/非finite/等价失败即该实现inconclusive，保留zero-shot；不删难样本、缩support、改precision或临时换CPU后声称同recipe。",
+    "probe_timing": "记录第1步和第2步（warm allocator后）分项：prefixforward、lastblock全部microbatchbackward、AdamWstep、固定validationprefix一次创建、cachedvalidationhead；用第2步稳态更新时间估计上限。资源probe仅2次更新不算训练收敛。"
+  },
+  "budget_and_reporting": {
+    "cost_warning": "部分参数适配省反向显存，但每个新episode仍需前11层完整前向，50次随机episode不能一次缓存解决。此任务未做计时，不宣称比zero-shot快。",
+    "projection": "以代表probe测t_episode（前缀+完整microbatch反向+更新）、t_val_cached和最终refit样本规模，估screen约3*(50*t_inner_episode+50*t_val_cached+selected_steps*t_outer_episode)+初始化/最终预测。selected_steps按50估上界；由root按实测排期，超预算在正式评分前决策，不按中途分数缩步。",
+    "log": "每步10class训练CE、inner二类logloss、LR、seconds、support/query hash、微批数与optimizer步数、选中step、0或cap胜出、peak memory。",
+    "decision": "一次完整同协议CV检验对zero-shot的增量和稳定性；结果弱仅否定此冻结recipe。线上是否自动提交由主agent执行用户当前授权，不由研究agent写入外部服务。",
+    "historical_forward_evidence": {
+      "source_files": [
+        "reports/mitra_resource_probes/mitra_batch2318_result.json",
+        "reports/mitra_resource_probes/mitra_finalbatch2318_result.json"
+      ],
+      "full4636support_2318query_seconds": [
+        23.54335774993524,
+        23.105583625030704
+      ],
+      "full8693support_2318query_seconds": [
+        51.50982279202435,
+        50.96185616706498
+      ]
+    },
+    "preprobe_walltime_estimate": {
+      "basis": "用已测12层fullforward量级推断11层前缀；粗按S²+S*Q缩放仅作排期，尾部反向和MPS调度尚未测。",
+      "inner_episode_seconds_range": [
+        10,
+        20
+      ],
+      "cached_inner_validation_seconds_range": [
+        1,
+        4
+      ],
+      "outer_refit_episode_seconds_range": [
+        15,
+        30
+      ],
+      "per_outer_worst_selected50_seconds_range": [
+        1300,
+        2700
+      ],
+      "three_outer_screen_minutes_range": [
+        65,
+        135
+      ],
+      "note": "估计包含每个inner50step后验证和freshouter最多50step；另加初始化/缓存创建/最终推理。若selected0则refit无更新，但排期不得先假设选0。不能把该区间称为实测或通过降低步数兑现预算。"
+    }
+  },
+  "battle": {
+    "reviewer": "review_current",
+    "agreement": "双方逐行审查确认最终块support更新未用于query，query-only数学优化可行；必须保留support LN/KV梯度和正确microbatch加权。",
+    "limits": [
+      "最后1块可训不等于全模型任务适配；可能只能做局部校准，无法修复冻结表征的系统错误。",
+      "从合成prior迁移真实小样本存在过拟合/遗忘；50步较小学习率可能不足，step0可胜出，但不能用外层结果扩网格。",
+      "全层LoRA虽省optimizer状态仍需穿过全部12层的梯度/激活，因此不作为这台机器第一选择；head-only资源最轻但表达能力更窄，本轮不追加它。"
+    ]
+  },
+  "sources": [
+    {
+      "url": "https://huggingface.co/autogluon/mitra-classifier-2",
+      "supports": "官方模型结构、75.7M参数、12层、合成预训练、Apache2.0、作者完整50步8bag/CUDA方案与stock不同。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/tab2d.py",
+      "supports": "非Flash forward的最后块query依赖图、head和原模型定义。"
+    },
+    {
+      "url": "https://huggingface.co/autogluon/mitra-finetune/tree/b4701e8148dc33b00ed15d7086ff59816957cde4",
+      "supports": "固定官方full-finetune recipe来源；部分层recipe和query-only优化是本项目推导，非作者报告结果。"
+    },
+    {
+      "local": "reports/mitra_adaptation_review.json",
+      "supports": "已逐项审查的官方AdamW、literal warmup、episodic sampler、query标签mask和full-head loss。"
+    },
+    {
+      "local": "reports/mitra_protocol.json",
+      "supports": "当前zero-shot成功、全参数代表尺寸资源失败和既有backend约束。"
+    }
+  ]
+}
