@@ -1,0 +1,39 @@
+{
+  "status": "complete",
+  "kind": "synthetic_resource_only_no_accuracy",
+  "context_rows": 8693,
+  "query_rows": 128,
+  "weights_and_input_dtype": "float32",
+  "autocast_dtype": "bfloat16",
+  "full_context": true,
+  "device": "mps",
+  "mps_memory_fraction": 0.65,
+  "mps_allocator_limit_bytes": 8263525171,
+  "machine_memory_pressure_before": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 73%",
+  "support_source": "synthetic",
+  "support_labels": "synthetic_alternating_binary_no_real_target_read",
+  "before": {
+    "max_rss_bytes": 1013071872,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "inference_seconds": [
+    56.503612375003286,
+    48.87938762491103
+  ],
+  "after_inference": {
+    "max_rss_bytes": 1013071872,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 4715151360,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "resolved_support_rows": 8693,
+  "features": 13,
+  "parameters": 75670026,
+  "full_fold_query_chunks": 19,
+  "estimated_full_fold_seconds": 928.7083648733096,
+  "total_seconds": 105.82155329105444
+}

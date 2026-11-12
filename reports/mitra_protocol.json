@@ -96,9 +96,31 @@
   },
   "commands": {
     "cpu_tests": ".venv-mitra/bin/python -m pytest -q test_mitra_candidate.py",
-    "root_only_outer_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 4636 --query-rows 128 --backward --output artifacts/probes/mitra4636",
-    "root_only_export_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 8693 --query-rows 128 --skip-roundtrip --output artifacts/probes/mitra8693"
+    "root_only_outer_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 4636 --query-rows 128 --backward --output artifacts/probes/mitra_chunked4636",
+    "root_only_export_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 8693 --query-rows 128 --skip-roundtrip --output artifacts/probes/mitra_chunked8693",
+    "root_only_small_backend_probe": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 650 --query-rows 128 --backward --output artifacts/probes/mitra_chunked650"
   },
   "scoring": "screen/confirm/export deliberately raise until resource review; no partial-CV wins and no conclusion that one poor zero-shot recipe rejects this family.",
-  "cpu_test_status": "7 passed in4.48s using parent-managed .venv-mitra; only tiny CPU models.67 upstream einx deprecation warnings; no MPS or real-data training."
+  "cpu_test_status": "10 passed,2 subtests passed in4.51s. CPU only; original-vs-adapter FP64 self/cross output/input/every-param gradient equality,2layer fullTab2D nestedcheckpoint gradients and existing persistence/schema tests.81 upstream deprecation warnings.",
+  "attention_backend": {
+    "revision": "independent_batch_checkpoint_v1",
+    "reason": "Parent resource probe: original forward full4636/query128 succeeded19.41/18.18sec;3708support/928query backward failed SDPA allocation under unchanged.65 MPS cap. No accuracy was scored.",
+    "operation": "Only long-sequence nonflash SDPA decomposed along independent batch dimension, chunk1; every chunk retains fullQ and fullK and the same full-key softmax denominator. Concatenate in original batch order, same output projection.",
+    "condition": "max(Q_sequence_length,K_sequence_length)>512 and batch_dimension>1; otherwise original upstream implementation, so feature attention sequence14 stays vectorized.",
+    "training_memory": "Each SDPA chunk individually torch.utils.checkpoint(...,use_reentrant=False), retaining default RNG preservation. Upstream per-layer checkpoint remains unchanged. This prevents all per-chunk attention matrices remaining saved together; actual memory improvement must be probed.",
+    "state": "Same Q/K/V/O modules, weights, state_dict keys; installed onto reconstructed model via a project subclass. No changes to the5vendoredfiles.",
+    "unchanged": [
+      "Fullcontext/no8192cap",
+      "querybatch128",
+      "MPSbf16autocast",
+      "FP32weights/context/outputsoftmax",
+      "MPSallocatorfraction.65",
+      "traininglossfull10classhead",
+      "noattentionmask/dropout/softmaxapproximation"
+    ],
+    "cpu_validation": "Official-vs-adapter self/cross attention forward, separate input and every parameter gradients; full2layerTab2D nestedcheckpoint parameter gradients; SDPA call-shape test verifies fullK and shortsequence vectorization.",
+    "resource_validation": "Parent runs smallMPS first, then4636forward+completeAdamWstep, then8693fullsynthetic forward; OOM remains inconclusive without precision/context fallback.",
+    "small_probe": "650total rows yields520support/130query backward, so maxK>512 exercises chunked training path. A520total-row episode would miss the threshold in backward.",
+    "label_copy": "Adapter clones support labels before upstream embedding, whose padding assignment is in-place even when padding is false. Same label values; prevents shared tensor version mutation across independent computation graphs."
+  }
 }

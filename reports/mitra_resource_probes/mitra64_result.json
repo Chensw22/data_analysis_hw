@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "kind": "synthetic_resource_only_no_accuracy",
+  "context_rows": 64,
+  "query_rows": 16,
+  "weights_and_input_dtype": "float32",
+  "autocast_dtype": "bfloat16",
+  "full_context": true,
+  "device": "mps",
+  "mps_memory_fraction": 0.65,
+  "mps_allocator_limit_bytes": 8263525171,
+  "machine_memory_pressure_before": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 51%",
+  "support_source": "synthetic",
+  "support_labels": "synthetic_alternating_binary_no_real_target_read",
+  "before": {
+    "max_rss_bytes": 987660288,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "inference_seconds": [
+    2.7554146670154296,
+    0.24101125000743195
+  ],
+  "after_inference": {
+    "max_rss_bytes": 987660288,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 657276928,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "resolved_support_rows": 64,
+  "features": 13,
+  "parameters": 75670026,
+  "full_fold_query_chunks": 19,
+  "estimated_full_fold_seconds": 34.94663125107763,
+  "backward": {
+    "support_rows": 51,
+    "query_rows": 13,
+    "disjoint": true,
+    "parameters_with_grad": 392,
+    "finite_gradients": true,
+    "optimizer_steps": 1,
+    "weight_update_confirmed": true,
+    "optimizer_state_tensor_bytes": 605361776,
+    "resources_with_optimizer": {
+      "max_rss_bytes": 987660288,
+      "mps_current_bytes": 1372408576,
+      "mps_driver_bytes": 1631617024,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    },
+    "loss_value_reported": false
+  },
+  "backward_seconds": 6.344317584007513,
+  "after_backward": {
+    "max_rss_bytes": 987660288,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 1631617024,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "roundtrip_max_abs_difference": 0.0,
+  "total_seconds": 10.790482999989763
+}

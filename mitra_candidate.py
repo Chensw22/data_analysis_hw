@@ -23,11 +23,12 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn.functional as F
+from torch.utils.checkpoint import checkpoint
 from safetensors.torch import load_file
 
 from third_party.mitra._internal.config.enums import Task
 from third_party.mitra._internal.data.preprocessor import Preprocessor
-from third_party.mitra._internal.models.tab2d import Tab2D
+from third_party.mitra._internal.models.tab2d import Tab2D, MultiheadAttention as UpstreamAttention
 
 ROOT = Path(__file__).resolve().parent
 NAMES = ('v71_Mitra2_zeroshot', 'v72_Mitra2_adapt50')
@@ -42,7 +43,9 @@ MODEL_CONFIG = dict(dim=512, dim_output=10, n_layers=12, n_heads=4, task='CLASSI
 SETTINGS = dict(seed=42, query_chunk=128, weights_and_input_dtype='float32',
                 mps_autocast_dtype='bfloat16', cpu_autocast=False,
                 support_policy='all_rows_no_sampling_no_cap', n_estimators=1,
-                random_mirror_x=True, mps_memory_fraction=.65)
+                random_mirror_x=True, mps_memory_fraction=.65,
+                sdpa_batch_chunk=1, sdpa_long_sequence_threshold=512,
+                sdpa_checkpoint_each_chunk=True)
 
 
 def sha256(path):
@@ -128,15 +131,68 @@ class MitraPreprocessor:
         return np.ascontiguousarray(result, dtype=np.float32)
 
 
-def make_model(config, state=None, device='cpu'):
+class BatchChunkedAttention(UpstreamAttention):
+    """Exact independent-batch decomposition of upstream non-Flash SDPA.
+
+    Q/K sequence axes and the full softmax denominator never change. Long row
+    attention is split across independent feature batches. Short feature
+    attention retains the original vectorized implementation. Each SDPA block
+    is checkpointed during autograd, so saved attention matrices do not add up
+    across blocks. The upstream layer checkpoint remains enabled as well.
+    """
+    def forward(self, query, key, value, cu_seqlens_q=None, cu_seqlens_k=None,
+                max_seqlen_q=None, max_seqlen_k=None):
+        if ((self.use_flash_attn and cu_seqlens_q is not None)
+                or max(query.shape[1], key.shape[1]) <= self.sequence_threshold
+                or query.shape[0] <= self.batch_chunk):
+            return super().forward(query, key, value, cu_seqlens_q, cu_seqlens_k,
+                                   max_seqlen_q, max_seqlen_k)
+        if query.shape[0] != key.shape[0] or key.shape[0] != value.shape[0]:
+            raise ValueError('Independent batch chunking requires equal Q/K/V batch dimensions.')
+        q, k, v = self.q(query), self.k(key), self.v(value)
+        # Same axis order as upstream einops: b t (h d) -> b h t d.
+        def heads(tensor):
+            return tensor.reshape(tensor.shape[0], tensor.shape[1], self.n_heads,
+                                  self.dim // self.n_heads).transpose(1, 2)
+        q, k, v = heads(q), heads(k), heads(v)
+        pieces = []
+        for start in range(0, q.shape[0], self.batch_chunk):
+            chunk = slice(start, start+self.batch_chunk)
+            inputs = (q[chunk], k[chunk], v[chunk])
+            if torch.is_grad_enabled() and any(t.requires_grad for t in inputs):
+                output = checkpoint(F.scaled_dot_product_attention, *inputs, use_reentrant=False)
+            else:
+                output = F.scaled_dot_product_attention(*inputs)
+            pieces.append(output)
+        output = torch.cat(pieces, dim=0).transpose(1, 2).reshape(query.shape[0], query.shape[1], self.dim)
+        return self.o(output)
+
+
+def install_attention_backend(model, batch_chunk=None, sequence_threshold=None):
+    batch_chunk = SETTINGS['sdpa_batch_chunk'] if batch_chunk is None else batch_chunk
+    sequence_threshold = SETTINGS['sdpa_long_sequence_threshold'] if sequence_threshold is None else sequence_threshold
+    if batch_chunk < 1 or sequence_threshold < 0:
+        raise ValueError('Invalid independent-batch backend settings.')
+    for module in model.modules():
+        if isinstance(module, UpstreamAttention):
+            # No new parameters/buffers or state_dict key changes; preserve the
+            # exact loaded projection modules. Engines are rebuilt, not pickled.
+            module.__class__ = BatchChunkedAttention
+            module.batch_chunk = batch_chunk
+            module.sequence_threshold = sequence_threshold
+    return model
+
+
+def make_model(config, state=None, device='cpu', memory_backend=True):
     # Meta construction avoids a second randomly initialized 303MB model.
     if state is None:
-        return Tab2D(**config, use_pretrained_weights=False, path_to_weights='', device=device).to(device)
-    with torch.device('meta'):
-        model = Tab2D(**config, use_pretrained_weights=False, path_to_weights='', device=device)
-    model.to_empty(device=device)
-    model.load_state_dict(state, strict=True)
-    return model
+        model = Tab2D(**config, use_pretrained_weights=False, path_to_weights='', device=device).to(device)
+    else:
+        with torch.device('meta'):
+            model = Tab2D(**config, use_pretrained_weights=False, path_to_weights='', device=device)
+        model.to_empty(device=device)
+        model.load_state_dict(state, strict=True)
+    return install_attention_backend(model) if memory_backend else model
 
 
 def model_forward(model, support, labels, query):
@@ -150,7 +206,7 @@ def model_forward(model, support, labels, query):
     # weights remain FP32; unsupported bf16 is a reported failure, not a fallback.
     with torch.autocast(device_type=device.type, dtype=torch.bfloat16,
                         enabled=device.type == 'mps'):
-        logits = model(support.clone().unsqueeze(0), labels.unsqueeze(0), query.clone().unsqueeze(0),
+        logits = model(support.clone().unsqueeze(0), labels.clone().unsqueeze(0), query.clone().unsqueeze(0),
             torch.zeros((1, support.shape[1]), dtype=torch.bool, device=device),
             torch.zeros((1, len(support)), dtype=torch.bool, device=device),
             torch.zeros((1, len(query)), dtype=torch.bool, device=device))
@@ -308,7 +364,10 @@ def resource_probe(args):
     result = dict(status='incomplete', kind='synthetic_resource_only_no_accuracy',
         context_rows=args.context_rows, query_rows=args.query_rows,
         weights_and_input_dtype='float32', autocast_dtype='bfloat16' if args.device == 'mps' else None,
-        full_context=True, device=args.device)
+        full_context=True, device=args.device,
+        attention_backend=dict(batch_chunk=SETTINGS['sdpa_batch_chunk'],
+            long_sequence_threshold=SETTINGS['sdpa_long_sequence_threshold'],
+            checkpoint_each_training_chunk=True, full_key_sequence=True))
     start = time.monotonic()
     def timeout(*_):
         raise TimeoutError('Mitra resource probe deadline exceeded.')
