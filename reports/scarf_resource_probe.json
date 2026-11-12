@@ -1,0 +1,62 @@
+{
+  "probe_only": true,
+  "accuracy_computed": false,
+  "actual_test_attribute_rows": 4277,
+  "inner_training_rows": 3708,
+  "unlabeled_pool_rows": 7985,
+  "query_rows": 128,
+  "pretraining_phase": {
+    "kind": "pretrain_epoch_selection",
+    "pool_rows": 7985,
+    "training_rows": 7186,
+    "validation_rows": 799,
+    "selected_epoch": 1,
+    "last_epoch": 1,
+    "optimizer_steps": 57,
+    "cap_reached": true,
+    "best_epoch_at_cap": true,
+    "parameter_count": 340992,
+    "first_encoder_parameter_max_change": 0.038179293274879456,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 4.524833218685737,
+        "validation_loss": 4.408680927141736,
+        "optimizer_steps": 57,
+        "seconds": 3.1344449580064975
+      }
+    ],
+    "elapsed_seconds": 3.1369788330048323,
+    "process_lifetime_max_rss_bytes": 562741248,
+    "mps_driver_snapshot_bytes": 28082176
+  },
+  "supervised_phase": {
+    "kind": "supervised_refit",
+    "training_rows": 3708,
+    "validation_rows": 0,
+    "selected_epoch": 1,
+    "last_epoch": 1,
+    "optimizer_steps": 29,
+    "cap_reached": false,
+    "best_epoch_at_cap": false,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5447635929368461,
+        "validation_loss": null,
+        "optimizer_steps": 29,
+        "seconds": 0.55479516700143
+      }
+    ],
+    "elapsed_seconds": 0.5549024170031771,
+    "parameter_count": 275457,
+    "process_lifetime_max_rss_bytes": 570310656,
+    "mps_driver_snapshot_bytes": 28000256
+  },
+  "total_seconds": 4.059946375025902,
+  "serialization_max_absolute_difference": 0.0,
+  "note": "Only one pretrain-selection and one supervised epoch are timed; not the complete five-phase cost. One-epoch overrides do not modify screening settings.",
+  "process_lifetime_max_rss_bytes": 570703872,
+  "mps_driver_snapshot_bytes": 2834432,
+  "screening_decision": "Run full fixed three-fold scratch and SCARF recipes. Keep predeclared1000/500 epoch caps and early stopping; do not shorten training from this one-epoch probe. Actual total includes three pretraining phases and two supervised phases per fold; inspect every phase log for convergence and cap hits."
+}

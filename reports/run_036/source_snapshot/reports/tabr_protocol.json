@@ -1,0 +1,27 @@
+{
+  "method": "TabR-S default architecture with a local exact-neighbor backend",
+  "upstream_commit": "17baa9082506f8e7a0f8d11bb1e08212926a1507",
+  "upstream_url": "https://github.com/yandex-research/tabular-dl-tabr",
+  "paper": "https://arxiv.org/abs/2307.14338",
+  "license": "MIT",
+  "upstream_files": {
+    "third_party/tabr/LICENSE": "e2a0b9b891e143bf0512e1a862af308779228e973d61e75fbb774ef32bc32761",
+    "third_party/tabr/upstream_tabr.py.txt": "7ad417baa846f500aa5ae8546907936ed9d538dbaa6680086cc060e6edc6c841"
+  },
+  "architecture": "Official default d265, encoder0/predictor1, FFN multiplier2, context96, original attention/FFN dropout and AdamW parameters; retain label embedding and key-difference value transform.",
+  "adaptations": [
+    "Faiss replaced by torch exact squared-L2 top-k; discrete selection under no_grad but selected-key similarity and value aggregation retain gradients.",
+    "Preprocessed numerical and one-hot categorical columns concatenated before the encoder.",
+    "Same compact13 and preprocessing as prior TabM: train-only medians, log1p five amounts, StandardScaler, constant numeric removal; six categorical fields plus seven numeric-missing flags one-hot. Unknown category0 and missing1 have reserved slots.",
+    "Official historical mixer_dropout config is mapped to context_dropout.",
+    "200-epoch cap and inner stratified20% minimum-logloss epoch selection followed by fresh fulloutertrain preprocessing, model and optimizer refit, instead of the paper hyperparameter search and multiseed evaluation."
+  ],
+  "leakage_boundary": "Training retrieval excludes the query row by immutable row ID, not by zero distance. Libraries contain only the applicable training split features and true labels. Inner validation and outer validation never enter a training retrieval library. No old holdout or test rows are used as retrieval candidates. Final export uses full labeled train only.",
+  "optimization": "BCEWithLogits; AdamW; no weight decay on label embedding, biases or LayerNorm; no scheduler or augmentation; CPU RNG shuffle, float32 model operations.",
+  "persistence": "CPU model weights, fitted preprocessor, transformed training library, class labels and row IDs are serialized together. Out-of-sample predict_proba accepts optional query_ids when evaluating known library rows.",
+  "evaluation": "Single fixed candidate v68_TabR_S plus v6 control on unchanged development folds; no threshold/neighbor/architecture search. Source and environment frozen before first baseline. Group confirmation remains required.",
+  "claim_limit": "A fixed-configuration backend adaptation, not a full reproduction of the tuned and ensembled paper results. Reaching the epoch cap is recorded and limits negative conclusions.",
+  "implementation_status": "CPU synthetic tests only; real-data and MPS resource probe must be scheduled separately by root.",
+  "training_audit": "Record each inner epoch training BCE, validation logloss, seconds and optimizer steps; record each fresh-refit epoch BCE, seconds and steps; save selected epoch/stop reason/cap status, parameter count and RSS/MPS memory snapshots. Runtime device is recorded per fit.",
+  "resource_probe": "Three full epochs on one complete outer-training retrieval library, with training-only self-exclusion, then128 outer-query predictions and a temporary joblib serialization roundtrip. No accuracy or reused weights."
+}

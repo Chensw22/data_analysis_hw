@@ -1,0 +1,84 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v68_TabR_S": {
+      "context": false,
+      "model": "tabr_s",
+      "d_main": 265,
+      "context_size": 96,
+      "encoder_n_blocks": 0,
+      "predictor_n_blocks": 1,
+      "d_multiplier": 2,
+      "context_dropout": 0.38920071545944357,
+      "dropout0": 0.38852797479169876,
+      "dropout1": 0.0,
+      "learning_rate": 0.0003121273641315169,
+      "weight_decay": 1.2260352006404615e-06,
+      "batch_size": 256,
+      "max_epochs": 200,
+      "patience": 16,
+      "inner_validation_fraction": 0.2,
+      "epoch_metric": "log_loss",
+      "preprocessing": "TabM_compact13_and_7_categorical_missing_flags",
+      "retrieval": "training_only_exact_torch_squared_L2_topk_exclude_self_ID",
+      "refit": "fresh_preprocessor_model_optimizer_fullouter_selected_epoch_count"
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "tabr_candidate.py": "c0d6da7e71bced4973cfb5afb0185ce72ad11b480a20c84f68ae3cdd067f063c",
+    "test_tabr_candidate.py": "95242be36f637fe77ff2ab9b107468c6a93265a959057a4f9641313a752c98f7",
+    "third_party/tabr/model.py": "0b6b0bdc8bc575c4040dd0e692d1070f5e9e382076062ea03260fe3d44b8dcdd",
+    "third_party/tabr/LICENSE": "e2a0b9b891e143bf0512e1a862af308779228e973d61e75fbb774ef32bc32761",
+    "third_party/tabr/upstream_tabr.py.txt": "7ad417baa846f500aa5ae8546907936ed9d538dbaa6680086cc060e6edc6c841",
+    "reports/tabr_protocol.json": "8182f2b0384bd6543e26d58452c1678d7a585f629ccb3ee59cde97ba96ac5581"
+  },
+  "tabr_environment_sha256": "437cea530e93ac354f0215b95e18008d2d9bdf7dbceb556dc38ac990b4321a68",
+  "tabr_policy": {
+    "method": "TabR-S default architecture with a local exact-neighbor backend",
+    "upstream_commit": "17baa9082506f8e7a0f8d11bb1e08212926a1507",
+    "upstream_url": "https://github.com/yandex-research/tabular-dl-tabr",
+    "paper": "https://arxiv.org/abs/2307.14338",
+    "license": "MIT",
+    "upstream_files": {
+      "third_party/tabr/LICENSE": "e2a0b9b891e143bf0512e1a862af308779228e973d61e75fbb774ef32bc32761",
+      "third_party/tabr/upstream_tabr.py.txt": "7ad417baa846f500aa5ae8546907936ed9d538dbaa6680086cc060e6edc6c841"
+    },
+    "architecture": "Official default d265, encoder0/predictor1, FFN multiplier2, context96, original attention/FFN dropout and AdamW parameters; retain label embedding and key-difference value transform.",
+    "adaptations": [
+      "Faiss replaced by torch exact squared-L2 top-k; discrete selection under no_grad but selected-key similarity and value aggregation retain gradients.",
+      "Preprocessed numerical and one-hot categorical columns concatenated before the encoder.",
+      "Same compact13 and preprocessing as prior TabM: train-only medians, log1p five amounts, StandardScaler, constant numeric removal; six categorical fields plus seven numeric-missing flags one-hot. Unknown category0 and missing1 have reserved slots.",
+      "Official historical mixer_dropout config is mapped to context_dropout.",
+      "200-epoch cap and inner stratified20% minimum-logloss epoch selection followed by fresh fulloutertrain preprocessing, model and optimizer refit, instead of the paper hyperparameter search and multiseed evaluation."
+    ],
+    "leakage_boundary": "Training retrieval excludes the query row by immutable row ID, not by zero distance. Libraries contain only the applicable training split features and true labels. Inner validation and outer validation never enter a training retrieval library. No old holdout or test rows are used as retrieval candidates. Final export uses full labeled train only.",
+    "optimization": "BCEWithLogits; AdamW; no weight decay on label embedding, biases or LayerNorm; no scheduler or augmentation; CPU RNG shuffle, float32 model operations.",
+    "persistence": "CPU model weights, fitted preprocessor, transformed training library, class labels and row IDs are serialized together. Out-of-sample predict_proba accepts optional query_ids when evaluating known library rows.",
+    "evaluation": "Single fixed candidate v68_TabR_S plus v6 control on unchanged development folds; no threshold/neighbor/architecture search. Source and environment frozen before first baseline. Group confirmation remains required.",
+    "claim_limit": "A fixed-configuration backend adaptation, not a full reproduction of the tuned and ensembled paper results. Reaching the epoch cap is recorded and limits negative conclusions.",
+    "implementation_status": "CPU synthetic tests only; real-data and MPS resource probe must be scheduled separately by root.",
+    "training_audit": "Record each inner epoch training BCE, validation logloss, seconds and optimizer steps; record each fresh-refit epoch BCE, seconds and steps; save selected epoch/stop reason/cap status, parameter count and RSS/MPS memory snapshots. Runtime device is recorded per fit.",
+    "resource_probe": "Three full epochs on one complete outer-training retrieval library, with training-only self-exclusion, then128 outer-query predictions and a temporary joblib serialization roundtrip. No accuracy or reused weights."
+  }
+}
