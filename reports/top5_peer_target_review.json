@@ -1,0 +1,44 @@
+{
+  "reviewed_at_utc": "2026-11-12T19:25:32.649776+00:00",
+  "decision": "Reject this same-GroupId peer-target offset as a Top5 candidate. No implementation, beta fitting or GPU experiment is warranted.",
+  "decisive_evidence": {
+    "read_columns": [
+      "PassengerId"
+    ],
+    "Transported_read": false,
+    "training_rows": 8693,
+    "test_rows": 4277,
+    "training_unique_GroupId": 6217,
+    "test_unique_GroupId": 3063,
+    "shared_GroupId_count": 0,
+    "test_rows_with_training_group_peer": 0,
+    "train_PassengerId_newline_sha256": "a33539df505573ed71e840325d651cdcd58f0a44f2535258f8b3e29a0b64b660",
+    "test_PassengerId_newline_sha256": "b982451a7fce1b7d039761783beb9d24b7530caf3cea1b9bec29edbec4df60b8"
+  },
+  "proof": {
+    "support_count": "n_g = number of rows with GroupId=g in the fit training pool.",
+    "proposed_branch": "If n_g==0, return the exact original base probability, without any calibrated intercept or recomputation.",
+    "final_inference": "Every one of4277 test rows has n_g==0 even with all8693 training labels. Therefore every final probability equals the corresponding matched baseMitra probability for every alpha/beta choice.",
+    "group_validation": "Whole-GroupId CV similarly gives n_g==0 for every query. The candidate exactly equals its matched base in every group fold by construction.",
+    "consequence": "Random-row CV may show a benefit from labelled relatives, but that evidence is unavailable for every actual test passenger. This is a deployment-coverage failure, not proof that within-group labels lack correlation."
+  },
+  "contract_and_leakage": {
+    "historical_contract": "Frozen iterate/run038/context20 protocols explicitly prohibit target propagation within those experiments. A newly authorized, separately frozen protocol could study lawful training-label encoding; it must not silently alter old no-target claims. We do not treat every supervised encoding as inherently forbidden.",
+    "hypothetical_honest_nesting": "For each outer fold, fit baseMitra on each inner training pool, derive peer counts only from that same inner pool, and use inner-held-out targets solely to learn beta. Exclude each query target/self from counts. Fit the final base on fulloutertrain and construct peer mapping from fulloutertrain labels only; outerquery labels remain scoring-only.",
+    "remaining_distribution_shift": "Inner2/3 support, outerfullsupport and randomfold family overlap imply different count/reliability distributions. Actualtest and GroupCV collapse to nopeer evidence. A fixed shrinkagealpha/L2 cannot create missing deployment information.",
+    "beta_review_not_needed": "No existing OOF labels were inspected to select alpha/beta, no formula/penalty search was conducted, and no query target relationship was analyzed."
+  },
+  "gate_limit": "The existing A policy permits GroupCV equality. Thus positive randomfold gains plus a forced group tie could satisfy that numeric check while final predictions are unchanged. This candidate-specific impossibility is sufficient to reject before expensive eligibility validation; no historical gate or policy file is modified.",
+  "cost_avoided": "The proposed nested scheme requires3 inner basefits plus1 fullouter basefit per outerfold:12 fits for a3fold screen versus3 for a plain base. That cost cannot buy any different final prediction under the declared exactfallback.",
+  "independent_review": {
+    "reviewer": "/root/review_current",
+    "method": "Independently reread only PassengerId, reproducing6217/3063 uniquegroups and0 intersection/0 eligible testrows.",
+    "conclusion": "Agrees with decisive rejection. Fold-safe peer evidence is possible in principle; zero deployment coverage makes this particular proposal unproductive. Do not expand toSurname/Cabin/pseudo-label relations as an unannounced rescue."
+  },
+  "recommended_next_action": "Archive this hypothesis without training. Same-GroupId peer-target offset is not the next executable candidate. Any different relation or pseudo-label mechanism would be a separate proposal, outside this review.",
+  "sources_sha256": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "reports/top5_mitra_context_review.json": "a27409ab64bbcebac847e2dc03c7c4b7dc4adbdf56efb7cd9df25defaa0e7012"
+  }
+}
