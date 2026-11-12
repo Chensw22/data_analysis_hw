@@ -1,0 +1,117 @@
+{
+  "rows": 4277,
+  "sha256": "8804fcc5c72811f317dd84ac3cee9748d7c3a0f8a163302de4e56f2d6dc331d2",
+  "valid": true,
+  "selection": {
+    "version": "v34_contrasts_spatial",
+    "components": [
+      "v34_contrasts_spatial"
+    ],
+    "source_run": "run_012",
+    "stage": "proposal_awaiting_explicit_user_exception",
+    "screen_accuracy": 0.8192407247627265
+  },
+  "fit_rows": 8693,
+  "model_reload_verified": true,
+  "prepared_from_commit": "23c0ff5c5a500fc53977bce3246ca0df70cb7858",
+  "sources": {
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "prepare_submission_proposal.py": "5f85c61a4648b98f3e5f2777234ec5819a0e0b28cd4e057f536f269c7af652c3"
+  },
+  "original_83_percent_gate_passed": false,
+  "stability_gate_passed": false,
+  "submission_authorized": false,
+  "online_submitted": false,
+  "authorization_required": "Explicit one-time user exception to >83% and stability gates, and approval to upload this exact CSV.",
+  "audit": {
+    "candidate": "v34_contrasts_spatial",
+    "source_run": "run_012",
+    "screen_accuracy": 0.8192407247627265,
+    "repeat_cv": [
+      {
+        "seed": 20261113,
+        "baseline_accuracy": 0.811044003451251,
+        "candidate_accuracy": 0.8147828587863101,
+        "gain": 0.0037388553350590215,
+        "corrections": 190,
+        "regressions": 164
+      },
+      {
+        "seed": 20261114,
+        "baseline_accuracy": 0.815070463042853,
+        "candidate_accuracy": 0.816220880069025,
+        "gain": 0.0011504170261720237,
+        "corrections": 158,
+        "regressions": 150
+      }
+    ],
+    "group_cv": {
+      "baseline_accuracy": 0.8160770779407536,
+      "candidate_accuracy": 0.813920046016681,
+      "gain": -0.002157031924072572,
+      "corrections": 133,
+      "regressions": 148
+    },
+    "stable_relative_improvement": false,
+    "original_83_percent_gate_passed": false,
+    "submission_authorized": false,
+    "note": "Same development rows, fresh folds: stability audit, not independent test. Original >83% submission gate remains in force unless user explicitly approves an exception.",
+    "source_protocol": {
+      "seed": 20261112,
+      "confirmation_seeds": [
+        20261113,
+        20261114
+      ],
+      "folds": 3,
+      "threshold": 0.5,
+      "development_rows": 6954,
+      "configs": {
+        "v6_no_id_features": {
+          "context": false,
+          "model": "catboost",
+          "depth": 6,
+          "iterations": 700,
+          "learning_rate": 0.045,
+          "l2_leaf_reg": 5
+        },
+        "v25_spatial_blend": {
+          "context": false,
+          "model": "spatial",
+          "knots": 5,
+          "C": 0.1,
+          "weight": 0.5
+        },
+        "v33_spend_contrasts": {
+          "context": false,
+          "model": "catboost",
+          "depth": 6,
+          "iterations": 700,
+          "learning_rate": 0.045,
+          "l2_leaf_reg": 5
+        },
+        "v34_contrasts_spatial": {
+          "context": false,
+          "model": "spatial",
+          "knots": 5,
+          "C": 0.1,
+          "weight": 0.5
+        }
+      },
+      "blend": [],
+      "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+      "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+      "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+      "sources": {
+        "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+        "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+        "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+        "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+      },
+      "contrast_policy": "Only two fixed row-local features: FoodCourt+ShoppingMall minus RoomService+Spa+VRDeck; difference of log1p of those two sums. No target-derived coefficients. All-missing sums stay NaN."
+    },
+    "audit_source_sha256": "feb309b63a5b243d39f1e9416af8db7772f1784e146f3a888a8297ad9f9b8d8f"
+  }
+}
