@@ -43,9 +43,12 @@ def validate_submission(path, test_path, expected_rows=4277):
 def download():
     destination = ROOT/'data/official'
     destination.mkdir(parents=True, exist_ok=True)
-    result = execute(['competitions', 'download', COMPETITION, '-p', str(destination), '--unzip'])
-    if result.returncode:
-        raise SystemExit(result.returncode)
+    # The bundle endpoint can return 403 while authorized single-file downloads work.
+    for name in ['train.csv', 'test.csv', 'sample_submission.csv']:
+        result = execute(['competitions', 'download', COMPETITION, '-f', name,
+                          '-p', str(destination), '--unzip'])
+        if result.returncode:
+            raise SystemExit(result.returncode)
     raw = ROOT/'data/raw'
     raw.mkdir(parents=True, exist_ok=True)
     records = {}

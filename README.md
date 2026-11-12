@@ -5,10 +5,10 @@
 ## 数据与线上成绩
 
 - 官方比赛：https://www.kaggle.com/competitions/spaceship-titanic
-- 本地原始数据暂取公开 GitHub 镜像；`data/raw/manifest.json` 记录来源、Git blob SHA 和 SHA-256。镜像文件已校验，但尚未与通过账号下载的 Kaggle 文件直接比对。
+- 本地原始数据最初取自公开 GitHub 镜像；`data/raw/manifest.json` 保留初始来源和哈希。后续官方 API 下载的核验结果见 `reports/official_data_verification.json`。
 - 仅使用原始训练标签、无标签测试集与提交格式模板。未使用其他人的预测文件或测试答案。
 - 本地交叉验证、留出集准确率不等于 Kaggle 得分，也不能推断确切名次。
-- 当前没有配置 Kaggle 凭据；训练与生成提交文件不依赖账号。正式上榜需要在本人账号中加入比赛并提交文件。
+- 本机已完成 Kaggle OAuth 登录。训练与生成提交文件不依赖账号；其他机器仍需自行授权，凭据不包含在仓库中。
 
 ## Kaggle 自动提交
 
@@ -26,6 +26,8 @@ uv pip install --python .venv/bin/python -r requirements-kaggle.txt
 ```
 
 首次还需要在 https://www.kaggle.com/competitions/spaceship-titanic 加入比赛。`download` 从官方 API 获取数据并核对现有镜像；全新 clone 会创建本地 CSV。现有文件不一致时停止，不覆盖旧实验数据。
+
+下载逐个调用官方文件接口。2026-11-12 实测整包接口返回 403，而三个单文件接口均可正常下载；不能仅凭整包接口的通用错误提示断言用户未接受规则。
 
 脚本在上传前检查 4,277 行、布尔标签和 ID 顺序，并记录当前 commit、文件 SHA-256、版本、提交 ID 和评测结果。结果位于 `reports/<run>/online_attempts/`，完成后也要 commit。原始命令输出仅写入本地忽略目录 `submission_logs/`。
 
