@@ -7,6 +7,7 @@ from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 import weakref
+from contextlib import ExitStack
 
 import numpy as np
 import pandas as pd
@@ -95,7 +96,7 @@ class PreparationTests(unittest.TestCase):
         candidate.fit=unittest.mock.Mock(side_effect=fit)
         return candidate,data
 
-    def execute(self,candidate,data,proposal='proposal_fixture',duplicate=False):
+    def execute(self,candidate,data,proposal='proposal_fixture',duplicate=False,validation='random'):
         def validate(path):
             frame=pd.read_csv(path,dtype=str)
             self.assertEqual(len(frame),4277)
@@ -112,7 +113,78 @@ class PreparationTests(unittest.TestCase):
              patch.object(preparation.signal,'signal',return_value=None), \
              patch.object(preparation.signal,'setitimer'), \
              patch.object(preparation,'duplicate_attempts',return_value=['old/attempt.json'] if duplicate else []):
-            return preparation.prepare('mitra_mirror_ensemble',self.run,proposal)
+            return preparation.prepare('mitra_mirror_ensemble',self.run,proposal,validation=validation)
+
+    def group_fixture(self):
+        import top5_group_evaluate as group
+        # Only metadata fixtures and mock environment verification; actual queue
+        # structural checks and make_decision are exercised without labels/models.
+        old=self.run_out
+        self.run='run_040'
+        self.run_out=self.root/'artifacts'/self.run
+        old.rename(self.run_out)
+        preparation.write(self.run_out/'stability/eligibility.json',{**self.eligibility,'A_eligible':False})
+        for filename in ['top5_group_evaluate.py','test_top5_group_evaluate.py','mitra_context_candidate.py']:
+            (self.root/filename).write_text('# group fixture\n')
+        preparation.write(self.root/group.POLICY,{'fixture':'new group policy'})
+        preparation.write(self.root/group.AUTH,dict(no_duplicate_or_blind_retry_upload=True,
+            all_fixed_queue_must_complete_before_submission=True,revision_disclosure='Adaptive group revision; old failure preserved.'))
+        sources={f:preparation.sha(self.root/f) for f in
+            ['top5_group_evaluate.py','test_top5_group_evaluate.py',group.POLICY,group.AUTH]}
+        phase=self.root/'artifacts/top5_group_phase'
+        phase.mkdir()
+        record=dict(sources=sources,historical_files={},screen_evidence={},legacy_caches={},
+            budgets_seconds={'refs':{'mitra':900,'v44':900},'candidates':{'mirror':900,'context':900}})
+        for key,spec in group.CANDIDATES.items():
+            folder=self.root/'artifacts'/spec['run']
+            folder.mkdir(exist_ok=True)
+            if not (folder/'protocol.json').exists():
+                preparation.write(folder/'protocol.json',{'sources':{}})
+            pd.DataFrame([dict(version=spec['version'],accuracy=.82)]).to_csv(folder/'screen_results.csv',index=False)
+            for filename in ['protocol.json','screen_results.csv']:
+                path=folder/filename
+                record['historical_files'][str(path.relative_to(self.root))]=preparation.sha(path)
+            record['screen_evidence'][key]=dict(version=spec['version'],accuracy=.82)
+        preparation.write(phase/'protocol.json',record)
+        phasehash=preparation.sha(phase/'protocol.json')
+        summary_hashes={}
+        for kind,specs in [('refs',group.REFERENCES),('candidates',group.CANDIDATES)]:
+            for key,spec in specs.items():
+                folder=phase/kind/key
+                folder.mkdir(parents=True)
+                env='v44' if (kind,key)==('refs','v44') else 'mitra'
+                preparation.write(folder/'protocol.json',dict(kind=kind,key=key,version=spec['version'],
+                    phase_sha256=phasehash,environment=env,budget_seconds=900,execution='CPU4' if env=='v44' else 'MPS'))
+                rows=[]
+                accuracy=.82 if kind=='candidates' else (.81 if key=='mitra' else .815)
+                for seed in group.SEEDS:
+                    path=folder/f'group_{seed}.npz'
+                    np.savez(path,prob=np.array([.2,.8]))
+                    rows.append(dict(seed=seed,accuracy=accuracy,oof_path=str(path.relative_to(self.root)),
+                        oof_sha256=preparation.sha(path),legacy_reused=False,legacy_evidence=None,
+                        folds=[dict(fold=i) for i in range(3)]))
+                preparation.write(folder/'summary.json',dict(status='complete',kind=kind,key=key,
+                    version=spec['version'],phase_sha256=phasehash,results=rows,
+                    execution_protocol_sha256=preparation.sha(folder/'protocol.json')))
+                summary_hashes[f'{kind}/{key}']=preparation.sha(folder/'summary.json')
+        decisions={}
+        for key,spec in group.CANDIDATES.items():
+            rows=[dict(seed=seed,accuracy=.82,vs_mitra=dict(gain=.01,reference_accuracy=.81),
+                       vs_v44=dict(gain=.005,reference_accuracy=.815)) for seed in group.SEEDS]
+            intervals={'new_mean_vs_v44':{'lower95':-.01}}
+            decision=group.make_decision(.82,rows,intervals)
+            decisions[key]=dict(**decision,candidate=spec['version'],original_screen_accuracy=.82,
+                results=rows,paired_cluster_sensitivity=intervals)
+        preparation.write(phase/'eligibility.json',dict(status='complete',fixed_queue_complete=True,
+            phase_sha256=phasehash,policy_sha256=preparation.sha(self.root/group.POLICY),
+            authorization_sha256=preparation.sha(self.root/group.AUTH),component_summary_sha256=summary_hashes,
+            candidates=decisions))
+        (phase/'eligibility.sha256').write_text(preparation.sha(phase/'eligibility.json')+'\n')
+        stack=ExitStack()
+        stack.enter_context(patch.object(group,'ROOT',self.root))
+        stack.enter_context(patch.object(group,'PHASE',phase))
+        gate=stack.enter_context(patch.object(group,'assert_phase',return_value=record))
+        return stack,phase,group,gate
 
     def test_eligibility_requires_exact_status_identity_and_every_binding(self):
         preparation.eligibility_evidence(self.run,self.name)
@@ -189,6 +261,89 @@ class PreparationTests(unittest.TestCase):
         preparation.write(record,dict(file_sha256='same'))
         self.assertEqual(preparation.duplicate_attempts('same'),[str(record.relative_to(self.root))])
         self.assertEqual(preparation.duplicate_attempts('different'),[])
+
+    def test_group_complete_export_binds_new_queue_and_preserves_old_false(self):
+        stack,phase,group,gate=self.group_fixture()
+        prior=preparation.sha(self.run_out/'stability/eligibility.json')
+        candidate,data=self.runtime()
+        with stack:
+            manifest=self.execute(candidate,data,validation='group')
+        out=self.root/'artifacts/proposal_fixture'
+        self.assertEqual(manifest['validation_track'],'group')
+        self.assertEqual(manifest['provenance']['eligibility_sha256'],preparation.sha(phase/'eligibility.json'))
+        self.assertEqual(preparation.sha(out/'eligibility.json'),preparation.sha(phase/'eligibility.json'))
+        self.assertEqual(preparation.sha(out/'group_phase_protocol.json'),preparation.sha(phase/'protocol.json'))
+        self.assertEqual(preparation.sha(out/'validation_policy.json'),preparation.sha(self.root/group.POLICY))
+        self.assertNotEqual(preparation.sha(out/'validation_policy.json'),preparation.sha(self.root/preparation.POLICY))
+        self.assertEqual(preparation.sha(self.run_out/'stability/eligibility.json'),prior)
+        self.assertFalse(manifest['provenance']['prior_random_eligibility']['A_eligible'])
+        self.assertFalse((out/'stability_protocol.json').exists())
+        authorization=preparation.read(out/'authorization.json')
+        self.assertEqual(authorization['validation_track'],'group')
+        self.assertEqual(authorization['eligibility_sha256'],preparation.sha(phase/'eligibility.json'))
+        self.assertEqual(len(authorization['fixed_queue_component_summary_sha256']),4)
+        gate.assert_called_with('mitra')
+        data.dataset.assert_called_once()
+
+    def test_group_incomplete_or_tampered_evidence_rejected_before_labels(self):
+        stack,phase,group,_=self.group_fixture()
+        changes=['missing_component','summary','oof','candidate','ineligible',
+                 'genuinely_ineligible','paired_gain','sidecar']
+        snapshot={p:p.read_bytes() for p in phase.rglob('*') if p.is_file()}
+        with stack:
+            for change in changes:
+                with self.subTest(change=change):
+                    for path,content in snapshot.items():
+                        path.write_bytes(content)
+                    out=self.root/'artifacts/proposal_fixture'
+                    report=self.root/'reports/proposal_fixture'
+                    if out.exists():
+                        import shutil
+                        shutil.rmtree(out);shutil.rmtree(report)
+                    if change=='missing_component':
+                        (phase/'candidates/context/summary.json').unlink()
+                    elif change=='summary':
+                        path=phase/'refs/v44/summary.json'
+                        value=preparation.read(path);value['results'][0]['accuracy']=.1
+                        preparation.write(path,value)
+                    elif change=='oof':
+                        with (phase/'refs/mitra/group_20261115.npz').open('ab') as handle:
+                            handle.write(b'changed')
+                    else:
+                        path=phase/'eligibility.json';value=preparation.read(path)
+                        selected=value['candidates']['mirror']
+                        if change=='candidate':selected['candidate']='other'
+                        if change=='ineligible':selected['A_eligible']=False
+                        if change=='genuinely_ineligible':
+                            for row in selected['results']:
+                                row['accuracy']=.81
+                                row['vs_mitra']['gain']=0.
+                                row['vs_v44']['gain']=-.005
+                            selected.update(group.make_decision(selected['original_screen_accuracy'],
+                                selected['results'],selected['paired_cluster_sensitivity']))
+                            summary_path=phase/'candidates/mirror/summary.json'
+                            summary=preparation.read(summary_path)
+                            for row in summary['results']:
+                                row['accuracy']=.81
+                            preparation.write(summary_path,summary)
+                            value['component_summary_sha256']['candidates/mirror']=preparation.sha(summary_path)
+                        if change=='paired_gain':selected['results'][1]['vs_mitra']['gain']=.2
+                        if change=='sidecar':value['fixed_queue_complete']=False
+                        preparation.write(path,value)
+                        if change!='sidecar':
+                            (phase/'eligibility.sha256').write_text(preparation.sha(path)+'\n')
+                    candidate,data=self.runtime()
+                    with self.assertRaises(RuntimeError):
+                        self.execute(candidate,data,validation='group')
+                    data.dataset.assert_not_called()
+                    candidate.configure_runtime.assert_not_called()
+                    self.assert_failed()
+
+    def test_group_rejects_wrong_run_and_no_automatic_fallback_to_old_track(self):
+        with self.assertRaisesRegex(RuntimeError,'fixed module/run'):
+            preparation.group_eligibility_evidence('mitra_mirror_ensemble','run_043',self.name)
+        with self.assertRaises(ValueError):
+            preparation.validation_evidence('mitra_mirror_ensemble',self.run,self.name,'unknown')
 
 
 if __name__=='__main__':
