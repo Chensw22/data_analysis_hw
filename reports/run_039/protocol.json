@@ -1,0 +1,172 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v73_AutoGluon_multilayer": {
+      "context": false,
+      "model": "autogluon",
+      "settings": {
+        "num_bag_folds": 3,
+        "num_bag_sets": 1,
+        "num_stack_levels": 1,
+        "num_cpus": 4,
+        "num_gpus": 0,
+        "eval_metric": "accuracy",
+        "threshold": 0.5,
+        "dynamic_stacking": false,
+        "hyperparameter_tune_kwargs": null,
+        "calibrate": false,
+        "calibrate_decision_threshold": false,
+        "fit_weighted_ensemble": true,
+        "fit_full_last_level_weighted_ensemble": true,
+        "fit_strategy": "sequential",
+        "use_bag_holdout": false,
+        "time_limit": null,
+        "refit_full": false,
+        "input": "original_engineered_no_ids_30_columns",
+        "inner_validation": "stock bag fold early stopping; no extra holdout",
+        "stage_budget_seconds": {
+          "probe": 600,
+          "screen": 3600,
+          "confirm": 10800,
+          "export": 3600
+        }
+      },
+      "hyperparameters": {
+        "CAT": {
+          "iterations": 700,
+          "depth": 6,
+          "learning_rate": 0.045,
+          "l2_leaf_reg": 5,
+          "ag.early_stop": 50,
+          "ag_args_fit": {
+            "stopping_metric": "log_loss"
+          }
+        },
+        "GBM": {
+          "num_boost_round": 500,
+          "num_leaves": 31,
+          "learning_rate": 0.05,
+          "ag.early_stop": 50,
+          "ag_args_fit": {
+            "stopping_metric": "log_loss"
+          }
+        },
+        "RF": {
+          "n_estimators": 300,
+          "criterion": "gini",
+          "n_jobs": 4
+        },
+        "XT": {
+          "n_estimators": 300,
+          "criterion": "gini",
+          "n_jobs": 4
+        }
+      },
+      "ensemble_args": {
+        "use_child_oof": false,
+        "use_orig_features": true,
+        "fold_fitting_strategy": "sequential_local",
+        "save_bag_folds": true,
+        "max_base_models": 0,
+        "max_base_models_per_type": 0
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "autogluon_candidate.py": "6292bdc8733938625e85d0fe547a0e13e98db434f6450c14660b5fe8cf8465a2",
+    "test_autogluon_candidate.py": "cb961e60138cab2ed8108b59e74ec4eba1089523ca3203df09d780e763de6e37",
+    "requirements-autogluon.lock.txt": "241530bd526cdfd138a2113cdd4a8e97f20ec5bd06be625dbefb3ec7ceea3e1d",
+    "reports/automl_method_review.json": "c8bc00e85d8bc778a3717445a6d79990b4a81c3352ed1a21ffbfcfba5ef0b7ad"
+  },
+  "autogluon_policy": {
+    "settings": {
+      "num_bag_folds": 3,
+      "num_bag_sets": 1,
+      "num_stack_levels": 1,
+      "num_cpus": 4,
+      "num_gpus": 0,
+      "eval_metric": "accuracy",
+      "threshold": 0.5,
+      "dynamic_stacking": false,
+      "hyperparameter_tune_kwargs": null,
+      "calibrate": false,
+      "calibrate_decision_threshold": false,
+      "fit_weighted_ensemble": true,
+      "fit_full_last_level_weighted_ensemble": true,
+      "fit_strategy": "sequential",
+      "use_bag_holdout": false,
+      "time_limit": null,
+      "refit_full": false,
+      "input": "original_engineered_no_ids_30_columns",
+      "inner_validation": "stock bag fold early stopping; no extra holdout",
+      "stage_budget_seconds": {
+        "probe": 600,
+        "screen": 3600,
+        "confirm": 10800,
+        "export": 3600
+      }
+    },
+    "hyperparameters": {
+      "CAT": {
+        "iterations": 700,
+        "depth": 6,
+        "learning_rate": 0.045,
+        "l2_leaf_reg": 5,
+        "ag.early_stop": 50,
+        "ag_args_fit": {
+          "stopping_metric": "log_loss"
+        }
+      },
+      "GBM": {
+        "num_boost_round": 500,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "ag.early_stop": 50,
+        "ag_args_fit": {
+          "stopping_metric": "log_loss"
+        }
+      },
+      "RF": {
+        "n_estimators": 300,
+        "criterion": "gini",
+        "n_jobs": 4
+      },
+      "XT": {
+        "n_estimators": 300,
+        "criterion": "gini",
+        "n_jobs": 4
+      }
+    },
+    "ensemble_args": {
+      "use_child_oof": false,
+      "use_orig_features": true,
+      "fold_fitting_strategy": "sequential_local",
+      "save_bag_folds": true,
+      "max_base_models": 0,
+      "max_base_models_per_type": 0
+    },
+    "version": "1.5.0"
+  },
+  "autogluon_environment_sha256": "7e6ba856352a2e47097863c5f06d3eb261ed4961efdb3b1509792c8ee270fa70"
+}

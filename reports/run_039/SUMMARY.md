@@ -1,0 +1,1 @@
+AutoGluon multilayer bagging completed all 72 declared child fits. Fixed outer3fold accuracy80.73051%, logloss0.384740,62.81seconds; baseline81.57895%, strongest prior pipeline81.98159%. No improvement; gatefalse. Internal training/selection scores are not independent outer validation. No online upload of this candidate.

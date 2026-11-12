@@ -1,0 +1,66 @@
+{
+  "status": "passed_final_pre_score_implementation_review_no_remaining_blockers",
+  "reviewer": "review_current",
+  "scope": "Read-only review of actual autogluon_candidate.py/test_autogluon_candidate.py and completed synthetic artifacts. No training, GPU use, environment change, candidate source edit or commit by reviewer.",
+  "reviewed_files": {
+    "autogluon_candidate.py": "6292bdc8733938625e85d0fe547a0e13e98db434f6450c14660b5fe8cf8465a2",
+    "test_autogluon_candidate.py": "cb961e60138cab2ed8108b59e74ec4eba1089523ca3203df09d780e763de6e37",
+    "reports/automl_method_review.json": "c8bc00e85d8bc778a3717445a6d79990b4a81c3352ed1a21ffbfcfba5ef0b7ad"
+  },
+  "blocking_findings_remaining": [],
+  "resolved_findings": [
+    {
+      "issue": "RF/XT default n_jobs=-1 bypassed intended CPU4 limit even with predictor num_cpus=4. threadpool_limits does not constrain joblib scheduling.",
+      "evidence": "Initial synthetic probe resolved child_hyperparameters n_jobs=-1; official RF _fit sets n_jobs=num_cpus only when parameter absent.",
+      "resolution": "Explicit n_jobs=4 in both families and per-child coverage assertion; post-fix synthetic24child probe confirmed allRF/XT resolved n_jobs4."
+    }
+  ],
+  "checks": {
+    "outer_label_isolation": "fit verifies disjoint train/predict IDs; fit_outer receives only training X,y,unique IDs. predictor.fit has train_data as its sole data argument. Saved internal train indices/targets must match supplied outertrain exactly. Query rows are used only by predict_proba.",
+    "feature_contract": "Exactly original30 engineered_no_ids columns; forbidden IDs/names/target rejected; no contrast/spatial features. pd.options.future.infer_string=True set before importing iterate or constructing any frames.",
+    "baseline": "BASE_FIT/BASE_EVALUATE captured before monkeypatch; v6 config uses unchanged iterate.CAT. Parent reportautoml_environment_baseline_check.json verifies all6954 OOF probabilities bitwise equal to original baseline, maxdiff0.",
+    "learning_recipe": "CAT700/depth6/lr.045/L2=5;GBM500/leaves31/lr.05;RF/XT300/n_jobs4. Official innerfold early stopping50/logloss retained; internal OOF remains training/selection information, not independent validation.",
+    "coverage": "Require one of each4family at each2stacklevels, each exactly3bagchildren,one repeat,no child-OOB shortcut. EveryRF/XTchild must finish300trees. L2 must name all4L1 bases, contain their prediction features and retain genuine original features. Incompletecoverage raises before returning candidate probabilities.",
+    "resource": "CPU4,sequential_local,noRay/GPU. No AG fit_time_limit which could silently skip models. Parent process kills worker on hardstage timeout; failing or timedout stages markedfailed_inconclusive.",
+    "freeze_and_gate": "record_protocol runs before firstbaseline fit, hashes/copies adapter/tests/requirements/methodreport and records installed package lock. confirm/export assert original frozen sources/configs plus environment hash. Original83%/freshseed/group gates remain unchanged.",
+    "persistence": "Official complete predictor directory is saved; joblib wrapper holds absolutepath/schema/metadata and omits livepredictor. Reload uses officialTabularPredictor.load, classordering0/1 explicit. Wrapper alone is not self-contained: retain entirepredictors directory or move it and callrelocate(newpath).",
+    "threshold": "predict_proba[:,1] to originaliterate threshold0.5; no HPO,DynStack,probabilitycalibration or decisionthresholdcalibration."
+  },
+  "pre_fix_synthetic_probe": {
+    "source": "artifacts/probes/autogluon_fixed_recipe_probe/probe_result.json",
+    "input_rows": 150,
+    "query_rows": 30,
+    "completed_children": 24,
+    "reload_max_abs_difference": 0.0,
+    "training_seconds": 13.792989959008992,
+    "max_rss_bytes": 346947584,
+    "limitation": "Occurred before explicitRF/XTn_jobs4 fix. Validates full stock API integration and persistence, not final CPU4 resource timing."
+  },
+  "approval_scope": "Implementation correctness only. No claim that this method improves accuracy, reaches83%, or predicts leaderboard rank.",
+  "post_fix_synthetic_probe": {
+    "source": "artifacts/probes/autogluon_final_recipe_probe/probe_result.json",
+    "source_hashes_match_current_reviewed_files": true,
+    "status": "complete",
+    "synthetic_only": true,
+    "external_accuracy_computed": false,
+    "internal_synthetic_oof_accuracy_used": true,
+    "rows": 150,
+    "input_columns": 30,
+    "query_rows": 30,
+    "training_ids": "nonconsecutive_101_plus_3_times_row",
+    "training_seconds": 10.199158874922432,
+    "max_rss_bytes": 322961408,
+    "completed_children": 24,
+    "reload_max_abs_difference": 0.0,
+    "resolved_all_forest_n_jobs": 4,
+    "each_L2_base_prediction_count": 4,
+    "each_L2_original_feature_count": 27,
+    "limitation": "Synthetic150-row functional/resource evidence only; no full4636-row training-time promise or external accuracy inference."
+  },
+  "tests": {
+    "root_reported_cpu_unit_tests": 5,
+    "root_reported_status": "passed",
+    "reviewer_rerun": false,
+    "reason": "Read code and actual finalprobe artifacts independently; avoided redundant training/tests after reported checks passed."
+  }
+}
