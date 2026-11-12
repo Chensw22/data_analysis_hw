@@ -1,0 +1,1 @@
+Authorized batch submission1/3: v44_seed_ensemble. Ref58275856, COMPLETE, public accuracy0.80944. Previous v34 remains account best0.80967. Account best rank227/2035 (11.1548%) at2026-11-12T14:29:03.937641Z; rank belongs to account best, not this file. Seven submissions remained immediately after this upload.
