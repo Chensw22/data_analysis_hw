@@ -1,0 +1,331 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v71_Mitra2_zeroshot": {
+      "query_chunk": 2318,
+      "device": "mps",
+      "threshold": 0.5,
+      "full_support": true,
+      "mirror_offsets": [
+        0
+      ],
+      "probability_weights": [
+        1.0
+      ],
+      "probability_mean_dtype": "float64",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 1800,
+      "stability_budget_seconds": 3600,
+      "weights_and_context_dtype": "float32",
+      "mps_autocast_dtype": "bfloat16",
+      "mps_memory_fraction": 0.65,
+      "sequential_views": true,
+      "gradient_updates": 0,
+      "context": false,
+      "model": "mitra_mirror",
+      "offsets": [
+        0
+      ]
+    },
+    "v74_Mitra_mirror4": {
+      "query_chunk": 2318,
+      "device": "mps",
+      "threshold": 0.5,
+      "full_support": true,
+      "mirror_offsets": [
+        0,
+        100,
+        200,
+        300
+      ],
+      "probability_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "probability_mean_dtype": "float64",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 1800,
+      "stability_budget_seconds": 3600,
+      "weights_and_context_dtype": "float32",
+      "mps_autocast_dtype": "bfloat16",
+      "mps_memory_fraction": 0.65,
+      "sequential_views": true,
+      "gradient_updates": 0,
+      "context": false,
+      "model": "mitra_mirror",
+      "offsets": [
+        0,
+        100,
+        200,
+        300
+      ]
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen evidence only. Separate root A/S eligibility review required; this CLI has no confirm/export or submission authorization.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_mirror_ensemble.py": "719fc2e55a458e05bb0649cc9b433ac9313a86e9871f850019549d1e28aa2066",
+    "reports/mitra_adaptation_review.json": "39a3edb8098422da148b084fdc731a16d5dd365f59295abc0ccbca6936cbb3f9",
+    "reports/mitra_protocol.json": "fda5f03e70d8f98429e09ff9c57c8e7a7cec9df96e0d575fb816756ab1de5767",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_mirror_ensemble_review.json": "9e5bf976dbdff352050749048b6e336236ed2af28c632a5ccf174c1817f47437",
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "test_audit_top5_references.py": "1b965877abcad8ace4d431de775886ac5d74416d9dce73e3133ea30e32fef4e9",
+    "test_mitra_candidate.py": "35a76996da1026f57565d987cbc3c1bb3dd62d19585f21009a41a54af842a65d",
+    "test_mitra_mirror_ensemble.py": "26668c31a3867ef67fa46c7e7d13e5b18f48d1de7aec211f202d009d65ffc300",
+    "test_top5_validate.py": "61cdab38f1f65a2330100b5c02bbff73f3c99d9d05d2e80d9576ab21cbfa9dcf",
+    "third_party/mitra/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra/MODEL_CARD.md": "baab54ff0be437c82b1ae616cf19a41820815e274cdda017f0046dd541c86ca8",
+    "third_party/mitra/NOTICE": "be9e15b71071b6d9a86114088883706817f5ce14fb2539ee382df5413ace2fa4",
+    "third_party/mitra/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/enums.py": "c2bdead8e881820e63cbabc7cb45f0edf12827bc1ca12b0f6cadc2e987c4bec3",
+    "third_party/mitra/_internal/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "third_party/mitra/_internal/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/models/base.py": "a6fa64692b6e70093e83b91d188b981ee2c3759d7cace051a129c9b9714209a6",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "top5_validate.py": "9fd5877070da3ae1cf451415362c9dc7f7bab8ed0f87c024c922be3be0bda8e1"
+  },
+  "mirror_ensemble_policy": {
+    "settings": {
+      "query_chunk": 2318,
+      "device": "mps",
+      "threshold": 0.5,
+      "full_support": true,
+      "mirror_offsets": [
+        0,
+        100,
+        200,
+        300
+      ],
+      "probability_weights": [
+        0.25,
+        0.25,
+        0.25,
+        0.25
+      ],
+      "probability_mean_dtype": "float64",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 1800,
+      "stability_budget_seconds": 3600,
+      "weights_and_context_dtype": "float32",
+      "mps_autocast_dtype": "bfloat16",
+      "mps_memory_fraction": 0.65,
+      "sequential_views": true,
+      "gradient_updates": 0
+    },
+    "recipes": {
+      "v71_Mitra2_zeroshot": [
+        0
+      ],
+      "v74_Mitra_mirror4": [
+        0,
+        100,
+        200,
+        300
+      ]
+    },
+    "review": {
+      "status": "approved_as_one_prespecified_candidate_for_local_testing_no_accuracy_claim",
+      "scope": "Read-only mechanism/source review plus NumPy13-dimensional random-sign generation. No model prediction, training, GPU use, test labels or public-score optimization.",
+      "sources_sha256": {
+        "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+        "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+        "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+        "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+        "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c"
+      },
+      "proposed_candidate": {
+        "mechanism": "Fixed preprocessing mirror augmentation ensemble of the same pretrained Mitra-v2 weights",
+        "offsets": [
+          0,
+          100,
+          200,
+          300
+        ],
+        "fit_seed": "split_seed + zero_based_fold + offset; full export uses base.SEED + offset",
+        "weights": [
+          0.25,
+          0.25,
+          0.25,
+          0.25
+        ],
+        "support": "Every applicable training row, identical row order and training-only category/statistical preprocessing; no support subsampling",
+        "prediction": "Mean of four class1 probabilities, threshold0.5; no logit averaging, model selection or learned weights",
+        "unchanged": "Pinned checkpoint/config, compact13schema, MPSbf16AMP/FP32weights, memoryfraction.65, fullcontext and originalquery2318runtime. Exact final wrapper must freeze these before firstscore."
+      },
+      "randomness_findings": {
+        "actual_source": "With dim_embedding=None and quantile_transformer/random_transforms/class_shuffle/feature_shuffle disabled, upstreamPreprocessor.fit reaches determine_mirror(X), which uses np.random.choice([1,-1],size=(1,n_features)). MitraPreprocessor isolates NumPy seed. Mean imputation, constant filtering and feature selection do not add another RNG in this configuration.",
+        "not_independent_models": "Torch/model seed does not retrain or initialize different effective weights: each fit loads the same pinned pretrained state and inference has no dropout. Call this four preprocessing views, not four independent trained models.",
+        "why_distinct_views_can_matter": "Mirroring changes numerical/category-code order before support-conditionedquantile encoding. The core applies learned linear feature embeddings withbias, normalization and nonlinearattention; it does not enforce sign/mirror invariance. Therefore differing masks need not produce identical predictions. This structural fact is not evidence of accuracy improvement.",
+        "label_free_mask_check": [
+          {
+            "base_fit_seed": 20261112,
+            "distinct_masks": 4,
+            "mirror_mask_sha256": [
+              "5f6652fbb8fe56b1ae9511fae91826ecbcfa0ede3e1f0ef957c41aa2f20d5c7c",
+              "8d8e095336d51449b027cb7b322f9740d05600ef119d3328d4840aa5d3df1509",
+              "71b4a7e9ec35c2cc843872939e16e11b6b0537156671786e6d14864d85dd2b6d",
+              "e1876a7710eccfc2df9b171af68648f18d1cd3ae9b6cdd1c140d9472b5e5e4f7"
+            ],
+            "hamming_from_offset0": [
+              10,
+              8,
+              7
+            ],
+            "pairwise_hamming": [
+              10,
+              8,
+              7,
+              6,
+              7,
+              1
+            ]
+          },
+          {
+            "base_fit_seed": 20261113,
+            "distinct_masks": 4,
+            "mirror_mask_sha256": [
+              "2032a86c8f04f9236d89d4deaf1b9bf2cf37a18fece8db14618be5d5db6e48ea",
+              "91ef7364fe3756dbfe10ef9c5497447d06cdd04945df82b46c4a0cab4734af4c",
+              "19d5ffcce0b87162a6847b8c5c80face2e6d95f793f37887f6505b095a988672",
+              "5722eeddcad639037e7c6965af527949fdde89f9fac0f0674ee2e0321e8005de"
+            ],
+            "hamming_from_offset0": [
+              5,
+              7,
+              9
+            ],
+            "pairwise_hamming": [
+              5,
+              7,
+              9,
+              6,
+              8,
+              8
+            ]
+          },
+          {
+            "base_fit_seed": 20261114,
+            "distinct_masks": 4,
+            "mirror_mask_sha256": [
+              "d7775558ae7fdac20c3fd22d6869325d8b9c8738f0790226af38c129faa64c11",
+              "be6972a1caef0eb6216262a68fec86c4db13b37017e76d586f0f300c2dcb7477",
+              "7268e892b5f3d3b4d22fb086822269a31c1e4178a8706d7afb379978fc03e478",
+              "dd93b2ad1d9ae8cd88f585d73c839049d6c66826f9e53c7e155606af537e04ef"
+            ],
+            "hamming_from_offset0": [
+              9,
+              7,
+              3
+            ],
+            "pairwise_hamming": [
+              9,
+              7,
+              3,
+              6,
+              6,
+              8
+            ]
+          },
+          {
+            "base_fit_seed": 20261115,
+            "distinct_masks": 4,
+            "mirror_mask_sha256": [
+              "dc0a7141baf0780a466ac094f576a1cb85fc7bdf8b3e280a5233ca8fe6ac7030",
+              "77b40335018172d18355c7e60dd3a19694fd51e0c0005a65d43254bbfa169c58",
+              "b64e93b718b70a07ba8e673c802615064577c6c0f62fa927dc7f73b3fd3089aa",
+              "9f4aa42725b4d8ad319e5c1f5a3ae5ecd1ab516c574b52dae71132f61c54ac3f"
+            ],
+            "hamming_from_offset0": [
+              8,
+              6,
+              9
+            ],
+            "pairwise_hamming": [
+              8,
+              6,
+              9,
+              6,
+              7,
+              7
+            ]
+          },
+          {
+            "base_fit_seed": 20261116,
+            "distinct_masks": 4,
+            "mirror_mask_sha256": [
+              "2d095dd311af98db008c5a5bff877f687268857cfb3ac408fa5a6dfe468e7b9e",
+              "08c7e45ce3f51dbd10f4a0ad4e9c49a164727cd8987f5d6b5e7de602491190ef",
+              "b89d70f646bb19007a39c9d040eaf0dc6a383b119f6d43ce7686e459e1a94c75",
+              "9cf82795f57aa2cff61e983ddde077de0e4913a8df243f9e32104cd82a656ff0"
+            ],
+            "hamming_from_offset0": [
+              5,
+              9,
+              8
+            ],
+            "pairwise_hamming": [
+              5,
+              9,
+              8,
+              8,
+              9,
+              7
+            ]
+          }
+        ],
+        "check_limit": "The checked masks assume13 retainednonconstant columns, consistent with existingMitrafits. Wrapper must record actual retained feature count/masks for everyfold. A duplicate mask must not trigger an adaptive replacement seed; log the effectiveviewcount or reject as a degenerate candidate."
+      },
+      "implementation_acceptance": [
+        "Offset0 must reproduce samefold originalv71 baseline probabilities to the established backend tolerance, including identical column/roworder,seed,checkpoint and preprocessing.",
+        "Fit/predict each component sequentially and release its GPU engine before the next; four live engines are unnecessary. Keep immutableCPU weights/context or auditedpredictor state, never share mutable fitted preprocessing acrossseeds.",
+        "Verify allfourcomponents completed and returned finite,aligned probabilities before computing mean. AnOOM/timeout is incomplete, not permission to average onlysuccessfulmembers.",
+        "Serialize exactoffsets,weights,percomponentseed/schema/mirror/state andfulltrainingcontext; restoredensemble prediction must reproduce presave mean. Absolutecheckpointpaths need hashverification or selfcontainedweights as existingartifactcontract.",
+        "No per-rowchoice, confidence-routing,thresholdtuning,seedranking or weightfitting fromdevelopmentOOF/publicscore.",
+        "Freeze the quartet once. Do not extend to8/16views, replace offsets or tuneweights because the public result is disappointing."
+      ],
+      "resource_assessment": {
+        "baseline_threefold_seconds": 82.31505983299576,
+        "rough_fourview_screen_seconds": 329.26023933198303,
+        "interpretation": "Simple4x projection from completedrun038, not a resource benchmark or guaranteed runtime. SequentialGPU use should resemble oneview peak, but CPUartifactstate/context may grow; measure rather than assume.",
+        "relative_priority": "Lower implementation/resource risk than lastblocktraining, with a distinct augmentation-variance mechanism. Reasonable to run alongside the separatelyprespecifiedlastblockcandidate as two mechanisms, not a seedgrid."
+      },
+      "decision_protocol": {
+        "use_existing_frozen_policy": "reports/top5_validation_review.json; do not rewrite its authorization-boundhash",
+        "A_online_eligibility": "Follow rootfrozen exactrepeatedseeds20261113/14 andGroup20261112: eachrandomgain versusmatchedMitra positive,mean>=.001,groupnonreversal; matchedv44 within1pp. A is a qualifiedonlineexperiment, not statisticallyequivalent orS.",
+        "S": "Unchanged stronger83%/+1pp/pairedgroup criteria.",
+        "degenerate_result": "If allviews effectively reproduceoneview or finalsubmission probabilities/classes are identical toalreadytestedMitra, do not consume anotheronlineevaluation just to resubmitidenticalpredictions.",
+        "public_score_use": "No newoffsetprediction/score was inspected for this review. ExistingonlineMitra strength motivates checking its predefinedaugmentationvariance but cannot be used to infer individualtestlabels."
+      }
+    },
+    "persistence": "CPU raw training context/labels/IDs/recipe plus external SHA-pinned checkpoint; no model-state cache.",
+    "environment_sha256": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c"
+  }
+}
