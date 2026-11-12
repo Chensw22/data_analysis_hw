@@ -1,0 +1,92 @@
+{
+  "reviewed_at_utc": "2026-11-12T20:18:18.454969+00:00",
+  "decision": "Recommend one bounded resource-gated evaluation of untested Mitra-v1 zero-shot and a predeclared equal v1/v2 mean, with unchanged v2 matched control. This is a different pretraining-model hypothesis, not a prediction of higher accuracy.",
+  "scope": "Only local source/history inventory, official HF/GitHub metadata/model cards/config and37800 remote safetensors header bytes. No tensor payload, new group score, dataset labels, model execution, GPU, dependency change or remote license form.",
+  "checkpoint": {
+    "repository": "autogluon/mitra-classifier",
+    "revision": "c425e9fa0910a6be1c494321792e7ba2a1367b1a",
+    "filename": "model.safetensors",
+    "sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+    "bytes": 302717904,
+    "fixed_weight_url": "https://huggingface.co/autogluon/mitra-classifier/resolve/c425e9fa0910a6be1c494321792e7ba2a1367b1a/model.safetensors",
+    "fixed_config_url": "https://huggingface.co/autogluon/mitra-classifier/resolve/c425e9fa0910a6be1c494321792e7ba2a1367b1a/config.json",
+    "metadata_source": "https://huggingface.co/api/models/autogluon/mitra-classifier?blobs=true",
+    "model_card": "https://huggingface.co/autogluon/mitra-classifier/blob/c425e9fa0910a6be1c494321792e7ba2a1367b1a/README.md",
+    "anonymous_HEAD_status": 200,
+    "HEAD_content_length": 302717904,
+    "gated": false,
+    "private": false
+  },
+  "license": {
+    "official_model_card_license": "Apache-2.0",
+    "research_course_use": "Standard Apache-2.0 model-card declaration supports local course/non-commercial experimentation; no TabPFN-style professional-status representation is present in this model card.",
+    "account_payment": "Public anonymous metadata and weight HEAD work; no account, payment or click-accept workflow identified for these official files. No credentials were read.",
+    "preservation": "Keep pinned model-card provenance and upstream Apache license/attribution with any distributed model/code. No third-party weights or predictions."
+  },
+  "compatibility": {
+    "config": {
+      "dim": 512,
+      "dim_output": 10,
+      "n_layers": 12,
+      "n_heads": 4,
+      "task": "CLASSIFICATION"
+    },
+    "config_identical_to_current_v2": true,
+    "tensor_names_dtypes_shapes_identical_to_v2": true,
+    "tensor_count": 392,
+    "parameter_elements": 75670026,
+    "remote_header_bytes_read": 37800,
+    "tensor_payload_downloaded": false,
+    "inference_backend": "Same model classes and every state tensor shape permit reuse of current FP32weights/MPSbf16, full-key independent-batch SDPA chunk1/threshold512 adapter. Actual strict state_dict load and full-context forward parity still require the resource probe; header identity is not measured inference success.",
+    "implementation_boundary": "Existing mitra.verify_checkpoint hardcodes v2 SHA. A new wrapper must implement its own pinned v1 verifier/loader and reuse unchanged MitraPreprocessor/MitraPredictor/model backend. Do not patch old WEIGHT_SHA or replace v2 files.",
+    "dependency_change_needed": false
+  },
+  "pretraining_difference": {
+    "source": "https://huggingface.co/autogluon/mitra-classifier-2",
+    "v1": "Official original card describes purely synthetic tasks from a mixture of random classifiers.",
+    "v2": "Official v2 card states unchanged architecture but new HybridSCM prior,10x longer pretraining contexts,3x as many features and a changed optimizer; v2 weights are described as a drop-in replacement.",
+    "testable_hypothesis": "Older mixed-prior weights may make different errors or produce complementary probabilities on this small dataset. They do not add new observed passenger information. A benefit is possible but unproven; v1 may simply be weaker and highly correlated with v2.",
+    "why_not_a_view_tweak": "Every weight file changes to a separately pretrained checkpoint; both runs otherwise hold inputs and inference recipe fixed."
+  },
+  "preprocessing": {
+    "official_source": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/sklearn_interface.py",
+    "finding": "Pinned official sklearn interface defaults to autogluon/mitra-classifier, one ensemble, Tab2D512/12/4, and no quantile transformer or feature-count scaling. Same vendored upstream Preprocessor/core used by our v2 is suitable for the v1 weights.",
+    "important_local_difference": "Stock wrapper has8192 support cap and OOM-driven support reductions. Do not invoke these stock behaviors: use our existing full-row adapter for4636/8693 support. Keep the exact existing train-only category/missing encoding, mean imputation, constant filter and one fixed random-mirror seed.",
+    "fair_input": "Original compact13, original missingness, same foldseed, nocontext20/mirror4/fine-tuning/feature search. Query labels never enter preprocessing or inference."
+  },
+  "coverage": "No v1 weight appears in artifacts/pretrained; inspected Mitra sources/manifests pin only mitra-classifier-2 SHA5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09. Existing v2 mirror, adaptation andcontext variants do not evaluate v1.",
+  "fixed_first_screen_if_approved": {
+    "outputs": [
+      "Original v2 zero-shot matched control",
+      "v1 zero-shot, one fixed view",
+      "0.5*p_v1+0.5*p_v2, probability arithmetic mean"
+    ],
+    "no_search": "No seed/weight/threshold/view selection. Threshold0.5 for all. Compute each complete model once per split and reuse only its complete probabilities for the fixed mean; no extra fits for averaging.",
+    "memory": "Sequential v1fit/predict/release then v2fit/predict/release; do not keep two GPU engines resident. Persistence pins both checkpoint SHAs and full training context or stores both portable CPU predictors.",
+    "failure": "Any component failure makes the mean incomplete. No partialensemble, context truncation, precision fallback or borrowed test labels.",
+    "validation": "A new candidate queue/protocol must be frozen before scoring; do not append to the already frozen current group phase. Report v1 and mean regardless of which is better; retain all prior failures."
+  },
+  "resource_probe": {
+    "priority": [
+      "Small synthetic schema/strictstate load and samebackend serialization check.",
+      "Full4636 support +2318 query, compact13, syntheticlabels; record complete prediction and common128 query consistency.",
+      "Full8693 support +2318 query using attribute-only/synthetic inputs and syntheticlabels; complete reload prediction with identical thresholds."
+    ],
+    "fixed_limits": "Original MPSfraction.65,CPU4,FP32weights/MPSbf16,query2318,full support,one view;1200s resource-only ceiling. No backward/adaptation probe.",
+    "success_checks": [
+      "Strict state_dict key/shape match",
+      "All support rows retained and valid complete probabilities",
+      "Samebackend reload maxdiff<=2e-6 and identical threshold decisions",
+      "Peak/snapshot RSS and MPS driver usage plus walltime",
+      "No package/source/checkpoint change during probe"
+    ],
+    "cost": "Architecture/state shapes equal v2 suggest similar workload, but no v1 runtime was measured. The fixed mean needs both models, roughly two single-model inference passes per split; freeze complete-stage budget from resource measurements, not a quality assumption."
+  },
+  "local_source_sha256": {
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "artifacts/pretrained/mitra-v2/config.json": "2c96c24dd25f64e92753f6f2ba00cc7833b9923459403dcd8504e8700c0995df",
+    "reports/mitra_weight_sources.json": "0af7bd22155c164a7db1b457e5e34457a65b9c305a2b81353f5974b896f73f7c"
+  }
+}
