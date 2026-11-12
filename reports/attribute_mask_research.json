@@ -1,0 +1,43 @@
+{
+  "purpose": "Attribute reconstruction research only; none of these accuracy values is Transported accuracy or a competition score.",
+  "data": "12970 training/test roster rows; Transported excluded during CSV ingestion for every attribute-reconstruction model.",
+  "protocol": "For each attribute, split known rows into stratified80% training/20% simulated masks with random_state20261112. Preserve original missingness in other predictors; do not restrict to complete rows. Raw attributes plus parsed Deck/Side/CabinNumber, excluding IDs, Name, attribute being predicted and its derived features.",
+  "model": {"iterations": 200, "depth": 4, "learning_rate": 0.06, "l2_leaf_reg": 5},
+  "HomePlanet": {
+    "training_rows": 10145, "masked_evaluation_rows": 2537,
+    "catboost": {"accuracy": 0.9329917225068979, "logloss": 0.16986683517343856, "brier": 0.09642487672599111, "ece10": 0.02906419126995575},
+    "deck_conditional_frequency_laplace1": {"accuracy": 0.7721718565234529, "logloss": 0.38664259354169256, "brier": 0.263049742424584, "ece10": 0.0063581479046240594}
+  },
+  "CryoSleep": {
+    "training_rows": 10128, "masked_evaluation_rows": 2532,
+    "catboost": {"accuracy": 0.9612954186413902, "logloss": 0.09341786479471714, "brier": 0.05586436992583549, "ece10": 0.01707547663647061},
+    "positive_spend_complete_zero_other_frequency_laplace1": {"accuracy": 0.9510268562401264, "logloss": 0.15117214773922466, "brier": 0.08673220548929785, "ece10": 0.010433216824289692}
+  },
+  "Spa_hurdle": {
+    "training_rows": 10148, "masked_evaluation_rows": 2538,
+    "zero_classification_accuracy": 0.8022064617809299,
+    "zero_classification_logloss": 0.3371412531507347,
+    "frequency_logloss": 0.6612101287733645,
+    "positive_training_rows": 3801, "positive_evaluation_rows": 950,
+    "positive_log1p_mae": 1.4650764528242777,
+    "positive_log1p_median_baseline_mae": 1.8954723513008485,
+    "positive_log1p_r2": 0.30247682588916247
+  },
+  "existing_v34_development_error_coverage": {
+    "note": "Descriptive use of existing development OOF results, not a new target evaluation and not holdout scoring.",
+    "missing_HomePlanet": {"rows": 168, "errors": 30},
+    "missing_HomePlanet_or_CryoSleep": {"rows": 339, "errors": 55},
+    "any_nonidentifier_missing": {"rows": 1530, "errors": 282},
+    "complete_nonidentifier_attributes": {"rows": 5424, "errors": 975}
+  },
+  "limitations": [
+    "The attribute research uses around10000 known rows for training, whereas run029 fits its posterior only on known-HomePlanet rows in each outer training fold. These reconstruction numbers are not the formal candidate posterior's validation result.",
+    "Random-mask reconstruction and calibration need not transfer to the actually missing subpopulation or improve Transported predictions.",
+    "The proposed target objective is posterior-weighted complete-data logloss, not exact Bayesian observed-data marginal likelihood."
+  ],
+  "review_decision": "One fixed HomePlanet-only candidate with consistent train/predict expansion, unit total weight per original row, existing spatial expert reuse, and observed-HomePlanet predictions unchanged. No Cryo, spending multi-imputation, SCARF or VIME candidate in this round.",
+  "background_sources": [
+    "https://proceedings.neurips.cc/paper_files/paper/2020/hash/7d97667a3e056acab9aaf653807b4a03-Abstract.html",
+    "https://arxiv.org/abs/2106.15147"
+  ]
+}
