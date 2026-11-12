@@ -1,0 +1,131 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v55_constant_leaf_spatial": {
+      "context": false,
+      "model": "constant_leaf_spatial",
+      "params": {
+        "n_estimators": 700,
+        "learning_rate": 0.035,
+        "min_child_samples": 30,
+        "reg_lambda": 5.0,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "num_leaves": 15,
+        "objective": "binary",
+        "device_type": "cpu",
+        "tree_learner": "serial",
+        "n_jobs": 4,
+        "verbosity": -1,
+        "force_col_wise": true,
+        "zero_as_missing": false
+      },
+      "spatial": {
+        "knots": 5,
+        "C": 0.1,
+        "weight": 0.5
+      }
+    },
+    "v56_nested_linear_leaf": {
+      "context": false,
+      "model": "nested_linear_leaf",
+      "params": {
+        "n_estimators": 700,
+        "learning_rate": 0.035,
+        "min_child_samples": 30,
+        "reg_lambda": 5.0,
+        "colsample_bytree": 0.9,
+        "subsample": 0.85,
+        "subsample_freq": 1,
+        "num_leaves": 15,
+        "objective": "binary",
+        "device_type": "cpu",
+        "tree_learner": "serial",
+        "n_jobs": 4,
+        "verbosity": -1,
+        "force_col_wise": true,
+        "zero_as_missing": false
+      },
+      "options": [
+        {
+          "linear_tree": false
+        },
+        {
+          "linear_tree": true,
+          "linear_lambda": 1.0
+        },
+        {
+          "linear_tree": true,
+          "linear_lambda": 10.0
+        },
+        {
+          "linear_tree": true,
+          "linear_lambda": 100.0
+        }
+      ],
+      "inner_folds": 3,
+      "inner_seed_offset": 10000,
+      "spatial": {
+        "knots": 5,
+        "C": 0.1,
+        "weight": 0.5
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "linear_leaf_candidate.py": "a08056962f622a87931cc371bed9879c7a1cfe8add5269d09536bb1e7dcb316e",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "model_families.py": "04537a36815f484e2c8b4d847401e79d523180d611089455490f44aa7bc02e78",
+    "requirements-models.txt": "517c14689bf101e623089c185889ff41ae5f7b8ccee1ca18a80c0c342b79a6c1"
+  },
+  "linear_leaf_environment_sha256": "3f185e6959b867a1eb614b33611731275ecdaf5d17c2696b3e7c101e4bcbe9c0",
+  "linear_leaf_policy": "Same v34 input features and original Earth/CryoSleep spatial expert. Fixed run005 LGB15 parameters throughout; v55 is the matched scaled/categorical-schema constant-leaf control. v56 uses fresh inner3 OOF to select constant, linear_lambda1,10,100 in that frozen tie order by pooled correct count, then Logloss, then configuration index. StandardScaler, category vocabulary and spatial spline fit only the respective inner training rows; the spline may be shared across the four options only within that same split. Numerical NaNs stay NaN; unknown categories become missing. A fresh complete outer-training pipeline refits the chosen option for exactly700 rounds. No outer-label early stopping, threshold or blend search. 1200-second whole-stage deadline; incomplete search fails closed without candidate scores. Existing gate compares v6, so v44 stability checks remain necessary before online approval.",
+  "linear_leaf_options": [
+    {
+      "linear_tree": false
+    },
+    {
+      "linear_tree": true,
+      "linear_lambda": 1.0
+    },
+    {
+      "linear_tree": true,
+      "linear_lambda": 10.0
+    },
+    {
+      "linear_tree": true,
+      "linear_lambda": 100.0
+    }
+  ],
+  "linear_leaf_stage_budget_seconds": 1200
+}

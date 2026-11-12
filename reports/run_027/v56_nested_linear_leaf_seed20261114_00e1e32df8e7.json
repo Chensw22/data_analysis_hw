@@ -1,0 +1,75 @@
+{
+  "inner_table": [
+    {
+      "configuration_index": 0,
+      "option": {
+        "linear_tree": false
+      },
+      "correct_count": 3775,
+      "accuracy": 0.8142795513373597,
+      "log_loss": 0.4017382236292003
+    },
+    {
+      "configuration_index": 1,
+      "option": {
+        "linear_tree": true,
+        "linear_lambda": 1.0
+      },
+      "correct_count": 3772,
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.4145200898862569
+    },
+    {
+      "configuration_index": 2,
+      "option": {
+        "linear_tree": true,
+        "linear_lambda": 10.0
+      },
+      "correct_count": 3763,
+      "accuracy": 0.8116911130284729,
+      "log_loss": 0.41200347113652025
+    },
+    {
+      "configuration_index": 3,
+      "option": {
+        "linear_tree": true,
+        "linear_lambda": 100.0
+      },
+      "correct_count": 3750,
+      "accuracy": 0.8088869715271786,
+      "log_loss": 0.41153959338993173
+    }
+  ],
+  "inner_folds": [
+    {
+      "inner_fold": 0,
+      "train_rows": 3090,
+      "validation_rows": 1546,
+      "train_index_sha256": "c4dda4a8ac962d3fd39d4514ccdff612723f8b503b5a9fe55a61564c4223724c",
+      "validation_index_sha256": "cdd1538ecbade5520c20bdf50070acc71b5a958c06724cf4c6772b6099648540"
+    },
+    {
+      "inner_fold": 1,
+      "train_rows": 3091,
+      "validation_rows": 1545,
+      "train_index_sha256": "3b30633ddff2a3a2cb31bb247ec5a0cbc7612b85ae5c53e7b187660697616e1e",
+      "validation_index_sha256": "c9334a9fc0cf253a6b76d246275e9c34ee4d1dd1b692926449c6ffcb1585b77a"
+    },
+    {
+      "inner_fold": 2,
+      "train_rows": 3091,
+      "validation_rows": 1545,
+      "train_index_sha256": "3f3295c39fffa42247c043fa359bffd0b04a3c409fc3b3a9e25a4665a534bf92",
+      "validation_index_sha256": "294afd24f2a5e849fd0d112e4e9a6879b7afcdc95fba1ed8b1eb834c0b7cda8e"
+    }
+  ],
+  "selected_configuration_index": 0,
+  "selected_option": {
+    "linear_tree": false
+  },
+  "seed": 20261114,
+  "outer_train_rows": 4636,
+  "prediction_rows": 2318,
+  "elapsed_seconds": 6.241042334004305,
+  "fixed_tree_budget": 700
+}
