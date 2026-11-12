@@ -1,0 +1,90 @@
+{
+  "repository": "Prior-Labs/TabPFN-v2-clf",
+  "revision": "275f19d2add9c2c0de38f9ebaded3856599fa2e7",
+  "anonymous_access_verified": true,
+  "gated": false,
+  "license": "Prior Labs License v1.1 (May2025)",
+  "license_sha256": "08b1851b4b6136b5fb0cb124d3258e0d91e3e1623f1be5904b77e4d270d112d8",
+  "license_identical_to_existing": "third_party/tabpfn-v2-LICENSE.txt",
+  "license_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/blob/275f19d2add9c2c0de38f9ebaded3856599fa2e7/LICENSE.txt",
+  "model_card_url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/blob/275f19d2add9c2c0de38f9ebaded3856599fa2e7/README.md",
+  "paper_url": "https://doi.org/10.1038/s41586-024-08328-6",
+  "synthetic_evidence": "The authors report approximately130 million synthetic tasks per model and six classification architectures; three use one feature per token and three, including default, use two. Current official model card identifies production base checkpoints and content-identical finetuned aliases. This records author provenance, not an independent per-checkpoint training audit.",
+  "architecture_metadata_method": "Read only first64KiB HTTP Range responses and inspected ZIP data.pkl using pickletools without unpickling; then downloaded three authorized base files and verified complete SHA256.",
+  "members": [
+    {
+      "key": "default",
+      "filename": "tabpfn-v2-classifier-v2_default.ckpt",
+      "bytes": 29009539,
+      "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+      "features_per_group": 2,
+      "emsize": 192,
+      "nhead": 6,
+      "nlayers": 12,
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/275f19d2add9c2c0de38f9ebaded3856599fa2e7/tabpfn-v2-classifier-v2_default.ckpt"
+    },
+    {
+      "key": "gn2p4bpt",
+      "filename": "tabpfn-v2-classifier-gn2p4bpt.ckpt",
+      "bytes": 12926661,
+      "sha256": "de01a095da7a083b25a74d1f7d85de524e8bd6137936092feab9790673ad9215",
+      "features_per_group": 1,
+      "emsize": 128,
+      "nhead": 4,
+      "nlayers": 12,
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/275f19d2add9c2c0de38f9ebaded3856599fa2e7/tabpfn-v2-classifier-gn2p4bpt.ckpt"
+    },
+    {
+      "key": "vutqq28w",
+      "filename": "tabpfn-v2-classifier-vutqq28w.ckpt",
+      "bytes": 12926661,
+      "sha256": "c060b5f61480e8a6ec8cbf909a0fc236563eb4628df75b7b8c2d1f8fc1b9cf4e",
+      "features_per_group": 1,
+      "emsize": 128,
+      "nhead": 4,
+      "nlayers": 12,
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/275f19d2add9c2c0de38f9ebaded3856599fa2e7/tabpfn-v2-classifier-vutqq28w.ckpt"
+    },
+    {
+      "key": "znskzxi4",
+      "filename": "tabpfn-v2-classifier-znskzxi4.ckpt",
+      "bytes": 12926661,
+      "sha256": "fadb46928ddd70a53c6e1b205772e78784bf7bea5132ba6adbd48f201d8e9076",
+      "features_per_group": 1,
+      "emsize": 128,
+      "nhead": 4,
+      "nlayers": 12,
+      "url": "https://huggingface.co/Prior-Labs/TabPFN-v2-clf/resolve/275f19d2add9c2c0de38f9ebaded3856599fa2e7/tabpfn-v2-classifier-znskzxi4.ckpt"
+    }
+  ],
+  "ensemble": [
+    {
+      "checkpoint": "default",
+      "n_estimators": 2,
+      "weight": 0.5
+    },
+    {
+      "checkpoint": "gn2p4bpt",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666
+    },
+    {
+      "checkpoint": "vutqq28w",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666
+    },
+    {
+      "checkpoint": "znskzxi4",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666
+    }
+  ],
+  "control": [
+    {
+      "checkpoint": "default",
+      "n_estimators": 8,
+      "weight": 1.0
+    }
+  ],
+  "attribution": "Built with PriorLabs-TabPFN"
+}

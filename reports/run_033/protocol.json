@@ -1,0 +1,120 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "TabPFN_v2_compact8_matched": {
+      "context": false,
+      "model": "tabpfn_views",
+      "components": [
+        {
+          "checkpoint": "default",
+          "n_estimators": 8,
+          "weight": 1.0
+        }
+      ],
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "inference_config": {
+        "ENABLE_GPU_PREPROCESSING": false,
+        "TRANSFORM_TEXT": false,
+        "TRANSFORM_DATES": false,
+        "SUBSAMPLE_SAMPLES": null
+      },
+      "checkpoints": {
+        "default": {
+          "filename": "tabpfn-v2-classifier-v2_default.ckpt",
+          "bytes": 29009539,
+          "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+          "features_per_group": 2,
+          "emsize": 192,
+          "nhead": 6,
+          "nlayers": 12
+        }
+      }
+    },
+    "v65_TabPFN_default32": {
+      "context": false,
+      "model": "tabpfn_views",
+      "components": [
+        {
+          "checkpoint": "default",
+          "n_estimators": 32,
+          "weight": 1.0
+        }
+      ],
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "inference_config": {
+        "ENABLE_GPU_PREPROCESSING": false,
+        "TRANSFORM_TEXT": false,
+        "TRANSFORM_DATES": false,
+        "SUBSAMPLE_SAMPLES": null
+      },
+      "checkpoints": {
+        "default": {
+          "filename": "tabpfn-v2-classifier-v2_default.ckpt",
+          "bytes": 29009539,
+          "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+          "features_per_group": 2,
+          "emsize": 192,
+          "nhead": 6,
+          "nlayers": 12
+        }
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "tabpfn_views.py": "965fe4e8864c792ad34dd184b0b683fae031cb8836f6d8672bf8bbc6361ce97d",
+    "test_tabpfn_views.py": "a48bf82afc516bbe0f5b19e317c605e2f2bea643a31e66412360438d1cd118ee",
+    "tabpfn_architecture.py": "61c1db09e5a39271587fba00a675220435ed1ba6c5bf74422f37b3ba813f1cfa",
+    "reports/pretrained_architecture_sources.json": "3406c57cfda59b21caf8e13841fc21a193ebf89262a531ef334cf523a73f8f80"
+  },
+  "views_environment_sha256": "0e4a8e54a729d6409e4cf620abc21864fff68e00b7a08add083b3211e73ecb10",
+  "views_policy": "Only n_estimators changes: default checkpoint 32 vs independently fitted matched 8. Identical compact13, flags, seed, float32 MPS and probability averaging. Views are NOT prefix stable: n_estimators changes feature/class permutation generation; never reuse 8-view predictions or truncate 32 views to reconstruct the control. No architecture, view, temperature, weight or threshold selection. MPS executes one view per forward; CPU preprocessing caches scale with view count. Resource snapshots are not continuous GPU peak measurements. A failure aborts the candidate, with no partial ensemble. Built with PriorLabs-TabPFN."
+}

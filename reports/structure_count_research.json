@@ -1,0 +1,29 @@
+{
+  "purpose": "Unlabeled structural feature research; no Transported accuracy or trained model.",
+  "history": {
+    "run003": "Eight context features plus four attribute fills and changed CatBoost settings; not matched two-count ablation.",
+    "run025": "Fixed 32-to-15 feature ablation, not train-only SHAP selection."
+  },
+  "definition": "Counts over fixed public train+test roster after dropping Transported. Missing Cabin remains NaN; counts are observed roster membership, not actual ship totals.",
+  "roster_rows": 12970,
+  "roster_membership_sha256": "59d8925fb7854a2cee710ed6d0184727fbc055bcefb3d99cb7311b20f3092e9c",
+  "prepared_control_frame_exact": true,
+  "subset_counts_exact": true,
+  "model_training_performed": false,
+  "distributions": {
+    "dev": {
+      "rows": 6954,
+      "group_more_than_one": 3137,
+      "cabin_more_than_one": 2466,
+      "cabin_missing": 158,
+      "count_correlation": 0.8988961190861624
+    },
+    "test": {
+      "rows": 4277,
+      "group_more_than_one": 1937,
+      "cabin_more_than_one": 1463,
+      "cabin_missing": 100,
+      "count_correlation": 0.884952317826326
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "components": [
+    {
+      "checkpoint": "default",
+      "n_estimators": 8,
+      "weight": 1.0,
+      "actual_resolved_views": 8,
+      "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+      "architecture": {
+        "features_per_group": 2,
+        "emsize": 192,
+        "nhead": 6,
+        "nlayers": 12
+      },
+      "fit_mode": "fit_preprocessors",
+      "ensemble_configs": [
+        {
+          "preprocess_config": {
+            "name": "quantile_uni_coarse",
+            "categorical_name": "ordinal_very_common_categories_shuffled",
+            "append_original": "auto",
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": "svd",
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 986,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            0,
+            1
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "quantile_uni_coarse",
+            "categorical_name": "ordinal_very_common_categories_shuffled",
+            "append_original": "auto",
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": "svd",
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 988,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            0,
+            1
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "quantile_uni_coarse",
+            "categorical_name": "ordinal_very_common_categories_shuffled",
+            "append_original": "auto",
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": "svd",
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 989,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            0,
+            1
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "quantile_uni_coarse",
+            "categorical_name": "ordinal_very_common_categories_shuffled",
+            "append_original": "auto",
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": "svd",
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 987,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            0,
+            1
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "none",
+            "categorical_name": "numeric",
+            "append_original": false,
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": null,
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 985,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            1,
+            0
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "none",
+            "categorical_name": "numeric",
+            "append_original": false,
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": null,
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 990,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            1,
+            0
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "none",
+            "categorical_name": "numeric",
+            "append_original": false,
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": null,
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 991,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            1,
+            0
+          ]
+        },
+        {
+          "preprocess_config": {
+            "name": "none",
+            "categorical_name": "numeric",
+            "append_original": false,
+            "max_features_per_estimator": 1000000,
+            "global_transformer_name": null,
+            "max_onehot_cardinality": null,
+            "differentiable": false
+          },
+          "add_fingerprint_feature": true,
+          "polynomial_features": "no",
+          "feature_shift_count": 984,
+          "feature_shift_decoder": "shuffle",
+          "outlier_removal_std": 12.0,
+          "_model_index": 0,
+          "passthrough_inf": false,
+          "class_permutation": [
+            1,
+            0
+          ]
+        }
+      ],
+      "fit_seconds": 0.34298412495991215,
+      "mps_driver_after_fit_bytes": 35094528,
+      "predict_seconds": 55.28409270895645,
+      "seconds": 55.62709420797182,
+      "mps_driver_after_predict_bytes": 1185775616,
+      "process_lifetime_max_rss_bytes": 761298944,
+      "mps_driver_after_release_bytes": 19611648
+    }
+  ],
+  "views_prefix_stable": false
+}

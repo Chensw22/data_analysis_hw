@@ -12,6 +12,10 @@
 
 后续本地迭代目前最高为 `run_019 / v44_seed_ensemble` 的 **81.98%**（相同开发集三折 OOF），尚未达到83%或重复划分复核。已上线的v34本地为81.92%，两次新随机划分为81.48%、81.62%，均好于原基线；同行隔离为81.39%，比基线低0.22个百分点，稳定性结论混合。旧留出集未再次用于选模型。每轮完整结果和失败方案保存在对应 `reports/` 子目录。汇总见 [迭代数据](reports/local_iterations.csv) 和 [进度图](reports/iteration_progress.png)，可运行 `summarize_iterations.py` 更新。
 
+## 当前实验方向
+
+已尝试 MLP、TabM、TabPFN（含权重微调）、TabICL；最新32-view TabPFN为81.77%。多数近期微改未超过v44，当前改为方法级筛选：FT-Transformer字段注意力、TabR带标签邻居检索、SCARF无标签对比预训练与匹配scratch对照。先给合理训练预算并审查收敛，再比较成绩选择方向；不把一次配置失败等同整个模型族无效。已写好的结构计数微改暂缓运行。
+
 ## 数据与线上成绩
 
 - 官方比赛：https://www.kaggle.com/competitions/spaceship-titanic
