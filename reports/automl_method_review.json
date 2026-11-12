@@ -1,0 +1,151 @@
+{
+  "status": "recommended_single_method_screen; read_only_research_no_training_or_installation",
+  "decision": "优先测试受控 AutoGluon 两层异构 bagged stacking。它补充此前未覆盖的方法，但不保证超过现有81.9816%或83%门槛。此配置不是完整默认best_quality portfolio复现。",
+  "new_mechanism": {
+    "previous": "run013/run031只把两种模型的OOF概率交给线性logit融合，后者仅一个预声明Cryo交互。",
+    "candidate": "CAT/GBM/RF/XT各自3折bag；第二层再次训练四家非线性模型，输入包含第一层OOF概率和原始工程特征；官方weighted ensemble及model_best仅在outertrain内部选择。每层折模型平均降低方差，raw-feature passthrough允许局部纠错。",
+    "not_claimed": "未新增目标信息，不意味着已有各家单模型失败被推翻；也不把方法称为精确无偏的内部OOF评估。"
+  },
+  "version": {
+    "autogluon": "1.5.0",
+    "git_commit": "d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7",
+    "reason": "显式固定已核对源码和依赖的版本，不依赖漂移的stable preset或声称是最新版本。",
+    "python": "3.12 (package supports >=3.10,<3.14)"
+  },
+  "frozen_recipe": {
+    "input": "现有engineered_no_ids完整30列，与v6输入相同；不加v34两contrast，不加ID，不引入测试/旧holdout行。v44仅作现有业务强基线，非相同算法对照。",
+    "hyperparameters": {
+      "CAT": {
+        "iterations": 700,
+        "depth": 6,
+        "learning_rate": 0.045,
+        "l2_leaf_reg": 5,
+        "ag.early_stop": 50
+      },
+      "GBM": {
+        "num_boost_round": 500,
+        "num_leaves": 31,
+        "learning_rate": 0.05,
+        "ag.early_stop": 50
+      },
+      "RF": {
+        "n_estimators": 300
+      },
+      "XT": {
+        "n_estimators": 300
+      }
+    },
+    "predictor": {
+      "problem_type": "binary",
+      "eval_metric": "accuracy"
+    },
+    "fit": {
+      "presets": null,
+      "num_bag_folds": 3,
+      "num_bag_sets": 1,
+      "num_stack_levels": 1,
+      "dynamic_stacking": false,
+      "use_bag_holdout": false,
+      "hyperparameter_tune_kwargs": null,
+      "calibrate_decision_threshold": false,
+      "num_cpus": 4,
+      "num_gpus": 0,
+      "fit_strategy": "sequential",
+      "time_limit": null,
+      "refit_full": false,
+      "fit_weighted_ensemble": true,
+      "fit_full_last_level_weighted_ensemble": true,
+      "save_bag_folds": true
+    },
+    "ag_args_fit": {
+      "stopping_metric": "log_loss"
+    },
+    "ag_args_ensemble": {
+      "fold_fitting_strategy": "sequential_local",
+      "use_orig_features": true,
+      "use_child_oof": false
+    },
+    "threshold": 0.5,
+    "settings_note": "caps是root最终批准的固定预算参数；不是研究后扫参。RF/XT其余参数使用固定版本默认。显式禁用默认RF/XT单child OOB捷径，以满足真实3fold bag。记录全部resolved backend参数、随机种子与实际迭代。"
+  },
+  "validation_protocol": {
+    "outer": "完全沿用6954开发样本的固定3fold；每次只把约4636 outertrain X/y交给TabularPredictor.fit。outerval约2318行只在fit全部结束后predict，不作为tuning_data/eval_set/DynStack/特征选择/阈值选择。",
+    "inner": "全部bag划分、类别预处理、模型选择、融合、早停都限定该outertrain；L1生成内部OOF供L2训练，L2保留原特征。每个outer独立目录、learner随机种子、缓存和模型，不跨折复用训练状态。",
+    "earlystop_caveat": "官方fold_fitting_strategy把bag自身验证X/y传给child.fit；CAT/LGB据此早停，CAT还use_best_model=True。因此内部OOF预测虽未用该行做梯度训练，却用该行标签选训练轮次，不能当独立验证分数。上层还存在stacked-overfitting风险。固定外层完全未参与即可诚实评估整个有内部选择的程序。",
+    "why_no_custom_wrapper": "遵从root/reviewer最终决定，不另写丢弃child eval_set的自定义类；不额外扣20%bag holdout降低子训练量。",
+    "why_no_dynstack": "首轮固定测试一个stack层而不让每折预算/内部诊断改变层数。官方推荐DynStack防内部stacked overfitting；本实验不用它并不证明此风险不存在，只依赖完全隔离的外层评估该固定算法。",
+    "selection": "predictor.model_best由outertrain内部评分确定，可选择L1或L2/weighted ensemble；记录实际祖先图，若选择L1说明程序没有保留stack收益。禁止依据outerval换leaderboard成员。",
+    "after_screen": "若满足项目门槛，才按现有2个新seed及GroupCV确认；最终导出fulltrain仍用同一bagged程序，不擅自refit_full改变预测机制。旧1739留出标签不参与。"
+  },
+  "resources": {
+    "fits": "每outer4families×2layers×3folds=24child；全3outer=72child，另有轻量weighted ensembles。每个bag child训练约3090行。",
+    "hardware": "MacM4/16GB，CPU4顺序模型+顺序折，不用MPS/Ray，不驻留多套额外foundation models。LightGBM需可加载的libomp；优先核验已有官方wheel/本机运行库路径。",
+    "estimate_unmeasured": "完整3outer约10–30分钟是工程估计，非实测承诺；72fit的实际总量需首完整outer日志校核。预计小表顺序训练可适应16GB，但需记录RSS和磁盘。",
+    "hard_stage_seconds": 3600,
+    "time_policy": "AutoGluon time_limit=None，外层watchdog3600秒整stage。任何超时/资源异常/缺失家族或层/少于3child/静默降低RF树数都判inconclusive，不能把幸存子集作为既定方法评分。stock早停小于cap是允许行为。",
+    "audit": "记录每child实际iterations/trees、训练耗时、RSS、全部模型/层/child名单、内部best与外层预测hash、失败信息。参数触cap且仍改善应标潜在欠拟合，不据单配置失败否定整个AutoML族。"
+  },
+  "dependencies": {
+    "dedicated_environment": ".venv-autogluon owned/installed by root implementation agent; do not reuse NN environment",
+    "minimal_install_spec": "autogluon.tabular[catboost,lightgbm]==1.5.0",
+    "verified_ranges": {
+      "numpy": ">=1.25,<2.4",
+      "pandas": ">=2.0,<2.4",
+      "scipy": ">=1.5.4,<1.17",
+      "scikit-learn": ">=1.4,<1.8",
+      "pyarrow": ">=7,<21",
+      "catboost": ">=1.2,<1.3",
+      "lightgbm": ">=4.0,<4.7"
+    },
+    "other_core_dependencies": "autogluon.core/features/common==1.5.0, networkx, joblib, psutil, matplotlib, boto3, requests, tqdm, pyyaml; lock resolver exact versions before first fit.",
+    "excluded": "[all], Ray, Torch/FASTAI/NN_TORCH, TabPFN/TabICL/Mitra, XGB extra, cloud/GPU services; no pretrained weights or credentials. Boto3 as dependency alone is not cloud execution.",
+    "compatibility_evidence": "官方安装文档列MacOS和Apple Silicon支持；包元数据确认Python及版本范围。未在本任务安装或执行，不能把源码兼容判断称本机已验证。"
+  },
+  "battle": {
+    "agreement": "review_current与root同意优先一次受控AutoGluon方法筛选，暂不做昂贵三强nested nonlinear router。",
+    "counterarguments": [
+      "内部选择及多层stack可能过拟合约4.6k outertrain；原始特征使L2重学弱模型而非只校正概率。",
+      "四家族早先单模型表现大多较弱，异构并不自动保证有益互补。",
+      "禁止把更低logloss/内部OOF leaderboard或oracle纠错上限当外层accuracy提升证据。"
+    ],
+    "resolution": "只冻结这一程序，不随外层结果加家族/stack层/bag repeats；若失败，结论限定此配置。"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2003.06505",
+      "supports": "作者论文：多层异构模型组合与bagging是方法核心，不只是HPO。"
+    },
+    {
+      "url": "https://auto.gluon.ai/1.5/api/autogluon.tabular.TabularPredictor.fit.html",
+      "supports": "API定义、DynStack、bagholdout、threshold calibration、sequential fit与HPO控制。"
+    },
+    {
+      "url": "https://auto.gluon.ai/stable/install.html",
+      "supports": "MacOS/Apple Silicon支持概述，不作为固定版本依赖证据。"
+    },
+    {
+      "url": "https://pypi.org/pypi/autogluon.tabular/1.5.0/json",
+      "supports": "固定版本Python范围、minimal extras和依赖。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7/core/src/autogluon/core/models/ensemble/fold_fitting_strategy.py",
+      "supports": "_fit_fold把bag验证X/y传入child.fit；不能声称内部OOF完全未用标签选择。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7/core/src/autogluon/core/models/ensemble/stacker_ensemble_model.py",
+      "supports": "use_orig_features=True及OOF stack features。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7/tabular/src/autogluon/tabular/models/rf/rf_model.py",
+      "supports": "默认300树和use_child_oof=True，需要显式关闭后真正3折。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7/tabular/src/autogluon/tabular/models/catboost/catboost_model.py",
+      "supports": "ag early_stop及use_best_model路径。"
+    },
+    {
+      "url": "https://github.com/autogluon/autogluon/blob/d41bd33c3119f6bc8cf94c66f9502a8d0bf281f7/tabular/src/autogluon/tabular/models/lgb/lgb_model.py",
+      "supports": "num_boost_round与ag early_stop。"
+    }
+  ]
+}

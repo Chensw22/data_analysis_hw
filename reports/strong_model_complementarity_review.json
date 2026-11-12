@@ -1,0 +1,192 @@
+{
+  "status": "completed_independent_error_diagnosis_and_method_battle",
+  "sources": {
+    "v44": "artifacts/run_019/v44_seed_ensemble_seed20261112.npz",
+    "pfn32": "artifacts/run_033/v65_TabPFN_default32_seed20261112.npz",
+    "mitra2": "artifacts/run_038/v71_Mitra2_zeroshot_seed20261112.npz"
+  },
+  "data_policy": "Only development labels selected using persisted run002 development indices. No holdout labels parsed or scored; no test predictions/answers accessed. No fitted weights, threshold search, meta-model or model training.",
+  "rows": 6954,
+  "development_index_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "same_run_baseline_predictions_bitwise_equal_across_three_runs": true,
+  "models": {
+    "v44": {
+      "correct": 5701,
+      "errors": 1253,
+      "accuracy": 0.8198159332758125,
+      "fold_errors": [
+        403,
+        400,
+        450
+      ]
+    },
+    "pfn32": {
+      "correct": 5686,
+      "errors": 1268,
+      "accuracy": 0.81765890135174,
+      "fold_errors": [
+        400,
+        422,
+        446
+      ]
+    },
+    "mitra2": {
+      "correct": 5678,
+      "errors": 1276,
+      "accuracy": 0.816508484325568,
+      "fold_errors": [
+        422,
+        418,
+        436
+      ]
+    }
+  },
+  "pairs": {
+    "v44__pfn32": {
+      "disagreement_rows": 321,
+      "disagreement_fraction": 0.04616048317515099,
+      "second_corrects_first_errors": 153,
+      "second_breaks_first_correct": 168,
+      "both_wrong": 1100,
+      "both_correct": 5533,
+      "probability_correlation": 0.9824919416452749,
+      "oracle_choose_correct_if_any_accuracy": 0.8418176589013517,
+      "oracle_is_unattainable_label_aware_diagnostic_not_a_candidate": true,
+      "fold_corrections": [
+        46,
+        52,
+        55
+      ],
+      "fold_regressions": [
+        43,
+        74,
+        51
+      ]
+    },
+    "v44__mitra2": {
+      "disagreement_rows": 365,
+      "disagreement_fraction": 0.05248777681909692,
+      "second_corrects_first_errors": 171,
+      "second_breaks_first_correct": 194,
+      "both_wrong": 1082,
+      "both_correct": 5507,
+      "probability_correlation": 0.9755769983368423,
+      "oracle_choose_correct_if_any_accuracy": 0.8444060972102387,
+      "oracle_is_unattainable_label_aware_diagnostic_not_a_candidate": true,
+      "fold_corrections": [
+        53,
+        49,
+        69
+      ],
+      "fold_regressions": [
+        72,
+        67,
+        55
+      ]
+    },
+    "pfn32__mitra2": {
+      "disagreement_rows": 310,
+      "disagreement_fraction": 0.04457865976416451,
+      "second_corrects_first_errors": 151,
+      "second_breaks_first_correct": 159,
+      "both_wrong": 1117,
+      "both_correct": 5527,
+      "probability_correlation": 0.9889069031737102,
+      "oracle_choose_correct_if_any_accuracy": 0.8393730227207363,
+      "oracle_is_unattainable_label_aware_diagnostic_not_a_candidate": true,
+      "fold_corrections": [
+        29,
+        57,
+        65
+      ],
+      "fold_regressions": [
+        51,
+        53,
+        55
+      ]
+    }
+  },
+  "triple_error_patterns": {
+    "000": 5433,
+    "001": 100,
+    "010": 74,
+    "011": 94,
+    "100": 94,
+    "101": 59,
+    "110": 77,
+    "111": 1023
+  },
+  "triple_pattern_order": [
+    "v44",
+    "pfn32",
+    "mitra2"
+  ],
+  "triple_pattern_definition": "1 means that model is wrong at the unchanged threshold0.5;0 means correct.",
+  "triple_oracle_only": {
+    "all_three_wrong": 1023,
+    "at_least_one_correct": 5931,
+    "unattainable_accuracy": 0.8528904227782571
+  },
+  "interpretation": {
+    "shared_error_fraction_of_v44_errors": 0.816440542697526,
+    "v44_errors_with_at_least_one_other_correct": 230,
+    "both_foundation_models_correct_v44_error": 94,
+    "both_foundation_models_wrong_when_v44_correct": 94,
+    "fixed_majority_diagnostic": "The two foundations jointly overturn v44 in188 rows, with94 corrections and94 regressions. This is an error-pattern identity, not a fitted or submitted ensemble. No weights or thresholds were searched.",
+    "minimum_net_correct_needed_to_exceed_83_percent": 71,
+    "oracle_limitation": "The label-aware three-model oracle85.289% only demonstrates some complementary errors. It provides no evidence that probabilities or raw covariates identify which model is correct, or that a deployable router can recover the required71 net corrections.",
+    "selection_bias": "These are repeatedly reused development OOF predictions from adaptively selected candidates. They support descriptive diagnosis only, not independent statistical confirmation or a new gate-passing score."
+  },
+  "previous_nested_evidence": {
+    "source": "artifacts/run_031/screen_results.csv",
+    "global_accuracy": 0.8186655162496405,
+    "global_log_loss": 0.37647094628297106,
+    "conditional_accuracy": 0.8175150992234685,
+    "conditional_log_loss": 0.37667557615160707,
+    "meaning": "Properly nested two-model calibration improved logloss yet did not beat v44 accuracy. This does not mathematically rule out a three-model nonlinear meta-learner, but weakens the claim that another trust-routing expansion is presently the highest-value direction."
+  },
+  "three_model_nested_assessment": {
+    "priority": "defer_not_family_rejection",
+    "required_honest_protocol": "Recompute each base inside each outertrain innerfold; never reuse these full-development OOF values as meta-training data in a new outer CV. Fit all meta preprocessing/hyperparameter selection on outertrain only. Fresh bases on fulloutertrain predict untouched outerval.",
+    "training_size_shift": "With three innerfolds, meta features arise from base models trained on approximately3090 rows; outerval uses approximately4636-row base contexts. This calibration/learning-curve shift is substantial for foundation contexts.",
+    "rough_runtime_seconds": 2682.6900186680723,
+    "runtime_caveat": "Approximately44.7minutes by12fits perbase scaled from3fold wall times, not a benchmark; innercontexts may be faster and nonlinear meta cost is extra. Confirmation adds three complete validation rounds.",
+    "nonlinear_overfit_risk": "At outertrain size4636 there are relatively few disagreement examples; nonlinear routing must infer a winner from weak, highly correlated predictions. Adding raw-feature interactions increases flexibility but also selection variance. No diagnostics here establish a reproducible routing variable."
+  },
+  "primary_sources": [
+    {
+      "url": "https://auto.gluon.ai/stable/api/autogluon.tabular.TabularPredictor.fit.html",
+      "role": "Independent confirmation that tuning_data participates in model/ensemble selection; outerval must stay outsidefit. Threshold calibration defaultsauto and must be disabled for existing fixed0.5 protocol. Time limits are approximate."
+    }
+  ],
+  "recommendation": {
+    "priority": "One bounded AutoGluon-style method screen if environment/resource review succeeds; defer another three-foundation nonlinear meta-router. Do not expand model families merely to keep searching.",
+    "novel_mechanism": "Bagged nonlinear stackers may combine inner out-of-fold predictions with raw covariates and choose an ensemble inside each outertrain. This is a different complete training procedure from the existing two-logit/Cryo linear meta-models, although its component families have mostly been tried.",
+    "reviewer_preferred_protocol": "Freeze CPU model families CAT/GBM/RF/XT,3 internal bag folds,1 bag repeat,1 stack layer,no DynStack,no extra bag holdout,no threshold calibration; retain official internal early stopping and model selection. Fit exclusively on each outertrain; outerval is passed only to final predict_proba. Judge this entire algorithm on unchanged outer3fold. Resource and dependency feasibility must be checked before implementation.",
+    "internal_score_caveat": "Researcher found official CAT/GBM bag members use their internal fold labels for early stopping/model selection. These internal OOF values are training/selection features, not independent validation scores. This does not leak outerval into fitting. Explicitly report the distinction.",
+    "if_stricter_inner_is_required": "A locally adapted wrapper that discards inner fold eval_set and uses fixed iterations is permissible, but must be described as a custom recipe and independently tested. Do not simultaneously remove another20% holdout without evidence; base training size would fall to about2472 versus3090 without that extra holdout.",
+    "uncertainty": "No result here establishes that AutoGluon will improve accuracy or reach83%. Broad screening is justified by a distinct procedure, not an oracle bound or expected leaderboard guarantee."
+  },
+  "battle": {
+    "peer": "research_improvements",
+    "agreement": [
+      "Current three-model complementarity alone does not justify a large nonlinear router search.",
+      "AutoGluon outer validation must never enter tuning_data,early stopping,DynStack,threshold calibration or model selection.",
+      "Freeze model families/bag repeats/stack depth and record completed models/resources; do not allow default presets to silently expand into foundation models."
+    ],
+    "disagreement": [
+      "Peer proposed fixed-iteration CAT/GBM subclasses plus20% internal bag holdout to make meta features stricter. Reviewer prefers the official internal early-stopping procedure evaluated by truly isolated outer folds; internal selection optimism is disclosed rather than treating it as outer leakage.",
+      "Reviewer rejects combining a custom fixed-iteration change with extra20%holdout in the first method screen because it confounds implementation and training-capacity effects. Parent chooses final protocol before any new score."
+    ]
+  },
+  "stop_conditions": [
+    "If installation/resource constraints prevent completing the declared model set/layers, mark the method incomplete rather than call the family ineffective.",
+    "If the frozen complete AutoGluon procedure does not improve the strongest existing candidate, do not automatically expand stack depth,bag repeats,meta thresholds or family grids on the same development labels. Reassess using logged model coverage/optimization evidence.",
+    "Any subsequent successful candidate must exceed the existing83% gate and pass the declared fresh-seed/group confirmation; these descriptive OOF diagnostics cannot replace confirmation."
+  ],
+  "root_verification": {
+    "status": "independently_reproduced",
+    "checked": "All three model accuracies, pairwise corrections/regressions and all-three-wrong count reproduced directly from saved OOF arrays and development labels.",
+    "decision": "Proceed with one bounded stock AutoGluon multilayer bagging screen on unchanged v6 engineered_no_ids features; retain stock internal early stopping and evaluate only on untouched outer folds."
+  }
+}

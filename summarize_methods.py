@@ -21,6 +21,7 @@ RECIPES = [
     ('SCARF matched scratch MLP', '037', 'v69_matched_scratch_MLP', 'compact13 + missing flags', 'mechanism-matched control'),
     ('SCARF pretraining + fine-tuning', '037', 'v70_SCARF', 'compact13 + missing flags', 'unlabeled contrastive pretraining'),
     ('Mitra-v2 pretrained inference', '038', 'v71_Mitra2_zeroshot', 'compact13', 'new synthetic pretraining generation; task-specific adaptation not evaluated'),
+    ('AutoGluon nonlinear multilayer bagging', '039', 'v73_AutoGluon_multilayer', 'engineered_no_ids', 'four fixed CPU families; three-fold bags and one additional stack layer'),
 ]
 
 
