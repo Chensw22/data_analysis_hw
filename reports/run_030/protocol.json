@@ -1,0 +1,117 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v59_monotone_control": {
+      "context": false,
+      "model": "monotone_control",
+      "drop_columns": [
+        "TotalSpend",
+        "AllSpendingZero",
+        "PaidServices"
+      ],
+      "max_ctr_complexity": 1,
+      "constraints": {},
+      "spatial": {
+        "knots": 5,
+        "C": 0.1,
+        "weight": 0.5
+      },
+      "cat": {
+        "depth": 6,
+        "iterations": 700,
+        "learning_rate": 0.045,
+        "l2_leaf_reg": 5
+      }
+    },
+    "v60_monotone_spatial": {
+      "context": false,
+      "model": "monotone_spatial",
+      "drop_columns": [
+        "TotalSpend",
+        "AllSpendingZero",
+        "PaidServices"
+      ],
+      "max_ctr_complexity": 1,
+      "constraints": {
+        "RoomService": -1,
+        "FoodCourt": 1,
+        "ShoppingMall": 1,
+        "Spa": -1,
+        "VRDeck": -1,
+        "RoomService_log1p": -1,
+        "FoodCourt_log1p": 1,
+        "ShoppingMall_log1p": 1,
+        "Spa_log1p": -1,
+        "VRDeck_log1p": -1,
+        "LuxurySpend": -1,
+        "DiningShoppingMinusLuxury": 1,
+        "LogDiningShoppingLuxuryRatio": 1
+      },
+      "spatial": {
+        "knots": 5,
+        "C": 0.1,
+        "weight": 0.5
+      },
+      "cat": {
+        "depth": 6,
+        "iterations": 700,
+        "learning_rate": 0.045,
+        "l2_leaf_reg": 5
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "monotone_spatial.py": "78bc575c26db73099794f42f137e68c51d7d9419709cd4a7626681d0e3e4f5f3",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "monotone_spatial_policy": "Original v6 and v34 controls unchanged. Both v59/v60 remove exactly TotalSpend, AllSpendingZero and PaidServices, retain every other full-v34 field, and explicitly set max_ctr_complexity=1 to exclude categorical/float combination paths. v59 has no monotonicity constraints. v60 constrains raw/log FoodCourt and ShoppingMall +1, raw/log RoomService/Spa/VRDeck -1, LuxurySpend -1, both spending contrasts +1. Same Cat depth6/700/.045/L2=5, original training-only spatial expert and eligibility, knots5/C=.1/.5 blend, decision threshold .5. Fixed prior, no sign/parameter search. The raw prediction API recomputes all derived fields and preserves feature columns and constraints in its serialized wrapper. Monotonicity applies to changes of observed nonnegative amounts with other raw inputs/missingness fixed, not to NaN-to-observed changes or a causal interpretation. Real raw-reconstruction monotonicity probe must pass before screening; failure ends this route without encoding repairs.",
+  "monotone_constraints": {
+    "RoomService": -1,
+    "FoodCourt": 1,
+    "ShoppingMall": 1,
+    "Spa": -1,
+    "VRDeck": -1,
+    "RoomService_log1p": -1,
+    "FoodCourt_log1p": 1,
+    "ShoppingMall_log1p": 1,
+    "Spa_log1p": -1,
+    "VRDeck_log1p": -1,
+    "LuxurySpend": -1,
+    "DiningShoppingMinusLuxury": 1,
+    "LogDiningShoppingLuxuryRatio": 1
+  },
+  "monotone_drop_columns": [
+    "TotalSpend",
+    "AllSpendingZero",
+    "PaidServices"
+  ]
+}
