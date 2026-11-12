@@ -1,0 +1,130 @@
+{
+  "reference": "v44",
+  "version": "v44_seed_ensemble",
+  "historical_run": "run_019",
+  "historical_protocol_sha256": "3e352df50c912a594b25554640d41e2c4fd22646417dfe18d6b95a3b2bc0d0b6",
+  "historical_sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "seed_ensemble.py": "807f9a9467101fc5af509a43a3301f6a6598fdf2c923cc04ff0ae4ae9f58f647",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "historical_configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v25_spatial_blend": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v44_seed_ensemble": {
+      "context": false,
+      "model": "seed_ensemble",
+      "seed_offsets": [
+        0,
+        100,
+        200
+      ]
+    }
+  },
+  "audit_sources": {
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "test_audit_top5_references.py": "1b965877abcad8ace4d431de775886ac5d74416d9dce73e3133ea30e32fef4e9"
+  },
+  "environment": {
+    "markdown-it-py": "4.3.0",
+    "scikit-learn": "1.9.1",
+    "text-unidecode": "1.3",
+    "platformdirs": "4.14.5",
+    "cloudpickle": "3.1.2",
+    "kiwisolver": "1.5.1",
+    "pandas": "3.1.1",
+    "packaging": "26.3",
+    "narwhals": "2.28.0",
+    "joblib": "1.6.0",
+    "protobuf": "7.36.2",
+    "nbformat": "5.11.1",
+    "jsonschema-specifications": "2025.9.1",
+    "requests": "2.34.2",
+    "plotly": "7.1.0",
+    "certifi": "2026.10.23",
+    "jsonschema": "4.26.0",
+    "webencodings": "0.6.1",
+    "python-slugify": "9.1.3",
+    "traitlets": "5.16.1",
+    "jupytext": "1.19.6",
+    "numpy": "2.5.4",
+    "pillow": "13.0.0",
+    "contourpy": "1.4.0",
+    "tqdm": "4.70.1",
+    "urllib3": "2.8.0",
+    "mdurl": "0.1.2",
+    "fastjsonschema": "2.22.3",
+    "PyYAML": "6.0.3",
+    "mdit-py-plugins": "0.7.0",
+    "matplotlib": "3.11.2",
+    "python-dotenv": "1.2.4",
+    "bleach": "6.4.0",
+    "jupyter_core": "5.9.1",
+    "cycler": "0.12.1",
+    "referencing": "0.37.0",
+    "fonttools": "4.68.0",
+    "tzdata": "2026.6",
+    "lightgbm": "4.7.0",
+    "kaggle": "2.2.5",
+    "graphviz": "0.21",
+    "rpds-py": "2026.9.1",
+    "attrs": "26.1.0",
+    "typing_extensions": "4.16.0",
+    "python-dateutil": "4.0.0",
+    "threadpoolctl": "3.8.0",
+    "kagglesdk": "0.1.38",
+    "charset-normalizer": "3.5.2",
+    "catboost": "1.2.10",
+    "pyparsing": "3.3.3",
+    "six": "1.17.0",
+    "scipy": "1.18.1",
+    "xgboost": "3.4.1",
+    "idna": "3.20"
+  },
+  "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+  "split_recipe": [
+    [
+      "random",
+      20261113
+    ],
+    [
+      "random",
+      20261114
+    ],
+    [
+      "group",
+      20261112
+    ]
+  ],
+  "fold_fit_seed": "split_seed+zero_based_fold; frozen model seed offsets preserved",
+  "development_rows": 6954,
+  "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "group_ids_sha256": "7e7e02c4a762fc8c887e5ff26c64ed463066f8b2c3f159eddc3ba90f7a819dfc",
+  "passenger_ids_sha256": "805deca7c937af787fc8164ec2ef50512abf8c0e736f7ab1418bd460bf16cf41",
+  "budget_seconds": 2700,
+  "disclosure": "Repeated cross-validation on the same previously used6954 development rows; stability evidence, not independent holdout evidence, model selection, or a submission gate.",
+  "target_policy": "Only frozen development target rows parsed; old holdout attributes only.",
+  "log_output": "artifacts/top5_reference_audit/v44"
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "random",
+  "split_seed": 20261114,
+  "fold": 1,
+  "model_fit_seed": 20261115,
+  "train_rows": 4636,
+  "validation_rows": 2318,
+  "train_ids_sha256": "5509ea1b7dd497692b89beb26408006919bc6a84bb14fdc69e51ee2904999c2e",
+  "validation_ids_sha256": "0617844a5c8960d4fab9e49ff49b0285121bc9ce4c3b13f680fca5dd0cff6d46",
+  "group_overlap_count": 556,
+  "accuracy": 0.82053494391717,
+  "log_loss": 0.37596800923347473,
+  "fit_and_predict_seconds": 26.48127900005784,
+  "training_metadata": {
+    "status": "complete",
+    "recipe": "zero-shot",
+    "seed": 20261115,
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "training_rows": 4636,
+    "training_ids_sha256": "5509ea1b7dd497692b89beb26408006919bc6a84bb14fdc69e51ee2904999c2e",
+    "full_prediction_support": true,
+    "query_chunk": 2318,
+    "precision": "mps_bfloat16_autocast",
+    "inner_history": [],
+    "refit_history": [],
+    "selected_steps": 0,
+    "validation_support_order": "fixed_training_order_no_episode_rng_consumption",
+    "refit_optimizer_steps": 0,
+    "refit_seconds": 5.00003807246685e-07,
+    "parameters": 75670026,
+    "feature_count": 13,
+    "resources_after_refit": {
+      "max_rss_bytes": 855818240,
+      "mps_current_bytes": 302958592,
+      "mps_driver_bytes": 311115776,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    },
+    "seconds": 0.45403029199223965,
+    "fresh_refit_from_original_checkpoint": true,
+    "prediction_seconds": 25.634717333014123,
+    "prediction_rows": 2318,
+    "resources_after_prediction": {
+      "max_rss_bytes": 855818240,
+      "mps_current_bytes": 302680320,
+      "mps_driver_bytes": 3616243712,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    }
+  }
+}

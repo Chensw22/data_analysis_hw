@@ -1,0 +1,48 @@
+{
+  "status": "incomplete",
+  "completed_splits": [
+    {
+      "kind": "random",
+      "seed": 20261113,
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3813609901633244,
+      "fold_accuracy": [
+        0.813632441760138,
+        0.8192407247627265,
+        0.8080241587575496
+      ],
+      "seconds": 36.83525512507185,
+      "oof_path": "artifacts/top5_reference_audit/v44/random_20261113.npz",
+      "oof_sha256": "ef27eb5ddf725885bd7aee5e26906d6593de077223753e81efa64eab89b3e0d4"
+    },
+    {
+      "kind": "random",
+      "seed": 20261114,
+      "accuracy": 0.8149266609145815,
+      "log_loss": 0.3826201677645059,
+      "fold_accuracy": [
+        0.8127696289905091,
+        0.8132010353753235,
+        0.818809318377912
+      ],
+      "seconds": 53.55815120902844,
+      "oof_path": "artifacts/top5_reference_audit/v44/random_20261114.npz",
+      "oof_sha256": "96997ef3ae552a5fbfa221ebc75070fb290030bec5e81fb5061450f9ddeb072d"
+    },
+    {
+      "kind": "group",
+      "seed": 20261112,
+      "accuracy": 0.814495254529767,
+      "log_loss": 0.3828251110505358,
+      "fold_accuracy": [
+        0.8088869715271786,
+        0.8071613459879207,
+        0.8274374460742019
+      ],
+      "seconds": 70.42550200002734,
+      "oof_path": "artifacts/top5_reference_audit/v44/group_20261112.npz",
+      "oof_sha256": "d9f181c7053cef3b974e52c4f8459d031747a9cc6163b98145b82a1fc0a329b2"
+    }
+  ],
+  "disclosure": "Repeated cross-validation on the same previously used6954 development rows; stability evidence, not independent holdout evidence, model selection, or a submission gate."
+}
