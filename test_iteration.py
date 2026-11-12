@@ -1,9 +1,15 @@
 """Guard against target leakage and incorrect passenger-context aggregation."""
 import unittest
+import hashlib
+import json
+from pathlib import Path
+import tempfile
+from unittest.mock import patch
 import numpy as np
 import pandas as pd
 import experiment
 from iterate import build_features
+import iterate
 
 
 class GroupFeatureTests(unittest.TestCase):
@@ -31,6 +37,18 @@ class GroupFeatureTests(unittest.TestCase):
     def test_baseline_features_are_unchanged(self):
         pd.testing.assert_frame_equal(build_features(self.frame,False)[0],
                                       experiment.features(self.frame,'engineered_no_ids')[0])
+
+    def test_frozen_source_rejects_modified_code(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory); (root/'source.py').write_text('original')
+            protocol={'sources':{'source.py':hashlib.sha256(b'original').hexdigest()},
+                      'configs':iterate.CONFIGS,'blend':iterate.BLEND}
+            (root/'protocol.json').write_text(json.dumps(protocol))
+            with patch.object(iterate,'ROOT',root):
+                iterate.assert_frozen(root)
+                (root/'source.py').write_text('changed')
+                with self.assertRaises(RuntimeError):
+                    iterate.assert_frozen(root)
 
 
 if __name__=='__main__':

@@ -17,7 +17,7 @@ import pandas as pd
 from catboost import CatBoostClassifier
 from sklearn.ensemble import HistGradientBoostingClassifier
 from sklearn.metrics import accuracy_score, log_loss
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, StratifiedGroupKFold
 from threadpoolctl import threadpool_limits
 
 import experiment as base
@@ -37,6 +37,16 @@ CONFIGS = {
     'v14_histogram_group': dict(context=True, model='histogram', max_iter=500, max_leaf_nodes=15, learning_rate=.05, l2_regularization=5, min_samples_leaf=25),
 }
 BLEND = ['v11_group_context', 'v12_group_deeper', 'v14_histogram_group']
+
+
+def assert_frozen(out):
+    protocol=json.loads((out/'protocol.json').read_text())
+    for filename,expected in protocol['sources'].items():
+        actual=hashlib.sha256((ROOT/filename).read_bytes()).hexdigest()
+        if actual != expected:
+            raise RuntimeError(f'Experiment source changed: {filename}; use a new run, not an old gate.')
+    if protocol['configs'] != CONFIGS or protocol['blend'] != BLEND:
+        raise RuntimeError('Candidate configuration changed; use a new run.')
 
 
 def build_features(roster, context):
@@ -154,7 +164,7 @@ def screen(out):
     (out/'protocol.json').write_text(json.dumps(protocol,indent=2)+'\n')
     y=train.Transported.iloc[dev].astype(int).to_numpy()
     rows=[]
-    for name in [*CONFIGS,'v15_context_blend']:
+    for name in [*CONFIGS,*(['v15_context_blend'] if BLEND else [])]:
         prob,folds,seconds=evaluate(name,matrices,train,dev,SEEDS[0],out)
         row=dict(version=name,accuracy=float(accuracy_score(y,prob>=.5)),log_loss=float(log_loss(y,prob)),
                  fold_std=float(np.std(folds)),seconds=seconds)
@@ -172,6 +182,7 @@ def screen(out):
 
 
 def confirm(out):
+    assert_frozen(out)
     if (out/'gate.json').exists():
         raise RuntimeError('Confirmation already recorded.')
     train,_,matrices,dev=dataset()
@@ -193,13 +204,27 @@ def confirm(out):
                 regressions=int(((candidate>=.5)!=y)[(baseline>=.5)==y].sum())))
     passed=bool(len(rows)==2 and all(r['gain']>0 for r in rows) and np.mean([r['gain'] for r in rows])>=.001
                 and np.mean([r['candidate_accuracy'] for r in rows]) > MIN_LOCAL_ACCURACY)
-    gate=dict(passed=passed,minimum_local_accuracy_exclusive=MIN_LOCAL_ACCURACY,screen_accuracy=screen_accuracy,confirmation=rows,
+    group_result=None
+    if passed:
+        groups=train.PassengerId.iloc[dev].str.split('_').str[0]
+        group_prob={candidate:np.zeros(len(dev)) for candidate in [BASELINE,name]}
+        for fold,(a,b) in enumerate(StratifiedGroupKFold(3,shuffle=True,random_state=SEEDS[0]).split(dev,y,groups)):
+            assert not set(groups.iloc[a]) & set(groups.iloc[b])
+            for candidate in [BASELINE,name]:
+                components=BLEND if candidate=='v15_context_blend' else [candidate]
+                preds=[fit(n,matrices,dev[a],y[a],dev[b],SEEDS[0]+fold)[0] for n in components]
+                group_prob[candidate][b]=np.mean(preds,axis=0)
+            print('Group confirmation fold',fold+1,'completed',flush=True)
+        group_result={candidate:float(accuracy_score(y,prob>=.5)) for candidate,prob in group_prob.items()}
+        passed=bool(group_result[name]>MIN_LOCAL_ACCURACY and group_result[name]>group_result[BASELINE])
+    gate=dict(passed=passed,minimum_local_accuracy_exclusive=MIN_LOCAL_ACCURACY,screen_accuracy=screen_accuracy,confirmation=rows,group_confirmation=group_result,
               note='Repeated CV on the same development rows: stability evidence, not an independent holdout or a probability of leaderboard success.')
     (out/'gate.json').write_text(json.dumps(gate,indent=2)+'\n')
     print('GATE',json.dumps(gate),flush=True)
 
 
 def export(out):
+    assert_frozen(out)
     if not json.loads((out/'gate.json').read_text())['passed']:
         raise RuntimeError('Candidate failed local gate; do not submit.')
     if (out/'submission.csv').exists():
