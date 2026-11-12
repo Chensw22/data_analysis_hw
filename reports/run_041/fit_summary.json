@@ -1,0 +1,54 @@
+{
+  "status": "complete_screen",
+  "control_bitwise_equal_to_run038": true,
+  "folds": [
+    {
+      "seed": 20261112,
+      "training_rows": 4636,
+      "selected_steps": 44,
+      "selection_at_zero": false,
+      "selection_at_cap": false,
+      "best_inner_log_loss": 0.39504584670066833,
+      "inner_optimizer_steps": 50,
+      "refit_optimizer_steps": 44,
+      "frozen_prefix_unchanged_selection": true,
+      "frozen_prefix_unchanged_refit": true,
+      "seconds": 860.202150208992,
+      "step0_loss": 0.3965044915676117,
+      "step50_loss": 0.3957248032093048
+    },
+    {
+      "seed": 20261113,
+      "training_rows": 4636,
+      "selected_steps": 50,
+      "selection_at_zero": false,
+      "selection_at_cap": true,
+      "best_inner_log_loss": 0.3665894865989685,
+      "inner_optimizer_steps": 50,
+      "refit_optimizer_steps": 50,
+      "frozen_prefix_unchanged_selection": true,
+      "frozen_prefix_unchanged_refit": true,
+      "seconds": 946.0065687079914,
+      "step0_loss": 0.36916133761405945,
+      "step50_loss": 0.3665894865989685
+    },
+    {
+      "seed": 20261114,
+      "training_rows": 4636,
+      "selected_steps": 50,
+      "selection_at_zero": false,
+      "selection_at_cap": true,
+      "best_inner_log_loss": 0.3745083510875702,
+      "inner_optimizer_steps": 50,
+      "refit_optimizer_steps": 50,
+      "frozen_prefix_unchanged_selection": true,
+      "frozen_prefix_unchanged_refit": true,
+      "seconds": 956.2161784589989,
+      "step0_loss": 0.3773234784603119,
+      "step50_loss": 0.3745083510875702
+    }
+  ],
+  "stability_tested": false,
+  "online_submitted": false,
+  "convergence_limitation": "Two of three folds select maximum50 steps. This fixed recipe did not improve accuracy; longer adaptation remains unevaluated."
+}
