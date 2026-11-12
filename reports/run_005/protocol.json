@@ -1,0 +1,79 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v18_lgb15": {
+      "context": false,
+      "model": "lightgbm",
+      "n_estimators": 700,
+      "learning_rate": 0.035,
+      "min_child_samples": 30,
+      "reg_lambda": 5,
+      "colsample_bytree": 0.9,
+      "subsample": 0.85,
+      "subsample_freq": 1,
+      "num_leaves": 15
+    },
+    "v19_lgb31": {
+      "context": false,
+      "model": "lightgbm",
+      "n_estimators": 700,
+      "learning_rate": 0.035,
+      "min_child_samples": 30,
+      "reg_lambda": 5,
+      "colsample_bytree": 0.9,
+      "subsample": 0.85,
+      "subsample_freq": 1,
+      "num_leaves": 31
+    },
+    "v20_svm3": {
+      "context": false,
+      "model": "svm",
+      "C": 3,
+      "gamma": "scale"
+    },
+    "v21_svm10": {
+      "context": false,
+      "model": "svm",
+      "C": 10,
+      "gamma": "scale"
+    },
+    "v22_mlp": {
+      "context": false,
+      "model": "mlp",
+      "hidden_layer_sizes": [
+        64,
+        32
+      ],
+      "alpha": 1.0,
+      "learning_rate_init": 0.001,
+      "early_stopping": true,
+      "validation_fraction": 0.15,
+      "max_iter": 400,
+      "n_iter_no_change": 25
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "model_families.py": "04537a36815f484e2c8b4d847401e79d523180d611089455490f44aa7bc02e78"
+  }
+}
