@@ -1,0 +1,104 @@
+{
+  "status": "resource_prototype_only_not_screen_ready",
+  "upstream_sources": {
+    "_internal/models/tab2d.py": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/tab2d.py",
+      "sha256": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465"
+    },
+    "_internal/models/embedding.py": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/embedding.py",
+      "sha256": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c"
+    },
+    "_internal/models/base.py": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/base.py",
+      "sha256": "a6fa64692b6e70093e83b91d188b981ee2c3759d7cace051a129c9b9714209a6"
+    },
+    "_internal/config/enums.py": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/config/enums.py",
+      "sha256": "c2bdead8e881820e63cbabc7cb45f0edf12827bc1ca12b0f6cadc2e987c4bec3"
+    },
+    "_internal/data/preprocessor.py": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/data/preprocessor.py",
+      "sha256": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606"
+    },
+    "LICENSE": {
+      "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    "MODEL_CARD.md": {
+      "url": "https://huggingface.co/autogluon/mitra-classifier-2/raw/edada0d20759c58ada8c8605c25f22f6e98ea5f0/README.md",
+      "sha256": "baab54ff0be437c82b1ae616cf19a41820815e274cdda017f0046dd541c86ca8"
+    }
+  },
+  "candidate_names": [
+    "v71_Mitra2_zeroshot",
+    "v72_Mitra2_adapt50"
+  ],
+  "default_run": "run_038",
+  "source_policy": "Five upstream Python files unchanged at pinned commit; project adapter separate; preserve Apache LICENSE and provenance NOTICE.",
+  "checkpoint": {
+    "repo": "autogluon/mitra-classifier-2",
+    "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+    "file": "model.safetensors",
+    "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "bytes": 302717904,
+    "local_directory": "artifacts/pretrained/mitra-v2"
+  },
+  "dependency_policy": "Parent-managed .venv-mitra; includes loguru used by upstream Preprocessor. No AutoGluon install required for vendored core/preprocessor.",
+  "preprocessing": {
+    "input": "compact13 same named raw inputs as TabPFN budget experiment",
+    "categories": "train-only vocabulary: unknown0, missing1, known2+",
+    "numerics": "No new log/scaler. PreserveNaN into train-only upstream mean imputation; all-missing train columns prefill0 and upstream constant filter removes them.",
+    "upstream": "quantile_transform=False, no feature/class shuffle or projection, random_mirror_x=True with isolated fixed numpy RNG; core quantile support-only.",
+    "mutation": "encode/transform/core operate on copies; caller raw data and saved context remain unchanged."
+  },
+  "precision": {
+    "weights": "float32",
+    "context": "float32",
+    "cpu": "float32 no autocast",
+    "mps": "torch.autocast mps bfloat16, matching official trainer; logits.float before softmax or full-head CE",
+    "failure_policy": "No automatic precision/device/context fallback."
+  },
+  "inference": {
+    "support": "All context rows, no8192 cap or sampling",
+    "query_chunk": 128,
+    "query_independence": "Official nonflash source support self-attention and query-to-support attention only; no query-query row attention. CPU test checks chunk equivalence.",
+    "probabilities": "First2 logits stable FP32 softmax; no threshold/weight tuning"
+  },
+  "persistence": {
+    "contents": [
+      "CPU state_dict",
+      "model config",
+      "train-only preprocessor/category schema",
+      "full CPU support X/y",
+      "metadata"
+    ],
+    "reload_device": "CPU default, explicit MPS override; engine is never pickled",
+    "validation": "CPU tiny real upstream model roundtrip; fullsamebackend roundtrip belongs to resource probe"
+  },
+  "resource": {
+    "data": "Synthetic independent X/y only for4636/8693; no real holdout labels or scores",
+    "shapes": [
+      "4636support x13 +128query forward/repeat/reload",
+      "4636total synthetic rows backward episode:3708support/928disjointquery, matching official fullouter episode dimensions",
+      "8693support x13 +128query forward; full final-data shape with syntheticlabels"
+    ],
+    "memory": "MPS allocator fraction .65 of recommended maximum; record OS memory_pressure and allocator limit before loading model. No watermarks disabled. OOM/timeout failclosed, no context reduction.",
+    "deadline": "Per invocation1200seconds default; user/parent may predeclare via CLI before model load. SIGALRM interrupts Python; allocator limit is the main protection against kernel allocation pressure.",
+    "timing": "First and warmed repeat, fullfold chunk extrapolation labelled estimate, RSSmax and MPS snapshots (not peak). No accuracy/loss result reported.",
+    "backward": "One full-head10-class CE backward plus one disposable AdamW optimizer step (lr3e-7 first warmup update, wd.3, betas.9/.999, eps1e-8). Record two-moment optimizer state bytes, resources while states live, finite gradients/parameters and real weight change. Synthetic labels only. Modified engine discarded; original CPU checkpoint state is used for zero-shot roundtrip. Resource-only random disjoint partition matches official episode dimensions but is not formal training sampler. Support floor(4n/5), query min(ceil(n/5),1024); no inference context truncation. Official per-layer checkpointing use_reentrant=False.",
+    "sourcefreeze": "Copy adapter/tests/protocol/vendor and env versions before firstcheckpoint load; failedprobes save failed_inconclusive result and never become candidate score."
+  },
+  "adaptation": {
+    "status": "Fullloop not implemented/frozen until resource review. One disposable synthetic AdamW step explicitly authorized for resource memory validation; no real-data training.",
+    "source_under_independent_review": "https://huggingface.co/autogluon/mitra-finetune/tree/b4701e8148dc33b00ed15d7086ff59816957cde4",
+    "needed_before_screen": "Parent/reviewer finalize exact AdamW/warmup/episodic sampler, inner0..50selection and freshfullouterrefit; single-model50step feasibility decided before any CV accuracy."
+  },
+  "commands": {
+    "cpu_tests": ".venv-mitra/bin/python -m pytest -q test_mitra_candidate.py",
+    "root_only_outer_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 4636 --query-rows 128 --backward --output artifacts/probes/mitra4636",
+    "root_only_export_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 8693 --query-rows 128 --skip-roundtrip --output artifacts/probes/mitra8693"
+  },
+  "scoring": "screen/confirm/export deliberately raise until resource review; no partial-CV wins and no conclusion that one poor zero-shot recipe rejects this family.",
+  "cpu_test_status": "7 passed in4.48s using parent-managed .venv-mitra; only tiny CPU models.67 upstream einx deprecation warnings; no MPS or real-data training."
+}

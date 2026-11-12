@@ -128,14 +128,15 @@
         "einops",
         "einx",
         "huggingface_hub",
-        "safetensors"
+        "safetensors",
+        "loguru"
       ],
       "fine_tune_dependency_warning": "Reusing official trainer also pulls internal callbacks/config/loss/scheduler/data modules and autogluon.common helper; dependency closure and equivalent behavior need separate source review before implementation.",
       "environment": "Parent manages a separate environment or audited vendored dependency set; no installation performed."
     },
     "runtime_findings": {
       "mps": "Official sklearn interface chooses MPS after CUDA. Tab2D disables FlashAttention on non-CUDA and uses torch scaled_dot_product_attention.",
-      "dtype": "Official trainer config uses bfloat16 autocast; preprocessor outputs float32. Freeze float32/no-autocast for initial MPS probe if adapting current project convention; label the precision deviation. Do not assume bfloat16 works without testing.",
+      "dtype": "Official bfloat16 autocast on MPS is the parent-approved first resource-probe policy; FP32 weights/context/quantile inputs, FP32 output softmax/loss. CPU tiny tests use FP32. Unsupported precision is inconclusive; no automatic fallback.",
       "operations_to_probe": [
         "torch.quantile",
         "torch.vmap(torch.bucketize)",

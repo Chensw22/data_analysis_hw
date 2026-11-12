@@ -1,0 +1,211 @@
+{
+  "status": "read_only_specification_review_no_training_or_weight_download",
+  "fine_tune_recipe_revision": "b4701e8148dc33b00ed15d7086ff59816957cde4",
+  "autogluon_core_revision": "957883c92073afddb6d9d4a0ae08a6d15ef3c692",
+  "checkpoint": {
+    "repository": "autogluon/mitra-classifier-2",
+    "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+    "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09"
+  },
+  "upstream_recipe": {
+    "optimizer": "AdamW over ALL requires_grad parameters, one weight-decay group including biases/norm/embeddings",
+    "learning_rate_small_binary": 3e-06,
+    "learning_rate_general": 1e-05,
+    "small_binary_row_limit": 16384,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.3,
+    "full_parameter_tuning": true,
+    "steps": 50,
+    "validation_interval": 1,
+    "warmup_steps": 10,
+    "gradient_clipping": "not applied by official fine-tune loop",
+    "label_smoothing": 0.0,
+    "grad_scaler_enabled": false,
+    "precision": "upstream bfloat16 autocast; local float32 MPS must be declared as an adaptation",
+    "bag_models": 8
+  },
+  "warmup_source_behavior": {
+    "construction": "LinearLR(start_factor=0.1,end_factor=1.0,total_iters=10); optimizer LR is scaled on scheduler construction",
+    "step_order": "optimizer update -> validation/checkpoint/earlystop -> if epoch<10: warmup.step(); otherwise dummy plateau scheduler because lr_scheduler=False",
+    "actual_update_factors": [
+      0.1,
+      0.19,
+      0.28,
+      0.37,
+      0.46,
+      0.55,
+      0.64,
+      0.73,
+      0.82,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91,
+      0.91
+    ],
+    "actual_peak_lr": 2.73e-06,
+    "finding": "The pinned implementation stops warmup after nine scheduler.step calls, so it holds 0.91*base_lr from update10 onward. Do not silently replace with cosine or a conventional warmup reaching1.0.",
+    "recommendation": "Preserve the literal pinned trajectory for this first adaptation and log LR used for every optimizer update. A corrected trajectory is a different declared local recipe, not a silent compatibility fix."
+  },
+  "episode_sampler": {
+    "frequency": "new episode each optimizer update; exactly one episode batch per step",
+    "algorithm": [
+      "Use a private seeded numpy RandomState.",
+      "For classification with smallest class>=5, randomly permute all current training rows, then take the first split of StratifiedKFold(n_splits=5,shuffle=True,random_state=the same rng). Otherwise use random train_test_split(test_size=.2).",
+      "Take support[:min(16384,len(support))] and query[:min(1024,len(query))]. The original preceding permutation makes truncated rows randomized.",
+      "DatasetFinetune additionally rng.choice(support_count,size=support_count,replace=False) when the support already fits. Apply the same permutation to X/y/IDs.",
+      "Assert support/query original row IDs are disjoint after all sampling; query targets are used solely for the loss."
+    ]
+  },
+  "typical_episode_shapes": {
+    "inner_selection_train3708": {
+      "support": 2966,
+      "query": 742
+    },
+    "outer_refit_train4636": {
+      "support": 3708,
+      "query": 928
+    },
+    "export_train8693": {
+      "support": 6954,
+      "query_capped": 1024
+    }
+  },
+  "preprocessing": {
+    "fit_scope": "Fit once on the complete applicable training split before episode generation, never on validation/test or separately on each episode. Model internal quantile embedding remains support-conditioned.",
+    "official_defaults": {
+      "use_quantile_transformer": false,
+      "use_random_transforms": false,
+      "shuffle_classes": false,
+      "shuffle_features": false,
+      "random_mirror_x": true,
+      "use_feature_count_scaling": false
+    },
+    "note": "runner QT_TASK_GATE is only a gate for an explicitly enabled optional quantile view; default ViewSpec.quantile_transform=False. Do not accidentally enable it on small binary tasks."
+  },
+  "loss_and_label_mask": {
+    "training": "CrossEntropy over all native10 output logits with query targets0/1; no [:2] truncation before training CE.",
+    "validation_prediction": "Extract actual two class logits through fitted preprocessor mapping, then softmax and binary-class logloss.",
+    "mask": "Core accepts x_support,y_support,x_query and padding masks only; it constructs query-label embeddings from its learned y_mask, never y_query. Do not concatenate query labels into support.",
+    "padding": "Batch1 unpadded episode can use all-false feature/support/query padding masks with correct shapes. Padded labels must follow upstream ignore/mask conventions.",
+    "binary_mapping": "Encode true training labels consistently as0/1. Class shuffling disabled in the fixed recipe; if ever enabled, invert it before scoring."
+  },
+  "local_nested_protocol": {
+    "declaration": "Single-model resource-conscious adaptation, not the author8-bag benchmark recipe.",
+    "selection": "Outertrain -> fixed stratified80% gradient-training and20% monitoring. Fit preprocessing on innertrain only; initialize from the SHA-verified public checkpoint. Evaluate step0, then steps1..50 using innertrain-only support and inner-validation queries. Select strict minimum finite logloss, earliest step on ties, allowing0.",
+    "refit": "Discard selection weights/optimizer/preprocessor. Reload original checkpoint, refit preprocessing on all outertrain, reset RNG and optimizer/warmup, and train exactly selected_steps episodes. For selected0 perform no gradient updates. Use complete outertrain as final prediction support; no outerval labels or old holdout labels ever enter support.",
+    "final_export": "Repeat selection within full labeled8693, freshrefit full8693 for selected_steps, then test4277 queries against full labeled8693 context. Do not select steps on test labels.",
+    "author_heldout_support_rule": "The official bag heldout-in-support rule does NOT authorize adding our outer validation or old holdout labels. Only our current outertrain can be final context.",
+    "seeds": "Reset Python random, numpy global, torch and MPS RNG plus private episode RandomState at each fresh stage. Record seeds and support/query ID hashes. A deterministic validation support order with a separate/no evaluation RNG is a declared reproducibility adaptation: upstream evaluation can consume the same private RNG through support permutations.",
+    "early_stopping_difference": "Recommend evaluating the full0..50 range as requested; unlike stock patience40 this can evaluate all50 despite an early plateau. Record this as local adaptation.",
+    "checkpoint_integrity": "Verify pretrained SHA for every fresh fit; never reuse an earlier fold adapted model or optimizer state. Clone stored best/state tensors rather than retaining live state_dict aliases."
+  },
+  "resource_decision": {
+    "probe": "Root schedules device tests. A512support/128query backward only checks operator compatibility. Need representative2966/742 and3708/928 episodic backward+AdamW update memory; final export has larger6954/1024 episode. Also measure full-support validation inference eachstep.",
+    "no_assumed_MPS_support": "Official package requires CUDA and its fast loop contains CUDA-specific preflight/cache logic. Local float32 SDPA/backend adaptation must be tested and identified.",
+    "if_not_feasible": "Run and report zero-shot only, with adaptation explicitly untested. Do not silently shrink support/query or substitute shorter training and call it the same recipe.",
+    "logging": [
+      "step number and LR actually used",
+      "episode support/query counts and ID hashes",
+      "train full-head CE",
+      "inner actual-class logloss including step0",
+      "optimizer update count and finite gradients/weight delta",
+      "selected step and reset/refit audit",
+      "memory snapshots and stage duration"
+    ]
+  },
+  "sources": {
+    "https://huggingface.co/autogluon/mitra-finetune/raw/b4701e8148dc33b00ed15d7086ff59816957cde4/src/mitra_finetune/modes.py": {
+      "sha256": "3c0d0dc4e814cbd64049399627344be7f2069e92a3686251fcd307b8a5de6661",
+      "bytes": 2313
+    },
+    "https://huggingface.co/autogluon/mitra-finetune/raw/b4701e8148dc33b00ed15d7086ff59816957cde4/src/mitra_finetune/hooks.py": {
+      "sha256": "c957740ee9c758f981cc5796ad454b77715a8a4a14ca296e0fc9cb51c4ed2653",
+      "bytes": 7845
+    },
+    "https://huggingface.co/autogluon/mitra-finetune/raw/b4701e8148dc33b00ed15d7086ff59816957cde4/src/mitra_finetune/speed.py": {
+      "sha256": "54f3b9cab7095da73324d15625ee45e5245f2eb95125299d189e819413896239",
+      "bytes": 14116
+    },
+    "https://huggingface.co/autogluon/mitra-finetune/raw/b4701e8148dc33b00ed15d7086ff59816957cde4/src/mitra_finetune/runner.py": {
+      "sha256": "fbf912da747348a549ad33a2f33fd75d5d0a1982eccc863bc616345d1d0d761e",
+      "bytes": 53114
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/sklearn_interface.py": {
+      "sha256": "086002d406504363a1e428585f518f9ef4c6c8acb5bf54a03a087c2675b6481f",
+      "bytes": 16977
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/core/trainer_finetune.py": {
+      "sha256": "4ee59ef1129c3b95ee463bd60f75b2135436f63f796855d1bb7edd60705f5d3b",
+      "bytes": 19164
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/core/get_scheduler.py": {
+      "sha256": "1f8aa6106a360ce078a8c880f3cde5ac6eb43112900e619fc81107fc5b9914bc",
+      "bytes": 2058
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/core/get_loss.py": {
+      "sha256": "9769a53e59a229ca6bd549ff9e80c0167c506354e405c21313b58d662daa93e5",
+      "bytes": 2242
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/core/callbacks.py": {
+      "sha256": "371a4c44878db5b915bc9434e194febb9f1cd3b57198bccc2ef03a3b3e442547",
+      "bytes": 2579
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/data/dataset_finetune.py": {
+      "sha256": "5520cba1b0475181c99e290f16616b557936f77b651029de615298c82b621e81",
+      "bytes": 4256
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/data/dataset_split.py": {
+      "sha256": "9b17a948f34b73f415d2715fa1063f9a016677d7fee677c22fec5e9c90766aab",
+      "bytes": 2113
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/embedding.py": {
+      "sha256": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+      "bytes": 6174
+    },
+    "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/data/preprocessor.py": {
+      "sha256": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+      "bytes": 14486
+    }
+  }
+}
