@@ -39,7 +39,7 @@ def main(run):
     center=(p+z*z/(2*n))/(1+z*z/n)
     half=z*math.sqrt(p*(1-p)/n+z*z/(4*n*n))/(1+z*z/n)
     lines = [f'# Spaceship Titanic：{run} 实验结果', '',
-        '**以下均为本地实验结果，尚无 Kaggle 官方分数或排名。**', '',
+        '**以下均为本地实验结果。实际 Kaggle 评分和排名另见同目录 ONLINE_RESULT.md（如有），不能用本地准确率替代。**', '',
         f"开发集 {protocol['development_rows']} 人，留出集 {protocol['holdout_rows']} 人；固定三折、阈值 0.5。", '',
         '| 版本 | 开发集 OOF 准确率 | 折间标准差 | Log Loss | 训练耗时（秒） |',
         '|---|---:|---:|---:|---:|']
@@ -57,10 +57,10 @@ def main(run):
         '- 最优 CV 是多个候选中的胜者，可能有选择偏差；一次性留出评估用于独立核对。',
         '- 树更深、模型融合不一定提升。保留没有获胜的版本作为实验材料。',
         '- v6/v7 相对于 v2 分别移除编号特征和额外消费特征；原始五项消费金额仍保留。v8 测试休眠与消费逻辑的缺失填补。',
-        '- 原始数据来自已校验的公开镜像，与账号下载的官方数据直接比对仍待完成。',
+        '- 原始数据最初来自公开镜像；官方数据的后续核验记录见项目 reports/official_data_verification.json（如有）。',
         '- 模型基于所有训练标签重训；提交文件通过列名、行数、ID 顺序和无缺失校验。', '',
         '## 下一步', '',
-        '在 Kaggle 提交本目录的 `submission.csv`，记录真实线上成绩与排名。后续改进继续使用开发集验证，不能依据已打开的留出集反复调参。', '']
+        '线上提交使用 artifacts 下本轮的 `submission.csv`，实际结果另行保存。后续改进继续使用开发集验证，不能依据已打开的留出集反复调参。', '']
     (out/'REPORT.md').write_text('\n'.join(lines), encoding='utf-8')
     print(out/'REPORT.md')
 

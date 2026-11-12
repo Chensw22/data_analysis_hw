@@ -95,6 +95,26 @@ def status(run, ref=None):
     fields = {'Submission Ref', 'Status', 'Public Score', 'Private Score', 'Submission Date'}
     record['evaluation'] = {k.strip(): v.strip() for line in result.stdout.splitlines()
                             if ':' in line for k, v in [line.split(':', 1)] if k.strip() in fields}
+    # Competition rank belongs to the account's best submission, not necessarily this file.
+    try:
+        from kaggle.api.kaggle_api_extended import KaggleApi
+        api = KaggleApi()
+        api.authenticate()
+        competitions = api.competitions_list(search=COMPETITION)
+        for competition in competitions.competitions:
+            if competition.url == f'https://www.kaggle.com/competitions/{COMPETITION}':
+                rank = competition.user_rank or None
+                record['leaderboard_snapshot'] = {
+                    'observed_at_utc': datetime.now(timezone.utc).isoformat(),
+                    'account_best_rank': rank,
+                    'team_count': competition.team_count,
+                    'rank_fraction': rank / competition.team_count if rank and competition.team_count else None,
+                    'note': 'Rolling leaderboard; rank is the account best, not necessarily this submission.',
+                }
+                print('Leaderboard:', json.dumps(record['leaderboard_snapshot']))
+                break
+    except Exception as exc:
+        print(f'Leaderboard lookup unavailable ({type(exc).__name__}); submission score was still saved.')
     record_path.write_text(json.dumps(record, indent=2)+'\n')
 
 
