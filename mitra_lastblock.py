@@ -189,7 +189,7 @@ def optimizer_step(model, optimizer, support, labels, query, targets,
                   optimizer_state_tensor_bytes=optimizer_bytes(optimizer),
                   nonzero_gradient_names=nonzero, changed_parameter_names=changed,
                   finite_gradients=True, finite_parameters=True,
-                  resources=base.snapshot(str(support.device)))
+                  resources=base.snapshot(support.device.type))
     return record
 
 

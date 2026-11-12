@@ -1,0 +1,60 @@
+{
+  "status": "all_resource_and_equivalence_probes_passed",
+  "accuracy_evaluated": false,
+  "probes": [
+    {
+      "probe": "small_cpu",
+      "seconds": 65.05575091706123,
+      "roundtrip_error": 0.0,
+      "second_step_seconds": 12.79871466604527,
+      "resources": {
+        "max_rss_bytes": 1126416384
+      }
+    },
+    {
+      "probe": "small_mps",
+      "seconds": 19.13052837504074,
+      "roundtrip_error": 0.0,
+      "second_step_seconds": 1.9678941250313073,
+      "resources": {
+        "max_rss_bytes": 630702080,
+        "mps_current_bytes": 451475712,
+        "mps_driver_bytes": 1489174528,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      }
+    },
+    {
+      "probe": "outer_mps",
+      "seconds": 112.42602279200219,
+      "roundtrip_error": 0.0,
+      "second_step_seconds": 19.290098915924318,
+      "resources": {
+        "max_rss_bytes": 542474240,
+        "mps_current_bytes": 513861376,
+        "mps_driver_bytes": 3668115456,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      }
+    },
+    {
+      "probe": "final_mps",
+      "seconds": 266.0743246249622,
+      "roundtrip_error": 0.0,
+      "second_step_seconds": 44.63857054198161,
+      "resources": {
+        "max_rss_bytes": 546734080,
+        "mps_current_bytes": 444635392,
+        "mps_driver_bytes": 6956187648,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      }
+    }
+  ],
+  "measurement": "MPS memory is point-in-time snapshots, not peak; CPU/outer older source snapshots omit per-step MPS counters due to mps:0 vs mps dispatch; whole-probe MPS counters and final corrected per-step counters available.",
+  "estimated_screen_minutes": [
+    65,
+    135
+  ],
+  "estimate_is_not_measured_training": true
+}
