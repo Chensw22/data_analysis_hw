@@ -29,10 +29,14 @@
         "ag.early_stop": 50
       },
       "RF": {
-        "n_estimators": 300
+        "n_estimators": 300,
+        "criterion": "gini",
+        "n_jobs": 4
       },
       "XT": {
-        "n_estimators": 300
+        "n_estimators": 300,
+        "criterion": "gini",
+        "n_jobs": 4
       }
     },
     "predictor": {
@@ -55,7 +59,8 @@
       "refit_full": false,
       "fit_weighted_ensemble": true,
       "fit_full_last_level_weighted_ensemble": true,
-      "save_bag_folds": true
+      "save_bag_folds": true,
+      "calibrate": false
     },
     "ag_args_fit": {
       "stopping_metric": "log_loss"
@@ -63,7 +68,9 @@
     "ag_args_ensemble": {
       "fold_fitting_strategy": "sequential_local",
       "use_orig_features": true,
-      "use_child_oof": false
+      "use_child_oof": false,
+      "max_base_models": 0,
+      "max_base_models_per_type": 0
     },
     "threshold": 0.5,
     "settings_note": "caps是root最终批准的固定预算参数；不是研究后扫参。RF/XT其余参数使用固定版本默认。显式禁用默认RF/XT单child OOB捷径，以满足真实3fold bag。记录全部resolved backend参数、随机种子与实际迭代。"
@@ -83,7 +90,8 @@
     "estimate_unmeasured": "完整3outer约10–30分钟是工程估计，非实测承诺；72fit的实际总量需首完整outer日志校核。预计小表顺序训练可适应16GB，但需记录RSS和磁盘。",
     "hard_stage_seconds": 3600,
     "time_policy": "AutoGluon time_limit=None，外层watchdog3600秒整stage。任何超时/资源异常/缺失家族或层/少于3child/静默降低RF树数都判inconclusive，不能把幸存子集作为既定方法评分。stock早停小于cap是允许行为。",
-    "audit": "记录每child实际iterations/trees、训练耗时、RSS、全部模型/层/child名单、内部best与外层预测hash、失败信息。参数触cap且仍改善应标潜在欠拟合，不据单配置失败否定整个AutoML族。"
+    "audit": "记录每child实际iterations/trees、训练耗时、RSS、全部模型/层/child名单、内部best与外层预测hash、失败信息。参数触cap且仍改善应标潜在欠拟合，不据单配置失败否定整个AutoML族。",
+    "cpu_enforcement": "RF/XT explicitly n_jobs=4 because stock n_jobs=-1 otherwise bypasses top-level num_cpus. Disable base-model-count filtering so L2 retains all four first-layer families."
   },
   "dependencies": {
     "dedicated_environment": ".venv-autogluon owned/installed by root implementation agent; do not reuse NN environment",
