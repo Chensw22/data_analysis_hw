@@ -1,0 +1,135 @@
+{
+  "status": "bounded_single_existing_candidate_group_check_pending_root_authorization",
+  "scope": "One existing v76_Mitra_lastblock100/run042 candidate, unchanged model, original group12/15/16 and A/S/bootstrap. No additional candidate, training steps, seed or threshold search.",
+  "historical_record_sha256": {
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_peer_target_review.json": "a20465ef02220583cb542c3f9e04d7d0db937e4dfb687d2e0783e18149eee969",
+    "reports/run_003/REVIEW.md": "c01de4f35b1b36b078f3b80786f170d590ff4f575713b608752148c3e854b24a"
+  },
+  "scientific_assessment": {
+    "reason": "Existing100-step random accuracy was similar while logloss improved; after the completed cheaper alternatives failed, evaluate this already fixed recipe once on the deployment-aligned group protocol. This does not predict an accuracy gain.",
+    "required_disclosure": "Old screen outcomes and all6954 development labels/three group partitions have already been used. This is adaptive research, not an independent holdout or a retroactive rescue of old failed decisions.",
+    "no_recipe_change": "Use the existing max100 inner selection/fresh refit, layers, learning rate, inputs, seeds, support, precision and threshold unchanged. Never extend to200."
+  },
+  "fixed_scope_before_new_scores": {
+    "candidates": [
+      "v76_Mitra_lastblock100"
+    ],
+    "references": [
+      "v71_Mitra2_zeroshot",
+      "v44_seed_ensemble"
+    ],
+    "group_split_seeds": [
+      20261112,
+      20261115,
+      20261116
+    ],
+    "new_primary_seeds": [
+      20261115,
+      20261116
+    ],
+    "folds_per_seed": 3,
+    "splitter": "StratifiedGroupKFold(n_splits=3,shuffle=True,random_state=seed)",
+    "group_key": "PassengerId prefix before underscore",
+    "fit_seed": "splitseed+zero_basedfold; preserve everycandidate ownfrozenoffsets/preprocessing/weights",
+    "data": "Original fixed6954development labels only; old opened holdout labels excluded. Original13attributes and existing train-only preprocessing/support policy remain unchanged.",
+    "identical_folds": "Copy original closed group-phase fold assignments12/15/16 exactly; authenticate and copy both references for all three seeds without retraining.",
+    "fair_queue": "The single fixed candidate requires all three group splits and all9folds. Incomplete/quota/resource failures cannot become eligibility. Old screen evidence is disclosed and preserved.",
+    "no_expansion": "One bounded existing-model follow-up under unchanged protocol. No newcandidate, seed, 200step extension, feature/layer/LR/threshold or ensemble-weight changes."
+  },
+  "A_research_online_gate": {
+    "all_conditions_required": [
+      "Originalscreen accuracy is within thefrozenA practicalband: accuracy>=0.8198159332758125-0.01. Thisscreen is retained as priorrandomrowevidence, not relabelledgroupvalidation.",
+      "Candidateaccuracy strictlyexceeds matchedMitraaccuracy separately on groupseed20261115 and20261116.",
+      "Mean pairedgain versusMitra over those two newprimarygroupseeds is at least0.001 (0.10percentagepoint).",
+      "On groupseed20261112, candidateaccuracy is at leastmatchedMitraaccuracy. Thisrequirement applies equallyto bothcandidates.",
+      "On eachof allthreegroupseeds, candidategain versusmatchedv44 is at least-0.01.",
+      "Everyrequiredmodel/fold completesunder itsfrozenrecipe andresourcegate; OOFrow/group/foldalignment, source/environment/checkpoint/datahashes andprobabilityvalidity pass.",
+      "The proposedsubmission does not duplicate an alreadytestedpredictionfile; export/sourcehashes and latestofficialsubmissionallowance are checked."
+    ],
+    "claim": "A means a qualifiedgroup-primary onlineexperiment. A0.10pp selectionthreshold is not aclaim of practicalsuperiority or statisticalequivalence. Report alloldrandomresults and reasonstheyfailed alongside the newdecision.",
+    "paired_interval_role": "Report passenger-weighted pairedwhole-group bootstrap sensitivity for eachseed andtheaverage ofthenewprimaryseeds. Do not require a falselyindependentpvalue or advertise statisticalnoninferiority from these reusedtargets."
+  },
+  "S_stable_local_superiority_gate": {
+    "preserve_absolute_bar": "Require originalscreenaccuracy>0.83 and meanaccuracy across newprimarygroupseeds>0.83; do not silentlyrelax thelegacy83highbar forS.",
+    "practical_gain": "Both newprimarygroupgains versusv44 arepositive andtheirmean exceeds0.01. Aconditions versusMitra alsohold.",
+    "consistency": "Oldgroup12 gain versusv44 mustalso bepositive; theknown stressresult is disclosed, not reused asindependentconfirmation.",
+    "uncertainty_summary": "Pairedwhole-group bootstrap lower95%bound formeannewgroup candidate-v44 gain isabove0; reporteffect/interval andits adaptive-selectionlimitations. Mean>1pp pluslowerbound>0 doesnot prove thepopulationgain itselfexceeds1pp.",
+    "interpretation": "Stablelarger localgroup-primary evidence underthisfixedprocedure; not a privateleaderboard guarantee or a formalpostselectionsignificanceclaim."
+  },
+  "bootstrap_recipe": {
+    "replicates": 2000,
+    "seed": 20261119,
+    "paired_statistic": "Average per-passenger candidate-minus-reference correctness acrossgroupseeds15/16; resamplecompletePassengerIdgroups withreplacement whilekeeping model/repeatpairing; compute passenger-weightedmean ineachdraw.",
+    "prohibitions": [
+      "Do nottreat sixoverlappingfoldmetrics as independentobservations.",
+      "Do not poololdandnewgroupseeds whilecalling allof themunseen.",
+      "Do not tuneweights,thresholds,subgroups or seedchoice frombootstrapoutcomes."
+    ]
+  },
+  "authorization_and_records": {
+    "additional_user_question_required": false,
+    "new_record_required": "Root creates reports/top5_adaptation_authorization.json binding this exact policy and fixed candidate; old authorizations/failed decisions stay unchanged.",
+    "entire_queue_required": true,
+    "before_submission": "Same original A conditions, complete9fold evidence, source-bound export, nonduplicate file and current official allowance. S meaning unchanged.",
+    "freeze": "New policy/auth/code/inputs/sources must be committed and frozen before any adaptation-phase group fit; no claim that they existed before old run042screen."
+  },
+  "battle": {
+    "status": "policy_read_only_review_passed_pending_implementation_review",
+    "reviewer": "review_current",
+    "confirmed": "Same A/S/bootstrap, one existing candidate, all3oldseeds/9folds, cumulative21600seconds, no recipe/step changes or prescreen preregistration claim."
+  },
+  "earlier_documented_group_disjointness": [
+    {
+      "path": "reports/run_003/REVIEW.md",
+      "line": 7,
+      "text": "官方 train/test 的 GroupId 前缀和完整 Cabin 交集均为零。真实测试是新群组，不存在“训练集中有该测试乘客同行标签”的条件。",
+      "followup_line": 14,
+      "followup": "Reports research and review agents independently verifying this fact and rejecting group-target transfer."
+    },
+    {
+      "path": "reports/top5_validation_review.json",
+      "line": 74,
+      "text": "Actualtrain/test GroupIds are disjoint. Random row CV can put group mates on both sides and give misleading transfer evidence even without explicitGroupId features."
+    }
+  ],
+  "protocol_relation": {
+    "kind": "one adaptive follow-up model evaluation under unchanged group-primary rules",
+    "inherited_policy": "reports/top5_group_validation_review.json",
+    "inherited_policy_sha256": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+    "prescreen_disclosure": "run042 random screen was completed and observed before this group evaluation plan. This is not a prescreen-frozen candidate claim and not independent confirmation.",
+    "unchanged_sections": [
+      "A_research_online_gate",
+      "S_stable_local_superiority_gate",
+      "bootstrap_recipe"
+    ]
+  },
+  "batch_spec": {
+    "run": "run_042",
+    "module": "mitra_lastblock100_candidate",
+    "artifact_phase": "artifacts/top5_adaptation_phase",
+    "candidates": {
+      "adapt": {
+        "version": "v76_Mitra_lastblock100",
+        "max_steps": 100
+      }
+    },
+    "references": {
+      "mitra": "v71_Mitra2_zeroshot",
+      "v44": "v44_seed_ensemble"
+    },
+    "reference_phase": "artifacts/top5_group_phase",
+    "reference_training_allowed": false,
+    "candidate_training_budget_seconds": 21600,
+    "new_screen_training_allowed": false,
+    "model_resource_sources": "Existing run042 source/environment/checkpoint and already passed last-block probes unchanged."
+  },
+  "resource_limit": {
+    "candidate_total_seconds": 21600,
+    "source_budget_unchanged": "New outer orchestration cap only; original max100 selection/freshrefit recipe and all old budget records unchanged.",
+    "on_failure": "Stop and record incomplete. No shortening100steps, droppingfolds or automatically extending budget.",
+    "weekly_reserve_percent": 12,
+    "quota_policy": "Root monitors the live weekly quota. At the12%reserve stop work; partial results never qualify. Driver does not infer quota from model runtime."
+  }
+}
