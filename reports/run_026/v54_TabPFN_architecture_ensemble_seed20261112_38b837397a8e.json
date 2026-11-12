@@ -1,0 +1,62 @@
+{
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "components": [
+    {
+      "checkpoint": "default",
+      "n_estimators": 2,
+      "weight": 0.5,
+      "sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+      "architecture": {
+        "features_per_group": 2,
+        "emsize": 192,
+        "nhead": 6,
+        "nlayers": 12
+      },
+      "seconds": 5.370852374995593,
+      "mps_driver_allocated_bytes": 1185775616
+    },
+    {
+      "checkpoint": "gn2p4bpt",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666,
+      "sha256": "de01a095da7a083b25a74d1f7d85de524e8bd6137936092feab9790673ad9215",
+      "architecture": {
+        "features_per_group": 1,
+        "emsize": 128,
+        "nhead": 4,
+        "nlayers": 12
+      },
+      "seconds": 6.505222042032983,
+      "mps_driver_allocated_bytes": 1152155648
+    },
+    {
+      "checkpoint": "vutqq28w",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666,
+      "sha256": "c060b5f61480e8a6ec8cbf909a0fc236563eb4628df75b7b8c2d1f8fc1b9cf4e",
+      "architecture": {
+        "features_per_group": 1,
+        "emsize": 128,
+        "nhead": 4,
+        "nlayers": 12
+      },
+      "seconds": 6.8049745419994,
+      "mps_driver_allocated_bytes": 1152155648
+    },
+    {
+      "checkpoint": "znskzxi4",
+      "n_estimators": 2,
+      "weight": 0.16666666666666666,
+      "sha256": "fadb46928ddd70a53c6e1b205772e78784bf7bea5132ba6adbd48f201d8e9076",
+      "architecture": {
+        "features_per_group": 1,
+        "emsize": 128,
+        "nhead": 4,
+        "nlayers": 12
+      },
+      "seconds": 7.104592791001778,
+      "mps_driver_allocated_bytes": 1152155648
+    }
+  ]
+}
