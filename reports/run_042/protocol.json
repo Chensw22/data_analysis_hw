@@ -1,0 +1,152 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v71_Mitra2_zeroshot": {
+      "context": false,
+      "model": "mitra_zeroshot",
+      "max_steps": 100,
+      "inner_fraction": 0.2,
+      "training_microbatch": 128,
+      "query_chunk": 2318,
+      "learning_rate": 3e-06,
+      "weight_decay": 0.3,
+      "device": "mps",
+      "mps_memory_fraction": 0.65,
+      "threshold": 0.5,
+      "trainable": "layers.11.*,final_layer_norm.*,final_layer.*",
+      "validation_prefix_cache": "CPU, one exact inner split only",
+      "final_probability_path": "original_MitraPredictor_including_step0",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 21600,
+      "stability_budget_seconds": 64800,
+      "export_budget_seconds": 10800,
+      "budgets": {
+        "screen": 21600,
+        "validate": 64800,
+        "export": 10800
+      }
+    },
+    "v76_Mitra_lastblock100": {
+      "context": false,
+      "model": "mitra_lastblock",
+      "max_steps": 100,
+      "inner_fraction": 0.2,
+      "training_microbatch": 128,
+      "query_chunk": 2318,
+      "learning_rate": 3e-06,
+      "weight_decay": 0.3,
+      "device": "mps",
+      "mps_memory_fraction": 0.65,
+      "threshold": 0.5,
+      "trainable": "layers.11.*,final_layer_norm.*,final_layer.*",
+      "validation_prefix_cache": "CPU, one exact inner split only",
+      "final_probability_path": "original_MitraPredictor_including_step0",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 21600,
+      "stability_budget_seconds": 64800,
+      "export_budget_seconds": 10800,
+      "budgets": {
+        "screen": 21600,
+        "validate": 64800,
+        "export": 10800
+      }
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_lastblock.py": "ba0e1c693a8a7a780aa8257a21b87e648244ef44e1e862489ad3518beb740947",
+    "mitra_lastblock100_candidate.py": "4e388ef84be3e10598a11769cc3e2e0daba4a73d7b2a0fa51f98a1aa2bd565e2",
+    "mitra_lastblock_candidate.py": "d5a07610c5c59bdba0bd2b4470955d6e727a7ce439db3236650765ed201f3e94",
+    "reports/mitra_adaptation_review.json": "39a3edb8098422da148b084fdc731a16d5dd365f59295abc0ccbca6936cbb3f9",
+    "reports/mitra_protocol.json": "fda5f03e70d8f98429e09ff9c57c8e7a7cec9df96e0d575fb816756ab1de5767",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_lastblock50_review.json": "391b92a5e4bc790c3c63e34bc44cc971fb78069ae45f00252b0cdf1ea9a4fda3",
+    "reports/top5_strategy_review.json": "3ba0f01d3334b8cf6823d31010cf7396b8f4cd9d2586ec00f99729c71818ae45",
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "test_audit_top5_references.py": "1b965877abcad8ace4d431de775886ac5d74416d9dce73e3133ea30e32fef4e9",
+    "test_mitra_candidate.py": "35a76996da1026f57565d987cbc3c1bb3dd62d19585f21009a41a54af842a65d",
+    "test_mitra_lastblock.py": "863d7f731863e0ed5437b057c1f64c5ab229b33a726d15d93ba4b9813ebf7553",
+    "test_mitra_lastblock100_candidate.py": "3d190a4ae35ca2d20fe6f5a71c8f30ef8a91e458ff1df6ffe9e2de6f30062ef8",
+    "test_mitra_lastblock_candidate.py": "b601cbbf7b065eefb944aea7b4f47c83664e5880c1bc9abd8fe868837319e8a8",
+    "test_top5_validate.py": "61cdab38f1f65a2330100b5c02bbff73f3c99d9d05d2e80d9576ab21cbfa9dcf",
+    "third_party/mitra/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra/MODEL_CARD.md": "baab54ff0be437c82b1ae616cf19a41820815e274cdda017f0046dd541c86ca8",
+    "third_party/mitra/NOTICE": "be9e15b71071b6d9a86114088883706817f5ce14fb2539ee382df5413ace2fa4",
+    "third_party/mitra/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/enums.py": "c2bdead8e881820e63cbabc7cb45f0edf12827bc1ca12b0f6cadc2e987c4bec3",
+    "third_party/mitra/_internal/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "third_party/mitra/_internal/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/models/base.py": "a6fa64692b6e70093e83b91d188b981ee2c3759d7cace051a129c9b9714209a6",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "top5_validate.py": "9fd5877070da3ae1cf451415362c9dc7f7bab8ed0f87c024c922be3be0bda8e1"
+  },
+  "lastblock_policy": {
+    "settings": {
+      "max_steps": 100,
+      "inner_fraction": 0.2,
+      "training_microbatch": 128,
+      "query_chunk": 2318,
+      "learning_rate": 3e-06,
+      "weight_decay": 0.3,
+      "device": "mps",
+      "mps_memory_fraction": 0.65,
+      "threshold": 0.5,
+      "trainable": "layers.11.*,final_layer_norm.*,final_layer.*",
+      "validation_prefix_cache": "CPU, one exact inner split only",
+      "final_probability_path": "original_MitraPredictor_including_step0",
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "screen_budget_seconds": 21600,
+      "stability_budget_seconds": 64800,
+      "export_budget_seconds": 10800,
+      "budgets": {
+        "screen": 21600,
+        "validate": 64800,
+        "export": 10800
+      }
+    },
+    "environment_sha256": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "selection": "inner80/20, steps0..100 minbinaryLL earliestties; freshfullrefit",
+    "persistence": "CPU state/preprocessor/fulltraining context; original architecture inference",
+    "eligibility": "Separate frozen top5 A/S policy. No automatic historical83gate override."
+  },
+  "bounded_lastblock_extension": {
+    "original_run": "run_041",
+    "original_candidate": "v75_Mitra_lastblock50",
+    "original_protocol_sha256": "cce837c644da2dcf16589c53313983bda07d7359ecf11f15355cc1f616c14eca",
+    "review": "reports/top5_lastblock50_review.json",
+    "review_sha256": "391b92a5e4bc790c3c63e34bc44cc971fb78069ae45f00252b0cdf1ea9a4fda3",
+    "reason": "Two inner selections at50 plus late inner-logloss improvement; not outer score optimization.",
+    "only_learning_change": {
+      "max_steps_before": 50,
+      "max_steps_after": 100
+    },
+    "stopping_rule": "At most one extension to 100. If the best inner step is again at 100, record convergence/budget sufficiency as inconclusive; never automatically extend to 200. Completed accuracy remains a valid result of this bounded procedure, not proof of the whole adaptation family.",
+    "resume_previous_fit": false
+  }
+}

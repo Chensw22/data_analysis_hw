@@ -177,7 +177,7 @@
       "run": "run_038",
       "version": "v71_Mitra2_zeroshot",
       "inputs": "compact13",
-      "scope": "new synthetic pretraining generation; task-specific adaptation not evaluated",
+      "scope": "zero-shot matched control; adaptation recipes reported separately",
       "status": "completed",
       "accuracy": 0.816508484325568,
       "log_loss": 0.38019593489424935,
@@ -219,6 +219,30 @@
       "log_loss": 0.3791897947002023,
       "seconds": 2804.5361373330234,
       "gain_vs_v44_pp": -0.46016681046879837
+    },
+    {
+      "method": "Mitra-v2 bounded100-step adaptation",
+      "run": "run_042",
+      "version": "v76_Mitra_lastblock100",
+      "inputs": "compact13",
+      "scope": "one max-step extension based on inner training curves; all other learning settings unchanged",
+      "status": "completed",
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.3788984543405884,
+      "seconds": 4923.571170333074,
+      "gain_vs_v44_pp": -0.3307448950244485
+    },
+    {
+      "method": "Mitra-v2 unlabeled-roster context",
+      "run": "run_043",
+      "version": "v77_Mitra_context20",
+      "inputs": "compact13 + seven peer/context fields",
+      "scope": "fixed transductive attribute bundle; no target propagation",
+      "status": "pending",
+      "accuracy": null,
+      "log_loss": null,
+      "seconds": null,
+      "gain_vs_v44_pp": null
     }
   ]
 }

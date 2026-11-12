@@ -20,10 +20,12 @@ RECIPES = [
     ('TabR-S', '036', 'v68_TabR_S', 'compact13 + missing flags', 'official core model with local exact retrieval backend'),
     ('SCARF matched scratch MLP', '037', 'v69_matched_scratch_MLP', 'compact13 + missing flags', 'mechanism-matched control'),
     ('SCARF pretraining + fine-tuning', '037', 'v70_SCARF', 'compact13 + missing flags', 'unlabeled contrastive pretraining'),
-    ('Mitra-v2 pretrained inference', '038', 'v71_Mitra2_zeroshot', 'compact13', 'new synthetic pretraining generation; task-specific adaptation not evaluated'),
+    ('Mitra-v2 pretrained inference', '038', 'v71_Mitra2_zeroshot', 'compact13', 'zero-shot matched control; adaptation recipes reported separately'),
     ('AutoGluon nonlinear multilayer bagging', '039', 'v73_AutoGluon_multilayer', 'engineered_no_ids', 'four fixed CPU families; three-fold bags and one additional stack layer'),
     ('Mitra-v2 fixed four mirror views', '040', 'v74_Mitra_mirror4', 'compact13', 'four fixed preprocessing views; same pretrained weights, equal probability mean'),
     ('Mitra-v2 last-block adaptation', '041', 'v75_Mitra_lastblock50', 'compact13', 'inner step selection0..50, fresh full-fold refit; only last block and output layers trained'),
+    ('Mitra-v2 bounded100-step adaptation', '042', 'v76_Mitra_lastblock100', 'compact13', 'one max-step extension based on inner training curves; all other learning settings unchanged'),
+    ('Mitra-v2 unlabeled-roster context', '043', 'v77_Mitra_context20', 'compact13 + seven peer/context fields', 'fixed transductive attribute bundle; no target propagation'),
 ]
 
 
