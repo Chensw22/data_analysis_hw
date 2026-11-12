@@ -1,0 +1,51 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v41_TabM": {
+      "context": false,
+      "model": "tabm",
+      "n_bins": 16,
+      "d_embedding": 16,
+      "n_blocks": 2,
+      "d_block": 128,
+      "k": 32,
+      "dropout": 0.1,
+      "learning_rate": 0.002,
+      "weight_decay": 0.0003,
+      "batch_size": 256,
+      "gradient_clip": 1.0,
+      "max_epochs": 200,
+      "patience": 20,
+      "inner_validation_fraction": 0.2,
+      "epoch_metric": "log_loss",
+      "refit_policy": "fresh_model_same_selected_epoch_count",
+      "device_policy": "prefer_mps_cpu_fallback_for_backend_error"
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "tabm_candidate.py": "e14e772402cfd3c9fd66ac50ee54d9eee0185e40811caff74db0c0da03842597"
+  },
+  "tabm_environment_sha256": "0e4a8e54a729d6409e4cf620abc21864fff68e00b7a08add083b3211e73ecb10",
+  "tabm_policy": "Compact13 plus seven original numeric missing flags; all medians/scaling/category vocabularies/constant filtering/quantile bins fit inside the applicable training split. Inner stratified20% selects epoch by logloss; a fresh full-outer-training preprocessing/model refit uses exactly that many epochs. Separate BCE loss per member; mean sigmoid probabilities at inference. No outer-validation labels for epoch selection, no pretrained weights or cloud inference."
+}
