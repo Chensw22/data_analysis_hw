@@ -1,0 +1,112 @@
+{
+  "purpose": "Exploratory development-only spending direction diagnostics; not causal evidence, independent validation, or candidate accuracy.",
+  "development_rows": 6954,
+  "positive_spending_spearman_given_planet_and_CryoSleep_false": {
+    "Earth": {
+      "RoomService": -0.17315333668818375,
+      "FoodCourt": 0.22915920177822657,
+      "ShoppingMall": 0.2713015291070315,
+      "Spa": -0.22350717884965404,
+      "VRDeck": -0.18195406375920867
+    },
+    "Europa": {
+      "RoomService": -0.1307933000342041,
+      "FoodCourt": 0.4619656459650444,
+      "ShoppingMall": 0.16327451151463063,
+      "Spa": -0.4124093422439338,
+      "VRDeck": -0.37732308640887974
+    },
+    "Mars": {
+      "RoomService": -0.32405153085393523,
+      "FoodCourt": 0.14266115867337034,
+      "ShoppingMall": 0.39328141588922605,
+      "Spa": -0.23314517212029204,
+      "VRDeck": -0.15240312250283106
+    }
+  },
+  "marginal_zero_positive_counterexamples": [
+    {
+      "planet": "Europa",
+      "CryoSleep": false,
+      "feature": "FoodCourt",
+      "zero_rows": 71,
+      "zero_target_rate": 0.6197183098591549,
+      "positive_rows": 860,
+      "positive_target_rate": 0.3697674418604651
+    },
+    {
+      "planet": "Mars",
+      "CryoSleep": false,
+      "feature": "ShoppingMall",
+      "zero_rows": 168,
+      "zero_target_rate": 0.48214285714285715,
+      "positive_rows": 650,
+      "positive_target_rate": 0.2230769230769231
+    }
+  ],
+  "limitations": [
+    "Sign consistency among positive amounts does not establish global conditional monotonicity or causality.",
+    "Zero-to-positive marginal reversals may reflect age and other spending differences; exploratory adulthood/other-spending stratification did not establish a robust conditional reversal.",
+    "Known CryoSleep=True development rows had no observed positive spending, so these data cannot identify a spending direction in that state.",
+    "The same development data have already been used for many exploratory decisions."
+  ],
+  "frozen_experiment": {
+    "drop_columns": [
+      "TotalSpend",
+      "AllSpendingZero",
+      "PaidServices"
+    ],
+    "both_control_and_constrained_max_ctr_complexity": 1,
+    "constraints": {
+      "RoomService": -1,
+      "FoodCourt": 1,
+      "ShoppingMall": 1,
+      "Spa": -1,
+      "VRDeck": -1,
+      "RoomService_log1p": -1,
+      "FoodCourt_log1p": 1,
+      "ShoppingMall_log1p": 1,
+      "Spa_log1p": -1,
+      "VRDeck_log1p": -1,
+      "LuxurySpend": -1,
+      "DiningShoppingMinusLuxury": 1,
+      "LogDiningShoppingLuxuryRatio": 1
+    },
+    "spatial_expert": "Unchanged v34 eligibility, knots5, C.1, weight.5",
+    "selection": "No sign, parameter, threshold or blend search; compare matched unconstrained control and current best."
+  },
+  "real_raw_reconstruction_probe": {
+    "training_rows": 512,
+    "scenario_rows": 1152,
+    "scenario_input_missing_rows": 546,
+    "spatial_routed_rows": 124,
+    "grid": [
+      0,
+      1,
+      10,
+      100,
+      1000,
+      10000
+    ],
+    "adjacent_direction_checks": 28305,
+    "violations": 0,
+    "tolerance": 1e-10,
+    "minimum_signed_change": 0.0,
+    "serialization_exact": true,
+    "accuracy_computed": false,
+    "scope": "Observed nonnegative amounts changed while all other raw inputs and missingness remain fixed. Finite functional check, not causal evidence."
+  },
+  "primary_sources": [
+    "https://catboost.ai/docs/en/references/training-parameters/common",
+    "https://catboost.ai/docs/en/references/training-parameters/ctr",
+    "https://github.com/catboost/catboost/issues/2272"
+  ],
+  "ctr_combination_source_check": {
+    "reviewer": "review_current",
+    "finding": "AddTreeCtrs rejects projections when GetFullProjectionLength exceeds MaxTensorComplexity. GetFullProjectionLength counts categorical features plus one if numerical binary or one-hot features are present; categorical-plus-numeric therefore needs at least2, so max_ctr_complexity1 excludes this path.",
+    "sources": [
+      "https://github.com/catboost/catboost/blob/master/catboost/private/libs/algo/greedy_tensor_search.cpp#L488-L492",
+      "https://github.com/catboost/catboost/blob/master/catboost/private/libs/algo/projection.h#L127-L133"
+    ]
+  }
+}
