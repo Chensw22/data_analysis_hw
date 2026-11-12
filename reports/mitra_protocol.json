@@ -61,9 +61,10 @@
   },
   "inference": {
     "support": "All context rows, no8192 cap or sampling",
-    "query_chunk": 128,
+    "query_chunk": 2318,
     "query_independence": "Official nonflash source support self-attention and query-to-support attention only; no query-query row attention. CPU test checks chunk equivalence.",
-    "probabilities": "First2 logits stable FP32 softmax; no threshold/weight tuning"
+    "probabilities": "First2 logits stable FP32 softmax; no threshold/weight tuning",
+    "resource_prototype_default_query_chunk": 128
   },
   "persistence": {
     "contents": [
