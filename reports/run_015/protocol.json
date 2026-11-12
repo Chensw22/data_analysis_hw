@@ -1,0 +1,50 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v25_spatial_blend": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v39_spending_projection": {
+      "context": false,
+      "model": "projection",
+      "inner_folds": 3,
+      "C": 1.0
+    },
+    "v40_projection_spatial": {
+      "context": false,
+      "model": "projection_spatial",
+      "inner_folds": 3,
+      "C": 1.0
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "spending_projection.py": "328bd86e0e6361b797bf92919c749048579d6ef848847ff9f8f2694f2307fece",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2"
+  },
+  "projection_policy": "Only five spending columns; raw and log1p, median+StandardScaler+L2 LR C1. Training projection features generated via inner3fold OOF. Validation projections from full outertrain fit. Original CatBoost/spatial settings unchanged."
+}
