@@ -142,7 +142,7 @@
   },
   "resource_decision": {
     "probe": "Root schedules device tests. A512support/128query backward only checks operator compatibility. Need representative2966/742 and3708/928 episodic backward+AdamW update memory; final export has larger6954/1024 episode. Also measure full-support validation inference eachstep.",
-    "no_assumed_MPS_support": "Official package requires CUDA and its fast loop contains CUDA-specific preflight/cache logic. Local float32 SDPA/backend adaptation must be tested and identified.",
+    "no_assumed_MPS_support": "Official package requires CUDA and its fast loop contains CUDA-specific preflight/cache logic. Local non-Flash SDPA uses FP32 weights and inputs with MPS bf16 AMP; this backend adaptation must be tested and identified.",
     "if_not_feasible": "Run and report zero-shot only, with adaptation explicitly untested. Do not silently shrink support/query or substitute shorter training and call it the same recipe.",
     "logging": [
       "step number and LR actually used",

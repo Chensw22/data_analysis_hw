@@ -1,0 +1,29 @@
+{
+  "kind": "synthetic_query_batch_resource_probe",
+  "accuracy_computed": false,
+  "context_rows": 4636,
+  "query_rows": 2318,
+  "query_chunk": 2318,
+  "common_subset_rows": 128,
+  "batch_script_sha256": "f86b3d0fa143fdaed1b9b7a7e43df876d1803cec35161a5522c38bbf51436850",
+  "common_subset_tolerance": {
+    "rtol": 0.0,
+    "atol": 0.002
+  },
+  "status": "complete",
+  "inference_seconds": [
+    23.54335774993524,
+    23.105583625030704
+  ],
+  "common_subset_max_abs_difference": 0.0,
+  "full_context": true,
+  "resources": {
+    "max_rss_bytes": 1010368512,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 3616243712,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "precision": "FP32 weights/input; MPS bf16 AMP; FP32 probabilities",
+  "total_seconds": 63.6393219580641
+}

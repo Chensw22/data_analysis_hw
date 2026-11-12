@@ -1,0 +1,47 @@
+{
+  "status": "failed_inconclusive",
+  "kind": "synthetic_resource_only_no_accuracy",
+  "context_rows": 4636,
+  "query_rows": 128,
+  "weights_and_input_dtype": "float32",
+  "autocast_dtype": "bfloat16",
+  "full_context": true,
+  "device": "mps",
+  "attention_backend": {
+    "batch_chunk": 1,
+    "long_sequence_threshold": 512,
+    "checkpoint_each_training_chunk": true,
+    "full_key_sequence": true
+  },
+  "mps_memory_fraction": 0.65,
+  "mps_allocator_limit_bytes": 8263525171,
+  "machine_memory_pressure_before": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 69%",
+  "support_source": "synthetic",
+  "support_labels": "synthetic_alternating_binary_no_real_target_read",
+  "before": {
+    "max_rss_bytes": 1012826112,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "inference_seconds": [
+    22.045065583079122,
+    20.06017820793204
+  ],
+  "after_inference": {
+    "max_rss_bytes": 1012826112,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 2534113280,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "resolved_support_rows": 4636,
+  "features": 13,
+  "parameters": 75670026,
+  "full_fold_query_chunks": 19,
+  "estimated_full_fold_seconds": 381.14338595070876,
+  "error_type": "RuntimeError",
+  "error": "MPS backend out of memory (MPS allocated: 7.38 GiB, other allocations: 131.89 MiB, max allowed: 7.70 GiB). Tried to allocate 202.78 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+  "total_seconds": 106.3140755839413
+}
