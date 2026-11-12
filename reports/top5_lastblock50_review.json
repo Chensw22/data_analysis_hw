@@ -1,0 +1,191 @@
+{
+  "zero_matches_original_run038_bitwise": true,
+  "rows": 6954,
+  "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "comparison": {
+    "all": {
+      "zero_accuracy": 0.816508484325568,
+      "adapt_accuracy": 0.8152142651711245,
+      "gain": -0.0012942191544434989,
+      "corrections": 41,
+      "regressions": 50,
+      "both_wrong": 1235,
+      "disagreements": 91,
+      "zero_logloss": 0.38019593489424935,
+      "adapt_logloss": 0.3791897947002023,
+      "mean_absolute_probability_change": 0.009392445062441569
+    },
+    "folds": [
+      {
+        "zero_accuracy": 0.817946505608283,
+        "adapt_accuracy": 0.817083692838654,
+        "gain": -0.0008628127696289623,
+        "corrections": 19,
+        "regressions": 21,
+        "both_wrong": 403,
+        "disagreements": 40,
+        "zero_logloss": 0.38102819387768605,
+        "adapt_logloss": 0.3795394769378542,
+        "mean_absolute_probability_change": 0.008561797540797993,
+        "fold": 0
+      },
+      {
+        "zero_accuracy": 0.819672131147541,
+        "adapt_accuracy": 0.8149266609145815,
+        "gain": -0.004745470232959459,
+        "corrections": 5,
+        "regressions": 16,
+        "both_wrong": 413,
+        "disagreements": 21,
+        "zero_logloss": 0.3719704257434014,
+        "adapt_logloss": 0.3719215979530326,
+        "mean_absolute_probability_change": 0.010866056230140976,
+        "fold": 1
+      },
+      {
+        "zero_accuracy": 0.8119068162208801,
+        "adapt_accuracy": 0.813632441760138,
+        "gain": 0.0017256255392579245,
+        "corrections": 17,
+        "regressions": 13,
+        "both_wrong": 419,
+        "disagreements": 30,
+        "zero_logloss": 0.38758918506166057,
+        "adapt_logloss": 0.3861083092097203,
+        "mean_absolute_probability_change": 0.008749481416385737,
+        "fold": 2
+      }
+    ]
+  },
+  "curves": [
+    {
+      "file": "artifacts/run_041/v75_Mitra_lastblock50_seed20261112_38b837397a8e.json",
+      "selected_steps": 44,
+      "loss_step0": 0.3965044915676117,
+      "selected_loss": 0.39504584670066833,
+      "loss_step50": 0.3957248032093048,
+      "step0_to_best_loss_gain": 0.0014586448669433594,
+      "last20_linear_slope_per_step": -7.279869309045279e-05,
+      "last10_mean_loss": 0.39544776678085325,
+      "preceding10_mean_loss": 0.39614391326904297,
+      "step30_to50_loss_gain": 0.0007917284965515137,
+      "last10_new_running_minima": 1,
+      "fresh_refit_steps": 44,
+      "fresh_refit_verified": true,
+      "prefix_unchanged": [
+        true,
+        true
+      ],
+      "inner_seconds": 396.0865564128617,
+      "refit_seconds": 455.2163158295443,
+      "total_fit_seconds": 860.202150208992
+    },
+    {
+      "file": "artifacts/run_041/v75_Mitra_lastblock50_seed20261113_38e7dd3e5f8b.json",
+      "selected_steps": 50,
+      "loss_step0": 0.36916133761405945,
+      "selected_loss": 0.3665894865989685,
+      "loss_step50": 0.3665894865989685,
+      "step0_to_best_loss_gain": 0.0025718510150909424,
+      "last20_linear_slope_per_step": -3.0024965902914224e-05,
+      "last10_mean_loss": 0.3670335799455643,
+      "preceding10_mean_loss": 0.367475101351738,
+      "step30_to50_loss_gain": 0.0005363821983337402,
+      "last10_new_running_minima": 3,
+      "fresh_refit_steps": 50,
+      "fresh_refit_verified": true,
+      "prefix_unchanged": [
+        true,
+        true
+      ],
+      "inner_seconds": 407.4052805425599,
+      "refit_seconds": 528.5489275895525,
+      "total_fit_seconds": 946.0065687079914
+    },
+    {
+      "file": "artifacts/run_041/v75_Mitra_lastblock50_seed20261114_00e1e32df8e7.json",
+      "selected_steps": 50,
+      "loss_step0": 0.3773234784603119,
+      "selected_loss": 0.3745083510875702,
+      "loss_step50": 0.3745083510875702,
+      "step0_to_best_loss_gain": 0.0028151273727416992,
+      "last20_linear_slope_per_step": -4.800714944538156e-05,
+      "last10_mean_loss": 0.37532276213169097,
+      "preceding10_mean_loss": 0.3757699280977249,
+      "step30_to50_loss_gain": 0.0017265677452087402,
+      "last10_new_running_minima": 3,
+      "fresh_refit_steps": 50,
+      "fresh_refit_verified": true,
+      "prefix_unchanged": [
+        true,
+        true
+      ],
+      "inner_seconds": 415.7109832506394,
+      "refit_seconds": 530.0115272514522,
+      "total_fit_seconds": 956.2161784589989
+    }
+  ],
+  "status": "completed_read_only_curve_error_and_strategy_review",
+  "scope": "Existing development labels/OOF and logs only. No GPU, model training, installation, threshold/weight search, holdout scoring or frozen-source edits.",
+  "sources_sha256": {
+    "artifacts/run_041/screen_results.csv": "0ba185ccab9865559559390474407ee6ab1ce01b6731eb28f2f2ee051c269b15",
+    "artifacts/run_041/protocol.json": "cce837c644da2dcf16589c53313983bda07d7359ecf11f15355cc1f616c14eca",
+    "artifacts/run_041/source/mitra_lastblock_candidate.py": "d5a07610c5c59bdba0bd2b4470955d6e727a7ce439db3236650765ed201f3e94",
+    "artifacts/run_041/v75_Mitra_lastblock50_seed20261112_38b837397a8e.json": "ee99daad5af6e7942738abdab084793699f0c8ee19b88334f1d584c7d604024c",
+    "artifacts/run_041/v75_Mitra_lastblock50_seed20261113_38e7dd3e5f8b.json": "e3d43becd4f5cb4ee1dc49912825ffb2651c815d7119aaf6d3b9b579eafdb50b",
+    "artifacts/run_041/v75_Mitra_lastblock50_seed20261114_00e1e32df8e7.json": "c76a92af95a5b8da331dd00fb262828046a667226097dae1435bf86a91d1877e"
+  },
+  "interpretation": {
+    "performance": "Accuracy declined by9/6954 netcorrect(-0.12942pp), within the user1pp practical-similarity band. This is neither evidence of stable superiority nor proof of the entire adaptation family failing.",
+    "probability_vs_classification": "Logloss improved by0.00100614 overall and in all3folds, butfold2 improvement is only0.00004883 and its accuracy loses11netcorrect. Better probability loss did not translate to the fixed0.5 accuracy objective. Do not select a threshold or checkpoint using these outer outcomes.",
+    "budget_limit_signal": "Two folds chose the lastavailable update50 and reached3newrunning innerlogloss minima during steps41..50. Everyfold has lower meanloss in its last10steps than its preceding10; last20step linear slopes are negative. This is evidence that the declared cap can truncate improvement, not proof longertraining improves outeraccuracy.",
+    "nonmonotonicity": "Fold1 best44 then worsens by0.00067896 at50. Otherfolds also fluctuate. Therefore do not replace innerselection with mandatorylaststep or infer monotonic gains.",
+    "training_loss_caveat": "TrainingqueryCE is measured on a different sampled episode at eachstep, over all10nativeclasses. It is not directly comparable to fixed2classvalidationlogloss or an identical-data trainingcurve; apparent CE fluctuations do not demonstrate convergence.",
+    "fresh_refit": "Runtime logs show exact44/50/50 refit steps, originalcheckpointfreshrefit flag and unchangedprefixhashes. Reviewed source reconstructs preprocessing/model/optimizer/RNG and transfers onlystepcount. Prior tinyrealmodeltests verified this path. No evidence here of accidental warmstart, validationlabeltraining or stalecache reuse."
+  },
+  "finite_followup": {
+    "priority": "First resolve a bounded officialTabPFN-v2.6 access/resource probe; do not launch another90minuteCV merely because no newmodel is ready. Keep one max100lastblock candidate as a justified, explicitlybounded alternative ifparent elects to investigate the cap signal.",
+    "why_newmodel_probe_first": "Peerfound a genuinely later syntheticpretraining generation with publiclyreachable43MBofficialcheckpoint, but the supported downloader has license/account checks and MPSfullcontext cost is not established. Parentmustresolve authorizedaccess and actualresourcefeasibility; this report does not downloadweights or assume faster/better results.",
+    "lastblock_extension_spec": {
+      "max_steps": 100,
+      "inner_candidates": "Allsteps0..100; samefixedinner80/20,minbinarylogloss,earliestexacttie;step0allowed.",
+      "unchanged": [
+        "Onlylastblock+finalnorm+10classhead trainable",
+        "Original13inputs/preprocessing,seedmapping andsupport/querysampler",
+        "lr3e-6,wd.3,originalliteralwarmup andflat.91*lr afterstep10",
+        "Fullsupport,querymicrobatch128,sumCE/totalquery,oneoptimizerupdateperepisode",
+        "CPUfixedvalidationprefix cache andoriginalMitraPredictor/query2318finalprediction",
+        "Freshoriginalcheckpoint/fullouterpreprocessing+RNG+optimizerrefit forselectedcount",
+        "Originaldev/folds andfrozenA/Sonlinequalification;nooldholdout"
+      ],
+      "new_run_required": "Separateversion/source/protocol; do not modifyrun041 orresumeits finalfulloutermodel as ifit were its innerselectioncheckpoint.",
+      "reason_for_extension": "Onlythe fixedinnervalidationcap/trend evidence above. Outererrors/logloss are reported diagnostically, not used to choose layer/LR/step/weights.",
+      "no_grid": "No75/100/150comparison, noLR/layer/thresholdchanges, no postpublic rescueensemble."
+    },
+    "stopping_rule": "At mostthisonebudgetextension. If it fails thefrozenAqualification, do not automatically extend100to200 oraddtrainablelayers. Ifagainbestatcap, describe remainingbudgetuncertainty while stoppingexpansion forresourcepriority; that is not a familyrejection. Ifallfoldsselect0 andpredictions matchpriorzero-shot, do notconsumeanothersubmission."
+  },
+  "resource_estimate": {
+    "completed50step_screen_seconds": 2804.5361373330234,
+    "completed50step_screen_minutes": 46.74226895555039,
+    "max100_screen_estimated_seconds": 5660.057365693777,
+    "max100_screen_estimated_minutes": 94.33428942822961,
+    "estimated_selection_seconds": 2435.189106746111,
+    "estimated_fullrefit_seconds_ifallselect100": 3151.7034456582464,
+    "additional9fold_stability_estimated_seconds": 16980.17209708133,
+    "additional9fold_stability_estimated_hours": 4.71671447141148,
+    "basis": "Measuredrun041 perstepselection andfullrefitcost, withmaximum100selectedineachfold plusobservedoverhead. This is anestimate, not a runtimepromise; selectedcounts/hardwareload changecost.",
+    "final_export_caution": "The final8693resourceprobe measured about44.6secondsperlastblockoptimizerstep(6954support/1024query), so100fullrefitstepsalone wouldtakeapproximately74minutes beforeinnerselection/inference. Exportneedsseparatebudgetapproval, not anassumption thatscreenbudgetscaleslinearly.",
+    "memory": "Longerstepcountdoesnotitselfrequiremoremodel/optimizerstate ifcachesandgraphsareproperlyreleased, butrecordlate-stagememoryandfailclosedonOOM/nonfinite. Do notraiseMPS.65cap ortruncatecontext tofit."
+  },
+  "battle": {
+    "peer": "fresh_strategy",
+    "agreement": [
+      "A singlemax100 extension has anindependentcap/trend rationale.",
+      "Noautomatic200stepchain andnoinference ofgeneraladaptationfailure from50steps.",
+      "A boundedlaterfoundationresourceprobe canprecede expensiveextensionCV; inaccessible/unprobedweights are not themselves areason toextend."
+    ],
+    "peer_access_update": "InitialclaimthatnewTabPFNwasunavailablewithoutcredentials was narrowed: official2.6weightsURLrespondsHTTP200 toanonymousHEAD; automaticdownloaderrequireslicenseacceptance/account. No weightswere downloadedbythisreview. Parentdecideslawfulauthorizedaccess; fullMPSfeasibilityremainsunmeasured.",
+    "no_model_recommendation_by_public_rowfeedback": true
+  },
+  "qualification_note": "v75 is currently in practicalA range but has no completedpositivepairedstability evidence undernewpolicy and is not eligible merely because itsloglossimproves. Neitherthisreview nor thehypothetical100steprecipe altersauthorization-boundtop5_validation_review.json."
+}
