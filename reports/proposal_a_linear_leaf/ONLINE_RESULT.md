@@ -1,0 +1,1 @@
+A-tier representative batch1/3: v56_nested_linear_leaf, COMPLETE, ref58276576, public score0.80289. Full8693-row inner selection chose linear_tree=True/linear_lambda=1, followed by fresh full-data refit and spatial expert. Prior Mitra-v2 remains account best0.81155. Account best snapshot142/2037 at2026-11-12T14:57:22.954338Z. Four daily uploads remained after this submission.
