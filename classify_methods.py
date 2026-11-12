@@ -35,7 +35,7 @@ def main():
         reference_policy='Anchor all bands to the same current best score. Pairwise distance<=1pp is not transitive.',
         statistical_claim='None. Practical screening bands do not prove statistical equivalence or stable inferiority; adjacent-band models can differ by much less than1pp.',
         scope='Completed fixed development3fold recipes only, not entire model families. Controls and blends are retained as named recipes. Repeated identical versions are deduplicated.',
-        stability='No current recipe is established as a stable winner. v34 fresh-seed gains are small and GroupCV reverses them; leading neural recipes have no matching repeated-seed/group confirmation.',
+        stability='No current recipe is established as a stable winner. Matched repeated-seed/group reference audit exists for v44 and Mitra in reports/top5_reference_audit; Mitra leads slightly in all three checks but remains in the same practical band. New candidates receive the separately frozen top-five eligibility review.',
         future_stability_review='Treat <=1pp differences as the same practical performance level for a direct comparison. Claim a clearly stronger recipe only after repeated paired splits give consistent material gains and group validation does not reverse the direction; one public leaderboard result is insufficient.',
         online_evidence='All eight A-tier representatives have completed account submissions; see reports/a_tier_batch_20261112/results.json. Mitra-v2 remains highest on the saved2026-11-12 public test, but this is not a stable-superiority certificate.',
         s_tier=[], recipe_count=len(rows), counts={tier:sum(r['tier']==tier for r in rows) for tier in 'ABC'})
