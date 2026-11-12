@@ -1,0 +1,17 @@
+{
+  "source": "https://www.kaggle.com/code/bsthere/spaceship-titanic-0-82137-solution",
+  "access_date": "2026-11-12",
+  "method": "Read notebook code only; never executed notebook or its auto-submit code.",
+  "notebook_sha256": {
+    "spaceship-titanic-0-82137-solution.ipynb": "8c4461b4a42e283c05da074300aed8f9eeafba5ba9413dcf0ebeecb256600578"
+  },
+  "findings": [
+    "Default CFG.use_best_public_override is true.",
+    "Code contains an embedded constant prediction string; apply_best_public_override replaces Transported predictions in the final submission.",
+    "The title score therefore does not establish the performance of its train_self_contained_ensemble model.",
+    "Meta learner is fit and scored on the same base OOF matrix, followed by threshold and mixture optimization; this is not a strictly nested estimate."
+  ],
+  "decision": "Exclude this notebook as a high-score reproducibility reference. No predictions or code from it enter any model, feature, tuning or submission.",
+  "cleanup": "Downloaded notebook and extracted source containing fixed predictions were removed after this source audit. Only this metadata and source URL are retained.",
+  "scope_limit": "No conclusion about leaderboard leaders or other notebooks; their methods remain unverified."
+}
