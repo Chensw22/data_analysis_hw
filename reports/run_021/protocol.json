@@ -1,0 +1,107 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v47_TabPFN_frozen1": {
+      "context": false,
+      "model": "tabpfn_frozen",
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "n_estimators": 1,
+      "inference_config": {
+        "ENABLE_GPU_PREPROCESSING": false,
+        "TRANSFORM_TEXT": false,
+        "TRANSFORM_DATES": false,
+        "SUBSAMPLE_SAMPLES": null
+      },
+      "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+    },
+    "v48_TabPFN_finetuned1": {
+      "context": false,
+      "model": "tabpfn_finetuned",
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "policy": {
+        "epochs": 10,
+        "learning_rate": 1e-05,
+        "weight_decay": 0.01,
+        "validation_split_ratio": 0.2,
+        "n_finetune_ctx_plus_query_samples": 640,
+        "finetune_ctx_query_split_ratio": 0.2,
+        "n_inference_subsample_samples": null,
+        "early_stopping": true,
+        "early_stopping_patience": 3,
+        "validation_frequency": 1,
+        "min_delta": 0.0001,
+        "grad_clip_value": 1.0,
+        "use_lr_scheduler": false,
+        "n_estimators_finetune": 1,
+        "n_estimators_validation": 1,
+        "n_estimators_final_inference": 1,
+        "use_activation_checkpointing": true,
+        "save_checkpoint_interval": null,
+        "use_fixed_preprocessing_seed": true,
+        "eval_metric": "log_loss"
+      },
+      "inference_config": {
+        "ENABLE_GPU_PREPROCESSING": false,
+        "TRANSFORM_TEXT": false,
+        "TRANSFORM_DATES": false,
+        "SUBSAMPLE_SAMPLES": null
+      },
+      "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49"
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "finetune_candidate.py": "5721ff5e3afc9d4cbbd2727ed9a8072706a8ad4b16b871478dead4b307cfb4f7"
+  },
+  "finetune_environment_sha256": "0e4a8e54a729d6409e4cf620abc21864fff68e00b7a08add083b3211e73ecb10",
+  "pretrained_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+  "finetune_policy": "Official V2 full-parameter fine-tuning on inner80%, inner20% logloss early stopping including epoch0, then all outertrain rows as inference context. No full-data gradient refit. No outer-validation label access. Same compact13, 1estimator and preprocessing flags for frozen control. 640 is the official target chunk size, not a strict maximum; actual chunks can be about742 rows. No automatic CPU/cloud training fallback. Built with PriorLabs-TabPFN."
+}
