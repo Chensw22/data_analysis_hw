@@ -1,0 +1,74 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v25_spatial_blend": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v34_contrasts_spatial": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v49_xgboost": {
+      "context": false,
+      "model": "xgboost",
+      "params": {
+        "max_depth": 4,
+        "learning_rate": 0.035,
+        "min_child_weight": 5,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.1,
+        "subsample": 0.85,
+        "colsample_bytree": 0.9,
+        "tree_method": "hist",
+        "objective": "binary:logistic",
+        "eval_metric": "logloss",
+        "n_jobs": 4
+      },
+      "cap": 1800,
+      "patience": 60,
+      "inner_fraction": 0.2
+    },
+    "v50_xgboost_v34_blend": {
+      "context": false,
+      "model": "blend",
+      "weight": 0.5
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "xgboost_candidate.py": "7369b8172a23f799e0b8c4472e3d16d15c64387e299a599d923eab29268e9f5b",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "model_families.py": "04537a36815f484e2c8b4d847401e79d523180d611089455490f44aa7bc02e78",
+    "requirements-xgboost.lock.txt": "6d9ff93999a93b267a6a9470f1e76662ad1f9e1a82d6377f78f85671e2385634"
+  },
+  "xgboost_policy": "Fixed depth4 recipe; inner20% logloss early stopping (cap1800, patience60), fresh full-outertrain refit. Dense onehot vocabulary learned only from training split. No outer validation for fitting or model selection. Fixed50/50 blend with v34, no fitted blend weights.",
+  "xgboost_version": "3.4.1"
+}
