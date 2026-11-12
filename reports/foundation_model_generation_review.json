@@ -1,0 +1,196 @@
+{
+  "reviewed_at_utc": "2026-11-12T12:25:00Z",
+  "scope": "Read-only generation review. No model weights downloaded, third-party code executed, environment changed, model trained, or CV scored.",
+  "decision": {
+    "candidate": "Mitra-v2 classifier",
+    "status": "Recommend resource-gated evaluation of this one new pretrained generation; implementation not yet authorized by this report.",
+    "reason": "Untested synthetic HybridSCM pretraining and longer-context distribution; openly downloadable Apache-2.0 checkpoint; official non-CUDA core and explicit MPS device path. It is a model-generation change, not another seed/view ensemble.",
+    "not_claimed": "No Spaceship Titanic improvement is known. Reported author benchmark results require a different CUDA fine-tuning/bagging recipe. Static support is not proof of 16GB runtime feasibility."
+  },
+  "local_inventory": {
+    "tabpfn": {
+      "installed_version": "9.2.0",
+      "inspected_source": ".venv-tabpfn/lib/python3.12/site-packages/tabpfn/model_loading.py",
+      "model_versions": [
+        "V2",
+        "V2_5",
+        "V2_6",
+        "V3",
+        "V3_5",
+        "V3_5_FAST"
+      ],
+      "observed_loader": "Newer generations invoke ensure_license_accepted; V2 alone has direct download fallback. Existing experiments explicitly pinned old v2_default, not the current loader default."
+    },
+    "tabicl": {
+      "installed_version": "2.2.0",
+      "inspected_source": ".venv-tabpfn/lib/python3.12/site-packages/tabicl/_sklearn/classifier.py",
+      "latest_verified_generation": "v2-20260212",
+      "decision": "Already tested generation. More estimators are budget changes and are outside this generation review."
+    }
+  },
+  "alternatives": [
+    {
+      "name": "TabPFN-3.5 / 3.5-fast",
+      "official_source": "https://github.com/PriorLabs/TabPFN",
+      "model_card": "https://huggingface.co/Prior-Labs/tabpfn_3_5/blob/main/README.md",
+      "generation_change": true,
+      "pretraining": "Synthetic data according to official model card.",
+      "weight_license": "Prior Labs non-commercial terms, distinct from code license.",
+      "access": "Official README and local loader require account/license acceptance. HF API reported gated=false, which describes repository visibility and does not remove the documented acceptance workflow. No bypass recommended.",
+      "default_bytes": 876027932,
+      "fast_bytes": 334181708,
+      "decision": "Excluded under current no-new-account/no-click-agreement constraint, not rejected for model quality."
+    },
+    {
+      "name": "TabICL v2",
+      "official_source": "https://github.com/soda-inria/tabicl",
+      "releases": "https://github.com/soda-inria/tabicl/releases",
+      "model_card": "https://huggingface.co/jingang/TabICL",
+      "license": "BSD-3-Clause",
+      "access": "Public ungated HF metadata.",
+      "pretraining": "On-the-fly synthetic tasks according to official project.",
+      "v2_classifier_bytes": 110368038,
+      "decision": "Latest verified official generation is already tested; no untested successor established."
+    },
+    {
+      "name": "Google TabFM 1.0.0",
+      "official_source": "https://github.com/google-research/tabfm",
+      "model_card": "https://huggingface.co/google/tabfm-1.0.0-pytorch",
+      "code_license": "Apache-2.0",
+      "weight_license": "tabfm-non-commercial-v1.0",
+      "access": "Public ungated metadata; this is not a claim that weight license equals code license.",
+      "pretraining": "Synthetic SCM tasks, per official documentation.",
+      "classifier_parameters_approx": 1640000000,
+      "classifier_weight_bytes": 6557888408,
+      "decision": "Not first choice on 16GB unified memory: 6.56GB weights alone, plus load copies/context activations; official MPS feasibility not established. No claim that all newer releases were exhaustively excluded."
+    }
+  ],
+  "mitra_v2": {
+    "paper": "https://arxiv.org/abs/2609.04540",
+    "author_overview": "https://www.amazon.science/blog/mitra-v2-scaling-synthetic-pretraining-for-tabular-foundation-models",
+    "model_card": "https://huggingface.co/autogluon/mitra-classifier-2",
+    "training_provenance": "Authors describe purely synthetic mixed-prior pretraining, including Hybrid SCM. This is author provenance, not an independent dataset audit; no public competition predictions/answers were read.",
+    "mechanism": "Same 12-layer row/column-attention architecture as Mitra-v1; expanded context/features, optimizer and mixed within-graph synthetic mechanisms change pretraining.",
+    "architecture": {
+      "dim": 512,
+      "dim_output": 10,
+      "n_layers": 12,
+      "n_heads": 4,
+      "parameters_approx": 75700000
+    },
+    "checkpoint": {
+      "repo": "autogluon/mitra-classifier-2",
+      "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+      "filename": "model.safetensors",
+      "bytes": 302717904,
+      "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "license": "Apache-2.0 per official model card",
+      "hf_gated": false,
+      "anonymous_head_status": 200,
+      "head_content_length": 302717904,
+      "weight_body_downloaded": false
+    },
+    "claim_limit": {
+      "reported_recipe": "50-step fine-tuning with 8-fold bagging, CUDA required by the official mitra-finetune recipe.",
+      "reported_budget": "Official recipe documentation uses a nominal 3600-second task budget; its TabArena runner also describes per-child limits/salvage. These are framework budgets, not a promise of equivalent MPS runtime.",
+      "direct_zero_shot": "Official AutoGluon example permits fine_tune=False; stock sklearn interface n_estimators=1. Default fine_tune is True, so False must be explicit.",
+      "comparison_limit": "Single zero-shot or single adapted model is not a reproduction of the advertised 8-bag benchmark. A low score cannot reject the model family."
+    },
+    "source": {
+      "repo": "https://github.com/autogluon/autogluon",
+      "directory": "tabular/src/autogluon/tabular/models/mitra",
+      "last_directory_commit_observed": "957883c92073afddb6d9d4a0ae08a6d15ef3c692",
+      "source_license": "Apache-2.0; preserve upstream license/notices for any vendored adapter.",
+      "files_reviewed": [
+        "sklearn_interface.py",
+        "mitra_model.py",
+        "_internal/models/tab2d.py",
+        "_internal/models/embedding.py",
+        "_internal/models/base.py",
+        "_internal/config/enums.py",
+        "_internal/data/preprocessor.py",
+        "_internal/data/dataset_finetune.py",
+        "_internal/core/trainer_finetune.py"
+      ],
+      "pin_note": "Implementation must pin source commit and verify file hashes, not import mutable master. Web cached line numbers differed from current raw source."
+    },
+    "dependencies": {
+      "official_entry": "autogluon.tabular[mitra]; internal autogluon.tabular.models.mitra.sklearn_interface.MitraClassifier",
+      "fine_tune_package": "https://huggingface.co/autogluon/mitra-finetune",
+      "standalone_package_limit": "mitra-finetune 0.3.0 lists small base dependencies, but its runtime API explicitly imports/requires AutoGluon with the Mitra extra. It is not a standalone replacement.",
+      "lean_option": "Vendor pinned official Tab2D, embedding, base, enums and official Preprocessor under retained Apache license; thin project inference adapter. Core files do not import AutoGluon. This is a project adapter, not a supported standalone upstream package.",
+      "lean_dependencies": [
+        "torch",
+        "numpy",
+        "scipy",
+        "scikit-learn",
+        "pandas",
+        "einops",
+        "einx",
+        "huggingface_hub",
+        "safetensors"
+      ],
+      "fine_tune_dependency_warning": "Reusing official trainer also pulls internal callbacks/config/loss/scheduler/data modules and autogluon.common helper; dependency closure and equivalent behavior need separate source review before implementation.",
+      "environment": "Parent manages a separate environment or audited vendored dependency set; no installation performed."
+    },
+    "runtime_findings": {
+      "mps": "Official sklearn interface chooses MPS after CUDA. Tab2D disables FlashAttention on non-CUDA and uses torch scaled_dot_product_attention.",
+      "dtype": "Official trainer config uses bfloat16 autocast; preprocessor outputs float32. Freeze float32/no-autocast for initial MPS probe if adapting current project convention; label the precision deviation. Do not assume bfloat16 works without testing.",
+      "operations_to_probe": [
+        "torch.quantile",
+        "torch.vmap(torch.bucketize)",
+        "scaled_dot_product_attention",
+        "checkpointed backward if adapting"
+      ],
+      "context": "Official support cap8192 retains all4636 outertrain rows, but would randomly truncate final8693. Any full-context adapter must override cap>=8693 or omit sampling entirely.",
+      "query": "Default1024; proposed resource-only change is deterministic chunks128, each with the same full support. Query chunking does not remove support self-attention quadratic cost.",
+      "memory": "303MB weights are not peak memory. Attention and 512-wide row/feature activations can dominate; exact full-context MPS viability unmeasured.",
+      "save_reload": "Core exposes save_pretrained/from_pretrained. Project artifact should save CPU state_dict/config, train-only preprocessor/category schema, CPU support X/y, and pinned hashes; reconstruct device at prediction. An end-to-end portable CPU artifact is not yet tested."
+    }
+  },
+  "proposed_first_round": {
+    "status": "Planning only; parent must freeze final spec after resource-only probes and before any accuracy result.",
+    "generation": "Mitra-v2 only",
+    "inputs": "Same 13 raw compact columns as TabPFN view experiment: HomePlanet,CryoSleep,Destination,Age,VIP,RoomService,FoodCourt,ShoppingMall,Spa,VRDeck,Deck,CabinNumber,Side. No PassengerId/Name, no spatial expert, no new feature search.",
+    "preprocessing": "Per outertrain only: deterministic category vocabulary (unknown=0, missing=1, known>=2), float32 numerics preserving NaNs into official train-fitted Preprocessor mean imputation/constant filtering; no new log transforms or missing-indicator expansion. Use copies because upstream preprocessing mutates arrays. Core quantile bins derive from support only. Persist schema and test all-missing/unknown behavior. For adaptation inner preprocessing is fit only on innertrain and fresh on fulloutertrain at refit.",
+    "zero_shot": {
+      "n_estimators": 1,
+      "fine_tune": false,
+      "seed": 42,
+      "context": "Entire outertrain; no subsampling. Final export entire8693 only after separate resource feasibility.",
+      "query_chunk": 128,
+      "output": "First two logits, stable softmax; class mapping persisted; threshold0.5 fixed.",
+      "adapter_difference": "Fit official preprocessing directly on fulloutertrain; stock sklearn fit(False) still makes an inner20% split for prep/evaluation while predict uses full self.X/self.y. Avoiding this wasteful split is a declared adapter difference, not exact stock-wrapper reproduction."
+    },
+    "adaptation_decision_before_cv": "Before seeing any CV score, perform one full-size backward resource probe. If feasible, freeze a second single-model adaptation arm alongside zero-shot; if infeasible, assess only zero-shot and explicitly leave adaptation potential untested.",
+    "adaptation_if_feasible": {
+      "max_optimizer_steps": 50,
+      "models": 1,
+      "learning_rate": 3e-06,
+      "weight_decay": 0.3,
+      "warmup_steps": 10,
+      "parameter_origin": "Official mitra-finetune binary/small-data recipe; optimizer and episodic query/support sampler must be copied/pinned with source review, not inferred from an unrelated stock default.",
+      "selection": "Fixed inner20% within each outertrain, select earliest minimum inner logloss step including step0, then fresh checkpoint/preprocessor and fulloutertrain episodic refit for selected steps. Outer validation labels never enter training/context/selection.",
+      "limitation": "This is a controlled single-model adaptation, not official 8-fold bagging. If best step is at cap and validation still improving, record non-saturation; do not declare the family exhausted."
+    },
+    "resource_probe_before_scores": [
+      "Anonymous pinned download/hash check only after parent authorization.",
+      "CPU synthetic small-input equivalence and unknown/missing handling; model+context save/reload probability match.",
+      "MPS4636 context x13 features with128query: warmup+second timed inference; record RSS/MPS peak or snapshots clearly labelled.",
+      "Estimate full2318query cost from actual repeated chunks; check query chunk invariance within numerical tolerance.",
+      "One backward episode at the frozen planned support/query sizes, no accuracy scoring; if too large mark adaptation unavailable, not bad.",
+      "Separate8693context128query check before claiming full-data export feasibility."
+    ],
+    "evaluation": "Existing fixed dev3fold; report all folds, pooled accuracy/logloss and paired descriptive differences against existing TabPFN32/v44. No new holdout, no OOF weight/threshold search. Zero-shot has no early stopping. Only complete all-fold results count.",
+    "budget_policy": "After probe timing, set sufficient stage budgets for3fold zero-shot and, if feasible,3fold inner+refit adaptation; serialize GPU work. Timeouts/OOM are inconclusive resource outcomes and never partial candidate wins."
+  },
+  "independent_review": {
+    "reviewer": "/root/review_current",
+    "agreement": "New synthetic prior is a genuine untested generation; small weights do not prove memory feasibility.",
+    "required_corrections": [
+      "Avoid claiming CUDA8bag performance for single zero-shot.",
+      "Default8192 support cap would truncate final8693; handle explicitly.",
+      "Choose whether to include50-step single adaptation before looking at CV, using backward resource feasibility only."
+    ]
+  }
+}

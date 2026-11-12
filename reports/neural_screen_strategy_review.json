@@ -1,0 +1,135 @@
+{
+  "status": "completed_independent_review_after_run037",
+  "scope": "Audit method-screen fairness and training adequacy, then prioritize one substantial next direction. No additional training, dependency installation, weight download or frozen-source edits were performed for this review.",
+  "main_conclusion": "FT-Transformer, TabR and SCARF completed their declared searches without hitting epoch caps. Validation-based stopping, rather than artificially short budgets, limited training. SCARF gains only12 correct development predictions over matched scratch, with inconsistent fold directions, and remains152 correct predictions behind v44. Stop prioritizing local from-scratch NN expansions; the next substantial direction is a resource-validated, predeclared Mitra-v2 comparison. These results do not establish that neural model families cannot work on this dataset.",
+  "local_evidence": {
+    "reference": {
+      "version": "v44_seed_ensemble",
+      "source": "reports/run_019/screen_results.csv",
+      "accuracy": 0.8198159332758125,
+      "log_loss": 0.380388148320062
+    },
+    "ft_transformer": {
+      "source": "reports/run_035/screen_results.csv and ftt_training_seed*.json",
+      "accuracy": 0.8047167098073051,
+      "log_loss": 0.40434089933238593,
+      "completed_screen_seconds": 326.08726879098685,
+      "parameters": 905857,
+      "inner_training_rows_per_fold": 3708,
+      "inner_validation_rows_per_fold": 928,
+      "selected_epochs": [23, 27, 17],
+      "actual_search_epochs": [63, 67, 57],
+      "configured_cap": 500,
+      "all_stopped_by_patience": true,
+      "selected_epoch_training_bce": [0.38019470000858574, 0.3738042656914959, 0.3850328637429683],
+      "last_epoch_training_bce": [0.29522591514237617, 0.28902706462074124, 0.29548710169915626],
+      "best_inner_validation_logloss": [0.40937340259552, 0.39819180965423584, 0.4045228958129883],
+      "last_inner_validation_logloss": [0.4657471776008606, 0.4598430395126343, 0.45023345947265625],
+      "interpretation": "All three observed trajectories show overfitting after their selected epochs. More epochs at the unchanged recipe are not supported by these curves. Mean best inner logloss is approximately0.40403, close to outer OOF0.40434; there is no clear evidence that fresh refit alone caused a major performance collapse."
+    },
+    "tabr": {
+      "source": "reports/run_036/screen_results.csv and tabr_training_seed*.json",
+      "accuracy": 0.7966637906241012,
+      "log_loss": 0.41890009285765945,
+      "completed_screen_seconds": 179.2960186249693,
+      "selected_epochs": [5, 7, 6],
+      "actual_search_epochs": [21, 23, 22],
+      "configured_cap": 200,
+      "all_stopped_by_patience": true,
+      "selected_epoch_training_bce": [0.4125435757084057, 0.4122443999351678, 0.4019427010478068],
+      "last_epoch_training_bce": [0.3671147139519935, 0.3719252681976512, 0.3531534709076537],
+      "best_inner_validation_logloss": [0.439789354801178, 0.399078905582428, 0.39967411756515503],
+      "last_inner_validation_logloss": [0.4641309678554535, 0.4121781289577484, 0.4397161602973938],
+      "interpretation": "Early best epochs do not imply an artificial short budget: training continued for the full16-epoch patience in each fold and validation deteriorated. The exact torch retrieval backend keeps selected-candidate gradients, and query self-exclusion uses row IDs; no new retrieval-label leakage was identified in this review."
+    },
+    "tabm_history": {
+      "source": "reports/run_016/tabm_training_seed*.json",
+      "selected_epochs": [48, 98, 43],
+      "actual_search_epochs": [68, 118, 63],
+      "configured_cap": 200,
+      "interpretation": "A numeric piecewise-linear-embedding model was already tested. Numeric embeddings are not an untried explanation for the entire neural gap; this is still evidence about one TabM recipe, not all such models."
+    },
+    "scarf": {
+      "run": "run_037",
+      "source": "reports/run_037/screen_results.csv and v70_SCARF_seed*.json",
+      "status": "completed_all_three_folds",
+      "scratch_accuracy": 0.7962323842392868,
+      "scratch_log_loss": 0.4293924303293861,
+      "scratch_seconds": 31.000841457978822,
+      "pretrained_accuracy": 0.7979580097785447,
+      "pretrained_log_loss": 0.42629566445144734,
+      "pretrained_seconds": 288.14858654199634,
+      "net_correct_gain_over_scratch": 12,
+      "fold_accuracy_gain_percentage_points": [0.73339, -0.38827, 0.17256],
+      "selected_pretraining_epochs": [25, 42, 62],
+      "actual_pretraining_search_epochs": [35, 52, 72],
+      "selected_supervised_epochs": [8, 7, 10],
+      "actual_supervised_search_epochs": [48, 47, 50],
+      "all_searches_stopped_by_patience": true,
+      "any_epoch_cap_reached": false,
+      "v44_accuracy_reproduced_same_run": 0.8198159332758125,
+      "interpretation": "Pretraining gives a small positive pooled difference but not a consistent fold-level gain, costs substantially more than scratch, and remains materially worse than v44. This does not justify opening corruption, width, dropout or learning-rate grids on the existing development labels."
+    }
+  },
+  "fairness_assessment": {
+    "no_obvious_fatal_unfairness_found": [
+      "Same fixed development rows and outer folds; exact v6 baseline reproduction in both completed screens.",
+      "Training-only preprocessing and inner epoch selection, followed by fresh full-outer-training preprocessing and model/optimizer refit.",
+      "Reasonable official default architectures and optimizer recipes, rather than deliberately undersized networks or tiny iteration caps.",
+      "Training/validation histories and non-cap stopping evidence are available; the completed results are not partial timed-out folds."
+    ],
+    "remaining_limits": [
+      "Compact13 NN inputs differ from the engineered and spatially specialized v44. This is a practical end-to-end comparison, not an isolated architecture effect.",
+      "One initialization per fold and a default recipe cannot characterize a method family's optimized performance.",
+      "Matching epoch count during refit increases optimizer steps because the full outer-training set is larger. This was logged, but the protocol is not guaranteed optimal for every architecture.",
+      "The local preprocessing and PyTorch retrieval adaptation do not reproduce every preprocessing/search/ensemble choice in the original benchmark papers.",
+      "Many methods have already been compared on the same development labels. Repeated CV and model selection do not create a new independent holdout or a calibrated probability of leaderboard success."
+    ],
+    "unsupported_inferences": [
+      "Neural networks as a family have been disproved.",
+      "A lower score must mean the implementation was unfair.",
+      "Longer training alone is likely to fix trajectories whose validation loss worsens while training loss falls.",
+      "A small logloss improvement alone justifies unlimited additional routing or ensemble-weight experiments."
+    ]
+  },
+  "next_priority": {
+    "direction": "One genuinely different synthetic-pretrained prior: official Mitra-v2, subject to local resource feasibility. Complete SCARF results do not take priority over this direction.",
+    "why_distinct": "Its updated synthetic prior and pretraining distribution introduce information and inductive biases beyond another scratch-network width change or another TabPFN-v2 view budget.",
+    "candidate": "autogluon/mitra-classifier-2",
+    "author_claims_not_independent_audit": "The official model card describes purely synthetic pretraining with HybridSCM, longer contexts and an improved optimizer; architecture remains75.7M-parameter12-layer2D Transformer. Apache-2.0 is stated on the official card.",
+    "benchmark_claim_limit": "The advertised benchmark recipe uses50-step fine-tuning and8-fold bagging on CUDA. Do not attribute those results to a one-model MPS zero-shot screen.",
+    "static_code_findings": [
+      "Official sklearn interface explicitly chooses MPS when available, with bfloat16 autocast in the trainer; non-CUDA model execution uses the non-flash attention path. Actual MPS compatibility and memory have not been established by source inspection.",
+      "fine_tune=False still makes an internal split for preprocessing and evaluation, while final predict supplies the complete self.X/self.y training context. It does not imply only80percent context.",
+      "The default max_samples_support is8192. It covers4636-row outer folds but silently subsamples a final8693-row training context. A full-context claim therefore requires an explicit frozen limit at least8693 and a feasible final-context inference path.",
+      "Reducing query chunk size can control query memory but does not remove quadratic support-attention cost. A303MB weight file is not a runtime-memory bound.",
+      "The official default ensemble count is1. Zero-shot is a supported explicit recipe, but the interface default fine_tune isTrue; report which recipe was actually evaluated."
+    ],
+    "before_any_score": [
+      "Pin official source revision, config, checkpoint hashes and license; do not use Kaggle labels or third-party predictions.",
+      "Run full4636-row outer-context inference with fixed query batching using development labels, recording precision, actual support rows, time and memory snapshots. Separately probe final8693-row context with independent synthetic labels or fully synthetic same-shape data; do not read old holdout labels for this resource test, and reject silent context truncation.",
+      "If a single-model official adaptation is being considered, measure a real backward step with the declared training-task context before committing its CV recipe. If infeasible, state that only zero-shot was assessed locally.",
+      "Freeze zero-shot and, only if resource-feasible and explicitly selected in advance, a single-model adaptation recipe. Do not add fine-tuning merely to rescue a bad outer score after seeing it."
+    ]
+  },
+  "stop_or_continue_after_SCARF": {
+    "current_decision": "Completed run037 selects the stop-prioritizing-scratch-expansion branch: no new scratch-NN local grids are recommended. Proceed only to the declared Mitra-v2 feasibility gate, then freeze zero-shot and single50-step adaptation recipes if both are feasible before seeing their CV scores.",
+    "if_matched_pretraining_gain": "If completed SCARF consistently beats matched scratch and is competitive with v44, prioritize that demonstrated representation-learning gain before adding unrelated candidates. Follow-up must be predeclared and limited, not a corruption-rate sweep on current OOF residuals.",
+    "if_both_scratch_and_SCARF_converged_and_lag": "Stop expanding current from-scratch NN architectures, feature encodings and local parameter grids. This is a project-priority decision supported by several completed recipes, not a universal claim about neural methods.",
+    "if_SCARF_budget_or_optimization_inconclusive": "First resolve the documented training adequacy issue; do not count it as a negative completed result or lower the budget solely to finish a comparison table.",
+    "Mitra_stop_conditions": [
+      "No permitted reproducible access to the pinned official weights.",
+      "Full declared context cannot fit or reproduce locally without an unplanned support reduction or materially different algorithm.",
+      "A completed, valid frozen recipe lags current alternatives on both accuracy and logloss without a prespecified mechanism-level reason for another comparison. Stop that recipe rather than opening a new family of member/weight/threshold searches."
+    ],
+    "overall_goal": "Keep the best valid model and the online approval gate unchanged. Method breadth should produce an interpretable comparison and a small number of evidence-based follow-ups, not indefinite search over the same labels."
+  },
+  "primary_sources": [
+    "https://huggingface.co/autogluon/mitra-classifier-2",
+    "https://github.com/autogluon/autogluon/blob/master/tabular/src/autogluon/tabular/models/mitra/sklearn_interface.py",
+    "https://github.com/autogluon/autogluon/blob/master/tabular/src/autogluon/tabular/models/mitra/_internal/core/trainer_finetune.py",
+    "https://github.com/autogluon/autogluon/blob/master/tabular/src/autogluon/tabular/models/mitra/_internal/data/dataset_finetune.py",
+    "https://github.com/autogluon/autogluon/blob/master/tabular/src/autogluon/tabular/models/mitra/_internal/models/tab2d.py"
+  ],
+  "collaboration": "Cross-challenged with fresh_strategy: genuine new prior versus repeated model variants; zero-shot versus CUDA bagged-finetune benchmark claims; full final support size and MPS resource uncertainty. Root supplied complete run037 results, independently checked against the saved report, before finalizing the priority."
+}
