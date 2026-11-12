@@ -1,0 +1,72 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "v25_spatial_blend": {
+      "context": false,
+      "model": "spatial",
+      "knots": 5,
+      "C": 0.1,
+      "weight": 0.5
+    },
+    "v29_ebm": {
+      "context": false,
+      "model": "ebm",
+      "max_bins": 256,
+      "max_interaction_bins": 32,
+      "interactions": 10,
+      "outer_bags": 8,
+      "inner_bags": 0,
+      "learning_rate": 0.015,
+      "max_rounds": 10000,
+      "early_stopping_rounds": 100,
+      "validation_size": 0.15,
+      "n_jobs": 4,
+      "smoothing_rounds": 75,
+      "interaction_smoothing_rounds": 75
+    },
+    "v30_ebm_spatial_blend": {
+      "context": false,
+      "model": "ebm_spatial",
+      "weight": 0.5,
+      "max_bins": 256,
+      "max_interaction_bins": 32,
+      "interactions": 10,
+      "outer_bags": 8,
+      "inner_bags": 0,
+      "learning_rate": 0.015,
+      "max_rounds": 10000,
+      "early_stopping_rounds": 100,
+      "validation_size": 0.15,
+      "n_jobs": 4,
+      "smoothing_rounds": 75,
+      "interaction_smoothing_rounds": 75
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "ebm_candidate.py": "5a84e2b19b822910689d6da498cca1833c2d369e840e632ccc4c29e0dc316e9d",
+    "spatial_expert.py": "bf9f7de3ae21f49c374a17f78dfaa9e033e5692758f4510c0d2ba404fdcb07a2",
+    "requirements-ebm.lock.txt": "02a58e20f2591f225a7752a04cdb2170da8e2e5469e58630acae7f381a74311b"
+  },
+  "ebm_policy": "15 fixed compact features; EBM binning, interaction selection and early-stopping validation all fitted inside each outer training fold. Fixed 50/50 EBM/spatial probability blend, no OOF weight tuning."
+}
