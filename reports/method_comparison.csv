@@ -1,0 +1,15 @@
+method,run,version,inputs,scope,status,accuracy,log_loss,seconds,gain_vs_v44_pp
+CatBoost + spatial + fixed seeds,run_019,v44_seed_ensemble,engineered + spatial,current strongest pipeline,completed,0.8198159332758125,0.380388148320062,26.40586879203329,0.0
+MLP,run_005,v22_mlp,historical MLP preprocessing,one historical recipe,completed,0.8005464480874317,0.42461446813873566,1.5565155419753864,-1.9269485188380786
+TabM,run_016,v41_TabM,compact13 + missing flags,one trained recipe,completed,0.8088869715271786,0.38387284961868473,146.2812901660218,-1.0928961748633892
+"TabPFN frozen, 8 views",run_008,TabPFN_v2_compact8,compact13,pretrained inference,completed,0.8155018694276676,0.38080959344071424,55.67827045900049,-0.4314063848144922
+"TabPFN frozen, 32 views",run_033,v65_TabPFN_default32,compact13,larger inference budget,completed,0.81765890135174,0.37956587227367505,561.951576041989,-0.2157031924072461
+TabPFN weight fine-tuning,run_021,v48_TabPFN_finetuned1,compact13,one fine-tuning recipe,completed,0.8087431693989071,0.38951149872990687,318.03857362503186,-1.1072763876905367
+TabICL,run_014,v37_TabICL_engineered4,engineered,four-view pretrained inference,completed,0.8119068162208801,0.38293076805519716,47.784057250013575,-0.7909117054932358
+XGBoost,run_022,v49_xgboost,engineered,inner early stopping + full refit,completed,0.808455565142364,0.3878100506367244,1.8356061250087805,-1.1360368133448429
+LightGBM linear leaves + spatial,run_027,v56_nested_linear_leaf,engineered + spatial,nested leaf-type selection,completed,0.812482024733966,0.39153069688662095,20.039344332995825,-0.7333908541846457
+SVM,run_005,v20_svm3,historical SVM preprocessing,two historical C settings; this is C=3,completed,0.7975266033937303,0.4470380073360594,4.224154707975686,-2.228932988208221
+FT-Transformer,run_035,v67_FTTransformer_default,compact13 + missing flags,official default architecture; one initial recipe,pending,,,,
+TabR-S,run_036,v68_TabR_S,compact13 + missing flags,official core model with local exact retrieval backend,pending,,,,
+SCARF matched scratch MLP,run_037,v69_matched_scratch_MLP,compact13 + missing flags,mechanism-matched control,pending,,,,
+SCARF pretraining + fine-tuning,run_037,v70_SCARF,compact13 + missing flags,unlabeled contrastive pretraining,pending,,,,
