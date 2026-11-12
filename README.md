@@ -10,12 +10,40 @@
 - 本地交叉验证、留出集准确率不等于 Kaggle 得分，也不能推断确切名次。
 - 当前没有配置 Kaggle 凭据；训练与生成提交文件不依赖账号。正式上榜需要在本人账号中加入比赛并提交文件。
 
+## Kaggle 自动提交
+
+官方 CLI 支持首次 OAuth 登录后持续使用本机凭据。账号注册、首次授权、接受比赛规则以及平台要求的身份验证需要账号本人完成；正常下载、提交、等待评分、查询结果不需要每次操作网页。
+
+```bash
+uv pip install --python .venv/bin/python -r requirements-kaggle.txt
+.venv/bin/python kaggle_workflow.py login
+.venv/bin/python kaggle_workflow.py download
+.venv/bin/python kaggle_workflow.py check --run run_002
+# 把下载核验记录和本次代码提交到 Git 后：
+.venv/bin/python kaggle_workflow.py submit --run run_002 --wait 180
+# 评分尚未完成时，只查询，不重新提交：
+.venv/bin/python kaggle_workflow.py status --run run_002
+```
+
+首次还需要在 https://www.kaggle.com/competitions/spaceship-titanic 加入比赛。`download` 从官方 API 获取数据并核对现有镜像；全新 clone 会创建本地 CSV。现有文件不一致时停止，不覆盖旧实验数据。
+
+脚本在上传前检查 4,277 行、布尔标签和 ID 顺序，并记录当前 commit、文件 SHA-256、版本、提交 ID 和评测结果。结果位于 `reports/<run>/online_attempts/`，完成后也要 commit。原始命令输出仅写入本地忽略目录 `submission_logs/`。
+
+上传会消耗赛事提交配额。脚本不会自动重试上传；即使请求中断，重复文件也会被拦截。先检查提交历史及本地日志，拿到 ID 后可运行 `status --run run_002 --ref <ID>`。确实没有上传成功时，手动核对并归档尝试记录后再重试。
+
+每日配额、评分排队、账号权限和网络连通性受 Kaggle 控制。凭据保存在用户本机，不能提交进 GitHub。当前脚本由本机会话执行，没有配置定时任务或 GitHub Actions。
+
+官方文档：https://www.kaggle.com/docs/api 、https://github.com/Kaggle/kaggle-cli/blob/main/docs/competitions.md
+
 ## 运行
 
 ```bash
 cd data_analysis_hw
 uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -r requirements.lock.txt
+uv pip install --python .venv/bin/python -r requirements-kaggle.txt
+.venv/bin/python kaggle_workflow.py login
+.venv/bin/python kaggle_workflow.py download
 .venv/bin/python experiment.py init --run run_001
 .venv/bin/python experiment.py develop --run run_001
 .venv/bin/python experiment.py group-audit --run run_001
