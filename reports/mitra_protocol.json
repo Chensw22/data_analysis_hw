@@ -1,5 +1,5 @@
 {
-  "status": "resource_prototype_only_not_screen_ready",
+  "status": "zero_shot_pipeline_ready_for_independent_review_then_prescore_dev_probe",
   "upstream_sources": {
     "_internal/models/tab2d.py": {
       "url": "https://raw.githubusercontent.com/autogluon/autogluon/957883c92073afddb6d9d4a0ae08a6d15ef3c692/tabular/src/autogluon/tabular/models/mitra/_internal/models/tab2d.py",
@@ -47,7 +47,7 @@
   "dependency_policy": "Parent-managed .venv-mitra; includes loguru used by upstream Preprocessor. No AutoGluon install required for vendored core/preprocessor.",
   "preprocessing": {
     "input": "compact13 same named raw inputs as TabPFN budget experiment",
-    "categories": "train-only vocabulary: unknown0, missing1, known2+",
+    "categories": "Train-only vocabulary: unknown0, missing1 including iterate __MISSING__ sentinel, known2+. Sentinel excluded from fitted vocabulary; None/pd.NA/NaN all map to1.",
     "numerics": "No new log/scaler. PreserveNaN into train-only upstream mean imputation; all-missing train columns prefill0 and upstream constant filter removes them.",
     "upstream": "quantile_transform=False, no feature/class shuffle or projection, random_mirror_x=True with isolated fixed numpy RNG; core quantile support-only.",
     "mutation": "encode/transform/core operate on copies; caller raw data and saved context remain unchanged."
@@ -87,21 +87,26 @@
     "deadline": "Per invocation1200seconds default; user/parent may predeclare via CLI before model load. SIGALRM interrupts Python; allocator limit is the main protection against kernel allocation pressure.",
     "timing": "First and warmed repeat, fullfold chunk extrapolation labelled estimate, RSSmax and MPS snapshots (not peak). No accuracy/loss result reported.",
     "backward": "One full-head10-class CE backward plus one disposable AdamW optimizer step (lr3e-7 first warmup update, wd.3, betas.9/.999, eps1e-8). Record two-moment optimizer state bytes, resources while states live, finite gradients/parameters and real weight change. Synthetic labels only. Modified engine discarded; original CPU checkpoint state is used for zero-shot roundtrip. Resource-only random disjoint partition matches official episode dimensions but is not formal training sampler. Support floor(4n/5), query min(ceil(n/5),1024); no inference context truncation. Official per-layer checkpointing use_reentrant=False.",
-    "sourcefreeze": "Copy adapter/tests/protocol/vendor and env versions before firstcheckpoint load; failedprobes save failed_inconclusive result and never become candidate score."
+    "sourcefreeze": "Copy adapter/tests/protocol/vendor and env versions before firstcheckpoint load; failedprobes save failed_inconclusive result and never become candidate score.",
+    "seed_policy": "Synthetic attributes/support labels and preprocessing use fixed42, independent of formalCVseed policy."
   },
   "adaptation": {
-    "status": "Fullloop not implemented/frozen until resource review. One disposable synthetic AdamW step explicitly authorized for resource memory validation; no real-data training.",
+    "status": "Disabled for this experiment: original and batch-checkpoint backend representative3708support/928query AdamW resource probes OOM under.65 memorycap. Draft adaptation implementation is unvalidated and guarded by explicit RuntimeError; not an enabled candidate.",
     "source_under_independent_review": "https://huggingface.co/autogluon/mitra-finetune/tree/b4701e8148dc33b00ed15d7086ff59816957cde4",
-    "needed_before_screen": "Parent/reviewer finalize exact AdamW/warmup/episodic sampler, inner0..50selection and freshfullouterrefit; single-model50step feasibility decided before any CV accuracy."
+    "needed_before_screen": "No adaptation run in this experiment. Any future adaptation would require a new explicit resource plan and protocol; draft loop remains guarded/unvalidated.",
+    "resource_outcome": "No adaptation accuracy score exists. Zero-shot alone does not reject the adaptation potential of Mitra-v2."
   },
   "commands": {
     "cpu_tests": ".venv-mitra/bin/python -m pytest -q test_mitra_candidate.py",
     "root_only_outer_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 4636 --query-rows 128 --backward --output artifacts/probes/mitra_chunked4636",
     "root_only_export_shape": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 8693 --query-rows 128 --skip-roundtrip --output artifacts/probes/mitra_chunked8693",
-    "root_only_small_backend_probe": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 650 --query-rows 128 --backward --output artifacts/probes/mitra_chunked650"
+    "root_only_small_backend_probe": ".venv-mitra/bin/python mitra_candidate.py probe --device mps --context-rows 650 --query-rows 128 --backward --output artifacts/probes/mitra_chunked650",
+    "formal_screen_after_parent_approval": ".venv-mitra/bin/python mitra_candidate.py screen --run run_038 --device mps",
+    "formal_confirm_after_successful_gate": ".venv-mitra/bin/python mitra_candidate.py confirm --run run_038 --device mps",
+    "formal_export_after_successful_gate": ".venv-mitra/bin/python mitra_candidate.py export --run run_038 --device mps"
   },
-  "scoring": "screen/confirm/export deliberately raise until resource review; no partial-CV wins and no conclusion that one poor zero-shot recipe rejects this family.",
-  "cpu_test_status": "10 passed,2 subtests passed in4.51s. CPU only; original-vs-adapter FP64 self/cross output/input/every-param gradient equality,2layer fullTab2D nestedcheckpoint gradients and existing persistence/schema tests.81 upstream deprecation warnings.",
+  "scoring": "Onlyv71 zero-shot may run, and only afterruntime_decision approved_before_cv; v72 cannot run. Existing83%local/stability gate and userapproval before submission unchanged.",
+  "cpu_test_status": "13 CPU tests passed with4subtests in finalrun; fullschema/sentinel,source-adapter gradient equality,nestedcheckpoint,portableCPUroundtrip,zero-shotfreshfit/nooptimizer/fullcontext,overlaprejection andresourcegate tested. No real-data/MPS training by this agent.",
   "attention_backend": {
     "revision": "independent_batch_checkpoint_v1",
     "reason": "Parent resource probe: original forward full4636/query128 succeeded19.41/18.18sec;3708support/928query backward failed SDPA allocation under unchanged.65 MPS cap. No accuracy was scored.",
@@ -122,5 +127,43 @@
     "resource_validation": "Parent runs smallMPS first, then4636forward+completeAdamWstep, then8693fullsynthetic forward; OOM remains inconclusive without precision/context fallback.",
     "small_probe": "650total rows yields520support/130query backward, so maxK>512 exercises chunked training path. A520total-row episode would miss the threshold in backward.",
     "label_copy": "Adapter clones support labels before upstream embedding, whose padding assignment is in-place even when padding is false. Same label values; prevents shared tensor version mutation across independent computation graphs."
-  }
+  },
+  "runtime_decision": {
+    "status": "approved_before_cv",
+    "approved": true,
+    "enabled_recipes": [
+      "zero-shot"
+    ],
+    "device": "mps",
+    "query_chunk": 2318,
+    "stage_budget_seconds": {
+      "screen": 900,
+      "confirm": 2700,
+      "export": 900
+    },
+    "evidence_paths": [
+      "reports/mitra_resource_probes/mitra_batch2318_result.json",
+      "reports/mitra_resource_probes/mitra_finalbatch2318_result.json",
+      "reports/mitra_resource_probes/mitra_chunked4636_result.json"
+    ],
+    "note": "Parent approved before any Mitra accuracy:4636/8693fullcontext+2318query forward successful; shared128query probabilities exactly equal to128query call. Representative adaptation remainsOOM and disabled."
+  },
+  "formal_pipeline": {
+    "active_candidate": "v71_Mitra2_zeroshot",
+    "disabled_candidate": "v72_Mitra2_adapt50",
+    "control": "Original iterate v6 noID CatBoost exactly; pairedv44 comparison may reuse fixed existing OOF without refit.",
+    "split": "Original iterate dev6954/fixed3outerfold and confirmation/group/export gate unchanged. No new holdout.",
+    "context": "Every applicable training row; no truncation for4636outertrain or8693finalfit. Preprocessor fitted solely on that training partition.",
+    "zero_shot_optimizer_steps": 0,
+    "freshness": "Each fit SHAchecks and reloads original public checkpoint; no fitted weights/optimizer crossfold.",
+    "logging": "Per-fit metadata, rows/IDhashes, train-only preprocessing width, params, durations, resource snapshots; no adaptation curve for zero-shot.",
+    "freeze": "record_protocol runs before firstbaseline: copies/hashadapter/tests/protocol/vendor, reviewed adaptation spec, allinstalledpackages, checkpoint SHA; confirm/export assert unchanged sources+env+runtime.",
+    "runtime_gate": "status approved_before_cv with enabled_recipes exactly[zero-shot], positivequerychunk, MPSdevice, positive screen/confirm/export budgets required. Formal CLI overrides must match approved protocol.",
+    "timeout": "Globalstage SIGALRM+chunk/fit checks; failed_inconclusive marker, no partialcandidate treated as complete.",
+    "persistence": "CPUstate/config/schema/fullsupportXy/metadata/querychunk persisted; engine omitted, CPUreloaddefault. Test predicts only its supplied query frame.",
+    "seed_policy": "Formal model/preprocessing RNG is fit(seed) from iterate: currentCVsplitseed+zero-basedouterfold. Initialscreen splitseed20261112; confirmation uses20261113/20261114; full-dataexportseed20261112. Syntheticresourceprobes alone use42. Per-fit metadata records actualseed."
+  },
+  "active_candidate_names": [
+    "v71_Mitra2_zeroshot"
+  ]
 }

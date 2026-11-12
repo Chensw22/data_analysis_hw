@@ -20,6 +20,7 @@ RECIPES = [
     ('TabR-S', '036', 'v68_TabR_S', 'compact13 + missing flags', 'official core model with local exact retrieval backend'),
     ('SCARF matched scratch MLP', '037', 'v69_matched_scratch_MLP', 'compact13 + missing flags', 'mechanism-matched control'),
     ('SCARF pretraining + fine-tuning', '037', 'v70_SCARF', 'compact13 + missing flags', 'unlabeled contrastive pretraining'),
+    ('Mitra-v2 pretrained inference', '038', 'v71_Mitra2_zeroshot', 'compact13', 'new synthetic pretraining generation; task-specific adaptation not evaluated'),
 ]
 
 
@@ -41,7 +42,7 @@ def main():
             row['gain_vs_v44_pp'] = 100 * (row['accuracy'] - best)
         rows.append(row)
     with (ROOT / 'reports/method_comparison.csv').open('w') as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     payload = dict(

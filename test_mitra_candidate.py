@@ -1,11 +1,14 @@
 import tempfile
 import unittest
 import copy
+import json
+from types import SimpleNamespace
 from pathlib import Path
 from unittest.mock import patch
 
 import joblib
 import numpy as np
+import pandas as pd
 import torch
 
 import mitra_candidate as candidate
@@ -26,6 +29,7 @@ class MitraTests(unittest.TestCase):
     def test_train_only_schema_unknown_missing_and_all_missing(self):
         x = candidate.synthetic_frame(24)
         x['Spa'] = np.nan
+        x.loc[3, 'HomePlanet'] = '__MISSING__'
         original = x.copy(deep=True)
         prep = candidate.MitraPreprocessor().fit(x, np.arange(24)%2)
         query = candidate.synthetic_frame(3, 5)
@@ -44,6 +48,10 @@ class MitraTests(unittest.TestCase):
         self.assertTrue(np.isfinite(first).all() and np.isfinite(second).all())
         self.assertTrue(x.equals(original))
         self.assertTrue(prep.all_missing[prep.columns.index('Spa')])
+        self.assertNotIn('__MISSING__', prep.vocab['HomePlanet'])
+        sentinel = query.copy()
+        sentinel['HomePlanet'] = [None, '__MISSING__', pd.NA]
+        np.testing.assert_array_equal(prep.encode(sentinel)[:, col], [1, 1, 1])
 
     def test_query_chunk_invariance_and_context_is_not_mutated(self):
         rng = np.random.default_rng(5)
@@ -185,6 +193,53 @@ class MitraTests(unittest.TestCase):
             self.assertEqual(p.grad is None, p2.grad is None)
             if p.grad is not None:
                 torch.testing.assert_close(p2.grad, p.grad, atol=2e-6, rtol=1e-5)
+
+    def test_zero_shot_fit_has_fresh_model_full_context_and_no_optimizer(self):
+        x = candidate.synthetic_frame(24)
+        y, ids = np.arange(24)%2, np.arange(24)+50
+        query = candidate.synthetic_frame(5, 19)
+        models = []
+        def loader(directory, device):
+            model = candidate.make_model(TINY, device=device)
+            models.append(model)
+            return model, dict(TINY)
+        with tempfile.TemporaryDirectory() as directory, \
+                patch.object(candidate, 'load_initial_model', side_effect=loader), \
+                patch.object(candidate, 'adaptation_step') as step:
+            log = Path(directory)/'training.json'
+            first = candidate.fit_mitra(x, y, ids, 17, 'cpu', 'zero-shot',
+                                        query_chunk=3, log_path=log)
+            second = candidate.fit_mitra(x, y, ids, 17, 'cpu', 'zero-shot', query_chunk=3)
+            step.assert_not_called()
+            self.assertEqual(first.metadata['selected_steps'], 0)
+            self.assertEqual(first.metadata['refit_optimizer_steps'], 0)
+            self.assertEqual(first.query_chunk, 3)
+            self.assertEqual(len(first.support), len(x))
+            self.assertIsNot(models[0], models[1])
+            self.assertIsNot(first.preprocessor, second.preprocessor)
+            np.testing.assert_array_equal(first.predict_proba(query), second.predict_proba(query))
+            self.assertEqual(json.loads(log.read_text())['status'], 'fit_complete')
+
+    def test_adaptation_and_overlap_fail_closed_before_model_load(self):
+        x = candidate.synthetic_frame(20)
+        with patch.object(candidate, 'load_initial_model') as load:
+            with self.assertRaisesRegex(RuntimeError, 'adapt50 disabled'):
+                candidate.fit_mitra(x, np.arange(20)%2, np.arange(20), 7, 'cpu', 'adapt50')
+            load.assert_not_called()
+        stub = SimpleNamespace(BASELINE='baseline', CONFIGS={candidate.NAMES[0]: {}})
+        with patch.object(candidate, 'FRAMEWORK', stub), patch.object(candidate, 'fit_mitra') as fit:
+            with self.assertRaisesRegex(ValueError, 'disjoint'):
+                candidate.fit(candidate.NAMES[0], {False: (x, [])}, [0, 1], [0, 1], [1, 2], 7)
+            fit.assert_not_called()
+
+    def test_runtime_gate_rejects_unapproved_or_adaptation_recipe(self):
+        args = SimpleNamespace()
+        for decision, message in [({'status':'not_approved'}, 'await resource approval'),
+                ({'status':'approved_before_cv','enabled_recipes':['zero-shot','adapt50']}, 'Only zero-shot')]:
+            with self.subTest(decision=decision), patch.object(Path, 'read_text',
+                    return_value=json.dumps({'runtime_decision': decision})):
+                with self.assertRaisesRegex((RuntimeError, ValueError), message):
+                    candidate.configure_runtime(args)
 
 
 if __name__ == '__main__':
