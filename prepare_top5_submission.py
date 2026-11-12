@@ -25,6 +25,7 @@ SPECS = {
     'mitra_mirror_ensemble': ('v74_Mitra_mirror4', 'stability', 3600),
     'mitra_lastblock_candidate': ('v75_Mitra_lastblock50', 'export', 7200),
     'mitra_lastblock100_candidate': ('v76_Mitra_lastblock100', 'export', 10800),
+    'mitra_context_candidate': ('v77_Mitra_context20', 'export', 3600),
 }
 POLICY = 'reports/top5_validation_review.json'
 AUTH = 'reports/top5_authorization.json'
