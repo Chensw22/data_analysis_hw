@@ -14,6 +14,8 @@
 
 ## 当前实验方向
 
+按用户最新原则，本地差距1个百分点以内按同等实用性能处理；当前没有已证实稳定领先的S档方案。69个已测配置的分档与证据见[方案分级](reports/METHOD_TIERS.md)，可运行 `classify_methods.py` 重建逐版本档位。
+
 已尝试 MLP、TabM、TabPFN（含权重微调）、TabICL。最新方法级筛选完成：FT-Transformer80.47%、TabR79.67%、SCARF79.80%（匹配scratch对照79.62%）；均未超过v44。训练曲线均正常早停，不能简单归因于训练时间不足，也不能凭一个配置否定整个模型族。
 
 Mitra-v2合成预训练模型已完成直接推理筛选：81.65%；TabPFN的32次集成得到81.77%，仍未超过v44的81.98%。完整8693行Mitra推理已通过资源检查，梯度适配在当前MPS内存预算下仍未跑通，适配潜力未测。包含原特征的AutoGluon非线性多层bagging已完成72个子模型，外层准确率80.73%，未提升。用户另授权v44、TabPFN32、Mitra-v2各一次线上对照，保留原83%门槛未通过的事实。方法覆盖、各自输入与实际成绩见[方法比较表](reports/method_comparison.csv)与[评估边界](reports/method_comparison.json)，运行 `summarize_methods.py` 可更新。

@@ -1,0 +1,22 @@
+{
+  "reference_accuracy": 0.8198159332758125,
+  "unit": "percentage_points",
+  "bands": {
+    "A": "gap from reference <=1pp",
+    "B": "1pp < gap <=2pp",
+    "C": "gap >2pp"
+  },
+  "reference_policy": "Anchor all bands to the same current best score. Pairwise distance<=1pp is not transitive.",
+  "statistical_claim": "None. Practical screening bands do not prove statistical equivalence or stable inferiority; adjacent-band models can differ by much less than1pp.",
+  "scope": "Completed fixed development3fold recipes only, not entire model families. Controls and blends are retained as named recipes. Repeated identical versions are deduplicated.",
+  "stability": "No current recipe is established as a stable winner. v34 fresh-seed gains are small and GroupCV reverses them; leading neural recipes have no matching repeated-seed/group confirmation.",
+  "future_stability_review": "Treat <=1pp differences as the same practical performance level for a direct comparison. Claim a clearly stronger recipe only after repeated paired splits give consistent material gains and group validation does not reverse the direction; one public leaderboard result is insufficient.",
+  "online_evidence": "Mitra-v2 is best among five completed account submissions in the saved2026-11-12 batch; this is a single public test observation, not a stable-superiority certificate.",
+  "s_tier": [],
+  "recipe_count": 69,
+  "counts": {
+    "A": 51,
+    "B": 13,
+    "C": 5
+  }
+}
