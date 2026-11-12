@@ -1,0 +1,272 @@
+{
+  "status": "complete",
+  "support_rows": 4636,
+  "query_rows": 2318,
+  "settings": {
+    "columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "device": "mps",
+    "query_chunk": 2318,
+    "threshold": 0.5,
+    "mps_memory_fraction": 0.65,
+    "weights_dtype": "float32",
+    "mps_autocast_dtype": "bfloat16",
+    "full_support": true,
+    "optimizer_steps": 0,
+    "n_preprocessing_views": 1,
+    "probability_mean_dtype": "float64",
+    "mean_weights": [
+      0.5,
+      0.5
+    ],
+    "probe_budget_seconds": 1200,
+    "screen_budget_seconds": 3600,
+    "group_budget_seconds": 3600,
+    "stability_budget_seconds": 3600,
+    "export_budget_seconds": 3600
+  },
+  "checkpoints": {
+    "v1": {
+      "directory": "artifacts/pretrained/mitra-v1",
+      "revision": "c425e9fa0910a6be1c494321792e7ba2a1367b1a",
+      "sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+      "bytes": 302717904
+    },
+    "v2": {
+      "directory": "artifacts/pretrained/mitra-v2",
+      "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+      "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "bytes": 302717904
+    }
+  },
+  "full_support": true,
+  "synthetic_labels": true,
+  "no_accuracy_computed": true,
+  "source_hashes": {
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_generation_candidate.py": "62ee16502ea986880666efb269fcbccb54d59ebf3d0126f2730e6ffe7b42c845",
+    "reports/mitra_adaptation_review.json": "39a3edb8098422da148b084fdc731a16d5dd365f59295abc0ccbca6936cbb3f9",
+    "reports/mitra_protocol.json": "fda5f03e70d8f98429e09ff9c57c8e7a7cec9df96e0d575fb816756ab1de5767",
+    "reports/mitra_v1_checkpoint.json": "a9feb63342c1d9086f13d4041312f7c362eb5dc36c2d29108bb39d826e0f8dc2",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_generation_authorization.json": "a6ace6e80c9c311dbcfe53bdf2e926e7cf6652829ada92b63d1720f5bbf28091",
+    "reports/top5_generation_validation_review.json": "ff5311f3467efb8db282729ed5a115f20781c7a22f46ad9b465b5fa231f071ca",
+    "reports/top5_group_authorization.json": "24b0c5fd8563afa3a92d305040b6c413ff6367a953f10ef9cfaf9f91a9e1d831",
+    "reports/top5_group_validation_review.json": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+    "reports/top5_mitra_v1_review.json": "c47d7c0501377de62ce790fa3e2aea1a023d470118c43edb3a510147f10f36bc",
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "test_audit_top5_references.py": "1b965877abcad8ace4d431de775886ac5d74416d9dce73e3133ea30e32fef4e9",
+    "test_mitra_candidate.py": "35a76996da1026f57565d987cbc3c1bb3dd62d19585f21009a41a54af842a65d",
+    "test_mitra_generation_candidate.py": "83301f49669be3cf43522e89df7016f056ca0b6d968d05e8c7ae9d450bc97f10",
+    "test_top5_generation_evaluate.py": "9603f0fae2d08cb825cdca37f36906b8d995c2227fbb4dca9f34ac481024cf67",
+    "test_top5_group_evaluate.py": "811cb8b41b848898e6088f9e7ecaa703e5415efc18fb92bdb8657a21d7fd5500",
+    "test_top5_validate.py": "61cdab38f1f65a2330100b5c02bbff73f3c99d9d05d2e80d9576ab21cbfa9dcf",
+    "third_party/mitra/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra/MODEL_CARD.md": "baab54ff0be437c82b1ae616cf19a41820815e274cdda017f0046dd541c86ca8",
+    "third_party/mitra/NOTICE": "be9e15b71071b6d9a86114088883706817f5ce14fb2539ee382df5413ace2fa4",
+    "third_party/mitra/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/config/enums.py": "c2bdead8e881820e63cbabc7cb45f0edf12827bc1ca12b0f6cadc2e987c4bec3",
+    "third_party/mitra/_internal/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "third_party/mitra/_internal/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "third_party/mitra/_internal/models/base.py": "a6fa64692b6e70093e83b91d188b981ee2c3759d7cace051a129c9b9714209a6",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "third_party/mitra_v1/LICENSE": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "third_party/mitra_v1/MODEL_CARD.md": "dff241257f8b5306844c5d1d7cc1ca409bda7638e25b3b634949e13f77c447ad",
+    "third_party/mitra_v1/NOTICE": "7206fc3bf5fc6bb4b6b8292a7f24ac0fe02fc70fc8c75b18c21bfbd326101897",
+    "top5_generation_evaluate.py": "80d85b65ccd64b1f0015e4d71a37edc805ff8005837c3ea85f7b030aa1e382b7",
+    "top5_group_evaluate.py": "d76686f4557e58358edc7c3966d4862f4442c2839390d42cb86458b5558055ef",
+    "top5_validate.py": "9fd5877070da3ae1cf451415362c9dc7f7bab8ed0f87c024c922be3be0bda8e1"
+  },
+  "environment_sha256": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+  "resources_before": {
+    "max_rss_bytes": 419971072,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "full_forward_seconds": 22.529012000071816,
+  "subset_passed": true,
+  "reload_passed": true,
+  "completed_generations": [
+    "v1",
+    "v2"
+  ],
+  "reload_max_difference": 0.0,
+  "full_prediction_metadata": {
+    "status": "complete",
+    "version": "v79_Mitra12_mean",
+    "seed": 42,
+    "generations": [
+      "v1",
+      "v2"
+    ],
+    "weights": [
+      0.5,
+      0.5
+    ],
+    "checkpoints": {
+      "v1": {
+        "directory": "artifacts/pretrained/mitra-v1",
+        "revision": "c425e9fa0910a6be1c494321792e7ba2a1367b1a",
+        "sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+        "bytes": 302717904
+      },
+      "v2": {
+        "directory": "artifacts/pretrained/mitra-v2",
+        "revision": "edada0d20759c58ada8c8605c25f22f6e98ea5f0",
+        "sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+        "bytes": 302717904
+      }
+    },
+    "full_support_rows": 4636,
+    "query_rows": 2318,
+    "training_ids_sha256": "2992695005bcf5304b80a72152af36ba3a70eb62bee82c3f390d5dac4896616f",
+    "prediction_ids_sha256": "d4ff16caba4f3c83df7c46d940794a69d6c1a71e05f487ed783ee192b9c785bf",
+    "input_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "query_chunk": 2318,
+    "components": [
+      {
+        "generation": "v1",
+        "cache_hit": false,
+        "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19",
+        "full_support_rows": 4636,
+        "preprocessing_mirror": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "fit_metadata": {
+          "generation": "v1",
+          "seed": 42,
+          "optimizer_steps": 0,
+          "full_support_rows": 4636,
+          "training_ids_sha256": "2992695005bcf5304b80a72152af36ba3a70eb62bee82c3f390d5dac4896616f",
+          "checkpoint_sha256": "e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19"
+        },
+        "seconds": 11.059237082954496,
+        "resources_after_release": {
+          "max_rss_bytes": 1028636672,
+          "mps_current_bytes": 0,
+          "mps_driver_bytes": 737280,
+          "mps_recommended_max_bytes": 12713115648,
+          "mps_measurement": "snapshots_not_peak"
+        },
+        "probabilities_sha256": "3ae085474ccc913a1a6b9a292466efdd965e4e359d6293122b8288bce32abe22"
+      },
+      {
+        "generation": "v2",
+        "cache_hit": false,
+        "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+        "full_support_rows": 4636,
+        "preprocessing_mirror": [
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "fit_metadata": {
+          "status": "fit_complete",
+          "recipe": "zero-shot",
+          "seed": 42,
+          "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+          "training_rows": 4636,
+          "training_ids_sha256": "2992695005bcf5304b80a72152af36ba3a70eb62bee82c3f390d5dac4896616f",
+          "full_prediction_support": true,
+          "query_chunk": 2318,
+          "precision": "mps_bfloat16_autocast",
+          "inner_history": [],
+          "refit_history": [],
+          "selected_steps": 0,
+          "validation_support_order": "fixed_training_order_no_episode_rng_consumption",
+          "refit_optimizer_steps": 0,
+          "refit_seconds": 2.0803418010473251e-07,
+          "parameters": 75670026,
+          "feature_count": 13,
+          "resources_after_refit": {
+            "max_rss_bytes": 1028636672,
+            "mps_current_bytes": 302958592,
+            "mps_driver_bytes": 311115776,
+            "mps_recommended_max_bytes": 12713115648,
+            "mps_measurement": "snapshots_not_peak"
+          },
+          "seconds": 0.3184149169828743,
+          "fresh_refit_from_original_checkpoint": true
+        },
+        "seconds": 11.250647833920084,
+        "resources_after_release": {
+          "max_rss_bytes": 1028636672,
+          "mps_current_bytes": 0,
+          "mps_driver_bytes": 737280,
+          "mps_recommended_max_bytes": 12713115648,
+          "mps_measurement": "snapshots_not_peak"
+        },
+        "probabilities_sha256": "f8ec75feafda987b96b4f8fbbf5ed028cfbf666dff4917b942b81e93cb1782ba"
+      }
+    ],
+    "completed_components": 2,
+    "seconds": 22.527679292019457,
+    "probability_sha256": "e1d7953ba470ff51c77015e0127c648ef1ffb261ee292e17b22988123c880634"
+  },
+  "resources_after": {
+    "max_rss_bytes": 1175502848,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 737280,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "seconds": 62.33438387501519
+}
