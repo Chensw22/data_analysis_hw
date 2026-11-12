@@ -1,0 +1,111 @@
+{
+  "status": "complete",
+  "kind": "refs",
+  "key": "mitra",
+  "version": "v71_Mitra2_zeroshot",
+  "phase_sha256": "0563001254d64ea9612cdfce2e7ca425fe9ce4c346c314763d521528c8ea46ae",
+  "execution_protocol_sha256": "1c4d5edba11bcae3ec8bcc0dbb3e63601e536f5ded868f194305c77de5185707",
+  "results": [
+    {
+      "seed": 20261112,
+      "accuracy": 0.8169398907103825,
+      "log_loss": 0.38403062541493255,
+      "oof_path": "artifacts/top5_adaptation_phase/refs/mitra/group_20261112.npz",
+      "oof_sha256": "3c1d861c6af5e7a67d5750aedf2dc3b5d2200a63f0a5840c624aefa313f73569",
+      "legacy_reused": true,
+      "legacy_evidence": {
+        "oof": "artifacts/top5_reference_audit/mitra/group_20261112.npz",
+        "files": {
+          "artifacts/top5_reference_audit/mitra/summary.json": "d6849f2bb7e01e13bb7d477805028959ac5d7f5a2a7f5ec353857714b9efc123",
+          "artifacts/top5_reference_audit/mitra/protocol.json": "8b6207eacf7f9096e4ac1ae2351268a79153b6dfbee49509d3f6f2958ce84f8d",
+          "artifacts/run_038/protocol.json": "894695fb8803a480d89f4acf99229b93a395d286b66273d80c90fe91665bbb92",
+          "artifacts/top5_reference_audit/mitra/group_20261112.npz": "a3a2ea3df09a8eb2126bb62163698b0890cb66444d0730d8edeaf462e7bc0787"
+        },
+        "recorded_accuracy": 0.8169398907103825,
+        "kind": "refs",
+        "key": "mitra",
+        "seed": 20261112
+      },
+      "folds": [],
+      "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261112.npz",
+      "reference_copied_without_training": true
+    },
+    {
+      "seed": 20261115,
+      "accuracy": 0.814495254529767,
+      "log_loss": 0.3810023251484144,
+      "oof_path": "artifacts/top5_adaptation_phase/refs/mitra/group_20261115.npz",
+      "oof_sha256": "5770d54efe0d27c6ec92cfebe94414a92551a5bd288522b77b54ecacb2dadf90",
+      "legacy_reused": false,
+      "legacy_evidence": null,
+      "folds": [
+        {
+          "fold": 0,
+          "fit_seed": 20261115,
+          "train_ids_sha256": "6e7a22cb12c673293269f2ba7b4cc3e731e0ff5215279786e6952d1ff5f41b7f",
+          "query_ids_sha256": "6e79cf4a47c1e9d45ee29fc0277c60dc6fec5154a0dd50e4b9ca78448438c232",
+          "group_overlap": 0,
+          "seconds": 19.141868208069354
+        },
+        {
+          "fold": 1,
+          "fit_seed": 20261116,
+          "train_ids_sha256": "253404980cb66c10726f394771a84f59f863193a534a7044ff79637aa740cb5c",
+          "query_ids_sha256": "df84d4edd82d3b0e44ac1b42b1730ba923a374e88e165e7574634f7b18e81ace",
+          "group_overlap": 0,
+          "seconds": 11.49315429199487
+        },
+        {
+          "fold": 2,
+          "fit_seed": 20261117,
+          "train_ids_sha256": "a993153f05cbc2a7de6173278c0a48b3ce237f79083c10cccc95cc37f1e1fe5e",
+          "query_ids_sha256": "1ffe6b4650af68cd218633208833c38352d1eb685c6db398c357e6def99fe6df",
+          "group_overlap": 0,
+          "seconds": 11.612692291964777
+        }
+      ],
+      "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261115.npz",
+      "reference_copied_without_training": true
+    },
+    {
+      "seed": 20261116,
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.382640137768012,
+      "oof_path": "artifacts/top5_adaptation_phase/refs/mitra/group_20261116.npz",
+      "oof_sha256": "8f7840fbd7627b2161bae6913dd08c66ef61be04147d68eb1a1c1805cca709ab",
+      "legacy_reused": false,
+      "legacy_evidence": null,
+      "folds": [
+        {
+          "fold": 0,
+          "fit_seed": 20261116,
+          "train_ids_sha256": "fd0fb36b0e8c5c3020270ce4dff6344e86d412e682edaccc1e276976483c3836",
+          "query_ids_sha256": "fceb6b3fa7ad7cfeb68875c07a79d55d2df834c4fc73fdfa9b3db3616d4f5344",
+          "group_overlap": 0,
+          "seconds": 18.764266457990743
+        },
+        {
+          "fold": 1,
+          "fit_seed": 20261117,
+          "train_ids_sha256": "6fecbd9b5e0b05b7037b7533d2d8cb9d02167ee8b10c368c40635438631fb3cb",
+          "query_ids_sha256": "352ab75dc44675e720460b2747140d4f78d76692b4c005d56f26aa82608ddeca",
+          "group_overlap": 0,
+          "seconds": 11.317412666976452
+        },
+        {
+          "fold": 2,
+          "fit_seed": 20261118,
+          "train_ids_sha256": "51a90ecbfbf06d74865fc36c26e577209848deff9e0e989861fd8789f2dab54b",
+          "query_ids_sha256": "3a6f2fe1b7c17514cc16d6edff0acadc7f9458b6cd961e80caf5cd24c92a1c56",
+          "group_overlap": 0,
+          "seconds": 11.289088750025257
+        }
+      ],
+      "original_oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261116.npz",
+      "reference_copied_without_training": true
+    }
+  ],
+  "total_seconds": 0,
+  "reference_copied_without_training": true,
+  "original_summary_sha256": "435650d0ff78f3a93901a6d7c017761559bdb1e5f0a77f236692d2b679762569"
+}
