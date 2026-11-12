@@ -26,6 +26,8 @@ RECIPES = [
     ('Mitra-v2 last-block adaptation', '041', 'v75_Mitra_lastblock50', 'compact13', 'inner step selection0..50, fresh full-fold refit; only last block and output layers trained'),
     ('Mitra-v2 bounded100-step adaptation', '042', 'v76_Mitra_lastblock100', 'compact13', 'one max-step extension based on inner training curves; all other learning settings unchanged'),
     ('Mitra-v2 unlabeled-roster context', '043', 'v77_Mitra_context20', 'compact13 + seven peer/context fields', 'fixed transductive attribute bundle; no target propagation'),
+    ('Mitra-v1 pretrained inference', '044', 'v78_Mitra1_zeroshot', 'compact13', 'different pinned pretraining generation; zero-shot'),
+    ('Mitra-v1/v2 fixed equal mean', '044', 'v79_Mitra12_mean', 'compact13', 'fixed equal probability mean; no learned weights'),
 ]
 
 
