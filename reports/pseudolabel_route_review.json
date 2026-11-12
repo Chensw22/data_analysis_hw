@@ -1,0 +1,25 @@
+{
+  "status": "rejected_before_candidate_training",
+  "threshold_predeclared": 0.98,
+  "pseudo_weight_predeclared": 0.2,
+  "development_rows": 6954,
+  "dual_selected": 1044,
+  "dual_errors": 3,
+  "cat_only_selected": 1139,
+  "cat_only_errors": 4,
+  "dual_planets": {
+    "Europa": 780,
+    "Mars": 228,
+    "Earth": 29,
+    "__MISSING__": 7
+  },
+  "projected_test_rows_if_same_coverage": 642.1035375323555,
+  "projected_weight_fraction_of_outertrain": 0.027700756580343208,
+  "decision": "Protocol is valid, but fixed high-confidence pseudo rows mostly reinforce easy examples. Do not lower threshold or repeat self-training after seeing this diagnostic. No true test labels, test predictions, training, or deployment occurred.",
+  "limitation": "Descriptive selected-subset accuracy from previously explored development OOF is not a new candidate score or guaranteed test pseudo-label quality. Weight sum is not independent information.",
+  "sources": [
+    "https://arxiv.org/abs/2001.07685",
+    "https://arxiv.org/abs/1911.04252",
+    "https://arxiv.org/abs/1908.02983"
+  ]
+}

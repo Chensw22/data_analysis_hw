@@ -1,0 +1,7 @@
+{
+  "status": "rejected_before_implementation",
+  "proposed_change": "Original Earth/Cryo spatial expert only: separate P/S GaussianProcessClassifier with Constant*Matern1.5; train-only coordinate scaling and LML hyperparameter fit, same .5 blend.",
+  "reason": "No new input information; prior local residual diagnostics, 5-vs-9-knot comparison and common-order coordinate replacement gave little evidence of remaining smooth spatial structure. Learning LML is not a guarantee of accuracy/logloss improvement.",
+  "limit": "Evidence lowers priority, does not prove every GP model ineffective. Resource size is feasible, not the reason for rejection.",
+  "source": "https://scikit-learn.org/stable/modules/gaussian_process.html"
+}
