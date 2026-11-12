@@ -1,0 +1,45 @@
+{
+  "seed": 20261112,
+  "confirmation_seeds": [
+    20261113,
+    20261114
+  ],
+  "folds": 3,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "configs": {
+    "v6_no_id_features": {
+      "context": false,
+      "model": "catboost",
+      "depth": 6,
+      "iterations": 700,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5
+    },
+    "TabPFN_v2_compact8": {
+      "context": false,
+      "model": "tabpfn",
+      "compact": true,
+      "n_estimators": 8
+    },
+    "TabPFN_v2_engineered8": {
+      "context": false,
+      "model": "tabpfn",
+      "compact": false,
+      "n_estimators": 8
+    }
+  },
+  "blend": [],
+  "target_policy": "Development labels only; no holdout scoring. Full train labels used only for final fit.",
+  "context_policy": "Transductive unlabeled full train+test roster: group size, peer attributes, unanimous imputation. No target propagation.",
+  "gate": "Screen accuracy >0.83 and improvement >=0.001; both new split seeds improve; confirmation mean accuracy >0.83 and mean gain >=0.001. Candidate frozen before confirmation. User approval required before online submission.",
+  "sources": {
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "tabpfn_refine.py": "576bd8e73fa6f047304d8647f1f9fdf4e9bf9e9307e802c42f1d2d743d550226",
+    "tabpfn_candidate.py": "1e70fd565ab544f7f7c81ce64a7b5b41d1e5e7861831f4288ef17c223e350b5f",
+    "requirements-tabpfn.lock.txt": "6ff3be368f23d8c0647040664cceca83e082316e5ab8301a3881c81abfb8bec0"
+  },
+  "checkpoint_sha256": "cf8c519c01eaf1613ee91239006d57b1c806ff5f23ac1aeb1315ba1015210e49",
+  "attribution": "Built with PriorLabs-TabPFN"
+}
