@@ -105,8 +105,10 @@ if __name__=='__main__':
         {'screen':iterate.screen,'confirm':iterate.confirm,'export':iterate.export}[args.stage](out)
         if args.stage=='screen':
             path=iterate.ROOT/'tabpfn_candidate.py';shutil.copy2(path,out/'tabpfn_candidate_source.py')
+            shutil.copy2(iterate.ROOT/'requirements-tabpfn.lock.txt',out/'requirements-tabpfn.lock.txt')
             protocol=json.loads((out/'protocol.json').read_text())
             protocol['sources']['tabpfn_candidate.py']=hashlib.sha256(path.read_bytes()).hexdigest()
+            protocol['sources']['requirements-tabpfn.lock.txt']=hashlib.sha256((iterate.ROOT/'requirements-tabpfn.lock.txt').read_bytes()).hexdigest()
             protocol['checkpoint_sha256']=hashlib.sha256(WEIGHTS.read_bytes()).hexdigest()
             protocol['attribution']='Built with PriorLabs-TabPFN; Prior Labs License v1.1 (May2025)'
             (out/'protocol.json').write_text(json.dumps(protocol,indent=2)+'\n')
