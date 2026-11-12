@@ -1,0 +1,155 @@
+{
+  "status": "prespecified_new_model_batch_under_unchanged_group_primary_protocol_pending_root_authorization",
+  "scope": "Two new model recipes only: Mitra-v1 zero-shot and fixed0.5/0.5 v1/v2 mean. No change to validation seeds, thresholds, reference models or old failed decisions. No new score inspected for this design.",
+  "historical_record_sha256": {
+    "reports/top5_validation_review.json": "72792dd8c2ae21a492a4238926d7f11dc3e389c16484a8c556104417cb85ef2c",
+    "reports/top5_authorization.json": "c7a304f198019506da883c0f11e7c6b0f092210559521150417800dc726e9db7",
+    "reports/top5_peer_target_review.json": "a20465ef02220583cb542c3f9e04d7d0db937e4dfb687d2e0783e18149eee969",
+    "reports/run_003/REVIEW.md": "c01de4f35b1b36b078f3b80786f170d590ff4f575713b608752148c3e854b24a"
+  },
+  "scientific_assessment": {
+    "method_hypothesis": "A different synthetic-pretraining generation may have different error structure; one fixed equal mean tests complementarity without fitting weights. Neither result is assumed better.",
+    "required_disclosure": "The group-primary design remains exactly the previously frozen design. The earlier phase completed with both candidates A_false and stays unchanged. All6954 labels and all three group partitions have already been used; this new model batch is adaptive research, not independent confirmation.",
+    "dependence": "Paired group bootstrap is a sensitivity summary on reused OOF fits, not a post-selection significance guarantee."
+  },
+  "fixed_scope_before_new_scores": {
+    "candidates": [
+      "v78_Mitra1_zeroshot",
+      "v79_Mitra12_mean"
+    ],
+    "references": [
+      "v71_Mitra2_zeroshot",
+      "v44_seed_ensemble"
+    ],
+    "group_split_seeds": [
+      20261112,
+      20261115,
+      20261116
+    ],
+    "new_primary_seeds": [
+      20261115,
+      20261116
+    ],
+    "folds_per_seed": 3,
+    "splitter": "StratifiedGroupKFold(n_splits=3,shuffle=True,random_state=seed)",
+    "group_key": "PassengerId prefix before underscore",
+    "fit_seed": "splitseed+zero_basedfold; preserve everycandidate ownfrozenoffsets/preprocessing/weights",
+    "data": "Original fixed6954 development rows only; previously opened holdout targets excluded. Both recipes use the unchanged13-column Mitra preprocessing and full training-support labels. Query groups remain disjoint from training-support groups.",
+    "identical_folds": "Copy the exact existing frozen assignments for12/15/16; do not redraw folds or re-fit references.",
+    "fair_queue": "Both new recipes must complete group12/15/16 before either can become eligible. Matched reference OOF from the completed previous phase is reused only with full source/environment/protocol/data/row/group/fold/SHA provenance. No candidate may be dropped for unfavorable results.",
+    "no_expansion": "One fixed model batch under unchanged protocol. No added candidate/seed, seedselection, threshold/weight or model-feature change after viewing new batch outcomes."
+  },
+  "A_research_online_gate": {
+    "all_conditions_required": [
+      "Originalscreen accuracy is within thefrozenA practicalband: accuracy>=0.8198159332758125-0.01. Thisscreen is retained as priorrandomrowevidence, not relabelledgroupvalidation.",
+      "Candidateaccuracy strictlyexceeds matchedMitraaccuracy separately on groupseed20261115 and20261116.",
+      "Mean pairedgain versusMitra over those two newprimarygroupseeds is at least0.001 (0.10percentagepoint).",
+      "On groupseed20261112, candidateaccuracy is at leastmatchedMitraaccuracy. Thisrequirement applies equallyto bothcandidates.",
+      "On eachof allthreegroupseeds, candidategain versusmatchedv44 is at least-0.01.",
+      "Everyrequiredmodel/fold completesunder itsfrozenrecipe andresourcegate; OOFrow/group/foldalignment, source/environment/checkpoint/datahashes andprobabilityvalidity pass.",
+      "The proposedsubmission does not duplicate an alreadytestedpredictionfile; export/sourcehashes and latestofficialsubmissionallowance are checked."
+    ],
+    "claim": "A means a qualifiedgroup-primary onlineexperiment. A0.10pp selectionthreshold is not aclaim of practicalsuperiority or statisticalequivalence. Report alloldrandomresults and reasonstheyfailed alongside the newdecision.",
+    "paired_interval_role": "Report passenger-weighted pairedwhole-group bootstrap sensitivity for eachseed andtheaverage ofthenewprimaryseeds. Do not require a falselyindependentpvalue or advertise statisticalnoninferiority from these reusedtargets."
+  },
+  "S_stable_local_superiority_gate": {
+    "preserve_absolute_bar": "Require originalscreenaccuracy>0.83 and meanaccuracy across newprimarygroupseeds>0.83; do not silentlyrelax thelegacy83highbar forS.",
+    "practical_gain": "Both newprimarygroupgains versusv44 arepositive andtheirmean exceeds0.01. Aconditions versusMitra alsohold.",
+    "consistency": "Oldgroup12 gain versusv44 mustalso bepositive; theknown stressresult is disclosed, not reused asindependentconfirmation.",
+    "uncertainty_summary": "Pairedwhole-group bootstrap lower95%bound formeannewgroup candidate-v44 gain isabove0; reporteffect/interval andits adaptive-selectionlimitations. Mean>1pp pluslowerbound>0 doesnot prove thepopulationgain itselfexceeds1pp.",
+    "interpretation": "Stablelarger localgroup-primary evidence underthisfixedprocedure; not a privateleaderboard guarantee or a formalpostselectionsignificanceclaim."
+  },
+  "bootstrap_recipe": {
+    "replicates": 2000,
+    "seed": 20261119,
+    "paired_statistic": "Average per-passenger candidate-minus-reference correctness acrossgroupseeds15/16; resamplecompletePassengerIdgroups withreplacement whilekeeping model/repeatpairing; compute passenger-weightedmean ineachdraw.",
+    "prohibitions": [
+      "Do nottreat sixoverlappingfoldmetrics as independentobservations.",
+      "Do not poololdandnewgroupseeds whilecalling allof themunseen.",
+      "Do not tuneweights,thresholds,subgroups or seedchoice frombootstrapoutcomes."
+    ]
+  },
+  "authorization_and_records": {
+    "additional_user_question_required": false,
+    "new_record_required": "Root creates reports/top5_generation_authorization.json binding this policy SHA and the fixed new batch; existing authorization and decisions are not rewritten.",
+    "entire_queue_required": true,
+    "before_submission": "Require the same A gate, full fixed batch completion, source-bound export, nonduplicate prediction file and current official submission allowance. S retains its stronger unchanged meaning.",
+    "budget": "Root freezes per-component execution budgets in the new authorization; references are copied without model training."
+  },
+  "battle": {
+    "status": "independent_read_only_review_passed",
+    "reviewer": "review_current",
+    "verified": [
+      "A_research_online_gate, S_stable_local_superiority_gate and bootstrap_recipe JSON-identical to old group policy",
+      "Exactly v78/v79 and unchanged references; no reference training",
+      "All three group seeds already used and adaptive research disclosed",
+      "Both new candidates must complete; old failed queue remains unchanged"
+    ],
+    "implementation_review": "Separate code review; this policy approval alone does not qualify any model."
+  },
+  "earlier_documented_group_disjointness": [
+    {
+      "path": "reports/run_003/REVIEW.md",
+      "line": 7,
+      "text": "官方 train/test 的 GroupId 前缀和完整 Cabin 交集均为零。真实测试是新群组，不存在“训练集中有该测试乘客同行标签”的条件。",
+      "followup_line": 14,
+      "followup": "Reports research and review agents independently verifying this fact and rejecting group-target transfer."
+    },
+    {
+      "path": "reports/top5_validation_review.json",
+      "line": 74,
+      "text": "Actualtrain/test GroupIds are disjoint. Random row CV can put group mates on both sides and give misleading transfer evidence even without explicitGroupId features."
+    }
+  ],
+  "protocol_relation": {
+    "kind": "new fixed model batch, not a second validation-design revision",
+    "inherited_policy": "reports/top5_group_validation_review.json",
+    "inherited_policy_sha256": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+    "unchanged_sections": [
+      "A_research_online_gate",
+      "S_stable_local_superiority_gate",
+      "bootstrap_recipe"
+    ],
+    "primary_seed_terminology": "Fields new_primary_seeds and newgroup refer to their original protocol roles. Seeds15/16 are now already used partitions, not unseen validation in this new batch.",
+    "stop": "No candidate additions, seed replacement, threshold/weight tuning or rescue additions to the completed previous phase."
+  },
+  "batch_spec": {
+    "run": "run_044",
+    "module": "mitra_generation_candidate",
+    "artifact_phase": "artifacts/top5_generation_phase",
+    "candidates": {
+      "v1": {
+        "version": "v78_Mitra1_zeroshot",
+        "checkpoint_generation": "v1",
+        "weights": [
+          1.0
+        ]
+      },
+      "mean": {
+        "version": "v79_Mitra12_mean",
+        "checkpoint_generations": [
+          "v1",
+          "v2"
+        ],
+        "weights": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "references": {
+      "mitra": "v71_Mitra2_zeroshot",
+      "v44": "v44_seed_ensemble"
+    },
+    "reference_phase": "artifacts/top5_group_phase",
+    "reference_training_allowed": false,
+    "model_review": "reports/top5_mitra_v1_review.json",
+    "unchanged_model_contract": "Original13 attributes, preprocessing/missing handling, seed mapping, fullcontext, fixedbackend/precision, threshold0.5. No fine-tuning or learned ensemble weights."
+  },
+  "reference_reuse_evidence": {
+    "artifacts/top5_group_phase/protocol.json": "a4e9acfadd6701543f4708b94be566a71fc0fb8da7c85f8b44db5827b5675f8d",
+    "artifacts/top5_group_phase/eligibility.json": "39d6cd5d419ffe6224fb25967cd33d1567546bb204163ac150cd0a39b7fe55b7",
+    "reports/top5_group_authorization.json": "24b0c5fd8563afa3a92d305040b6c413ff6367a953f10ef9cfaf9f91a9e1d831",
+    "reports/top5_mitra_v1_review.json": "c47d7c0501377de62ce790fa3e2aea1a023d470118c43edb3a510147f10f36bc"
+  }
+}

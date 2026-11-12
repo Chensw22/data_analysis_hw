@@ -1,0 +1,35 @@
+{
+  "recorded_at_utc": "2026-11-12T20:30:23.785665+00:00",
+  "user_instruction": "继续迭代方案吧，如果出现稳定好的模型，就提交线上测试。现在目标是进入5%，同时注意额度限制，给我留下周限额的12%",
+  "target": "official online rank fraction <=0.05",
+  "eligibility_policy": "reports/top5_generation_validation_review.json",
+  "eligibility_policy_sha256": "ff5311f3467efb8db282729ed5a115f20781c7a22f46ad9b465b5fa231f071ca",
+  "automatic_submission_scope": "Only the fixed v1 and equal-mean batch under unchanged group-primary rules, after the complete queue and all individual A conditions pass. Qualified experimental testing is not S superiority.",
+  "fixed_candidates": [
+    "v78_Mitra1_zeroshot",
+    "v79_Mitra12_mean"
+  ],
+  "fixed_references": [
+    "v71_Mitra2_zeroshot",
+    "v44_seed_ensemble"
+  ],
+  "budgets_seconds": {
+    "refs": {
+      "v44": 1800,
+      "mitra": 1800
+    },
+    "candidates": {
+      "v1": 3600,
+      "mean": 3600
+    }
+  },
+  "all_fixed_queue_must_complete_before_submission": true,
+  "weekly_reserve_percent": 12,
+  "desktop_reminder_required": true,
+  "no_duplicate_or_blind_retry_upload": true,
+  "prior_policy_and_authorization_unchanged": true,
+  "previous_authorization_sha256": "24b0c5fd8563afa3a92d305040b6c413ff6367a953f10ef9cfaf9f91a9e1d831",
+  "revision_disclosure": "Fixed model batch under unchanged group-primary protocol. All group partitions12/15/16 and6954 development labels have already been used; no independent confirmation. Previous failed decisions stay unchanged.",
+  "latest_user_authorization_applies": true,
+  "no_additional_external_account_or_license_acceptance": true
+}
