@@ -37,7 +37,7 @@ def main():
         scope='Completed fixed development3fold recipes only, not entire model families. Controls and blends are retained as named recipes. Repeated identical versions are deduplicated.',
         stability='No current recipe is established as a stable winner. v34 fresh-seed gains are small and GroupCV reverses them; leading neural recipes have no matching repeated-seed/group confirmation.',
         future_stability_review='Treat <=1pp differences as the same practical performance level for a direct comparison. Claim a clearly stronger recipe only after repeated paired splits give consistent material gains and group validation does not reverse the direction; one public leaderboard result is insufficient.',
-        online_evidence='Mitra-v2 is best among five completed account submissions in the saved2026-11-12 batch; this is a single public test observation, not a stable-superiority certificate.',
+        online_evidence='All eight A-tier representatives have completed account submissions; see reports/a_tier_batch_20261112/results.json. Mitra-v2 remains highest on the saved2026-11-12 public test, but this is not a stable-superiority certificate.',
         s_tier=[], recipe_count=len(rows), counts={tier:sum(r['tier']==tier for r in rows) for tier in 'ABC'})
     (ROOT/'reports/method_tiers.json').write_text(json.dumps(policy, indent=2)+'\n')
     print(json.dumps(policy['counts']), f'{len(rows)} completed recipes; reference={100*best:.5f}%')

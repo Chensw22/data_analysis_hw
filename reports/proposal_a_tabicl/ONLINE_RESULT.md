@@ -1,0 +1,1 @@
+A-tier representative batch3/3: v37_TabICL_engineered4, COMPLETE, ref58276759, public score0.80734. Full8693-row training context, original engineered features,4 estimators, FP32/MPS; final export221.08seconds. Mitra-v2 remains account best0.81155; account best snapshot142/2039 at2026-11-12T15:03:57.249342Z. Two daily uploads remained. This batch authorization is exhausted.
