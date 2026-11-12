@@ -9,9 +9,10 @@ from quota_guard import assess,latest_weekly
 class QuotaGuardTests(unittest.TestCase):
     def test_reserve_boundary_stops_and_stale_data_does_not_allow_work(self):
         now=datetime(2026,11,12,8,tzinfo=timezone.utc)
-        info=dict(observed_at_utc='2026-11-12T08:00:00Z',remaining_percent=15.)
+        info=dict(observed_at_utc='2026-11-12T08:00:00Z',remaining_percent=12.)
         self.assertEqual(assess(info,now=now)['status'],'stop')
-        self.assertTrue(assess({**info,'remaining_percent':16},now=now)['can_start_more_work'])
+        self.assertTrue(assess({**info,'remaining_percent':13},now=now)['can_start_more_work'])
+        self.assertEqual(assess({**info,'remaining_percent':15},reserve=15,now=now)['status'],'stop')
         self.assertFalse(assess({**info,'observed_at_utc':'2026-11-12T07:00:00Z','remaining_percent':90},now=now)['can_start_more_work'])
 
     def test_only_weekly_metadata_is_emitted(self):

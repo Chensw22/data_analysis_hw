@@ -37,7 +37,7 @@ def latest_weekly(path):
     return latest
 
 
-def assess(latest,reserve=15.,max_age=180,now=None):
+def assess(latest,reserve=12.,max_age=180,now=None):
     now=now or datetime.now(timezone.utc)
     timestamp=datetime.fromisoformat(latest['observed_at_utc'].replace('Z','+00:00'))
     age=(now-timestamp).total_seconds()
@@ -53,7 +53,7 @@ def assess(latest,reserve=15.,max_age=180,now=None):
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--session-file',type=Path,required=True)
-    parser.add_argument('--reserve',type=float,default=15.)
+    parser.add_argument('--reserve',type=float,default=12.)
     parser.add_argument('--max-age-seconds',type=int,default=180)
     parser.add_argument('--output',type=Path,default=Path(__file__).resolve().parent/'artifacts/quota_status.json')
     args=parser.parse_args()
