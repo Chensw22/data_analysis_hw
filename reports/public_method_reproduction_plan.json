@@ -1,0 +1,159 @@
+{
+  "audit_date": "2026-11-12",
+  "status": "read_only_code_audit_completed_no_experiments",
+  "conclusion": {
+    "verified_official_online_82plus_solutions": 0,
+    "author_claimed_historical_top10_percent_repositories_reviewed": 2,
+    "recommendation": "Do not prioritize either as a new method-family experiment. Continue the already approved FT-Transformer/TabR/SCARF breadth screen. These public sources do not supply verified evidence of a stronger untested mechanism.",
+    "scope": "Two author repositories were inspected. This does not establish anything about other leaderboard participants or their methods. No allegation about unreviewed competitors is made.",
+    "verified_current_first_or_second_place_methods": 0
+  },
+  "boundaries": {
+    "read_only_remote_access": "Author README, training Python, notebook source cells, validation code and aggregate experiment metadata only. GitHub connector failed; used public GitHub raw/API fallback.",
+    "third_party_code_executed": false,
+    "prediction_or_test_answer_files_downloaded": false,
+    "notebook_outputs_used": false,
+    "models_or_dependencies_installed": false,
+    "training_or_scoring_performed": false,
+    "source_storage": "Third-party code was read in memory, not saved to the project. This report retains source URLs, hashes and method descriptions only.",
+    "prior_exclusion": "reports/public_solution_audit.json excludes bsthere/spaceship-titanic-0-82137-solution because a fixed prediction override makes its title score unusable as model evidence. It was not revisited or reused."
+  },
+  "candidates": [
+    {
+      "author_repository": "https://github.com/hd1894/Kaggle-AutoML-Agents",
+      "commit": "d9604dfd1d56683817440146f1b62beba19c7692",
+      "commit_date": "2026-05-24T17:49:26Z",
+      "score_claim": {
+        "type": "author-reported historical Kaggle public leaderboard result, not independently reproduced or checked against official submission history",
+        "public_accuracy": 0.80991,
+        "rank": 121,
+        "teams": 1985,
+        "top_percent": 6.1,
+        "source": "https://github.com/hd1894/Kaggle-AutoML-Agents/blob/d9604dfd1d56683817440146f1b62beba19c7692/competitions/spaceship-titanic/state/result_42.json"
+      },
+      "metric_separation": {
+        "author_cv_f1": 0.8203,
+        "author_cv_log_loss": 0.382,
+        "author_cv_accuracy": null,
+        "our_fixed_cv_accuracy": null,
+        "mlebench_score": null,
+        "warning": "0.8203 is F1, not 82.03% accuracy. competition.md incorrectly labels the competition evaluation metric f1; its current CV configuration uses log_loss. Neither can be substituted for our accuracy gate."
+      },
+      "code_evidence": [
+        {
+          "path": "competitions/spaceship-titanic/src/pipeline/train_ensemble.py",
+          "sha256": "bf67e2f68a04e96969e640f893ca20b91dbc0bb999a2462506c8f3eb83e8d76d",
+          "sections": "L57-91 fixed tree parameters; L147-209 three-model soft-voting builder. The main entry point still describes experiment9 and chooses between two-model weight recipes, so it is not the exact experiment42 entry point."
+        },
+        {
+          "path": "competitions/spaceship-titanic/src/pipeline/features.py",
+          "sha256": "2946b8284bdbbd1f6cc205d543beec34a53480f8fb00e7899ce08ff7922d0e4c",
+          "sections": "L157-181 train-only group counts; L500-640 active columns, TargetEncoder and sklearn Pipeline. Name-frequency and cabin-rank transformers are present but their outputs are dropped from active columns."
+        },
+        {
+          "path": "competitions/spaceship-titanic/src/utils/validation.py",
+          "sha256": "76420b1926c64aa9a4d7cb6678519ba8ddc11c98e57c5b0bd9e059d9350ac8ae",
+          "sections": "Reads metric/folds from competition.md; cross_val_score evaluates the full Pipeline."
+        },
+        {
+          "path": "competitions/spaceship-titanic/competition.md",
+          "sha256": "13e5b9fd878a322452b9a321acfdf84d75583bbe8c70dc67ccdf854ae71492a8",
+          "sections": "L51-55 StratifiedKFold5, seed42, log_loss; L8 says evaluation f1."
+        },
+        {
+          "path": "competitions/spaceship-titanic/state/result_42.json",
+          "sha256": "56adda1cf68c911c7e3284cb3ccfcd21a8566b491451660edeaeeeacdd07e59e",
+          "sections": "Separately records cv_f1_mean, cv_logloss_mean and author lb_score/rank."
+        },
+        {
+          "path": "competitions/spaceship-titanic/state/session_summary.md",
+          "sha256": "b94f0f263ae689cdf8e1e312027cec7adb5236d7bbbde48fa5658a65d31dbe17",
+          "sections": "Author reports later Optuna retuning improved CV logloss but worsened leaderboard score; this remains an author report, not our reproduction."
+        }
+      ],
+      "mechanism": "LightGBM + XGBoost + CatBoost soft voting with fixed weights .4/.4/.2. Compact engineered cabin/spending/age/group fields; numeric imputation/scaling; OHE; a cross-fitted sklearn TargetEncoder for deck_side.",
+      "new_vs_our_work": "No new model family: all three tree learners, ensembles, cabin/side interactions and structural feature variants are already represented in local experiments. deck_side target encoding is a specific representation difference, not evidence for a new high-performing family; CatBoost already models categorical interactions.",
+      "reproducibility_status": "A trainable pipeline can be reconstructed from source builders, but the exact claimed submission artifact-to-code lineage and historical dependency environment are not verified. All inspected prediction assignment comes from model inference; no embedded fixed prediction payload was observed in the inspected code.",
+      "limitations": [
+        "Do not call author F1 values accuracy or claim their fold distribution matches our fixed dev split.",
+        "TargetEncoder has no explicit random_state in the inspected source, so current code is not completely seed-pinned.",
+        "The repository records many hyperparameter and weight selections on its CV; replaying that search is not an unbiased estimate.",
+        "Training-only group frequency maps default unseen groups to one. On this project train/test group-disjoint setting, this creates a substantial feature-distribution distinction; importing its group implementation unchanged is not justified.",
+        "No official leaderboard verification or source execution was performed."
+      ],
+      "reproduction_decision": "not_prioritized",
+      "conditional_reproduction_plan": {
+        "only_if_later_requested": "Reconstruct one externally fixed recipe, not its 49-experiment search or submission machinery.",
+        "input": "Raw approved passenger attributes; remove Transported before feature construction. Rebuild the active source pipeline, including its explicit group behavior if claiming source replication; document deviations separately.",
+        "splits": "Use existing6954 dev rows and unchanged outer3 folds. All medians/scalers/vocabularies/TargetEncoder fitted inside outertrain; TargetEncoder training values use its internal cross-fitting. Pin encoder random_state. No old holdout or test labels.",
+        "selection": "Fix author weights .4/.4/.2, parameters, threshold .5 in advance. Report accuracy and logloss; never optimize weights/threshold using our outer OOF.",
+        "cost": "At least9 base-model fits for3 folds (551-tree LGBM,354-tree XGB,647-tree CatBoost per fold), plus fold-local preprocessing/target encoding. CPU expected feasible on16GB; wall time unmeasured. Replaying original150+ tuning trials is intentionally excluded."
+      }
+    },
+    {
+      "author_repository": "https://github.com/Sayak9/Kaggle-Spaceship-Titanic-Competition",
+      "commit": "2232c9889a4169bb1d3579d42fee2ce5cf8f202e",
+      "commit_date": "2025-06-23T11:26:27Z",
+      "score_claim": {
+        "type": "author README historical rank claim only",
+        "rank": 645,
+        "top_percent": 7,
+        "public_accuracy": null,
+        "official_submission_verification": false,
+        "source": "https://github.com/Sayak9/Kaggle-Spaceship-Titanic-Competition/blob/2232c9889a4169bb1d3579d42fee2ce5cf8f202e/README.md"
+      },
+      "metric_separation": {
+        "author_holdout_accuracy_approx": 0.797,
+        "author_public_accuracy": null,
+        "our_fixed_cv_accuracy": null,
+        "mlebench_score": null,
+        "warning": "The roughly79.7% number is the author validation score; the README does not establish82% online accuracy or a currently comparable rank."
+      },
+      "code_evidence": [
+        {
+          "path": "README.md",
+          "sha256": "ff6d02d8a3cfb469d608ecc594f42a50c3472caf817cce7ca587cf47718438d8",
+          "sections": "Claims Top7%, rank645; lists model validation results."
+        },
+        {
+          "path": "Kaggle Spaceship Titanic Competition.ipynb",
+          "sha256": "702856cf9efb8152d87ff9f843f02ccb4bdf6e4aaaac43abc1534212753f2053",
+          "sections": "Inspected source cells only. Concatenates raw train/test with dummy false test target; KNNImputer on11 attributes excluding target; then one20%split seed42; five default classifiers; final predictions from LGBM trained on80%train without a full-train refit."
+        }
+      ],
+      "mechanism": "Default KNNImputer on unscaled Age/VIP/cabin/CryoSleep/spending values, then OHE HomePlanet/Destination, spending aggregates and fixed composite sums; default LightGBM selected among five classifiers.",
+      "new_vs_our_work": "KNN attribute imputation is more specific than rule/surname imputation, but this source provides no controlled evidence that it improves prediction. The tree family and most engineered features are already covered.",
+      "reproducibility_status": "Short notebook contains a complete model-based prediction path and no fixed prediction payload was observed. Dependencies/defaults and random forest/tree seeds are not fully pinned; historical leaderboard claim is not independently verified.",
+      "limitations": [
+        "KNN preprocessing is fit on concatenated train and test features before validation splitting. Target is not an imputer input, so this is transductive attribute preprocessing, not direct label propagation; it nevertheless differs from our strict train-only preprocessing protocol.",
+        "Unscaled amenity spending and cabin numbers dominate Euclidean-style imputation distances; no imputation ablation is shown.",
+        "A correlation exploration includes the dummy-false test target, so its feature-ranking interpretation is unreliable. The target itself is dropped before classifier fitting.",
+        "One non-stratified20%validation split, default model comparison, and no final full-train refit do not establish a robust method-level advantage.",
+        "Do not reproduce blanket numeric treatment of imputed binary fields or synthetic composite sums merely because the README claims Top7%."
+      ],
+      "reproduction_decision": "not_prioritized_as_a_strong_public_reference",
+      "conditional_reproduction_plan": {
+        "only_if_later_requested": "Treat KNN imputation as a separately frozen missing-attribute hypothesis, not a reproduction of a proven82%solution.",
+        "input": "Use only approved input attributes; retain original missing flags. Never include Transported, a dummy test target, supplied predictions, or labels of validation/query rows in imputation.",
+        "splits": "Existing fixed outer3 folds, imputer fit only on applicable outertrain; any inner epoch/parameter selection repeats preprocessing inside innertrain. Keep all model settings and downstream features matched to an imputation control.",
+        "selection": "Predeclare imputer/scaling/binary handling rather than iterating on outer OOF. Original notebook scores are not a comparable control.",
+        "cost": "A frozen three-fold selected-model reconstruction needs3 imputer fits and3 LightGBM fits; a matched imputation/control experiment doubles model fits. Exact KNN imputation has quadratic pairwise-distance work in roughly4636 training rows, with chunking required to bound working memory. Runtime not measured."
+      }
+    }
+  ],
+  "other_claims_not_promoted_to_reproduction_candidates": [
+    {
+      "source": "https://github.com/patilshan/spaceship-titanic-kaggle",
+      "finding": "README82.2% is explicitly held-out/test validation with5-fold evaluation, not a verified Kaggle public score. Source-code reproduction was not performed."
+    },
+    {
+      "source": "https://github.com/dirk61/MLE-Squad",
+      "finding": "README0.832 is an AgentBeats/MLE-bench result. Its gold threshold is benchmark metadata, not an official Spaceship Titanic medal or verified Kaggle leaderboard score; no matching fixed competition pipeline was audited."
+    },
+    {
+      "source": "https://www.kaggle.com/general/714319",
+      "finding": "Author explicitly distinguishes MLE-bench0.82069 from public leaderboard approximately0.80 and says the best stochastic run was not reproduced. Not treated as82%online evidence."
+    }
+  ],
+  "shared_evaluation_rule": "Any later implementation must use the unchanged development partition and fixed outer folds, train-only learned transforms, source/environment freeze, and the existing >83% local gate with stability checks. No imported score changes the gate or authorizes a submission."
+}

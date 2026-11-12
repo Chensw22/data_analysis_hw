@@ -494,7 +494,11 @@ def evaluate(name, matrices, train, dev, seed, out):
 
 
 def probe():
-    """Root-only resource/API probe: one real epoch of each phase, no accuracy."""
+    """Root-only probe: one selection-pretrain epoch and one supervised epoch, no accuracy.
+
+    This does not time the entire three-pretrain/two-supervised outer-fold recipe.
+    Extrapolation must account for selected epochs, repeated phases and pool sizes.
+    """
     train, _, matrices, dev = dataset()
     y = train.Transported.iloc[dev].astype(int).to_numpy()
     a, b = next(StratifiedKFold(3, shuffle=True, random_state=iterate.SEEDS[0]).split(dev, y))
@@ -522,7 +526,7 @@ def probe():
         inner_training_rows=len(x), unlabeled_pool_rows=len(pool), query_rows=len(query),
         pretraining_phase=pre, supervised_phase=sup, total_seconds=time.monotonic()-started,
         serialization_max_absolute_difference=float(np.max(np.abs(p-restored_p))),
-        note='Resource probe only. One-epoch overrides do not modify the frozen screening settings.',
+        note='Only one pretrain-selection and one supervised epoch are timed; not the complete five-phase cost. One-epoch overrides do not modify screening settings.',
         **resource_snapshot(DEVICE))
     print('SCARF probe', json.dumps(result), flush=True)
     return result

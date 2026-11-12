@@ -14,7 +14,7 @@
 
 ## 当前实验方向
 
-已尝试 MLP、TabM、TabPFN（含权重微调）、TabICL；最新32-view TabPFN为81.77%。多数近期微改未超过v44，当前改为方法级筛选：FT-Transformer字段注意力、TabR带标签邻居检索、SCARF无标签对比预训练与匹配scratch对照。先给合理训练预算并审查收敛，再比较成绩选择方向；不把一次配置失败等同整个模型族无效。已写好的结构计数微改暂缓运行。
+已尝试 MLP、TabM、TabPFN（含权重微调）、TabICL；最新32-view TabPFN为81.77%。多数近期微改未超过v44，当前改为方法级筛选：FT-Transformer字段注意力、TabR带标签邻居检索、SCARF无标签对比预训练与匹配scratch对照。先给合理训练预算并审查收敛，再比较成绩选择方向；不把一次配置失败等同整个模型族无效。已写好的结构计数微改暂缓运行。方法覆盖、各自输入与实际成绩见[方法比较表](reports/method_comparison.csv)与[评估边界](reports/method_comparison.json)，可运行 `summarize_methods.py` 更新。FT-Transformer默认配置已完成80.47%，其曲线显示过拟合而非达到训练预算上限。
 
 ## 数据与线上成绩
 
