@@ -25,3 +25,5 @@
 - 2026-11-12用户质疑过早陷入微调，当前切换为方法级广度筛选：先完成FT-Transformer、TabR检索网络、SCARF自监督及匹配scratch对照，再统一决定值得调参的路线。冻结合理首轮recipe，未收敛或资源中断标记inconclusive；一次配置失败不能否定整个模型族。已有未运行的structure_counts保留代码但暂不启动，以免继续扩张小特征路线。
 
 - 后续固定模型批次沿用group-primary门槛，不改写此前失败：v78/v79两代Mitra队列已全部完成均A/S=false；v80树模型与Mitra各半平均额外要求两次random不低于Mitra，完整六套OOF完成后仍A/S=false。证据分别见reports/top5_generation_phase和reports/top5_crossfamily_phase。这些划分均已使用，不能称独立验证。
+
+- 既有v76/run042的100步适配也已完成单独group复核（reports/top5_adaptation_phase）：9折完整，group12持平、group15+4个正确、group16-11个正确，A/S=false，不自动上传、不延长到200步。mitra_full_episode_probe.py只是合成1024/256训练episode的全参资源探针；不构成真实候选训练/选步/线上资格，后续需要另行冻结实验。
