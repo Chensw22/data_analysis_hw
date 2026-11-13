@@ -30,3 +30,5 @@ HistGradientBoosting距离A边界只有约0.007个百分点，TabM也仅约0.093
 100步适配81.65%、同行属性context20为81.58%；四视图与context20的固定分组队列已完整完成，两者均未取得线上测试资格。Mitra-v1为79.95%（C档边缘），v1/v2固定均值81.16%（A档），分组复核全部未通过。每个配方的分数与复核资格分别记录，不因属于A档就自动上传。
 
 树模型与Mitra固定各半集成81.97%属于A档，但分组验证未通过，不提交线上，见[top5_crossfamily_phase](top5_crossfamily_phase/RESULTS.md)。
+
+截至2026-11-13 10:23官方复核，Mitra最佳81.155%，账号144/2038（约前7.07%）。本次后续批次均未取得测试资格，没有新增线上提交。100步适配的完整三组结果见[top5_adaptation_phase](top5_adaptation_phase/RESULTS.md)。

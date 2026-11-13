@@ -1,0 +1,185 @@
+{
+  "status": "complete",
+  "synthetic_only": true,
+  "candidate_authorized": false,
+  "accuracy_computed": false,
+  "recipe": {
+    "pool_rows": 8693,
+    "support_rows": 1024,
+    "query_rows": 256,
+    "steps": 2,
+    "validation_support": 3708,
+    "validation_query": 928,
+    "final_support": 8693,
+    "final_query": 2318,
+    "query_chunk": 2318,
+    "seed": 42,
+    "budget_seconds": 1200,
+    "trainable_parameters": 75670026,
+    "mps_memory_fraction": 0.65,
+    "weights_dtype": "float32",
+    "mps_autocast": "bfloat16",
+    "native_head": 10,
+    "learning_rates": [
+      3e-07,
+      5.7e-07
+    ],
+    "weight_decay": 0.3,
+    "sampler": "fresh uniform permutation of synthetic training pool; disjoint within episode",
+    "limitation": "resource compatibility only; not official full-size episodic sampler or candidate authorization"
+  },
+  "before": {
+    "max_rss_bytes": 402571264,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "allocator_limit_bytes": 8263525171,
+  "updates": [
+    {
+      "step": 1,
+      "lr": 3.0000000000000004e-07,
+      "support_rows": 1024,
+      "query_rows": 256,
+      "support_ids_sha256": "08d69d88afa785f9adac657c71d6ee13dbb13f09db607f48596ace6dd447ef5d",
+      "query_ids_sha256": "3c6177816b1ab5a8c5a14b745f427acc59eeab014734d85afca6f18f8f222821",
+      "disjoint": true,
+      "parameters_with_finite_grad": 75670026,
+      "nonzero_gradient_blocks": [
+        "final_layer",
+        "final_layer_norm",
+        "layers.0",
+        "layers.1",
+        "layers.10",
+        "layers.11",
+        "layers.2",
+        "layers.3",
+        "layers.4",
+        "layers.5",
+        "layers.6",
+        "layers.7",
+        "layers.8",
+        "layers.9",
+        "x_embedding",
+        "y_embedding"
+      ],
+      "updated_blocks": {
+        "x_embedding": true,
+        "y_embedding": true,
+        "layers.0": true,
+        "layers.1": true,
+        "layers.2": true,
+        "layers.3": true,
+        "layers.4": true,
+        "layers.5": true,
+        "layers.6": true,
+        "layers.7": true,
+        "layers.8": true,
+        "layers.9": true,
+        "layers.10": true,
+        "layers.11": true,
+        "final_layer_norm": true,
+        "final_layer": true
+      },
+      "optimizer_state_tensor_bytes": 605361776,
+      "optimizer_state_steps": [
+        1
+      ],
+      "seconds": 31.84521199995652,
+      "resources": {
+        "max_rss_bytes": 572784640,
+        "mps_current_bytes": 2759013120,
+        "mps_driver_bytes": 2994700288,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      }
+    },
+    {
+      "step": 2,
+      "lr": 5.7e-07,
+      "support_rows": 1024,
+      "query_rows": 256,
+      "support_ids_sha256": "bb0c741f685b08a6d853ceb29b02b3cdd822137a1e89090e273176834db21aff",
+      "query_ids_sha256": "f5baab52b579118e1054b58843ce1f5a09c7caec95b45856d05bf23bb57cf7a4",
+      "disjoint": true,
+      "parameters_with_finite_grad": 75670026,
+      "nonzero_gradient_blocks": [
+        "final_layer",
+        "final_layer_norm",
+        "layers.0",
+        "layers.1",
+        "layers.10",
+        "layers.11",
+        "layers.2",
+        "layers.3",
+        "layers.4",
+        "layers.5",
+        "layers.6",
+        "layers.7",
+        "layers.8",
+        "layers.9",
+        "x_embedding",
+        "y_embedding"
+      ],
+      "updated_blocks": {
+        "x_embedding": true,
+        "y_embedding": true,
+        "layers.0": true,
+        "layers.1": true,
+        "layers.2": true,
+        "layers.3": true,
+        "layers.4": true,
+        "layers.5": true,
+        "layers.6": true,
+        "layers.7": true,
+        "layers.8": true,
+        "layers.9": true,
+        "layers.10": true,
+        "layers.11": true,
+        "final_layer_norm": true,
+        "final_layer": true
+      },
+      "optimizer_state_tensor_bytes": 605361776,
+      "optimizer_state_steps": [
+        2
+      ],
+      "seconds": 30.554165665991604,
+      "resources": {
+        "max_rss_bytes": 572784640,
+        "mps_current_bytes": 2603010048,
+        "mps_driver_bytes": 5142183936,
+        "mps_recommended_max_bytes": 12713115648,
+        "mps_measurement": "snapshots_not_peak"
+      }
+    }
+  ],
+  "validation": {
+    "support_rows": 3708,
+    "query_rows": 928,
+    "optimizer_state_tensor_bytes": 605361776,
+    "seconds": 22.94699904101435,
+    "resources": {
+      "max_rss_bytes": 572784640,
+      "mps_current_bytes": 1854593536,
+      "mps_driver_bytes": 6176079872,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    }
+  },
+  "final_inference": {
+    "support_rows": 8693,
+    "query_rows": 2318,
+    "seconds": 70.18298199994024,
+    "resources": {
+      "max_rss_bytes": 968327168,
+      "mps_current_bytes": 302680320,
+      "mps_driver_bytes": 4716281856,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    }
+  },
+  "reload_max_abs_difference": 0.0,
+  "artifact_sha256": "56dfc5850ba9f6dd9e8cb42796fd707cbc4909b62615431b133fb754429637d9",
+  "total_seconds": 217.21434691699687
+}
