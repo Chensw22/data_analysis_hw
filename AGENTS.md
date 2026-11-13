@@ -27,3 +27,6 @@
 - 后续固定模型批次沿用group-primary门槛，不改写此前失败：v78/v79两代Mitra队列已全部完成均A/S=false；v80树模型与Mitra各半平均额外要求两次random不低于Mitra，完整六套OOF完成后仍A/S=false。证据分别见reports/top5_generation_phase和reports/top5_crossfamily_phase。这些划分均已使用，不能称独立验证。
 
 - 既有v76/run042的100步适配也已完成单独group复核（reports/top5_adaptation_phase）：9折完整，group12持平、group15+4个正确、group16-11个正确，A/S=false，不自动上传、不延长到200步。mitra_full_episode_probe.py只是合成1024/256训练episode的全参资源探针；不构成真实候选训练/选步/线上资格，后续需要另行冻结实验。
+
+- 用户2026-11-13明确“传一下看看吧”授权v80一次探索性例外，已完成58292572/0.80804，上传commit948a285，低于最佳Mitra0.81155；账号144/2038。授权已耗尽，证据reports/crossfamily_online_20261113/RESULTS.md，不能继续沿用。
+- mitra_full_episode.py训练核心已实现并经CPU测试/审查，仍无正式screen wrapper、真实准确率或提交资格；小片段全参资源可行不等于效果改善。
