@@ -1,0 +1,29 @@
+{
+  "status": "frozen_before_forward",
+  "episodes": 3,
+  "outer_split_seed": 20261112,
+  "training_seeds": [
+    20261112,
+    20261113,
+    20261114
+  ],
+  "selection": "First original1024support/256query episode in original80/20 inner-training pool for each original3fold. No outervalidation queries.",
+  "mode": "train with no_grad; checkpoint step0 only",
+  "parameter_updates": 0,
+  "budget_seconds": 600,
+  "source_hashes": {
+    "diagnose_native_head.py": "d6a8d1576fc9a9582766032d3bc81d992cc6f9c5ec97cb34dd4c61e5b3997b50",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_full_episode_probe.py": "4f1e5c8a33ca2ac0704fe9129ab16758964cfca807052057122a6a823eb4dfdd",
+    "mitra_missing_flags_candidate.py": "62351f40ad3ecb7a4f4abe47f4f5ce29f06634bcce028c30d1b94cabf1c56279",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "data/raw/train.csv": "17336d553f49ebdf6ecb266d2b5d3746e5dd308445f7c7864141c4f28d2a88d0",
+    "data/raw/test.csv": "3c02b0703423d27d51a657a111b15a37b8d03b3c1de325e3a1e6b26f6572fc88",
+    "artifacts/run_002/split_indices.npz": "e9cce8bb5cb8dd5774ea31e95c8e4a1bded179d4a077c36d417654d70785afcf"
+  },
+  "environment_sha256": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+  "fixed_priority_heuristic": "All3 mean extraCE<.001nat and maximum unused mass<.01 => do not prioritize binary objective. Otherwise only confirm objectives differ; no automatic training.",
+  "interpretation": "L10=L2-log(p10(class0)+p10(class1)). Extra loss can be regularization/task recognition, not necessarily harmful. Tiny step0 mass does not prove identical gradients/learning; substantial mass does not establish accuracy gain. No new accuracy or outer/holdout scoring."
+}
