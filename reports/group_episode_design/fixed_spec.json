@@ -1,0 +1,66 @@
+{
+  "status": "reviewed_fixed_design_before_implementation_or_model_scoring",
+  "decision": "Accept one deployment-aligned adaptation package, group12 three folds versus frozen matched zero-shot; do not claim superiority to v81.",
+  "scope": "No model implementation, GPU, fitting, new candidate score, old holdout labels, or online-score-driven parameter selection in this review.",
+  "hypothesis": "Remove training support/query group overlap and choose adaptation duration on unseen groups, matching official train/test group separation. This is a hypothesis, not an established cause of v81 performance.",
+  "fixed_recipe": {
+    "relation": "GroupId is the string prefix before underscore in PassengerId. Used only for splitting and sampling; never a model feature.",
+    "input": "Same original compact13, missing/category processing, official train-only MitraPreprocessor and frozen v2 checkpoint as v81.",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "development": "Same original6954 rows, sorted; exact historical row hash and frozen group assignment verified by diagnose.py.",
+    "outer": "Frozen StratifiedGroupKFold3(shuffle=True,random_state=20261112) from matched Mitra group12 OOF. Do not choose/retry splits.",
+    "fit_seed": "20261112 + zero-based outer fold",
+    "inner": "First fold of StratifiedGroupKFold5(shuffle=True,random_state=fit_seed) within current outer training pool. Assert GroupId and knownCabin disjoint. No validation targets enter model fitting/support.",
+    "preprocessing": "Fit only inner training inputs for selection. After selection discard model/optimizer/preprocessor/RNG; reseed and freshly fit preprocessing on full outer training data.",
+    "episode_rng": "numpy.random.default_rng(fit_seed), independently reset at start of selection and fresh full refit.",
+    "episode_query": "perm = rng.permutation(len(current_training_pool)); query=perm[1024:1280]. Never redraw/reorder/stratify the query.",
+    "episode_support": "Filter the entire perm to rows whose GroupId is absent from all query GroupIds; take the first1024. Assert disjoint row IDs and groups. If fewer than1024 remain, fail explicitly; never reduce context or retry query.",
+    "training": "All75,670,026 parameters; persistent AdamW; native10-class CE; baseLR3e-6,weight_decay.3,betas(.9,.999),eps1e-8; exact existing literal warmup; fixed50 updates.",
+    "selection": "Evaluate full-inner-training-context binary logloss at steps0..50, choose strict minimum with earliest exact tie. Clear gradients immediately after every optimizer step and before validation; optimizer moments remain resident.",
+    "refit": "Fresh original checkpoint, reset seed/RNG, full-outertrain preprocessing. Train exactly selected number of group-disjoint episodes; selected0 returns fresh original weights. No retained selection weights or frozen-prefix cache.",
+    "inference": "Original full-support MitraPredictor; query_chunk2318; FP32weights/input, MPSbf16autocast, original exact SDPA/checkpoint backend, allocator cap.65. No hidden truncation.",
+    "horizon": "Max50 fixed; report cap selection, do not autoextend.",
+    "stage_budget_seconds": 14400,
+    "failure_policy": "Stage timeout/resource/sampler errors are incomplete, never partial success or implicit fallback."
+  },
+  "evaluation_and_limits": {
+    "primary": "Only the new candidate group12 threefold OOF vs cached matched original Mitra with identical dev IDs/folds. Cached v44 can be contextual reference.",
+    "zero_group_accuracy": 0.8169398907103825,
+    "v44_group_accuracy": 0.814495254529767,
+    "zero_random_screen_accuracy": 0.816508484325568,
+    "report": "Keep group-only metrics in a distinct table; never insert them into random A/B ranking as directly comparable scores.",
+    "not_v81_comparison": "Original v81 score is random-fold. To claim superiority over v81 or isolate sampling benefit, an additional old-v81 run on identical group folds is necessary. Current scope deliberately does not expand to six fits.",
+    "not_one_factor": "Both episode sampling and inner selection split change as one fixed deployment-aligned package. Any gain belongs to the package, not uniquely to one mechanism.",
+    "not_independent": "Group12 and same6954 labels have already been used. This is adaptive repeated-development validation, not a fresh holdout.",
+    "no_automatic_eligibility": "This design creates neither new A/S eligibility nor upload authorization; root applies current explicit user authorization separately."
+  },
+  "counterevidence_and_sampling_bias": [
+    "Existing zero-shot GroupCV accuracy is slightly higher than random CV; there is no evidence that current CV performance is primarily inflated by same-group support. Do not call ordinary training-only peer labels leakage.",
+    "Mitra receives no explicit GroupId, so it is uncertain how much same-group similarity influences inference; removing overlap need not improve accuracy.",
+    "Query rows remain uniform and their positions exactly match the old sampler conditional on the same ordered training pool/permutation. New inner membership/order differs, so entire fits do not share identical old-v81 query rows.",
+    "Large groups are more likely to be touched by the row-uniform query draw and therefore excluded from support. The resulting support group-size distribution changes intentionally; do not claim uniform-group sampling or exact equality to the official split-generating process.",
+    "The mechanism addresses unseen-group support, but does not remove episode1024 vs full-context training/inference size shift or all other synthetic-pretraining/domain differences.",
+    "GroupId suffices for knownCabin separation in the actual roster: no observed full Cabin spans groups. Missing cabins must not be merged into one group. Do not expand to surname-connected components.",
+    "Previous weak/negative adaptation experiments lower the prior expectation of reliable gains; one controlled test is justified, not guaranteed useful or grounds for repeated sampler/LR search."
+  ],
+  "cost": {
+    "old_v81_three_fold_seconds": [
+      2873.4056456249673,
+      3548.2064114169916,
+      2958.0722156249685
+    ],
+    "expected_new_three_fold_hours": "approximately2.6, same tensor shapes and similar selection/full-refit work; actual selected steps and runtime can vary",
+    "fixed_budget_hours": 4,
+    "extra_matched_old_v81_if_later_required": "approximately another2.6h; not currently authorized as part of this experiment",
+    "resource_basis": "Training1024/256 and fullcontext validation shapes unchanged or differ by one row; preserve established memory cap/backend. No new GPU probe executed in review."
+  },
+  "independent_battle": {
+    "participants": [
+      "/root/fresh_strategy",
+      "/root/review_current"
+    ],
+    "conclusion": "Conditional agreement for one fixed package vs zero-shot, with matched-v81 and adaptive-validation limitations explicit. No relation/parameter/seed expansion."
+  },
+  "reproduce": ".venv-mitra/bin/python reports/group_episode_design/diagnose.py",
+  "diagnostic_artifact": "reports/group_episode_design/diagnostics.json"
+}
