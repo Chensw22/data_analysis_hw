@@ -1,0 +1,121 @@
+{
+  "candidate": "EXAONE_v92_rawMitra_half",
+  "completed_folds": 3,
+  "metrics": {
+    "accuracy": 0.8142076502732241,
+    "log_loss": 0.37598562803281804,
+    "fold_accuracy": [
+      0.8166522864538395,
+      0.814495254529767,
+      0.8114754098360656
+    ],
+    "fold_log_loss": [
+      0.3764448732919882,
+      0.36930005754347606,
+      0.38221195326298973
+    ]
+  },
+  "components": {
+    "EXAONE_v91_CAST_default8": {
+      "accuracy": 0.8098935864250791,
+      "log_loss": 0.3762841176631881,
+      "fold_accuracy": [
+        0.808455565142364,
+        0.8093183779119931,
+        0.8119068162208801
+      ],
+      "fold_log_loss": [
+        0.3757942443447008,
+        0.37160269535202556,
+        0.38145541329283794
+      ]
+    },
+    "v71_Mitra2_zeroshot": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "fold_accuracy": [
+        0.817946505608283,
+        0.819672131147541,
+        0.8119068162208801
+      ],
+      "fold_log_loss": [
+        0.38102819387768605,
+        0.3719704257434014,
+        0.38758918506166057
+      ]
+    }
+  },
+  "gate": {
+    "passed": false,
+    "checks": {
+      "pooled_accuracy": false,
+      "pooled_log_loss": true,
+      "at_least_two_nonlower_folds": false
+    },
+    "nonlower_folds": 0,
+    "tolerance": 1e-12
+  },
+  "paired": {
+    "v71_Mitra2_zeroshot": {
+      "overall": {
+        "corrected": 94,
+        "regressed": 110,
+        "decision_disagreements": 204,
+        "mean_absolute_probability_difference": 0.017667549091515307
+      },
+      "folds": [
+        {
+          "corrected": 31,
+          "regressed": 34,
+          "decision_disagreements": 65,
+          "mean_absolute_probability_difference": 0.017332291174929904
+        },
+        {
+          "corrected": 27,
+          "regressed": 39,
+          "decision_disagreements": 66,
+          "mean_absolute_probability_difference": 0.018303738298520972
+        },
+        {
+          "corrected": 36,
+          "regressed": 37,
+          "decision_disagreements": 73,
+          "mean_absolute_probability_difference": 0.017366617801095042
+        }
+      ]
+    },
+    "EXAONE_v91_CAST_default8": {
+      "overall": {
+        "corrected": 88,
+        "regressed": 58,
+        "decision_disagreements": 146,
+        "mean_absolute_probability_difference": 0.01766754909151531
+      },
+      "folds": [
+        {
+          "corrected": 39,
+          "regressed": 20,
+          "decision_disagreements": 59,
+          "mean_absolute_probability_difference": 0.017332291174929904
+        },
+        {
+          "corrected": 29,
+          "regressed": 17,
+          "decision_disagreements": 46,
+          "mean_absolute_probability_difference": 0.018303738298520972
+        },
+        {
+          "corrected": 20,
+          "regressed": 21,
+          "decision_disagreements": 41,
+          "mean_absolute_probability_difference": 0.017366617801095045
+        }
+      ]
+    }
+  },
+  "disclosure": "Adaptively selected after seeing single-model results; reused development folds, not independent validation. No old holdout targets.",
+  "no_old_holdout_targets_used": true,
+  "S_supported": false,
+  "automatic_upload": false,
+  "status": "incomplete_pair_not_for_tiers"
+}

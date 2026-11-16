@@ -1,0 +1,56 @@
+{
+  "status": "root_independent_recomputation_passed",
+  "metrics": {
+    "accuracy": 0.8142076502732241,
+    "log_loss": 0.37598562803281804,
+    "fold_accuracy": [
+      0.8166522864538395,
+      0.814495254529767,
+      0.8114754098360656
+    ],
+    "fold_log_loss": [
+      0.3764448732919882,
+      0.36930005754347606,
+      0.38221195326298973
+    ]
+  },
+  "paired_against_raw": {
+    "overall": {
+      "corrected": 94,
+      "regressed": 110,
+      "decision_disagreements": 204,
+      "mean_absolute_probability_difference": 0.017667549091515307
+    },
+    "folds": [
+      {
+        "corrected": 31,
+        "regressed": 34,
+        "decision_disagreements": 65,
+        "mean_absolute_probability_difference": 0.017332291174929904
+      },
+      {
+        "corrected": 27,
+        "regressed": 39,
+        "decision_disagreements": 66,
+        "mean_absolute_probability_difference": 0.018303738298520972
+      },
+      {
+        "corrected": 36,
+        "regressed": 37,
+        "decision_disagreements": 73,
+        "mean_absolute_probability_difference": 0.017366617801095042
+      }
+    ]
+  },
+  "gate": {
+    "passed": false,
+    "checks": {
+      "pooled_accuracy": false,
+      "pooled_log_loss": true,
+      "at_least_two_nonlower_folds": false
+    },
+    "nonlower_folds": 0,
+    "tolerance": 1e-12
+  },
+  "both_phases_passed": false
+}
