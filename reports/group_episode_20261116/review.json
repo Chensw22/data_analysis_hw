@@ -1,0 +1,68 @@
+{
+  "status": "prospective_fixed_group_recipe_before_real_training",
+  "candidate": "v85_Mitra_group_episode50",
+  "recipe": {
+    "max_steps": 50,
+    "episode_support": 1024,
+    "episode_query": 256,
+    "inner_split": "first of StratifiedGroupKFold(5,shuffle=True,random_state=fitseed)",
+    "query_chunk": 2318,
+    "trainable_parameters": 75670026,
+    "selection": "minimum full-context inner binary logloss; earliest exact tie including step0",
+    "sampler": "fresh default_rng permutation; query=perm[1024:1280]; support=first1024 excluding every queryGroupId; shortage fails without resampling",
+    "groups": "PassengerId prefix used only for inner split and episode sampling, never as a feature",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.3,
+    "warmup": "literal official schedule",
+    "fresh_full_refit": true
+  },
+  "screen": {
+    "kind": "group",
+    "outer_seed": 20261112,
+    "folds": 3,
+    "fit_seed": "20261112+zero_based_fold",
+    "development_rows": 6954,
+    "threshold": 0.5,
+    "budget_seconds": 14400,
+    "device": "mps",
+    "threads": 4,
+    "mps_memory_fraction": 0.65,
+    "query_chunk": 2318,
+    "reference": "artifacts/top5_reference_audit/mitra/group_20261112.npz",
+    "old_holdout_targets_allowed": false,
+    "random_tier_update": false,
+    "resume": false,
+    "automatic_horizon_or_seed_extension": false
+  },
+  "resource_reuse": {
+    "max_inner_support": 3709,
+    "max_inner_query": 928,
+    "max_outer_support": 4636,
+    "max_outer_query": 2318,
+    "extra_inner_support_rows_over_probe": 1
+  },
+  "weekly_reserve_percent": 30,
+  "automatic_export": false,
+  "adaptive_reused_development": true,
+  "design": {
+    "reports/group_episode_design/fixed_spec.json": "c0ee6e404336f50f5773655c9bd14dd6342062ffb502c669e8314a24cc279297",
+    "reports/group_episode_design/diagnostics.json": "ea1098cbde88556e01dfed102f73fee9d479dc35e1dc99c6a23eb01591bb9085",
+    "reports/group_episode_design/diagnose.py": "0cd79300e6ce1707cf7acb2601ab3bbb31627361e7b95f2f48fb42209c0367f1",
+    "reports/group_episode_design/manifest.json": "1a84ad30a5cc7cef433567d4f6674e17e0b75653dd7574df468b192a16cfcb2e"
+  },
+  "rationale": "One combined deployment-aligned package: remove same-group support/query episodes and select adaptation duration on unseen groups. The official training/test groups are disjoint. Improvement is uncertain.",
+  "counterevidence": "Raw Mitra group CV 0.8169398907103825 is not lower than its random CV 0.816508484325568; no established inflation or leakage explanation. Prior last-block adaptation failed group eligibility.",
+  "comparison": "Only new group12 3fold vs cached raw Mitra exact folds and seeds. No matched-v81 group fits in this bounded experiment; cannot claim improvement over v81 random CV.",
+  "scope": "Two linked recipe changes, not one-factor causal attribution; no GroupId feature, no new holdout, no new seed/horizon search, no random A/B tier insertion.",
+  "resource_disclosure": "Two inner training pools have3709 rows, one more than the3708 synthetic resource probe. Accepted one-row extrapolation, no new GPU probe. Same1024/256 episodes and fullcontext inference. Fail on OOM without context reduction or changing the split.",
+  "expected_cost": "Approximately2.6h for3fits based on v81; fixed4h stage deadline.",
+  "stopping": "Incomplete fold, source/environment/checkpoint mismatch, invalid group/ID boundary, insufficient support, nonfinite or timeout => failed inconclusive. No implicit resume or partial overall score.",
+  "implementation_review": {
+    "reviewer": "/root/review_current",
+    "status": "no_blocking_findings_before_training",
+    "root_cpu_tests_passed": 13,
+    "checks": "Outer labels excluded, inner-only preprocessing, fixed group sampler, persistent10-classCE and fresh refit, cached matched folds, official data hashes, no partial overall scores.",
+    "historical_sources_unchanged": true
+  }
+}
