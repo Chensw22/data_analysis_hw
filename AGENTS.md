@@ -46,3 +46,5 @@
 - 新批第5次v76 lastblock100已完成58431795/0.81155，未超过v81=0.81412；账号114/2153，仍未前5%，本批5/10。全量100step选89、freshrefit89、全4277重载diff0。下一项v86固定各半均值，代码/decision均已commit，无需重训，但必须补两旧组件及新组合的全量重载。
 
 - 新批第6次v86固定raw/adapt各半已完成58431944/0.81271，未超过v81=0.81412；账号114/2146，仍未前5%，本批6/10（剩4）。完整双组件及组合重载diff0，旧raw未验证记录保留。下一项v85固定group-episode50三折，review/code已commit8763c01，不扩大为6fold matched-v81比较，不混入随机CV评级。
+
+- 第7次v85 group-episode已完成58436119/0.81248；matched groupCV81.56457% vsraw81.69399%（−9correct），三foldLL均改善但线上未超过v81=.81412。full6954/1739选31重训31、4277reload0。账号114/2151仍未前5%，本批7/10剩3。v85完整处置结束，后备run051固定seed+100以及两seed各半均值：v87solo只诊断，v88唯一主候选，review+code已commit；必须committed activation及新鲜官方排名才启动。均值acc>=v81、LL<=v81且至少2foldacc不降才继续fullfit；不追加seed/改权/上传solo。
