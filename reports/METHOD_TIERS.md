@@ -13,7 +13,7 @@
 
 HistGradientBoosting距离A边界只有约0.007个百分点，TabM也仅约0.093个百分点；不能据这个机械边界断言它们与A档末端存在可靠差距。每个档位描述已测配置，不能据一次配置排除整个模型族。
 
-78个已完成且去重的配置（含对照和融合）：A档59个、B档13个、C档6个。逐版本分数、原始run及边界标记见[完整CSV](method_tiers.csv)，运行`classify_methods.py`可重建；实验方法与规则见[JSON](method_tiers.json)。
+79个已完成且去重的配置（含对照和融合）：A档60个、B档13个、C档6个。逐版本分数、原始run及边界标记见[完整CSV](method_tiers.csv)，运行`classify_methods.py`可重建；实验方法与规则见[JSON](method_tiers.json)。
 
 ## 稳定性与线上证据
 
@@ -38,3 +38,5 @@ HistGradientBoosting距离A边界只有约0.007个百分点，TabM也仅约0.093
 TabDPT1.3完整上下文8排列v82：三折81.19068%，A档，比Mitra低0.4602个百分点；新模型路线按本批授权计划一次探索，不能称稳定改善。见[run047](run_047/assessment.json)。
 
 2026-11-16最新线上：v81全参数适配81.412%成为账号最佳，112/2146（约前5.219%），尚未前5%；本地仍A档、S为空。TabDPT v82线上80.687%。本批已用3/10，详见[本批记录](online_iteration_20261116/RESULTS.md)。
+
+Kumo Medium8 v83完成81.83779%、logloss0.36967，A档。已修复并验证本机MPS非连续out写入问题；本地未证明稳定领先，计划一次独立探索。完整证据[run048](run_048/assessment.json)。
