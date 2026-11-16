@@ -1,0 +1,77 @@
+{
+  "scope": "Descriptive audit only; reused development, no independent confirmation or model selection.",
+  "candidate": "v81_Mitra_full_episode50",
+  "reference": "v71_Mitra2_zeroshot",
+  "rows": 6954,
+  "scores": {
+    "candidate": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.3750928747453614,
+      "brier": 0.12194331160533604
+    },
+    "reference": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "brier": 0.12356626406567064
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "candidate": {
+        "accuracy": 0.814495254529767,
+        "log_loss": 0.3771940487220633
+      },
+      "reference": {
+        "accuracy": 0.817946505608283,
+        "log_loss": 0.38102819387768605
+      }
+    },
+    {
+      "fold": 2,
+      "candidate": {
+        "accuracy": 0.8244176013805005,
+        "log_loss": 0.36420196514987585
+      },
+      "reference": {
+        "accuracy": 0.819672131147541,
+        "log_loss": 0.3719704257434014
+      }
+    },
+    {
+      "fold": 3,
+      "candidate": {
+        "accuracy": 0.8149266609145815,
+        "log_loss": 0.3838826103641451
+      },
+      "reference": {
+        "accuracy": 0.8119068162208801,
+        "log_loss": 0.38758918506166057
+      }
+    }
+  ],
+  "corrected_errors": 130,
+  "newly_introduced_errors": 120,
+  "net_correct": 10,
+  "changed_threshold_decisions": 250,
+  "mcnemar_exact_pvalue": 0.5693014384434676,
+  "bootstrap": {
+    "unit": "PassengerId prefix group",
+    "seed": 20261116,
+    "resamples": 10000,
+    "accuracy_delta_pp_interval95": [
+      -0.28934257561481624,
+      0.5968052242818102
+    ],
+    "log_loss_delta_interval95": [
+      -0.007534448472206911,
+      -0.0026294664961193166
+    ],
+    "limitations": "Not corrected for repeated model selection or fold dependence; no stable-superiority claim."
+  },
+  "source_hashes": {
+    "artifacts/run_046/v81_Mitra_full_episode50_seed20261112.npz": "90f377e3427f8357461666fd6d0f5fa392dd81354864edce7d67a9c91484e652",
+    "artifacts/run_046/v71_Mitra2_zeroshot_seed20261112.npz": "bdf8a9687d1c8b4d347baafd4608011bfa88e103c334f681f12657e03ca56b61"
+  },
+  "script_sha256": "19034b8e796e47d4ea5adc326b3e7b0d14cd5c33a6c050029937423e9711ed63"
+}
