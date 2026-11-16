@@ -1,0 +1,179 @@
+{
+  "date": "2026-11-17",
+  "status": "read_only_research_complete_one_conditional_resource_candidate",
+  "decision": "仅推荐Orion-BiX v1.1进行一次有上限的资源/兼容性验证；不是批准正式screen或上传，不声称优于其他新模型。",
+  "candidate_placeholder": {
+    "version": "v90",
+    "run": "run_053",
+    "formal_recipe": "待完整资源结果后由root冻结，不能根据候选分数调整"
+  },
+  "why_this_is_new": {
+    "mechanism": "独立预训练权重，基于TabICL的column encoder及ICL head，但row encoder改为standard/grouped/hierarchical/relational feature attention，并用synthetic support/query episodes训练。不是旧TabICLv2升级包、增加seed或重新平均已测模型。",
+    "code_not_name": "BiX layers.py实际实现四种注意力串联和CLS汇聚；MSP另为多尺度稀疏注意力与Perceiver memory/prototype。不能把两者介绍混为一谈。",
+    "potential": "不同局部/跨特征交互先验可能改变消费、睡眠与舱位间的条件决策；这是可证伪假设，不是已经测得剩余信号。",
+    "counterevidence": [
+      "只有13列，论文强调的高维自然feature groups优势未必适用；按列位置分组也不是本任务真实语义分组。",
+      "与已测TabICL共享部分架构，错误可能高度相关；独立benchmark宣称不等于本竞赛增益。",
+      "同开发集已多次适应性比较；即使screen提高也不构成独立泛化证明。"
+    ]
+  },
+  "official_identity": {
+    "repository": "https://github.com/Lexsi-Labs/Orion-BiX",
+    "code_revision": "060d34606f56c591c47e0b6cbe971e5f5035f33e",
+    "paper": "https://arxiv.org/abs/2512.00181",
+    "hf_repository": "https://huggingface.co/Lexsi/Orion-BiX",
+    "hf_metadata_api": "https://huggingface.co/api/models/Lexsi/Orion-BiX?blobs=true",
+    "hf_revision": "9504590d769648eeeb7ecfb0fead2a01c11fb12a",
+    "filename": "Orion-BiX-v1.1.ckpt",
+    "bytes": 314653437,
+    "sha256": "c53afd272e05e9bd6740698b6fa6f3d8789fc4f6da263415d3287b9ed51cd979",
+    "fixed_download_url": "https://huggingface.co/Lexsi/Orion-BiX/resolve/9504590d769648eeeb7ecfb0fead2a01c11fb12a/Orion-BiX-v1.1.ckpt",
+    "gated": false,
+    "private": false,
+    "license": "官方代码LICENSE为MIT，官方HF模型卡license也为mit；课程研究/本地使用无需新商业协议、费用或账号。保留copyright/license notices；本轮未实际下载权重。",
+    "license_url": "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/LICENSE",
+    "weights_license_metadata_url": "https://huggingface.co/Lexsi/Orion-BiX/blob/9504590d769648eeeb7ecfb0fead2a01c11fb12a/README.md",
+    "provenance_limit": "作者论文描述synthetic episodic预训练；不是独立审计全部训练语料。公开config.json只有model_name，真实config在checkpoint中，本轮未下载，实施时必须核实际架构/state_dict严格匹配。",
+    "loader": "from orion_bix.sklearn import OrionBixClassifier；model_path指定已校验本地文件，allow_auto_download=False。官方loader只加载该checkpoint，不调用TabPFN或别的受限底座。"
+  },
+  "fixed_resource_plan": {
+    "input": "沿已有compact13语义列，不含PassengerId/Name/GroupId或新增衍生；原始缺失保留交官方train-only preprocessing。未知类别/NaN行为须CPU测试。",
+    "inference_recipe": "官方默认n_estimators=32、norm_methods=None、latin feature shuffles、class_shift=True、temperature=.9、average_logits=True，固定fold seeds；batch_size=1仅顺序计算views，不是只用1个view或截support。root可在任何候选分数前明确改为8views资源recipe，但不得以单view probe代替完整recipe资源证据。",
+    "mathematical_boundary": "默认embed_with_test=False，column embeddings以support估计，ICL整数mask令query仅访问support；没有query-query注意力，因此query分块有数学依据。实现仍须验证fullquery/partition/subset一致。kNN是论文预训练episode选support的选项，不代表此官方predict默认截context。",
+    "precision": "CPU tiny参考与MPS均先固定FP32，官方classifier当前强制关闭AMP；不得在失败后暗改half/bfloat16。",
+    "steps": [
+      "从固定checkpoint构建官方CPU tiny参考，严格state_dict/config，确认输入/输出有限、未知/缺失及保存恢复。",
+      "只在局部compat adapter处理设备搬运、有限MPS内存预算、独立batch/view分块；同CPU输入比较官方原输出。不得修改attention公式、normalization或dropout。",
+      "MPS FP32 tiny与CPU数值核验，并同MPS fullquery/partition/reload概率比对；预声明容差，记录阈值一致性。",
+      "逐个验证4636support和8693support，各2318query；synthetic labels/合法无标签属性，不读取旧holdout标签。所有support均保留。",
+      "对正式选定的32或8views完整运行一次outer/final配方和portable reload，记录时间/RSS/MPS峰值或明确snapshots；不是单view时间外推通过。"
+    ],
+    "memory": "沿本项目MPS allocator .65上限；不禁水位、不减support。315MB权重不是推断峰值估计。官方默认batch8改顺序batch1仅资源安排。",
+    "budget": "建议完整资源阶段1800秒硬限；screen预算须据完整recipe无评分资源结果预冻结。若超时/OOM/等价性失败，归档不完整，不给候选accuracy，不自动减views/context。",
+    "known_backend_gaps": [
+      "官方InferenceManager仅CUDA分支正确搬运/估内存；非CUDA返回inf且之后进入batch估计，MPS不能当开箱支持。",
+      "CPU有官方直接forward路径但不自动分块；MPS兼容需要先通过CPU同数学对照。",
+      "官方pyproject Python>=3.9,<3.13及sklearn<1.7；应独立环境，不改当前冻结环境。"
+    ],
+    "cost_limit": "本轮无实测运行时间，不能承诺几分钟。零梯度推断和顺序views有资源可控基础，但必须上述完整形状验证。"
+  },
+  "if_resources_pass": {
+    "minimal_experiment": "仅固定Orion-BiX完整recipe，在原6954dev固定SKF20261112三折；原v71/v44/v81缓存作已认证参考，不扫checkpoint、列序、views、权重或阈值。",
+    "boundary": "每outertrain fit所有preprocessing和label encoder，outerquery标签只评分；完整三折后才评价。权重、source、env、input/fold hashes先冻结。",
+    "report": "每折/pooled accuracy及logloss、paired修正/损坏、资源和失败记录。后续探索继续门槛由root在screen前预声明，不由本报告预授权提交。"
+  },
+  "alternatives_checked": [
+    {
+      "name": "TabICL新代",
+      "result": "当前官方默认仍tabicl-classifier-v2-20260212.ckpt；HF SHA bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0与本地run014完全相同。v1/v1.1更旧，包更新不是新checkpoint。",
+      "urls": [
+        "https://tabicl.readthedocs.io/en/latest/api.html",
+        "https://huggingface.co/api/models/jingang/TabICL?blobs=true"
+      ],
+      "local": "reports/run_014/protocol.json"
+    },
+    {
+      "name": "TabForestPFN",
+      "result": "真实未测树生成器+SCM混合先验，MIT公开；但较旧fixed100feature row Transformer，官方support cap8192低于终局8693，需明示修改或近似；同规模softmax注意力仍需资源验证。未判定方法无效，仅不优先第二条。",
+      "hf_revision": "9c7138857460a25f86d20034cb034a7abf4230ac",
+      "file": "tabforestpfn.pt",
+      "bytes": 155866764,
+      "sha256": "a2969acf2eaee33e92496bb03acd07a84c8f8a5f517aeb6508a1f3dfbb8c4229",
+      "urls": [
+        "https://huggingface.co/FelixdenBreejen/TabForestPFN",
+        "https://github.com/FelixdenBreejen/TabForestPFN/blob/53114795d3c96f87348a7ccbb675665e9d3e5243/config/hyperparams/foundation/zeroshot_10k_mix.yaml"
+      ]
+    },
+    {
+      "name": "TabFlex",
+      "result": "真正linear-attention扩展；官方wrapper硬编码CUDA并取3个权重，再按表大小选1个。优势针对大行数/宽表/多类别，本13列8693行并非主要规模瓶颈；需要额外CPU/MPS移植，不优先于已核BiX。不是声称不可用。",
+      "urls": [
+        "https://github.com/microsoft/ticl",
+        "https://github.com/microsoft/ticl/blob/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/prediction/tabflex.py"
+      ]
+    },
+    {
+      "name": "Orion-MSP1.5",
+      "result": "真正未测多尺度稀疏/原型架构，不等同BiX。公开MIT且并不更轻：202603checkpoint335545028bytes；MPS/完整context未知，不能仅因更新或作者排名改选。保留未测可行性unknown。",
+      "hf_revision": "8b712f6ff699750f7ac5825f31e89e6f6f161577",
+      "file": "OrionMSP-classifier-v1.5-202603.ckpt",
+      "sha256": "7f438b5d7321d23a531dfef5ab8edab7c474c75b500abfcb318e25ad32d5f9de",
+      "urls": [
+        "https://github.com/Lexsi-Labs/Orion-MSP",
+        "https://huggingface.co/Lexsi/Orion-MSP"
+      ]
+    },
+    {
+      "name": "EXAONE Tabular CAST",
+      "result": "真实不同cross-axis summary结构，20.8M参数/83286800bytes，比BiX更小。官方非商业研究教育许可允许个人及非商业竞赛/公布研究，但有署名、修改命名、模型分发及不得授予组织方商业模型许可等要求；不是法律禁用。官方主要CUDA半精度/CPUFP32，MPS及完整context未审完，保留未测可行性unknown而不扩本轮第二候选。",
+      "hf_revision": "093ad1c2613e1e95d26df8610451d2e02ed53cbe",
+      "file": "exaone-tabular-classifier-v1_default.safetensors",
+      "sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+      "urls": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular",
+        "https://huggingface.co/LG-AI-Research/EXAONE-Tabular",
+        "https://huggingface.co/LG-AI-Research/EXAONE-Tabular/blob/093ad1c2613e1e95d26df8610451d2e02ed53cbe/LICENSE"
+      ]
+    },
+    {
+      "name": "Orion-MoE及更多清单",
+      "result": "看到Orion-MoE论文2610.20418，但本轮官方作者HF模型列表未发现同名公开checkpoint，未确认即可用。TabTune列出的更多family不等于全部完成本机/许可核查，不能宣布模型家族穷尽；本轮不逐一扩展。",
+      "urls": [
+        "https://arxiv.org/abs/2610.20418",
+        "https://huggingface.co/api/models?author=Lexsi&limit=100",
+        "https://github.com/Lexsi-Labs/TabTune/blob/main/README.md"
+      ]
+    },
+    {
+      "name": "分布修正/训练目标",
+      "result": "review_current固定13列无标签诊断仅小单变量shift；不支持importance weighting，但不证明联合/条件IID。temperature scaling不改.5分类。root native10 unused-mass诊断额外CE项约6.6e-5至7.9e-5nat、maxunused<.0006，不支持因此追加binary-loss训练；这些不是新架构失败证据。",
+      "source": "root已完成诊断commit5fd0984及review_current独立消息，本研究不另算accuracy。"
+    }
+  ],
+  "independent_review": {
+    "agent": "/root/review_current",
+    "conclusion": "支持唯一有限资源探索；确认无额外底座加载、fullsupport与query mask边界，并指出MPS manager不完整。只有完整recipe资源通过才可正式screen。",
+    "selection_basis": "当前BiX准备证据较完整；不声称比MSP、EXAONE或其他未审模型更强。"
+  },
+  "source_sha256": {
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/LICENSE": "6ae8f48a38ddf7dd5bbd50c75503c7a086c417ebb34217ad3e116a04979335e5",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/README.md": "26f8d97e26f13ac6525cdb9def8d66e18e9d8543aaab746488226aa4d747f439",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/pyproject.toml": "ce6e4a0721a43db79315b7e16c122e61eeab1c0021b0bacff8cadccc9f2c2b91",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/sklearn/classifier.py": "98108ba460ac924cda4754d46467b6ac3922a253c93df4782c4f1860e77e190b",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/sklearn/preprocessing.py": "a259a4fa637bf152c56a003ddf15ffef6ee2bdfcb8109f4af4b72c2d2be91652",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/model/inference.py": "88f1039cab15616eed41dd8323f5c998a746946a4b8bd56512a1718dff2b7d45",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/model/orion_bix.py": "5c0fbb3aaa5570dfe3a567ba436ee567ee7c44705fabea28f9c4699f45772d55",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/model/learning.py": "4e7b59916676e6f6a1c792c557ae11c381e26690c99002680e83d7feb65bdd58",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/model/layers.py": "ad32ef35b84c62c1d9ba27f2d418914f5264fe256706c253110c5fcbb8937f4c",
+    "https://raw.githubusercontent.com/Lexsi-Labs/Orion-BiX/060d34606f56c591c47e0b6cbe971e5f5035f33e/src/orion_bix/model/attention.py": "75cd03c001dea58f23b9270ee836de568fbfa053e462475180dfa4ae1e26323e"
+  },
+  "actions": {
+    "weights_downloaded": false,
+    "installed_dependencies": false,
+    "model_training_or_GPU": false,
+    "old_holdout_labels_read": false,
+    "candidate_scores_computed": false,
+    "frozen_sources_modified": false,
+    "commit_created": false
+  },
+  "root_resource_decision": {
+    "status": "accepted_fixed_resource_exploration_before_candidate_scores",
+    "candidate": "v90_OrionBiX32",
+    "reserved_run": "run_053",
+    "n_estimators": 32,
+    "batch_size": 1,
+    "precision": "float32",
+    "full_support": true,
+    "mps_memory_fraction": 0.65,
+    "resource_budget_seconds": 2400,
+    "budget_note": "Root fixes2400s instead of suggested1800 before any MPS or candidate score; no score-dependent extension. CPU setup/tiny qualification precedes this separately bounded MPS resource phase.",
+    "support_shapes": [
+      4636,
+      8693
+    ],
+    "query_rows": 2318,
+    "source_or_weight_download_authorized": true,
+    "score_or_upload_authorized_by_this_decision": false,
+    "new_candidate_scores_seen": false
+  }
+}
