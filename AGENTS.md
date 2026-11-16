@@ -54,3 +54,5 @@
 - v89/run052已完整：81.63647% vsraw81.65085%，57修复/58损坏，LL.378945改善但2fold下降，固定gate失败；按预设归档，无fullfit/上传/追加适配/换flags/按missing子集事后拼接。资源两完整形状及重载全通过；root OOF复算一致。本批仍7/10，v88代码审查已通过，另commit seed_mean_decision后全量导出7200s。
 
 - 第8次v88双训练种子均值已完成58439927/0.81365，未超过v81=.81412；新fullseed20261212内层选10并freshrefit10，旧v81不重训，两个组件及组合4277reload均0。账号114/2154约前5.2925%，目标仍未达。本批8/10剩2，不加seed/改权/上传诊断solo。
+
+- Orion固定权重CPU核查与独立review发现实际standard RowInteraction、未启用BiAxial；此前按新多尺度结构的研究期待已更正。保存的step40不能推断总训练量，训练链未独立核实。不按此理由继续MPS/CV：v90/run053保留未运行，CPU事实与最小复现见reports/orion_bix_setup。未完成兼容草稿删除。下一路线为EXAONE CAST可行性审查，保留8/10上传状态。

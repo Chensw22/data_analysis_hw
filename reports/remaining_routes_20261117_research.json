@@ -1,7 +1,7 @@
 {
   "date": "2026-11-17",
-  "status": "read_only_research_complete_one_conditional_resource_candidate",
-  "decision": "仅推荐Orion-BiX v1.1进行一次有上限的资源/兼容性验证；不是批准正式screen或上传，不声称优于其他新模型。",
+  "status": "orion_architecture_expectation_corrected_no_MPS_or_screen",
+  "decision": "固定权重CPU实检后撤回按新BiAxial架构继续的依据；仅归档CPU事实，不启动MPS、run053或线上提交。另核查EXAONE CAST。",
   "candidate_placeholder": {
     "version": "v90",
     "run": "run_053",
@@ -157,6 +157,28 @@
     "commit_created": false
   },
   "root_resource_decision": {
+    "status": "withdrawn_before_MPS_after_actual_checkpoint_inspection",
+    "MPS_allowed": false,
+    "screen_allowed": false,
+    "upload_allowed": false,
+    "next_route": "EXAONE CAST feasibility review only"
+  },
+  "historical_research_decision_before_checkpoint_inspection": "仅推荐Orion-BiX v1.1进行一次有上限的资源/兼容性验证；不是批准正式screen或上传，不声称优于其他新模型。",
+  "checkpoint_inspection_correction": {
+    "evidence": "reports/orion_bix_setup/checkpoint_architecture.json",
+    "actual_row_attention_type": "standard",
+    "actual_row_module": "RowInteraction",
+    "actual_biaxial_modules": 0,
+    "parameters": 27051666,
+    "config_unchanged": true,
+    "native_strict_load_passed": true,
+    "cpu_tiny_only": true,
+    "earlier_hypothesis": "The earlier section why_this_is_new reflects public architecture descriptions available before weight inspection, not the actual executed configuration. Its BiAxial mechanism claim is withdrawn for this file.",
+    "independent_review": "review_current independently instantiated with fixed checkpoint config and strict state load; no BiAxial module. Different from tested TabICLv2 config/weights but no demonstrated new feature-interaction mechanism.",
+    "training_provenance_limit": "Saved current step, optimizer steps and scheduler last_epoch are40; this can be continuation training. Do not infer total pretraining length, data contamination or poor accuracy. Published pretraining narrative is not independently bound to this delivered training chain.",
+    "root_disposition": "Archive CPU inspection and stop before MPS/full-context qualification or any candidate score; v90/run053 remain reserved and unrun."
+  },
+  "historical_resource_decision_before_checkpoint_inspection": {
     "status": "accepted_fixed_resource_exploration_before_candidate_scores",
     "candidate": "v90_OrionBiX32",
     "reserved_run": "run_053",

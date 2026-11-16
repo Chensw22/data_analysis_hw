@@ -1,0 +1,13 @@
+# Independent inference-only environment. Upstream training-only dependencies are not installed.
+# Upstream supports scikit-learn >=1.3,<1.7; do not inherit the other models' environments.
+torch==2.13.0
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.6.1
+pandas==3.1.1
+joblib==1.6.0
+einops==0.8.2
+huggingface-hub==2.4.0
+packaging==26.3
+psutil==7.2.2
+tqdm==4.70.1

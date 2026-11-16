@@ -1,0 +1,117 @@
+{
+  "status": "native_cpu_complete_no_candidate_score",
+  "device": "cpu",
+  "threads": 4,
+  "budget_seconds": 600,
+  "no_real_targets_read": true,
+  "no_accuracy_computed": true,
+  "no_training": true,
+  "MPS_executed": false,
+  "compatibility_executed": false,
+  "formal_screen_qualified": false,
+  "interpretation": "Checkpoint identity/actual execution facts only; no claim this model is ineffective.",
+  "checkpoint_sha256": "c53afd272e05e9bd6740698b6fa6f3d8789fc4f6da263415d3287b9ed51cd979",
+  "checkpoint_bytes": 314653437,
+  "checkpoint_config": {
+    "max_classes": 10,
+    "embed_dim": 128,
+    "col_num_blocks": 3,
+    "col_nhead": 4,
+    "col_num_inds": 128,
+    "row_num_blocks": 3,
+    "row_nhead": 8,
+    "row_num_cls": 4,
+    "row_rope_base": 100000.0,
+    "icl_num_blocks": 12,
+    "icl_nhead": 4,
+    "ff_factor": 2,
+    "dropout": 0.0,
+    "activation": "gelu",
+    "norm_first": true,
+    "col_attention_type": "standard",
+    "col_feature_map": "identity",
+    "row_attention_type": "standard",
+    "row_feature_map": "identity",
+    "icl_attention_type": "standard",
+    "icl_feature_map": "identity",
+    "debug": false
+  },
+  "native_strict_state_all_keys_shapes_values_equal": true,
+  "actual_row_attention_type": "standard",
+  "instantiated_biaxial_module": false,
+  "top_modules": {
+    "col_embedder": "orion_bix.model.embedding.ColEmbedding",
+    "row_interactor": "orion_bix.model.interaction.RowInteraction",
+    "icl_predictor": "orion_bix.model.learning.ICLearning"
+  },
+  "manager_modules": {
+    "col_embedder": "tf_col",
+    "row_interactor": "tf_row",
+    "icl_predictor": "tf_icl"
+  },
+  "parameters": 27051666,
+  "buffers_after_forward": 273,
+  "state_elements": 27051666,
+  "state_keys": 277,
+  "state_shapes_sha256": "f4403b747f256ada67f1e5a6d4ea21cc45bfb5b32c079f23000c60ba7ef27c84",
+  "checkpoint_extra_metadata": {
+    "curr_step": 40
+  },
+  "optimizer_present": true,
+  "scheduler_present": true,
+  "optimizer_groups": [
+    {
+      "lr": 2e-06,
+      "betas": [
+        0.9,
+        0.999
+      ],
+      "eps": 1e-08,
+      "weight_decay": 0,
+      "amsgrad": false,
+      "maximize": false,
+      "foreach": null,
+      "capturable": false,
+      "differentiable": false,
+      "fused": null,
+      "decoupled_weight_decay": true,
+      "initial_lr": 2e-06
+    }
+  ],
+  "optimizer_step_summary": {
+    "entries": 152,
+    "unique_steps": [
+      40.0
+    ]
+  },
+  "scheduler_metadata": {
+    "base_lrs": [
+      2e-06
+    ],
+    "last_epoch": 40,
+    "verbose": false,
+    "_step_count": 41,
+    "_get_lr_called_within_step": false,
+    "_last_lr": [
+      2e-06
+    ],
+    "lr_lambdas": "list"
+  },
+  "saved_step_interpretation": "These are the saved segment optimizer/scheduler steps; they do not establish total pretraining duration or the origin of initial weights.",
+  "native_cpu": {
+    "support_rows": 64,
+    "query_rows": 17,
+    "views": 32,
+    "batch_size": 1,
+    "forward_seconds": 0.6477239590603858,
+    "probability_sha256": "408901cce7f86163662d8c11d475e9e432240e437adf9870a06b8c6eb2fbe575"
+  },
+  "sources": {
+    "orion_bix_probe.py": "a2d89d0cd7c7d9ee817f20810ce39f8c9b2a9943d33d8af053426b1c4eb48bce",
+    "requirements-orion-bix.txt": "48f31da34d598d4ac23b9bf4643020c40ee1b2eabb2ddeccb04f591c4011e6ac",
+    "requirements-orion-bix.lock.txt": "3860ed6b579bd81c00ce7fbaa5b381fc3f35460a249ee79365b74b1a1f0f9776",
+    "third_party/orion_bix/SOURCE.json": "49d09c7857ad1536052204f0e3db667c2c6f9ada4b4df662f86b44a453006b65"
+  },
+  "environment_sha256": "3d0910830101d9cae430664ad319a3845a65776eb78d428d74ce57ef241d373b",
+  "seconds": 1.4124685829738155
+}
