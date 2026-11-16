@@ -44,3 +44,5 @@
 - v86固定rawMitra/v81各半已完成run050：81.80903%，仅比v81多1个正确且logloss稍差，仍A、无S；已冻结一次探索决定prior_adapt_decision。两个旧模型将先各自完整重载并验证组合，旧rawMitra未做重载的历史记录不改。group-disjoint全参v85代码/13tests/独立审查已完成并冻结review，等待串行GPU；仅group12三折vs同fold缓存rawMitra，禁止与v81随机CV宣称优势。结果独立group_episode_20261116目录。
 
 - 新批第5次v76 lastblock100已完成58431795/0.81155，未超过v81=0.81412；账号114/2153，仍未前5%，本批5/10。全量100step选89、freshrefit89、全4277重载diff0。下一项v86固定各半均值，代码/decision均已commit，无需重训，但必须补两旧组件及新组合的全量重载。
+
+- 新批第6次v86固定raw/adapt各半已完成58431944/0.81271，未超过v81=0.81412；账号114/2146，仍未前5%，本批6/10（剩4）。完整双组件及组合重载diff0，旧raw未验证记录保留。下一项v85固定group-episode50三折，review/code已commit8763c01，不扩大为6fold matched-v81比较，不混入随机CV评级。
