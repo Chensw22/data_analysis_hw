@@ -1,0 +1,20 @@
+{
+  "status": "failed_readiness",
+  "source_commit": "a99cecc9d9350b9574e42c5234800b31ee48dc7f",
+  "requested_accelerator": "NvidiaTeslaT4",
+  "requested_image_policy": "latest",
+  "private": true,
+  "internet": false,
+  "data_sources": [],
+  "observations": [
+    "no nvidia device nodes",
+    "nvidia-smi absent",
+    "libcuda unavailable",
+    "torch CPU build"
+  ],
+  "conclusion": "Runtime exposes no usable CUDA GPU; not merely an unverified torch.cuda result. Account/remote routing cause remains unknown.",
+  "competition_submission": false,
+  "paid_resources": false,
+  "further_retries": false,
+  "local_MPS_work_continues": true
+}

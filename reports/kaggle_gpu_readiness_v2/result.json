@@ -1,0 +1,33 @@
+{
+  "status": "failed_readiness",
+  "requested_accelerator": "NvidiaTeslaT4",
+  "requested_image_policy": "latest",
+  "synthetic_only": true,
+  "data_read": false,
+  "network_used": false,
+  "source_sha256": "b121acfdfd0f43c432b6b6bb2e2645609c37f4bd358036bbb457f4d783cfedcb",
+  "python_version": "3.13.18",
+  "started_at_utc": "2026-11-16T08:30:44.577936+00:00",
+  "own_timeout_seconds": 120,
+  "phase": "torch_check",
+  "driver": {
+    "device_nodes": [],
+    "proc_driver_version_exists": false,
+    "nvidia_smi": {
+      "error_type": "FileNotFoundError",
+      "error": "[Errno 2] No such file or directory: 'nvidia-smi'"
+    },
+    "libcuda": {
+      "error_type": "OSError",
+      "error": "libcuda.so.1: cannot open shared object file: No such file or directory"
+    }
+  },
+  "torch_version": "2.11.0+cpu",
+  "cuda_runtime_version": null,
+  "torch_cuda_built": false,
+  "cuda_available": false,
+  "devices": [],
+  "error_type": "RuntimeError",
+  "error": "Torch CUDA unavailable; driver evidence retained, no CPU fallback or package replacement.",
+  "elapsed_seconds": 5.4804006550000395
+}
