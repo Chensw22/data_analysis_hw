@@ -1,0 +1,24 @@
+{
+  "status": "failed_inconclusive",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "device": "mps",
+  "freeze_sha256": "57a72561c222c7cf8d4cb9a584ec89c53a6ac67a87007acb6d04996329bcdfa3",
+  "cases": [],
+  "before": {
+    "max_rss_bytes": 347013120,
+    "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "active_case": {
+    "support": 128,
+    "query": 17,
+    "views": 8,
+    "stage": "partition_check"
+  },
+  "error_type": "AssertionError",
+  "error": "Probability/decision mismatch: 0.0037411153316497803, 0",
+  "seconds": 3.575935374945402
+}
