@@ -1,0 +1,46 @@
+{
+  "status": "fixed_before_any_v92_mean_score",
+  "candidate": "EXAONE_v92_rawMitra_half",
+  "random_run": "run_055",
+  "group_run": "exaone_mean_group_20261117",
+  "components": [
+    {"version": "EXAONE_v91_CAST_default8", "weight": 0.5, "random_run": "run_054", "group_run": "exaone_group_20261117"},
+    {"version": "v71_Mitra2_zeroshot", "weight": 0.5, "random_run": "run_038", "group_run": "top5_reference_audit/mitra"}
+  ],
+  "aggregation": "Exactly 0.5 * EXAONE probability + 0.5 * rawMitra probability in float64; no fitted parameters.",
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "split_seed": 20261112,
+  "folds_per_phase": 3,
+  "alignment": "Original random folds authenticated against saved v81 logs; original saved group folds and row arrays, never regenerate group partitions. Authenticate both complete EXAONE caches against committed source, resource, summary, protocol, fold logs and result hashes before averaging.",
+  "known_before_selection": {
+    "EXAONE_random_accuracy": 0.8098935864250791,
+    "EXAONE_random_log_loss": 0.3762841176631881,
+    "EXAONE_group_accuracy": 0.8166522864538395,
+    "EXAONE_group_log_loss": 0.38093795816097814,
+    "rawMitra_random_accuracy": 0.816508484325568,
+    "rawMitra_group_accuracy": 0.8169398907103825
+  },
+  "rationale": "EXAONE has lower single-model random accuracy but lower random and group log loss than rawMitra. Test one fixed equal mean for complementary probabilities, after observing these single-model results.",
+  "continuation": {
+    "both_phases_complete": true,
+    "each_phase_pooled_accuracy_at_least_matched_rawMitra": true,
+    "each_phase_pooled_log_loss_at_most_matched_rawMitra": true,
+    "each_phase_at_least_two_of_three_fold_accuracies_not_lower_than_matched_rawMitra": true,
+    "tolerance": 1e-12,
+    "meaning": "Only eligibility for separate review of one mean export and upload; not a stable-superiority or significance claim."
+  },
+  "stop_rules": [
+    "Require this plan and implementation committed before any new mean score.",
+    "Both complete phases are required before publishing the random screen CSV for tiers; partial outputs are not a winner.",
+    "If either phase fails, archive this mean; do not search weights, thresholds, seeds, third components or subsets.",
+    "No automatic solo EXAONE fallback, no simultaneous solo/mean online comparison, no automatic export or upload.",
+    "Recheck current weekly reserve30 before execution; no overwrite or implicit resume."
+  ],
+  "disclosure": "Adaptively selected using already observed single-model and earlier development results. Reused development random/group folds are not independent validation. No old holdout labels or external test answers are used.",
+  "new_mean_scores_seen": false,
+  "old_holdout_labels_read": false,
+  "model_training": false,
+  "S_supported": false,
+  "automatic_upload": false
+}

@@ -1,0 +1,112 @@
+{
+  "status": "no_exact_source_candidate_found_within_bound",
+  "decision": "停止本轮追溯；不猜测增加 final_layer_norm，不使用 strict=False，不进入资源探针或评分。",
+  "scope": {
+    "maximum_distinct_official_pages_or_versions": 10,
+    "inspected": 10,
+    "composition": "1 official file-history API page plus 9 pinned source versions; rereads of the same pages are not new versions",
+    "exhaustive": false,
+    "limits": "未检查全部37个历史提交、所有分支、标签或issues；结论不是证明官方所有历史版本均不匹配。"
+  },
+  "history_url": "https://api.github.com/repos/FelixdenBreejen/TabForestPFN/commits?path=tabularbench/models/foundation/foundation_transformer.py&per_page=100",
+  "history_entries_returned": 37,
+  "versions": [
+    {
+      "revision": "2ba78da971b6d493fd2daf274442e96dbbe3bb52",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/2ba78da971b6d493fd2daf274442e96dbbe3bb52/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "e932c17122ad11d5a7d8cccda9cf65867cbf25671a8f350a41ac2eab53498855",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "040d7171506c6cbe20df1bc3a12af93c7ea373e6",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/040d7171506c6cbe20df1bc3a12af93c7ea373e6/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "143a8133f69252c72609269c97d7e229a2407dfce8bc1816c948757026f90584",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "98747a09baae21849e39daac78179b8ff088160e",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/98747a09baae21849e39daac78179b8ff088160e/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "996be4504536a163e2123b426438b276c3cc5008f90aec6105a2de8bcbec2122",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "6101212702773102532e8304fff0d6b413dab392",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/6101212702773102532e8304fff0d6b413dab392/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "6a80fb8b2eee5a32e0284cc7283ce0e70dd6b13de0ea2c202076e0031c438c6b",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "7b10be9f1e4d95ba5c89166d350ab3f245f0a118",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/7b10be9f1e4d95ba5c89166d350ab3f245f0a118/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "02d57ff30f96e0fe1c80f95629dc74dcece9b945b48a29104dee347fdbc89fad",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "cd1d82c817ac9b611af6ebb4b4b4a8f1043e50de",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/cd1d82c817ac9b611af6ebb4b4b4a8f1043e50de/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "307d99b3697b1f59a7fc444bf38b5cffad17b72120762e0f118098c9aa12f9dd",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 4,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "f8463fd651d402f76deadc64c63d529bf9231699",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/f8463fd651d402f76deadc64c63d529bf9231699/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "f0bcf7f7d8329c629323a4f099f52a521f708fc8a0d844a91f4d1aa33ee634cf",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 2,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "54207a9881271e95bafb13ee5f54e173777e1d23",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/54207a9881271e95bafb13ee5f54e173777e1d23/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "4893ab09bdd611fc5fc70ce27ad058c9a5d09e9f3f0481a467b47153d32883a4",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 1,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    },
+    {
+      "revision": "e3d7919b01df8d5255f264ed7680aef9000a6192",
+      "source_url": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/e3d7919b01df8d5255f264ed7680aef9000a6192/tabularbench/models/foundation/foundation_transformer.py",
+      "source_sha256": "f4693505de1db270021f5f8126609dec979a095d79d8244119e09afed1aa967a",
+      "final_layer_norm_declared_or_called": false,
+      "final_mlp_hidden_dim_multiplier": 1,
+      "finding": "Explicit final_layer1/final_layer2 forward; no final_layer_norm state module or forward call."
+    }
+  ],
+  "checkpoint_evidence_reused_from": "artifacts/fallback_route_review.json",
+  "checkpoint": {
+    "repository": "FelixdenBreejen/TabForestPFN",
+    "revision": "9c7138857460a25f86d20034cb034a7abf4230ac",
+    "filename": "tabforestpfn.pt",
+    "lfs_sha256": "a2969acf2eaee33e92496bb03acd07a84c8f8a5f517aeb6508a1f3dfbb8c4229",
+    "bytes": 155866764,
+    "static_metadata": "Previously inspected bounded HTTP206 first32KiB using pickletools only contains final_layer_norm.weight and final_layer_norm.bias. No torch.load/unpickle/full weight download performed for this task.",
+    "metadata_range_sha256": "df012b3e83caa1eae3370c355dd6de102200adcf617fbc2ada2b9a20f1c36b2c",
+    "archive_step_name_caveat": "model_step_50000 is not evidence of total pretraining duration."
+  },
+  "compatibility_conclusion": "交付状态字典含 final_layer_norm 两参数，所检查九个官方实现都不声明或调用该层；没有找到可证明原始 forward 语义的 exact-source 候选。未执行 strict loading，当前结论来自静态源码与已存检查点元数据。",
+  "remaining_constraints": [
+    "官方 zeroshot_10k_mix.yaml 的 max_samples_support=8192，小于最终8693行；dataset_finetune.py按min后抽样，默认少501行。找到匹配源码也不会自动解决该限制。",
+    "CPU/MPS完整上下文可行性仍未验证；不应将155MB权重大小视为推理内存上限。",
+    "未核实交付权重与论文训练先验及训练进程的完整对应关系。"
+  ],
+  "actions": {
+    "downloaded_full_weights": false,
+    "installed_dependencies": false,
+    "gpu_or_training": false,
+    "read_labels": false,
+    "modified_existing_source": false,
+    "committed": false
+  }
+}
