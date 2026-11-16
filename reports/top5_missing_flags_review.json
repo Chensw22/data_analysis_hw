@@ -1,0 +1,114 @@
+{
+  "status": "reviewed_design_only_not_implemented",
+  "question": "固定显式数值缺失标记是否改善原Mitra-v2的预测；不改变预训练权重、学习预算或概率阈值。",
+  "decision": "推荐仅此一次便宜的表征基线；不推荐同时扩展MICE、鲁棒loss或额外架构。",
+  "evidence": {
+    "actual_gap": "MitraPreprocessor先把7个数值NaN按当前训练池均值替换；上游网络只见填补后的数值，没有独立逐cell缺失mask。embedding的padding_mask/feature_mask服务于填充行/列，不保存原NaN。",
+    "already_encoded": "HomePlanet/CryoSleep/Destination/VIP/Deck/Side缺失已保留专用code1，本次不重复添加其flags。",
+    "not_an_equivalent_failed_experiment": "v77 context20加的是7个同行属性且含一致填补；TabM/FTT等虽有7flags，但模型不同，不能否定Mitra上的matched表征差异。",
+    "counterarguments": [
+      "均值重复尖峰可能已隐式标识缺失，不能说原模型完全没有缺失信息。",
+      "CabinNumber缺失往往由Deck/Side缺失标记间接表达，7列中有冗余，但不按OOF挑删列。",
+      "missing和complete子集总体错误率接近不排除条件关联，也不是正收益证据。",
+      "新增tokens会改变整张表的注意力和归纳偏置；收益不能归因于仅缺失行。",
+      "不是新增外部信息，只是显式表示原始观测状态；不承诺超过v81或达到top5。"
+    ]
+  },
+  "fixed_recipe": {
+    "control": "v71_Mitra2_zeroshot原compact13；严格独立原preprocessor。",
+    "candidate": "compact13原顺序加固定7个0/1数值列；不做适配、不加context、不做逻辑填补。",
+    "flags_in_order": [
+      "Age_missing",
+      "RoomService_missing",
+      "FoodCourt_missing",
+      "ShoppingMall_missing",
+      "Spa_missing",
+      "VRDeck_missing",
+      "CabinNumber_missing"
+    ],
+    "flag_definition": "对原始compact13特征中对应的7个数值列逐行isna().astype(float32)，在任何数值填补前计算；每行局部，不依query群体或标签。",
+    "preprocessing": "前13列编码/vocabulary/训练均值/随机mirror与v71严格一致；新7列作为原生numeric 0/1，不另建category vocabulary。全部fit只用当前outertrain；旧upstream constant filtering保持不变并记录实际保留列数。追加flags后须以CPU测试断言前13变换逐值一致；不得因不通过静默改变seed。",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "weights": "现有已验证Mitra-v2文件，不下载新权重。",
+    "fit_seed": "20261112+fold，沿原fold编号；不搜索seed。",
+    "inference": "fullsupport，query_chunk2318，FP32weights/input，MPSbf16，memory_fraction.65，batchchunk1/threshold512原后端，threshold.5；不平均或校准。"
+  },
+  "validation": {
+    "development_rows": 6954,
+    "splits": "原run038 StratifiedKFold3 random_state20261112，固定dev/PassengerId/fold hash完全对齐。",
+    "control_source": "原run038 OOF可经来源/身份/fold/环境SHA验证后缓存复用；若实现需要，完整三折原v71重现。禁止读取旧holdout标签。",
+    "candidate_fits": 3,
+    "report": [
+      "每折与pooled accuracy/logloss",
+      "对raw修正与损坏数",
+      "对v81与v44仅上下文参照",
+      "原missing/complete子集描述但不依结果选flags",
+      "完整来源/输入/seed/维数/耗时记录"
+    ],
+    "interpretation": "复用已探索开发集的matched表征实验，不是新独立holdout或机制的因果证明；不混入group成绩。",
+    "continue_to_one_fullfit_exploration": {
+      "all_three_folds_complete": true,
+      "pooled_accuracy_gain_over_raw_at_least": 0.001,
+      "pooled_logloss_not_worse_than_raw": true,
+      "nondecreasing_accuracy_folds_at_least": 2,
+      "comparison_tolerance": 1e-12,
+      "meaning": "仅预先资源继续门槛，不是A/S资格或自动上传授权。新预测若与已提交CSV重复则不得重复提交。"
+    },
+    "failure_stop": "不通过则归档；不删flags、不换seed/权重/阈值、不追加全参适配来救分。通过也不自动启动适配；root独立决定是否进行一次全量推断探索。",
+    "run051_independence": "本设计未读取run051中途分数；不得因其后续结果改变上述配方或门槛。"
+  },
+  "resources_and_access": {
+    "license": "复用本项目已接受并存档的Mitra-v2 Apache2.0权重与vendor来源，无新账号/许可/付费需求。",
+    "prior_20_feature_evidence": {
+      "note": "context20维数相同但不是本candidate资源证据，仍须新probe。",
+      "outer_4636_support_2318_query_seconds": [
+        16.36845854204148,
+        15.759871750022285
+      ],
+      "final_8693_support_2318_query_seconds": [
+        34.31160262494814,
+        34.11672404198907
+      ],
+      "final_mps_driver_snapshot_bytes": 7204470784,
+      "measurements_are_snapshots_not_peak": true
+    },
+    "expected_cost": "无反向，三折预期数分钟以内；加来源核验及资源/序列化测试约5–15分钟推断工作量，非实测承诺。",
+    "budgets_seconds": {
+      "resource": 1200,
+      "screen": 900,
+      "full_export_if_separately_selected": 900
+    },
+    "probe_before_any_score": [
+      "CPU小合成：flags在填补前生成；train-only means/vocab；未知category；全missing/常数列；原13与control变换逐值一致；模型持久化schema/flags一致。",
+      "CPU/MPS输入一致性：同已fit预处理输出先在CPU生成，拷到MPS再取回应逐值一致；不得把FP32 CPU推断与bf16 MPS要求bitwise相同。小合成可复用既有后端数学等价测试，记录精度差异。",
+      "MPS依次完整4636support+2318query及8693support+2318query，用合成labels/合法无标签属性；实际维数20，subset与同backend完整reload概率误差<=2e-6且阈值一致。",
+      "记录实际维数、完整上下文、有限概率、RSS/MPS snapshots及耗时。超时/OOM/非有限/列数或重载错误即失败，禁止提高cap、缩context或宣称partialpass。"
+    ]
+  },
+  "source_sha256": {
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
+    "reports/run_043/screen_results.csv": "77246c0891c5e1990ecc8894a9ec1ef357330a16d0a461fd9c40f64753296f33",
+    "reports/attribute_mask_research.json": "961f4eb1e71c4bc73c60d1c504f4fea927e93d441d81c540c1217e776f462501",
+    "artifacts/probes/mitra_context20_outer/result.json": "7228fb4b4254f5ded2d8a864b40ffcaaca6beea349a17f281eae89edff3bf882",
+    "artifacts/probes/mitra_context20_final/result.json": "69d2238a041d076a072fc9ae436288cb06c046c5b4fbce01d348f5a1ce10087a"
+  },
+  "execution": "本报告无实现、模型训练、GPU使用、权重下载、环境修改或提交。",
+  "independent_review": {
+    "reviewer": "/root/review_current",
+    "conclusion": "支持一次raw-only固定missing-flags对照；同意预声明continue门槛，无分数查看或GPU执行。",
+    "additional_basis": "已填补值还会经过torch.quantile/bucketize；真实观测恰等训练均值时不可逆，量化也可能合并邻近观测。均值尖峰仍可能隐式有用，所以并非所有缺失信息必然消失。",
+    "required_assertion": "按原13列active映射核对support和unseenquery的编码、均值及mirror前缀和输出逐值一致；constant过滤改变有效列时不依数组位置猜测。"
+  },
+  "root_decision": {
+    "status": "accepted_for_implementation_and_fixed_resource_probe",
+    "candidate": "v89_Mitra2_missing_flags",
+    "run": "run_052",
+    "screen_after_probe_only": true,
+    "no_full_adaptation": true,
+    "gpu_wait_for_run051": true,
+    "no_new_candidate_scores_seen": true
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "status": "closed_by_explicit_user_decision",
+  "decision_date": "2026-11-17",
+  "user_decision": "用户确认没有适用于新代TabPFN的学校、实验室或PriorLabs授权，明确先继续其他模型；关闭此候选分支。",
+  "scope": "TabPFN2.5、2.6、3、3.5/Fast的只读访问与许可复核；本记录不接受许可，不授权下载或训练。",
+  "findings": [
+    {
+      "topic": "用途与主体资格不同",
+      "finding": "官方模型许可明确涵盖学术研究和Kaggle等非商业竞赛，并允许范围内免版税；但另有非消费者/职业用途的主体表示。不能把课程比赛用途被允许等同于当前个人主体条件已明确满足，也不应称学术比赛被禁止。",
+      "source": "https://huggingface.co/Prior-Labs/tabpfn_2_6/blob/24148873a9a5992b429833d07363690dcffd02a8/LICENSE"
+    },
+    {
+      "topic": "账号流程与公开下载不同",
+      "finding": "复核时四个官方HF仓gated=false/private=false；2.6固定URL匿名HEAD200。SDK自动下载会要求PriorLabs登录与接受记录，官方README同时支持手动HF下载及本地model_path。因此“所有路径都必须新账号或付费”不准确。",
+      "sources": [
+        "https://docs.priorlabs.ai/models/accessing-model-weights",
+        "https://github.com/PriorLabs/TabPFN/blob/409271eaa22ed6dc78fb2370adba2e3dc12014d7/README.md"
+      ]
+    },
+    {
+      "topic": "公开可达不等于无条件许可",
+      "finding": "许可将下载/使用视为同意。公开下载接口不消除主体条件；不能借此替用户作未确认的身份表示。本次停止依据明确用户决定，不新增泛化审批流程。"
+    },
+    {
+      "topic": "代码与权重许可不同",
+      "finding": "TabPFN包代码的Apache2.0许可不替代后续模型权重的单独非商业许可；公开独立调用代码与非商业分数不自动等同于商业部署。"
+    }
+  ],
+  "actions_not_taken": {
+    "weights_downloaded": false,
+    "license_accepted": false,
+    "account_created_or_logged_in": false,
+    "credentials_read": false,
+    "vendor_contacted": false,
+    "loader_or_environment_modified": false,
+    "model_training_or_GPU_execution": false
+  },
+  "technical_candidate_not_launched": {
+    "generation": "TabPFN2.6 default classifier",
+    "repository": "Prior-Labs/tabpfn_2_6",
+    "revision": "24148873a9a5992b429833d07363690dcffd02a8",
+    "filename": "tabpfn-v2.6-classifier-v2.6_default.ckpt",
+    "bytes": 43044699,
+    "sha256": "0578fa56f97e11024e31735aaec2c4e7332584b7730242fbaf6c0bbd0299206a",
+    "note": "仅条件性技术首选；未建立本机完整上下文资源可行性或效果。分支已关闭。"
+  },
+  "detailed_readonly_evidence": {
+    "path": "artifacts/tabpfn_access_recheck/review.json",
+    "sha256": "6ad02e4d8992055536675345d2b5dbad4243adce6462530fd097f052f786bb11",
+    "manifest": "artifacts/tabpfn_access_recheck/manifest.json",
+    "contents": "官方固定版本URL、许可短摘录、四仓元数据、SDK与本机源码哈希、匿名HEAD记录及未确定事项。"
+  },
+  "remaining_work_assessment": {
+    "new_backup_routes_recommended": [
+      "原Mitra-v2 checkpoint compact13加7个数值缺失标记；唯一固定表征对照，见reports/top5_missing_flags_review.json。"
+    ],
+    "recommendation": "不扩大模型家族。完成已冻结run051；另仅建议一次尚未覆盖的缺失表征对照，先资源验证、后固定三折。",
+    "correction": "先前仅凭缺失子集总体错误率接近完整子集而排除此路线，证据不足。总体错误率不能排除条件性缺失信息，也不能证明均值填补后模型可辨识缺失。",
+    "limits": "非性能上限或不可约误差证明；未读取run051未完成分数。剩余三次提交是上限，不是必须使用。",
+    "representation_audit": [
+      {
+        "topic": "逻辑与结构化填补",
+        "evidence": [
+          "reports/run_009/screen_results.csv",
+          "reports/run_017/screen_results.csv",
+          "reports/run_029/screen_results.csv",
+          "reports/run_043/screen_results.csv"
+        ],
+        "finding": "睡眠/消费逻辑、同组一致填补、姓氏HomePlanet填补均已试；HomePlanet后验边缘化与v34准确率完全相同(.8192407)，LL稍改善；Mitra同行属性20列也未改善raw。不能将这些等同于已试所有MICE/消费多重插补。"
+      },
+      {
+        "topic": "未覆盖的数值missing表征",
+        "evidence": [
+          "mitra_candidate.py",
+          "third_party/mitra/_internal/data/preprocessor.py",
+          "third_party/mitra/_internal/models/embedding.py"
+        ],
+        "finding": "数值NaN均值填补后没有独立cell-missing mask。分类缺失已有独立code1；padding masks不是缺失mask。均值尖峰可能隐式携带信息但不保证模型利用，值得低成本固定missing-flags基线。"
+      },
+      {
+        "topic": "物理方向及消费结构",
+        "evidence": [
+          "reports/run_015/screen_results.csv",
+          "reports/run_023/screen_results.csv",
+          "reports/run_030/screen_results.csv",
+          "reports/monotone_prior_research.json"
+        ],
+        "finding": "消费线性投影、层次份额与全局单调先验均已测试；monotone .8139200低于matched无约束.8159333。已观察金额方向不是因果或严格物理规律，不支持继续任意加硬约束。"
+      },
+      {
+        "topic": "缺失信息重建边界",
+        "evidence": [
+          "reports/attribute_mask_research.json"
+        ],
+        "finding": "HomePlanet/Cryo随机遮蔽重建较好，但不证明实际缺失人群同分布；Spa正金额log1p重建R2仅.3025。MICE/消费多重插补未穷尽，但目前没有缺失机制或附加观测支持其优先于简单flags。"
+      },
+      {
+        "topic": "标签噪声与目标函数",
+        "evidence": [
+          "reports/run_032/screen_results.csv",
+          "reports/threshold_oracle_diagnostic.json",
+          "reports/pseudolabel_route_review.json"
+        ],
+        "finding": "固定label smoothing .8146391低于matched CE .8192407；阈值oracle不是可部署分数；伪标签主要重复易样本。没有重复真值、标注审计或已知噪声率证据，模型分歧不等于误标，不能据此删改训练标签或扫鲁棒loss。"
+      },
+      {
+        "topic": "关系/图推断",
+        "evidence": [
+          "reports/relational_review/diagnostics.json",
+          "reports/query_group_review/diagnostics.json"
+        ],
+        "finding": "train/test GroupId和完整Cabin无交集；surname及query-group残余关联CI跨0。后者机制未被context20等价覆盖，但目前弱证据不支持嵌套图模型。"
+      }
+    ]
+  }
+}
