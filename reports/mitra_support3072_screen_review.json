@@ -1,0 +1,73 @@
+{
+  "status": "fixed_before_any_support3072_candidate_score",
+  "candidate": "v93_Mitra_support3072",
+  "run": "run_056",
+  "resource_evidence": {
+    "reports/mitra_long_context_resource_design.json": "71da8c8d75835137d79fb62e900f10cc8c5d81520900db695ec76d50a69648af",
+    "reports/mitra_long_context_resources/freeze.json": "bb2c0c79cbd700fdc7c810228583c44b4fca32b5015a40e3d1cb1ef424fc954e",
+    "reports/mitra_long_context_resources/partial.json": "ae72deb5708197975be5843a536abd06efe676bb1c27fde8829d469e43c1ff1b",
+    "reports/mitra_long_context_resources/requirements.lock": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "reports/mitra_long_context_resources/result.json": "c3c485d4168f7de1f1e90c42dc9c4e53db81392cca666861e2332c13aad0e46d",
+    "reports/mitra_long_context_resources/worker_result.json": "ae72deb5708197975be5843a536abd06efe676bb1c27fde8829d469e43c1ff1b"
+  },
+  "resource_qualification_required": true,
+  "cost_estimates_seconds": {
+    "warm_update_max_seconds": 31.964472874999046,
+    "screen_projection_seconds": 14022.060282668826,
+    "full_export_projection_seconds": 5781.760159848491,
+    "screen_ceiling_seconds": 43200,
+    "full_export_ceiling_seconds": 18000,
+    "passed": true,
+    "automatic_cv_authorization": false,
+    "automatic_export_authorization": false
+  },
+  "scope": "One fixed paired-query support3072/query256 recipe, all other v81 training, native head/loss/precision/backend/checkpointing/features/seed settings unchanged. No new ensemble or support-size search.",
+  "development_rows": 6954,
+  "outer_folds": 3,
+  "outer_seed": 20261112,
+  "fit_seeds": [
+    20261112,
+    20261113,
+    20261114
+  ],
+  "threshold": 0.5,
+  "inner_selection": "Original v81 train_test_split .2 stratified at fitseed; minimum binary logloss across steps0..50, earliest exact tie; reset checkpoint/preprocessing/optimizer/RNG and refit selected count.",
+  "paired_sampler": "Same permutation calls as v81; query perm[1024:1280]; support concat(perm[:1024],perm[1280:3328]); n>=3328; no duplicated rows/labels across support-query.",
+  "formal_screen_budget_seconds": 18000,
+  "conditional_export_budget_seconds": 7200,
+  "cost_decision": "Resource/cost gates passed; screen estimate14022.06 seconds, export5781.76 seconds. Root chooses fixed5h screen and conditional2h export before any new score, within previously fixed absolute ceilings.",
+  "primary_reference": {
+    "version": "v81_Mitra_full_episode50",
+    "run": "run_046",
+    "accuracy": 0.817946505608283,
+    "log_loss": 0.3750928747453614,
+    "authentication": "Exact cached OOF, original outer and inner ID hashes, model/source/checkpoint/environment identities; no rerun/retuning of reference."
+  },
+  "continue_gate": {
+    "all_three_folds_complete": true,
+    "pooled_accuracy_at_least_reference": true,
+    "pooled_log_loss_at_most_reference": true,
+    "at_least_two_fold_accuracies_not_lower": true,
+    "at_least_one_pooled_metric_strictly_better": true,
+    "tolerance": 1e-12
+  },
+  "inference": "Full4636 outer/full8693 final support and query_chunk2318; unchanged MitraPredictor.",
+  "stop_rules": [
+    "Any resource/source/environment/identity failure or timeout is inconclusive, not a complete score; no automatic resume.",
+    "Only publish final screen_results.csv after all3 complete and validated; retain fold/partial evidence on failure.",
+    "Complete failed gate archives this branch; do not vary support2048/4096, maxsteps100, seeds, backend, loss or add blend.",
+    "Passing permits separate root export/exploration decision only; no automatic full-label read or online upload.",
+    "Any future upload stays within batch remaining2, fresh reserve30, actual daily limits, unique CSV and desktop reminder."
+  ],
+  "reporting": [
+    "Each outerfold accuracy/logloss vs cachedv81 and paired corrections/regressions",
+    "Each inner update history, selected/refit counts, training/validation IDs and fullsupport evidence",
+    "Repeated exact query/support-prefix/RNG counterfactual during both inner and fresh refit",
+    "Walltime, synchronized resources and frozen source/environment provenance"
+  ],
+  "disclosure": "Adaptively proposed after existing development experiments and online v81 result. Reused validation folds, not independent confirmation. Same maximum query-target updates but higher compute; not an equal-FLOPs comparison. Different selected refit counts are part of the fixed selection procedure.",
+  "old_holdout_labels_read": false,
+  "S_supported": false,
+  "automatic_upload": false,
+  "new_scores_seen": false
+}
