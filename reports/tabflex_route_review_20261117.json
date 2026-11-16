@@ -1,0 +1,150 @@
+{
+  "status": "conditional_cpu_reference_candidate_weight_identity_unverified",
+  "created_at_utc": "2026-11-16T21:02:01.339362+00:00",
+  "recommendation": "最多保留官方L100单权重默认配方；若官方端点恢复且取得完整权重身份，可先做CPU严格加载及小型原样参考。当前不进入安装、下载或GPU阶段；端点失败不是许可禁用或模型无效的证据。",
+  "scope": {
+    "distinct_official_pages_files_endpoints": 10,
+    "budget": 10,
+    "details": "GitHub recursive tree一次，8个源码/README/LICENSE文件，1个官方Azure权重端点。搜索仅用于定位官方仓库；重复读取同文件未增加版本数。",
+    "score_or_label_read": false,
+    "full_checkpoint_download": false,
+    "environment_change": false,
+    "model_execution": false
+  },
+  "repository": {
+    "url": "https://github.com/microsoft/ticl",
+    "revision": "4d60af2dcec2182b389d24bc889a0a32b7984e37",
+    "tree_url": "https://api.github.com/repos/microsoft/ticl/git/trees/main?recursive=1"
+  },
+  "sources": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/README.md",
+      "sha256": null
+    },
+    {
+      "path": "ticl/prediction/tabflex.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/prediction/tabflex.py",
+      "sha256": "658b3163e12ed5221c6ad80ab618269fdefe3e5e7488a3bdc3584fe797eeed42"
+    },
+    {
+      "path": "ticl/models/tabflex.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/models/tabflex.py",
+      "sha256": "d3662a096e9bec71378c4617a70e34590fdb9a1bbb7418f92eb6dc0340983f2e"
+    },
+    {
+      "path": "ticl/models/linear_attention.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/models/linear_attention.py",
+      "sha256": "6db91ad109c218e02ed237606c28939055941607b29f7a19ff4ae9f604e00258"
+    },
+    {
+      "path": "ticl/utils.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/utils.py",
+      "sha256": "869187662f66eafc645529dfc4a39205ebdcf82c1c516d8a8b111fdc50b44a2d"
+    },
+    {
+      "path": "ticl/prediction/tabpfn.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/prediction/tabpfn.py",
+      "sha256": "8c0049b6a74a3c26be02e6bf68e8c010c5f0dd75dbda46184920fbf187a02d36"
+    },
+    {
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/LICENSE.txt",
+      "sha256": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+    },
+    {
+      "path": "ticl/model_builder.py",
+      "url": "https://raw.githubusercontent.com/microsoft/ticl/4d60af2dcec2182b389d24bc889a0a32b7984e37/ticl/model_builder.py",
+      "sha256": "66ddd017d39fb62c50ba31c63655f4539d67cf00ebb6cae7b51fe74bb36b63b3"
+    }
+  ],
+  "weight": {
+    "official_url": "https://amuellermothernet.blob.core.windows.net/models/ssm_tabpfn_b4_largedatasetTrue_modellinear_attention_nsamples50000_08_01_2024_22_05_50_epoch_110.cpkt",
+    "filename": "ssm_tabpfn_b4_largedatasetTrue_modellinear_attention_nsamples50000_08_01_2024_22_05_50_epoch_110.cpkt",
+    "size_bytes": null,
+    "sha256": null,
+    "internal_config_verified": false,
+    "public_delivery_mechanism": "Official fetch_model uses plain urllib.request.urlretrieve on this Azure URL, with no token or login parameter. Successful public availability was not verified.",
+    "attempts": [
+      {
+        "time_utc_window": "2026-11-16T21:00Z–21:05Z",
+        "method": "urllib Range bytes=0-65535",
+        "result": "URLError wrapping SSLEOFError: EOF occurred in violation of protocol; no checkpoint bytes returned"
+      },
+      {
+        "time_utc_window": "2026-11-16T21:00Z–21:05Z",
+        "method": "curl --head --max-time 20",
+        "result": "exit6: Could not resolve host: amuellermothernet.blob.core.windows.net"
+      }
+    ],
+    "time_precision": "Tool calls did not record individual wall-clock timestamps; windows are approximate, not exact observed failure times.",
+    "sha_limit": "Source pin fixes URL construction but not Azure object contents. No author checksum/ETag/size obtained; cannot invent immutable weight identity."
+  },
+  "license": {
+    "code": "Apache-2.0; LICENSE explicitly defines You as an individual or Legal Entity, no professional-only restriction found.",
+    "readme_scope": "All provided models described as research prototypes shared for research use; this personal noncommercial course benchmark fits that stated purpose.",
+    "weight_specific_terms": "No separately inspected checkpoint license or accompanying manifest; do not claim Azure checkpoint has an independently verified Apache model card. No click-through/authentication code found in official fetch_model.",
+    "obligations": "Keep applicable license/notices for source redistribution. No account creation, contract acceptance, or forms performed."
+  },
+  "actual_source_architecture": {
+    "mechanism": "TabPFN-derived linear attention computes K^T V and a key-sum normalizer, not an N×N softmax attention matrix. Training rows self-attend within support; query rows attend only support; query labels are zero placeholders.",
+    "implementation": "Pure torch einsum/projections/LayerNorm/FFN; selected linear-attention branch contains no required CUDA-specific attention kernel. The source feature_map values identity and elu both select ELU+1; identity_for_real is a different branch. Encoder replaces NaNs by zero after preprocessing.",
+    "checkpoint_limit": "Actual layer count/embedding size/feature-map config/head count/parameter count not established without checkpoint metadata. Filename nsamples50000 or epoch110 does not establish total training duration or prove delivered architecture parameters.",
+    "different_from_tested": "A genuinely different linear-attention aggregation from evaluated quadratic-attention PFNs; being built on TabPFN code does not make it the same learned weights. No accuracy advantage inferred from scalability."
+  },
+  "official_routing": {
+    "three_weight_ensemble": false,
+    "behavior": "TabFlex.__init__ fetches three files, creates three classifier objects; fit selects exactly one according to row/feature counts. It does not average their predictions.",
+    "selector": "N>=3000 and D<=100 -> L100; otherwise higher-dimensional cases -> H1K; small cases -> S100.",
+    "this_task": "4636 and8693 supports with13numeric-encoded columns,2classes -> L100; no feature projection needed if delivered config agrees.",
+    "views": {
+      "L100": 1,
+      "H1K": 3,
+      "S100": 3
+    },
+    "support_limit": "TabPFNClassifier default max_num_train_samples=np.inf and wrapper fit passes overwrite_warning=True. No support truncation occurs in inspected default route;8693 is supported by API logic, not yet by measured resources."
+  },
+  "fixed_recipe_if_reachable": {
+    "weight": "ssm_tabpfn_b4_largedatasetTrue_modellinear_attention_nsamples50000_08_01_2024_22_05_50_epoch_110.cpkt",
+    "model_string": "ssm_tabpfn_b4_largedatasetTrue_modellinear_attention_nsamples50000_08_01_2024_22_05_50",
+    "epoch": "110",
+    "N_ensemble_configurations": 1,
+    "seed": 0,
+    "no_preprocess_mode": false,
+    "scale": true,
+    "normalize_with_test": false,
+    "multiclass_decoder": "permutation",
+    "feature_shift_decoder": true,
+    "max_num_train_samples": "infinity",
+    "threshold": 0.5,
+    "new_ensemble_or_hpo": false,
+    "input": "same13semantic fields, numeric representation with train-only category mapping; mapping is a local adapter, not a claimed author-provided categorical encoder. Preserve NaNs until official preprocessing.",
+    "probability_api": "Selected underlying TabPFNClassifier.predict_proba; top-level TabFlex exposes only predict.",
+    "device_adapter": "Select exact official L100 classifier with device=cpu for initial reference rather than instantiate CUDA-only wrapper/all3 downloads. Any later MPS device adaptation must preserve math and be disclosed."
+  },
+  "preprocessing_findings": [
+    "Default mix enumerates none then power_all per permutation; L1001view selects the first none configuration. It still performs support-only mean/std normalization, support-only constant-column selection, outlier treatment and used-feature scaling, then zero-padding according to config (expected100, not verified).",
+    "transformer_predict slices eval_ys to support before preprocessing; constant-column check therefore uses support, not query. normalize_with_test defaultsFalse.",
+    "Temperature is hardcoded0.8 in transformer_predict regardless of passed value; keep exact official behavior, no threshold or temperature tuning.",
+    "String categorical data need external numeric coding; official check_array/model do not implement a train-only string vocabulary. Unknown/missing handling must be frozen in any adapter."
+  ],
+  "platform_risks": [
+    "Top-level TabFlex hardcodes device=cuda for all3 models, so it is not directly MPS-ready. Underlying classifier has CPU path.",
+    "Non-CPU inference enters torch.cuda.amp.autocast, which does not establish a valid MPS mixed-precision policy. First comparison should use FP32 CPU and FP32 MPS, not silently substitute bf16.",
+    "get_linear_attention_layers probes torch.cuda.is_bf16_supported when dtype absent, but resulting dtype variable is not passed to constructed layers in the inspected branch; still needs a CPU import/constructor check.",
+    "Old sklearn force_all_finite API and model-builder imports may require isolated compatible dependencies. load_model explicitly uses weights_only=False to read config and official backward-compatible key renaming, then load_state_dict strict=True. Do not use strict=False or guess architecture.",
+    "Linear memory scaling is promising but not a measured16GB bound. Avoid author millions-of-rows benchmark as proof for this device/dataset."
+  ],
+  "next_gate": [
+    "Only if root independently verifies this exact official endpoint: record bytes, SHA256, source pin and delivered config; do not search third-party replacement weights in this task.",
+    "CPU strict-load exact official builder + small synthetic full-context reference; verify same probability on reordered/rebatched queries and portable reload; no labels or scores needed.",
+    "If CPU works, separately authorize MPS same-FP32 small comparison, then4636/8693 full support with2318/4277queries, unchanged context and query-batch invariance. No fallback truncation, hidden three-weight averaging or recipe search."
+  ],
+  "final": "有条件值得一次CPU原样严格加载；当前因官方权重不可达且身份/配置未验证而暂不可执行。达到10项边界，停止调查。",
+  "root_endpoint_recheck": {
+    "url": "https://amuellermothernet.blob.core.windows.net/models/ssm_tabpfn_b4_largedatasetTrue_modellinear_attention_nsamples50000_08_01_2024_22_05_50_epoch_110.cpkt",
+    "observed_at_utc": "2026-11-16T21:02:55.501691+00:00",
+    "error_type": "URLError",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  }
+}
