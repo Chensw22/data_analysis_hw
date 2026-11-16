@@ -28,6 +28,7 @@ SPECS = {
     'mitra_lastblock100_candidate': ('v76_Mitra_lastblock100', 'run_042', 'export', 10800),
     'mitra_full_episode_candidate': ('v81_Mitra_full_episode50', 'run_046', 'export', 10800),
     'tabdpt_candidate': ('v82_TabDPT13_full8', 'run_047', 'export', 7200),
+    'kumo_candidate': ('v83_Kumo_medium8', 'run_048', 'export', 7200),
 }
 OWN_SOURCES = ['prepare_exploratory_iteration.py', 'test_prepare_exploratory_iteration.py',
                'prepare_top5_submission.py', 'kaggle_workflow.py']
