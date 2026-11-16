@@ -1,0 +1,66 @@
+{
+  "status": "complete",
+  "episodes": [
+    {
+      "fold": 0,
+      "seed": 20261112,
+      "inner_training_rows": 3708,
+      "support_rows": 1024,
+      "query_rows": 256,
+      "support_ids_sha256": "9cf9f14e70be01ae33906d4216491584148b0223301842aaa1ae5dc360f96019",
+      "query_ids_sha256": "65196ce4d370822d58837f0677526da84f8256cd9459b36e4d71dbb0f306171b",
+      "unused_mass_mean": 6.649716298889885e-05,
+      "unused_mass_quantiles": [
+        4.777708113579138e-07,
+        1.2232670997036621e-05,
+        0.0004020786363980733,
+        0.0005212218966335058
+      ],
+      "extra_CE_penalty_mean": 6.642294465564191e-05,
+      "extra_CE_penalty_max": 0.0005216598510742188
+    },
+    {
+      "fold": 1,
+      "seed": 20261113,
+      "inner_training_rows": 3708,
+      "support_rows": 1024,
+      "query_rows": 256,
+      "support_ids_sha256": "ebd8b64f80f0cdf576820936039714f5c7375eb00a312d72dca65bc84cee0562",
+      "query_ids_sha256": "aaaa9a28c3c8ac8781407c16d7dd0b3196583464cb5e29bc041bed7f14418b59",
+      "unused_mass_mean": 6.628365259880864e-05,
+      "unused_mass_quantiles": [
+        1.4921597824013588e-07,
+        1.0229075542156352e-05,
+        0.0004184193167020567,
+        0.0005525824963115156
+      ],
+      "extra_CE_penalty_mean": 6.625708192586899e-05,
+      "extra_CE_penalty_max": 0.0005526542663574219
+    },
+    {
+      "fold": 2,
+      "seed": 20261114,
+      "inner_training_rows": 3708,
+      "support_rows": 1024,
+      "query_rows": 256,
+      "support_ids_sha256": "d98b690a6897e67f54be31b390c2aa174e704f1e77b69d15df13f6dc6f71327b",
+      "query_ids_sha256": "e5a0013675b9d5670d03ff6d6a2a879eb1eda0392f90618a4fa5a1a786233c1c",
+      "unused_mass_mean": 7.910735197436125e-05,
+      "unused_mass_quantiles": [
+        3.6759033150701725e-07,
+        1.178215779873426e-05,
+        0.00048074805818032473,
+        0.0005973094375804067
+      ],
+      "extra_CE_penalty_mean": 7.911743887234479e-05,
+      "extra_CE_penalty_max": 0.0005979537963867188
+    }
+  ],
+  "parameter_updates": 0,
+  "new_accuracy_computed": false,
+  "old_holdout_labels_read": false,
+  "interpretation": "L10=L2-log(p10(class0)+p10(class1)). Extra loss can be regularization/task recognition, not necessarily harmful. Tiny step0 mass does not prove identical gradients/learning; substantial mass does not establish accuracy gain. No new accuracy or outer/holdout scoring.",
+  "tiny_by_fixed_heuristic": true,
+  "decision": "do_not_prioritize_binary_objective",
+  "seconds": 5.750706040998921
+}
