@@ -1,0 +1,274 @@
+{
+  "status": "fixed_resource_design_before_implementation_and_GPU",
+  "candidate_description": "Mitra full-parameter50 with paired3072support/256query episodes; version/run identifiers intentionally unassigned",
+  "real_accuracy_computed": false,
+  "gpu_probe_run": false,
+  "implementation_created": false,
+  "recommendation": "Reasonable single-mechanism hypothesis for one bounded synthetic resource gate; feasibility and accuracy remain unverified. Do not start CV from this proposal.",
+  "hypothesis": {
+    "mechanism": "Training support grows1024→3072 while inference remains4636/8693. This narrows, but does not eliminate, support-context mismatch. More support changes attention/quantile statistics and available label evidence for the same query examples.",
+    "not_evidence_of_effect": "The online improvement of v81 does not prove context mismatch caused its remaining errors or that longer episodes improve accuracy.",
+    "alternative_outcomes": [
+      "Extra context could improve inference transfer.",
+      "More redundant support or different quantile/attention statistics could worsen optimization/generalization.",
+      "Fixed50 updates still consume the same256 query targets per update; support expansion is not more labeled query supervision.",
+      "Longer context can exceed memory/time even though parameter/AdamW bytes are unchanged."
+    ],
+    "adaptive_development_disclosure": "These development rows/folds, earlier results and the online v81 outcome informed this proposal. This is adaptive model improvement, not an independent confirmatory test."
+  },
+  "fixed_recipe": {
+    "max_steps": 50,
+    "episode_support": 3072,
+    "episode_query": 256,
+    "validation_fraction": 0.2,
+    "query_chunk": 2318,
+    "trainable_parameters": 75670026,
+    "selection": "Minimum full-context inner binary logloss over steps0..50; earliest exact tie; no outer query labels",
+    "sampler": "one numpy.default_rng(seed).permutation(pool_rows) per step; support=concat(perm[:1024],perm[1280:3328]); query=perm[1024:1280]",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.3,
+    "warmup": "literal official schedule",
+    "fresh_full_refit": true,
+    "device": "mps",
+    "mps_memory_fraction": 0.65,
+    "threads": 4,
+    "threshold": 0.5,
+    "trainable": "all original parameters",
+    "training_loss": "native ten-class cross entropy",
+    "validation_prefix_cache": false,
+    "gradient_checkpointing": "Preserve existing upstream non-reentrant layer checkpoint AND existing BatchChunkedAttention SDPA checkpoint unchanged; do not add, remove or reconfigure either.",
+    "inner_fit_seed": "20261112+outer_fold; full8693 fit seed20261112",
+    "outer_split_seed": 20261112,
+    "outer_split": "Original StratifiedKFold(3,shuffle=True), original6954development membership only",
+    "inner_split": "Original train_test_split(test_size=.2,stratify=y,random_state=fitseed); prep fitted on inner train only",
+    "refit": "Transfer only selected count; reset original checkpoint, preprocessing fit on full outer/full8693 pool, optimizer, torch/numpy RNG; same paired sampler; selected count0 is allowed",
+    "inference": "Original MitraPredictor, all4636 outer or8693 full support, query_chunk2318; no support cap/cache or view changes"
+  },
+  "single_change_definition": {
+    "primary_change": "Append2048 extra uniformly sampled support rows to exactly the original1024 support rows; keep every corresponding query and RNG call identical to v81.",
+    "counterfactual_sampler_gate": {
+      "old": "perm=rng.permutation(n); support_old=perm[:1024]; query_old=perm[1024:1280]",
+      "new": "perm=rng.permutation(n); support_new=np.concatenate([perm[:1024],perm[1280:3328]]); query_new=perm[1024:1280]",
+      "required": [
+        "n>=3328 or fail before sampling; never shrink/retry",
+        "Exactly one full permutation per update, no extra RNG call",
+        "query_new array equals query_old elementwise",
+        "support_new[:1024] equals support_old elementwise",
+        "support/query unique and disjoint; lengths3072/256",
+        "next RNG bit_generator.state identical after every step",
+        "On fresh refit reseed just as v81; no reuse of inner optimizer/preprocessor/RNG"
+      ],
+      "uniformity": "For a uniform full permutation, these fixed disjoint position sets are uniformly distributed ordered samples; removing the256 query positions does not introduce label- or group-dependent selection.",
+      "synthetic_cpu_check_completed": {
+        "status": "passed",
+        "pool_rows": [
+          3708,
+          4636,
+          6954,
+          8693
+        ],
+        "seeds": [
+          42,
+          20261112,
+          20261113,
+          20261114
+        ],
+        "steps_each": 50,
+        "total_step_comparisons": 800,
+        "real_data_read": false,
+        "weight_loaded": false
+      }
+    },
+    "prohibited_changes": [
+      "No new/removed gradient checkpoints or CPU offload",
+      "No mixed-precision/backend/memory-cap change",
+      "No feature/mirror/class-head/loss/LR/WD change",
+      "No query resampling/group exclusion/sampling by error",
+      "No lower support2048 retry, extra seeds, longer horizon, new optimizer or tuned threshold",
+      "No global monkeypatch of the frozen v81 sampler/core"
+    ]
+  },
+  "row_capacity": {
+    "source": "Existing completed fit metadata only; no new target read or split fitting.",
+    "outer_folds": [
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261112_38b837397a8e.json",
+        "seed": 20261112,
+        "outer_training_rows": 4636,
+        "outer_query_rows": 2318,
+        "inner_training_rows": 3708,
+        "inner_validation_rows": 928,
+        "episode_total": 3328,
+        "minimum_inner_spare_rows": 380,
+        "selected_steps": 47,
+        "fit_seconds": 2873.4056456249673,
+        "mean_inner_update_seconds": 21.8139825357683,
+        "mean_inner_validation_seconds": 17.08860699341897,
+        "mean_refit_update_seconds": 19.33361328545304
+      },
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261113_38e7dd3e5f8b.json",
+        "seed": 20261113,
+        "outer_training_rows": 4636,
+        "outer_query_rows": 2318,
+        "inner_training_rows": 3708,
+        "inner_validation_rows": 928,
+        "episode_total": 3328,
+        "minimum_inner_spare_rows": 380,
+        "selected_steps": 47,
+        "fit_seconds": 3548.2064114169916,
+        "mean_inner_update_seconds": 23.576567465816623,
+        "mean_inner_validation_seconds": 18.911453549882545,
+        "mean_refit_update_seconds": 29.83317352482861
+      },
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261114_00e1e32df8e7.json",
+        "seed": 20261114,
+        "outer_training_rows": 4636,
+        "outer_query_rows": 2318,
+        "inner_training_rows": 3708,
+        "inner_validation_rows": 928,
+        "episode_total": 3328,
+        "minimum_inner_spare_rows": 380,
+        "selected_steps": 43,
+        "fit_seconds": 2958.0722156249685,
+        "mean_inner_update_seconds": 21.740659239965026,
+        "mean_inner_validation_seconds": 17.48171416670084,
+        "mean_refit_update_seconds": 22.712006691856807
+      }
+    ],
+    "full_fit": {
+      "training_rows": 8693,
+      "inner_training_rows": 6954,
+      "inner_validation_rows": 1739,
+      "inner_spare_rows": 3626,
+      "full_refit_spare_rows": 5365,
+      "seed": 20261112
+    },
+    "scope": "Original random3fold screen and laterfull8693 only. Other group/stability folds are not authorized and must not be assumed covered.",
+    "runtime_guard": "Reverify exact train/validation IDs against cached v81 before targets/scoring, require unique aligned IDs and n>=3328 in inner and refit pools, assert episode support/query intersection empty every step."
+  },
+  "resource_facts": {
+    "original_synthetic_probe_total_seconds": 217.21434691699687,
+    "original_trainable_parameters": 75670026,
+    "original_optimizer_state_tensor_bytes": 605361776,
+    "original_allocator_cap_bytes": 8263525171,
+    "original_post_step_driver_bytes": [
+      2994700288,
+      5142183936
+    ],
+    "original_post_small_validation_driver_bytes": 6176079872,
+    "original_full_real_inner_validation_driver_bytes": 7199408128,
+    "memory_caveat": "These are snapshots, not peak measurements. Unused allocator capacity is not guaranteed room for3072 backward. The second step and post-validation training can behave differently from a cold first step.",
+    "compute_scaling": "Row self-attention S*S increases9x; query-to-support Q*S increases3x; feature attention/FF row count(S+Q) grows3328/1280=2.6x. These operation ratios are not measured runtime or total-memory ratios.",
+    "unchanged_predictor_evidence": "Existing v81 realfull8693→4277 and portablefullreloaddiff0 remain evidence for unchanged inference structure only, not for3072 backward feasibility.",
+    "existing_screen_seconds": 9459.299733583,
+    "existing_full_export_seconds": 3022.0814171249513,
+    "full_fit_old_selected_steps": 15,
+    "warning_on_cost": "New chosen refit counts can be0..50; do not budget using old15 or best-case convergence."
+  },
+  "prospective_synthetic_probe": {
+    "status": "Specification accepted by root; implementation/source review+commit still required before MPS.",
+    "budget_seconds": 1200,
+    "seed": 42,
+    "synthetic_pool_rows": 8693,
+    "raw_features": 13,
+    "labels": "Alternating synthetic binary labels only; no Transported data, accuracy, real-data predictions or candidate ranking.",
+    "preprocessing": "Existing synthetic_frame8693 seed42 and originalMitraPreprocessor fit; assert13 activefeatures. Allocate originalFP32 full8693 tensor; disjoint separately generated synthetic validation attributes.",
+    "training_shape": [
+      3072,
+      256
+    ],
+    "same_model_and_optimizer_across_all_updates": true,
+    "sequence": [
+      "step1 native10CE forward/backward/AdamW.step",
+      "step2 native10CE forward/backward/AdamW.step with moments resident",
+      "zero_grad(set_to_none=True); originalfullcontextvalidation3708support/928query while optimizer moments remain",
+      "step3 sameoptimizer after small validation",
+      "zero_grad(set_to_none=True); originalfullcontextvalidation6954support/1739query while moments remain",
+      "step4 sameoptimizer after full validation",
+      "release all fitted objects and allocator cache; write complete or failure evidence"
+    ],
+    "frozen_runtime": {
+      "device": "mps",
+      "threads": 4,
+      "allocator_fraction": 0.65,
+      "weights": "float32",
+      "autocast": "bfloat16",
+      "fallback": false,
+      "backend": "Existing frozenBatchChunkedAttention/nativeSDPA and both existing checkpoint layers unchanged"
+    },
+    "checks": [
+      "Original checkpoint/environment/vendor/source hashes valid before and after; sources and recipe committed before MPS",
+      "All75670026 parameters remaintrainableFP32; logits256x10; finiteCE/gradients/updatedparameters",
+      "Nonzero gradients and changedparameter hashes in all12transformerblocks at eachupdate",
+      "AdamW state remains resident acrossvalidation and steps; all state steps equal1,2,3,4 respectively",
+      "Support/query identity hashes recorded eachstep; query/prefix match old sampler counterfactual; RNG-state agreement",
+      "Validation928x2 and1739x2 finite normalized binaryprobabilities; no accuracy computed; gradientsNone; allsupport used",
+      "MPS synchronize for measured operation timing; include forward/backward/optimizer checks; record current/driver/RSS snapshots before/afterforward/backward/optimizer/validation; label observedmax as sampled, nothardwarepeak",
+      "Deadline covers load/preprocessing/all4updates/bothvalidations/checks/serialization/release; no pause/restart/resume"
+    ],
+    "resource_pass": "All four updates, both validations, identity/numerical/state gates and release finish within1200s at unchanged.65 cap without error.",
+    "failure_policy": "OOM, timeout, nonfinite, badIDs/state, hash/env change or incomplete output closes this3072branch as failed/inconclusive resource evidence. Preservepartial logs. No2048/AMP/backend/offload/checkpoint rescue and no candidate accuracy.",
+    "qualification_limit": "Four updates exercise residentoptimizer and post-validationbackward but do not prove50-step memory/performance stability; formalrun keeps hard deadline and failsinconclusive if resourcebehavior later changes."
+  },
+  "prospective_cost_gate": {
+    "status": "Predetermined cost estimator; CV/export budgets are proposed absolute upper bounds, NOT launch authorization.",
+    "warm_update_seconds": "u=max(step2.seconds,step3.seconds,step4.seconds); synchronized measured completeupdates including checks; never choosefastest.",
+    "validation_seconds": "v_screen=measured3708/928validation.seconds; v_full=measured6954/1739validation.seconds with moments resident.",
+    "screen_projection_seconds": "1.25 * (300*u + 153*v_screen + 600)",
+    "full_export_projection_seconds": "1.25 * (100*u + 51*v_full + 600)",
+    "count_explanation": "Threefolds:3*(50innerupdates+up-to50freshrefitupdates),3*51fullcontextvalidations. Fullfit:50inner+up-to50freshrefit,51validations. Fixed600seconds margin per stage covers model/prep reset, outer/test inference, serialization/reload and protocol work;1.25 multiplier is prospective headroom, not a proven upperbound.",
+    "proposed_screen_absolute_ceiling_seconds": 43200,
+    "proposed_full_export_absolute_ceiling_seconds": 18000,
+    "acceptance": "Resourcepass AND both projected costs<=their proposedceilings. Root then reviews measured memory/time and separately commits whether to run CV and its fixedbudget, never exceeding theseceilings. No automatic launch from passing probe.",
+    "if_cost_gate_fails": "Archive bounded3072recipe; no posthoc pick-fasterstep, reducehorizon/support, enlargeceiling or usefailedprobe timings as pass."
+  },
+  "prospective_formal_comparison": {
+    "primary_control": "Cachedv81_Mitra_full_episode50/run046 ONLY for eligibility; same outerfoldIDs, innerseeds and originalquery counterfactual.",
+    "reason": "RawMitra changes both adaptation andsupport and cannot isolate this one context change. Do not rerun/retunecontrol; authenticate cachedOOF and everyfoldlog/source/environment/checkpoint hash.",
+    "no_extra_models": "One3072candidate, no ensemble, no secondseed, no searchsupport sizes.",
+    "outputs": "All3complete OOF andfoldIDcoverage; pooledbinaryaccuracy/logloss, eachfoldmetrics, pairedcorrected/regressed counts/errorcorrelation, probabilitydifference, selectedsteps and fulltraining logs. Failedpartial has no pooledwinner.",
+    "suggested_continue_gate_pending_root_review": {
+      "pooled_accuracy": ">=v81 with1e-12 numericaltolerance",
+      "pooled_binary_logloss": "<=v81 with1e-12 numericaltolerance",
+      "fold_accuracy": "Atleast2of3 notbelowv81 using1e-12 numericaltolerance",
+      "nonidentical_improvement": "Atleastone pooledmetric strictlybetter beyond1e-12; no eligibility from exacttie",
+      "reference_accuracy": 0.817946505608283,
+      "reference_logloss": 0.3750928747453614,
+      "eligibility_only": "Ifrootfreezesgate anditpasses, separate committed explorationdecision stillrequired. Differencewithin1percentagepoint remains samepracticalband; S/stable superiority notestablished."
+    },
+    "full_labels_gate": "Original1739openedholdout targets excluded from allcandidate selection. Full8693targets onlyafter separatefinalfitdecision;4277first/reload identicalthreshold andmaxabsdiff<=2e-6 required; batch/weeklyquota/dedup/desktop checks remain unchanged.",
+    "stop": "Any missingfold, timeout orfailedgate means no export/upload; no extension from step50, no automatic alternatecandidate."
+  },
+  "evidence_files_sha256": {
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_full_episode_probe.py": "4f1e5c8a33ca2ac0704fe9129ab16758964cfca807052057122a6a823eb4dfdd",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "reports/top5_full_episode_review.json": "ce3b05c280570bc064975a7c7d8100e0410e0bbf6b9e7b6974fa6a627d4b1159",
+    "reports/mitra_full_episode_resources/freeze.json": "d8c8eeab5f4c958e04c537ae79c44b6b8054eef6df189d501cc7b47a4a887f49",
+    "reports/mitra_full_episode_resources/result.json": "3eae2aad50512b1b29e8d290b97abd60d95e19ab0afd90031bbb0302fd9e55cf",
+    "reports/mitra_full_episode_resources/requirements.lock": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "reports/run_046/protocol.json": "5d5121a77830552909184b777133badf8b130db7c6ef7fdfa0ab7321a9eb71b0",
+    "reports/run_046/screen_results.csv": "6d19d1a57c4bc2b1f8f4d3ecfa5ce472c123e2dbf0cc123d53318717eccaacb4",
+    "reports/run_046/progress.json": "cce10b7d91e4e5cf47ffefdbc705677282a18ac51d542719daef73f16acea1ad",
+    "reports/proposal_nov16_full_episode/manifest.json": "a08836bf502d8e0d5362f18d5ca78c8cfd2378fc33079dd768117c881a6a7319",
+    "reports/proposal_nov16_full_episode/fit_metadata.json": "f05ae2ef3ca486ca3a01c5071c78987882528502d048a7b7393e8b26de215cb7",
+    "reports/proposal_nov16_full_episode/reload_metadata.json": "f05ae2ef3ca486ca3a01c5071c78987882528502d048a7b7393e8b26de215cb7",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261112_38b837397a8e.json": "207418f04d47cc1d2b94c024b6279dce1e41eb44daeed8c641b72b5298e50c80",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261113_38e7dd3e5f8b.json": "03334b9c8c1b28d3e5a4aceefa6ce39f48b055a97ff1af7f3312d48ffb4634ce",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261114_00e1e32df8e7.json": "2caa07f1a0a2ab6faa24c01a1fd28e1d0b9c5a4898546a3c856806feb0141ac4"
+  },
+  "next_action": "Implement only the fixed synthetic probe in new source files; root reviews/tests/commits before execution. No formal candidate or online upload from this resource design.",
+  "root_decision": {
+    "authorize_resource_probe_implementation": true,
+    "resource_execution_requires_reviewed_committed_code": true,
+    "synthetic_probe_budget_seconds": 1200,
+    "resource_sequence": "step1,step2,validation3708x928,step3,validation6954x1739,step4",
+    "formal_CV_or_full_fit_authorized": false,
+    "cost_formula_and_absolute_ceilings_fixed": true,
+    "review": "review_current conditionally supports paired-query context hypothesis; no new checkpoint/offload/backend; cost decision after synthetic measurements and before any new candidate score."
+  }
+}
