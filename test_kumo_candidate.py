@@ -12,6 +12,18 @@ import kumo_candidate as candidate
 from test_kumo_full8_probe import context,comparison
 
 
+def test_registers_runner_feature_flag_without_shadowing_full_support_policy(monkeypatch):
+    for name in ('fit','evaluate','CONFIGS','BLEND'):
+        monkeypatch.setattr(candidate.iterate,name,getattr(candidate.iterate,name))
+    candidate.configure()
+    assert candidate.iterate.fit is candidate.fit
+    assert candidate.iterate.evaluate is candidate.evaluate
+    config=candidate.iterate.CONFIGS[candidate.NAME]
+    assert config['context'] is False
+    assert config['support_context']=='all_training_rows_no_sampling'
+    assert candidate.iterate.BASELINE in candidate.iterate.CONFIGS
+
+
 def full8_evidence(tmp_path,monkeypatch):
     path=tmp_path/'full8';path.mkdir();base=tmp_path/'base';base.mkdir()
     for name in ('freeze.json','result.json'):(base/name).write_text('{}')

@@ -32,7 +32,15 @@
   "known_inputs": {
     "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
     "reports/run_047/screen_results.csv": "de8bdeba721fedc0bf6c02f5484724d534db58b1c02909bbee212844c0264e35",
-    "kumo_candidate.py": "c71f111f2b3601d4d558932336f2d7d3c3fe18565240c4eda5b3f780deb52946"
+    "kumo_candidate.py": "658e72d4441e709831361cd30136d5d1b6f3fc2bdd5ebfd37010b39aca64bbce"
   },
-  "unknown_at_freeze": "Kumo real-data OOF/online result and v81 new online result are not yet available."
+  "unknown_at_freeze": "Kumo real-data OOF/online result and v81 new online result are not yet available.",
+  "implementation_revisions": [
+    {
+      "reason": "Pre-data startup fix: separate runner context=False feature flag from model all-training-support context string; no numerical recipe change and no Kumo real score observed.",
+      "old_candidate_sha256": "c71f111f2b3601d4d558932336f2d7d3c3fe18565240c4eda5b3f780deb52946",
+      "new_candidate_sha256": "658e72d4441e709831361cd30136d5d1b6f3fc2bdd5ebfd37010b39aca64bbce",
+      "model_components_weights_threshold_unchanged": true
+    }
+  ]
 }

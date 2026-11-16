@@ -1,0 +1,11 @@
+{
+  "status": "failed_before_data_read",
+  "source_commit": "9cb5f5a",
+  "candidate_source_sha256": "c71f111f2b3601d4d558932336f2d7d3c3fe18565240c4eda5b3f780deb52946",
+  "error": "TypeError: dict() got multiple values for keyword argument 'context'",
+  "stage": "configure() before iterate.screen(); artifacts/run_048 not created",
+  "fix": "Retain runner context=False; preserve neural context policy as support_context. Add registration regression test.",
+  "training_performed": false,
+  "accuracy_computed": false,
+  "resource_evidence_unchanged": true
+}

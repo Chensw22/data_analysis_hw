@@ -148,7 +148,8 @@ def configure():
     if iterate.fit is not BASE_FIT or iterate.evaluate is not BASE_EVALUATE or BASE_FIT.__module__!='iterate':
         raise RuntimeError('Use a fresh process without another candidate wrapper.')
     iterate.CONFIGS={iterate.BASELINE:dict(context=False,model='catboost',**iterate.CAT),
-        NAME:dict(context=False,model='kumo_medium8',**SETTINGS)}
+        NAME:{**SETTINGS,'context':False,'model':'kumo_medium8',
+              'support_context':SETTINGS['context']}}
     iterate.BLEND=[];iterate.fit,iterate.evaluate=fit,evaluate
 
 
