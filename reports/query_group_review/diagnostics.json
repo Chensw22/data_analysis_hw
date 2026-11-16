@@ -1,0 +1,163 @@
+{
+  "status": "exploratory_only_no_model_or_coupling_fit",
+  "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "labels_read": "original6954development_only",
+  "source_sha256": {
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "reports/group_residual_diagnostic.json": "a62ff955e9ad4aa1624cbb764de0abe9645541e39d3c9dd329f63c7b19a79485",
+    "reports/relational_review/diagnostics.json": "cd644423d8b9fb52df463d465bfd4cce9a6af5a8376a9a243dbf849ce8338340",
+    "artifacts/run_002/split_indices.npz": "e9cce8bb5cb8dd5774ea31e95c8e4a1bded179d4a077c36d417654d70785afcf",
+    "artifacts/top5_reference_audit/mitra/group_20261112.npz": "a3a2ea3df09a8eb2126bb62163698b0890cb66444d0730d8edeaf462e7bc0787",
+    "artifacts/top5_reference_audit/mitra/summary.json": "d6849f2bb7e01e13bb7d477805028959ac5d7f5a2a7f5ec353857714b9efc123",
+    "artifacts/top5_reference_audit/v44/group_20261112.npz": "d9f181c7053cef3b974e52c4f8459d031747a9cc6163b98145b82a1fc0a329b2",
+    "artifacts/top5_reference_audit/v44/summary.json": "a2ce8a6b7609b7a5e3c506959b5fe494c2838a5105393099e97ad89c06380ab9",
+    "reports/query_group_review/diagnose.py": "027e00a29f58aba7d23ca654d327f95eac67cb36b77a176a006821848d41adf8"
+  },
+  "group_sizes": {
+    "development": {
+      "rows": 6954,
+      "groups": 5201,
+      "multimember_groups": 1076,
+      "multimember_rows": 2829,
+      "max_size": 8,
+      "group_size_frequency": {
+        "1": 4125,
+        "2": 688,
+        "3": 234,
+        "4": 71,
+        "5": 45,
+        "6": 28,
+        "7": 6,
+        "8": 4
+      }
+    },
+    "full_train_attributes": {
+      "rows": 8693,
+      "groups": 6217,
+      "multimember_groups": 1412,
+      "multimember_rows": 3888,
+      "max_size": 8,
+      "group_size_frequency": {
+        "1": 4805,
+        "2": 841,
+        "3": 340,
+        "4": 103,
+        "5": 53,
+        "6": 29,
+        "7": 33,
+        "8": 13
+      }
+    },
+    "test_attributes": {
+      "rows": 4277,
+      "groups": 3063,
+      "multimember_groups": 723,
+      "multimember_rows": 1937,
+      "max_size": 8,
+      "group_size_frequency": {
+        "1": 2340,
+        "2": 454,
+        "3": 162,
+        "4": 51,
+        "5": 23,
+        "6": 13,
+        "7": 14,
+        "8": 6
+      }
+    }
+  },
+  "references": {
+    "mitra": {
+      "source": "frozen wholeGroupCV20261112 OOF",
+      "multimember_groups": 1076,
+      "pairs": 2924,
+      "raw_label_agreement": 0.5458276333789329,
+      "independent_probability_expected_agreement": 0.5374178598318589,
+      "residual_product": 0.004814855968189551,
+      "residual_product_group_bootstrap95": [
+        -0.0008914439153742113,
+        0.011344584973767875
+      ],
+      "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.00025051322166112013,
+      "marginal_ll_gradient_group_bootstrap95": [
+        -0.013306157823654938,
+        0.013979286278600813
+      ],
+      "by_fold": [
+        {
+          "fold": 0,
+          "groups": 346,
+          "pairs": 945,
+          "residual_product": 6.854457206889884e-05,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.005867043037420418
+        },
+        {
+          "fold": 1,
+          "groups": 366,
+          "pairs": 1011,
+          "residual_product": 0.005110914292788032,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": -0.010888675311498753
+        },
+        {
+          "fold": 2,
+          "groups": 364,
+          "pairs": 968,
+          "residual_product": 0.009139183760715326,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.006232441175651603
+        }
+      ]
+    },
+    "v44": {
+      "source": "frozen wholeGroupCV20261112 OOF",
+      "multimember_groups": 1076,
+      "pairs": 2924,
+      "raw_label_agreement": 0.5458276333789329,
+      "independent_probability_expected_agreement": 0.5315879616169096,
+      "residual_product": 0.003885647090728325,
+      "residual_product_group_bootstrap95": [
+        -0.001634794942830328,
+        0.010087622545111117
+      ],
+      "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.006223403930180499,
+      "marginal_ll_gradient_group_bootstrap95": [
+        -0.007214769230519949,
+        0.019235377160755435
+      ],
+      "by_fold": [
+        {
+          "fold": 0,
+          "groups": 346,
+          "pairs": 945,
+          "residual_product": -0.001066698093178154,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.014246202563995735
+        },
+        {
+          "fold": 1,
+          "groups": 366,
+          "pairs": 1011,
+          "residual_product": 0.005645091456355011,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": -0.010489556847525217
+        },
+        {
+          "fold": 2,
+          "groups": 364,
+          "pairs": 968,
+          "residual_product": 0.006882721414223203,
+          "normalized_positive_Ising_marginal_ll_gradient_per_multimember_row": 0.015585627337364679
+        }
+      ]
+    }
+  },
+  "bootstrap": "2000 resamples of entire multimember groups, seed20261116; descriptive CI, no adaptive-selection correction",
+  "development_graph_thinning": {
+    "groups_missing_known_roster_members": 581,
+    "observed_dev_rows_in_incomplete_groups": 1119,
+    "note": "Missing members have attributes available but old holdout labels were not read or used; no graph completion performed."
+  },
+  "interpretation_limits": [
+    "Previously reused development labels and OOF are only descriptive here, never nested meta-training data.",
+    "Pair dependence alone does not improve per-row accuracy when marginal probabilities are held fixed.",
+    "The beta=0 gradient is an analytic descriptive direction for marginal logloss, not fitted beta, resulting accuracy, or model selection evidence.",
+    "No v85 artifacts or incomplete fold scores were inspected."
+  ]
+}

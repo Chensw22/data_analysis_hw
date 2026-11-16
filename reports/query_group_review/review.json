@@ -1,0 +1,106 @@
+{
+  "status": "read_only_design_review_and_dev_only_descriptive_diagnostics",
+  "decision": "Do not implement or train a query-group coupling candidate this round. Distinct lawful mechanism exists, but current residual and marginal-direction evidence is weak; no forced recommendation.",
+  "scope": {
+    "read": "original6954development targets via audit.read_development_only; unlabeled train/test attributes; frozen originalMitra/v44 GroupCV20261112 OOF",
+    "not_read": "old1739holdout targets; test answers; any running/incomplete v85 result",
+    "work": "No base fit, meta-model fit, coupling/threshold search, candidate prediction score, GPU, submission, or modification of frozen sources."
+  },
+  "historical_distinction": [
+    "SameGroup cross-train/test label-neighbor proposal was rejected because overlap=0. That proof does not reject relationships among multiple members inside the test query set.",
+    "reports/relational_review addresses train-test neighbors/surname; it is not a query-query structured model.",
+    "reports/group_residual_diagnostic.json already examined within-Group pair residuals using older reused-development OOF: product.002889, interval[-.002602,.008783], noCRF trained. It is direct prior counterevidence, not an executed equivalent model.",
+    "v77 context20 uses unlabeled peer attributes/unanimous imputation, not a learned joint probability model. Its result cannot conclusively reject this mechanism."
+  ],
+  "theory": {
+    "lawful_new_information": "For an individual i, other members predictions p_j summarize other members X_j; they can add conditional information relative to Xi. They add no true query labels. Zero train/test group overlap is not an impossibility proof.",
+    "necessary_condition": "A method must improve P(Y_i=1 | entire observed query-group features, training evidence), not merely improve a joint distribution while preserving every marginal.",
+    "accuracy_objective": "Expected number correct is sum_i P(Y_i=decision_i). Thus thresholding each true marginal at.5 is optimal regardless of label dependence. Joint MAP optimizes probability that the entire vector is correct, a different objective.",
+    "counterexample": {
+      "p1": 0.6,
+      "p2": 0.4,
+      "P11": 0.34,
+      "P10": 0.26,
+      "P01": 0.06,
+      "P00": 0.34,
+      "individual_threshold_decision": [
+        1,
+        0
+      ],
+      "expected_correct": 1.2,
+      "joint_MAP_options": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "joint_MAP_expected_correct": 1.0
+    },
+    "random_effect_limit": "An independent latent group random intercept with no observed query labels or feature-dependent latent likelihood cannot infer a group-specific realized transport shock from absent labels. Integrating its prior changes calibration but is not, by itself, evidence of useful query-query conditioning.",
+    "CRF_limit": "An Ising/CRF with fixed unaries can change marginals through other members unaries. It is an additional assumption, not a marginal-preserving copula. Positive coupling can double-count already represented common Planet/Cryo factors or push heterogeneous travelers toward consistency.",
+    "avoid": "Never force same labels, use observed query peer targets in inference, take jointMAP as per-row Bayes classification, or treat pseudo-labels as new ground truth."
+  },
+  "diagnostic_design": {
+    "source": "Frozen whole-group out-of-fold predictions; exact dev/passenger/group IDs, NPZ SHA and same-fold membership per group checked.",
+    "pair_statistic": "mean over unordered within-group pairs of(y_i-p_i)(y_j-p_j); bootstrap entire multimember groups2000times seed20261116.",
+    "marginal_direction": "For s_i=2y_i-1, joint energy=sum_i logit(p_i)*y_i + beta/(n-1)*sum_{i<j}s_i*s_j. Atbeta0, derivative of each marginal p_i is2p_i(1-p_i)*mean_peer(2p_j-1). Hence summed binary marginal loglikelihood derivative is2sum_i(y_i-p_i)*mean_peer(2p_j-1). Reported per multimember row, without fitting beta or evaluating a new probability vector.",
+    "limits": "All labels and splits have been reused adaptively; bootstrap does not correct selection bias or dependence induced by shared fitted base models. These are descriptive quantities, not independent significance tests, candidate CV, or proof of no information."
+  },
+  "findings": {
+    "coverage": "Dev2829/6954 (40.68%) rows in1076multimember groups; test1937/4277(45.29%) in723 groups; maxsize8.",
+    "graph_thinning": "581dev groups miss members from originaltrain roster;1119dev rows (16.09%) belong to these incomplete groups. No heldout targets or extra pseudo-predicted members were inserted.",
+    "mitra_pair": {
+      "value": 0.004814855968189551,
+      "bootstrap95": [
+        -0.0008914439153742113,
+        0.011344584973767875
+      ]
+    },
+    "mitra_marginal_direction": {
+      "value": 0.00025051322166112013,
+      "bootstrap95": [
+        -0.013306157823654938,
+        0.013979286278600813
+      ],
+      "fold_values": [
+        0.005867043037420418,
+        -0.010888675311498753,
+        0.006232441175651603
+      ]
+    },
+    "v44_pair": {
+      "value": 0.003885647090728325,
+      "bootstrap95": [
+        -0.001634794942830328,
+        0.010087622545111117
+      ]
+    },
+    "interpretation": "A small positive pair-dependence estimate is compatible with zero and provides almost no positive common-coupling marginal direction for rawMitra; one fold goes opposite. This is insufficient grounds for the proposed next experiment, not universal rejection of graph learning."
+  },
+  "strict_boundaries_if_revisited": [
+    "Predeclare original6954dev, outerGroupCV20261112 threefold and originalrawMitra recipe. Group membership only identifies query sets; all outer-query labels remain scoring-only.",
+    "Inside each outertraining pool, create three innerGroup folds. Fit base/preprocessing on innertraining only and predict entire inner-query groups to obtain unary OOF features. Every member of a training graph must share a model trained without that entire group.",
+    "Fit any coupling only from that outertraining nested OOF and its labels. It is invalid to reuse full-dev OOF as meta-training: base models for those rows may have trained on the outer-validation labels.",
+    "Predict outerquery with a fresh fulloutertraining base or exact authenticated matched cached outer probabilities. Query graphs contain query member attributes/unaries only; no labels, target-derived nodes or pseudo-likelihood conditioning on true peers.",
+    "Use exact sum-product individual marginals, not jointMAP, for maxsize8 graphs. Singletons retain exact base probabilities. Do not add a force-same rule, new relation or beta/threshold grid.",
+    "Any scalar penalty/parameterization must be frozen before fitting, and base-only matched control kept. This review does not authorize a particular beta, penalty or executable recipe.",
+    "When exporting a future eligible model, nested groupOOF and coupling must be refit within all authorizedtraining rows; test graphs use only their own known attributes/unaries. No oldholdout labels enter current development diagnostics.",
+    "Graph-size normalization and incomplete-dev-graph differences require disclosure. Adding missing heldout members predictions would need separate predeclaration and teacher training that excludes their whole group."
+  ],
+  "cost": {
+    "raw_mitra": "Nine new innerbase fits/inferences (3outer\u00d73inner); three outerbase predictions may reuse exact authenticated frozenrawMitra caches. Without caches,total12base fits. Graph enumeration atsize8 hasatmost256states and should be cheap onCPU.",
+    "rough_time": "Orderofminutes, roughly5\u201310min including loading/preprocessing on thismachine; not a resourceprobe or runtimeguarantee.",
+    "adapted_base": "Nestedv81/v85 adaptation would add nine costly50stepfits to outertraining. Weak current evidence does not justify thosehours.",
+    "reason_to_stop": "Not lack of testgroup coverage or prohibitive rawMitra cost; lack of a convincing beneficial marginal signal plus a well-defined risk of optimizing the wrong joint objective."
+  },
+  "next_action": "Archive this review and avoid a newcandidate for now; do not wait for or condition the proposal on incompletev85 folds.",
+  "battle": {
+    "reviewer": "/root/review_current",
+    "agreement": "Query-query mechanism is distinct; other membersX may add information; preserve strictnested groupOOF and use marginal inference; prior diagnostics weak, no forced recommendation."
+  },
+  "reproduce": ".venv-mitra/bin/python reports/query_group_review/diagnose.py"
+}
