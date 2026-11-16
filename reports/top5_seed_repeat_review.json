@@ -1,0 +1,132 @@
+{
+  "status": "conditional_design_only_before_any_second_seed_fit_or_score",
+  "decision": "Conditionally support exactly one additional full-training seed and its predeclared equal mean with cached v81. Root may decline on cost; this is a fallback, not an imperative to consume uploads.",
+  "activation_conditions": [
+    "Wait for v85 to finish its authorized evaluation/online process; do not inspect incomplete folds to choose or alter this plan.",
+    "If v85 reaches the top5 goal before launch, do not launch this fallback.",
+    "Fresh quota_guard --reserve30 must permit work; preserve totalweeklyuse<=70%. MPS must be idle and exclusively assigned.",
+    "Freeze new sources/protocol/configuration/cache identities and the continuation rule before any new candidate score. This review itself authorizes no implementation, training or upload."
+  ],
+  "fixed_design": {
+    "old_component": "v81_Mitra_full_episode50, original run046 completed OOF, original full-data artifact when exporting.",
+    "new_component": "Exact same original v81 full50 training program with fit seed offset+100 only. No v85 group sampler, no new features, objectives, LR, penalty, cap, checkpoint or thresholds.",
+    "outer_split": "Original6954dev and original random StratifiedKFold3(shuffle=True,random_state=20261112), never substitute GroupCV or regenerate membership with the new training seed.",
+    "old_training_seeds": [
+      20261112,
+      20261113,
+      20261114
+    ],
+    "new_training_seeds": [
+      20261212,
+      20261213,
+      20261214
+    ],
+    "final_fullfit_new_seed": 20261212,
+    "randomness_disclosure": "The seed changes inner stratified80/20 split, preprocessing random mirror, episode RNG and backend random state together. This repeats/bags the entire training program; it does not isolate gradient noise, preprocessing or the split mechanism.",
+    "fixed_training": "Original75,670,026 trainable parameters, original v2SHA, compact13, train-only preprocessing, row-uniform1024support/256query, native10CE, persistentAdamW, literalwarmup/LR3e-6/wd.3, max50, innersteps0..50 minimum binaryLL earliesttie, discard selectionstate and freshfullrefit for chosensteps.",
+    "resource": "Original FP32weights/MPSbf16, exact SDPA backend, cap.65, fullsupport/query2318; no resource fallback.",
+    "mean": "Exactly.5*cached_original_v81_probability +.5*new_seed_probability; threshold.5. Single new seed+100, no seed or weight search.",
+    "primary_candidate": "The equal two-seed mean only. New solo is always reported as a diagnostic component, never selected in place of the mean and never automatically uploaded.",
+    "cache_checks": "Before averaging authenticate originalsource/environment/checkpoint/protocol, originaldev IDs/order/fold membership and completed old fold metrics/training logs. New fit logs must separately record outer_split_seed and actualtrainingseed, train/query IDs, innerpartition hashes, selectedsteps and fullrefit history.",
+    "artifact_export": "If continuation passes, fit only the new full-data component. Reuse exact originalv81 full-data model. Save bothCPUstates/context and infer sequentially with one MPSengine; verify all4277 IDs/probabilities, componentcached consistency, fixedmean and complete combined-artifact reload including threshold equality.",
+    "scoring_disclosure": "Same reused development labels and fixedfolds, adapted after observing v81/publicresults. Not a new independent validation, newmodel family, or evidence of across-split stability."
+  },
+  "rationale": [
+    "A second fit has the same training objective/cap as the successful first fit; it may average stochastic estimation or selection error without mixing an unadapted model into an adapted one.",
+    "For two equally variable estimators with errorcorrelation rho, averaging variance is sigma_squared*(1+rho)/2. This is a mechanism, not an estimate of the unknown rho or a promise of higher thresholdaccuracy.",
+    "The alreadyavailable matched originalOOF saves three repeated fits. Current reviewed relational/query-graph alternatives lack clear residual evidence, making one training-repeat experiment defensible among these particular options.",
+    "Only one extra seed provides a limited sensitivity check and possible variance reduction. It does not establish a stable expected advantage, and practical performance within1pp remains the same tier."
+  ],
+  "counterevidence": [
+    "Both models start at the identical pretraining checkpoint and train only50steps, so prediction errors may be highlycorrelated and the average may be nearly unchanged.",
+    "Raw-plus-adapt averaging did not improve onlineperformance. That is not equivalent to equallyadapted-seed averaging but warns that smooth averages need not preserve the strongest component.",
+    "More rawMitra preprocessing views and other small adaptation variants have not reliably improved onlineperformance; no rule says more randomness improves this dataset.",
+    "RandomouterCV can share groups across train/query whereas actualtest groups are unseen. The experiment cheaply isolates trainingprogram variability conditional on the oldpartitions; it is not a replacement for deployment-aligned GroupCV.",
+    "v81 was selected after many trials and observedonlineperformance. Choosing its ensemble now is adaptive and can regress to the mean. Currentproximity to top5 does not make an estimated.1pp benefit reliable or convert an exploratory upload to stable superiority.",
+    "Convexity guarantees equalmean logloss no worse than average componentlogloss, not no worse than the better/old component; meanaccuracy can be worse than either component.",
+    "The two seed variants may select different updatecounts because innerpartitions change. Report that difference without selecting the seed/cap afterward."
+  ],
+  "fixed_continue_to_fullfit_heuristic": {
+    "require_all": [
+      "All three new folds complete with valid full OOF and exact oldfoldalignment.",
+      "Equalmean pooledaccuracy >= cachedv81 pooledaccuracy (comparison tolerance1e-12).",
+      "Equalmean pooledbinarylogloss <= cachedv81 pooledbinarylogloss (tolerance1e-12).",
+      "Atleast2of3 matchedfolds have equalmean accuracy >= correspondingcachedv81 accuracy (tolerance1e-12)."
+    ],
+    "interpretation": "A conservative prospective resource/exploration heuristic only, not statisticalsignificance, S-tier or proof of stable superiority.",
+    "failure": "Archive both newsolo and mean results. Do not pay finalfit, addseed200, choose altsolo, change weights/threshold/cap, or retry seeds.",
+    "success": "Root may create a separate committed exploratory decision for atmostone two-seed-mean upload under currentbatch remainingquota; not automatic from this review. Altsolo never automaticallyuploaded."
+  },
+  "required_reporting": [
+    "Both solo and mean pooledaccuracy/logloss and allfoldvalues; oldmatchedv81 remains visible.",
+    "Fixedmean vsold corrections/regressions, disagreement count, probabilitydifference and actualpredictionerror correlation; descriptive only, not targets for selecting weights.",
+    "Perseed innerselectedsteps/fullrefitlogs/resources. Nohide of lowperforming newsolo.",
+    "Any intervals explicitly repeated-development/adaptive, not independentholdout confirmation.",
+    "Unchanged historicalfailedgates and prioronlineattempts; no reinterpretation of oldresult as seedstability evidence."
+  ],
+  "cost": {
+    "historical_three_fit_core_logs": [
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261112_38b837397a8e.json",
+        "seed": 20261112,
+        "selected_steps": 47,
+        "seconds": 2873.4056456249673
+      },
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261113_38e7dd3e5f8b.json",
+        "seed": 20261113,
+        "selected_steps": 47,
+        "seconds": 3548.2064114169916
+      },
+      {
+        "path": "reports/run_046/v81_Mitra_full_episode50_seed20261114_00e1e32df8e7.json",
+        "seed": 20261114,
+        "selected_steps": 43,
+        "seconds": 2958.0722156249685
+      }
+    ],
+    "historical_three_fit_core_hours": 2.605467853518591,
+    "historical_complete_three_fold_including_prediction_hours": "approximately2.63",
+    "historical_fullfit": {
+      "selected_steps": 15,
+      "seconds": 2880.9757500829874,
+      "mean_refit_step_seconds": 12.134351030597463
+    },
+    "expected_new_work": "Three newscreenfits about2.6h; if eligible, one newfullfit approximately0.8\u20131.3h plus complete component/combinedprediction verification. Plan roughly3.5\u20134.6h walltime, hardware/selectedsteps dependent.",
+    "fixed_screen_budget_seconds": 14400,
+    "fixed_final_export_budget_seconds": 7200,
+    "incomplete": "Harddeadline/OOM/sourcechange means incomplete, no partialmean or silentcontext reduction. Budgets are before scores, not extendable because a result looks promising.",
+    "not_requested": "No extra oldv81 fits, newgroupCV, extra seeds, LR/cap search or parallelGPU experiments."
+  },
+  "independent_battle": {
+    "reviewer": "/root/review_current",
+    "conclusion": "Conditional support for one predeclared mean and conservative resourcegate; no solo substitution, no automaticseed expansion, no stable-superiority claim, no need to consume remainingten-uploadbudget."
+  },
+  "provenance_sha256": {
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_full_episode_candidate.py": "4d1172079185ada121b5a24ff63ea46e9248ba8524aea6b118ac9b70cd805745",
+    "mitra_full_episode_probe.py": "4f1e5c8a33ca2ac0704fe9129ab16758964cfca807052057122a6a823eb4dfdd",
+    "reports/run_046/protocol.json": "5d5121a77830552909184b777133badf8b130db7c6ef7fdfa0ab7321a9eb71b0",
+    "reports/run_046/screen_results.csv": "6d19d1a57c4bc2b1f8f4d3ecfa5ce472c123e2dbf0cc123d53318717eccaacb4",
+    "artifacts/run_046/v81_Mitra_full_episode50_seed20261112.npz": "90f377e3427f8357461666fd6d0f5fa392dd81354864edce7d67a9c91484e652",
+    "artifacts/proposal_nov16_full_episode/manifest.json": "a08836bf502d8e0d5362f18d5ca78c8cfd2378fc33079dd768117c881a6a7319",
+    "artifacts/proposal_nov16_full_episode/fit_metadata.json": "f05ae2ef3ca486ca3a01c5071c78987882528502d048a7b7393e8b26de215cb7",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261112_38b837397a8e.json": "207418f04d47cc1d2b94c024b6279dce1e41eb44daeed8c641b72b5298e50c80",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261113_38e7dd3e5f8b.json": "03334b9c8c1b28d3e5a4aceefa6ce39f48b055a97ff1af7f3312d48ffb4634ce",
+    "reports/run_046/v81_Mitra_full_episode50_seed20261114_00e1e32df8e7.json": "2caa07f1a0a2ab6faa24c01a1fd28e1d0b9c5a4898546a3c856806feb0141ac4"
+  },
+  "v85_incomplete_results_read": false,
+  "models_trained": 0,
+  "new_predictions_or_scores_computed": 0,
+  "root_decision": {
+    "status": "conditional_fallback_accepted_code_preparation_only",
+    "candidate_names": {
+      "diagnostic_solo": "v87_Mitra_full_episode50_seed100",
+      "primary_mean": "v88_Mitra_full_episode50_two_seed_mean"
+    },
+    "reserved_run": "run_051",
+    "condition": "No GPU launch before v85 complete evaluation/online process and goal remains unmet; if goal met, leave this unrun.",
+    "fixed_resource_gate_accepted": true,
+    "new_model_results_seen": false
+  }
+}
