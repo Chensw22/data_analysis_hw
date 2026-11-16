@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "candidate": "v89_Mitra2_missing_flags",
+  "metrics": {
+    "accuracy": 0.8163646821972965,
+    "log_loss": 0.3789453325595731,
+    "fold_accuracy": [
+      0.816220880069025,
+      0.8192407247627265,
+      0.813632441760138
+    ],
+    "fold_log_loss": [
+      0.3792227386288831,
+      0.3717714775693297,
+      0.3858417814805065
+    ]
+  },
+  "raw_metrics": {
+    "accuracy": 0.816508484325568,
+    "log_loss": 0.38019593489424935,
+    "fold_accuracy": [
+      0.817946505608283,
+      0.819672131147541,
+      0.8119068162208801
+    ],
+    "fold_log_loss": [
+      0.38102819387768605,
+      0.3719704257434014,
+      0.38758918506166057
+    ]
+  },
+  "paired_vs_raw": {
+    "rows": 6954,
+    "accuracy": 0.8163646821972965,
+    "raw_accuracy": 0.816508484325568,
+    "corrections": 57,
+    "regressions": 58
+  },
+  "missing_subset": {
+    "rows": 988,
+    "accuracy": 0.8016194331983806,
+    "raw_accuracy": 0.7935222672064778,
+    "corrections": 15,
+    "regressions": 7
+  },
+  "complete_subset": {
+    "rows": 5966,
+    "accuracy": 0.8188065705665437,
+    "raw_accuracy": 0.8203151190077104,
+    "corrections": 42,
+    "regressions": 51
+  },
+  "context_references": {
+    "v81_Mitra_full_episode50": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.3750928747453614
+    },
+    "v44_seed_ensemble": {
+      "accuracy": 0.8198159332758125,
+      "log_loss": 0.380388148320062
+    }
+  },
+  "continuation": {
+    "passed": false,
+    "checks": {
+      "all_three_folds_complete": true,
+      "accuracy_gain_at_least_0_001": false,
+      "logloss_not_worse": true,
+      "two_folds_not_worse": false
+    },
+    "tolerance": 1e-12,
+    "interpretation": "Prospective resource continuation only; no A/S qualification or upload permission.",
+    "automatic_fullfit_or_upload": false
+  },
+  "automatic_eligibility": false,
+  "S_supported": false,
+  "seconds": 53.969064208096825,
+  "oof_sha256": "f59640cbc8693608eaf5e395a1093675d9202860b2e2cb9ea0a52b54a342582c",
+  "folds_sha256": "3580701cc550c787644429de3a0c3b54c67edb0746f3bd1ed863642e667c40a8"
+}
