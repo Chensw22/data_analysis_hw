@@ -62,3 +62,5 @@
 - EXAONE saved group12三折完成81.66523%/LL.380938；matched raw81.69399%/.384031（172修复174损坏，净-2），v44为81.44953%。固定group门槛通过，仍无S。root已复算OOF；下一步另审一次探索decision，未批准前不得fullfit/线上。本批8/10不变。
 
 - EXAONE_v92_rawMitra_half固定各半OOF双阶段完成：random81.42077%（相对raw少16correct、三fold全下降），group81.86655%（多12correct、3fold不降），LL均改善但双阶段gate=false。按预设归档，不导出/上传/搜权重/自动solo兜底。root复算缓存一致，未测试solo导出草稿删除，本批仍8/10，剩2。
+
+- 下一项仅资源实验：固定Mitra3072支持/256查询，query和原1024支持前缀与v81逐step一致，只追加2048支持；保持既有双checkpoint/FP32+bf16/optimizer/backend。design见mitra_long_context_resource_design，四次persistent AdamW更新中插入3708/928及6954/1739验证；父进程监督1200s，13CPU/mock及独立审查通过。只有资源和预设成本gate通过后才能另commit是否运行正式三折；当前未授权CV/fullfit，失败不降支持大小或改backend救援。
