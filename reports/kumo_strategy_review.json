@@ -1,0 +1,111 @@
+{
+  "status": "resource_probe_implementation_no_competition_scoring",
+  "decision": "One new Kumo Medium candidate; no size/weight sweep.",
+  "local_inventory": {
+    "TabPFN": "V2 default1/2/8/32 views, feature-token architectures and adaptation already tested; newer generations remain outside existing license clearance.",
+    "TabICL": "v2-20260212 already tested compact/engineered4; software2.2.1 is not a new model generation.",
+    "other": "Mitra1/2 and adaptations, TabM/FTT/TabR/SCARF/MLP/EBM/AutoGluon evaluated; TabDPTv1.3 evaluated separately."
+  },
+  "code": {
+    "repository": "https://github.com/NVIDIA/structured-data-models",
+    "commit": "909d1d49a68e4d6bf71a468f9f813869f62ba970",
+    "license": "Apache-2.0",
+    "vendored": "Unmodified sdm code plus original licenses/metadata; no pip installation of moving main."
+  },
+  "checkpoint": {
+    "repository": "https://huggingface.co/nvidia/Kumo-Tabular",
+    "revision": "3c3e10bbdb590ace29e7026847f92db3c603096d",
+    "tag": "v1.0.1",
+    "file": "medium/classifier.pt",
+    "bytes": 246117940,
+    "sha256": "70d6aee8fd13416300afead71a5145a40edb790952e2417d87f27b3f7e57793d",
+    "license": "OpenMDW-1.1",
+    "gated": false,
+    "anonymous_head_status": 200,
+    "downloaded_by_explicit_parent_authorization": true,
+    "download_sha_verified": true
+  },
+  "choice": {
+    "size": "medium",
+    "parameters": 61485274,
+    "official_default": "large",
+    "reason": "Predeclared local resource choice, not an author recommendation or validation-selected winner.",
+    "architecture": "6 alternating column/row embedding layers, cell256, four readout tokens, 24 ICL layers width512, 8 query heads /2 query-KV heads; Fourier embeddings, learned context-length temperature.",
+    "context": "Full4636 outer-training and8693 final-training rows; no context sampling.",
+    "views": 8,
+    "estimator_batch_size": 1,
+    "inputs": "Same compact13 with explicit six categorical columns, no ID/name, raw missingness retained.",
+    "aggregation": "Unchanged official recipe: per-view output alignment, mean logits then softmax.",
+    "threshold": 0.5
+  },
+  "provenance": {
+    "statement": "NVIDIA authors state entirely artificial SCM tables; no real competition labels reported in pretraining.",
+    "limit": "Author provenance only, not an independent checkpoint data audit. No competition test answers or external predictions accessed."
+  },
+  "backend": {
+    "raw_input": "CPU TableTensor",
+    "preprocessing": "Original recipe float64 on CPU; fit_transform sees training context only, transform sees queries.",
+    "bridge": "Official Callback hooks move final FP32 context/query/labels to selected model device and logits back to CPU for unchanged output recipe.",
+    "neural": "FP32 parameters and execution; AMP disabled. Native torch SDPA including Test-GQA unchanged.",
+    "cache": "Uncached forward; sequential estimator_batch_size1; no eight persistent context caches.",
+    "mps_memory_fraction": 0.65,
+    "fallback": "No CPU fallback, no unsupported-op fallback, no precision/context reduction on failure.",
+    "risk": [
+      "MPS native SDPA enable_gqa unproven until scheduled resource probe.",
+      "Official non-CUDA auto batch limit is65535; no assumption of memory safety from that estimator.",
+      "Smaller weight size is not proof full-context attention fits16GB.",
+      "Pipeline bridge requires actual CPU equality and MPS resource tests, not assumed official MPS support."
+    ]
+  },
+  "probe": {
+    "synthetic_only": true,
+    "accuracy_computed": false,
+    "cpu_cases": [
+      [
+        128,
+        17,
+        8
+      ]
+    ],
+    "mps_cases": [
+      [
+        128,
+        17,
+        8
+      ],
+      [
+        4636,
+        2318,
+        1
+      ],
+      [
+        8693,
+        4277,
+        1
+      ]
+    ],
+    "cpu_seconds": 900,
+    "mps_seconds": 7200,
+    "checks": [
+      "Source/env/checkpoint freeze before model work; MPS only after source commit.",
+      "FP32 official CPU vs callback equality.",
+      "Full-query vs two disjoint query partitions, keeping all support each time.",
+      "Every ensemble forwards all declared support rows.",
+      "Portable CPU state/context joblib restore recreates model without downloader.",
+      "Finite normalized binary probabilities, threshold agreement and maxdiff tolerance2e-5.",
+      "RSS peak and accelerator memory snapshots/time; resource interruption is inconclusive."
+    ],
+    "limit": "Large1view probe does not establish full8view runtime; full8 must be validated before formal candidate screening.",
+    "mps_status": "Not run; explicitly prohibited until root schedules."
+  },
+  "dependencies": "Isolated .venv-kumo: Python3.12, torch2.13, numpy,pandas,pyarrow,huggingface_hub,safetensors,typing_extensions,joblib,pytest. No CUDA extras/tokenizer/API account.",
+  "sources": [
+    "https://github.com/soda-inria/tabicl/blob/main/CHANGES.md",
+    "https://huggingface.co/blog/nvidia/kumo-tabular",
+    "https://huggingface.co/nvidia/Kumo-Tabular/blob/3c3e10bbdb590ace29e7026847f92db3c603096d/LICENSE",
+    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/kumo/tabular/model.py",
+    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/kumo/tabular/recipe.py",
+    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/base/callback.py",
+    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/nn/attention.py"
+  ]
+}

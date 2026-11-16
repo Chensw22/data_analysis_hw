@@ -1,0 +1,71 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+# SPDX-License-Identifier: Apache-2.0
+
+from typing import cast
+
+import torch
+from torch import Tensor
+
+from sdm import Stype, TableTensor
+from sdm.processing import Processor
+
+
+class PCA(Processor):
+    r"""Project numerical columns onto their principal components.
+
+    Args:
+        num_components: Number of principal components to keep.
+    """
+
+    handles_stypes = (Stype.numerical,)
+    requires_fit = True
+
+    mean: Tensor
+    components: Tensor
+
+    def __init__(self, num_components: int) -> None:
+        super().__init__()
+        self.num_components = num_components
+        self.register_buffer("mean", torch.empty(0))
+        self.register_buffer("components", torch.empty(0))
+
+    def _fit(
+        self,
+        table: TableTensor,
+        *,
+        generator: torch.Generator | None = None,
+    ) -> None:
+
+        if table.numerical.size(-1) <= self.num_components:
+            return
+
+        self._set_buffer("mean", table.numerical.mean(dim=-2, keepdim=True))
+        _, _, vh = torch.linalg.svd(
+            table.numerical - self.mean,
+            full_matrices=False,
+        )
+        num_components = min(self.num_components, table.numerical.size(-2))
+        self._set_buffer(
+            name="components",
+            value=vh[..., :num_components, :].transpose(-2, -1),
+        )
+
+    def _transform(self, table: TableTensor) -> TableTensor:
+        if table.numerical.size(-1) <= self.num_components:
+            return table
+
+        x = (table.numerical - self.mean) @ self.components
+        out = TableTensor(
+            columns={Stype.numerical: [f"pca_{i}" for i in range(x.size(-1))]},
+            numerical=x,
+        )
+        return cast(
+            TableTensor,
+            torch.cat([table.drop_stypes(Stype.numerical), out], dim=-1),
+        )
+
+    def __repr__(self, *, indent: int = 0) -> str:
+        return (
+            f"{' ' * indent}{self.__class__.__name__}("
+            f"num_components={self.num_components})"
+        )
