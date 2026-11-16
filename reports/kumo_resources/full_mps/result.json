@@ -1,0 +1,196 @@
+{
+  "status": "complete",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "device": "mps",
+  "freeze_sha256": "2f6150f6b9092a648a0bc383a1489ca79aa52955f770825e32449492f8e10c3b",
+  "cases": [
+    {
+      "support_rows": 128,
+      "query_rows": 17,
+      "views": 8,
+      "forwarded_contexts": [
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        }
+      ],
+      "partition_check": {
+        "max_abs_difference": 1.1920928955078125e-07,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "raw_official_cpu_vs_callback": null,
+      "reload_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "probability_rows": 17,
+      "seconds": 3.7682639999547973,
+      "after_forward": {
+        "max_rss_bytes": 709672960,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 245949952,
+        "mps_driver_bytes": 319569920,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "after_release": {
+        "max_rss_bytes": 976093184,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 737280,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "support_rows": 4636,
+      "query_rows": 2318,
+      "views": 1,
+      "forwarded_contexts": [
+        {
+          "rows": 4636,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        }
+      ],
+      "partition_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "raw_official_cpu_vs_callback": null,
+      "reload_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "probability_rows": 2318,
+      "seconds": 11.535031666047871,
+      "after_forward": {
+        "max_rss_bytes": 976093184,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 245949952,
+        "mps_driver_bytes": 3518775296,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "after_release": {
+        "max_rss_bytes": 976093184,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 12271616,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "support_rows": 8693,
+      "query_rows": 4277,
+      "views": 1,
+      "forwarded_contexts": [
+        {
+          "rows": 8693,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "mps"
+        }
+      ],
+      "partition_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "raw_official_cpu_vs_callback": null,
+      "reload_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "probability_rows": 4277,
+      "seconds": 24.145863499958068,
+      "after_forward": {
+        "max_rss_bytes": 976093184,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 245949952,
+        "mps_driver_bytes": 5666258944,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "after_release": {
+        "max_rss_bytes": 976093184,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 12271616,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    }
+  ],
+  "before": {
+    "max_rss_bytes": 346980352,
+    "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "seconds": 39.48968324996531,
+  "after": {
+    "max_rss_bytes": 976093184,
+    "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 12271616,
+    "mps_recommended_max_bytes": 12713115648
+  }
+}
