@@ -1,0 +1,66 @@
+{
+  "status": "fixed_before_any_EXAONE_candidate_score",
+  "candidate": "EXAONE_v91_CAST_default8",
+  "random_run": "run_054",
+  "group_phase": "exaone_group_20261117",
+  "resource_required": "reports/exaone_resources/mps/result.json",
+  "resource_design_sha256": "d33b5d46e55b515567eae1ee4158fd9490d5029d2f9ad7fbf0ddbd18081b934f",
+  "recipe": "Exact frozen EXAONE default8/MPS FP16/CPU preprocessing and RNG/native SDPA/full support/query1024/no cross-query cache; no weights, seed, feature or threshold search.",
+  "ensemble_seed_every_fold": 0,
+  "threshold": 0.5,
+  "development_rows": 6954,
+  "old_holdout_labels_read": false,
+  "random_split": {
+    "kind": "original StratifiedKFold",
+    "folds": 3,
+    "seed": 20261112,
+    "alignment": "Authenticate original rawMitra OOF source/row hashes and fold metrics; original v81 fit IDs additionally authenticate random partitions."
+  },
+  "group_split": {
+    "kind": "original saved StratifiedGroupKFold",
+    "folds": 3,
+    "seed": 20261112,
+    "alignment": "Use exact saved group fold_ids and train/query row arrays, verify disjoint GroupIds and reference identities; do not regenerate a potentially different split under newer sklearn."
+  },
+  "budgets_seconds": {
+    "random_screen": 1800,
+    "group_screen": 1800,
+    "final_export_if_separately_selected": 1800
+  },
+  "cost_basis": "Before scoring, complete4636support/2318query eight-view resource stage took74.6883s. Final export remains conditional on complete8693/4277 resource/reload qualification. Budgets do not extend after results.",
+  "random_continue_to_group": {
+    "all_three_folds_complete": true,
+    "fixed_anchor_version": "v44_seed_ensemble",
+    "fixed_anchor_accuracy": 0.8198159332758125,
+    "maximum_gap": 0.01,
+    "minimum_accuracy": 0.8098159332758125,
+    "tolerance": 1e-12,
+    "meaning": "Same practical A band under user1pp rule; not significance or stable superiority."
+  },
+  "group_continue_to_root_decision": {
+    "all_three_folds_complete": true,
+    "matched_raw_reference_accuracy": 0.8169398907103825,
+    "matched_v44_reference_accuracy": 0.814495254529767,
+    "maximum_deficit_to_each_reference": 0.01,
+    "tolerance": 1e-12,
+    "meaning": "Deployment-aligned protective screen only, using previously explored development groups. Not independent confirmation or old strict A/S protocol pass."
+  },
+  "reporting": [
+    "Everyfold and pooled accuracy/logloss for candidate and matchedreferences",
+    "Paired corrected/regressed decisions and fixed probability diagnostics",
+    "Actual full support counts, preprocessing identity,seed0/all8views,walltime/resources",
+    "Random andgroup outputs kept separate; onlyrandom completedrecipes go into methodtiers"
+  ],
+  "stop_rules": [
+    "Any resource failure prevents all scoring.",
+    "Random below fixedA band: archive, no group/fullfit/online.",
+    "Group more than1pp below either matchedreference: archive, no fullfit/online.",
+    "No partial-fold winner or implicit resume; no changes to seed/views/threshold/cache/precision after outcomes.",
+    "Passing both screens permits separate root review and at most one exploratory output; does not itself authorize a new upload or classify S.",
+    "Every future online attempt remains within current batch remaining2, fresh weekly reserve30 and actual daily limits."
+  ],
+  "independent_review": "/root/review_current supported group-aligned protective screen before using remaining attempts; root accepts.",
+  "new_candidate_scores_seen": false,
+  "automatic_upload": false,
+  "S_supported": false
+}
