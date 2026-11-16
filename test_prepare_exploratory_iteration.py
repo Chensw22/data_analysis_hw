@@ -119,6 +119,28 @@ class ExportTests(unittest.TestCase):
                          exporter.read(self.root/'reports/proposal_fixture/authorization.json'))
         self.assertEqual(candidate.fit.call_count,1)
 
+    def test_tabdpt_owned_runtime_exports_without_mitra_alias(self):
+        self.module,self.version,self.run='tabdpt_candidate','v82_TabDPT13_full8','run_047'
+        self.protocol=f'artifacts/{self.run}/protocol.json'
+        self.screen=f'artifacts/{self.run}/screen_results.csv'
+        (self.root/(self.module+'.py')).write_text('# new fixture\n')
+        exporter.write(self.root/self.protocol,{'sources':{
+            self.module+'.py':exporter.sha(self.root/(self.module+'.py'))}})
+        pd.DataFrame([dict(version=self.version,accuracy=.82)]).to_csv(self.root/self.screen,index=False)
+        self.decision.update(module=self.module,version=self.version,run=self.run,
+            source_protocol_sha256=exporter.sha(self.root/self.protocol),
+            evidence_files={self.screen:exporter.sha(self.root/self.screen)},prior_A_eligible=None)
+        exporter.write(self.root/self.path,self.decision)
+        candidate,data=self.mocked_runtime()
+        candidate.environment_lock=candidate.mitra.environment_lock
+        candidate.release_memory=candidate.mitra.release_memory
+        candidate.DEADLINE=None
+        del candidate.mitra
+        result=self.execute(candidate,data)
+        self.assertIsNone(result['selection']['A_eligible'])
+        self.assertEqual(result['selection']['version'],self.version)
+        self.assertTrue(result['export_reload_inference_verified'])
+
     def test_bad_decisions_rejected_before_full_labels(self):
         for change in [dict(prior_A_eligible=True),dict(prior_A_eligible=0),dict(threshold=.49),
                        dict(screen_accuracy=.83),dict(batch_authorization_sha256='changed'),

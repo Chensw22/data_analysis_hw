@@ -27,10 +27,22 @@ SPECS = {
     'mitra_mirror_ensemble': ('v74_Mitra_mirror4', 'run_040', 'stability', 3600),
     'mitra_lastblock100_candidate': ('v76_Mitra_lastblock100', 'run_042', 'export', 10800),
     'mitra_full_episode_candidate': ('v81_Mitra_full_episode50', 'run_046', 'export', 10800),
+    'tabdpt_candidate': ('v82_TabDPT13_full8', 'run_047', 'export', 7200),
 }
 OWN_SOURCES = ['prepare_exploratory_iteration.py', 'test_prepare_exploratory_iteration.py',
                'prepare_top5_submission.py', 'kaggle_workflow.py']
 sha, read, write = common.sha, common.read, common.write
+
+
+def runtime_backend(candidate):
+    """Older Mitra wrappers expose their runtime module; new wrappers own it."""
+    return getattr(candidate, 'mitra', candidate)
+
+
+def release(candidate, model):
+    if model is not None and hasattr(model, 'release'):
+        model.release()
+    runtime_backend(candidate).release_memory()
 
 
 def relative_file(value):
@@ -139,7 +151,8 @@ def prepare(decision_path):
             raise TimeoutError('Complete fit/export/reload time budget exceeded.')
         previous_handler = signal.signal(signal.SIGALRM, timeout)
         signal.setitimer(signal.ITIMER_REAL, budget)
-        environment = candidate.mitra.environment_lock()
+        backend = runtime_backend(candidate)
+        environment = backend.environment_lock()
         (out/'environment.lock.txt').write_text(environment)
         environment_sha = sha(out/'environment.lock.txt')
         for filename in evidence['sources']:
@@ -160,9 +173,9 @@ def prepare(decision_path):
             raise RuntimeError('Complete training context missing.')
         joblib.dump(model, out/'model.joblib')
         write(out/'fit_metadata.json', model.metadata)
-        common.release(candidate, model)
+        release(candidate, model)
         model = None
-        gc.collect(); candidate.mitra.release_memory()
+        gc.collect(); backend.release_memory()
         restored = joblib.load(out/'model.joblib')
         restored.device = 'mps'
         kwargs = dict(prediction_ids=b, log_path=out/'reload_log.json',
@@ -172,9 +185,9 @@ def prepare(decision_path):
             raise RuntimeError('Full reload class-probability shape differs.')
         difference = common.check_reload(first, result[:, 1])
         write(out/'reload_metadata.json', restored.metadata)
-        common.release(candidate, restored)
+        release(candidate, restored)
         restored = None
-        gc.collect(); candidate.mitra.release_memory()
+        gc.collect(); backend.release_memory()
         pending = out/'pending'; pending.mkdir()
         pd.DataFrame(dict(PassengerId=test.PassengerId, Transported=first >= .5)).to_csv(pending/'submission.csv', index=False)
         pd.DataFrame(dict(PassengerId=test.PassengerId, probability=first,
@@ -188,7 +201,7 @@ def prepare(decision_path):
         # must remain unchanged; provenance retains the initial commit.
         if {k:v for k,v in after.items() if k != 'committed_at'} != {k:v for k,v in evidence.items() if k != 'committed_at'}:
             raise RuntimeError('Decision or source evidence changed during preparation.')
-        if hashlib.sha256(candidate.mitra.environment_lock().encode()).hexdigest() != environment_sha:
+        if hashlib.sha256(backend.environment_lock().encode()).hexdigest() != environment_sha:
             raise RuntimeError('Runtime environment changed.')
         selection = dict(version=name, source_run=run, components=[name],
             stage='explicit_autonomous_exploration', A_eligible=decision['prior_A_eligible'],
@@ -229,8 +242,8 @@ def prepare(decision_path):
         if previous_handler is not None:
             signal.setitimer(signal.ITIMER_REAL,0); signal.signal(signal.SIGALRM,previous_handler)
         if candidate is not None:
-            common.release(candidate,model); common.release(candidate,restored)
-            candidate.mitra.DEADLINE = None
+            release(candidate,model); release(candidate,restored)
+            runtime_backend(candidate).DEADLINE = None
 
 
 if __name__ == '__main__':
