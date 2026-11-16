@@ -1,0 +1,183 @@
+{
+  "kind": "exploratory_only_no_candidate_score",
+  "read_targets": "original6954dev_only",
+  "development_sha": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "coverage": {
+    "group": {
+      "shared_keys": 0,
+      "test_rows_with_train_label_neighbor": 0,
+      "test_rows": 4277,
+      "neighbor_count_percentiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "cabin": {
+      "shared_keys": 0,
+      "test_rows_with_train_label_neighbor": 0,
+      "test_rows": 4277,
+      "neighbor_count_percentiles": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "surname": {
+      "shared_keys": 1536,
+      "test_rows_with_train_label_neighbor": 3759,
+      "test_rows": 4277,
+      "neighbor_count_percentiles": [
+        0.0,
+        1.0,
+        3.0,
+        5.0,
+        7.0,
+        15.0
+      ]
+    }
+  },
+  "crossgroup_surname_diagnostics": {
+    "v44": {
+      "reference": "frozen GroupCV20261112 OOF",
+      "residual": "y-p centered within HomePlanet\u00d7CryoSleep (exploratory)",
+      "surname_clusters": 1460,
+      "crossgroup_pairs": 9895,
+      "dev_rows_with_othergroup_same_surname": 5879,
+      "pair_residual_product": 0.0009800414782014974,
+      "surname_bootstrap95": [
+        -0.0021673920727478093,
+        0.004286225555059553
+      ],
+      "groupfold_neighbor_coverage": [
+        {
+          "fold": 0,
+          "query_rows": 2318,
+          "with_neighbor": 1744,
+          "count_percentiles": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            13.0
+          ]
+        },
+        {
+          "fold": 1,
+          "query_rows": 2318,
+          "with_neighbor": 1735,
+          "count_percentiles": [
+            0.0,
+            0.0,
+            2.0,
+            3.0,
+            4.0,
+            14.0
+          ]
+        },
+        {
+          "fold": 2,
+          "query_rows": 2318,
+          "with_neighbor": 1714,
+          "count_percentiles": [
+            0.0,
+            0.0,
+            1.0,
+            3.0,
+            4.0,
+            12.0
+          ]
+        }
+      ]
+    },
+    "mitra": {
+      "reference": "frozen GroupCV20261112 OOF",
+      "residual": "y-p centered within HomePlanet\u00d7CryoSleep (exploratory)",
+      "surname_clusters": 1460,
+      "crossgroup_pairs": 9895,
+      "dev_rows_with_othergroup_same_surname": 5879,
+      "pair_residual_product": 0.0007125427703639936,
+      "surname_bootstrap95": [
+        -0.002432893727823147,
+        0.004040126160036142
+      ],
+      "groupfold_neighbor_coverage": [
+        {
+          "fold": 0,
+          "query_rows": 2318,
+          "with_neighbor": 1744,
+          "count_percentiles": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            13.0
+          ]
+        },
+        {
+          "fold": 1,
+          "query_rows": 2318,
+          "with_neighbor": 1735,
+          "count_percentiles": [
+            0.0,
+            0.0,
+            2.0,
+            3.0,
+            4.0,
+            14.0
+          ]
+        },
+        {
+          "fold": 2,
+          "query_rows": 2318,
+          "with_neighbor": 1714,
+          "count_percentiles": [
+            0.0,
+            0.0,
+            1.0,
+            3.0,
+            4.0,
+            12.0
+          ]
+        }
+      ]
+    }
+  },
+  "source_sha": {
+    "artifacts/top5_reference_audit/v44/group_20261112.npz": "d9f181c7053cef3b974e52c4f8459d031747a9cc6163b98145b82a1fc0a329b2",
+    "artifacts/top5_reference_audit/mitra/group_20261112.npz": "a3a2ea3df09a8eb2126bb62163698b0890cb66444d0730d8edeaf462e7bc0787"
+  },
+  "limitations": [
+    "Not a candidate OOF score or independent hypothesis test; reused development labels.",
+    "Cluster bootstrap by surname is descriptive; names/groups can create dependent clusters.",
+    "No relation threshold, alpha, beta, weights or model fitted/selected."
+  ],
+  "decision": "Do not implement a new peer-target or label-graph candidate in this round. Same-group/full-cabin direct evidence has zero deployment coverage; cross-group surname has broad coverage but weak residual evidence under both frozen references.",
+  "history": {
+    "same_group_peer_target": "reviewed and rejected before fitting in reports/top5_peer_target_review.json; not an executed model",
+    "surname": "run017 uses only surname-unanimous HomePlanet attribute imputation; no surname target encoding found",
+    "unlabeled_context": "group size / peer known attributes / imputation differ from label-conditioned counts; old no-target-propagation claims remain unchanged"
+  },
+  "interpretation": {
+    "surname_residual": "1460 surname clusters / 9895 cross-group pairs. v44 product0.000980 and Mitra0.000713; both descriptive surname-bootstrap95 intervals include0. This is insufficient positive evidence, not proof of no information.",
+    "deployment_shift": "GroupCV surname label-neighbor coverage is 5193/6954 (74.68%); fulltrain-to-test is3759/4277 (87.89%). Median available labels rises from1\u20132 to3; inner crossfit creates a further drop. A fixed shrinkage prior does not remove this reliability shift.",
+    "scope": "Reject current direct relation-conditioning proposal, not every graph neural network. New unlabeled graph structure/pseudolabel propagation would be another hypothesis; no extension performed."
+  },
+  "leakage_requirements_if_revisited": [
+    "At each outer and inner split, remove all query/validation labels from the entire graph before computing any node features, paths, neighbor counts, normalization or model fit.",
+    "LOO only removes self label; computing it once on a full pool before inner splitting lets inner-validation labels enter training-neighbor features. Rebuild from innertraining labels only, including all multihop paths.",
+    "Exclude same-GroupId surname neighbors even in random splits if testing deployable cross-group surname evidence; same-group peers unavailable at final deployment.",
+    "Crossfit meta-training evidence/base probabilities within outertraining only; do not fit any beta/threshold on outerOOF and report it as candidate validation.",
+    "Row-level random validation can exaggerate relation evidence; keep predeclared GroupId-held-out evaluation and report support-count distributions.",
+    "Ordinary same-surname cluster bootstrap is descriptive because surname/group memberships can overlap. No independent holdout or formal significance claim here."
+  ],
+  "next_action": "Archive diagnostic only; no candidate implementation, parameter sweep, CPU model fit, GPU work, or upload warranted from this evidence."
+}
