@@ -1,0 +1,22 @@
+{
+  "batch_id": "online_iteration_20261116",
+  "batch_authorization_sha256": "1f05a6a83f7772f2f618d1f0cedc3df74d17fc709a18f1ea36906f616aa6931c",
+  "module": "tabdpt_candidate",
+  "run": "run_047",
+  "version": "v82_TabDPT13_full8",
+  "proposal": "proposal_nov16_tabdpt",
+  "source_protocol_sha256": "d5bf0e8d8d7e4e8e7adbcce800c2fc50502d2ebfd83b66e3e02feaf5c8234476",
+  "evidence_files": {
+    "artifacts/run_047/protocol.json": "d5bf0e8d8d7e4e8e7adbcce800c2fc50502d2ebfd83b66e3e02feaf5c8234476",
+    "artifacts/run_047/screen_results.csv": "de8bdeba721fedc0bf6c02f5484724d534db58b1c02909bbee212844c0264e35",
+    "reports/run_047/assessment.json": "a422f15feaf42c88deb78894727990b4211c840da5f13c01e86f97f82bad56ce"
+  },
+  "rationale": "New real-table-pretrained TabDPT1.3 architecture with full-context8permutations. Complete3fold81.19068%, below Mitra81.65085% by0.4602pp but same practical band; LL .37947 vs .38020. Baseline exact reproduction. One bounded family-level online test, no claim of superiority or threshold/weight sweep.",
+  "exploratory": true,
+  "prior_A_eligible": null,
+  "prior_S_supported": false,
+  "screen_accuracy": 0.8119068162208801,
+  "threshold": 0.5,
+  "maximum_attempts": 1,
+  "adaptive_development_disclosure": "Reused6954development rows; no independent holdout/group confirmation; real-data pretrained checkpoint, no proven contamination-free claim."
+}
