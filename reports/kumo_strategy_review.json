@@ -1,5 +1,5 @@
 {
-  "status": "resource_probe_implementation_no_competition_scoring",
+  "status": "local_mps_compatibility_implemented_resource_requalification_pending",
   "decision": "One new Kumo Medium candidate; no size/weight sweep.",
   "local_inventory": {
     "TabPFN": "V2 default1/2/8/32 views, feature-token architectures and adaptation already tested; newer generations remain outside existing license clearance.",
@@ -55,7 +55,31 @@
       "Official non-CUDA auto batch limit is65535; no assumption of memory safety from that estimator.",
       "Smaller weight size is not proof full-context attention fits16GB.",
       "Pipeline bridge requires actual CPU equality and MPS resource tests, not assumed official MPS support."
-    ]
+    ],
+    "compatibility": {
+      "id": "kumo_cell_embedding_mps_allocate_then_copy_v1",
+      "scope": "One pinned official Kumo CellEmbedding instance receives a MethodType _forward wrapper; no global torch patch or vendor edits.",
+      "operation": "On MPS only, with out provided, call original Kumo CellEmbedding._forward with out=None (including original projection bias and nan_lin order), then copy completed result to original output and return it. CPU and out=None dispatch unchanged.",
+      "source_guard": "Exact class plus SHA256 of both Kumo and inherited TabFM cell_embedding source; exactly one binding, idempotent; state_dict, parameters and eval mode unchanged.",
+      "issue": "https://github.com/pytorch/pytorch/issues/204931",
+      "local_diagnosis": {
+        "artifact": "artifacts/probes/kumo_matmul_diagnosis/safe_out_metal0.json",
+        "native_strided_out_max_error": [
+          59.49658203125,
+          64.60359191894531,
+          64.60359191894531
+        ],
+        "allocated_then_copy_max_error": 0.0,
+        "temporary_global_guard_model_repeat_maxdiff": 0.0,
+        "temporary_global_guard_model_partition_maxdiff": 1.1920928955078125e-07,
+        "temporary_global_guard_model_vs_cpu_maxdiff": 7.152557373046875e-07,
+        "limitation": "These diagnostics used a temporary global matmul guard, not the new instance-local wrapper; they do not qualify the new implementation."
+      },
+      "rejected_switch": "PYTORCH_MPS_PREFER_METAL=1 did not fix local numerical errors and is not part of this compatibility recipe.",
+      "historical_failure": "reports/kumo_resources/full_mps_failed and original probe evidence remain unchanged.",
+      "resource_status": "The extra projection allocation may increase peak memory. Repeat true CPU and full-context MPS probes in new directories before qualification; original 2e-5 tolerance and exact threshold agreement unchanged.",
+      "formal_screen_authorized": false
+    }
   },
   "probe": {
     "synthetic_only": true,
@@ -96,7 +120,7 @@
       "RSS peak and accelerator memory snapshots/time; resource interruption is inconclusive."
     ],
     "limit": "Large1view probe does not establish full8view runtime; full8 must be validated before formal candidate screening.",
-    "mps_status": "Not run; explicitly prohibited until root schedules."
+    "mps_status": "Original baseline failed numerical partition check; instance-local workaround awaits fresh complete resource probes, including full eight-view qualification."
   },
   "dependencies": "Isolated .venv-kumo: Python3.12, torch2.13, numpy,pandas,pyarrow,huggingface_hub,safetensors,typing_extensions,joblib,pytest. No CUDA extras/tokenizer/API account.",
   "sources": [
@@ -106,6 +130,7 @@
     "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/kumo/tabular/model.py",
     "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/kumo/tabular/recipe.py",
     "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/models/base/callback.py",
-    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/nn/attention.py"
+    "https://github.com/NVIDIA/structured-data-models/blob/909d1d49a68e4d6bf71a468f9f813869f62ba970/sdm/nn/attention.py",
+    "https://github.com/pytorch/pytorch/issues/204931"
   ]
 }

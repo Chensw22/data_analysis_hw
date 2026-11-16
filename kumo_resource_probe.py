@@ -26,6 +26,7 @@ VENDOR = BASE/'third_party/kumo'
 sys.path.insert(0, str(VENDOR))
 import sdm
 from sdm.models import KumoTabular, Callback
+import kumo_mps_compat
 
 sys.modules.setdefault('kumo_resource_probe', sys.modules[__name__])
 CODE_COMMIT = '909d1d49a68e4d6bf71a468f9f813869f62ba970'
@@ -42,7 +43,8 @@ SETTINGS = dict(size='medium',task='classification',parameters=61485274,
     model_device='mps',output_device='cpu',aggregation='official_average_logits_then_softmax',
     context='all_training_rows_no_sampling',kv_cache=False,threads=4,
     mps_memory_fraction=.65,threshold=.5,seed=20261116,
-    cpu_budget_seconds=900,mps_budget_seconds=7200)
+    cpu_budget_seconds=900,mps_budget_seconds=7200,
+    mps_compatibility=kumo_mps_compat.COMPAT_ID)
 
 
 def sha(path):
@@ -70,6 +72,7 @@ def verify_checkpoint():
 
 def source_hashes():
     paths=[BASE/'kumo_resource_probe.py',BASE/'test_kumo_resource_probe.py',
+           BASE/'kumo_mps_compat.py',BASE/'test_kumo_mps_compat.py',
            BASE/'requirements-kumo.lock.txt',BASE/'reports/kumo_strategy_review.json']
     paths += [p for p in VENDOR.rglob('*') if p.is_file() and '__pycache__' not in p.parts and p.suffix!='.pyc']
     return {str(p.relative_to(BASE)):sha(p) for p in sorted(paths)}
@@ -92,6 +95,8 @@ def new_model(state,device):
         raise RuntimeError('Unexpected Kumo parameter count.')
     if any(p.dtype!=torch.float32 or p.device.type!=device for p in model.parameters()):
         raise RuntimeError('Expected all pretrained parameters in FP32 on requested device.')
+    if kumo_mps_compat.install(model)!=1:
+        raise RuntimeError('Expected exactly one Kumo compatibility binding.')
     return model
 
 
