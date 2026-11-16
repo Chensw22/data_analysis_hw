@@ -1,0 +1,375 @@
+{
+  "status": "fixed_resource_design_only_before_any_EXAONE_gpu_or_score",
+  "candidate": "EXAONE_v91_CAST_default8",
+  "reserved_run": "run_054",
+  "decision": "Proceed only to a finite no-score compatibility/resource probe. Architecture and small weights justify testing, not a claim that full context fits or improves accuracy.",
+  "scope": {
+    "source_downloaded": true,
+    "weights_downloaded_by_this_review": false,
+    "environment_created_by_this_review": false,
+    "gpu_run_by_this_review": false,
+    "models_instantiated_by_this_review": false,
+    "competition_scores_computed": false,
+    "orion_resumed": false
+  },
+  "provenance": {
+    "repository": "LGAI-Research/EXAONE-Tabular",
+    "code_commit": "d149d0f0441053f0cf6b2b45f4b2067a81619cf9",
+    "hf_repository": "LG-AI-Research/EXAONE-Tabular",
+    "model_revision": "093ad1c2613e1e95d26df8610451d2e02ed53cbe",
+    "filename": "exaone-tabular-classifier-v1_default.safetensors",
+    "file_bytes": 83286800,
+    "file_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+    "model_metadata_source": "https://huggingface.co/api/models/LG-AI-Research/EXAONE-Tabular/revision/093ad1c2613e1e95d26df8610451d2e02ed53cbe?blobs=true",
+    "model_metadata_sha256": "ef150a0b177778c7e01cc88e8886fa6f6ce999e77faf9e7491d386b1ae34b6d2",
+    "source_cache": "artifacts/exaone_readonly/source",
+    "source_cache_manifest_sha256": "0380c61ff07f81ee004872442917d867baf028ccb0115dbc3a0fb4adbee54962",
+    "source_files": {
+      "LICENSE": "af60390bf207b4e7461ef2cf53394ffa40f75415b3c96d601a2bed3e3204139e",
+      "pyproject.toml": "493d3ebda470123e08baa95317237f1ccac9e45045b44ee47ba90a0c11000aaf",
+      "src/exaonetabular/__init__.py": "b935d9d03c57b82f0b282207fa0fc4f8dc874d27cd003a98bda3e0c551bbf419",
+      "src/exaonetabular/_execution.py": "32ed8088fbacca5b70dfb2c65d907f9a8ff44ee8cee34a81701f7a40996523d5",
+      "src/exaonetabular/_inference_preprocessing.py": "60699a4cfb614e525dd8b6279d07d7b51e95fe17870a99bbaa849f2986457063",
+      "src/exaonetabular/_power_transform.py": "b39be87515a8a6eb0da8fc8590b4208172f514e13d8d0f26ff6e3e2dc569e166",
+      "src/exaonetabular/checkpoint.py": "669c7344e5d52a277910d1c2b68dba1357cef544293186d84845a0d7a142faf3",
+      "src/exaonetabular/classifier.py": "d1c648565d1b09c780ea71a694852558d54a4008080582b98f5aa0e533d87454",
+      "src/exaonetabular/config.py": "c3a7ecaf7e2d7309b90e3e628438801b8a2599e1e3ef1eb24d15c757c3bcf163",
+      "src/exaonetabular/ecoc.py": "29280f7a1f9544d080d8d4d6c10d9935986944df586ee29e516e196a9e95db49",
+      "src/exaonetabular/ensemble.py": "a785043ef8792242e264e33c2fb0c1350231e638283a3784207bbcc6774859a5",
+      "src/exaonetabular/feature_selection/__init__.py": "ad8b05d9dcf32f3568df28955a4e386b4d3b37f18b605c2a6f7b7e72c1b48809",
+      "src/exaonetabular/feature_selection/selection.py": "98709f4d5f925ad8f8a73c49de5768a194cc412639fa1e93625b8d9136af00c7",
+      "src/exaonetabular/model/__init__.py": "8b9d6643deeba5da079fcbaea2a7c9a32f650f3f5cddb5883c2597da0dd9dbe7",
+      "src/exaonetabular/model/attention.py": "06eed04809a4a306a4af0f9a25e3f67d1175eb560eb3c9a0d23830e08f2a9b85",
+      "src/exaonetabular/model/encoders.py": "853769e414399ac9b0cc0fcbb22d00c54da8e4e07acf08857f403831b092ab69",
+      "src/exaonetabular/model/heads.py": "af863f16f28c1d2ea93a7a9a4b837a2ea1fcfd066c382ceaffc210498f9c9223",
+      "src/exaonetabular/model/layer.py": "562d1ff4b6a239ee91ece8b9fb0ce822fbc9bcc2b07c56edc173a1d098a4943d",
+      "src/exaonetabular/model/memory.py": "fdcfd8a48c92e7828bc53130b3343af8e9c1c8e427e419656e6bb7ca43819514",
+      "src/exaonetabular/model/mlp.py": "9c8c7a7ab3fa8128b1b9ee499e0d4fd461424af170e6e88333c40c5a20e67c24",
+      "src/exaonetabular/model/transformer.py": "12586d8dff9352084a13fd0a4dbfd28d38555fdf09fbcdb8cd42aa38aa8180fe",
+      "src/exaonetabular/preprocessing.py": "8a3fcdf5673bc79cbaacf56af4c6a521358bb82d5de831b930d3c735f8dcc033",
+      "src/exaonetabular/presets.py": "b1cfcaa65c0aa8f17e1ff4abf2c1b5013e2d157f0dc1154ce021c30d3516946c",
+      "src/exaonetabular/regressor.py": "c7156eb3398fea5faac75aaa667ee0d462b78049469090398d76387da30700c4",
+      "src/exaonetabular/runtime.py": "477d3871abb04bced2fab04a050ec4fa3fc18af74450a48e401b5fd40946eee5",
+      "src/exaonetabular/weights.py": "94d5b0f68330cf877b86f7629e33f2b0884158484ad87c3755f41a16de5f885a",
+      "tests/test_categorical_mask.py": "0027a0d5d1c912d7754ba41b822312f823f54beae1cc5043ac2ddfed1c1a0368",
+      "tests/test_ensemble_reuse.py": "d854ee8aa9d7ec33001d56f63230ba035bb7873574ee55145d19c7836292c99e",
+      "tests/test_sdpa_backend_policy.py": "e007237e40b6f4837e815bbb6e73decebb89c767d7d11c2d81cee73498203250",
+      "tests/test_support_cache.py": "ba2526213c1de99114bfd49e6ae606971cbd0da792407c2d5add96da46d6711c"
+    },
+    "weights_digest_status": "Confirmed pinned HF LFS metadata only; actual bytes and tensor layout must be verified after authorized download."
+  },
+  "license": {
+    "weights": "EXAONE AI Model License Agreement1.2-NC",
+    "actual_license_path": "artifacts/exaone_readonly/LICENSE",
+    "actual_license_sha256": "36c1a54bb636385c715524d2eeb7d69106c40f8775f7e35cc4b5970613d20ffb",
+    "code": "BSD3-LG; retain source copyright/license/notice",
+    "code_license_sha256": "af60390bf207b4e7461ef2cf53394ffa40f75415b3c96d601a2bed3e3204139e",
+    "session_authorization": "Root reviewed the actual license and authorized this personal noncommercial course/research/competition use; no new user approval required.",
+    "distribution": "Do not commit or redistribute model weights. Keep attribution/notices. Modified model naming begins EXAONE; proposed candidate already does."
+  },
+  "architecture": {
+    "source_confirmed": true,
+    "checkpoint_layout_verified": false,
+    "actual_construction": "ClassificationModel -> CrossAxisSummaryTransformer ->12 CrossAxisSummaryLayer modules; no inactive alternative architecture flag.",
+    "width": 192,
+    "heads": 6,
+    "head_width": 32,
+    "blocks": 12,
+    "feedforward_width": 768,
+    "columns_per_group": 1,
+    "item_summary_count": 3,
+    "feature_summary_count": 32,
+    "feature_attention_repeats": 2,
+    "class_capacity": 10,
+    "classification_parameters_advertised": 20807866,
+    "parameter_count_status": "README advertised count; must measure actual instantiated parameters/buffers and strict-loaded state. Do not infer memory from parameter count.",
+    "mlp_note": "Pinned layer.py explicitly constructs state_feedforward plus feature_summary_feedforward and item_summary_feedforward on nonfinal layers; retain actual implementation, do not reinterpret the README Single-MLP label.",
+    "ssmax": "TensorAttention scales Q using learned/persistent head_scale; projected K is multiplied by log(full context length); score_scale=None retains SDPA default1/sqrt(head_width). Query cross-attention reuses and expands the first context head; preserve this exactly."
+  },
+  "loading": {
+    "method": "Use released_manifest(classification), override immutable checkpoint_sha256 with the pinned digest, instantiate exact released classifier, call load_classifier_checkpoint(local_path, model, manifest, verify_checksum=True).",
+    "why_not_unqualified_from_pretrained": "Preset revision is main and checkpoint_sha256=None. from_pretrained(weights=local) explicitly disables digest verification even when a manifest exists; low-level pinned loader avoids that bypass.",
+    "strict_checks": [
+      "Exact official file byte count and SHA256 before loading.",
+      "Safetensors reader on CPU; never pickle checkpoint or trust remote model code.",
+      "Model/preset architecture and runtime dtype validated; checkpoint keys, tensor shapes, numeric domain and finiteness must all pass.",
+      "Official loader copies into every expected state tensor and clears caches; no dropped/renamed keys, no partial load, no remapping to another backbone.",
+      "After load record actual module types/counts, parameter/buffer totals, summary token shapes, class head10, checkpoint/state checksums and compute dtypes."
+    ]
+  },
+  "fixed_model_recipe": {
+    "model_manifest": "Released classifier architecture, class_capacity10; frozen release preset defaults except explicit execution adaptation and pinned provenance.",
+    "ensemble_count": 8,
+    "seed": 0,
+    "compute_dtype": "float16",
+    "parameter_dtype": "float16 after official loading of FP32 checkpoint",
+    "feature_and_label_input_dtype": "float32",
+    "preprocessing_compute": "Official NumPy/CPU float64 fitting and transforms; outputs member features float32.",
+    "preprocessing_rng_device": "cpu",
+    "aggregation_device": "cpu",
+    "aggregation": "Original class-permutation inversion, mean member logits then softmax; not probability averaging.",
+    "support_row_limit": 100000,
+    "feature_limit": 500,
+    "query_batch_limit": 1024,
+    "n_svd": 0,
+    "preprocessing_use_quantile_map": false,
+    "preprocessing_rescale_for_column_count": false,
+    "full_support": "8693<100000, so every support row retained. Assert actual stored and every forwarded support count; never reduce limit or sample for memory.",
+    "input_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "categorical_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "VIP",
+      "Deck",
+      "Side"
+    ],
+    "categorical_mask": "Explicit NumPy bool mask in the fixed13-column order; no accidental numerical-column inference.",
+    "encoding": "Support-fit string-to-numeric mapping only; unseen query categories and missing values map to NaN before the official categorical encoder, which shares code-1. Numerical NaNs are preserved to the official missing-value path. Never include PassengerId or target in features.",
+    "recipe_disclosure": "CPU-generated official ensemble random draws are fixed and shared by CPU/MPS tests. This is not claimed bitwise equivalent to CUDA RNG for the same integer seed; it preserves the released CPU recipe and default8 view construction."
+  },
+  "portability_findings": [
+    {
+      "finding": "The estimator accepts torch.device, but max_vram_bytes is explicitly CUDA-only. Non-CUDA forward avoids cuda_budget and currently batches every ensemble member at once; that default is unsuitable as a memory guarantee on16GB M4.",
+      "sources": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/classifier.py",
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/_execution.py"
+      ]
+    },
+    {
+      "finding": "Official non-CUDA _select_sdpa_backend returns FLASH_ATTENTION, including CPU/MPS. The local adapter removes that forced context and uses pinned PyTorch native/default device SDPA. Actual MPS kernel choice is not asserted; full numerical and memory gates remain required.",
+      "sources": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/attention.py"
+      ]
+    },
+    {
+      "finding": "FeatureEnsemble constructs generator/device float64 sign tensors and device permutation state. Keep the entire official preprocessing and RNG onCPU; transformed member matrices are alreadyFP32. Leave aggregation plan and logits onCPU to satisfy official same-device checks.",
+      "sources": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/_inference_preprocessing.py",
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/ensemble.py"
+      ]
+    },
+    {
+      "finding": "CAST still forms item-axis self-attention over32summary+all support rows for each feature group.20.8M weights do not remove quadratic support attention or prove memory feasibility.",
+      "sources": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/layer.py",
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/attention.py"
+      ]
+    },
+    {
+      "finding": "At pinned code the CUDA planner DOES expose query/support cache branches, despite README wording saying the default wrapper does not use them. Non-CUDA default plan does not select those branches. Cache availability is not a reason to silently change our first probe.",
+      "sources": [
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/_execution.py",
+        "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/heads.py"
+      ]
+    }
+  ],
+  "fixed_local_execution": {
+    "adapter_scope": "Local EXAONE-named wrapper/subclass or confined vendor patch only; keep original immutable source snapshot and explicit diff/hash. Do not globally monkeypatch torch SDPA or change weights/model topology.",
+    "mps_memory_fraction": 0.65,
+    "threads": 4,
+    "max_vram_bytes": null,
+    "autocast": false,
+    "implicit_cpu_fallback": false,
+    "ensemble_step": 1,
+    "query_step": 1024,
+    "feedforward_token_chunk": 524288,
+    "feature_attention_row_chunk": 2147483647,
+    "cross_query_support_cache": false,
+    "sdpa_backend": "Pinned PyTorch native/default device SDPA dispatch for CPU and MPS, with the fixed shape-only Q/batch schedule; no forced CUDA FLASH context and no assertion of a specific internal MPS kernel.",
+    "sdpa_query_chunk": 256,
+    "sdpa_flat_batch_policy": {
+      "long_context_condition": "full_K_length>256",
+      "long_context_batch_chunk": 1,
+      "short_context_condition": "full_K_length<=256",
+      "short_context_batch_chunk": 512
+    },
+    "sdpa_boundary": "Split already projected/scaled flat_query along independent flat-batch and Q dimensions; every block uses the matching entire flat_key/flat_value sequences. Concatenate attended outputs before the unchanged output projection.",
+    "prohibited_shortcuts": [
+      "Do not call whole attention.forward(query_slice, context=None): that changes self-attention K/V and SSMax length.",
+      "Do not truncate or split K/V into independently normalized softmaxes.",
+      "Do not change head count, first-head reuse/expansion, head_scale, score_scale, summary tokens, residuals, normalization, NaN path or dtype.",
+      "Do not replace logit aggregation with probability mean.",
+      "Do not reduce support/views or enable cross-query cache after seeing speed/memory/results."
+    ],
+    "transactional_cache": "Existing per-attention context-projection cache semantics still apply even when cross-query support caching is disabled. Cache only after the entire forward succeeds; preserve complete K/V and first-head selection.",
+    "root_acceptance": "Root accepted the K256 boundary/batch1-or512/Q256 shape-only execution strategy before any probe or score, avoiding millions of one-row short-attention MPS launches."
+  },
+  "mathematical_checks": {
+    "query_independence": "Item-axis context is summary+support only; query rows read it without entering it. Feature operations are row-local. Released columns_per_group=1 avoids general multi-coordinate packing dependence; nevertheless test constant/missing/unseen-category cases and partition equality rather than assuming every generalized model is independent.",
+    "support_cache": "Official can_cache_support and can_cache_query_chunks guard feature-retention compatibility. First fixed probe disables cross-query support caching; this changes resource execution, not intended outputs, subject to the CPU/MPS equivalence gates.",
+    "kernel_cases": [
+      "Self-attention, cross-attention, multiple heads6, first-context-head reuse, cache write/read and no-cache paths.",
+      "K=256 and257 boundary with non-divisible Q=513; multi-flat-batch crossing512 onshortK, multiplebatch onlongK.",
+      "Compare against unmodified projected-Q/K/V SDPA output at the same FP16 compute dtype; preserve SSMax log(fullK), learned head scale and default score scale.",
+      "Inject an error in a later chunk and verify no partially committed cache; no GPU needed for this boundary test."
+    ],
+    "kernel_case_shapes": [
+      {
+        "flat_batch": 2,
+        "Q": 513,
+        "K": 256,
+        "heads": 6
+      },
+      {
+        "flat_batch": 2,
+        "Q": 513,
+        "K": 257,
+        "heads": 6
+      },
+      {
+        "flat_batch": 513,
+        "Q": 7,
+        "K": 17,
+        "heads": 6
+      },
+      {
+        "flat_batch": 2,
+        "Q": 513,
+        "K": 513,
+        "heads": 6,
+        "mode": "self"
+      }
+    ],
+    "kernel_case_cost_note": "Exercise the batch512 andQ256 boundaries in separate small cases, not a513batch-by513query combined stress case."
+  },
+  "memory_analysis": {
+    "assumption": "Illustrative13retainedfeatures plus labelgroup =14,6heads,one member. Actual intermediate peaks and allocator workspace must be measured; math backend may accumulate inFP32 even withFP16 weights.",
+    "support4636_unsplit_score_matrix_fp16_bytes": 3660757632,
+    "support8693_unsplit_score_matrix_fp16_bytes": 12789105000,
+    "support8693_unsplit_score_matrix_fp32_bytes": 25578210000,
+    "support8693_batch1_Q256_fullK_score_fp16_bytes": 26803200,
+    "support8693_batch1_Q256_fullK_score_fp32_bytes": 53606400,
+    "limitation": "These are attention-score tensor sizes, not total model peak. Full K/V projections, state tensors, FFN, residuals, CPU member storage and backend workspace remain. Serial8 and bounded Q chunks improve plausibility, not a fit guarantee."
+  },
+  "resource_probe": {
+    "status": "not_executed_by_this_review",
+    "synthetic_only": true,
+    "accuracy_computed": false,
+    "fixtures": "Fixed synthetic seed20261117, numeric/categorical13columns, balanced binary support labels, explicit mask, NaNs and unseen query categories. Save fixture IDs/hashes and no real development/test data in this probe.",
+    "total_runtime_limit_seconds": 2400,
+    "download_and_environment_setup_excluded_from_timer": true,
+    "stages": [
+      {
+        "stage": "A_original_CPU",
+        "support": 128,
+        "query": 33,
+        "views": 8,
+        "weights_dtype": "float16",
+        "recipe": "Unmodified officialCPU classifier with pinned actual checkpoint; finite complete probabilities and native class order."
+      },
+      {
+        "stage": "B_local_CPU_equivalence",
+        "support": 128,
+        "query": 33,
+        "views": 8,
+        "recipe": "Same fitted CPU preprocessing/RNG/FP16 state; local fixed SDPA/execution adapter vs originalCPU. Run listed small attention math/cache tests."
+      },
+      {
+        "stage": "C_MPS_tiny",
+        "support": 128,
+        "query": 33,
+        "views": 8,
+        "recipe": "Exactly same dtype/state/views asCPU. CPU-vsMPS, repeat, partition16+17 and portable full-query reload; require complete outputs and class order."
+      },
+      {
+        "stage": "D_screen_envelope",
+        "support": 4636,
+        "query": 2318,
+        "views": 8,
+        "recipe": "All8, full support, query1024 internal split with remainder; record per-forward support rows, selected chunk policy, elapsed time and memory snapshots."
+      },
+      {
+        "stage": "E_full_support_envelope",
+        "support": 8693,
+        "query": 2318,
+        "views": 8,
+        "recipe": "All8, full support, samefixed execution. No view1/full8 extrapolation."
+      },
+      {
+        "stage": "F_export_envelope",
+        "support": 8693,
+        "query": 4277,
+        "views": 8,
+        "recipe": "All4277 predictions, save CPU portable artifact, destroy device engines, reload reconstruct and infer all4277 again. Compare every ID/probability and threshold decision."
+      }
+    ],
+    "fixed_tolerances": {
+      "cpu_original_vs_adapter_probability_max_abs": 0.002,
+      "cpu_vs_mps_probability_max_abs": 0.002,
+      "query_partition_probability_max_abs": 0.002,
+      "attention_tensor_allclose_atol": 0.005,
+      "attention_tensor_allclose_rtol": 0.005,
+      "mps_repeat_probability_max_abs": 2e-06,
+      "portable_reload_probability_max_abs": 2e-06,
+      "all_probability_comparisons_require_same_threshold_0_5_decisions": true,
+      "all_outputs_finite_normalized": true,
+      "probability_row_sum_atol": 2e-06
+    },
+    "failure": "Any missing checkpoint key, backend/dtype failure, math mismatch, threshold disagreement, OOM, incompleteview/context, or2400s expiry is failed/incomplete. Keep evidence; do not widen tolerance, reduce support/views, increase budget, swap precision, enablecache or silentlyfall back.",
+    "snapshot_label": "MPS current/driver/recommended bytes and process RSS snapshots are not asserted true device peaks.",
+    "success": "Only establishes this exact full8 CPU/MPS numerical/resource/portable path. No real score, no S-tier, no competition upload and no claim of top5 improvement."
+  },
+  "source_references": {
+    "preset": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/presets.py",
+    "config": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/config.py",
+    "checkpoint": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/checkpoint.py",
+    "classifier": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/classifier.py",
+    "preprocessing": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/_inference_preprocessing.py",
+    "numeric": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/preprocessing.py",
+    "ensemble": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/ensemble.py",
+    "executor": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/_execution.py",
+    "attention": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/attention.py",
+    "layer": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/layer.py",
+    "transformer": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/transformer.py",
+    "heads": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/heads.py",
+    "encoders": "https://github.com/LGAI-Research/EXAONE-Tabular/blob/d149d0f0441053f0cf6b2b45f4b2067a81619cf9/src/exaonetabular/model/encoders.py"
+  },
+  "independent_battle": {
+    "reviewer": "/root/review_current",
+    "root_relay": true,
+    "agreed": [
+      "Finite probe is justified, not a performance promise.",
+      "Preserve actual CAST/summary/GQA-like first-head reuse; no architecture substitution.",
+      "CPU official baseline, local mathematical equivalence, then MPS sameprecision/partition/reload and complete8view envelopes.",
+      "Only postprojection Q/batch split; full K/V and context length retained.",
+      "No cross-query support cache in first fixed plan;2400s failure stays incomplete."
+    ],
+    "additional_findings_from_this_review": [
+      "CPU float64 preprocessing/device RNG and same-device aggregation boundary.",
+      "Quadratic support selfattention memory despite small parameter count.",
+      "Shape-only flatbatch1-or512 rule needed to avoid millions of tinyMPS launches; root acceptedbefore execution."
+    ]
+  },
+  "freeze_requirements": [
+    "Root commits this design, adapter/probe/tests and pinned source/license manifests before anyMPS probe.",
+    "Record actual downloaded classifier SHA/bytes, low-level strict loader outcome, architecture and runtime environment lock.",
+    "Freeze all numeric recipe, dtype, resource policy and tolerances before execution; no choices based on scores.",
+    "Formal candidate remains unrun until full resource/portable gates pass and separate source/protocol freeze exists."
+  ],
+  "root_preprobe_decision": {
+    "status": "accepted_exact_resource_recipe_before_MPS_or_scores",
+    "default_dispatch_choice_before_probe": true,
+    "reason": "Keep PyTorch supported native device dispatch instead of claiming forced math; exact output equivalence and bounded complete-shape gates remain mandatory.",
+    "resource_budget_seconds": 2400,
+    "maximum_views": 8,
+    "full_support_required": true,
+    "candidate_scores_seen": false,
+    "new_permission_required": false,
+    "formal_screen_or_upload_authorized_by_this_file": false
+  }
+}
