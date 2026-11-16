@@ -1,0 +1,106 @@
+{
+  "status": "complete",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "device": "cpu",
+  "freeze_sha256": "a4c3a22c797547d32d2005ba92222f2c8f9e55d7b879bc781e9170ae3869bdbf",
+  "cases": [
+    {
+      "support_rows": 128,
+      "query_rows": 17,
+      "views": 8,
+      "forwarded_contexts": [
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        },
+        {
+          "rows": 128,
+          "columns": 13,
+          "input_device": "cpu",
+          "input_dtype": "torch.float32",
+          "output_device": "cpu"
+        }
+      ],
+      "partition_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "raw_official_cpu_vs_callback": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 0.0
+      },
+      "reload_check": {
+        "max_abs_difference": 0.0,
+        "threshold_disagreements": 0,
+        "tolerance": 2e-05
+      },
+      "probability_rows": 17,
+      "seconds": 6.170816708006896,
+      "after_forward": {
+        "max_rss_bytes": 649707520,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak"
+      },
+      "after_release": {
+        "max_rss_bytes": 864403456,
+        "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak"
+      }
+    }
+  ],
+  "before": {
+    "max_rss_bytes": 342212608,
+    "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak"
+  },
+  "seconds": 6.184453207999468,
+  "after": {
+    "max_rss_bytes": 864403456,
+    "measurement": "RSS peak and MPS snapshots, not continuous accelerator peak"
+  }
+}
