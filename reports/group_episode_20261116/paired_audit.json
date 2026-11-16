@@ -1,0 +1,57 @@
+{
+  "status": "root_reproduced_complete_paired_metrics",
+  "whole": {
+    "rows": 6954,
+    "accuracy": 0.815645671555939,
+    "reference_accuracy": 0.8169398907103825,
+    "log_loss": 0.3799550609088355,
+    "reference_log_loss": 0.38403062541493255,
+    "corrected": 80,
+    "broken": 89,
+    "disagreements": 169
+  },
+  "folds": [
+    {
+      "rows": 2318,
+      "accuracy": 0.8153580672993961,
+      "reference_accuracy": 0.814495254529767,
+      "log_loss": 0.39067231176156586,
+      "reference_log_loss": 0.3961894897434997,
+      "corrected": 28,
+      "broken": 26,
+      "disagreements": 54
+    },
+    {
+      "rows": 2318,
+      "accuracy": 0.808455565142364,
+      "reference_accuracy": 0.8123382226056945,
+      "log_loss": 0.37800555727409163,
+      "reference_log_loss": 0.3797079852645613,
+      "corrected": 27,
+      "broken": 36,
+      "disagreements": 63
+    },
+    {
+      "rows": 2318,
+      "accuracy": 0.823123382226057,
+      "reference_accuracy": 0.8239861949956859,
+      "log_loss": 0.3711873136908491,
+      "reference_log_loss": 0.37619440123673664,
+      "corrected": 25,
+      "broken": 27,
+      "disagreements": 52
+    }
+  ],
+  "accuracy_gain": -0.0012942191544434989,
+  "log_loss_gain": -0.004075564506097029,
+  "same_practical_1pp_band": true,
+  "S_supported": false,
+  "no_old_holdout_targets_read": true,
+  "interpretation": "Paired reused group-development evidence only; no direct comparison with random-CV v81 and no stable-superiority claim.",
+  "evidence_sha256": {
+    "reports/group_episode_20261116/audit.py": "738a9826651a089bc0e6d792b5ddd467cd469d94f1c63c05f0cfb6483642ca9e",
+    "artifacts/group_episode_20261116/protocol.json": "9ac04bbe557aa91abe23964da1de888a792eb215fe36052a845f8b1f40bdf8fc",
+    "artifacts/group_episode_20261116/summary.json": "1d5e0a8a7055f9d052986d2cf87d240479b36e9f2aedc1829a6ab0a35273745c",
+    "artifacts/group_episode_20261116/group_20261112.npz": "ebd8e1bf7143157ac78310a4aa17a6a806c01421df2f54d9910cc436b7fc5e60"
+  }
+}
