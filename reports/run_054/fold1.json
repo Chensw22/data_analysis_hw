@@ -1,0 +1,374 @@
+{
+  "fold": 1,
+  "status": "complete",
+  "ensemble_seed": 0,
+  "split_seed": 20261112,
+  "train_rows": 4636,
+  "validation_rows": 2318,
+  "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
+  "validation_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
+  "train_group_ids_sha256": "d6bc84e0c1771e930fa10d572d8b6a481d799bc4abe456042cd1547bc0fe88af",
+  "validation_group_ids_sha256": "eea48c6dd75e34931c5f5a17c48ef4ab0c62d47694abb9fca2ec2f3823f4c85e",
+  "group_overlap_count": 583,
+  "accuracy": 0.8093183779119931,
+  "log_loss": 0.37160269535202556,
+  "seconds": 96.210268832976,
+  "metadata": {
+    "candidate": "EXAONE_v91_CAST_default8",
+    "settings": {
+      "seed": 0,
+      "ensemble_count": 8,
+      "parameter_dtype": "float16",
+      "input_dtype": "float32",
+      "preprocessing_dtype": "float64",
+      "preprocessing_rng_device": "cpu",
+      "aggregation_device": "cpu",
+      "ensemble_step": 1,
+      "query_step": 1024,
+      "feedforward_token_chunk": 524288,
+      "feature_attention_row_chunk": 2147483647,
+      "cross_query_support_cache": false,
+      "sdpa_query_chunk": 256,
+      "sdpa_long_k_boundary": 256,
+      "sdpa_long_k_batch": 1,
+      "sdpa_short_k_batch": 512,
+      "mps_memory_fraction": 0.65,
+      "threads": 4,
+      "support_row_limit": 100000,
+      "feature_limit": 500,
+      "full_support": true,
+      "threshold": 0.5,
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ]
+    },
+    "training_rows": 4636,
+    "training_ids_sha256": "8faf88fe61ab1a940e216639df81644412d083282f702d16f99d9d5e20c89b75",
+    "labels_sha256": "1e3025b763698af98251bf22db9dfaeade2df345fa80a2283ce5a553458f3697",
+    "encoded_support_sha256": "94a9496c4f9692397dc94033a9bccbb721899432a18111541832849a102eadd0",
+    "categorical_mask": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    "checkpoint_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+    "code_commit": "d149d0f0441053f0cf6b2b45f4b2067a81619cf9",
+    "optimizer_steps": 0,
+    "portable_state": "CPU encoded full context, labels, ID/vocabulary and seed; reload pinned native model/preprocessing",
+    "preprocessing": {
+      "support_rows": 4636,
+      "views": 8,
+      "member_features": 13,
+      "support_members_sha256": "52ddc0448825ea9efeaef5244f264033120c1c3c94e4ef75bd77d1aa329c3b54",
+      "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+      "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+      "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+      "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+    },
+    "compatibility": {
+      "modules": [
+        "transformer.layers.0.feature_attentions.0",
+        "transformer.layers.0.feature_attentions.1",
+        "transformer.layers.0.feature_context_attentions.0",
+        "transformer.layers.0.feature_context_attentions.1",
+        "transformer.layers.0.item_attention",
+        "transformer.layers.0.item_context_attention",
+        "transformer.layers.1.feature_attentions.0",
+        "transformer.layers.1.feature_attentions.1",
+        "transformer.layers.1.feature_context_attentions.0",
+        "transformer.layers.1.feature_context_attentions.1",
+        "transformer.layers.1.item_attention",
+        "transformer.layers.1.item_context_attention",
+        "transformer.layers.2.feature_attentions.0",
+        "transformer.layers.2.feature_attentions.1",
+        "transformer.layers.2.feature_context_attentions.0",
+        "transformer.layers.2.feature_context_attentions.1",
+        "transformer.layers.2.item_attention",
+        "transformer.layers.2.item_context_attention",
+        "transformer.layers.3.feature_attentions.0",
+        "transformer.layers.3.feature_attentions.1",
+        "transformer.layers.3.feature_context_attentions.0",
+        "transformer.layers.3.feature_context_attentions.1",
+        "transformer.layers.3.item_attention",
+        "transformer.layers.3.item_context_attention",
+        "transformer.layers.4.feature_attentions.0",
+        "transformer.layers.4.feature_attentions.1",
+        "transformer.layers.4.feature_context_attentions.0",
+        "transformer.layers.4.feature_context_attentions.1",
+        "transformer.layers.4.item_attention",
+        "transformer.layers.4.item_context_attention",
+        "transformer.layers.5.feature_attentions.0",
+        "transformer.layers.5.feature_attentions.1",
+        "transformer.layers.5.feature_context_attentions.0",
+        "transformer.layers.5.feature_context_attentions.1",
+        "transformer.layers.5.item_attention",
+        "transformer.layers.5.item_context_attention",
+        "transformer.layers.6.feature_attentions.0",
+        "transformer.layers.6.feature_attentions.1",
+        "transformer.layers.6.feature_context_attentions.0",
+        "transformer.layers.6.feature_context_attentions.1",
+        "transformer.layers.6.item_attention",
+        "transformer.layers.6.item_context_attention",
+        "transformer.layers.7.feature_attentions.0",
+        "transformer.layers.7.feature_attentions.1",
+        "transformer.layers.7.feature_context_attentions.0",
+        "transformer.layers.7.feature_context_attentions.1",
+        "transformer.layers.7.item_attention",
+        "transformer.layers.7.item_context_attention",
+        "transformer.layers.8.feature_attentions.0",
+        "transformer.layers.8.feature_attentions.1",
+        "transformer.layers.8.feature_context_attentions.0",
+        "transformer.layers.8.feature_context_attentions.1",
+        "transformer.layers.8.item_attention",
+        "transformer.layers.8.item_context_attention",
+        "transformer.layers.9.feature_attentions.0",
+        "transformer.layers.9.feature_attentions.1",
+        "transformer.layers.9.feature_context_attentions.0",
+        "transformer.layers.9.feature_context_attentions.1",
+        "transformer.layers.9.item_attention",
+        "transformer.layers.9.item_context_attention",
+        "transformer.layers.10.feature_attentions.0",
+        "transformer.layers.10.feature_attentions.1",
+        "transformer.layers.10.feature_context_attentions.0",
+        "transformer.layers.10.feature_context_attentions.1",
+        "transformer.layers.10.item_attention",
+        "transformer.layers.10.item_context_attention",
+        "transformer.layers.11.feature_attentions.0",
+        "transformer.layers.11.feature_attentions.1",
+        "transformer.layers.11.feature_context_attentions.0",
+        "transformer.layers.11.feature_context_attentions.1",
+        "transformer.layers.11.item_attention",
+        "transformer.layers.11.item_context_attention"
+      ],
+      "source_sha256": "06eed04809a4a306a4af0f9a25e3f67d1175eb560eb3c9a0d23830e08f2a9b85",
+      "instance_local": true,
+      "q_chunk": 256,
+      "flat_batch_long_k": 1,
+      "flat_batch_short_k": 512,
+      "long_k_boundary": 256,
+      "full_key_value_sequence": true,
+      "original_projection_ssmax_output_cache": true,
+      "backend": "native_default_device_SDPA_in_locked_PyTorch"
+    },
+    "last_prediction": {
+      "query_rows": 2318,
+      "forward_records": [
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "6e30cb91a536cf8efe7196341170038fcc22a4777db808c0a3ea4faaea998044",
+      "full_support_rows": 4636,
+      "views": 8
+    }
+  },
+  "resources_after_forward": {
+    "process_max_rss_bytes": 744472576,
+    "device_measurement": "snapshots_not_true_peak",
+    "mps_current_bytes": 67072512,
+    "mps_driver_bytes": 1178419200,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "resources_after_release": {
+    "process_max_rss_bytes": 744472576,
+    "device_measurement": "snapshots_not_true_peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 20660224,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "references": {
+    "v71_Mitra2_zeroshot": {
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3719704257434014,
+      "fold_accuracy": [
+        0.819672131147541
+      ],
+      "fold_log_loss": [
+        0.3719704257434014
+      ]
+    },
+    "v44_seed_ensemble": {
+      "accuracy": 0.8274374460742019,
+      "log_loss": 0.3711920089838509,
+      "fold_accuracy": [
+        0.8274374460742019
+      ],
+      "fold_log_loss": [
+        0.3711920089838509
+      ]
+    },
+    "v81_Mitra_full_episode50": {
+      "accuracy": 0.8244176013805005,
+      "log_loss": 0.36420196514987585,
+      "fold_accuracy": [
+        0.8244176013805005
+      ],
+      "fold_log_loss": [
+        0.36420196514987585
+      ]
+    }
+  }
+}

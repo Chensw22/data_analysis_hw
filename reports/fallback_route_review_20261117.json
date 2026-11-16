@@ -1,0 +1,115 @@
+{
+  "status": "read_only_complete_neither_ready_for_model_screen",
+  "recommendation": "当前不推荐直接启动任何一个后备模型。若EXAONE路线终止且仍需后备，最多只继续MSP1.5的CPU交付一致性审计；先查清已发现的掩码/随机性问题，不以修公式、忽略权重键或缩上下文换取通过。",
+  "scope": "仅Orion-MSP1.5和TabForestPFN；不扩模型搜索，不推断保存步数等于总预训练步数。",
+  "license_common": "两者官方代码和HF模型卡均标MIT；个人课程非商业比赛可在保留版权/许可notice条件下使用，无新增账号或专有商用许可要求。此轮只查源码/manifest及受限元数据前缀，没有完整权重下载、安装、模型执行或评分。",
+  "msp15": {
+    "official_code": "https://github.com/Lexsi-Labs/TabTune/tree/5c014e2aaf48da4c6b9dfda1f5364dfb04d4776e/tabtune/models/orionmsp_v15",
+    "code_note": "原Orion-MSP独立repo主要v1.0；作者TabTune有单独v1.5实现和指定202603文件的strict loader。",
+    "original_repository_revision": "c89aea6dc425bc701a9557fdd53e3dc3d766f983",
+    "hf_repo": "Lexsi/Orion-MSP",
+    "hf_revision": "8b712f6ff699750f7ac5825f31e89e6f6f161577",
+    "file": "OrionMSP-classifier-v1.5-202603.ckpt",
+    "bytes": 335545028,
+    "advertised_lfs_sha256": "7f438b5d7321d23a531dfef5ab8edab7c474c75b500abfcb318e25ad32d5f9de",
+    "gated": false,
+    "private": false,
+    "metadata_api": "https://huggingface.co/api/models/Lexsi/Orion-MSP?blobs=true",
+    "delivered_config_evidence": {
+      "method": "HTTP206 bytes0-131071/335545028；只在内存用pickletools解析开头data.pkl操作码，不unpickle、不构建模型。config在data.pkl offsets6..699，后续state_dict。首zip条目step-4800/data.pkl不能证明总训练步数。",
+      "config": {
+        "max_classes": 10,
+        "embed_dim": 128,
+        "col_num_blocks": 3,
+        "col_nhead": 4,
+        "col_num_inds": 128,
+        "feature_pos_emb": "subspace",
+        "row_num_blocks": 9,
+        "row_nhead": 8,
+        "row_num_cls": 4,
+        "row_rope_base": 100000.0,
+        "icl_num_blocks": 12,
+        "icl_nhead": 4,
+        "ff_factor": 2,
+        "dropout": 0.0,
+        "activation": "gelu",
+        "norm_first": true,
+        "row_num_global": 4,
+        "row_scales": [
+          1
+        ],
+        "row_window": 500,
+        "row_num_random": 2,
+        "row_group_mode": "pma",
+        "features_per_group": 2,
+        "scale_combine_method": "enhanced_attention",
+        "perc_num_latents": 0,
+        "perc_layers": 2,
+        "num_memory_heads": 4,
+        "use_memory_gating": true,
+        "num_thinking_tokens": 4
+      }
+    },
+    "correction": "交付文件实际是单尺度，Perceiver memory关闭；不能照文档默认32latents或多尺度1/4/16声称其有该机制。并非与旧TabICLv2完全相同：9层row、PMA分组、subspace位置表示和4个thinking tokens仍是实际配置差异。",
+    "implementation_findings": [
+      {
+        "finding": "interaction.py43–44把window内外布尔值都乘0，再加-inf，无法打开普通window边；只保留special、自环和后续random边。因而window500不等于本13列近dense。",
+        "source": "https://raw.githubusercontent.com/Lexsi-Labs/TabTune/5c014e2aaf48da4c6b9dfda1f5364dfb04d4776e/tabtune/models/orionmsp_v15/model/interaction.py",
+        "sha256": "70e0c95473a40d3bef8ef3df88748967f1dee54f9924a9d7df520f0ef9e6cfa8"
+      },
+      {
+        "finding": "同文件46–50每次forward用torch.randperm生成random边；配方row_num_random=2，推断重复/查询分块/保存重载不能直接假定一致。需要原版CPU参考与明确RNG契约，不能在看到分数后固定有利mask。",
+        "source": "https://raw.githubusercontent.com/Lexsi-Labs/TabTune/5c014e2aaf48da4c6b9dfda1f5364dfb04d4776e/tabtune/models/orionmsp_v15/model/interaction.py"
+      },
+      {
+        "finding": "InferenceManager仅CUDA正确搬运/内存估计，非CUDA返回inf；MPS需要受限compat审计。缓存key主要依赖shape/train_size，首轮应禁用缓存以免跨训练池误复用。",
+        "source": "https://raw.githubusercontent.com/Lexsi-Labs/TabTune/5c014e2aaf48da4c6b9dfda1f5364dfb04d4776e/tabtune/models/orionmsp_v15/model/inference.py",
+        "sha256": "81779e4f5acf214450498657c058cfb82e754013c03dab261c0acfb0c2ebee02"
+      }
+    ],
+    "full_context": "所读classifier/model路径直接使用y_train.shape[1]，未见8693硬上限或默认样本截断；这不证明内存通过。ICL仍有full support attention，thinking tokens加入support边界；稀疏feature模块不消除行数平方资源风险。",
+    "only_possible_next_action": "若root选择继续，仅原checkpoint CPU strictload确认实际模块与完整config，再无更新tiny重复/partition/reload诊断；先解释原mask行为及训练是否与之相同。不得静默修为滑窗或打开Perceiver。未通过则关闭，不进入MPS或CV。"
+  },
+  "forest": {
+    "official_code": "https://github.com/FelixdenBreejen/TabForestPFN/tree/53114795d3c96f87348a7ccbb675665e9d3e5243",
+    "hf_repo": "FelixdenBreejen/TabForestPFN",
+    "hf_revision": "9c7138857460a25f86d20034cb034a7abf4230ac",
+    "file": "tabforestpfn.pt",
+    "bytes": 155866764,
+    "advertised_lfs_sha256": "a2969acf2eaee33e92496bb03acd07a84c8f8a5f517aeb6508a1f3dfbb8c4229",
+    "gated": false,
+    "private": false,
+    "metadata_api": "https://huggingface.co/api/models/FelixdenBreejen/TabForestPFN?blobs=true",
+    "delivered_structure_evidence": "HTTP206 bytes0-32767/155866764静态解析；data.pkl在offset64开始、pickle STOP21445，未执行pickle。x_embedding权重shape512x100，存在layers.0到layers.11和float label embedding；可支持100feature/512dim/12层结构，attention头数仍依官方配置不能由权重shape独立推断。",
+    "prefix_sha256": "df012b3e83caa1eae3370c355dd6de102200adcf617fbc2ada2b9a20f1c36b2c",
+    "blocking_mismatch": "交付state_dict包含final_layer_norm.weight与bias，而固定官方FoundationTransformer只定义final_layer1/2，没有final_layer_norm，并直接load_state_dict默认strict=True。当前源码/交付不能按文档直接严格加载；不得strict=False忽略或猜加LayerNorm位置。",
+    "source": "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/53114795d3c96f87348a7ccbb675665e9d3e5243/tabularbench/models/foundation/foundation_transformer.py",
+    "source_sha256": "e932c17122ad11d5a7d8cccda9cf65867cbf25671a8f350a41ac2eab53498855",
+    "full_context": "官方zeroshot_10k_mix配置max_samples_support8192，dataset_finetune按min(cap,n)随机取support；8693最终训练默认会丢501行。全8693需预声明覆盖cap并新资源probe，不能继承默认full-context声明。",
+    "full_context_sources": [
+      "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/53114795d3c96f87348a7ccbb675665e9d3e5243/config/hyperparams/foundation/zeroshot_10k_mix.yaml",
+      "https://raw.githubusercontent.com/FelixdenBreejen/TabForestPFN/53114795d3c96f87348a7ccbb675665e9d3e5243/tabularbench/data/dataset_finetune.py"
+    ],
+    "mps_risk": "纯torch nn.MultiheadAttention具备移植基础，但源码默认need_weights=True会物化注意力矩阵；4头/8693行FP32仅注意力张量理论约1.21GB，非峰值上界。12层推断及预处理仍需完整shape实测。",
+    "difference": "主要是作者描述的随机森林合成任务+SCM预训练先验，不是已测TabPFNv2重新改seed；但仅state_dict无法验证实际预训练混合比例/数据来源。zip条目model_step_50000不能当总训练时长或冒称600k文件已证实。",
+    "decision": "暂不推荐作为本轮后备。需要作者历史准确匹配源码/权重说明，且解决终局cap；本次不扩大追溯或擅修。"
+  },
+  "provenance_boundary": "公开HF的完整文件SHA来自官方LFS metadata，未下载全文件重新计算；受限前缀仅用于结构/配置核查。MSP读取128KiB，Forest32KiB（含metadata之后少量zip/存储前缀字节），没有完整tensor或可执行pickle加载。",
+  "local_context_reference": "reports/orion_bix_setup/closure.json；吸取实际配置与README可不同的已证实教训，不重新开启已关闭BiX。",
+  "actions_not_taken": [
+    "完整权重下载",
+    "依赖安装",
+    "GPU或模型前向",
+    "真实评分",
+    "读取旧holdout标签",
+    "修改冻结源码",
+    "commit"
+  ],
+  "root_review": {
+    "msp_mask_source_sha_independently_verified": true,
+    "forest_official_class_source_independently_read": true,
+    "metadata_prefix_inspection_by_research_agent": true,
+    "full_checkpoint_not_downloaded": true,
+    "next_action": "No GPU or screen authorization from this report; at most a separately scoped original CPU consistency audit."
+  }
+}

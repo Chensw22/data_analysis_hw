@@ -1,0 +1,106 @@
+{
+  "status": "root_independent_recomputation_passed",
+  "oof_sha256": "55bdac3ee4312b508da014ddb674ab19b6e5323a3193680983879bcfba067a7f",
+  "metrics": {
+    "accuracy": 0.8098935864250791,
+    "log_loss": 0.3762841176631881,
+    "fold_accuracy": [
+      0.808455565142364,
+      0.8093183779119931,
+      0.8119068162208801
+    ],
+    "fold_log_loss": [
+      0.3757942443447008,
+      0.37160269535202556,
+      0.38145541329283794
+    ]
+  },
+  "paired": {
+    "v71_Mitra2_zeroshot": {
+      "overall": {
+        "corrected": 152,
+        "regressed": 198,
+        "decision_disagreements": 350,
+        "mean_absolute_probability_difference": 0.03533509818303061
+      },
+      "folds": [
+        {
+          "corrected": 51,
+          "regressed": 73,
+          "decision_disagreements": 124,
+          "mean_absolute_probability_difference": 0.03466458234985981
+        },
+        {
+          "corrected": 44,
+          "regressed": 68,
+          "decision_disagreements": 112,
+          "mean_absolute_probability_difference": 0.036607476597041944
+        },
+        {
+          "corrected": 57,
+          "regressed": 57,
+          "decision_disagreements": 114,
+          "mean_absolute_probability_difference": 0.03473323560219009
+        }
+      ]
+    },
+    "v44_seed_ensemble": {
+      "overall": {
+        "corrected": 177,
+        "regressed": 246,
+        "decision_disagreements": 423,
+        "mean_absolute_probability_difference": 0.050350869124640416
+      },
+      "folds": [
+        {
+          "corrected": 69,
+          "regressed": 110,
+          "decision_disagreements": 179,
+          "mean_absolute_probability_difference": 0.05295452049775475
+        },
+        {
+          "corrected": 42,
+          "regressed": 84,
+          "decision_disagreements": 126,
+          "mean_absolute_probability_difference": 0.04951538976961471
+        },
+        {
+          "corrected": 66,
+          "regressed": 52,
+          "decision_disagreements": 118,
+          "mean_absolute_probability_difference": 0.04858269710655179
+        }
+      ]
+    },
+    "v81_Mitra_full_episode50": {
+      "overall": {
+        "corrected": 197,
+        "regressed": 253,
+        "decision_disagreements": 450,
+        "mean_absolute_probability_difference": 0.04284273510521488
+      },
+      "folds": [
+        {
+          "corrected": 91,
+          "regressed": 105,
+          "decision_disagreements": 196,
+          "mean_absolute_probability_difference": 0.04545661697914712
+        },
+        {
+          "corrected": 46,
+          "regressed": 81,
+          "decision_disagreements": 127,
+          "mean_absolute_probability_difference": 0.04353278057362439
+        },
+        {
+          "corrected": 60,
+          "regressed": 67,
+          "decision_disagreements": 127,
+          "mean_absolute_probability_difference": 0.03953880776287311
+        }
+      ]
+    }
+  },
+  "random_gate": true,
+  "S_supported": false
+}
