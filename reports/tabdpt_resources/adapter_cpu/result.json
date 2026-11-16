@@ -1,0 +1,79 @@
+{
+  "status": "complete",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "support_rows": 128,
+  "query_rows": 17,
+  "seed": 20261116,
+  "adapter_sha256": "3a7648c1841e85ce40f921f2a605fdb1fff353b67190ebd5945677e60d7bb84e",
+  "resource_helper_sha256": "e177ec4b89a92591210f33f2be531138ebe867f6c5c88d5d64c68e7c84b75a8f",
+  "environment_sha256": "775376514d411a83ccf75a4d9e776f170e5a11f4134108ed2428fbf28d0c4c4d",
+  "context_rows": 128,
+  "reload_device": "cpu",
+  "first_shape": [
+    17,
+    2
+  ],
+  "reload_shape": [
+    17,
+    2
+  ],
+  "reload_max_abs_difference": 0.0,
+  "reload_threshold_identical": true,
+  "source_provenance": {
+    "source_commit": "3cef828a0bbfe8818bcdd6d855940e1949f2b4cd",
+    "model_version": "1.3",
+    "checkpoint_sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+    "manifest_sha256": "218c4607a1dc4dd8b184bcbf09242d868ffdc0bfb1819d0758168ab7974df263",
+    "adapter_sha256": "3a7648c1841e85ce40f921f2a605fdb1fff353b67190ebd5945677e60d7bb84e",
+    "resource_helper_sha256": "e177ec4b89a92591210f33f2be531138ebe867f6c5c88d5d64c68e7c84b75a8f",
+    "vendor_sources": {
+      "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "pyproject.toml": "ddc5512d04e0d883e3718a532f5773bfafff6562c9834f0650fd1f64578382eb",
+      "README.md": "6f24ad0a0b9f14f1e063c43518afba0968875c12a25cfc96458f08151dc97d50",
+      "tabdpt/classifier.py": "9504cda178899138434c73241f83454ea6e1cad1195073ecfb930e4ef86a831e",
+      "tabdpt/self_training.py": "28820febe630221e2565b299365eef533dc4f02d48f1828e083e84c1c4f959b8",
+      "tabdpt/__init__.py": "4305d3ac1e168f9c562a87f89cab5230e8bac3ee9d50444379f44ce48a6f762d",
+      "tabdpt/model.py": "f7059d9040d46d883bc9f4df1456c77c369f9b3d9d59c3bf31c7e077af0fb381",
+      "tabdpt/utils.py": "2d576b6e1d6c95ab4926459e6cc91b4d5528aa0a850cd00269c2b93d1c3954cb",
+      "tabdpt/bar_distribution.py": "d7abbe7fed213ef003fd9c50684de712cce91348fc2da738c408902bae2f3669",
+      "tabdpt/regressor.py": "86629167ca12ba1daf6d275e285051573e7d0484148fc1bb0237b9d6de7c1874",
+      "tabdpt/estimator.py": "f49aa82df041287e13e4660b54afc0f5e51eff6885ed284936e1e740a86750ff",
+      "tabdpt/explain.py": "88019f0189fb977a3cbafef2de0be6a1d7e4e8a662bbc4a456577199b43b8bf8"
+    }
+  },
+  "metadata": {
+    "adapter_version": "tabdpt-v1.3-compact13-context-v1",
+    "seed": 20261116,
+    "training_rows": 128,
+    "feature_count": 13,
+    "class_order": [
+      0,
+      1
+    ],
+    "full_training_context": true,
+    "checkpoint_sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+    "source_commit": "3cef828a0bbfe8818bcdd6d855940e1949f2b4cd",
+    "context_sha256": "f0485747839bdaecb5b2ebefeada8d3865d54d42cbb632bbd68c84a81fefeaf5",
+    "labels_sha256": "26703d3867b87d061c392723f5cb413c3bc337d0b15e0d50b126ef5e87df53cb",
+    "training_ids_sha256": "31d4d7af6141417a4c4140c0712b23db02ca5acbaee21b2880a5a61ba11d29c8",
+    "encoder_sha256": "b6d0129a9559fab7dba4236be5addb6b4a9e28a0615bd4e19644423020d21dea",
+    "prediction_settings": {
+      "n_ensembles": 8,
+      "temperature": 1.0,
+      "context_size": null,
+      "batch_size": 4277,
+      "permute_classes": true
+    },
+    "model_rebuilds": 2,
+    "prediction_calls": 2,
+    "serialization": "CPU raw encoded context/labels/maps; reconstruct official estimator each prediction",
+    "last_query_rows": 17,
+    "actual_forward_support_rows": [
+      128
+    ],
+    "last_forward_calls": 8,
+    "class_order_verified": true
+  },
+  "seconds": 7.057622625026852
+}
