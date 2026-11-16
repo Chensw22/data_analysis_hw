@@ -52,3 +52,5 @@
 - run051已完成并独立复算：v87solo81.65085%，v88固定两seed均值81.89531%/LL.374002，旧v81为81.79465%/.375093；净+7correct、2fold上升，固定continue通过，仍A/S=false。允许另commit探索decision后一次v88fullfit/export（newseed20261212、原full50、7200s），solo不上传、不加seed/改权。本批仍7/10。新v89原Mitra13+7数值missingflags/run052设计冻结reports/top5_missing_flags_review.json，需新完整resourceprobe，未打分，不改旧source。用户明确没有新代TabPFN授权并选择其他模型，该分支关闭。
 
 - v89/run052已完整：81.63647% vsraw81.65085%，57修复/58损坏，LL.378945改善但2fold下降，固定gate失败；按预设归档，无fullfit/上传/追加适配/换flags/按missing子集事后拼接。资源两完整形状及重载全通过；root OOF复算一致。本批仍7/10，v88代码审查已通过，另commit seed_mean_decision后全量导出7200s。
+
+- 第8次v88双训练种子均值已完成58439927/0.81365，未超过v81=.81412；新fullseed20261212内层选10并freshrefit10，旧v81不重训，两个组件及组合4277reload均0。账号114/2154约前5.2925%，目标仍未达。本批8/10剩2，不加seed/改权/上传诊断solo。
