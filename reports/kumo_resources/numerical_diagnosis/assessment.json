@@ -1,0 +1,16 @@
+{
+  "status": "localized_backend_error_reproduced",
+  "source_commit_before_fix": "407d4a4",
+  "issue": "https://github.com/pytorch/pytorch/issues/204931",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "findings": [
+    "Same-shape MPS full repeat differed by0.0104; CPU repeat/partition exact.",
+    "Minimal batched matmul with noncontiguous transposed out returned max errors59-64; allocated matmul then copy was exact against CPU.",
+    "Temporary diagnostic guard only for MPS noncontiguous matmul out gave full-model repeat0, partition1.192e-7, CPU difference7.153e-7.",
+    "PYTORCH_MPS_PREFER_METAL=1 and SDPBackend.MATH did not resolve the reproduced failure."
+  ],
+  "next_action": "Install a narrowly scoped Kumo CellEmbedding allocate/copy compatibility method, preserve official vendor, record added allocation, then rerun CPU and complete MPS resource gates under new frozen sources.",
+  "previous_failure_preserved": true,
+  "prior_best_models": "No explicit batched matmul out pattern found in vendored Mitra/TabDPT model sources; their recorded exact full-reload validations remain unchanged."
+}
