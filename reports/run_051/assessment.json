@@ -1,0 +1,235 @@
+{
+  "status": "complete",
+  "primary_candidate": "v88_Mitra_full_episode50_two_seed_mean",
+  "diagnostic_solo": "v87_Mitra_full_episode50_seed100",
+  "metrics": {
+    "v81_Mitra_full_episode50": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.3750928747453614,
+      "fold_accuracy": [
+        0.814495254529767,
+        0.8244176013805005,
+        0.8149266609145815
+      ],
+      "fold_log_loss": [
+        0.3771940487220633,
+        0.36420196514987585,
+        0.3838826103641451
+      ]
+    },
+    "v87_Mitra_full_episode50_seed100": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.37483878659371683,
+      "fold_accuracy": [
+        0.8132010353753235,
+        0.8213977566867989,
+        0.8149266609145815
+      ],
+      "fold_log_loss": [
+        0.37498822164971557,
+        0.3668578925317861,
+        0.3826702455996487
+      ]
+    },
+    "v88_Mitra_full_episode50_two_seed_mean": {
+      "accuracy": 0.8189531205061835,
+      "log_loss": 0.3740018824295269,
+      "fold_accuracy": [
+        0.8175150992234685,
+        0.822260569456428,
+        0.817083692838654
+      ],
+      "fold_log_loss": [
+        0.3751610453032087,
+        0.3647833988295542,
+        0.3820612031558178
+      ]
+    }
+  },
+  "new_folds": [
+    {
+      "fold": 0,
+      "outer_split_seed": 20261112,
+      "actual_training_seed": 20261212,
+      "train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+      "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "selected_steps": 32,
+      "inner_train_ids_sha256": "27b573192742b91933347e93442eb817c3218d447c39ea1b23848d75c9a717ca",
+      "inner_validation_ids_sha256": "bb086d952b21cc6992ed59826abdb8a57f707ce665bfbd1b325af491de60553b",
+      "diagnostic_solo_accuracy": 0.8132010353753235,
+      "diagnostic_solo_log_loss": 0.37498822808265686,
+      "fixed_mean_accuracy": 0.8175150992234685,
+      "fixed_mean_log_loss": 0.3751610453032087,
+      "cached_old_accuracy": 0.814495254529767
+    },
+    {
+      "fold": 1,
+      "outer_split_seed": 20261112,
+      "actual_training_seed": 20261213,
+      "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
+      "query_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "selected_steps": 50,
+      "inner_train_ids_sha256": "ebcab592ebfb586426eff2bc459424671916eff96130b75325d82b8c386b2b89",
+      "inner_validation_ids_sha256": "9665aabdea5d984b0f5aef5dc17e22af191d494cafd710f02e2ff69d66e589ed",
+      "diagnostic_solo_accuracy": 0.8213977566867989,
+      "diagnostic_solo_log_loss": 0.3668578863143921,
+      "fixed_mean_accuracy": 0.822260569456428,
+      "fixed_mean_log_loss": 0.3647833988295542,
+      "cached_old_accuracy": 0.8244176013805005
+    },
+    {
+      "fold": 2,
+      "outer_split_seed": 20261112,
+      "actual_training_seed": 20261214,
+      "train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+      "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "selected_steps": 20,
+      "inner_train_ids_sha256": "0c12fb09fed475c5cca0b3fbcea1583b55f7e926c1ae98ba213198e5edeec6b3",
+      "inner_validation_ids_sha256": "a00e13b659a5680482a140ed3faa43609b6c48a94753f89fcc3dfc35fa6dfe7c",
+      "diagnostic_solo_accuracy": 0.8149266609145815,
+      "diagnostic_solo_log_loss": 0.38267025351524353,
+      "fixed_mean_accuracy": 0.817083692838654,
+      "fixed_mean_log_loss": 0.3820612031558178,
+      "cached_old_accuracy": 0.8149266609145815
+    }
+  ],
+  "old_inner_selections": [
+    {
+      "fold": 0,
+      "fit_seed": 20261112,
+      "selected_steps": 47,
+      "inner_train_ids_sha256": "7d7ec6dc51b60357f3fffc395877fcfaa0d3d43574a9653cfaf5b867c37ddea9",
+      "inner_validation_ids_sha256": "4406f51b4c28c421c87b38b9b721060d08f97d6c889b8cfd7410591732c94652"
+    },
+    {
+      "fold": 1,
+      "fit_seed": 20261113,
+      "selected_steps": 47,
+      "inner_train_ids_sha256": "6fc5fdd64f018a58fdd2e9433a28b388888b2455ee630676e79843d6294065f1",
+      "inner_validation_ids_sha256": "db12e8bd47dd67e0b356e2724f4494f4ee87bbb5a462f89877323a80540a9b7b"
+    },
+    {
+      "fold": 2,
+      "fit_seed": 20261114,
+      "selected_steps": 43,
+      "inner_train_ids_sha256": "4920368dad4727d722c7e07828e5d4eaace27dab3c3d66cca0dbbbecaf4ce136",
+      "inner_validation_ids_sha256": "5f95e614599f7b3d1930dc758e284fa87d00c2d353c51b08b242f628ff584e6b"
+    }
+  ],
+  "paired_vs_cached_old": {
+    "v87_Mitra_full_episode50_seed100": {
+      "overall": {
+        "corrections": 93,
+        "regressions": 103,
+        "disagreements": 196,
+        "error_correlation": 0.9056617643481801,
+        "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+        "mean_absolute_probability_change": 0.021087025719421282,
+        "maximum_absolute_probability_change": 0.27083633840084076,
+        "mean_signed_probability_change": 0.0038609394227986705
+      },
+      "folds": [
+        {
+          "corrections": 34,
+          "regressions": 37,
+          "disagreements": 71,
+          "error_correlation": 0.8989194156768348,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.02227359499066003,
+          "maximum_absolute_probability_change": 0.24667850136756897,
+          "mean_signed_probability_change": 0.007401061552686506
+        },
+        {
+          "corrections": 21,
+          "regressions": 28,
+          "disagreements": 49,
+          "error_correlation": 0.9275235701326598,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.019475106762799878,
+          "maximum_absolute_probability_change": 0.1964297890663147,
+          "mean_signed_probability_change": 0.0038803039722872224
+        },
+        {
+          "corrections": 38,
+          "regressions": 38,
+          "disagreements": 76,
+          "error_correlation": 0.8913054476844843,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.02151237540480394,
+          "maximum_absolute_probability_change": 0.27083633840084076,
+          "mean_signed_probability_change": 0.0003014527434222818
+        }
+      ]
+    },
+    "v88_Mitra_full_episode50_two_seed_mean": {
+      "overall": {
+        "corrections": 53,
+        "regressions": 46,
+        "disagreements": 99,
+        "error_correlation": 0.9521004427468155,
+        "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+        "mean_absolute_probability_change": 0.010543512859710641,
+        "maximum_absolute_probability_change": 0.13541816920042038,
+        "mean_signed_probability_change": 0.0019304697113993353
+      },
+      "folds": [
+        {
+          "corrections": 22,
+          "regressions": 15,
+          "disagreements": 37,
+          "error_correlation": 0.9468917737710975,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.011136797495330015,
+          "maximum_absolute_probability_change": 0.12333925068378448,
+          "mean_signed_probability_change": 0.003700530776343253
+        },
+        {
+          "corrections": 11,
+          "regressions": 16,
+          "disagreements": 27,
+          "error_correlation": 0.9599860597812755,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.009737553381399939,
+          "maximum_absolute_probability_change": 0.09821489453315735,
+          "mean_signed_probability_change": 0.0019401519861436112
+        },
+        {
+          "corrections": 20,
+          "regressions": 15,
+          "disagreements": 35,
+          "error_correlation": 0.9497413237294612,
+          "correlation_note": "descriptive Pearson correlation of actual binary prediction errors",
+          "mean_absolute_probability_change": 0.01075618770240197,
+          "maximum_absolute_probability_change": 0.13541816920042038,
+          "mean_signed_probability_change": 0.0001507263717111409
+        }
+      ]
+    }
+  },
+  "continuation": {
+    "passed": true,
+    "checks": {
+      "all_three_folds_complete": true,
+      "mean_accuracy_not_below_old": true,
+      "mean_logloss_not_above_old": true,
+      "at_least_two_folds_not_below_old": true
+    },
+    "nondecreasing_fold_count": 2,
+    "numerical_tolerance": 1e-12,
+    "sole_primary_candidate": "v88_Mitra_full_episode50_two_seed_mean",
+    "diagnostic_solo_upload_allowed": false,
+    "automatic_fullfit_or_upload": false,
+    "interpretation": "Prospective resource/exploration heuristic only; no stable superiority, S-tier or across-split confirmation."
+  },
+  "automatic_eligibility": false,
+  "S_supported": false,
+  "sole_possible_future_export": "v88_Mitra_full_episode50_two_seed_mean",
+  "solo_upload_allowed": false,
+  "interpretation": "Single training-program repeat on reused fixed partitions; within1pp remains practical parity. Not stable superiority or independent validation."
+}

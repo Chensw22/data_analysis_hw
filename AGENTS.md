@@ -48,3 +48,5 @@
 - 新批第6次v86固定raw/adapt各半已完成58431944/0.81271，未超过v81=0.81412；账号114/2146，仍未前5%，本批6/10（剩4）。完整双组件及组合重载diff0，旧raw未验证记录保留。下一项v85固定group-episode50三折，review/code已commit8763c01，不扩大为6fold matched-v81比较，不混入随机CV评级。
 
 - 第7次v85 group-episode已完成58436119/0.81248；matched groupCV81.56457% vsraw81.69399%（−9correct），三foldLL均改善但线上未超过v81=.81412。full6954/1739选31重训31、4277reload0。账号114/2151仍未前5%，本批7/10剩3。v85完整处置结束，后备run051固定seed+100以及两seed各半均值：v87solo只诊断，v88唯一主候选，review+code已commit；必须committed activation及新鲜官方排名才启动。均值acc>=v81、LL<=v81且至少2foldacc不降才继续fullfit；不追加seed/改权/上传solo。
+
+- run051已完成并独立复算：v87solo81.65085%，v88固定两seed均值81.89531%/LL.374002，旧v81为81.79465%/.375093；净+7correct、2fold上升，固定continue通过，仍A/S=false。允许另commit探索decision后一次v88fullfit/export（newseed20261212、原full50、7200s），solo不上传、不加seed/改权。本批仍7/10。新v89原Mitra13+7数值missingflags/run052设计冻结reports/top5_missing_flags_review.json，需新完整resourceprobe，未打分，不改旧source。用户明确没有新代TabPFN授权并选择其他模型，该分支关闭。
