@@ -1,0 +1,22 @@
+{
+  "batch_id": "online_iteration_20261116",
+  "batch_authorization_sha256": "1f05a6a83f7772f2f618d1f0cedc3df74d17fc709a18f1ea36906f616aa6931c",
+  "module": "mitra_full_episode_candidate",
+  "run": "run_046",
+  "version": "v81_Mitra_full_episode50",
+  "proposal": "proposal_nov16_full_episode",
+  "source_protocol_sha256": "5d5121a77830552909184b777133badf8b130db7c6ef7fdfa0ab7321a9eb71b0",
+  "evidence_files": {
+    "artifacts/run_046/protocol.json": "5d5121a77830552909184b777133badf8b130db7c6ef7fdfa0ab7321a9eb71b0",
+    "artifacts/run_046/screen_results.csv": "6d19d1a57c4bc2b1f8f4d3ecfa5ce472c123e2dbf0cc123d53318717eccaacb4",
+    "reports/run_046/progress.json": "cce10b7d91e4e5cf47ffefdbc705677282a18ac51d542719daef73f16acea1ad"
+  },
+  "rationale": "Full-parameter adaptation is a method-level contrast with zeroshot and lastblock-only training. Complete fixed3fold accuracy81.79465% vs81.65085%; correct130 former errors but breaks120, net+10. Fold gains -0.3451/+0.4745/+0.3020pp are mixed, while pooled logloss improves .38020 to .37509. Same practical band and no stability claim; one exploratory online test preferred to lastblock v76 with weaker group evidence. No weight/threshold sweep or horizon extension.",
+  "exploratory": true,
+  "prior_A_eligible": null,
+  "prior_S_supported": false,
+  "screen_accuracy": 0.817946505608283,
+  "threshold": 0.5,
+  "maximum_attempts": 1,
+  "adaptive_development_disclosure": "Reused original6954development rows only for comparison; no independent holdout or group confirmation. Final8693row fit follows unchanged nested selection recipe. Prior unrelated failed gates remain unchanged."
+}
