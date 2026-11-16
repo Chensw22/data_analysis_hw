@@ -58,3 +58,5 @@
 - Orion固定权重CPU核查与独立review发现实际standard RowInteraction、未启用BiAxial；此前按新多尺度结构的研究期待已更正。保存的step40不能推断总训练量，训练链未独立核实。不按此理由继续MPS/CV：v90/run053保留未运行，CPU事实与最小复现见reports/orion_bix_setup。未完成兼容草稿删除。下一路线为EXAONE CAST可行性审查，保留8/10上传状态。
 
 - EXAONE CAST v91/run054已完成：80.98936%，较v44固定锚点低0.99223pp，刚进入A带；较v81少56correct，无稳定优势。完整MPS8693/4277及重载diff0，root复算一致。按事前protocol继续保存的group12三折；只通过后再另审探索上传，本批仍8/10。原model/core/资源配方冻结，不改seed/views/阈值。
+
+- EXAONE saved group12三折完成81.66523%/LL.380938；matched raw81.69399%/.384031（172修复174损坏，净-2），v44为81.44953%。固定group门槛通过，仍无S。root已复算OOF；下一步另审一次探索decision，未批准前不得fullfit/线上。本批8/10不变。

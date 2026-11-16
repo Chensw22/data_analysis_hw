@@ -1,0 +1,364 @@
+{
+  "fold": 1,
+  "status": "complete",
+  "ensemble_seed": 0,
+  "split_seed": 20261112,
+  "train_rows": 4636,
+  "validation_rows": 2318,
+  "train_ids_sha256": "2914694568969ba9ad24aafe41f04bd29e449da4bcb6ba68ccb3675bec595349",
+  "validation_ids_sha256": "a09c20ff32ab7b53608cf0a802f3bfae7987810959d06c07bfde573c2a483ae6",
+  "train_group_ids_sha256": "ac476b4ee363523a729ab5f1915afeb94d74a13a1a81fa37af3e1cd54317e8f7",
+  "validation_group_ids_sha256": "4283fc12b3b77178512a72aa1ac7dfc8c9679d7bcb58983273eeb252bfe62560",
+  "group_overlap_count": 0,
+  "accuracy": 0.8132010353753235,
+  "log_loss": 0.38036311457114325,
+  "seconds": 91.11225737491623,
+  "metadata": {
+    "candidate": "EXAONE_v91_CAST_default8",
+    "settings": {
+      "seed": 0,
+      "ensemble_count": 8,
+      "parameter_dtype": "float16",
+      "input_dtype": "float32",
+      "preprocessing_dtype": "float64",
+      "preprocessing_rng_device": "cpu",
+      "aggregation_device": "cpu",
+      "ensemble_step": 1,
+      "query_step": 1024,
+      "feedforward_token_chunk": 524288,
+      "feature_attention_row_chunk": 2147483647,
+      "cross_query_support_cache": false,
+      "sdpa_query_chunk": 256,
+      "sdpa_long_k_boundary": 256,
+      "sdpa_long_k_batch": 1,
+      "sdpa_short_k_batch": 512,
+      "mps_memory_fraction": 0.65,
+      "threads": 4,
+      "support_row_limit": 100000,
+      "feature_limit": 500,
+      "full_support": true,
+      "threshold": 0.5,
+      "columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ]
+    },
+    "training_rows": 4636,
+    "training_ids_sha256": "6e65d7e9197ed8280a747b6dd403359a9ae42f483e4d127c3a91cee8fe017302",
+    "labels_sha256": "37488509d4fa6b9af7523099d9f71332729274238cebe3f5749c62ff1b270f42",
+    "encoded_support_sha256": "2819fe3fd6a628dd7a42ecd0046ec0b259c8a5956d28e15f55a015cf8d2e9e89",
+    "categorical_mask": [
+      true,
+      true,
+      true,
+      false,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true
+    ],
+    "checkpoint_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+    "code_commit": "d149d0f0441053f0cf6b2b45f4b2067a81619cf9",
+    "optimizer_steps": 0,
+    "portable_state": "CPU encoded full context, labels, ID/vocabulary and seed; reload pinned native model/preprocessing",
+    "preprocessing": {
+      "support_rows": 4636,
+      "views": 8,
+      "member_features": 13,
+      "support_members_sha256": "5366856a6d9cbc8f5d7aafd92b8a8603ac98b1263b2f34f8a57432b8bbb75c8f",
+      "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+      "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+      "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+      "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+    },
+    "compatibility": {
+      "modules": [
+        "transformer.layers.0.feature_attentions.0",
+        "transformer.layers.0.feature_attentions.1",
+        "transformer.layers.0.feature_context_attentions.0",
+        "transformer.layers.0.feature_context_attentions.1",
+        "transformer.layers.0.item_attention",
+        "transformer.layers.0.item_context_attention",
+        "transformer.layers.1.feature_attentions.0",
+        "transformer.layers.1.feature_attentions.1",
+        "transformer.layers.1.feature_context_attentions.0",
+        "transformer.layers.1.feature_context_attentions.1",
+        "transformer.layers.1.item_attention",
+        "transformer.layers.1.item_context_attention",
+        "transformer.layers.2.feature_attentions.0",
+        "transformer.layers.2.feature_attentions.1",
+        "transformer.layers.2.feature_context_attentions.0",
+        "transformer.layers.2.feature_context_attentions.1",
+        "transformer.layers.2.item_attention",
+        "transformer.layers.2.item_context_attention",
+        "transformer.layers.3.feature_attentions.0",
+        "transformer.layers.3.feature_attentions.1",
+        "transformer.layers.3.feature_context_attentions.0",
+        "transformer.layers.3.feature_context_attentions.1",
+        "transformer.layers.3.item_attention",
+        "transformer.layers.3.item_context_attention",
+        "transformer.layers.4.feature_attentions.0",
+        "transformer.layers.4.feature_attentions.1",
+        "transformer.layers.4.feature_context_attentions.0",
+        "transformer.layers.4.feature_context_attentions.1",
+        "transformer.layers.4.item_attention",
+        "transformer.layers.4.item_context_attention",
+        "transformer.layers.5.feature_attentions.0",
+        "transformer.layers.5.feature_attentions.1",
+        "transformer.layers.5.feature_context_attentions.0",
+        "transformer.layers.5.feature_context_attentions.1",
+        "transformer.layers.5.item_attention",
+        "transformer.layers.5.item_context_attention",
+        "transformer.layers.6.feature_attentions.0",
+        "transformer.layers.6.feature_attentions.1",
+        "transformer.layers.6.feature_context_attentions.0",
+        "transformer.layers.6.feature_context_attentions.1",
+        "transformer.layers.6.item_attention",
+        "transformer.layers.6.item_context_attention",
+        "transformer.layers.7.feature_attentions.0",
+        "transformer.layers.7.feature_attentions.1",
+        "transformer.layers.7.feature_context_attentions.0",
+        "transformer.layers.7.feature_context_attentions.1",
+        "transformer.layers.7.item_attention",
+        "transformer.layers.7.item_context_attention",
+        "transformer.layers.8.feature_attentions.0",
+        "transformer.layers.8.feature_attentions.1",
+        "transformer.layers.8.feature_context_attentions.0",
+        "transformer.layers.8.feature_context_attentions.1",
+        "transformer.layers.8.item_attention",
+        "transformer.layers.8.item_context_attention",
+        "transformer.layers.9.feature_attentions.0",
+        "transformer.layers.9.feature_attentions.1",
+        "transformer.layers.9.feature_context_attentions.0",
+        "transformer.layers.9.feature_context_attentions.1",
+        "transformer.layers.9.item_attention",
+        "transformer.layers.9.item_context_attention",
+        "transformer.layers.10.feature_attentions.0",
+        "transformer.layers.10.feature_attentions.1",
+        "transformer.layers.10.feature_context_attentions.0",
+        "transformer.layers.10.feature_context_attentions.1",
+        "transformer.layers.10.item_attention",
+        "transformer.layers.10.item_context_attention",
+        "transformer.layers.11.feature_attentions.0",
+        "transformer.layers.11.feature_attentions.1",
+        "transformer.layers.11.feature_context_attentions.0",
+        "transformer.layers.11.feature_context_attentions.1",
+        "transformer.layers.11.item_attention",
+        "transformer.layers.11.item_context_attention"
+      ],
+      "source_sha256": "06eed04809a4a306a4af0f9a25e3f67d1175eb560eb3c9a0d23830e08f2a9b85",
+      "instance_local": true,
+      "q_chunk": 256,
+      "flat_batch_long_k": 1,
+      "flat_batch_short_k": 512,
+      "long_k_boundary": 256,
+      "full_key_value_sequence": true,
+      "original_projection_ssmax_output_cache": true,
+      "backend": "native_default_device_SDPA_in_locked_PyTorch"
+    },
+    "last_prediction": {
+      "query_rows": 2318,
+      "forward_records": [
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "0acf90814ac26ae7d1af1b6c141da04388b444777fad4dde01c10fdfcf314510",
+      "full_support_rows": 4636,
+      "views": 8
+    }
+  },
+  "resources_after_forward": {
+    "process_max_rss_bytes": 742752256,
+    "device_measurement": "snapshots_not_true_peak",
+    "mps_current_bytes": 67072512,
+    "mps_driver_bytes": 1178419200,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "resources_after_release": {
+    "process_max_rss_bytes": 742752256,
+    "device_measurement": "snapshots_not_true_peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 20660224,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "references": {
+    "v71_Mitra2_zeroshot": {
+      "accuracy": 0.8123382226056945,
+      "log_loss": 0.3797079852645613,
+      "fold_accuracy": [
+        0.8123382226056945
+      ],
+      "fold_log_loss": [
+        0.3797079852645613
+      ]
+    },
+    "v44_seed_ensemble": {
+      "accuracy": 0.8071613459879207,
+      "log_loss": 0.3810471621534873,
+      "fold_accuracy": [
+        0.8071613459879207
+      ],
+      "fold_log_loss": [
+        0.3810471621534873
+      ]
+    }
+  }
+}

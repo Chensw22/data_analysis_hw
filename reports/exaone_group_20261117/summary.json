@@ -1,0 +1,127 @@
+{
+  "status": "complete",
+  "candidate": "EXAONE_v91_CAST_default8",
+  "phase": "group",
+  "completed_folds": 3,
+  "metrics": {
+    "accuracy": 0.8166522864538395,
+    "log_loss": 0.38093795816097814,
+    "fold_accuracy": [
+      0.813632441760138,
+      0.8132010353753235,
+      0.823123382226057
+    ],
+    "fold_log_loss": [
+      0.39420103715746124,
+      0.38036311457114325,
+      0.3682497227543301
+    ]
+  },
+  "references": {
+    "v71_Mitra2_zeroshot": {
+      "accuracy": 0.8169398907103825,
+      "log_loss": 0.38403062541493255,
+      "fold_accuracy": [
+        0.814495254529767,
+        0.8123382226056945,
+        0.8239861949956859
+      ],
+      "fold_log_loss": [
+        0.3961894897434997,
+        0.3797079852645613,
+        0.37619440123673664
+      ]
+    },
+    "v44_seed_ensemble": {
+      "accuracy": 0.814495254529767,
+      "log_loss": 0.3828251110505358,
+      "fold_accuracy": [
+        0.8088869715271786,
+        0.8071613459879207,
+        0.8274374460742019
+      ],
+      "fold_log_loss": [
+        0.39475952372882667,
+        0.3810471621534873,
+        0.3726686472692934
+      ]
+    }
+  },
+  "paired": {
+    "v71_Mitra2_zeroshot": {
+      "overall": {
+        "corrected": 172,
+        "regressed": 174,
+        "decision_disagreements": 346,
+        "mean_absolute_probability_difference": 0.03695047035278525
+      },
+      "folds": [
+        {
+          "corrected": 54,
+          "regressed": 56,
+          "decision_disagreements": 110,
+          "mean_absolute_probability_difference": 0.03822557566558741
+        },
+        {
+          "corrected": 71,
+          "regressed": 69,
+          "decision_disagreements": 140,
+          "mean_absolute_probability_difference": 0.03536995247869787
+        },
+        {
+          "corrected": 47,
+          "regressed": 49,
+          "decision_disagreements": 96,
+          "mean_absolute_probability_difference": 0.03725588291407049
+        }
+      ]
+    },
+    "v44_seed_ensemble": {
+      "overall": {
+        "corrected": 203,
+        "regressed": 188,
+        "decision_disagreements": 391,
+        "mean_absolute_probability_difference": 0.0497025152746659
+      },
+      "folds": [
+        {
+          "corrected": 69,
+          "regressed": 58,
+          "decision_disagreements": 127,
+          "mean_absolute_probability_difference": 0.05057836895658699
+        },
+        {
+          "corrected": 76,
+          "regressed": 62,
+          "decision_disagreements": 138,
+          "mean_absolute_probability_difference": 0.04807838798936943
+        },
+        {
+          "corrected": 58,
+          "regressed": 68,
+          "decision_disagreements": 126,
+          "mean_absolute_probability_difference": 0.050450788878041275
+        }
+      ]
+    }
+  },
+  "seconds": 264.1011188750854,
+  "continue_to_group": false,
+  "continue_to_root_decision": true,
+  "common_local_tier": "not classified by this phase",
+  "automatic_upload": false,
+  "S_supported": false,
+  "no_old_holdout_targets_used": true,
+  "disclosure": "Recipe was chosen after earlier development experiments; these folds are reused, not independent confirmation.",
+  "result_files_sha256": {
+    "EXAONE_v91_CAST_default8_seed20261112.npz": "688e219a13a7062585f6f3d92e2ab6cbaeeea5763af03d96802795a0dd4934b0",
+    "group_metrics.csv": "a0df80d54b1db69b719cef765d4c24d330aacdab018bcc58dcc83c51ceafb066",
+    "assessment.json": "dc9029a9355eb6b91f1771e7a9b46057b31b11c0842c508bf5962008f1937888",
+    "fold0.json": "948cd3164839a27c01e11f258096c14e1932efb7ea460409ca632bd440f878c8",
+    "fold1.json": "f669298ce540f021194577bcca2a00f5d6a1a76d80129f6e70d5622ee2b0759c",
+    "fold2.json": "fcaf4ca6595dc235bc7c987a2aebc028c25a4dadd7026841187abd2835a97e87",
+    "fold0_rows.npz": "080d83ebc3cc202d6156a8dd8b7523f464965cc856e02a01d6e8f4df345c5e2d",
+    "fold1_rows.npz": "1825e2aabf75e3078c37752b0b48050b67147c6e2a00f08d918ce1d4e6842b5d",
+    "fold2_rows.npz": "8e92d0b43c1e18a37b39240cc8f36ee3dfc72a717a46d2c075d61dda9d985f37"
+  }
+}

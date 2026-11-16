@@ -1,0 +1,78 @@
+{
+  "status": "root_independent_recomputation_passed",
+  "oof_sha256": "688e219a13a7062585f6f3d92e2ab6cbaeeea5763af03d96802795a0dd4934b0",
+  "metrics": {
+    "accuracy": 0.8166522864538395,
+    "log_loss": 0.38093795816097814,
+    "fold_accuracy": [
+      0.813632441760138,
+      0.8132010353753235,
+      0.823123382226057
+    ],
+    "fold_log_loss": [
+      0.39420103715746124,
+      0.38036311457114325,
+      0.3682497227543301
+    ]
+  },
+  "paired": {
+    "v71_Mitra2_zeroshot": {
+      "overall": {
+        "corrected": 172,
+        "regressed": 174,
+        "decision_disagreements": 346,
+        "mean_absolute_probability_difference": 0.03695047035278525
+      },
+      "folds": [
+        {
+          "corrected": 54,
+          "regressed": 56,
+          "decision_disagreements": 110,
+          "mean_absolute_probability_difference": 0.03822557566558741
+        },
+        {
+          "corrected": 71,
+          "regressed": 69,
+          "decision_disagreements": 140,
+          "mean_absolute_probability_difference": 0.03536995247869787
+        },
+        {
+          "corrected": 47,
+          "regressed": 49,
+          "decision_disagreements": 96,
+          "mean_absolute_probability_difference": 0.03725588291407049
+        }
+      ]
+    },
+    "v44_seed_ensemble": {
+      "overall": {
+        "corrected": 203,
+        "regressed": 188,
+        "decision_disagreements": 391,
+        "mean_absolute_probability_difference": 0.0497025152746659
+      },
+      "folds": [
+        {
+          "corrected": 69,
+          "regressed": 58,
+          "decision_disagreements": 127,
+          "mean_absolute_probability_difference": 0.05057836895658699
+        },
+        {
+          "corrected": 76,
+          "regressed": 62,
+          "decision_disagreements": 138,
+          "mean_absolute_probability_difference": 0.04807838798936943
+        },
+        {
+          "corrected": 58,
+          "regressed": 68,
+          "decision_disagreements": 126,
+          "mean_absolute_probability_difference": 0.050450788878041275
+        }
+      ]
+    }
+  },
+  "group_gate": true,
+  "S_supported": false
+}
