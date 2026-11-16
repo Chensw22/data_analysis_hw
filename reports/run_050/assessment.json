@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "components": [
+    {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038",
+      "weight": 0.5,
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "fold_accuracy": [
+        0.817946505608283,
+        0.819672131147541,
+        0.8119068162208801
+      ]
+    },
+    {
+      "version": "v81_Mitra_full_episode50",
+      "run": "run_046",
+      "weight": 0.5,
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.3750928747453614,
+      "fold_accuracy": [
+        0.814495254529767,
+        0.8244176013805005,
+        0.8149266609145815
+      ]
+    }
+  ],
+  "fold_accuracy": [
+    0.8157894736842105,
+    0.8235547886108714,
+    0.8149266609145815
+  ],
+  "fold_log_loss": [
+    0.37794790599184874,
+    0.3667200826186627,
+    0.38434019342047643
+  ],
+  "paired_vs_components": {
+    "v71_Mitra2_zeroshot": {
+      "overall": {
+        "accuracy_delta": 0.0015818234109865603,
+        "log_loss_delta": -0.0038598742172533673,
+        "repaired": 62,
+        "broken": 51,
+        "disagreements": 113
+      },
+      "folds": [
+        {
+          "accuracy_delta": -0.002157031924072461,
+          "log_loss_delta": -0.0030802878858373073,
+          "repaired": 15,
+          "broken": 20,
+          "disagreements": 35
+        },
+        {
+          "accuracy_delta": 0.0038826574633303856,
+          "log_loss_delta": -0.00525034312473871,
+          "repaired": 20,
+          "broken": 11,
+          "disagreements": 31
+        },
+        {
+          "accuracy_delta": 0.0030198446937014234,
+          "log_loss_delta": -0.00324899164118414,
+          "repaired": 27,
+          "broken": 20,
+          "disagreements": 47
+        }
+      ]
+    },
+    "v81_Mitra_full_episode50": {
+      "overall": {
+        "accuracy_delta": 0.00014380212827158623,
+        "log_loss_delta": 0.0012431859316345828,
+        "repaired": 69,
+        "broken": 68,
+        "disagreements": 137
+      },
+      "folds": [
+        {
+          "accuracy_delta": 0.0012942191544434989,
+          "log_loss_delta": 0.0007538572697854407,
+          "repaired": 37,
+          "broken": 34,
+          "disagreements": 71
+        },
+        {
+          "accuracy_delta": -0.0008628127696290733,
+          "log_loss_delta": 0.002518117468786829,
+          "repaired": 18,
+          "broken": 20,
+          "disagreements": 38
+        },
+        {
+          "accuracy_delta": 0.0,
+          "log_loss_delta": 0.00045758305633131213,
+          "repaired": 14,
+          "broken": 14,
+          "disagreements": 28
+        }
+      ]
+    }
+  },
+  "exploratory_continuation": {
+    "passed": true,
+    "checks": {
+      "accuracy_not_below_weaker_component": true,
+      "logloss_not_above_worse_component": true,
+      "within_common_1pp": true,
+      "all_three_folds_complete": true
+    },
+    "interpretation": "Fixed exploratory continuation heuristic only; not stable superiority, S-tier, or upload authorization."
+  },
+  "automatic_eligibility": false,
+  "S_supported": false,
+  "practical_tier": "same_common_1pp_band",
+  "conclusion": "Observed-component adaptive comparison; no new independent validation or stable-superiority claim."
+}
