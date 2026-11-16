@@ -1,0 +1,3005 @@
+{
+  "sources": {
+    "exaone_candidate.py": "afd87fee2ae7a2db85dc6a1b77648f229c1727ea06e1814a1d351fe02c65b7d7",
+    "exaone_mps_compat.py": "6e0bfb9092dfc9e5b4aca7cfc7c6fa1891658304079a2bd74b9530b01d9cd7b2",
+    "exaone_resource_probe.py": "ec3f89c1a682d2f792e8b7477f4405c77075cf6001eb6525d93aac9fb70eeffb",
+    "quota_guard.py": "3f5d7804e3dc6a87763612373f081dbcef6a3f1e8e747306c3a4c7f12ffb8b77",
+    "reports/exaone_resource_design.json": "d33b5d46e55b515567eae1ee4158fd9490d5029d2f9ad7fbf0ddbd18081b934f",
+    "requirements-exaone.lock.txt": "d57da5e4b984d5bd3e6a9d70ccc5a9716699a26abd98980b1201da8a73dbc799",
+    "requirements-exaone.txt": "2f2a4e049015ccc8d807857c51858d7466ae23bd808c7060f5eaaa79ca08acd8",
+    "test_exaone_candidate.py": "45b0a108968a499b8d6c7b08ed2df7f229ea2ff8cfc4965c037cec4810ba0c54",
+    "test_exaone_mps_compat.py": "b627945d631705e1e86b8d6ac2fe0c31e6162c2d4299ca3684d6dabe3b217f9e",
+    "test_exaone_resource_probe.py": "0916279866a3be7538f75d9466341e90188eb6a838cd70d924bb9cb165b11f7d",
+    "third_party/exaone/LICENSE": "af60390bf207b4e7461ef2cf53394ffa40f75415b3c96d601a2bed3e3204139e",
+    "third_party/exaone/MODEL_LICENSE.txt": "36c1a54bb636385c715524d2eeb7d69106c40f8775f7e35cc4b5970613d20ffb",
+    "third_party/exaone/Notice.md": "4ad85bc73ea0c52474e6dce4eebca55880898145234cdb4ebd0734d9336d38b0",
+    "third_party/exaone/README.md": "4ba2c9f4f220026b2e25b4816c5c1820d1b66799274c4dffdd861fd1bba0deec",
+    "third_party/exaone/SOURCE.json": "fcb86550748b20d25e027c954b13a4a03bdaa392cf4901c7342b40362ea14f17",
+    "third_party/exaone/pyproject.toml": "493d3ebda470123e08baa95317237f1ccac9e45045b44ee47ba90a0c11000aaf",
+    "third_party/exaone/src/exaonetabular/__init__.py": "b935d9d03c57b82f0b282207fa0fc4f8dc874d27cd003a98bda3e0c551bbf419",
+    "third_party/exaone/src/exaonetabular/_execution.py": "32ed8088fbacca5b70dfb2c65d907f9a8ff44ee8cee34a81701f7a40996523d5",
+    "third_party/exaone/src/exaonetabular/_inference_preprocessing.py": "60699a4cfb614e525dd8b6279d07d7b51e95fe17870a99bbaa849f2986457063",
+    "third_party/exaone/src/exaonetabular/_power_transform.py": "b39be87515a8a6eb0da8fc8590b4208172f514e13d8d0f26ff6e3e2dc569e166",
+    "third_party/exaone/src/exaonetabular/checkpoint.py": "669c7344e5d52a277910d1c2b68dba1357cef544293186d84845a0d7a142faf3",
+    "third_party/exaone/src/exaonetabular/classifier.py": "d1c648565d1b09c780ea71a694852558d54a4008080582b98f5aa0e533d87454",
+    "third_party/exaone/src/exaonetabular/config.py": "c3a7ecaf7e2d7309b90e3e628438801b8a2599e1e3ef1eb24d15c757c3bcf163",
+    "third_party/exaone/src/exaonetabular/ecoc.py": "29280f7a1f9544d080d8d4d6c10d9935986944df586ee29e516e196a9e95db49",
+    "third_party/exaone/src/exaonetabular/ensemble.py": "a785043ef8792242e264e33c2fb0c1350231e638283a3784207bbcc6774859a5",
+    "third_party/exaone/src/exaonetabular/feature_selection/__init__.py": "ad8b05d9dcf32f3568df28955a4e386b4d3b37f18b605c2a6f7b7e72c1b48809",
+    "third_party/exaone/src/exaonetabular/feature_selection/selection.py": "98709f4d5f925ad8f8a73c49de5768a194cc412639fa1e93625b8d9136af00c7",
+    "third_party/exaone/src/exaonetabular/model/__init__.py": "8b9d6643deeba5da079fcbaea2a7c9a32f650f3f5cddb5883c2597da0dd9dbe7",
+    "third_party/exaone/src/exaonetabular/model/attention.py": "06eed04809a4a306a4af0f9a25e3f67d1175eb560eb3c9a0d23830e08f2a9b85",
+    "third_party/exaone/src/exaonetabular/model/encoders.py": "853769e414399ac9b0cc0fcbb22d00c54da8e4e07acf08857f403831b092ab69",
+    "third_party/exaone/src/exaonetabular/model/heads.py": "af863f16f28c1d2ea93a7a9a4b837a2ea1fcfd066c382ceaffc210498f9c9223",
+    "third_party/exaone/src/exaonetabular/model/layer.py": "562d1ff4b6a239ee91ece8b9fb0ce822fbc9bcc2b07c56edc173a1d098a4943d",
+    "third_party/exaone/src/exaonetabular/model/memory.py": "fdcfd8a48c92e7828bc53130b3343af8e9c1c8e427e419656e6bb7ca43819514",
+    "third_party/exaone/src/exaonetabular/model/mlp.py": "9c8c7a7ab3fa8128b1b9ee499e0d4fd461424af170e6e88333c40c5a20e67c24",
+    "third_party/exaone/src/exaonetabular/model/transformer.py": "12586d8dff9352084a13fd0a4dbfd28d38555fdf09fbcdb8cd42aa38aa8180fe",
+    "third_party/exaone/src/exaonetabular/preprocessing.py": "8a3fcdf5673bc79cbaacf56af4c6a521358bb82d5de831b930d3c735f8dcc033",
+    "third_party/exaone/src/exaonetabular/presets.py": "b1cfcaa65c0aa8f17e1ff4abf2c1b5013e2d157f0dc1154ce021c30d3516946c",
+    "third_party/exaone/src/exaonetabular/regressor.py": "c7156eb3398fea5faac75aaa667ee0d462b78049469090398d76387da30700c4",
+    "third_party/exaone/src/exaonetabular/runtime.py": "477d3871abb04bced2fab04a050ec4fa3fc18af74450a48e401b5fd40946eee5",
+    "third_party/exaone/src/exaonetabular/weights.py": "94d5b0f68330cf877b86f7629e33f2b0884158484ad87c3755f41a16de5f885a"
+  },
+  "environment_sha256": "5e562c71ca4a164a214709a7a0ba0b62a1936af977cc904921a6de3750c3f7e4",
+  "checkpoint_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+  "checkpoint_bytes": 83286800,
+  "source_commit": "829e85bb2685a39d45a3ed0fd63579d10e94db0c",
+  "settings": {
+    "seed": 0,
+    "ensemble_count": 8,
+    "parameter_dtype": "float16",
+    "input_dtype": "float32",
+    "preprocessing_dtype": "float64",
+    "preprocessing_rng_device": "cpu",
+    "aggregation_device": "cpu",
+    "ensemble_step": 1,
+    "query_step": 1024,
+    "feedforward_token_chunk": 524288,
+    "feature_attention_row_chunk": 2147483647,
+    "cross_query_support_cache": false,
+    "sdpa_query_chunk": 256,
+    "sdpa_long_k_boundary": 256,
+    "sdpa_long_k_batch": 1,
+    "sdpa_short_k_batch": 512,
+    "mps_memory_fraction": 0.65,
+    "threads": 4,
+    "support_row_limit": 100000,
+    "feature_limit": 500,
+    "full_support": true,
+    "threshold": 0.5,
+    "columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ]
+  },
+  "design_sha256": "d33b5d46e55b515567eae1ee4158fd9490d5029d2f9ad7fbf0ddbd18081b934f",
+  "status": "complete",
+  "mode": "mps",
+  "budget_seconds": 2400,
+  "stages": [
+    {
+      "stage": "AB_native_and_local_CPU",
+      "status": "complete",
+      "support_rows": 128,
+      "query_rows": 33,
+      "views": 8,
+      "same_native_cpu_preprocessing": true,
+      "original_vs_adapter_max_difference": 0.0,
+      "partition_max_difference": 0.0,
+      "portable_reload": {
+        "max_difference": 0.0,
+        "query_rows": 33,
+        "full_support_rows": 128,
+        "same_threshold_decisions": true,
+        "restored_cpu_context": true,
+        "preprocessing_exact": true,
+        "forward_records": [
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          }
+        ]
+      },
+      "model": {
+        "manifest": {
+          "checkpoint_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+          "schema_version": 1,
+          "task": "classification",
+          "model": {
+            "width": 192,
+            "head_count": 6,
+            "block_count": 12,
+            "feedforward_widths": [
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768,
+              768
+            ],
+            "columns_per_group": 1,
+            "item_summary_count": 3,
+            "feature_summary_count": 32,
+            "feature_attention_repeats": 2,
+            "class_capacity": 10
+          },
+          "preprocessing": {
+            "use_quantile_map": false,
+            "rescale_for_column_count": false
+          },
+          "runtime": {
+            "support_row_limit": 100000,
+            "feature_limit": 500,
+            "query_batch_limit": 1024,
+            "ensemble_count": 8,
+            "compute_dtype": "float16",
+            "seed": 0,
+            "support_cache_offload": true
+          },
+          "classification": {
+            "n_svd": 0
+          }
+        },
+        "native_strict_state_keys_shapes_values": true,
+        "parameters": 20807434,
+        "buffers": 432,
+        "state_keys": 437,
+        "parameter_dtypes": [
+          "torch.float16"
+        ],
+        "module_types": {
+          "ClassificationModel": 1,
+          "FeatureEncoder": 1,
+          "LabelEncoder": 1,
+          "CrossAxisSummaryTransformer": 1,
+          "ModuleList": 25,
+          "CrossAxisSummaryLayer": 12,
+          "TensorAttention": 72,
+          "FeedForward": 34,
+          "ModuleDict": 1,
+          "Sequential": 1,
+          "Linear": 2,
+          "GELU": 1
+        },
+        "state_shapes": {
+          "feature_encoder.weight": [
+            192,
+            2
+          ],
+          "label_encoder.weight": [
+            192,
+            2
+          ],
+          "label_encoder.bias": [
+            192
+          ],
+          "transformer.feature_summary_tokens": [
+            1,
+            32,
+            1,
+            192
+          ],
+          "transformer.item_summary_tokens": [
+            1,
+            1,
+            3,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.0.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.0.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.0.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.0.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.0.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.0.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.0.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.0.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.0.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.0.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.0.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.0.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.1.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.1.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.1.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.1.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.1.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.1.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.1.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.1.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.1.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.1.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.1.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.1.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.1.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.2.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.2.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.2.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.2.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.2.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.2.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.2.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.2.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.2.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.2.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.2.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.2.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.2.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.3.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.3.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.3.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.3.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.3.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.3.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.3.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.3.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.3.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.3.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.3.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.3.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.3.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.4.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.4.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.4.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.4.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.4.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.4.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.4.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.4.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.4.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.4.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.4.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.4.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.4.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.5.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.5.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.5.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.5.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.5.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.5.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.5.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.5.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.5.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.5.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.5.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.5.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.5.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.6.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.6.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.6.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.6.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.6.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.6.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.6.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.6.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.6.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.6.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.6.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.6.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.6.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.7.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.7.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.7.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.7.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.7.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.7.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.7.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.7.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.7.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.7.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.7.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.7.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.7.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.8.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.8.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.8.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.8.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.8.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.8.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.8.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.8.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.8.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.8.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.8.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.8.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.8.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.9.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.9.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.9.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.9.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.9.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.9.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.9.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.9.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.9.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.9.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.9.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.9.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.9.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.10.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.10.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.10.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.10.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.10.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.10.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.10.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.10.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.10.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.10.feature_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.10.feature_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.10.item_summary_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.10.item_summary_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.layers.11.feature_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.11.feature_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.11.feature_context_attentions.0.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.0.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.0.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.0.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.0.head_scale": [
+            6
+          ],
+          "transformer.layers.11.feature_context_attentions.1.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.1.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.1.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.1.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.feature_context_attentions.1.head_scale": [
+            6
+          ],
+          "transformer.layers.11.item_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.11.item_context_attention.query_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_context_attention.key_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_context_attention.value_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_context_attention.output_weight": [
+            192,
+            192
+          ],
+          "transformer.layers.11.item_context_attention.head_scale": [
+            6
+          ],
+          "transformer.layers.11.state_feedforward.expansion_weight": [
+            768,
+            192
+          ],
+          "transformer.layers.11.state_feedforward.projection_weight": [
+            192,
+            768
+          ],
+          "transformer.classification_heads.standard.0.weight": [
+            768,
+            192
+          ],
+          "transformer.classification_heads.standard.0.bias": [
+            768
+          ],
+          "transformer.classification_heads.standard.2.weight": [
+            10,
+            768
+          ],
+          "transformer.classification_heads.standard.2.bias": [
+            10
+          ]
+        }
+      },
+      "preprocessing": {
+        "support_rows": 128,
+        "views": 8,
+        "member_features": 13,
+        "support_members_sha256": "227a5167c169455a9a5fa65dbccace9a591da238025dac7bda024f92443d8f7c",
+        "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+        "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+        "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+        "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+      },
+      "input_support_sha256": "b5c7ea7b1d8978465487c76f10b832de056ef20e8d25bbd867c71d3f35a8dca1",
+      "input_query_sha256": "69a47831524733e3a02a14620e81c94c323d6025949bb0ba4492b7962681f13e",
+      "label_sha256": "0978d93de1b9c6751c9f8815ca9cffcee40d084203417c35493c46e3f29954d0",
+      "query_ids_sha256": "498359814299982f468a3f6cb9f550ab030c1e955fe21f0082dbd6812ec2e2da",
+      "native_probability_sha256": "d26b6354e0d88c01e4b3c1cfb34528fd4475358e5730d048c835fb03e673e31b",
+      "adapter_probability_sha256": "d26b6354e0d88c01e4b3c1cfb34528fd4475358e5730d048c835fb03e673e31b",
+      "seconds": 25.32573287503328,
+      "resources": {
+        "process_max_rss_bytes": 714375168,
+        "device_measurement": "snapshots_not_true_peak"
+      }
+    },
+    {
+      "status": "complete",
+      "support_rows": 128,
+      "query_rows": 33,
+      "views": 8,
+      "full_support": true,
+      "preprocessing": {
+        "support_rows": 128,
+        "views": 8,
+        "member_features": 13,
+        "support_members_sha256": "227a5167c169455a9a5fa65dbccace9a591da238025dac7bda024f92443d8f7c",
+        "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+        "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+        "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+        "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+      },
+      "initial_forward_records": [
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 128,
+          "query_rows": 33,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "c14e97005266df585888cc6694042f5c2e1b2abc87c2039b760d71388db3047a",
+      "input_support_sha256": "b5c7ea7b1d8978465487c76f10b832de056ef20e8d25bbd867c71d3f35a8dca1",
+      "input_query_sha256": "69a47831524733e3a02a14620e81c94c323d6025949bb0ba4492b7962681f13e",
+      "label_sha256": "0978d93de1b9c6751c9f8815ca9cffcee40d084203417c35493c46e3f29954d0",
+      "resources_before": {
+        "process_max_rss_bytes": 714375168,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 475136,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_forward": {
+        "process_max_rss_bytes": 743063552,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 78277376,
+        "mps_driver_bytes": 138133504,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "cpu_vs_mps_max_difference": 0.00048808724026683237,
+      "repeat_max_difference": 0.0,
+      "partition_max_difference": 0.0,
+      "portable_reload": {
+        "max_difference": 0.0,
+        "query_rows": 33,
+        "full_support_rows": 128,
+        "same_threshold_decisions": true,
+        "restored_cpu_context": true,
+        "preprocessing_exact": true,
+        "forward_records": [
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 128,
+            "query_rows": 33,
+            "views": 1,
+            "input_dtype": "float32"
+          }
+        ]
+      },
+      "seconds": 6.181144042056985,
+      "resources_after": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 3883008,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "stage": "C_tiny"
+    },
+    {
+      "status": "complete",
+      "support_rows": 4636,
+      "query_rows": 2318,
+      "views": 8,
+      "full_support": true,
+      "preprocessing": {
+        "support_rows": 4636,
+        "views": 8,
+        "member_features": 13,
+        "support_members_sha256": "da5c799e0a687ff83f9d9b8bdb890f1249e923d18610fbee8d479ce5bac3b999",
+        "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+        "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+        "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+        "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+      },
+      "initial_forward_records": [
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 4636,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "75cf8e34b1ec472a7138a4dbcf90a38c12aed58c822715eb28ad9bc0412452d3",
+      "input_support_sha256": "7971edb92c4bf7bd16a2ea7181b402a5793376d56d215c1079245d1d4da39333",
+      "input_query_sha256": "542e4e7299e8a5493e81e23ae97a5e6e399dac34b3adc351ef5f711a9bff0f29",
+      "label_sha256": "a587663c6ab869923a16e78d1b3803c5eb145a8c5021f93373d935c4c1731271",
+      "resources_before": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 3883008,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_forward": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 67072512,
+        "mps_driver_bytes": 1178419200,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "seconds": 74.68830691697076,
+      "resources_after": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 67072512,
+        "mps_driver_bytes": 1178419200,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "stage": "D_screen"
+    },
+    {
+      "status": "complete",
+      "support_rows": 8693,
+      "query_rows": 2318,
+      "views": 8,
+      "full_support": true,
+      "preprocessing": {
+        "support_rows": 8693,
+        "views": 8,
+        "member_features": 13,
+        "support_members_sha256": "b623d05e3792f7663f1655c5a8bf98fe990259f52a914c307ba0a561073b71fe",
+        "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+        "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+        "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+        "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+      },
+      "initial_forward_records": [
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 270,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "1a081b2f5805c89e2f6e29bf825ad76ff677c52bf679f86640252b633534e182",
+      "input_support_sha256": "7034d591b0928944753461ee63a2b3584a3deb70ad5618d2c542b5c908d95dc6",
+      "input_query_sha256": "542e4e7299e8a5493e81e23ae97a5e6e399dac34b3adc351ef5f711a9bff0f29",
+      "label_sha256": "906552a604ccb1b315da58c82b52d90685d7276bf322e3b0a1957cfad810adf3",
+      "resources_before": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 20660224,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_forward": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 73372416,
+        "mps_driver_bytes": 2260582400,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "seconds": 185.2404425839195,
+      "resources_after": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 73372416,
+        "mps_driver_bytes": 2260582400,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "stage": "E_full_support"
+    },
+    {
+      "status": "complete",
+      "support_rows": 8693,
+      "query_rows": 4277,
+      "views": 8,
+      "full_support": true,
+      "preprocessing": {
+        "support_rows": 8693,
+        "views": 8,
+        "member_features": 13,
+        "support_members_sha256": "b623d05e3792f7663f1655c5a8bf98fe990259f52a914c307ba0a561073b71fe",
+        "signs_sha256": "98ca03f7a37bc7af7d6fdeeaa80db33042952d85cc755fae49e0de5807fb4e5a",
+        "orders_sha256": "af615ec4604f2b88f53c812efdbd3f25bad453d9a0722c593428a928b699e638",
+        "rng_sha256": "6edbeeb3380ff12eb9be9a44978020e4f5aeb52d76c111401f2a8df13281bb4b",
+        "target_rng_sha256": "7dc37990fbf4482e68304126bb42be090da100980ce0a54dd479a3da6d505dd9"
+      },
+      "initial_forward_records": [
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 1024,
+          "views": 1,
+          "input_dtype": "float32"
+        },
+        {
+          "support_rows": 8693,
+          "query_rows": 181,
+          "views": 1,
+          "input_dtype": "float32"
+        }
+      ],
+      "probabilities_sha256": "7ba93e4d0f615cbf780c8778fa2971da8a820e2b5a7b6c60546223aee6d267a1",
+      "input_support_sha256": "7034d591b0928944753461ee63a2b3584a3deb70ad5618d2c542b5c908d95dc6",
+      "input_query_sha256": "0b3478999c3df174ec17600e151204b05a64de7a78d3f182aebb1a7d0ef35de0",
+      "label_sha256": "906552a604ccb1b315da58c82b52d90685d7276bf322e3b0a1957cfad810adf3",
+      "resources_before": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 20660224,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_forward": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 73372416,
+        "mps_driver_bytes": 2268954624,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "portable_reload": {
+        "max_difference": 0.0,
+        "query_rows": 4277,
+        "full_support_rows": 8693,
+        "same_threshold_decisions": true,
+        "restored_cpu_context": true,
+        "preprocessing_exact": true,
+        "forward_records": [
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 1024,
+            "views": 1,
+            "input_dtype": "float32"
+          },
+          {
+            "support_rows": 8693,
+            "query_rows": 181,
+            "views": 1,
+            "input_dtype": "float32"
+          }
+        ]
+      },
+      "seconds": 694.4552561669843,
+      "resources_after": {
+        "process_max_rss_bytes": 743079936,
+        "device_measurement": "snapshots_not_true_peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 20660224,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "stage": "F_full_export"
+    }
+  ],
+  "accuracy_computed": false,
+  "all_data_synthetic": true,
+  "resource_qualification": true,
+  "backend": "native_default_device_SDPA_in_locked_PyTorch",
+  "seconds": 986.6100330000045
+}
