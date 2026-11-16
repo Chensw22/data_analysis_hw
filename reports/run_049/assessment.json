@@ -1,0 +1,78 @@
+{
+  "status": "complete",
+  "components": [
+    {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038",
+      "weight": 0.3333333333333333,
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "fold_accuracy": [
+        0.817946505608283,
+        0.819672131147541,
+        0.8119068162208801
+      ]
+    },
+    {
+      "version": "v82_TabDPT13_full8",
+      "run": "run_047",
+      "weight": 0.3333333333333333,
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.3794749686418978,
+      "fold_accuracy": [
+        0.822260569456428,
+        0.8097497842968076,
+        0.8037100949094047
+      ]
+    },
+    {
+      "version": "v83_Kumo_medium8",
+      "run": "run_048",
+      "weight": 0.3333333333333333,
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.3696693949807155,
+      "fold_accuracy": [
+        0.8226919758412424,
+        0.816220880069025,
+        0.816220880069025
+      ]
+    }
+  ],
+  "fold_accuracy": [
+    0.8248490077653149,
+    0.813632441760138,
+    0.8088869715271786
+  ],
+  "fold_log_loss": [
+    0.37269013194449313,
+    0.3671334608184429,
+    0.3807772996118154
+  ],
+  "pairwise_disagreement": [
+    {
+      "left": "v71_Mitra2_zeroshot",
+      "right": "v82_TabDPT13_full8",
+      "disagreement_rows": 320,
+      "mean_absolute_probability_difference": 0.03329408776687788
+    },
+    {
+      "left": "v71_Mitra2_zeroshot",
+      "right": "v83_Kumo_medium8",
+      "disagreement_rows": 311,
+      "mean_absolute_probability_difference": 0.03217486633497412
+    },
+    {
+      "left": "v82_TabDPT13_full8",
+      "right": "v83_Kumo_medium8",
+      "disagreement_rows": 389,
+      "mean_absolute_probability_difference": 0.035153608461449534
+    }
+  ],
+  "common_local_best_before_combination": {
+    "run": "run_019",
+    "version": "v44_seed_ensemble",
+    "accuracy": 0.8198159332758125
+  },
+  "automatic_eligibility": false,
+  "conclusion": "One fixed practical-band comparison only; not S-level or an upload decision."
+}
