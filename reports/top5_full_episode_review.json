@@ -1,0 +1,54 @@
+{
+  "status": "prospective_fixed_recipe_before_real_fits",
+  "candidate": "v81_Mitra_full_episode50",
+  "settings": {
+    "max_steps": 50,
+    "episode_support": 1024,
+    "episode_query": 256,
+    "validation_fraction": 0.2,
+    "query_chunk": 2318,
+    "trainable_parameters": 75670026,
+    "selection": "minimum full-context inner binary logloss; earliest exact tie including step0",
+    "sampler": "fresh uniform permutation of current training pool via numpy.default_rng",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.3,
+    "warmup": "literal official schedule",
+    "fresh_full_refit": true,
+    "device": "mps",
+    "mps_memory_fraction": 0.65,
+    "threads": 4,
+    "threshold": 0.5,
+    "trainable": "all original parameters",
+    "budgets": {
+      "screen": 21600,
+      "validate": 64800,
+      "export": 10800
+    },
+    "training_loss": "native ten-class cross entropy",
+    "validation_prefix_cache": false
+  },
+  "original_run": "run_038",
+  "new_run": "run_046",
+  "weekly_reserve_percent": 30,
+  "automatic_export": false,
+  "data": "Original6954development rows only, original3foldStratifiedKFold/seed20261112. Opened1739holdout is excluded from model selection.",
+  "controls": [
+    "v6_no_id_features",
+    "v71_Mitra2_zeroshot"
+  ],
+  "threshold": 0.5,
+  "rationale": "All75.67M pretrained parameters can adapt jointly; previous v75/v76 trained lastblock/head only. Synthetic resource feasibility is established, real effectiveness is unknown.",
+  "training": "50steps maximum, fresh uniform1024support/256query episodes. Inner80/20 chooses minimum full-context binary logloss among steps0..50, earliest tie; reset checkpoint, preprocessing, optimizer and RNG then refit selected count using fulloutertraining pool.",
+  "prediction": "Original fullsupport MitraPredictor with querychunk2318; no sampling/cap of inference support, no stale prefix cache.",
+  "resource_evidence": "reports/mitra_full_episode_resources/{freeze.json,result.json,requirements.lock}:2persistentAdamWsteps, all12blocks changed, fullvalidation3708/928 while moments remain, final8693/2318 inference and reload.",
+  "limitations": [
+    "Small training episodes differ from official full-size sampler and may cause context-distribution shift.",
+    "Synthetic resource evidence is not an accuracy experiment.",
+    "Development labels and folds are reused; screen is adaptive and cannot establish stable superiority.",
+    "A completed50step recipe remains bounded; selectedstep50 is not permission for automatic100/200steps.",
+    "Each .01 accuracy difference means1percentage point; smaller differences remain samepracticalband."
+  ],
+  "stopping": "Abort on timeout21600s, OOM, nonfinite, changedsource/environment/checkpoint, invalidIDs, or missingprovenance; preserve failure as inconclusive. No fallback or partialwinner.",
+  "online": "No upload/export entry point in this wrapper. Parent may separately review complete evidence under user2026-11-16 exploration authorization; old A/S failure records stay unchanged."
+}
