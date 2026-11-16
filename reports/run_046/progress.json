@@ -1,23 +1,43 @@
 {
-  "status": "incomplete_two_folds_only",
+  "status": "complete",
   "candidate": "v81_Mitra_full_episode50",
   "development_rows": 6954,
   "total_folds": 3,
   "completed_folds": [
     {
       "fold": 1,
-      "accuracy_displayed": 0.8145,
-      "matched_mitra_accuracy_displayed": 0.81795,
-      "display_precision_decimal_places": 5,
+      "accuracy": 0.814495254529767,
+      "matched_mitra_accuracy": 0.817946505608283,
+      "gain_pp": -0.345125107851596,
       "selected_steps": 47
     },
     {
       "fold": 2,
-      "accuracy_displayed": 0.82442,
-      "matched_mitra_accuracy_displayed": 0.81967,
-      "display_precision_decimal_places": 5,
+      "accuracy": 0.8244176013805005,
+      "matched_mitra_accuracy": 0.819672131147541,
+      "gain_pp": 0.4745470232959459,
       "selected_steps": 47
+    },
+    {
+      "fold": 3,
+      "accuracy": 0.8149266609145815,
+      "matched_mitra_accuracy": 0.8119068162208801,
+      "gain_pp": 0.30198446937014234,
+      "selected_steps": 43
     }
   ],
-  "note": "Full pooled OOF metric will be reported only after all three folds; no eligibility decision."
+  "controls_vs_run038": {
+    "v71_Mitra2_zeroshot": {
+      "probabilities_exact_match": true,
+      "max_abs_difference": 0.0
+    },
+    "v6_no_id_features": {
+      "probabilities_exact_match": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "pooled_accuracy": 0.817946505608283,
+  "log_loss": 0.3750928747453614,
+  "interpretation": "A practical tier; mixed fold gains, no stable-superiority claim; reused development data.",
+  "automatic_eligibility": false
 }

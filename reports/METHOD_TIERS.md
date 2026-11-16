@@ -13,7 +13,7 @@
 
 HistGradientBoosting距离A边界只有约0.007个百分点，TabM也仅约0.093个百分点；不能据这个机械边界断言它们与A档末端存在可靠差距。每个档位描述已测配置，不能据一次配置排除整个模型族。
 
-76个已完成且去重的配置（含对照和融合）：A档57个、B档13个、C档6个。逐版本分数、原始run及边界标记见[完整CSV](method_tiers.csv)，运行`classify_methods.py`可重建；实验方法与规则见[JSON](method_tiers.json)。
+77个已完成且去重的配置（含对照和融合）：A档58个、B档13个、C档6个。逐版本分数、原始run及边界标记见[完整CSV](method_tiers.csv)，运行`classify_methods.py`可重建；实验方法与规则见[JSON](method_tiers.json)。
 
 ## 稳定性与线上证据
 
@@ -32,3 +32,5 @@ HistGradientBoosting距离A边界只有约0.007个百分点，TabM也仅约0.093
 树模型与Mitra固定各半集成81.97%属于A档，但分组验证未通过，不提交线上，见[top5_crossfamily_phase](top5_crossfamily_phase/RESULTS.md)。
 
 截至2026-11-13 10:23官方复核，Mitra最佳81.155%，账号144/2038（约前7.07%）。本次后续批次均未取得测试资格，没有新增线上提交。100步适配的完整三组结果见[top5_adaptation_phase](top5_adaptation_phase/RESULTS.md)。
+
+2026-11-16更新：全参数50步适配v81完成三折81.79465%，A档；相对Mitra逐折为-0.3451/+0.4745/+0.3020个百分点，无稳定领先结论。两项历史对照逐行概率精确复现，见[run046](run_046/progress.json)。v80已在11月13日一次探索授权下上传，线上80.804%；v74已在11月16日新批探索授权下上传，线上80.921%。这些授权不改写旧A/S资格失败。当前最佳仍为Mitra81.155%，新批已用1/10。

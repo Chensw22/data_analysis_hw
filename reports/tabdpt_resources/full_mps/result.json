@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "synthetic_only": true,
+  "accuracy_computed": false,
+  "device": "mps",
+  "freeze_sha256": "c01edd1273b965f685cfcd5ff6b3433327bc359d6a94b066bb871a05598c870f",
+  "cases": [
+    {
+      "support_rows": 128,
+      "query_rows": 17,
+      "ensembles": 8,
+      "actual_forward_support_rows": [
+        128
+      ],
+      "forward_calls": 8,
+      "probability_rows": 17,
+      "full_reload_rows": 17,
+      "reload_max_abs_difference": 0.0,
+      "batching_max_abs_difference": 5.960464477539063e-08,
+      "reload_threshold_identical": true,
+      "seconds": 7.104897916084155,
+      "resources_after_prediction": {
+        "max_rss_bytes": 850034688,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 252186880,
+        "mps_driver_bytes": 296435712,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_release": {
+        "max_rss_bytes": 1028734976,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 2834432,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "support_rows": 4636,
+      "query_rows": 2318,
+      "ensembles": 1,
+      "actual_forward_support_rows": [
+        4636
+      ],
+      "forward_calls": 1,
+      "probability_rows": 2318,
+      "full_reload_rows": 2318,
+      "reload_max_abs_difference": 0.0,
+      "batching_max_abs_difference": 0.0,
+      "reload_threshold_identical": true,
+      "seconds": 12.229872583062388,
+      "resources_after_prediction": {
+        "max_rss_bytes": 1533001728,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 252186880,
+        "mps_driver_bytes": 1395343360,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_release": {
+        "max_rss_bytes": 1533001728,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 2834432,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    },
+    {
+      "support_rows": 8693,
+      "query_rows": 4277,
+      "ensembles": 1,
+      "actual_forward_support_rows": [
+        8693
+      ],
+      "forward_calls": 1,
+      "probability_rows": 4277,
+      "full_reload_rows": 4277,
+      "reload_max_abs_difference": 0.0,
+      "batching_max_abs_difference": 0.0,
+      "reload_threshold_identical": true,
+      "seconds": 30.3006538329646,
+      "resources_after_prediction": {
+        "max_rss_bytes": 1533001728,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 252186880,
+        "mps_driver_bytes": 1395343360,
+        "mps_recommended_max_bytes": 12713115648
+      },
+      "resources_after_release": {
+        "max_rss_bytes": 1533001728,
+        "platform": "darwin",
+        "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+        "mps_current_bytes": 0,
+        "mps_driver_bytes": 2834432,
+        "mps_recommended_max_bytes": 12713115648
+      }
+    }
+  ],
+  "before": {
+    "max_rss_bytes": 339312640,
+    "platform": "darwin",
+    "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 475136,
+    "mps_recommended_max_bytes": 12713115648
+  },
+  "seconds": 49.88817333395127,
+  "after": {
+    "max_rss_bytes": 1533001728,
+    "platform": "darwin",
+    "memory_measurement": "RSS high-water; MPS point snapshots, not peak",
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 2834432,
+    "mps_recommended_max_bytes": 12713115648
+  }
+}
