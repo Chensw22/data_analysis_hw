@@ -1,0 +1,38 @@
+{
+  "status": "prospective_comparison_plan_before_kumo_real_screen",
+  "candidate": "v84_Mitra_TabDPT_Kumo_equal3",
+  "reserved_run": "run_049",
+  "components": [
+    {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038",
+      "weight": 0.3333333333333333
+    },
+    {
+      "version": "v82_TabDPT13_full8",
+      "run": "run_047",
+      "weight": 0.3333333333333333
+    },
+    {
+      "version": "v83_Kumo_medium8",
+      "run": "run_048",
+      "weight": 0.3333333333333333
+    }
+  ],
+  "combination": "Arithmetic mean of class1 probabilities, fixed threshold0.5.",
+  "motivation": "One diversity/variance-reduction comparison across three different pretrained architectures, after standalone screens. No coefficient, threshold, subset or vote-rule search.",
+  "prerequisites": [
+    "All three complete exact original6954development3fold predictions, identical original row order/seeds and labels; component protocols/source hashes verified.",
+    "Each completed component within1pp of the current common local best before evaluating this planned combination.",
+    "Kumo full1/full8resource gates and formal screen must pass; no partial/proxy score accepted."
+  ],
+  "selection_claim": "A practical-band comparison only; no independent holdout, no stable-superiority claim.",
+  "online": "No upload authorization bound to this plan. After complete evidence, root may make a separate committed one-attempt exploratory decision under current10attempt batch; full-data/reload/CSV provenance required.",
+  "runtime_note": "No change to running v81 exporter or its sources. Kumo and future ensemble preparation must wait for appropriate runtime gates.",
+  "known_inputs": {
+    "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
+    "reports/run_047/screen_results.csv": "de8bdeba721fedc0bf6c02f5484724d534db58b1c02909bbee212844c0264e35",
+    "kumo_candidate.py": "c71f111f2b3601d4d558932336f2d7d3c3fe18565240c4eda5b3f780deb52946"
+  },
+  "unknown_at_freeze": "Kumo real-data OOF/online result and v81 new online result are not yet available."
+}
