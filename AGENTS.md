@@ -64,3 +64,5 @@
 - EXAONE_v92_rawMitra_half固定各半OOF双阶段完成：random81.42077%（相对raw少16correct、三fold全下降），group81.86655%（多12correct、3fold不降），LL均改善但双阶段gate=false。按预设归档，不导出/上传/搜权重/自动solo兜底。root复算缓存一致，未测试solo导出草稿删除，本批仍8/10，剩2。
 
 - 下一项仅资源实验：固定Mitra3072支持/256查询，query和原1024支持前缀与v81逐step一致，只追加2048支持；保持既有双checkpoint/FP32+bf16/optimizer/backend。design见mitra_long_context_resource_design，四次persistent AdamW更新中插入3708/928及6954/1739验证；父进程监督1200s，13CPU/mock及独立审查通过。只有资源和预设成本gate通过后才能另commit是否运行正式三折；当前未授权CV/fullfit，失败不降支持大小或改backend救援。
+
+- 资源实验随后完整通过（reports/mitra_long_context_resources，commit166e560），root已在任何新准确率前冻结正式v93/run056三折方案（reports/mitra_support3072_screen_review.json，e898b97），代码bd3a8af及17项CPU/mock检查通过。固定总时限18000s；仅与同划分缓存v81比较，完整三折acc不低、LL不高、至少2折acc不降且至少一个总指标严格改善才允许另审导出。失败归档，不追加支持大小/步数/seed/融合。当前第一折81.92407% vs v81 81.44953%，净+11correct，选29并重训29（4461152）；其余折仍在运行，不是完整候选结论。条件导出代码4eb9d10及13项检查已通过，但必须完整gate通过、root单独commit决定后才能读取全量标签；固定7200s及完整4277重载检查，尚未执行。线上本批仍8/10，最佳v81=.81412，最近快照114/2158（2026-11-16T20:52:08Z），前5%目标尚未达。
