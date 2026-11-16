@@ -1,0 +1,51 @@
+{
+  "status": "prospective_fixed_weight_comparison_after_seen_component_results",
+  "candidate": "v86_Mitra_prior_adapt_equal2",
+  "reserved_run": "run_050",
+  "threshold": 0.5,
+  "components": [
+    {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038",
+      "weight": 0.5
+    },
+    {
+      "version": "v81_Mitra_full_episode50",
+      "run": "run_046",
+      "weight": 0.5
+    }
+  ],
+  "combination": "Exactly0.5*rawMitra+0.5*full50adaptation class1 probabilities; threshold0.5.",
+  "rationale": "Retain the pretrained prior to reduce finite-adaptation variability; one fixed interpolation, not weight/subset/threshold search.",
+  "selection_disclosure": "Both component OOF results and public leaderboard results were already observed before proposing this blend. This is an adaptive post-selection comparison; only its equal weight is fixed before computing its score. It is not blind selection, independent validation, or stable-superiority evidence.",
+  "known_component_online_scores": {
+    "v71_Mitra2_zeroshot": 0.81155,
+    "v81_Mitra_full_episode50": 0.81412
+  },
+  "prerequisites": [
+    "Complete aligned original6954development3fold OOF with seed20261112; component protocol/source/environment/log/cache checks.",
+    "Each component remains within1pp of the current common local CV best.",
+    "Plan and all evaluation sources committed before scoring; no original holdout labels parsed."
+  ],
+  "continue_export_heuristic": {
+    "accuracy": "mean_accuracy>=min(component_accuracy)",
+    "log_loss": "mean_log_loss<=max(component_log_loss)",
+    "practical_band": "common_local_best_accuracy-mean_accuracy<=0.01",
+    "folds": "all3complete",
+    "interpretation": "Exploratory continuation only, not a stable-superiority or S-tier gate; otherwise archive, no upload."
+  },
+  "online": "No upload authorization is bound to this plan. A separate committed exploratory decision and full-model reload/CSV provenance are required.",
+  "no_search": true,
+  "known_inputs": {
+    "three_family_mean_screen.py": "c828c152fa9eb240ff782c96891369320a08ac0fb4e09e119cce555ffe2345a9",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "artifacts/run_038/v71_Mitra2_zeroshot_seed20261112.npz": "a707ec5e83ff435aa8adc79bb3d7a76e10f5d59b250e883518c9ce20dfc63a7e",
+    "reports/run_038/protocol.json": "894695fb8803a480d89f4acf99229b93a395d286b66273d80c90fe91665bbb92",
+    "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
+    "reports/run_038/requirements-mitra.lock.txt": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "artifacts/run_046/v81_Mitra_full_episode50_seed20261112.npz": "90f377e3427f8357461666fd6d0f5fa392dd81354864edce7d67a9c91484e652",
+    "reports/run_046/protocol.json": "5d5121a77830552909184b777133badf8b130db7c6ef7fdfa0ab7321a9eb71b0",
+    "reports/run_046/screen_results.csv": "6d19d1a57c4bc2b1f8f4d3ecfa5ce472c123e2dbf0cc123d53318717eccaacb4",
+    "reports/run_046/full_episode_environment.lock.txt": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c"
+  }
+}
