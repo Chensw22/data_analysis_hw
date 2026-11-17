@@ -1,0 +1,127 @@
+{
+  "fold": 2,
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "seed": 20261114,
+  "training_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+  "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+  "inner_base_support_rows": "3090/3091; outer cached raw uses4636",
+  "requested_rounds": 60,
+  "actual_iterations": 60,
+  "vocabulary": {
+    "HomePlanet": [
+      "Earth",
+      "Europa",
+      "Mars",
+      "__MISSING__"
+    ],
+    "CryoSleep": [
+      "False",
+      "True",
+      "__MISSING__"
+    ],
+    "Destination": [
+      "55 Cancri e",
+      "PSO J318.5-22",
+      "TRAPPIST-1e",
+      "__MISSING__"
+    ],
+    "VIP": [
+      "False",
+      "True",
+      "__MISSING__"
+    ],
+    "Deck": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "T",
+      "__MISSING__"
+    ],
+    "Side": [
+      "P",
+      "S",
+      "__MISSING__"
+    ]
+  },
+  "unknown_query_categories": {
+    "HomePlanet": 0,
+    "CryoSleep": 0,
+    "Destination": 0,
+    "VIP": 0,
+    "Deck": 0,
+    "Side": 0
+  },
+  "metrics": {
+    "raw": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "constant": {
+      "accuracy": 0.8157894736842105,
+      "log_loss": 0.3875997065264295
+    },
+    "nonlinear": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.38545950841709997
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 30,
+      "broken": 15,
+      "net_correct": 15,
+      "both_correct": 1867,
+      "both_wrong": 406
+    },
+    "constant": {
+      "rows": 2318,
+      "repaired": 21,
+      "broken": 15,
+      "net_correct": 6,
+      "both_correct": 1876,
+      "both_wrong": 406
+    }
+  },
+  "booster_sha256": "5758ccdb6d385a44691a56867bad2a391d8c38b307541e7db28c5a6a81cccdb7",
+  "schema_sha256": "6aa34b4bda56c01ace9b917f9b452a1756a514b3521cd1eeba5bf3c6011fe8de",
+  "reload_max_absolute_difference": 0.0,
+  "feature_gain": {
+    "HomePlanet": 0.0,
+    "CryoSleep": 0.0,
+    "Destination": 32.97860038280487,
+    "Age": 129.0030597448349,
+    "VIP": 0.0,
+    "RoomService": 61.1368203163147,
+    "FoodCourt": 75.49922931194305,
+    "ShoppingMall": 138.66135907173157,
+    "Spa": 20.401679754257202,
+    "VRDeck": 0.5208969712257385,
+    "Deck": 150.90991961956024,
+    "CabinNumber": 122.88923525810242,
+    "Side": 3.0639639496803284,
+    "MissingCount": 12.023439884185791,
+    "TotalSpend": 186.79909944534302,
+    "AllSpendingZero": 0.0,
+    "SpendMissingCount": 0.0,
+    "PaidServices": 0.0,
+    "LuxurySpend": 115.89350974559784,
+    "RoomService_log1p": 0.0,
+    "RoomService_missing": 0.0,
+    "FoodCourt_log1p": 0.0,
+    "FoodCourt_missing": 0.0,
+    "ShoppingMall_log1p": 0.0,
+    "ShoppingMall_missing": 0.0,
+    "Spa_log1p": 0.0,
+    "Spa_missing": 0.0,
+    "VRDeck_log1p": 0.0,
+    "VRDeck_missing": 0.0,
+    "Age_missing": 0.0
+  },
+  "seconds": 0.04372029204387218
+}

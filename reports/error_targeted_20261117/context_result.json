@@ -1,0 +1,142 @@
+{
+  "status": "complete_single_fold_adaptive_diagnostic",
+  "name": "Mitra_Earth_Cryo_conditional_context_zeroshot",
+  "source_commit": "ac5ad1b9bd259f4dd4f06d755b6ac0c78a3d55a0",
+  "accuracy": 0.82053494391717,
+  "log_loss": 0.3766220830521078,
+  "raw_accuracy": 0.817946505608283,
+  "raw_log_loss": 0.38102819387768605,
+  "paired": {
+    "all": {
+      "rows": 2318,
+      "repairs": 47,
+      "breaks": 41,
+      "net_correct": 6
+    },
+    "five_common_wrong": {
+      "rows": 292,
+      "repairs": 3,
+      "breaks": 1,
+      "net_correct": 2
+    },
+    "five_common_correct": {
+      "rows": 1736,
+      "repairs": 1,
+      "breaks": 7,
+      "net_correct": -6
+    },
+    "Earth_Cryo_True": {
+      "rows": 387,
+      "repairs": 22,
+      "breaks": 15,
+      "net_correct": 7
+    },
+    "Earth_Cryo_False": {
+      "rows": 808,
+      "repairs": 25,
+      "breaks": 26,
+      "net_correct": -1
+    }
+  },
+  "slices": {
+    "all": {
+      "rows": 2318,
+      "actual_positive": 1167,
+      "correct": 1902,
+      "false_positive": 239,
+      "false_negative": 177
+    },
+    "five_common_wrong": {
+      "rows": 292,
+      "actual_positive": 133,
+      "correct": 4,
+      "false_positive": 157,
+      "false_negative": 131
+    },
+    "five_common_correct": {
+      "rows": 1736,
+      "actual_positive": 887,
+      "correct": 1726,
+      "false_positive": 5,
+      "false_negative": 5
+    },
+    "Earth_Cryo_True": {
+      "rows": 387,
+      "actual_positive": 253,
+      "correct": 255,
+      "false_positive": 130,
+      "false_negative": 2
+    },
+    "Earth_Cryo_False": {
+      "rows": 808,
+      "actual_positive": 252,
+      "correct": 620,
+      "false_positive": 79,
+      "false_negative": 109
+    }
+  },
+  "routes": {
+    "True": {
+      "training_rows": 719,
+      "query_rows": 387,
+      "train_ids_sha256": "4817dad82afff64f07a8a896b440368f8c72e2c7428148676472722df0d62fbd",
+      "query_ids_sha256": "b169ef4086661dd33536a276c144ddebf8287e6d73a285fab92b72b475cc6c65",
+      "support_class_counts": [
+        250,
+        469
+      ],
+      "actual_features": 6,
+      "original_columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "selected_steps": 0,
+      "seconds": 1.57188641699031
+    },
+    "False": {
+      "training_rows": 1656,
+      "query_rows": 808,
+      "train_ids_sha256": "f22c788dacac20fcffa82d46b7268713ca90201f1e2a106fb89a8087620e9a02",
+      "query_ids_sha256": "b2e97a81fa45977c9bc2de152b7be3ea0a4ff9136a69c406e385b341a49e9deb",
+      "support_class_counts": [
+        1113,
+        543
+      ],
+      "actual_features": 11,
+      "original_columns": [
+        "HomePlanet",
+        "CryoSleep",
+        "Destination",
+        "Age",
+        "VIP",
+        "RoomService",
+        "FoodCourt",
+        "ShoppingMall",
+        "Spa",
+        "VRDeck",
+        "Deck",
+        "CabinNumber",
+        "Side"
+      ],
+      "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+      "selected_steps": 0,
+      "seconds": 3.3120849579572678
+    }
+  },
+  "unrouted_exact": true,
+  "seconds": 6.114376166951843,
+  "interpretation": "One reused fold; two routes form one candidate. Conditional support and refitted preprocessing change together; no stability or upload claim.",
+  "prediction_sha256": "b0a5198e65b6a1e3d22d28038d389b57ca29b639fd46028e5765fc13c82eab6e"
+}
