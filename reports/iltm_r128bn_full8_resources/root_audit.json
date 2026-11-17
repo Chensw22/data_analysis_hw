@@ -1,0 +1,57 @@
+{
+  "status": "verified_complete_native_eight_member_qualification",
+  "result_sha256": "a28f0c7c5e8a8522266a6998bde2aec770418cdcca94e14f62e20de27a6fc6b9",
+  "source_identity_and_current_environment_verified": true,
+  "synthetic_inputs_regenerated_and_hash_verified": true,
+  "complete_member_count": 8,
+  "shared_preprocessor_count": 1,
+  "all_query_rows": 4277,
+  "original_released_before_reload": true,
+  "probability_differences": {
+    "reloaded": 0.0,
+    "permuted": 5.960464477539063e-08,
+    "partition": 0.0,
+    "subset": 2.9802322387695312e-08
+  },
+  "model_sha256": "65080ba381887186b676c23bd78cfb2733d62d86352e28fa386e6a54576f17a5",
+  "model_bytes": 4354728860,
+  "measured_case_seconds": 1910.7537118339678,
+  "parent_monotonic_seconds": 1917.4591098749079,
+  "parent_wall_seconds": 2785.014392852783,
+  "sampled_tree_rss_highwater_GiB": 6.0821990966796875,
+  "cost_projection_recomputed": {
+    "status": "measured_full8_largest_shape_only",
+    "margin": 1.25,
+    "measured_case_seconds": 1910.7537118339678,
+    "measured_case_tree_rss_bytes": 6530711552,
+    "three_fold_seconds": 7165.326419377379,
+    "full_fit_reload_seconds": 2388.44213979246,
+    "formula": "three_fold=3*1.25*complete_largest_case_seconds; final=1.25*complete_largest_case_seconds; measured actual8 treeRSS<=10GiB; no member extrapolation",
+    "small_shape_full8_measured": false,
+    "passed": true
+  },
+  "member_epochs": [
+    97,
+    52,
+    52,
+    52,
+    52,
+    52,
+    52,
+    52
+  ],
+  "member_updates": [
+    388,
+    208,
+    208,
+    208,
+    208,
+    208,
+    208,
+    208
+  ],
+  "all_normal_completion": true,
+  "small_shape_full8_measured": false,
+  "no_real_accuracy_or_upload": true,
+  "disposition": "Resource gate passed; independently reviewed committed real-CV protocol remains separate. No online qualification."
+}

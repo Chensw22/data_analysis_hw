@@ -51,6 +51,8 @@ EXAONE v91分组三折81.66523%，匹配原始Mitra81.69399%；固定各半v92�
 
 iLTM新结构的两个合成CPU单成员案例已完整通过训练、预测、保存重载（概率差均0），共317.54秒；但事前25%余量下，完整8成员内存估算11.14/10.89GiB超10GiB，固定配置按原规则归档。没有实际8成员OOM或真实准确率，不能据此判定效果差；[资源结果及独立复核](reports/iltm_native_cpu1_resources/root_audit.json)。
 
+后续独立立项的官方 **iLTM r128bn（128维瓶颈、无树特征）** 已通过原生完整8成员资源检查：8693条合成训练行、4277条查询，32分钟有效运行/46分钟墙钟，采样进程树RSS峰值6.08GiB，全部预测保存重载差0，顺序/子集最大差约6e−8且分类一致。仅资源资格通过，尚无真实准确率；不能把较小checkpoint视为效果更好。旧xgbrconcat失败记录不改。下一步依[固定CV协议](reports/iltm_r128bn_cv_design.json)运行原6954开发集三折，完整结果达到当前A档地板81.1110%才做原分组三折，两阶段通过也仅供另行评估探索价值。见[资源复核](reports/iltm_r128bn_full8_resources/root_audit.json)与[12项测试及独立代码审查](reports/iltm_r128bn_cv_static_review.json)。
+
 ## 数据与线上成绩
 
 - 官方比赛：https://www.kaggle.com/competitions/spaceship-titanic

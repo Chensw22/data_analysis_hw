@@ -90,3 +90,5 @@
 - 2026-11-17数据诊断五族OOF共同错914/6954，分歧777；不支持错标或80%上限结论。冻结nested18fit完成：HomePlanet混合81.76589%低于常数对照81.88093%，gate失败；继而固定awake Earth/G八格offset81.69399% vsraw81.65085%，23修复20损坏，净+3低于事前0.1pp，gate失败。两条均归档，不调权/分区、不上传常数兜底；reports/planet_mixture_20261117、spatial_offset_20261117。下一固定三规则raw13修复协议consistent_repair_20261117尚未评分。
 
 - 三规则raw13修复已完成81.72275% vsraw81.65085%，59修复54损坏净+5，未过0.1pp门槛，归档不拆规则。固定CatBoost学习曲线512/1536/3090/4636行为77.85/80.30/80.54/81.58%，最后增量三折一致，不能称80%数据上限。用户要求持续且取消周预留后，双方独立review支持公开修订后续研究范围：另立官方iLTM r128bn资源方案（128瓶颈、无树），旧xgbrconcat及“不切换”旧分支停止事实不改；新scope只此一个checkpoint，先单member两规模+原预测门槛，再另审完整8member资源，尚无真实评分/上传。见reports/iltm_r128bn_resource_design.json。
+
+- iLTM r128bn原生完整8成员最大合成8693/4277检查已通过；有效1917.46s/墙钟2785.01s、采样RSS6.082GiB、reload0、顺序最大5.96e−8且分类一致。root独立复算输入/概率/native数量/成本，只有资源资格，未测真实准确率。新CV协议与实现经12项测试/独立审查，固定CPU4、8成员、fitseed20261117、原SKF3 seed20261112、各phase14400s/10GiB。随机>=81.111015%仅允许原group12三折；group匹配raw/v44各不低1pp仅允许root另审，绝非S或自动导出上传。不改阈值/seed/成员/特征、不重试救援。独立目录reports/iltm_r128bn_cv；旧run057保留未运行。见reports/iltm_r128bn_cv_activation.json。
