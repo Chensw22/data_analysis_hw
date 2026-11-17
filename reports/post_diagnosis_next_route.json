@@ -1,0 +1,96 @@
+{
+  "status": "bounded_read_only_review_no_new_candidate_authorization",
+  "decision": "No additional model experiment should start from this review now. Keep one conditional future mechanism: query-adaptive TabDPT context selection, only after a separately authorized dependency/process-isolation feasibility gate. Current r128bn work takes priority; its outcome was not read.",
+  "one_future_scope": {
+    "name": "Explicit process-isolated native exact-L2 retrieval versus matched uniform support",
+    "hypothesis": "With a fixed2048 support budget, selecting training passengers using each query may reduce irrelevant context and improve conditional sample efficiency compared with a uniform2048 subset. Other passengers can supply relevant examples without sharing query GroupId. This is a hypothesis about support selection, not evidence of additional labels or a new architecture.",
+    "uncovered_evidence": "Completed TabDPT run used context_size=None, which estimator._uses_stacked_context handles as full context without kNN. Official optional retrieval uses per-query IndexFlatL2; the attempted resource branch stopped at native dependency initialization before any weights/accuracy. TabR uses learned retrieval and its own trained predictor; its failure does not test this frozen TabDPT context policy.",
+    "official_source": {
+      "repository": "https://github.com/layer6ai-labs/TabDPT-inference",
+      "commit": "3cef828a0bbfe8818bcdd6d855940e1949f2b4cd",
+      "code_paths": [
+        "third_party/tabdpt/tabdpt/estimator.py:211-218",
+        "third_party/tabdpt/tabdpt/estimator.py:265-285",
+        "third_party/tabdpt/tabdpt/utils.py:87-108"
+      ],
+      "interpretation": "Author-supported optional retrieval. Official default is subsample; no claim that published benchmarks or pretraining used L2 retrieval."
+    },
+    "specific_environment_hypothesis": "The reproduced abort reports duplicate libomp initialization when PyTorch and FAISS execute in one process. Separating a FAISS-only CPU worker from the PyTorch inference process avoids having both active runtimes in the same process. This does not prove every prior hang/segfault has this cause.",
+    "important_implementation_obstacle": "Current utils.py imports faiss at module import time, so merely running index.search remotely is insufficient. A future explicitly scoped compatibility adapter must avoid loading FAISS into the PyTorch process, e.g. audited lazy import plus an index proxy, while the worker uses unchanged official IndexFlatL2 semantics. No such adapter or verified environment exists now; no promise that this is a drop-in fix.",
+    "why_not_dependency_version_guessing": "No package upgrade/downgrade or purported compatible version is recommended without evidence. Do not use KMP_DUPLICATE_LIB_OK, patch binary linkage, or silently change the closed environment. A separately named process-isolation setup is a new scope; old failures and old source/env remain unchanged.",
+    "minimum_pre_model_gate": [
+      "Before model access, separately authorize and freeze the process boundary/adapter, pinned official source, existing weight SHA and package identities; preserve the old closed report.",
+      "One bounded60s synthetic CPU-only test: FAISS-only worker indexes2049x13 FP32 rows, returns exact2048 neighbor IDs to a separate torch-only process; exercise normal, duplicate and tied inputs, tail batches, query reorder/subsets, worker shutdown and repeatability. No labels supplied to the retrieval worker.",
+      "Verify the torch process does not load FAISS and the retrieval worker does not load torch; log loaded OpenMP realpaths. Compare worker output to standalone official FAISS on identical inputs. Changing tie policy or substituting a different index is not an unnoticed fix.",
+      "Any abort/hang/inconsistent IDs closes this new compatibility scope; no dependency/OMP-switch search."
+    ],
+    "minimum_distinguishable_model_experiment_if_separately_approved": {
+      "candidate": "Native exactL2 retrieval2048;8views;batch8;original compact13 train-only encoder/imputer/scaler;original checkpoint/FP32/temperature1/threshold.5.",
+      "control": "Uniform2048 support; same8views, source, seeds, preprocessing, batch, checkpoint and backend. Archived fullcontext is contextual only, not the matched support-selection control.",
+      "pool_boundary": "Both use only current outertrain rows/labels; retrieval index covers the whole outertrain pool but each query sees2048 selected supports. No test labels, same-group target propagation, retrieval of query rows, or global-dev fitted scaling.",
+      "resource_first": "Reuse the previously declared shapes and600s hard resource limit only through a new reviewed protocol, not by declaring the closed old probe passed. Measure both4636/8693 pools and all8views; include serialization/full final inference and25% cost margin. Paired three-fold forecast and final+reload forecast each must be<=3600s. No smallerK/views/batch/precision rescue.",
+      "evaluation": "Original fixed6954dev threefolds; paired uniform-vs-retrieval accuracy/logloss. Freeze any continuation criterion before scores. Existing914common-wrong membership may be a posthoc descriptive breakdown only, not a selection rule, training weight, or new independent test.",
+      "no_search": "Exactly one K/distance/seed/view recipe; no metric learning, feature weights, per-subgroup routing, threshold or blending search."
+    },
+    "risks_and_counterevidence": [
+      "Euclidean distance after ordinal category encoding and scaling may not reflect Transported similarity; this fixed test cannot resolve that by tuning its metric.",
+      "The observed CatBoost learning curve benefits from more rows; reducing support can discard useful examples. That curve is not evidence favoring retrieval and is not a TabDPT learning curve.",
+      "Fullcontext TabDPT and learned TabR were weak here, reducing prior confidence but not proving the optional selection policy failed.",
+      "Per-query support repeats many neural context computations and may fail the runtime gate even if the OMP issue is isolated.",
+      "914shared errors show agreement among selected models, not that retrieval repairs them or that those labels are wrong. No existing result establishes positive residual information in Euclidean neighborhoods."
+    ]
+  },
+  "why_not_more_data_slice_repairs": {
+    "planet_gate": "HomePlanet gate failed against its matched constant mixture; do not replace it by a chosen per-planet expert from the same OOF.",
+    "awake_offset": "Spatial offset gained3correct but missed the frozen+0.1pp rule; do not shrink/shift bins or penalty posthoc.",
+    "repair": "Three-rule attribute repair gained5correct but missed its fixed criterion; do not choose rules or route repaired rows after seeing outcomes."
+  },
+  "learning_curve_limit": "One CatBoost recipe/one nested sample path rose77.8545→80.2991→80.5436→81.5789 as512→1536→3090→4636 training rows. This supports sample sensitivity, not a universal sample ceiling, noise rate, pseudo-label correctness or achievable90% performance.",
+  "not_claimed": [
+    "80% irreducible ceiling",
+    "Oracle86.86% attainable",
+    "New architecture",
+    "A supported compatible replacement package version",
+    "Closed TabDPT resource gate now passed",
+    "Permission to download/install/fit/submit"
+  ],
+  "reviewer_attack_points": [
+    "Can the proposed process boundary actually prevent faiss import without changing model/preprocessing semantics?",
+    "Are exact neighbor and tie-order identities preserved?",
+    "Does query-local2048 improve over uniform2048 when the learning curve favors more data?",
+    "Does all8view per-query inference satisfy the frozen cost gate?"
+  ],
+  "source_sha256": {
+    "reports/data_error_diagnosis_20261117/synthesis.json": "f0c259610543e486e7b990a62970c20456ae24e8ddf377109f00a8f0ce0526cf",
+    "reports/data_error_diagnosis_20261117/error_overlap.json": "bfa3584093cd3ae3251ee116cf1d132fee2b4cc33d21ba5ba7a823191c5b074f",
+    "reports/learning_curve_20261117/protocol.json": "ba785ca97792be42477f41a3c4e50572e940b6b92169578bc2803c7c3c47148c",
+    "reports/learning_curve_20261117/result.json": "7c92a1d68f8f4d18a094fb16965359843b70843bedc2c1562f3435c74b650aab",
+    "reports/planet_mixture_20261117/summary.json": "a52d98feffa3374923917e1af93db9395dca5ff4e224593da5870aca871f81ff",
+    "reports/spatial_offset_20261117/result.json": "006b34f4bbc1bb1990a1236a2b30b26877d1b4bccc045d4f1682ff50fcd7430e",
+    "reports/consistent_repair_20261117/summary.json": "1f66269fdb25d1e7f62867417153f398bc783064ac0c9f914dca1a266a913182",
+    "reports/tabdpt_retrieval_cpu_setup.json": "bed13a9234674c13fff847f91bd315c376aba5428c3170fcfe99ba6ae4b8a17a",
+    "reports/tabdpt_retrieval_dependency_repeat.json": "f172a5a7fa81809fa53a8d20dc951bf77883748eb7caa575684b48d04007a693",
+    "third_party/tabdpt/tabdpt/estimator.py": "f49aa82df041287e13e4660b54afc0f5e51eff6885ed284936e1e740a86750ff",
+    "third_party/tabdpt/tabdpt/utils.py": "2d576b6e1d6c95ab4926459e6cc91b4d5528aa0a850cd00269c2b93d1c3954cb",
+    "tabdpt_resource_probe.py": "e177ec4b89a92591210f33f2be531138ebe867f6c5c88d5d64c68e7c84b75a8f",
+    "requirements-tabdpt.lock.txt": "d88ee46a402d057eaa1ceb7d67944b219a2cfd4cf434973dadfa02a3863915c7"
+  },
+  "execution": {
+    "model_constructed_or_run": false,
+    "weights_downloaded": false,
+    "dependencies_changed": false,
+    "real_data_or_new_scores_read": false,
+    "existing_reports_read": true,
+    "new_agents": false,
+    "closed_sources_modified": false,
+    "new_files": [
+      "reports/post_diagnosis_next_route.json"
+    ]
+  },
+  "independent_challenge": {
+    "reviewer": "review_current",
+    "conclusion": "Future bounded process-isolation gate only; no current model experiment.",
+    "additional_obstacle": "Official utils.py imports both torch and faiss; a FAISS-only worker cannot import that module. Fresh spawned/executed process must use identical IndexFlatL2 operations without torch; torch-side proxy must avoid faiss loading. Preserve float32 contiguous arrays, index insertion/search order, ties and returned IDs.",
+    "root_disposition": "Keep as conditional future research; current native iLTM qualification takes priority. No model/run/online permission follows from this report."
+  }
+}
