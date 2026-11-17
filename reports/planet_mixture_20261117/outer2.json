@@ -1,0 +1,55 @@
+{
+  "outer_fold": 2,
+  "status": "complete",
+  "outer_train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+  "outer_validation_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+  "inner_split_seed": 20261119,
+  "constant": {
+    "kind": "constant",
+    "alpha": [
+      0.751025553882171
+    ],
+    "constant_fallback": 0.751025553882171,
+    "success": true,
+    "objective": 0.37885880326677124,
+    "gradient": [
+      -1.0792538387462136e-07
+    ],
+    "iterations": 3,
+    "training_rows": 4636,
+    "training_labels_sha256": "16c29bc9f4d62361f0617a72119cd570967df74df82a57a084d09f06eb98e6d6",
+    "raw_inner_oof_sha256": "db9ecf87e149d479ee1a83b2e2a07acbaad0f65bb8901ca4ab55d25cdd2c505e",
+    "kumo_inner_oof_sha256": "dafa053075089c0f1fd4f5031e81d4b0ecb0954a9758951332205d9c6a43205b",
+    "unknown_training_planets": 0,
+    "input_scope": "complete innerOOF on outer training rows only"
+  },
+  "planet": {
+    "kind": "planet",
+    "alpha": [
+      0.9528411078210087,
+      0.8167427061282316,
+      0.5650622192393872,
+      0.44935109407721724
+    ],
+    "constant_fallback": 0.751025553882171,
+    "success": true,
+    "objective": 0.3782087136330615,
+    "gradient": [
+      -1.9114807595956018e-07,
+      1.963378172371681e-06,
+      4.78171218394705e-07,
+      8.595555722306844e-06
+    ],
+    "iterations": 4,
+    "training_rows": 4636,
+    "training_labels_sha256": "16c29bc9f4d62361f0617a72119cd570967df74df82a57a084d09f06eb98e6d6",
+    "raw_inner_oof_sha256": "db9ecf87e149d479ee1a83b2e2a07acbaad0f65bb8901ca4ab55d25cdd2c505e",
+    "kumo_inner_oof_sha256": "dafa053075089c0f1fd4f5031e81d4b0ecb0954a9758951332205d9c6a43205b",
+    "unknown_training_planets": 0,
+    "input_scope": "complete innerOOF on outer training rows only"
+  },
+  "unknown_query_planets": 0,
+  "cached_outer_fit_seed": 20261114,
+  "inner_oof_sha256": "e222b3ce0b60c079956a265ed4993d22ba0cd503eb64e00ea322cf1e10699322",
+  "outer_predictions_sha256": "ce569f888b93bba4eaa9f109d172bc6c1a25e7744259c03eaebcbb22d99d496b"
+}

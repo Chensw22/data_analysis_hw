@@ -1,0 +1,107 @@
+{
+  "candidate": "v83_Kumo_medium8",
+  "training_rows": 3091,
+  "feature_count": 13,
+  "seed": 20261319,
+  "checkpoint_sha256": "70d6aee8fd13416300afead71a5145a40edb790952e2417d87f27b3f7e57793d",
+  "source_commit": "909d1d49a68e4d6bf71a468f9f813869f62ba970",
+  "training_ids_sha256": "6b580774ce6626c2b654a4a5db6acafd748f35ad93f943a7a265d47183f93f0b",
+  "labels_sha256": "a109e3f93a9342defe8004b1cda7962cb3d7c8ad0997dca7bcacdb2409030e8c",
+  "context_sha256": "d085b55a604c956faba5a6cbc900515856650ebc2c658002d5743124b0bb2429",
+  "target_table_sha256": "dd24117008a5e536f7c785d85bdddc6d403e67db16a58e63885a3912f244c5e9",
+  "pretrained_state_sha256": "0453c6c7e816b99b15128166991373c8824330a2070138d6fddc2f07b54b2568",
+  "settings": {
+    "size": "medium",
+    "task": "classification",
+    "parameters": 61485274,
+    "n_estimators": 8,
+    "estimator_batch_size": 1,
+    "model_dtype": "float32",
+    "amp": false,
+    "recipe": "official_default_unchanged",
+    "preprocessing_device": "cpu",
+    "model_device": "mps",
+    "output_device": "cpu",
+    "aggregation": "official_average_logits_then_softmax",
+    "context": "all_training_rows_no_sampling",
+    "kv_cache": false,
+    "threads": 4,
+    "mps_memory_fraction": 0.65,
+    "threshold": 0.5,
+    "seed": 20261116,
+    "cpu_budget_seconds": 900,
+    "mps_budget_seconds": 7200,
+    "mps_compatibility": "kumo_cell_embedding_mps_allocate_then_copy_v1"
+  },
+  "full_training_context": true,
+  "estimators": 8,
+  "prediction_calls": 1,
+  "persistence": "CPU pretrained weights and raw context; original CPU recipe/FP32 device callback",
+  "last_query_rows": 1545,
+  "last_forward_contexts": [
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    },
+    {
+      "rows": 3091,
+      "columns": 13,
+      "input_device": "cpu",
+      "input_dtype": "torch.float32",
+      "output_device": "mps"
+    }
+  ],
+  "class_order": [
+    0,
+    1
+  ],
+  "status": "complete",
+  "seconds": 22.290200332994573,
+  "prediction_rows": 1545,
+  "prediction_ids_sha256": "f4904fcee102ccffe3110ffef877f1ce89769fec8a25f09b242ea94a0f1d7074"
+}

@@ -1,0 +1,55 @@
+{
+  "outer_fold": 0,
+  "status": "complete",
+  "outer_train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+  "outer_validation_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+  "inner_split_seed": 20261117,
+  "constant": {
+    "kind": "constant",
+    "alpha": [
+      0.7234589377601709
+    ],
+    "constant_fallback": 0.7234589377601709,
+    "success": true,
+    "objective": 0.38025757521642123,
+    "gradient": [
+      -1.2976255997845798e-07
+    ],
+    "iterations": 3,
+    "training_rows": 4636,
+    "training_labels_sha256": "481ffa52b7070f2531cde5f597890dcbc7c624cb29b56e32535c56097334c6d8",
+    "raw_inner_oof_sha256": "1c6eac3cb8a2f38479c9c6bf3291320e2bee543990dae168eb3aee4df4ca9739",
+    "kumo_inner_oof_sha256": "be10b11cf804b7595e6202775eaace5b3a991f1abb3ef98438bd555d672cfe6b",
+    "unknown_training_planets": 0,
+    "input_scope": "complete innerOOF on outer training rows only"
+  },
+  "planet": {
+    "kind": "planet",
+    "alpha": [
+      0.8257530602403488,
+      0.8487979698252666,
+      0.4892695260592651,
+      0.6169761325333373
+    ],
+    "constant_fallback": 0.7234589377601709,
+    "success": true,
+    "objective": 0.37987825340599723,
+    "gradient": [
+      -2.0569944128455333e-06,
+      4.165224493531171e-06,
+      -1.1023212427063494e-07,
+      -3.855377731878853e-06
+    ],
+    "iterations": 5,
+    "training_rows": 4636,
+    "training_labels_sha256": "481ffa52b7070f2531cde5f597890dcbc7c624cb29b56e32535c56097334c6d8",
+    "raw_inner_oof_sha256": "1c6eac3cb8a2f38479c9c6bf3291320e2bee543990dae168eb3aee4df4ca9739",
+    "kumo_inner_oof_sha256": "be10b11cf804b7595e6202775eaace5b3a991f1abb3ef98438bd555d672cfe6b",
+    "unknown_training_planets": 0,
+    "input_scope": "complete innerOOF on outer training rows only"
+  },
+  "unknown_query_planets": 0,
+  "cached_outer_fit_seed": 20261112,
+  "inner_oof_sha256": "7b64110764c23f647f4cab04a480ef4b825f5d50083ebeb07f473c5cb14117db",
+  "outer_predictions_sha256": "f70803df78bc3da8ae6cbf2a9710b1f78e86ae451b6ec197315555870ec0b340"
+}

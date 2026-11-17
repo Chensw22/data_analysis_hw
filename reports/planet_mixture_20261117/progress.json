@@ -1,0 +1,119 @@
+{
+  "status": "complete",
+  "completed_fits": 18,
+  "completed_outer_folds": 3,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "fold_accuracy": [
+        0.817946505608283,
+        0.819672131147541,
+        0.8119068162208801
+      ],
+      "fold_log_loss": [
+        0.38102819387768605,
+        0.3719704257434014,
+        0.38758918506166057
+      ]
+    },
+    "kumo": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.3696693949807155,
+      "fold_accuracy": [
+        0.8226919758412424,
+        0.816220880069025,
+        0.816220880069025
+      ],
+      "fold_log_loss": [
+        0.37014278211795765,
+        0.3633241790267084,
+        0.37554122379748045
+      ]
+    },
+    "constant": {
+      "accuracy": 0.818809318377912,
+      "log_loss": 0.37077642168595015,
+      "fold_accuracy": [
+        0.823123382226057,
+        0.8166522864538395,
+        0.8166522864538395
+      ],
+      "fold_log_loss": [
+        0.37190594375379443,
+        0.3637553294179434,
+        0.37666799188611266
+      ]
+    },
+    "planet": {
+      "accuracy": 0.81765890135174,
+      "log_loss": 0.37093080474792794,
+      "fold_accuracy": [
+        0.8218291630716135,
+        0.8166522864538395,
+        0.814495254529767
+      ],
+      "fold_log_loss": [
+        0.37184187550523334,
+        0.36370555384481135,
+        0.3772449848937392
+      ]
+    }
+  },
+  "paired": {
+    "raw": {
+      "repaired": 142,
+      "broken": 134,
+      "fold_net_correct": [
+        9,
+        -7,
+        6
+      ]
+    },
+    "kumo": {
+      "repaired": 15,
+      "broken": 20,
+      "fold_net_correct": [
+        -2,
+        1,
+        -4
+      ]
+    },
+    "constant": {
+      "repaired": 11,
+      "broken": 19,
+      "fold_net_correct": [
+        -3,
+        0,
+        -5
+      ]
+    }
+  },
+  "continuation": {
+    "passed": false,
+    "checks": {
+      "accuracy_at_least_all": false,
+      "log_loss_not_higher": false,
+      "at_least_two_folds": false,
+      "strict_overall_improvement": false
+    },
+    "automatic_export": false,
+    "automatic_upload": false,
+    "stable_superiority_claim": false,
+    "next_if_pass": "separate frozen group confirmation review only"
+  },
+  "old_holdout_labels_read": false,
+  "automatic_export": false,
+  "automatic_upload": false,
+  "validation_kind": "adaptive_development_nested_cross_validation",
+  "budget_seconds": 7200,
+  "disclosure": "Repeated adaptive development, not independent validation; gate uses innerOOF only. Original outer fits reuse seed20261112+fold; inner seeds follow frozen protocol.",
+  "seconds": 347.7453102080617,
+  "result_files_sha256": {
+    "oof.npz": "c72236af266fa97050a539299fd027b436f31ff076effc03fd03997eacee64e1",
+    "results.csv": "bb69c4ac23ae2b52fdcc4245e058526204b06b045ee4444d8074d5888e6a4bcc",
+    "outer0.json": "6799a8302447aba5a52d84d6c9e3ddb4fedea517c9646a590734d32ffbfc9cce",
+    "outer1.json": "be59a3345d61641b81d574a932dc90f27e452f8340730663780d150f6d30db8d",
+    "outer2.json": "45662e646170fe64c227cd8d1d3a59e4ace2be80ff5838bba103b791e6cd7747"
+  }
+}
