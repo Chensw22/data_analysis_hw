@@ -29,7 +29,7 @@ v81训练全部75,670,026个参数，使用1024支持行/256查询行的训练ep
 
 EXAONE v91分组三折81.66523%，匹配原始Mitra81.69399%；固定各半v92分组81.86655%，但随机三折低于原始Mitra且三折均下降，因此未通过双划分继续条件，已归档、不上传、不继续搜索权重。新代TabPFN按用户决定关闭；Orion-BiX、TabForestPFN与TabFlex的交付/复现限制分别留有独立调查记录，不能把资源或来源问题说成模型准确率差。
 
-固定 **v93 Mitra support3072** 已完成：保持v81每步相同的256行查询和原1024行支持样本，只追加2048行支持。三折82.11102%、logloss0.371853，较v81净多22正确，逐折+11/−2/+13，三折logloss均降低；选步为29/50/17。root独立复算通过，满足事前继续条件，已另行批准一次全量导出探索，但inner step1 validation触发MPS内存上限，未生成可提交文件，未上传；正在核查资源探针与真实运行的覆盖差异。仍小于1pp、复用开发集且计算量更大，不构成S档。[完整结果](reports/run_056/summary.json)、[事前协议](reports/mitra_support3072_screen_review.json)和[独立导出决定](reports/online_iteration_20261116/support3072_decision.json)均已保存。
+固定 **v93 Mitra support3072** 已完成：保持v81每步相同的256行查询和原1024行支持样本，只追加2048行支持。三折82.11102%、logloss0.371853，较v81净多22正确，逐折+11/−2/+13，三折logloss均降低；选步为29/50/17。root独立复算通过，满足事前继续条件，已另行批准一次全量导出探索，但inner step1 validation触发MPS内存上限，未生成可提交文件，未上传；已确认原探针漏测首次交替顺序；新的状态保持内存诊断完整通过，正准备独立的生命周期修复导出。新执行路径尚未完成全量训练或重新实测三折，旧失败保留。仍小于1pp、复用开发集且计算量更大，不构成S档。[完整结果](reports/run_056/summary.json)、[事前协议](reports/mitra_support3072_screen_review.json)和[独立导出决定](reports/online_iteration_20261116/support3072_decision.json)均已保存。
 
 方法覆盖复核与反方审查又提出v94：仅将Mitra的HomePlanet/Destination改为train-only one-hot，保留其余11列与原mirror。27项CPU/mock检查通过，但真实小型CPU/MPS数值检查未通过事前0.02容差，因此停止于资源阶段，没有准确率、未运行run057、没有上传。不能据此判定one-hot效果差；[覆盖复核](reports/remaining_method_coverage_review_20261117.json)、[反方报告](reports/remaining_method_coverage_battle_20261117.json)、[失败记录](reports/mitra_nominal_onehot_resources/result.json)保留。
 

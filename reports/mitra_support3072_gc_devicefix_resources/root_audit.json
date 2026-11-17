@@ -1,0 +1,61 @@
+{
+  "status": "root_verified_complete_bounded_diagnostic",
+  "small_saved_probabilities_bitwise_equal": true,
+  "full_actual_forward_shapes": [
+    [
+      6954,
+      1739
+    ],
+    [
+      6954,
+      1739
+    ],
+    [
+      6954,
+      1739
+    ]
+  ],
+  "full_optimizer_steps": [
+    0,
+    1,
+    2
+  ],
+  "state_proofs": [
+    {
+      "stage": "small",
+      "step": 1,
+      "proof_sha256": "e770ffa1517e280260a16ffcb656f467292858a010b87eacc474c9da8e7b49e8",
+      "state_preserved": true,
+      "current_before": 1038462720,
+      "current_after": 1038462720,
+      "driver_before": 7258210304,
+      "driver_after": 4925980672,
+      "driver_reduction_bytes": 2332229632
+    },
+    {
+      "stage": "full",
+      "step": 1,
+      "proof_sha256": "3a1267ba6573213900761decaad0da17acb5cd01db33b7f1f2de9390c9d8688b",
+      "state_preserved": true,
+      "current_before": 1188813056,
+      "current_after": 1188813056,
+      "driver_before": 6207455232,
+      "driver_after": 6073040896,
+      "driver_reduction_bytes": 134414336
+    },
+    {
+      "stage": "full",
+      "step": 2,
+      "proof_sha256": "b6904a37e675b3ec214e976689879460da25664e4028b71d43348116e8c23068",
+      "state_preserved": true,
+      "current_before": 1188813056,
+      "current_after": 1188813056,
+      "driver_before": 7289585664,
+      "driver_after": 6073040896,
+      "driver_reduction_bytes": 1216544768
+    }
+  ],
+  "no_real_accuracy": true,
+  "interpretation": "All state/storage/RNG/input checks passed. Current live allocation did not decrease; empty_cache decreased driver allocation. This supports the fixed lifecycle path, not a proved tensor-leak cause, exact replay of real labels, empirical full-CV equivalence, or completed export.",
+  "next": "Separate conditional exporter and committed root decision required. Old failed fullfit remains unchanged."
+}
