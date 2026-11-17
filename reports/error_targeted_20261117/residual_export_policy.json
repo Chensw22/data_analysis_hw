@@ -1,0 +1,78 @@
+{
+  "version": "v101_rawMitra_nonlinear_residual_ready",
+  "proposal": "proposal_ready_nonlinear_residual",
+  "budget_seconds": 3600,
+  "training_oof_scored": false,
+  "scope": "Final fitting/export only; no upload or new model selection.",
+  "training_rows": 8693,
+  "test_rows": 4277,
+  "raw": {
+    "checkpoint": "Mitra-v2 unchanged original raw checkpoint",
+    "columns": "original compact13",
+    "recipe": "zero-shot",
+    "folds": 3,
+    "split_seed": 20261112,
+    "fit_seed": "20261112+fold",
+    "final_seed": 20261112,
+    "query_chunk": 2318,
+    "device": "mps",
+    "memory_fraction": 0.65,
+    "precision": "original FP32 weights + bfloat16 MPS autocast",
+    "support": "all applicable training rows; no sampling"
+  },
+  "corrector": {
+    "source": "nonlinear_error_corrector.py PARAMS/ROUNDS/COLUMNS/CATS",
+    "objective": "binary",
+    "num_boost_round": 60,
+    "learning_rate": 0.03,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_data_in_leaf": 100,
+    "lambda_l2": 10,
+    "seed": 20261112,
+    "columns": "original engineered_no_ids30",
+    "categorical_vocabulary": "all 8693 training attributes only; unknown->NaN",
+    "init_score": "logit of complete full-training 3-fold raw OOF; clip1e-7",
+    "prediction": "expit(logit(fullraw test probability)+booster raw_score)",
+    "early_stopping": false,
+    "tuning": false
+  },
+  "artifact_contract": {
+    "raw_model": "raw_model.joblib",
+    "raw_probabilities": "raw_probabilities.npz",
+    "raw_reload": "raw_reload_probabilities.npz",
+    "raw_metadata": "raw_metadata.json",
+    "train_ids": "zero-based integer original training positions",
+    "test_ids": "official PassengerId Unicode strings in original order",
+    "model": "model.joblib is a descriptor binding raw_model.joblib/residual_booster.txt/residual_schema.json; inference requires the named two runtimes"
+  },
+  "runtime": {
+    "gpu": ".venv-mitra",
+    "cpu": ".venv",
+    "cpu_libomp": "existing .venv sklearn/.dylibs; child env only",
+    "KMP_DUPLICATE_LIB_OK": "FALSE",
+    "new_dependencies": false,
+    "execution": "four sequential fresh child processes under shared parent 3600s deadline"
+  },
+  "verification": {
+    "raw_and_combined_reload_rows": 4277,
+    "required_max_abs_diff": 0,
+    "required_threshold_equal": true,
+    "save_release_reload": true,
+    "partial_results_never_complete": true,
+    "official_submission_validation": "kaggle_workflow.validate_submission complete rows, unique official PassengerId order, columns, literal booleans; recheck SHA before publish",
+    "existing_attempt_deduplication": "Reject CSV SHA found in any reports/**/online_attempts/*.json both in CPU stage and before publication",
+    "gpu_positive_class": "All native Nx2 predict_proba outputs select column1 before scalar probability validation"
+  },
+  "limitations": [
+    "Final OOF is a supervised stacking training input, not an additional validation estimate.",
+    "The 8693-label final model includes previously excluded holdout rows by explicit final-fit authorization.",
+    "Existing development metrics remain adaptive; no stable-superiority claim.",
+    "No submission authorization is generated; root decides separately when Kaggle quota permits."
+  ],
+  "evidence_files": {
+    "reports/error_targeted_20261117/residual_root_audit.json": "75d80471fefc8ee831fbd0c2acfc49cc1ee8cceede9fbc76b1154b1d9ac4423d",
+    "reports/error_targeted_20261117/residual_runtime_fixed_result.json": "cf8471eabc87f6e61ed7aec659118f6f78800972098f9400bca978fbaf8e73b2",
+    "reports/error_targeted_20261117/residual_protocol.json": "3a20e55d6bdb9084f53c9cac50207c8c8595b6fed025bff4d63b3c243d4d8970"
+  }
+}

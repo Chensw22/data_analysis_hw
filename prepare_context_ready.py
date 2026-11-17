@@ -171,7 +171,7 @@ def export():
         expected_ids = test.PassengerId.astype(str).to_numpy()
         with np.load(raw_dir/'raw_probabilities.npz', allow_pickle=False) as cached:
             np.testing.assert_array_equal(cached['train_ids'], ids)
-            np.testing.assert_array_equal(cached['test_ids'], q.index.to_numpy())
+            np.testing.assert_array_equal(cached['test_ids'], expected_ids)
             raw_probability = cached['test_raw'].copy()
         with np.load(raw_dir/'raw_reload_probabilities.npz', allow_pickle=False) as cached_reload:
             np.testing.assert_array_equal(raw_probability, cached_reload['test_raw'])
