@@ -16,7 +16,7 @@ import time
 
 ROOT = Path(__file__).resolve().parent
 POLICY = ROOT/'reports/error_targeted_20261117/residual_export_policy.json'
-PROPOSAL = 'proposal_ready_nonlinear_residual'
+PROPOSAL = 'proposal_ready_nonlinear_residual_v2'
 OUT = ROOT/'artifacts'/PROPOSAL
 REPORT = ROOT/'reports'/PROPOSAL
 VERSION = 'v101_rawMitra_nonlinear_residual_ready'
@@ -34,6 +34,12 @@ def sha(path):
 
 
 def read(path): return json.loads(Path(path).read_text())
+
+
+def environment_lock_bytes():
+    import importlib.metadata
+    return ''.join(f'{name}=={version}\n' for name,version in sorted(
+        (dist.metadata['Name'],dist.version) for dist in importlib.metadata.distributions())).encode()
 
 
 def write(path,value):
@@ -240,7 +246,8 @@ def run():
     try:
         environments={}
         for kind,python in PYTHON.items():
-            output=subprocess.check_output([str(python),'-m','pip','freeze'],cwd=ROOT,env=runtime_env(kind),
+            output=subprocess.check_output([str(python),'-c',
+                'import sys; from prepare_residual_ready import environment_lock_bytes; sys.stdout.buffer.write(environment_lock_bytes())'],cwd=ROOT,env=runtime_env(kind),
                 timeout=max(.01,deadline-time.monotonic()))
             path=OUT/f'requirements-{kind}.lock.txt';path.write_bytes(output);environments[kind]=sha(path)
         frozen=dict(source_hashes=code,data_hashes=data,evidence_files=evidence,environment_hashes=environments,
@@ -285,7 +292,7 @@ def main():
         if os.environ.get('KMP_DUPLICATE_LIB_OK')!='FALSE':raise RuntimeError('Worker requires startup FALSE.')
         frozen=check_frozen()
         kind='gpu' if args.worker.startswith('gpu') else 'cpu'
-        current=subprocess.check_output([sys.executable,'-m','pip','freeze'],cwd=ROOT)
+        current=environment_lock_bytes()
         if hashlib.sha256(current).hexdigest()!=frozen['environment_hashes'][kind]:
             raise RuntimeError('Worker environment differs from frozen runtime.')
         result=gpu_stage(args.worker) if args.worker.startswith('gpu') else cpu_stage(args.worker)

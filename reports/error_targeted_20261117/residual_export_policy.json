@@ -1,6 +1,6 @@
 {
   "version": "v101_rawMitra_nonlinear_residual_ready",
-  "proposal": "proposal_ready_nonlinear_residual",
+  "proposal": "proposal_ready_nonlinear_residual_v2",
   "budget_seconds": 3600,
   "training_oof_scored": false,
   "scope": "Final fitting/export only; no upload or new model selection.",
@@ -74,5 +74,11 @@
     "reports/error_targeted_20261117/residual_root_audit.json": "75d80471fefc8ee831fbd0c2acfc49cc1ee8cceede9fbc76b1154b1d9ac4423d",
     "reports/error_targeted_20261117/residual_runtime_fixed_result.json": "cf8471eabc87f6e61ed7aec659118f6f78800972098f9400bca978fbaf8e73b2",
     "reports/error_targeted_20261117/residual_protocol.json": "3a20e55d6bdb9084f53c9cac50207c8c8595b6fed025bff4d63b3c243d4d8970"
+  },
+  "startup_repair": {
+    "previous_proposal": "proposal_ready_nonlinear_residual",
+    "failure": "reports/proposal_ready_nonlinear_residual/failure.json",
+    "completed_fits": 0,
+    "change": "Use standard-library importlib.metadata lock in both existing environments, matching existing Mitra environment_lock; no pip installation or algorithm change."
   }
 }
