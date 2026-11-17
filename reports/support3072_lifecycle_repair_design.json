@@ -1,0 +1,41 @@
+{
+  "status": "implementation_only_pending_all_diagnostic_gates",
+  "algorithm": "v93_Mitra_support3072",
+  "runtime_module": "mitra_support3072_lifecycle",
+  "future_proposal": "proposal_nov17_support3072_lifecycle",
+  "original_failed_proposal": "proposal_nov16_support3072",
+  "change": "Only insert the verified synchronize/gc.collect/empty_cache/synchronize audited barrier after each inner update and before validation for steps1..50; add runtime source/provenance/memory records. No barrier at step0 or during refit.",
+  "unchanged": [
+    "all training parameters and loss",
+    "original checkpoint and fullcontext",
+    "sampler and seeds",
+    "precision/backend/dualcheckpoint",
+    "optimizer state and LR schedule",
+    "51 inner selections step0..50 earliest exact logloss tie",
+    "fresh original-state refit for selected count",
+    "query chunk2318 and threshold.5",
+    "memory cap.65"
+  ],
+  "required_before_new_fullfit": [
+    "Complete passed sole1200s diagnostic and state/numerical assertions",
+    "Limited AST difference from frozen original fit excluding only barrier call and logging/provenance",
+    "Two-update small real Tab2D CPU A/B trajectory: losses/model/Adam/RNG and final probabilities identical, no real target scores",
+    "Mock51-step selection including selected0/nonzero and freshrefit proving exactly50 inner barriers and no refit barrier",
+    "Independent review and root committed separate decision with new source/evidence hashes"
+  ],
+  "interpretation": "Original run056 scores describe the same numerical learning algorithm. New runtime path has not reproduced complete3fold CV bitwise. No claim of empirical entire-CV equivalence or S; explicit exploratory export only if separately decided.",
+  "new_fullfit_budget_seconds": 7200,
+  "maximum_new_fullfit_runs": 1,
+  "no_overwrite_resume_or_checkpoint_reuse": true,
+  "no_automatic_fullfit_or_upload": true,
+  "repeat_failure": "Stop if new fullfit OOM/numerics/timeout/incomplete; no further cap/context/precision/backend/horizon rescue.",
+  "evidence": {
+    "reports/support3072_gc_diagnostic_plan.json": "7d1aa13e0c227e10d423007adaf5659dd02b5560a050371a6fc0b5b335c1b544",
+    "reports/support3072_export_failure_review.json": "260881038b4ea30a222955aa9380acaa0159ef2a20c784d30fc5924dd0ca17d9",
+    "reports/run_056/summary.json": "81adc7d8c2f9446701c4185503d19951c1ce2a8eb7519fc5f06c1609ef368aab",
+    "reports/proposal_nov16_support3072/failure.json": "323d24ab0da53f36b9c362f7a834d30e0212a51e8fcff14e577413c830af2763",
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501"
+  },
+  "reviewer": "/root/review_current",
+  "root_acceptance": "Accept conditional runtime implementation and bounded diagnostic; no fullfit decision exists yet."
+}
