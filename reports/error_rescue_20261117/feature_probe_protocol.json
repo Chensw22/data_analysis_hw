@@ -1,0 +1,36 @@
+{
+  "status": "prospective_adaptive_single_fold_diagnostic",
+  "seed": 20261112,
+  "fold_index": 0,
+  "original_split": "Original6954 development rows; StratifiedKFold(3,shuffle=True,random_state=20261112), only first fold.",
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "fixed_steps": 15,
+  "recipes": [
+    "compact13_fixed15_fold0",
+    "v96_Mitra_counts_fixed15_online_first",
+    "v99_Mitra_peercryo_fixed15_ready"
+  ],
+  "episode_support": 1024,
+  "episode_query": 256,
+  "checkpoint": "OriginalMitra-v2; fresh model and seed reset for each recipe",
+  "optimizer": "Original full-parameter persistent AdamW/native10CE/literal LR; reuse frozen training.episode_step.",
+  "query_chunk": 2318,
+  "mps_memory_fraction": 0.65,
+  "threads": 4,
+  "budget_seconds": 7200,
+  "fit_labels": "Only outertraining4636 labels passed to each model/preprocessor. Other dev targets used only for historical split reconstruction and postprediction scoring; old1739 targets never parsed.",
+  "roster": "Original full12970 public attributes permitted; target-excluding loaders. Persisted original frozen count/peer preprocessors; no query target use.",
+  "new_control_reason": "Cached v81 fold0 used47 selected updates. Add precisely one compact13 fixed15 control to isolate counts then peer additions. Cached v81 remains historical pipeline reference, not matched algorithm.",
+  "historical_fold0_log": "artifacts/run_046/v81_Mitra_full_episode50_seed20261112_38b837397a8e.json",
+  "historical_fold0_log_sha256": "207418f04d47cc1d2b94c024b6279dce1e41eb44daeed8c641b72b5298e50c80",
+  "interpretation": [
+    "Adaptive singlefold diagnostic, not complete OOF/stability/independent validation.",
+    "914 and5263 masks describe errors only; they never select training rows, weights, hyperparameters or model.",
+    "Three matched fixed15 fits isolate two counts then two peerCryo columns. Comparisons to historical47step v81 additionally differ in update count.",
+    "No otherfold/seed/threshold tuning, no submission/export/reload/resource round, no automatic follow-up if result disappoints."
+  ],
+  "public_output": "Only aggregate metrics/repair-break counts and hashes; IDs/labels/masks/NPZ only ignored artifacts.",
+  "no_upload": true,
+  "no_model_fit_authorized_until_root_commit": true
+}
