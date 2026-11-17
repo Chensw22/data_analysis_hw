@@ -44,7 +44,9 @@
     "log_loss_at_most_raw": "overall and eligible subgroup",
     "minimum_folds_accuracy_at_least_raw": 2,
     "if_pass": "Separate review and frozen group confirmation only; no automatic upload.",
-    "if_fail": "Archive; no new knots/bins/regions/regularization/threshold/ensembles or probability offsets from diagnostic residuals."
+    "if_fail": "Archive; no new knots/bins/regions/regularization/threshold/ensembles or probability offsets from diagnostic residuals.",
+    "accuracy_at_least_constant_control": true,
+    "log_loss_at_most_constant_control": true
   },
   "unchanged": [
     "Target labels",
@@ -52,5 +54,7 @@
     "Outer test predictions except frozen eligible cells",
     "Existing failed protocols and scores"
   ],
-  "no_automatic_export_or_upload": true
+  "no_automatic_export_or_upload": true,
+  "matched_control": "Same eligible training rows, single constant logit offset; same penalty0.1, optimizer and raw baseline. Distinguishes spatial cells from overall eligible-population calibration.",
+  "protocol_note": "Constant-offset control added before any inner predictions or candidate fit; no numerical candidate recipe changed."
 }

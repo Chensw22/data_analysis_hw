@@ -1,0 +1,19 @@
+{
+  "status": "reviewed_before_fit",
+  "source_sha256": {
+    "spatial_offset_candidate.py": "74b3eebdf670ed2b5c728aebcdf1ae508d83172fc6d33f59257d362867988875",
+    "test_spatial_offset_candidate.py": "66afc2c94b413f6f80b7f23ec55b6a5b5b2e7ca6fc62fd95f5c1d1c19d9362d1"
+  },
+  "cpu_tests": 5,
+  "independent_reviewer": "fresh_strategy",
+  "reviewed": [
+    "Convex offset objective and analytic gradient",
+    "Exact eight-cell eligibility and rank definition",
+    "Constant-offset matched control",
+    "Nested source freeze/protocol, individual worker train/query IDs and predictions",
+    "Authenticated outer base probability equality",
+    "Frozen helpers and source/input verification on completion"
+  ],
+  "prior_findings": "Missing provenance checks corrected before any candidate fit.",
+  "native_fit_executed": false
+}

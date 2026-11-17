@@ -1,0 +1,3288 @@
+{
+  "status": "descriptive_frozen_group_oof_residual_audit_no_new_model",
+  "label_policy": "Only original6954dev labels through audit.read_development_only; no unused1739 targets or test targets.",
+  "fixed_bins_source": "reports/data_error_diagnosis_20261117/data_quality.json",
+  "fixed_bin_definition": "Within full unlabeled roster Deck\u00d7Side, CabinNumber average percentile rank; four fixed equal-width rank bins, missing=-1. No Transported used to choose bins.",
+  "models": {
+    "mitra": {
+      "version": "v71_Mitra2_zeroshot",
+      "run": "run_038"
+    },
+    "v44": {
+      "version": "v44_seed_ensemble",
+      "run": "run_019"
+    }
+  },
+  "group_split_seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "development_identity": {
+    "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+    "targets_sha256": "ff43be5be386a1dfa85e87009c7a8510cde267e94cd6e447efc7ce5a953825f4",
+    "group_ids_sha256": "7e7e02c4a762fc8c887e5ff26c64ed463066f8b2c3f159eddc3ba90f7a819dfc",
+    "passenger_ids_sha256": "805deca7c937af787fc8164ec2ef50512abf8c0e736f7ab1418bd460bf16cf41",
+    "engineered_schema": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side",
+      "MissingCount",
+      "TotalSpend",
+      "AllSpendingZero",
+      "SpendMissingCount",
+      "PaidServices",
+      "LuxurySpend",
+      "RoomService_log1p",
+      "RoomService_missing",
+      "FoodCourt_log1p",
+      "FoodCourt_missing",
+      "ShoppingMall_log1p",
+      "ShoppingMall_missing",
+      "Spa_log1p",
+      "Spa_missing",
+      "VRDeck_log1p",
+      "VRDeck_missing",
+      "Age_missing"
+    ],
+    "engineered_values_sha256": "2d61de518d77ac0aeb710bffc6e06641b59909d08d2c7d0c00ba475f5fed64b9"
+  },
+  "verification": "Phase policy/auth/source/history, complete summaries bound to eligibility SHA, OOF SHA, passenger/group/dev IDs, frozen fold assignment, group separation, new-fit seed/train/query hashes, accuracy/logloss verified before residual calculations.",
+  "reference_source_evidence": {
+    "mitra/20261112": {
+      "oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261112.npz",
+      "oof_sha256": "3c1d861c6af5e7a67d5750aedf2dc3b5d2200a63f0a5840c624aefa313f73569",
+      "fold_assignment_sha256": "b25ede216d418006be2d00d2635156898283325dcfacb17a58e7e160a8cce1e3",
+      "summary_sha256": "435650d0ff78f3a93901a6d7c017761559bdb1e5f0a77f236692d2b679762569",
+      "execution_protocol_sha256": "1619151b6cda26eb1ae29c8ee4769a6ca8508f3795782cfdb8ad6289e2b3a483",
+      "legacy_reused": true
+    },
+    "mitra/20261115": {
+      "oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261115.npz",
+      "oof_sha256": "5770d54efe0d27c6ec92cfebe94414a92551a5bd288522b77b54ecacb2dadf90",
+      "fold_assignment_sha256": "87b9122523ac79ee7e321ceaf0aea5e46dc57c1d683a841b997a6396a66f5b8f",
+      "summary_sha256": "435650d0ff78f3a93901a6d7c017761559bdb1e5f0a77f236692d2b679762569",
+      "execution_protocol_sha256": "1619151b6cda26eb1ae29c8ee4769a6ca8508f3795782cfdb8ad6289e2b3a483",
+      "legacy_reused": false
+    },
+    "mitra/20261116": {
+      "oof_path": "artifacts/top5_group_phase/refs/mitra/group_20261116.npz",
+      "oof_sha256": "8f7840fbd7627b2161bae6913dd08c66ef61be04147d68eb1a1c1805cca709ab",
+      "fold_assignment_sha256": "109dfca37a9c113347406ac86e9bf374edae99e06ce9ac7227512ccce332d765",
+      "summary_sha256": "435650d0ff78f3a93901a6d7c017761559bdb1e5f0a77f236692d2b679762569",
+      "execution_protocol_sha256": "1619151b6cda26eb1ae29c8ee4769a6ca8508f3795782cfdb8ad6289e2b3a483",
+      "legacy_reused": false
+    },
+    "v44/20261112": {
+      "oof_path": "artifacts/top5_group_phase/refs/v44/group_20261112.npz",
+      "oof_sha256": "6f5f64b60ff5d383451d990f6c41d68c0250c60aa2c87405c4aecfac77e83ebe",
+      "fold_assignment_sha256": "b25ede216d418006be2d00d2635156898283325dcfacb17a58e7e160a8cce1e3",
+      "summary_sha256": "2fbf542360e21de0a755d57f32b3fc857cbab2707e9d512e991b52a9f56ace02",
+      "execution_protocol_sha256": "58c99350b34804b1c8c8e0883be8fecb7cbea61e6b685150f330e3a0f1aea0a2",
+      "legacy_reused": true
+    },
+    "v44/20261115": {
+      "oof_path": "artifacts/top5_group_phase/refs/v44/group_20261115.npz",
+      "oof_sha256": "8a4f15961dc037b271a42d2dd6543ea7167334a5e82086e4c5cdb29563e6d202",
+      "fold_assignment_sha256": "87b9122523ac79ee7e321ceaf0aea5e46dc57c1d683a841b997a6396a66f5b8f",
+      "summary_sha256": "2fbf542360e21de0a755d57f32b3fc857cbab2707e9d512e991b52a9f56ace02",
+      "execution_protocol_sha256": "58c99350b34804b1c8c8e0883be8fecb7cbea61e6b685150f330e3a0f1aea0a2",
+      "legacy_reused": false
+    },
+    "v44/20261116": {
+      "oof_path": "artifacts/top5_group_phase/refs/v44/group_20261116.npz",
+      "oof_sha256": "1276ae0436827f630a260eb529844f85f71e68716898716a320d501cd35e453f",
+      "fold_assignment_sha256": "109dfca37a9c113347406ac86e9bf374edae99e06ce9ac7227512ccce332d765",
+      "summary_sha256": "2fbf542360e21de0a755d57f32b3fc857cbab2707e9d512e991b52a9f56ace02",
+      "execution_protocol_sha256": "58c99350b34804b1c8c8e0883be8fecb7cbea61e6b685150f330e3a0f1aea0a2",
+      "legacy_reused": false
+    }
+  },
+  "Earth_G_cells": [
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "False",
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.2878527984333535,
+              "predicted_positive_rows_at_half": 24,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.035379524798969726,
+              "cluster_se": 0.038857138278993675,
+              "descriptive_normal95": [
+                -0.04078046622785788,
+                0.11153951582579733
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.2888806419414139,
+              "predicted_positive_rows_at_half": 22,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.03435168129090935,
+              "cluster_se": 0.0394654813045761,
+              "descriptive_normal95": [
+                -0.043000662066059805,
+                0.1117040246478785
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.2914589829672354,
+              "predicted_positive_rows_at_half": 29,
+              "errors_at_fixed_half": 19,
+              "mean_residual_y_minus_p": 0.03177334026508786,
+              "cluster_se": 0.03825058395229416,
+              "descriptive_normal95": [
+                -0.04319780428140869,
+                0.10674448481158441
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.03383484878498897
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.29695820709094695,
+              "predicted_positive_rows_at_half": 24,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.026274116141376327,
+              "cluster_se": 0.038131483812508304,
+              "descriptive_normal95": [
+                -0.048463592131139946,
+                0.1010118244138926
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.30249312012697543,
+              "predicted_positive_rows_at_half": 25,
+              "errors_at_fixed_half": 19,
+              "mean_residual_y_minus_p": 0.02073920310534781,
+              "cluster_se": 0.03870844032577795,
+              "descriptive_normal95": [
+                -0.055129339933176966,
+                0.09660774614387259
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 99,
+              "groups": 90,
+              "target_rate": 0.32323232323232326,
+              "mean_probability": 0.29669806822355244,
+              "predicted_positive_rows_at_half": 24,
+              "errors_at_fixed_half": 22,
+              "mean_residual_y_minus_p": 0.026534255008770838,
+              "cluster_se": 0.03791483709110326,
+              "descriptive_normal95": [
+                -0.04777882568979154,
+                0.10084733570733322
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.02451585808516499
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "False",
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.29087707567498555,
+              "predicted_positive_rows_at_half": 21,
+              "errors_at_fixed_half": 21,
+              "mean_residual_y_minus_p": -0.07466085945876937,
+              "cluster_se": 0.03327971052657819,
+              "descriptive_normal95": [
+                -0.13988909209086262,
+                -0.009432626826676116
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.2997677393597425,
+              "predicted_positive_rows_at_half": 26,
+              "errors_at_fixed_half": 28,
+              "mean_residual_y_minus_p": -0.08355152314352626,
+              "cluster_se": 0.03503773953752846,
+              "descriptive_normal95": [
+                -0.15222549263708204,
+                -0.014877553649970482
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.2971675334171065,
+              "predicted_positive_rows_at_half": 22,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": -0.08095131720089026,
+              "cluster_se": 0.033700369699691264,
+              "descriptive_normal95": [
+                -0.14700404181228513,
+                -0.014898592589495385
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.07972123326772863
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.2791597734291384,
+              "predicted_positive_rows_at_half": 20,
+              "errors_at_fixed_half": 18,
+              "mean_residual_y_minus_p": -0.06294355721292215,
+              "cluster_se": 0.03301782956992793,
+              "descriptive_normal95": [
+                -0.1276585031699809,
+                0.0017713887441365983
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.2871559015074107,
+              "predicted_positive_rows_at_half": 20,
+              "errors_at_fixed_half": 24,
+              "mean_residual_y_minus_p": -0.07093968529119454,
+              "cluster_se": 0.03536857427263707,
+              "descriptive_normal95": [
+                -0.1402620908655632,
+                -0.0016172797168258757
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 111,
+              "groups": 94,
+              "target_rate": 0.21621621621621623,
+              "mean_probability": 0.2854609364161604,
+              "predicted_positive_rows_at_half": 22,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": -0.06924472019994417,
+              "cluster_se": 0.0339535187528085,
+              "descriptive_normal95": [
+                -0.13579361695544884,
+                -0.002695823444439513
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.06770932090135362
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "False",
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.32883447238645697,
+              "predicted_positive_rows_at_half": 36,
+              "errors_at_fixed_half": 27,
+              "mean_residual_y_minus_p": 0.04731231660436873,
+              "cluster_se": 0.03977102142975489,
+              "descriptive_normal95": [
+                -0.030638885397950844,
+                0.1252635186066883
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.3259623359051456,
+              "predicted_positive_rows_at_half": 29,
+              "errors_at_fixed_half": 28,
+              "mean_residual_y_minus_p": 0.05018445308568007,
+              "cluster_se": 0.03979386515470365,
+              "descriptive_normal95": [
+                -0.027811522617539088,
+                0.12818042878889924
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.3234350665241753,
+              "predicted_positive_rows_at_half": 26,
+              "errors_at_fixed_half": 29,
+              "mean_residual_y_minus_p": 0.05271172246665036,
+              "cluster_se": 0.03958549695307457,
+              "descriptive_normal95": [
+                -0.024875851561375797,
+                0.13029929649467653
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.050069497385566396
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.3352644496559073,
+              "predicted_positive_rows_at_half": 34,
+              "errors_at_fixed_half": 29,
+              "mean_residual_y_minus_p": 0.04088233933491828,
+              "cluster_se": 0.03976026068422648,
+              "descriptive_normal95": [
+                -0.037047771606165625,
+                0.11881245027600218
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.34302137300941465,
+              "predicted_positive_rows_at_half": 34,
+              "errors_at_fixed_half": 25,
+              "mean_residual_y_minus_p": 0.033125415981411103,
+              "cluster_se": 0.03890284080038275,
+              "descriptive_normal95": [
+                -0.04312415198733908,
+                0.10937498395016129
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 109,
+              "groups": 98,
+              "target_rate": 0.3761467889908257,
+              "mean_probability": 0.3303350563575535,
+              "predicted_positive_rows_at_half": 29,
+              "errors_at_fixed_half": 26,
+              "mean_residual_y_minus_p": 0.04581173263327215,
+              "cluster_se": 0.039121797965635016,
+              "descriptive_normal95": [
+                -0.030866991379372474,
+                0.12249045664591678
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.039939829316533844
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "False",
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.2871797684999183,
+              "predicted_positive_rows_at_half": 20,
+              "errors_at_fixed_half": 16,
+              "mean_residual_y_minus_p": -0.007179768499918282,
+              "cluster_se": 0.03351170843623925,
+              "descriptive_normal95": [
+                -0.0728627170349472,
+                0.058503180035110645
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.28646094851894305,
+              "predicted_positive_rows_at_half": 23,
+              "errors_at_fixed_half": 17,
+              "mean_residual_y_minus_p": -0.0064609485189430415,
+              "cluster_se": 0.03414209384641797,
+              "descriptive_normal95": [
+                -0.07337945245792225,
+                0.060457555420036176
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.28933096293592825,
+              "predicted_positive_rows_at_half": 22,
+              "errors_at_fixed_half": 14,
+              "mean_residual_y_minus_p": -0.009330962935928255,
+              "cluster_se": 0.033559952395233725,
+              "descriptive_normal95": [
+                -0.07510846963058634,
+                0.05644654375872984
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.0076572266515965255
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.2615708069733326,
+              "predicted_positive_rows_at_half": 21,
+              "errors_at_fixed_half": 19,
+              "mean_residual_y_minus_p": 0.018429193026667397,
+              "cluster_se": 0.03421182582767791,
+              "descriptive_normal95": [
+                -0.04862598559558129,
+                0.08548437164891609
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.26527519615350653,
+              "predicted_positive_rows_at_half": 19,
+              "errors_at_fixed_half": 19,
+              "mean_residual_y_minus_p": 0.01472480384649353,
+              "cluster_se": 0.034132247983060755,
+              "descriptive_normal95": [
+                -0.05217440220030555,
+                0.0816240098932926
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 100,
+              "groups": 89,
+              "target_rate": 0.28,
+              "mean_probability": 0.2642529072481861,
+              "predicted_positive_rows_at_half": 16,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.01574709275181389,
+              "cluster_se": 0.03336652128557141,
+              "descriptive_normal95": [
+                -0.04965128896790606,
+                0.08114547447153385
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.01630036320832494
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "True",
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.5814491662528966,
+              "predicted_positive_rows_at_half": 134,
+              "errors_at_fixed_half": 57,
+              "mean_residual_y_minus_p": 0.04092845612472588,
+              "cluster_se": 0.040055273003028476,
+              "descriptive_normal95": [
+                -0.037579878961209935,
+                0.1194367912106617
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.5834179226751928,
+              "predicted_positive_rows_at_half": 138,
+              "errors_at_fixed_half": 55,
+              "mean_residual_y_minus_p": 0.03895969970242961,
+              "cluster_se": 0.039995664498211306,
+              "descriptive_normal95": [
+                -0.03943180271406455,
+                0.11735120211892378
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.5883262820177145,
+              "predicted_positive_rows_at_half": 137,
+              "errors_at_fixed_half": 54,
+              "mean_residual_y_minus_p": 0.03405134035990788,
+              "cluster_se": 0.04002852841250435,
+              "descriptive_normal95": [
+                -0.04440457532860065,
+                0.11250725604841641
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.03797983206235445
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.6127186955140301,
+              "predicted_positive_rows_at_half": 143,
+              "errors_at_fixed_half": 54,
+              "mean_residual_y_minus_p": 0.009658926863592347,
+              "cluster_se": 0.039461366638401225,
+              "descriptive_normal95": [
+                -0.06768535174767405,
+                0.08700320547485875
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.6119972838827558,
+              "predicted_positive_rows_at_half": 138,
+              "errors_at_fixed_half": 57,
+              "mean_residual_y_minus_p": 0.010380338494866697,
+              "cluster_se": 0.039435562768633074,
+              "descriptive_normal95": [
+                -0.06691336453165413,
+                0.08767404152138751
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 143,
+              "groups": 125,
+              "target_rate": 0.6223776223776224,
+              "mean_probability": 0.608021869606443,
+              "predicted_positive_rows_at_half": 142,
+              "errors_at_fixed_half": 53,
+              "mean_residual_y_minus_p": 0.014355752771179404,
+              "cluster_se": 0.03946000082282939,
+              "descriptive_normal95": [
+                -0.06298584884156619,
+                0.09169735438392501
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.011465006043212817
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "True",
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5787625940782684,
+              "predicted_positive_rows_at_half": 134,
+              "errors_at_fixed_half": 57,
+              "mean_residual_y_minus_p": 0.04266597735030311,
+              "cluster_se": 0.040277666279429934,
+              "descriptive_normal95": [
+                -0.036278248557379565,
+                0.12161020325798577
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5794125535658428,
+              "predicted_positive_rows_at_half": 136,
+              "errors_at_fixed_half": 55,
+              "mean_residual_y_minus_p": 0.04201601786272866,
+              "cluster_se": 0.04006212801575016,
+              "descriptive_normal95": [
+                -0.03650575304814165,
+                0.12053778877359897
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5785780084984643,
+              "predicted_positive_rows_at_half": 125,
+              "errors_at_fixed_half": 58,
+              "mean_residual_y_minus_p": 0.04285056293010712,
+              "cluster_se": 0.04014157414730909,
+              "descriptive_normal95": [
+                -0.0358269223986187,
+                0.12152804825883293
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.04251085271437963
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5966151609744575,
+              "predicted_positive_rows_at_half": 138,
+              "errors_at_fixed_half": 53,
+              "mean_residual_y_minus_p": 0.024813410454113904,
+              "cluster_se": 0.04004320539228489,
+              "descriptive_normal95": [
+                -0.05367127211476448,
+                0.1032980930229923
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5961755212247893,
+              "predicted_positive_rows_at_half": 139,
+              "errors_at_fixed_half": 52,
+              "mean_residual_y_minus_p": 0.02525305020378209,
+              "cluster_se": 0.03979143115269206,
+              "descriptive_normal95": [
+                -0.05273815485549435,
+                0.10324425526305853
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 140,
+              "groups": 126,
+              "target_rate": 0.6214285714285714,
+              "mean_probability": 0.5941200051595994,
+              "predicted_positive_rows_at_half": 137,
+              "errors_at_fixed_half": 50,
+              "mean_residual_y_minus_p": 0.027308566268972004,
+              "cluster_se": 0.03985268266877452,
+              "descriptive_normal95": [
+                -0.05080269176182606,
+                0.10541982429977007
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.025791675642289333
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "True",
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.6278315458978926,
+              "predicted_positive_rows_at_half": 139,
+              "errors_at_fixed_half": 59,
+              "mean_residual_y_minus_p": -0.04211726018360683,
+              "cluster_se": 0.04234999049010071,
+              "descriptive_normal95": [
+                -0.1251232415442042,
+                0.04088872117699055
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.622113949911935,
+              "predicted_positive_rows_at_half": 139,
+              "errors_at_fixed_half": 57,
+              "mean_residual_y_minus_p": -0.03639966419764928,
+              "cluster_se": 0.04258568621958922,
+              "descriptive_normal95": [
+                -0.11986760918804415,
+                0.04706828079274559
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.6234591232878821,
+              "predicted_positive_rows_at_half": 140,
+              "errors_at_fixed_half": 58,
+              "mean_residual_y_minus_p": -0.03774483757359641,
+              "cluster_se": 0.0423742445697935,
+              "descriptive_normal95": [
+                -0.12079835693039168,
+                0.045308681783198856
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.0387539206516175
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.6222051421466424,
+              "predicted_positive_rows_at_half": 140,
+              "errors_at_fixed_half": 58,
+              "mean_residual_y_minus_p": -0.03649085643235672,
+              "cluster_se": 0.04153683892489435,
+              "descriptive_normal95": [
+                -0.11790306072514964,
+                0.044921347860436195
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.6199870903214846,
+              "predicted_positive_rows_at_half": 138,
+              "errors_at_fixed_half": 56,
+              "mean_residual_y_minus_p": -0.03427280460719884,
+              "cluster_se": 0.04140042844203428,
+              "descriptive_normal95": [
+                -0.11541764435358602,
+                0.04687203513918835
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 140,
+              "groups": 118,
+              "target_rate": 0.5857142857142857,
+              "mean_probability": 0.6206427334531545,
+              "predicted_positive_rows_at_half": 140,
+              "errors_at_fixed_half": 58,
+              "mean_residual_y_minus_p": -0.034928447738868745,
+              "cluster_se": 0.0413742196794805,
+              "descriptive_normal95": [
+                -0.11602191831065053,
+                0.046165022832913044
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.03523070292614144
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": "True",
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5463267817856774,
+              "predicted_positive_rows_at_half": 91,
+              "errors_at_fixed_half": 54,
+              "mean_residual_y_minus_p": -0.014580750039645604,
+              "cluster_se": 0.0414593292811462,
+              "descriptive_normal95": [
+                -0.09584103543069215,
+                0.06667953535140093
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5491731020193251,
+              "predicted_positive_rows_at_half": 98,
+              "errors_at_fixed_half": 59,
+              "mean_residual_y_minus_p": -0.01742707027329339,
+              "cluster_se": 0.04116354839687741,
+              "descriptive_normal95": [
+                -0.0981076251311731,
+                0.06325348458458632
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5485877030425601,
+              "predicted_positive_rows_at_half": 96,
+              "errors_at_fixed_half": 55,
+              "mean_residual_y_minus_p": -0.01684167129652841,
+              "cluster_se": 0.04098549637401595,
+              "descriptive_normal95": [
+                -0.09717324418959969,
+                0.06348990159654286
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.016283163869822467
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5579894649511776,
+              "predicted_positive_rows_at_half": 105,
+              "errors_at_fixed_half": 54,
+              "mean_residual_y_minus_p": -0.026243433205145918,
+              "cluster_se": 0.04123178232209587,
+              "descriptive_normal95": [
+                -0.10705772655645382,
+                0.05457086014616199
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5569871854673711,
+              "predicted_positive_rows_at_half": 103,
+              "errors_at_fixed_half": 54,
+              "mean_residual_y_minus_p": -0.025241153721339338,
+              "cluster_se": 0.04104935273697339,
+              "descriptive_normal95": [
+                -0.10569788508580719,
+                0.05521557764312851
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 126,
+              "groups": 109,
+              "target_rate": 0.5317460317460317,
+              "mean_probability": 0.5537737763346509,
+              "predicted_positive_rows_at_half": 96,
+              "errors_at_fixed_half": 55,
+              "mean_residual_y_minus_p": -0.02202774458861917,
+              "cluster_se": 0.041268286981893845,
+              "descriptive_normal95": [
+                -0.1029135870731311,
+                0.05885809789589276
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.024504110505034805
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": null,
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.21621438302099705,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.03378561697900295,
+              "cluster_se": 0.13028037216997268,
+              "descriptive_normal95": [
+                -0.22156391247414348,
+                0.2891351464321494
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.23192971292883158,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.018070287071168423,
+              "cluster_se": 0.12144396264727005,
+              "descriptive_normal95": [
+                -0.21995987971748085,
+                0.2561004538598177
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.23667236790060997,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.01332763209939003,
+              "cluster_se": 0.132870871995106,
+              "descriptive_normal95": [
+                -0.24709927701101775,
+                0.2737545412097978
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.021727845383187134
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.2449924655849572,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.005007534415042772,
+              "cluster_se": 0.11528046735964365,
+              "descriptive_normal95": [
+                -0.2209421816098588,
+                0.2309572504399443
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.24188424070706857,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.00811575929293143,
+              "cluster_se": 0.12357723213306898,
+              "descriptive_normal95": [
+                -0.23409561568788376,
+                0.25032713427374664
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.25,
+              "mean_probability": 0.23338535304977281,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.016614646950227158,
+              "cluster_se": 0.11995999198087857,
+              "descriptive_normal95": [
+                -0.21850693733229484,
+                0.25173623123274913
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.00991264688606712
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": null,
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.3414479000493884,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": 0.21410765550616714,
+              "cluster_se": 0.1350422690993668,
+              "descriptive_normal95": [
+                -0.050575191928591806,
+                0.47879050294092607
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.2985260581804646,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 5,
+              "mean_residual_y_minus_p": 0.2570294973750909,
+              "cluster_se": 0.15465671173976997,
+              "descriptive_normal95": [
+                -0.046097657634858236,
+                0.5601566523850401
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.34993610272390974,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 4,
+              "mean_residual_y_minus_p": 0.20561945283164582,
+              "cluster_se": 0.13881744033868307,
+              "descriptive_normal95": [
+                -0.066462730232173,
+                0.47770163589546466
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.2255855352376346
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.3817276377505688,
+              "predicted_positive_rows_at_half": 4,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": 0.1738279178049868,
+              "cluster_se": 0.13704437696472332,
+              "descriptive_normal95": [
+                -0.09477906104587092,
+                0.4424348966558445
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.35184909464610686,
+              "predicted_positive_rows_at_half": 4,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": 0.20370646090944866,
+              "cluster_se": 0.13966160147430012,
+              "descriptive_normal95": [
+                -0.07003027798017958,
+                0.4774431997990769
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 9,
+              "groups": 9,
+              "target_rate": 0.5555555555555556,
+              "mean_probability": 0.3634144915583768,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.19214106399717873,
+              "cluster_se": 0.13089219905820543,
+              "descriptive_normal95": [
+                -0.06440764615690392,
+                0.4486897741512614
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.18989181423720472
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": null,
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.45472465952237445,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.45472465952237445,
+              "cluster_se": 0.05761537698243252,
+              "descriptive_normal95": [
+                -0.5676507984079422,
+                -0.3417985206368067
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.37753281990687054,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 0,
+              "mean_residual_y_minus_p": -0.37753281990687054,
+              "cluster_se": 0.06100006096659441,
+              "descriptive_normal95": [
+                -0.4970929394013956,
+                -0.2579727004123455
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.42882290482521057,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.42882290482521057,
+              "cluster_se": 0.043923527649488044,
+              "descriptive_normal95": [
+                -0.5149130190182072,
+                -0.342732790632214
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.42036012808481854
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.5026014977792184,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.5026014977792184,
+              "cluster_se": 0.03296863863186421,
+              "descriptive_normal95": [
+                -0.5672200294976723,
+                -0.43798296606076453
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.49305001595092296,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": -0.49305001595092296,
+              "cluster_se": 0.031572255088120026,
+              "descriptive_normal95": [
+                -0.5549316359236383,
+                -0.4311683959782077
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 3,
+              "groups": 3,
+              "target_rate": 0.0,
+              "mean_probability": 0.48680994605911665,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.48680994605911665,
+              "cluster_se": 0.010781971099596147,
+              "descriptive_normal95": [
+                -0.5079426094143251,
+                -0.4656772827039082
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.49415381992975266
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "P",
+        "CryoSleep": null,
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.2770045977085829,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 0,
+              "mean_residual_y_minus_p": -0.2770045977085829,
+              "cluster_se": 0.05893710231765919,
+              "descriptive_normal95": [
+                -0.3925213182511949,
+                -0.16148787716597085
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.29212213799889597,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.29212213799889597,
+              "cluster_se": 0.07075555926053427,
+              "descriptive_normal95": [
+                -0.43080303414954313,
+                -0.1534412418482488
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.29153215007058214,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 0,
+              "mean_residual_y_minus_p": -0.29153215007058214,
+              "cluster_se": 0.063138581521244,
+              "descriptive_normal95": [
+                -0.4152837698522204,
+                -0.1677805302889439
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.28688629525935366
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.27115655987649206,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.27115655987649206,
+              "cluster_se": 0.07312418486764367,
+              "descriptive_normal95": [
+                -0.41447996221707367,
+                -0.12783315753591046
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.2881142382810071,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.2881142382810071,
+              "cluster_se": 0.07652215293804232,
+              "descriptive_normal95": [
+                -0.43809765803957,
+                -0.13813081852244413
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 7,
+              "groups": 7,
+              "target_rate": 0.0,
+              "mean_probability": 0.29760450389739695,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.29760450389739695,
+              "cluster_se": 0.07661254222237678,
+              "descriptive_normal95": [
+                -0.44776508665325543,
+                -0.14744392114153848
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.2856251006849653
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "False",
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.339384999626673,
+              "predicted_positive_rows_at_half": 27,
+              "errors_at_fixed_half": 27,
+              "mean_residual_y_minus_p": -0.0029364014958318707,
+              "cluster_se": 0.04051397695525255,
+              "descriptive_normal95": [
+                -0.08234379632812687,
+                0.07647099333646314
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.34035951912263845,
+              "predicted_positive_rows_at_half": 33,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": -0.003910920991797314,
+              "cluster_se": 0.04023659262730948,
+              "descriptive_normal95": [
+                -0.08277464254132388,
+                0.07495280055772927
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.3377146797415705,
+              "predicted_positive_rows_at_half": 35,
+              "errors_at_fixed_half": 27,
+              "mean_residual_y_minus_p": -0.0012660816107293435,
+              "cluster_se": 0.04016133309198353,
+              "descriptive_normal95": [
+                -0.07998229447101707,
+                0.07745013124955838
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.002704468032786176
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.3167962182558389,
+              "predicted_positive_rows_at_half": 24,
+              "errors_at_fixed_half": 28,
+              "mean_residual_y_minus_p": 0.019652379875002346,
+              "cluster_se": 0.03946570904180181,
+              "descriptive_normal95": [
+                -0.05770040984692919,
+                0.09700516959693388
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.33088952635515134,
+              "predicted_positive_rows_at_half": 27,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": 0.0055590717756897326,
+              "cluster_se": 0.03980459154110214,
+              "descriptive_normal95": [
+                -0.07245792764487047,
+                0.08357607119624993
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 107,
+              "groups": 95,
+              "target_rate": 0.3364485981308411,
+              "mean_probability": 0.3265891660883239,
+              "predicted_positive_rows_at_half": 25,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": 0.009859432042517284,
+              "cluster_se": 0.03952836730215866,
+              "descriptive_normal95": [
+                -0.0676161678697137,
+                0.08733503195474826
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.01169029456440312
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "False",
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.37037582777616546,
+              "predicted_positive_rows_at_half": 47,
+              "errors_at_fixed_half": 39,
+              "mean_residual_y_minus_p": -0.0869112608470316,
+              "cluster_se": 0.03781854851523889,
+              "descriptive_normal95": [
+                -0.1610356159368998,
+                -0.012786905757163389
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.37218524037501005,
+              "predicted_positive_rows_at_half": 48,
+              "errors_at_fixed_half": 38,
+              "mean_residual_y_minus_p": -0.08872067344587618,
+              "cluster_se": 0.036524579120637245,
+              "descriptive_normal95": [
+                -0.1603088485223252,
+                -0.01713249836942718
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.37731453735293363,
+              "predicted_positive_rows_at_half": 49,
+              "errors_at_fixed_half": 41,
+              "mean_residual_y_minus_p": -0.0938499704237998,
+              "cluster_se": 0.03854936972058624,
+              "descriptive_normal95": [
+                -0.16940673507614884,
+                -0.01829320577145077
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.08982730157223588
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.38291367715268526,
+              "predicted_positive_rows_at_half": 48,
+              "errors_at_fixed_half": 40,
+              "mean_residual_y_minus_p": -0.0994491102235514,
+              "cluster_se": 0.03723603413823165,
+              "descriptive_normal95": [
+                -0.17243173713448545,
+                -0.026466483312617375
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.39238000182285626,
+              "predicted_positive_rows_at_half": 51,
+              "errors_at_fixed_half": 43,
+              "mean_residual_y_minus_p": -0.10891543489372235,
+              "cluster_se": 0.03738125721074766,
+              "descriptive_normal95": [
+                -0.18218269902678777,
+                -0.03564817076065693
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 127,
+              "groups": 106,
+              "target_rate": 0.28346456692913385,
+              "mean_probability": 0.3943293507278844,
+              "predicted_positive_rows_at_half": 45,
+              "errors_at_fixed_half": 37,
+              "mean_residual_y_minus_p": -0.11086478379875046,
+              "cluster_se": 0.03861943576635774,
+              "descriptive_normal95": [
+                -0.18655887790081163,
+                -0.035170689696689295
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.10640977630534142
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "False",
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.670845551200078,
+              "predicted_positive_rows_at_half": 82,
+              "errors_at_fixed_half": 21,
+              "mean_residual_y_minus_p": 0.07022587737135057,
+              "cluster_se": 0.0343827351108384,
+              "descriptive_normal95": [
+                0.0028357165541073037,
+                0.13761603818859383
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.6741967611014843,
+              "predicted_positive_rows_at_half": 84,
+              "errors_at_fixed_half": 19,
+              "mean_residual_y_minus_p": 0.06687466746994428,
+              "cluster_se": 0.032656764700183784,
+              "descriptive_normal95": [
+                0.0028674086575840585,
+                0.1308819262823045
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.6736347434135885,
+              "predicted_positive_rows_at_half": 83,
+              "errors_at_fixed_half": 18,
+              "mean_residual_y_minus_p": 0.06743668515784,
+              "cluster_se": 0.03336393597126996,
+              "descriptive_normal95": [
+                0.002043370654150889,
+                0.1328299996615291
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.06817907666637829
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.6389608306671997,
+              "predicted_positive_rows_at_half": 77,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.10211059790422891,
+              "cluster_se": 0.03396402906070609,
+              "descriptive_normal95": [
+                0.03554110094524497,
+                0.16868009486321284
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.6266143293967438,
+              "predicted_positive_rows_at_half": 77,
+              "errors_at_fixed_half": 20,
+              "mean_residual_y_minus_p": 0.11445709917468475,
+              "cluster_se": 0.03278063298748341,
+              "descriptive_normal95": [
+                0.050207058519217265,
+                0.17870713983015224
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 112,
+              "groups": 98,
+              "target_rate": 0.7410714285714286,
+              "mean_probability": 0.6376410727814342,
+              "predicted_positive_rows_at_half": 72,
+              "errors_at_fixed_half": 21,
+              "mean_residual_y_minus_p": 0.10343035578999442,
+              "cluster_se": 0.032829735106722394,
+              "descriptive_normal95": [
+                0.039084074980818534,
+                0.1677766365991703
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.10666601762296936
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "False",
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.3942573629739182,
+              "predicted_positive_rows_at_half": 46,
+              "errors_at_fixed_half": 26,
+              "mean_residual_y_minus_p": 0.0021390334224781473,
+              "cluster_se": 0.037226702423356225,
+              "descriptive_normal95": [
+                -0.07082530332730005,
+                0.07510337017225635
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.39138284519834965,
+              "predicted_positive_rows_at_half": 47,
+              "errors_at_fixed_half": 25,
+              "mean_residual_y_minus_p": 0.005013551198046755,
+              "cluster_se": 0.03712501415937468,
+              "descriptive_normal95": [
+                -0.06775147655432762,
+                0.07777857895042112
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.39860988599625796,
+              "predicted_positive_rows_at_half": 48,
+              "errors_at_fixed_half": 24,
+              "mean_residual_y_minus_p": -0.00221348959986154,
+              "cluster_se": 0.03757243324136128,
+              "descriptive_normal95": [
+                -0.07585545875292965,
+                0.07142847955320658
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": false,
+          "mean_across_reused_partitions": 0.0016463650068877875
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.39846040041835273,
+              "predicted_positive_rows_at_half": 48,
+              "errors_at_fixed_half": 22,
+              "mean_residual_y_minus_p": -0.0020640040219563165,
+              "cluster_se": 0.03660081663510182,
+              "descriptive_normal95": [
+                -0.07380160462675589,
+                0.06967359658284325
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.4025347890333364,
+              "predicted_positive_rows_at_half": 46,
+              "errors_at_fixed_half": 26,
+              "mean_residual_y_minus_p": -0.006138392636940029,
+              "cluster_se": 0.03636359991886937,
+              "descriptive_normal95": [
+                -0.077411048477924,
+                0.06513426320404393
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 111,
+              "groups": 103,
+              "target_rate": 0.3963963963963964,
+              "mean_probability": 0.42123120356295946,
+              "predicted_positive_rows_at_half": 50,
+              "errors_at_fixed_half": 22,
+              "mean_residual_y_minus_p": -0.024834807166563052,
+              "cluster_se": 0.037052348438808544,
+              "descriptive_normal95": [
+                -0.0974574101066278,
+                0.04778779577350169
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.011012401275153133
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "True",
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.5740564258893331,
+              "predicted_positive_rows_at_half": 148,
+              "errors_at_fixed_half": 76,
+              "mean_residual_y_minus_p": -0.08072309255599976,
+              "cluster_se": 0.040272264085733166,
+              "descriptive_normal95": [
+                -0.15965673016403675,
+                -0.0017894549479627597
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.5760511465867361,
+              "predicted_positive_rows_at_half": 148,
+              "errors_at_fixed_half": 74,
+              "mean_residual_y_minus_p": -0.08271781325340272,
+              "cluster_se": 0.04045252501762608,
+              "descriptive_normal95": [
+                -0.16200476228794983,
+                -0.003430864218855606
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.574301595489184,
+              "predicted_positive_rows_at_half": 144,
+              "errors_at_fixed_half": 74,
+              "mean_residual_y_minus_p": -0.08096826215585073,
+              "cluster_se": 0.040962208510342206,
+              "descriptive_normal95": [
+                -0.16125419083612147,
+                -0.0006823334755800131
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.0814697226550844
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.5701627273208171,
+              "predicted_positive_rows_at_half": 145,
+              "errors_at_fixed_half": 75,
+              "mean_residual_y_minus_p": -0.07682939398748374,
+              "cluster_se": 0.04007234728870259,
+              "descriptive_normal95": [
+                -0.15537119467334082,
+                0.001712406698373331
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.5756182576301351,
+              "predicted_positive_rows_at_half": 139,
+              "errors_at_fixed_half": 79,
+              "mean_residual_y_minus_p": -0.08228492429680169,
+              "cluster_se": 0.04024272515582689,
+              "descriptive_normal95": [
+                -0.16116066560222242,
+                -0.003409182991380974
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 150,
+              "groups": 130,
+              "target_rate": 0.49333333333333335,
+              "mean_probability": 0.5742750698520772,
+              "predicted_positive_rows_at_half": 145,
+              "errors_at_fixed_half": 79,
+              "mean_residual_y_minus_p": -0.08094173651874392,
+              "cluster_se": 0.040564450590651994,
+              "descriptive_normal95": [
+                -0.16044805967642184,
+                -0.0014354133610660208
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.08001868493434312
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "True",
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.6761431836563608,
+              "predicted_positive_rows_at_half": 114,
+              "errors_at_fixed_half": 35,
+              "mean_residual_y_minus_p": 0.02820464243059573,
+              "cluster_se": 0.045089361938045844,
+              "descriptive_normal95": [
+                -0.06017050696797413,
+                0.11657979182916559
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.6751377841700679,
+              "predicted_positive_rows_at_half": 114,
+              "errors_at_fixed_half": 33,
+              "mean_residual_y_minus_p": 0.029210041916888693,
+              "cluster_se": 0.044367042931012395,
+              "descriptive_normal95": [
+                -0.05774936222789559,
+                0.11616944606167298
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.6728808294171872,
+              "predicted_positive_rows_at_half": 114,
+              "errors_at_fixed_half": 33,
+              "mean_residual_y_minus_p": 0.031466996669769286,
+              "cluster_se": 0.04354630941824225,
+              "descriptive_normal95": [
+                -0.053883769789985526,
+                0.1168177631295241
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.02962722700575124
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.6991604284787301,
+              "predicted_positive_rows_at_half": 114,
+              "errors_at_fixed_half": 35,
+              "mean_residual_y_minus_p": 0.005187397608226257,
+              "cluster_se": 0.04531646940936421,
+              "descriptive_normal95": [
+                -0.08363288243412759,
+                0.0940076776505801
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.7038825732350771,
+              "predicted_positive_rows_at_half": 114,
+              "errors_at_fixed_half": 35,
+              "mean_residual_y_minus_p": 0.000465252851879566,
+              "cluster_se": 0.044282313289109955,
+              "descriptive_normal95": [
+                -0.08632808119477595,
+                0.08725858689853508
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 115,
+              "groups": 102,
+              "target_rate": 0.7043478260869566,
+              "mean_probability": 0.7012968249078544,
+              "predicted_positive_rows_at_half": 115,
+              "errors_at_fixed_half": 34,
+              "mean_residual_y_minus_p": 0.003051001179102043,
+              "cluster_se": 0.04425529094734025,
+              "descriptive_normal95": [
+                -0.08368936907768486,
+                0.08979137143588893
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.002901217213069289
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "True",
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.9640901717874739,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.027973320276018173,
+              "cluster_se": 0.008255503946549001,
+              "descriptive_normal95": [
+                0.011792532540782129,
+                0.04415410801125422
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.9710954910232907,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.02096800104020134,
+              "cluster_se": 0.00867851547044129,
+              "descriptive_normal95": [
+                0.003958110718136412,
+                0.037977891362266265
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.9682864773841131,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.023777014679378934,
+              "cluster_se": 0.009029604000693687,
+              "descriptive_normal95": [
+                0.00607899083801931,
+                0.041475038520738555
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.024239445331866147
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.8711678446986517,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.12089564736484036,
+              "cluster_se": 0.008125089253751454,
+              "descriptive_normal95": [
+                0.10497047242748751,
+                0.13682082230219322
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.8735573165872961,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.11850617547619598,
+              "cluster_se": 0.007802451246814871,
+              "descriptive_normal95": [
+                0.10321337103243883,
+                0.13379897991995313
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 126,
+              "groups": 106,
+              "target_rate": 0.9920634920634921,
+              "mean_probability": 0.8753306963625858,
+              "predicted_positive_rows_at_half": 126,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.11673279570090626,
+              "cluster_se": 0.007615155109158608,
+              "descriptive_normal95": [
+                0.1018070916869554,
+                0.13165849971485713
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.11871153951398088
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": "True",
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.7211887069412919,
+              "predicted_positive_rows_at_half": 120,
+              "errors_at_fixed_half": 33,
+              "mean_residual_y_minus_p": 0.024712932402970362,
+              "cluster_se": 0.03789012787927855,
+              "descriptive_normal95": [
+                -0.0495517182404156,
+                0.09897758304635632
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.7120360429169702,
+              "predicted_positive_rows_at_half": 121,
+              "errors_at_fixed_half": 30,
+              "mean_residual_y_minus_p": 0.03386559642729212,
+              "cluster_se": 0.036868465914590386,
+              "descriptive_normal95": [
+                -0.038396596765305026,
+                0.10612778961988928
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.7232985701717314,
+              "predicted_positive_rows_at_half": 122,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": 0.02260306917253088,
+              "cluster_se": 0.03836220627548246,
+              "descriptive_normal95": [
+                -0.05258685512741473,
+                0.0977929934724765
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.02706053266759779
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.75433467786785,
+              "predicted_positive_rows_at_half": 122,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": -0.008433038523587798,
+              "cluster_se": 0.03712338085664084,
+              "descriptive_normal95": [
+                -0.08119486500260384,
+                0.06432878795542823
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.7624731228350297,
+              "predicted_positive_rows_at_half": 122,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": -0.016571483490767414,
+              "cluster_se": 0.03725620301778418,
+              "descriptive_normal95": [
+                -0.0895936414056244,
+                0.056450674424089575
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 122,
+              "groups": 108,
+              "target_rate": 0.7459016393442623,
+              "mean_probability": 0.7620754047659846,
+              "predicted_positive_rows_at_half": 122,
+              "errors_at_fixed_half": 31,
+              "mean_residual_y_minus_p": -0.01617376542172213,
+              "cluster_se": 0.0378214309003537,
+              "descriptive_normal95": [
+                -0.09030376998641537,
+                0.05795623914297112
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.01372609581202578
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": null,
+        "SpatialQuartile": "0"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.4107579611241817,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.010757961124181748,
+              "cluster_se": 0.20472711805165017,
+              "descriptive_normal95": [
+                -0.41202311250541607,
+                0.39050719025705255
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.4055770397186279,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 0,
+              "mean_residual_y_minus_p": -0.0055770397186279295,
+              "cluster_se": 0.1782419621248204,
+              "descriptive_normal95": [
+                -0.35493128548327596,
+                0.3437772060460201
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.40968900099396705,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.009689000993967056,
+              "cluster_se": 0.21236365527655282,
+              "descriptive_normal95": [
+                -0.4259217653360106,
+                0.40654376334807646
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.00867466727892558
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.3735311368480835,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.02646886315191649,
+              "cluster_se": 0.19976872108692775,
+              "descriptive_normal95": [
+                -0.3650778301784619,
+                0.4180155564822949
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.46061593668450823,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.06061593668450823,
+              "cluster_se": 0.1832350560701898,
+              "descriptive_normal95": [
+                -0.41975664658208023,
+                0.2985247732130638
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.4,
+              "mean_probability": 0.4007321779505085,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 0,
+              "mean_residual_y_minus_p": -0.000732177950508428,
+              "cluster_se": 0.1805931606841557,
+              "descriptive_normal95": [
+                -0.3546947728914536,
+                0.3532304169904367
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": false,
+          "mean_across_reused_partitions": -0.01162641716103339
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": null,
+        "SpatialQuartile": "1"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.42038744129240513,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.04538744129240513,
+              "cluster_se": 0.1578688805616166,
+              "descriptive_normal95": [
+                -0.3548104471931737,
+                0.2640355646083634
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.3891835939139128,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": -0.014183593913912773,
+              "cluster_se": 0.1699206800260741,
+              "descriptive_normal95": [
+                -0.347228126765018,
+                0.3188609389371925
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.3965805764310062,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": -0.021580576431006193,
+              "cluster_se": 0.16337003705020017,
+              "descriptive_normal95": [
+                -0.3417858490493985,
+                0.29862469618738613
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.027050537212441366
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.46185963974443406,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.08685963974443403,
+              "cluster_se": 0.13973776054006484,
+              "descriptive_normal95": [
+                -0.36074565040296114,
+                0.18702637091409305
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.44143212726093256,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": -0.06643212726093257,
+              "cluster_se": 0.14336623266195203,
+              "descriptive_normal95": [
+                -0.3474299432783585,
+                0.2145656887564934
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 0.375,
+              "mean_probability": 0.446833329994847,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.07183332999484698,
+              "cluster_se": 0.15006649073136794,
+              "descriptive_normal95": [
+                -0.36596365182832813,
+                0.22229699183863416
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.0750416990000712
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": null,
+        "SpatialQuartile": "2"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7718636840581894,
+              "predicted_positive_rows_at_half": 6,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.2281363159418106,
+              "cluster_se": 0.0960307621142594,
+              "descriptive_normal95": [
+                0.039916022197862194,
+                0.41635660968575905
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7969042845070362,
+              "predicted_positive_rows_at_half": 7,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": 0.2030957154929638,
+              "cluster_se": 0.08763325481613157,
+              "descriptive_normal95": [
+                0.03133453605334591,
+                0.3748568949325817
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7814902663230896,
+              "predicted_positive_rows_at_half": 6,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.2185097336769104,
+              "cluster_se": 0.09304508714409312,
+              "descriptive_normal95": [
+                0.03614136287448788,
+                0.4008781044793329
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.2165805883705616
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7322671793039238,
+              "predicted_positive_rows_at_half": 6,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.2677328206960762,
+              "cluster_se": 0.1070266664630061,
+              "descriptive_normal95": [
+                0.05796055442858422,
+                0.47750508696356814
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7213094886368774,
+              "predicted_positive_rows_at_half": 6,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.2786905113631226,
+              "cluster_se": 0.1016552914270893,
+              "descriptive_normal95": [
+                0.07944614016602758,
+                0.47793488256021766
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 8,
+              "groups": 8,
+              "target_rate": 1.0,
+              "mean_probability": 0.7325075279714415,
+              "predicted_positive_rows_at_half": 6,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": 0.2674924720285585,
+              "cluster_se": 0.1026915869820676,
+              "descriptive_normal95": [
+                0.06621696154370604,
+                0.468767982513411
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            1,
+            1,
+            1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": 0.2713052680292524
+        }
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": null,
+        "SpatialQuartile": "3"
+      },
+      "models": {
+        "mitra": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.35988125652074815,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": -0.15988125652074814,
+              "cluster_se": 0.23229998555337245,
+              "descriptive_normal95": [
+                -0.6151892282053582,
+                0.2954267151638618
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.27179506961256267,
+              "predicted_positive_rows_at_half": 0,
+              "errors_at_fixed_half": 1,
+              "mean_residual_y_minus_p": -0.07179506961256266,
+              "cluster_se": 0.21917286520143353,
+              "descriptive_normal95": [
+                -0.5013738854073724,
+                0.35778374618224706
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.35567462015897033,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": -0.15567462015897035,
+              "cluster_se": 0.22972590646205865,
+              "descriptive_normal95": [
+                -0.6059373968246053,
+                0.2945881565066646
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.12911698209742706
+        },
+        "v44": {
+          "per_seed": [
+            {
+              "seed": 20261112,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.39931467117140657,
+              "predicted_positive_rows_at_half": 2,
+              "errors_at_fixed_half": 3,
+              "mean_residual_y_minus_p": -0.19931467117140658,
+              "cluster_se": 0.23027691343146386,
+              "descriptive_normal95": [
+                -0.6506574214970757,
+                0.2520280791542626
+              ]
+            },
+            {
+              "seed": 20261115,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.35679596511784173,
+              "predicted_positive_rows_at_half": 1,
+              "errors_at_fixed_half": 2,
+              "mean_residual_y_minus_p": -0.15679596511784172,
+              "cluster_se": 0.23517361503854467,
+              "descriptive_normal95": [
+                -0.6177362505933892,
+                0.30414432035770583
+              ]
+            },
+            {
+              "seed": 20261116,
+              "rows": 5,
+              "groups": 5,
+              "target_rate": 0.2,
+              "mean_probability": 0.4102208270204473,
+              "predicted_positive_rows_at_half": 3,
+              "errors_at_fixed_half": 4,
+              "mean_residual_y_minus_p": -0.2102208270204473,
+              "cluster_se": 0.2613566453893851,
+              "descriptive_normal95": [
+                -0.7224798519836421,
+                0.30203819794274744
+              ]
+            }
+          ],
+          "residual_direction_by_seed": [
+            -1,
+            -1,
+            -1
+          ],
+          "all_three_residuals_same_nonzero_direction": true,
+          "mean_across_reused_partitions": -0.1887771544365652
+        }
+      }
+    }
+  ],
+  "requested_G_S_third_bin_contrasts": [
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": false
+      },
+      "comparison": "zero-based rank bin2 (third of four) minus bins0,1,3",
+      "models": {
+        "mitra": [
+          {
+            "seed": 20261112,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.30239774720665213,
+            "unexplained_rate_difference": 0.10244179730680547,
+            "cluster_se": 0.04086806666157208,
+            "descriptive_normal95": [
+              0.022340386650124194,
+              0.18254320796348675
+            ]
+          },
+          {
+            "seed": 20261115,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.3057054860557875,
+            "unexplained_rate_difference": 0.0991340584576701,
+            "cluster_se": 0.039251027955458095,
+            "descriptive_normal95": [
+              0.022202043664972235,
+              0.17606607325036794
+            ]
+          },
+          {
+            "seed": 20261116,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.30175035407516754,
+            "unexplained_rate_difference": 0.10308919043829007,
+            "cluster_se": 0.04013212069262989,
+            "descriptive_normal95": [
+              0.02443023388073548,
+              0.18174814699584466
+            ]
+          }
+        ],
+        "v44": [
+          {
+            "seed": 20261112,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.27155115878835057,
+            "unexplained_rate_difference": 0.13328838572510704,
+            "cluster_se": 0.04031867943500488,
+            "descriptive_normal95": [
+              0.05426377403249748,
+              0.2123129974177166
+            ]
+          },
+          {
+            "seed": 20261115,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.2500380942251372,
+            "unexplained_rate_difference": 0.15480145028832043,
+            "cluster_se": 0.03936172657418408,
+            "descriptive_normal95": [
+              0.07765246620291963,
+              0.23195043437372123
+            ]
+          },
+          {
+            "seed": 20261116,
+            "third_bin_rows": 112,
+            "other_three_bins_rows": 345,
+            "actual_rate_difference": 0.4048395445134576,
+            "predicted_probability_difference": 0.25566561797163573,
+            "unexplained_rate_difference": 0.14917392654182188,
+            "cluster_se": 0.03960466757133792,
+            "descriptive_normal95": [
+              0.07154877810199956,
+              0.2267990749816442
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "slice": {
+        "HomePlanet": "Earth",
+        "Deck": "G",
+        "Side": "S",
+        "CryoSleep": true
+      },
+      "comparison": "zero-based rank bin2 (third of four) minus bins0,1,3",
+      "models": {
+        "mitra": [
+          {
+            "seed": 20261112,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.3133151013721791,
+            "unexplained_rate_difference": 0.0430894759626308,
+            "cluster_se": 0.02519008871366224,
+            "descriptive_normal95": [
+              -0.006283097916147194,
+              0.0924620498414088
+            ]
+          },
+          {
+            "seed": 20261115,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.32273137111776473,
+            "unexplained_rate_difference": 0.03367320621704517,
+            "cluster_se": 0.025133473893554154,
+            "descriptive_normal95": [
+              -0.01558840261432097,
+              0.08293481504841131
+            ]
+          },
+          {
+            "seed": 20261116,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.3177206885797065,
+            "unexplained_rate_difference": 0.038683888755103424,
+            "cluster_se": 0.0254523042900296,
+            "descriptive_normal95": [
+              -0.011202627653354592,
+              0.08857040516356143
+            ]
+          }
+        ],
+        "v44": [
+          {
+            "seed": 20261112,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.20461309257189642,
+            "unexplained_rate_difference": 0.1517914847629135,
+            "cluster_se": 0.024941232075662952,
+            "descriptive_normal95": [
+              0.10290666989461411,
+              0.20067629963121286
+            ]
+          },
+          {
+            "seed": 20261115,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.20091918854484725,
+            "unexplained_rate_difference": 0.15548538878996265,
+            "cluster_se": 0.024735218345856805,
+            "descriptive_normal95": [
+              0.10700436083208331,
+              0.203966416747842
+            ]
+          },
+          {
+            "seed": 20261116,
+            "third_bin_rows": 126,
+            "other_three_bins_rows": 387,
+            "actual_rate_difference": 0.3564045773348099,
+            "predicted_probability_difference": 0.20410693738670727,
+            "unexplained_rate_difference": 0.15229763994810264,
+            "cluster_se": 0.024832803194438768,
+            "descriptive_normal95": [
+              0.10362534568700266,
+              0.20096993420920262
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "uncertainty": "Analytic finite-group corrected cluster SE of fixed OOF residual mean; clusters=GroupId. Normal95 intervals are descriptive, unadjusted for many cells and adaptive examination. They do not include refitting uncertainty/dependence between models trained on overlapping folds. Three partitions reuse identical labels and are not three independent samples.",
+  "limitations": [
+    "This is not a new candidate score or independent holdout test.",
+    "High observed target-rate differences alone do not demonstrate unused predictive signal.",
+    "No calibration offset, smoother, thresholds, bin search or model fitted.",
+    "Residual means may change confidence without changing threshold0.5 decisions; do not imply attainable accuracy gains."
+  ],
+  "source_sha256": {
+    "spatial_residual_diagnostic.py": "6eff37990eae0341bb8887f0e3700d1539f9626d02d31dc96b7755a16b677c46",
+    "data_quality_diagnostic.py": "32c85a8fe1ba06f6c7d28a05c4da783e2113de051ef4c75ac7685e97e57de507",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "top5_group_evaluate.py": "d76686f4557e58358edc7c3966d4862f4442c2839390d42cb86458b5558055ef",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "reports/top5_group_validation_review.json": "af6e235044caf27bb9f5100e60ca2d43a365152cc66398d6a1bb2f8a573bb596",
+    "reports/top5_group_authorization.json": "24b0c5fd8563afa3a92d305040b6c413ff6367a953f10ef9cfaf9f91a9e1d831",
+    "reports/data_error_diagnosis_20261117/data_quality.json": "a01d23d10176a8b9dd035b9001c15d6304812782dfb05bf9410eaf89ac5c94da",
+    "artifacts/top5_group_phase/protocol.json": "a4e9acfadd6701543f4708b94be566a71fc0fb8da7c85f8b44db5827b5675f8d",
+    "artifacts/top5_group_phase/eligibility.json": "39d6cd5d419ffe6224fb25967cd33d1567546bb204163ac150cd0a39b7fe55b7"
+  },
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.4",
+    "pandas": "3.1.1"
+  },
+  "decision": {
+    "headline": "Conditional support for one separately frozen Earth/G/awake spatial-calibration experiment if strict nested base probabilities can be reused at low cost; no direct correction from these diagnostic OOF arrays. The sleeping third-bin pattern does not justify another spatial model.",
+    "sleeping_third_bin": "Observed rate125/126=.9921; raw Mitra mean probability .9641/.9711/.9683, versus v44 .8712/.8736/.8753. Mitra third-minus-other-bin unexplained differences .0431/.0337/.0387 have all three descriptive group-cluster95 intervals crossing zero. Do not motivate another model by the raw .992 rate alone.",
+    "awake_pattern": "Observed third-bin83/112=.7411 vs Mitra .6708/.6742/.6736; the preceding bin is observed .2835 vs Mitra .3704/.3722/.3773. Third-minus-other-bin residual contrast stays about+.10 in all three partitions; this is more specific evidence of residual spatial compression than the sleeping high-rate region.",
+    "classification_counterevidence": "Both models already predict all126 sleeping third-bin rows positive at0.5 in all three splits and each makes one error. Raising their probabilities cannot fix that error. In the awake third bin, Mitra predicts82/84/83 positives vs83 actual positives, with21/19/18 errors: average probability underestimation alone does not identify which individuals should flip.",
+    "caution": "The bins/focal region arose from exploratory reused labels; repeated partitions share all targets, model-training dependence is omitted by the simple group SE, and many cells were viewed. These intervals are not independent confirmation or a multiple-testing-corrected significance claim.",
+    "if_root_pursues": "Freeze eligibility Earth & DeckG & observed CryoSleep=False, both Sides and all four existing rank bins before any candidate score, with no third-bin-only override or cutpoint search. Train the calibration from strictly nested outertrain-only base OOF probabilities; compare with a matched self-only calibration control. Specify shrinkage/objective once, not against these residuals. Existing sleeping-only spatial expert is not an equivalent awake test.",
+    "nested_cache_reuse_boundary": "Root reports a separately planned raw-Mitra/Kumo nested gate may supply raw-Mitra innerOOF without additional GPU. Reuse only if outertrain/query IDs, fold construction, base recipe/preprocessing and fit seeds match the spatial experiment exactly and artifact/source hashes verify. Random-outer gate innerOOF is not reusable as group-outer meta training merely because both contain the same6954development rows. Cache availability is not asserted here.",
+    "accuracy_limit": "Calibration residual alone need not change0.5 decisions; the reported focal classification counts expose this distinction. No claim of attainable extra correct predictions, superiority to v81/v93, or irreducible accuracy ceiling.",
+    "authorization": "This report does not authorize fitting, scoring a correction, or uploading."
+  }
+}
