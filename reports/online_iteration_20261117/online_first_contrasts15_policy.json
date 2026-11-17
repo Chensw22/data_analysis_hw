@@ -1,0 +1,42 @@
+{
+  "competition": "spaceship-titanic",
+  "batch_id": "online_iteration_20261117",
+  "allow_full_export": true,
+  "allow_direct_submit": true,
+  "versions": [
+    "v95_Mitra_contrasts_fixed15_online_first"
+  ],
+  "proposal": "proposal_online_first_contrasts15",
+  "maximum_new_upload_attempts_current_batch": 9,
+  "maximum_upload_attempts_for_this_file": 1,
+  "independent_additional_budget": false,
+  "local_cv_or_group_gate_required": false,
+  "weekly_quota_reserve_required": false,
+  "threshold": 0.5,
+  "fixed_optimizer_steps": 15,
+  "seed": 20261112,
+  "training_rows": 8693,
+  "query_rows": 4277,
+  "episode_support": 1024,
+  "episode_query": 256,
+  "query_chunk": 2318,
+  "mps_memory_fraction": 0.65,
+  "budget_seconds": 7200,
+  "input_columns": 15,
+  "added_columns": [
+    "DiningShoppingMinusLuxury",
+    "LogDiningShoppingLuxuryRatio"
+  ],
+  "formula": "D=sum(FoodCourt,ShoppingMall,min_count=1);L=sum(RoomService,Spa,VRDeck,min_count=1);append D-L,log1p(D)-log1p(L). Keep original partial-missing semantics.",
+  "training": "Original v81 fresh_model/optimizer/episode_step, all75M parameters, FP32 weights and MPSbf16, persistent AdamW, literal original LR schedule. Exactly15 updates on full8693; no inner split or validation/checkpoint selection.",
+  "step_provenance": "Submitted v81 final artifact selected_steps=15/refit_optimizer_steps=15; its historical50step inner selection is NOT repeated. This is a fixed15-step recipe, not the same50step-selection algorithm.",
+  "user_authorization": "\u7528\u6237\u8981\u6c42\u7ebf\u4e0a\u4f18\u5148\uff1broot\u660e\u786e\u6279\u51c6\u539fv81\u6700\u7ec815\u6b65\u52a0\u4e24\u6761\u65e2\u6709\u6d88\u8d39\u5bf9\u6bd4\u5217\uff0c\u76f4\u63a5\u5168\u8bad\u7ec3\u5e76\u4e00\u6b21\u7ebf\u4e0a\u63a2\u7d22\uff0c\u4e0d\u52a0CV\u6216\u8d44\u6e90\u8f6e\u6b21\u3002",
+  "no_accuracy_claim": true,
+  "original_failed_gates_unchanged": true,
+  "evidence_files": {
+    "artifacts/proposal_nov16_full_episode/fit_metadata.json": "f05ae2ef3ca486ca3a01c5071c78987882528502d048a7b7393e8b26de215cb7",
+    "artifacts/proposal_nov16_full_episode/reload_metadata.json": "f05ae2ef3ca486ca3a01c5071c78987882528502d048a7b7393e8b26de215cb7",
+    "reports/proposal_nov16_full_episode/manifest.json": "a08836bf502d8e0d5362f18d5ca78c8cfd2378fc33079dd768117c881a6a7319",
+    "contrast_features.py": "ce238012077bb7f90b6a65acd5d323b2decaba5a614f3d5c2ab6acfc0428a352"
+  }
+}
