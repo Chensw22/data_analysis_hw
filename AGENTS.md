@@ -92,3 +92,5 @@
 - 三规则raw13修复已完成81.72275% vsraw81.65085%，59修复54损坏净+5，未过0.1pp门槛，归档不拆规则。固定CatBoost学习曲线512/1536/3090/4636行为77.85/80.30/80.54/81.58%，最后增量三折一致，不能称80%数据上限。用户要求持续且取消周预留后，双方独立review支持公开修订后续研究范围：另立官方iLTM r128bn资源方案（128瓶颈、无树），旧xgbrconcat及“不切换”旧分支停止事实不改；新scope只此一个checkpoint，先单member两规模+原预测门槛，再另审完整8member资源，尚无真实评分/上传。见reports/iltm_r128bn_resource_design.json。
 
 - iLTM r128bn原生完整8成员最大合成8693/4277检查已通过；有效1917.46s/墙钟2785.01s、采样RSS6.082GiB、reload0、顺序最大5.96e−8且分类一致。root独立复算输入/概率/native数量/成本，只有资源资格，未测真实准确率。新CV协议与实现经12项测试/独立审查，固定CPU4、8成员、fitseed20261117、原SKF3 seed20261112、各phase14400s/10GiB。随机>=81.111015%仅允许原group12三折；group匹配raw/v44各不低1pp仅允许root另审，绝非S或自动导出上传。不改阈值/seed/成员/特征、不重试救援。独立目录reports/iltm_r128bn_cv；旧run057保留未运行。见reports/iltm_r128bn_cv_activation.json。
+
+- 上述CV实际首次启动11.158s/0fold、在创建native child前失败：threadpoolctl和sklearn均隐式setdefault KMP_DUPLICATE_LIB_OK=True，parent导入数据helpers后触发旧childenv presence guard。不能重跑覆盖该目录。旧full8真实运行/概率/RSS事实保留，但“全过程无override”未被验证，原入口检查不足；先threadpoolctl后pop仍会被sklearn重设，已否决。另立显式FALSE启动路径兼容性调查，必须before任何numericimport并全程断言，绝不启True；尚未通过任何新native操作或恢复CV。见reports/iltm_r128bn_import_boundary_diagnostic.json。

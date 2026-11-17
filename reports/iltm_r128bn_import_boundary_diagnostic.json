@@ -1,0 +1,34 @@
+{
+  "status": "confirmed_import_side_effect_before_first_cv_worker",
+  "failure": "Duplicate OpenMP override forbidden.",
+  "completed_folds": 0,
+  "native_cv_workers_launched": 0,
+  "candidate_scores_seen": false,
+  "causes": [
+    {
+      "module": "threadpoolctl",
+      "line": 83,
+      "operation": "os.environ.setdefault(KMP_DUPLICATE_LIB_OK, True)"
+    },
+    {
+      "module": "sklearn.__init__",
+      "line": 56,
+      "operation": "same setdefault before compiled initialization"
+    }
+  ],
+  "pure_import_observation": {
+    "initial_override_present": false,
+    "after_threadpoolctl": "True",
+    "native_modules_before_first_removal": [],
+    "after_removal_then_numpy_torch_sklearn_import": "True",
+    "no_native_operations_run": true
+  },
+  "resource_evidence_limit": "Prior eight-member execution/probabilities/RSS remain observed facts, but entry-only absence did not prove suppression remained disabled during training. Do not treat prior qualification as a FALSE-runtime qualification.",
+  "rejected_fix": "Import threadpoolctl then delete variable before importing sklearn: sklearn sets True again. Earlier reviewer acceptance withdrawn.",
+  "new_scope": "Separate fresh-process explicit FALSE runtime diagnostic. Both setdefault calls leave FALSE unchanged; preserve FALSE at every stage. No enabling True, no vendor/package/source edits, no old-output overwrite.",
+  "source_sha256": {
+    ".venv-iltm/lib/python3.12/site-packages/threadpoolctl.py": "bc96c525c34e83ef7cac997181a784c8c6662e61a3f38f58d202bd3b50e1d866",
+    ".venv-iltm/lib/python3.12/site-packages/sklearn/__init__.py": "7dddca4734d14252e358db0ae8bfa0b54da4de7a1f66ba4c92b39b751bb363b4",
+    "reports/iltm_r128bn_cv/random/failure.json": "cd188c3c85daf37ab9c95294fe715229b6eb7f7063739568a35a7f3dd2459a81"
+  }
+}
