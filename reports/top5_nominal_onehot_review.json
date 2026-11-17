@@ -1,0 +1,132 @@
+{
+  "status": "root_accepted_fixed_design_before_implementation_or_scores",
+  "candidate": "v94_Mitra2_nominal_onehot",
+  "run": "run_057",
+  "question": "Does one fixed nominal encoding package for HomePlanet and Destination improve raw Mitra-v2?",
+  "source_review": {
+    "reports/remaining_method_coverage_review_20261117.json": "b9dc036f28b1be5b921bf9f1c96b940a14796211c2e1382265aedb99bc15d296",
+    "reports/remaining_method_coverage_battle_20261117.json": "098a34da54b6089a32fcd351812b5b69ced31cde676e400d5734f85b2a99ac64"
+  },
+  "fixed_recipe": {
+    "name": "raw_Mitra_nominal19_proposal_only",
+    "base": "v71_Mitra2_zeroshot原权重、零optimizer steps；v81仅背景参照。",
+    "replace_fields": [
+      "HomePlanet",
+      "Destination"
+    ],
+    "encoding": "每个字段按当前fit训练known vocabulary产生每类一个0/1列，并加独立missing列；非missing未知类别全零。通常两个字段各3known+1missing，合计11未改列+8新列=19列。持久化schema，不从query建vocab。",
+    "keep_fields": "其他11列原值、类别映射、均值及constant filtering保持同seed原Mitra一致；Deck保留有物理顺序的标量，二值字段不扩张。",
+    "mirror_rule": "先按原MitraPreprocessor.fit取得原active列到mirror符号的明确映射。未改11列按名字/active映射继承原符号；每个one-hot子列继承原父字段符号。不对新维度重新抽一个mirror向量，不增加seed。父字段原已constant时子列应同样constant；若出现非constant子列则fail closed，而非临时定符号。",
+    "mirror_interface_evidence": "fit_mitra调用MitraPreprocessor.fit(x,y,seed)，后者在局部保存/恢复numpy RNG的同时seed后upstream.fit；upstream.determine_mirror按constant filtering后的列数采样。因此不能仅把13列改19列然后认为同seed就保留全部原列符号，必须保存原active映射并显式继承。",
+    "unchanged": [
+      "原checkpoint SHA",
+      "完整support不采样",
+      "原passed CV seed+fold",
+      "MPS bf16及FP32权重/context",
+      "query_chunk2318",
+      "memory cap .65",
+      "threshold .5"
+    ],
+    "excluded": [
+      "不加更多字段或missing flags",
+      "不比较编码枚举或drop-first",
+      "不加full50适配",
+      "不改seed/权重/阈值",
+      "不改现有任何冻结源或失败记录"
+    ]
+  },
+  "execution": {
+    "cpu_first": "测试train-only词表、unknown与missing区分、constant/缺一类别/全missing边界；未改11列support和unseen query变换bitwise一致；schema和mirror映射重载一致。重命名known类别应只重排对应one-hot列及其绑定metadata。",
+    "resource_gate": "新19维完整4636/8693 support、2318 query与终局4277分块，全支持/有限概率/subset/reload一致性；不能继承v89的20维probe资格，不放宽内存上限或缩context。必要小CPU原模型参考和MPS同输入测试不计accuracy。",
+    "resource_budget_seconds": 1200,
+    "screen_budget_seconds": 900,
+    "cost_caveat": "零更新且参数量不变；feature+label tokens由14变20，row attention约20/14、feature attention约(20/14)^2只是量级估算，不是实测内存/时间保证。",
+    "evaluation": "原6954dev、random seed20261112三折，精确核验原v71同split缓存作matched control；仅一次完整三折，不能看中途分数改方案。",
+    "continue_to_fullfit_heuristic": "pooled accuracy至少raw+0.001、logloss不差、至少2/3折accuracy不下降，比较容差1e-12。此门槛只决定是否值得后续fullfit，不是S、显著性或上传授权。",
+    "stop": "资源/一致性失败或完整收益门槛失败就归档，不追加类别、mirror、阈值、missing路由、full适配或编码搜索。通过后也由root按当前授权与次数另定是否探索上传。"
+  },
+  "counterarguments": [
+    "原ordinal编码可逆，量化通常仍能分开类别；模型可能已学会任意类别函数，因此不能叫信息丢失或已确认bug。",
+    "one-hot同时改变维度、缺失表示和特征attention相对权重，成功只能归因整个固定编码包，不是仅消除任意顺序的纯因果隔离。",
+    "预训练先验可能适合标量分类变量，分裂字段成多个binary tokens可能有害。",
+    "one-hot不增加原始信息；其理由是有限模型的表示偏置，而不是获得新标签或物理定律。",
+    "v89负结果只反对numeric flags那个配方，不能自动否定类别表征。",
+    "旧threshold oracle的约5到6个净纠错上限仅能否定直冲83%的主路线，不证明当前小幅改进不可能；本建议不调阈值。"
+  ],
+  "source_sha256": {
+    "reports/remaining_method_coverage_review_20261117.json": "b9dc036f28b1be5b921bf9f1c96b940a14796211c2e1382265aedb99bc15d296",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606",
+    "mitra_missing_flags.py": "735363ac2ac27bffafa61b57987d841ce19734cb2f56ea2db2c8975f31a04dfc",
+    "mitra_mirror_ensemble.py": "719fc2e55a458e05bb0649cc9b433ac9313a86e9871f850019549d1e28aa2066",
+    "mitra_context_candidate.py": "57d1315247e650cfed7deb864dd450b73fe7410acab89cb76b0b6cd3d161b801",
+    "reports/run_004/protocol.json": "621fd86d83e4fcf0b7235dc66c9f0472f135afd319a369702b09f253c31446f0",
+    "reports/attribute_mask_research.json": "961f4eb1e71c4bc73c60d1c504f4fea927e93d441d81c540c1217e776f462501",
+    "reports/strong_model_complementarity_review.json": "39dba104086bbef723a5c406f2ee162ae1ec46aec497a31a83889005e22806f1",
+    "reports/threshold_oracle_diagnostic.json": "f9b664d8cdd2f4100bfebab4e534dece542c641dc410da9adac784a767eb37f0",
+    "reports/pseudolabel_route_review.json": "e17526dbe82e7ad005081d9b645fef289c1d5b4251048ea51421d87546141dc9",
+    "nested_conditional_fusion.py": "3c658dc1435d9fcce341b7a4a1d2a4c25e0f383a1aad74e12ace3802a6ba1cc6",
+    "planet_marginal.py": "8f076aac3c3031b78b92de0e5098d5f3d519af0ce2a06217d18e1e0f65dfc345",
+    "rule_ablation.py": "67e894c227c10fd38aad30821e372f5c3258e49d6c34a08c4995b0224004143a"
+  },
+  "root_decision": {
+    "implementation_and_resource_probe": true,
+    "screen_only_after_complete_resource_pass": true,
+    "gpu_serial_after_run056": true,
+    "full_export_separate_decision_required": true,
+    "export_budget_seconds": 900,
+    "resource_budget_seconds": 1200,
+    "screen_budget_seconds": 900,
+    "automatic_upload": false,
+    "new_candidate_scores_seen": false,
+    "S_supported": false
+  },
+  "resource_details": {
+    "report": "reports/mitra_nominal_onehot_resources",
+    "artifact": "artifacts/probes/mitra_nominal_onehot",
+    "targets": "synthetic alternating labels only; read attributes with explicit columns excluding Transported",
+    "shapes": [
+      [
+        4636,
+        2318
+      ],
+      [
+        8693,
+        4277
+      ]
+    ],
+    "query_chunk": 2318,
+    "full_support_required": true,
+    "full_reload_each_case": true,
+    "same_backend_reload_max_abs_diff": 2e-06,
+    "same_backend_reload_threshold_equal": true,
+    "cpu_mps_preprocessed_input_bitwise": true,
+    "tiny_cpu_mps_model_max_abs_diff": 0.02,
+    "tiny_cpu_mps_threshold_equality_required": false,
+    "all_new_features_nonconstant_for_resource_case": 19,
+    "external_supervision": true,
+    "no_resume_or_budget_extension": true
+  },
+  "validation": {
+    "dev_rows": 6954,
+    "folds": 3,
+    "outer_seed": 20261112,
+    "fit_seeds": [
+      20261112,
+      20261113,
+      20261114
+    ],
+    "primary_reference": "v71_Mitra2_zeroshot/run_038 cached matched OOF",
+    "continue_gate": {
+      "all_three_complete": true,
+      "pooled_accuracy_gain_over_raw_at_least": 0.001,
+      "pooled_logloss_not_worse": true,
+      "at_least_two_nondecreasing_accuracy_folds": true,
+      "tolerance": 1e-12
+    },
+    "old_holdout_targets_read": false,
+    "interpretation": "Adaptively proposed on reused development data; practical same band within1pp, not independent or S evidence."
+  }
+}

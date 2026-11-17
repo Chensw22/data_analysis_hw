@@ -1,0 +1,1138 @@
+{
+  "status": "completed_read_only_review_no_new_candidate_recommended",
+  "created_at_utc": "2026-11-17T00:06:58.579809+00:00",
+  "decision": {
+    "recommended_new_candidate": null,
+    "new_candidate_count": 0,
+    "summary": "暂未找到值得新增实现或占用最后线上次数的、具有独立证据的建模方向。完成既定v93并严格按其原协议处置；不因本报告启动后备训练或用完剩余次数。",
+    "not_a_claim": "不宣称模型空间已穷尽、约82%是不可约上限、神经网络或任何方法家族被否定。停止新增是当前证据与选择成本判断，不是数学不可能性。",
+    "independent_of_incomplete_run": "结论不依赖v93未完成折的得分。未读取run056的CSV、OOF或逐步日志；不改任何现有实验。"
+  },
+  "inventory": {
+    "unit": "unique named completed random-development recipe, not independent model family",
+    "unique_recipes": 86,
+    "csv_rows_including_repeated_controls": 162,
+    "csv_files": 51,
+    "source_files": [
+      "reports/run_003/screen_results.csv",
+      "reports/run_004/screen_results.csv",
+      "reports/run_005/screen_results.csv",
+      "reports/run_006/screen_results.csv",
+      "reports/run_007/screen_results.csv",
+      "reports/run_008/screen_results.csv",
+      "reports/run_009/screen_results.csv",
+      "reports/run_010/screen_results.csv",
+      "reports/run_011/screen_results.csv",
+      "reports/run_012/screen_results.csv",
+      "reports/run_013/screen_results.csv",
+      "reports/run_014/screen_results.csv",
+      "reports/run_015/screen_results.csv",
+      "reports/run_016/screen_results.csv",
+      "reports/run_017/screen_results.csv",
+      "reports/run_018/screen_results.csv",
+      "reports/run_019/screen_results.csv",
+      "reports/run_020/screen_results.csv",
+      "reports/run_021/screen_results.csv",
+      "reports/run_022/screen_results.csv",
+      "reports/run_023/screen_results.csv",
+      "reports/run_024/screen_results.csv",
+      "reports/run_025/screen_results.csv",
+      "reports/run_026/screen_results.csv",
+      "reports/run_027/screen_results.csv",
+      "reports/run_028/screen_results.csv",
+      "reports/run_029/screen_results.csv",
+      "reports/run_030/screen_results.csv",
+      "reports/run_031/screen_results.csv",
+      "reports/run_032/screen_results.csv",
+      "reports/run_033/screen_results.csv",
+      "reports/run_035/screen_results.csv",
+      "reports/run_036/screen_results.csv",
+      "reports/run_037/screen_results.csv",
+      "reports/run_038/screen_results.csv",
+      "reports/run_039/screen_results.csv",
+      "reports/run_040/screen_results.csv",
+      "reports/run_041/screen_results.csv",
+      "reports/run_042/screen_results.csv",
+      "reports/run_043/screen_results.csv",
+      "reports/run_044/screen_results.csv",
+      "reports/run_045/screen_results.csv",
+      "reports/run_046/screen_results.csv",
+      "reports/run_047/screen_results.csv",
+      "reports/run_048/screen_results.csv",
+      "reports/run_049/screen_results.csv",
+      "reports/run_050/screen_results.csv",
+      "reports/run_051/screen_results.csv",
+      "reports/run_052/screen_results.csv",
+      "reports/run_054/screen_results.csv",
+      "reports/run_055/screen_results.csv"
+    ],
+    "excluded_or_separate": [
+      "run056/v93正在运行，不读取结果或计入完成数",
+      "v85属于matched GroupCV，单独引用不混入random排名",
+      "v66仅实现未screen；v72旧资源失败；v90交付审计后未screen，均不计作负面模型成绩"
+    ],
+    "first_occurrence_results": {
+      "v6_no_id_features": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.8157894736842105,
+        "log_loss": 0.3820719196668547
+      },
+      "v10_shallow": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.8153580672993961,
+        "log_loss": 0.3824023080729484
+      },
+      "v9_more_trees": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.8149266609145815,
+        "log_loss": 0.3808655730320379
+      },
+      "v15_context_blend": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.813057233247052,
+        "log_loss": 0.3824102460436589
+      },
+      "v11_group_context": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.813057233247052,
+        "log_loss": 0.3851779299215498
+      },
+      "v12_group_deeper": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.810468794938165,
+        "log_loss": 0.38678187434525274
+      },
+      "v13_histogram": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.8097497842968076,
+        "log_loss": 0.3839878008330842
+      },
+      "v14_histogram_group": {
+        "first_report": "reports/run_003/screen_results.csv",
+        "accuracy": 0.8029910842680472,
+        "log_loss": 0.38907884689653205
+      },
+      "v17_ordered": {
+        "first_report": "reports/run_004/screen_results.csv",
+        "accuracy": 0.815933275812482,
+        "log_loss": 0.38147109187812744
+      },
+      "v16_onehot10": {
+        "first_report": "reports/run_004/screen_results.csv",
+        "accuracy": 0.8127696289905091,
+        "log_loss": 0.38486223275331655
+      },
+      "v18_lgb15": {
+        "first_report": "reports/run_005/screen_results.csv",
+        "accuracy": 0.8054357204486626,
+        "log_loss": 0.3880400145361516
+      },
+      "v19_lgb31": {
+        "first_report": "reports/run_005/screen_results.csv",
+        "accuracy": 0.8042853034224906,
+        "log_loss": 0.4060180306590798
+      },
+      "v22_mlp": {
+        "first_report": "reports/run_005/screen_results.csv",
+        "accuracy": 0.8005464480874317,
+        "log_loss": 0.42461446813873566
+      },
+      "v20_svm3": {
+        "first_report": "reports/run_005/screen_results.csv",
+        "accuracy": 0.7975266033937303,
+        "log_loss": 0.4470380073360594
+      },
+      "v21_svm10": {
+        "first_report": "reports/run_005/screen_results.csv",
+        "accuracy": 0.7959447799827437,
+        "log_loss": 0.44245705553122966
+      },
+      "v25_spatial_blend": {
+        "first_report": "reports/run_006/screen_results.csv",
+        "accuracy": 0.8186655162496405,
+        "log_loss": 0.38182180692352774
+      },
+      "v23_spatial5": {
+        "first_report": "reports/run_006/screen_results.csv",
+        "accuracy": 0.815933275812482,
+        "log_loss": 0.381449255915305
+      },
+      "v24_spatial9": {
+        "first_report": "reports/run_006/screen_results.csv",
+        "accuracy": 0.8140638481449526,
+        "log_loss": 0.3814795078938112
+      },
+      "TabPFN_v2_catboost_blend": {
+        "first_report": "reports/run_007/screen_results.csv",
+        "accuracy": 0.8153580672993961,
+        "log_loss": 0.37602036728162574
+      },
+      "TabPFN_v2_2estimators": {
+        "first_report": "reports/run_007/screen_results.csv",
+        "accuracy": 0.8134886396318666,
+        "log_loss": 0.3785845598406391
+      },
+      "TabPFN_v2_compact8": {
+        "first_report": "reports/run_008/screen_results.csv",
+        "accuracy": 0.8155018694276676,
+        "log_loss": 0.38080959344071424
+      },
+      "TabPFN_v2_engineered8": {
+        "first_report": "reports/run_008/screen_results.csv",
+        "accuracy": 0.814495254529767,
+        "log_loss": 0.37777033414222705
+      },
+      "v26_logic_only": {
+        "first_report": "reports/run_009/screen_results.csv",
+        "accuracy": 0.815645671555939,
+        "log_loss": 0.3803313032177754
+      },
+      "v27_unanimous_only": {
+        "first_report": "reports/run_009/screen_results.csv",
+        "accuracy": 0.815070463042853,
+        "log_loss": 0.3816379564106453
+      },
+      "v28_logic_unanimous": {
+        "first_report": "reports/run_009/screen_results.csv",
+        "accuracy": 0.8146390566580385,
+        "log_loss": 0.38193093620857094
+      },
+      "v30_ebm_spatial_blend": {
+        "first_report": "reports/run_010/screen_results.csv",
+        "accuracy": 0.8123382226056945,
+        "log_loss": 0.38492876585572233
+      },
+      "v29_ebm": {
+        "first_report": "reports/run_010/screen_results.csv",
+        "accuracy": 0.8034224906528616,
+        "log_loss": 0.4012389906217712
+      },
+      "v32_depth8_spatial": {
+        "first_report": "reports/run_011/screen_results.csv",
+        "accuracy": 0.8137762438884095,
+        "log_loss": 0.3847524404033572
+      },
+      "v31_depth8": {
+        "first_report": "reports/run_011/screen_results.csv",
+        "accuracy": 0.8098935864250791,
+        "log_loss": 0.3857192763313514
+      },
+      "v34_contrasts_spatial": {
+        "first_report": "reports/run_012/screen_results.csv",
+        "accuracy": 0.8192407247627265,
+        "log_loss": 0.38178962622693957
+      },
+      "v33_spend_contrasts": {
+        "first_report": "reports/run_012/screen_results.csv",
+        "accuracy": 0.8183779119930975,
+        "log_loss": 0.3816067527126354
+      },
+      "v35_nested_stack": {
+        "first_report": "reports/run_013/screen_results.csv",
+        "accuracy": 0.8153580672993961,
+        "log_loss": 0.3786607777711561
+      },
+      "v38_TabICL_spatial_blend": {
+        "first_report": "reports/run_014/screen_results.csv",
+        "accuracy": 0.8163646821972965,
+        "log_loss": 0.37899401312299486
+      },
+      "v37_TabICL_engineered4": {
+        "first_report": "reports/run_014/screen_results.csv",
+        "accuracy": 0.8119068162208801,
+        "log_loss": 0.38293076805519716
+      },
+      "v36_TabICL_compact4": {
+        "first_report": "reports/run_014/screen_results.csv",
+        "accuracy": 0.8097497842968076,
+        "log_loss": 0.38594811029740045
+      },
+      "v40_projection_spatial": {
+        "first_report": "reports/run_015/screen_results.csv",
+        "accuracy": 0.8143514524014955,
+        "log_loss": 0.3831807532344182
+      },
+      "v39_spending_projection": {
+        "first_report": "reports/run_015/screen_results.csv",
+        "accuracy": 0.8123382226056945,
+        "log_loss": 0.3831555619769878
+      },
+      "v41_TabM": {
+        "first_report": "reports/run_016/screen_results.csv",
+        "accuracy": 0.8088869715271786,
+        "log_loss": 0.38387284961868473
+      },
+      "v43_surname_contrasts_spatial": {
+        "first_report": "reports/run_017/screen_results.csv",
+        "accuracy": 0.818234109864826,
+        "log_loss": 0.3812622641005374
+      },
+      "v42_surname_planet": {
+        "first_report": "reports/run_017/screen_results.csv",
+        "accuracy": 0.813632441760138,
+        "log_loss": 0.38056797449102386
+      },
+      "v45_cryo_experts": {
+        "first_report": "reports/run_018/screen_results.csv",
+        "accuracy": 0.8180903077365546,
+        "log_loss": 0.3822368268795094
+      },
+      "v44_seed_ensemble": {
+        "first_report": "reports/run_019/screen_results.csv",
+        "accuracy": 0.8198159332758125,
+        "log_loss": 0.380388148320062
+      },
+      "v46_nested_structure_search": {
+        "first_report": "reports/run_020/screen_results.csv",
+        "accuracy": 0.8155018694276676,
+        "log_loss": 0.3849901519092349
+      },
+      "v47_TabPFN_frozen1": {
+        "first_report": "reports/run_021/screen_results.csv",
+        "accuracy": 0.8088869715271786,
+        "log_loss": 0.389043444071874
+      },
+      "v48_TabPFN_finetuned1": {
+        "first_report": "reports/run_021/screen_results.csv",
+        "accuracy": 0.8087431693989071,
+        "log_loss": 0.38951149872990687
+      },
+      "v50_xgboost_v34_blend": {
+        "first_report": "reports/run_022/screen_results.csv",
+        "accuracy": 0.8167960885821111,
+        "log_loss": 0.3816887868039064
+      },
+      "v49_xgboost": {
+        "first_report": "reports/run_022/screen_results.csv",
+        "accuracy": 0.808455565142364,
+        "log_loss": 0.3878100506367244
+      },
+      "v51_hierarchical_spend": {
+        "first_report": "reports/run_023/screen_results.csv",
+        "accuracy": 0.816508484325568,
+        "log_loss": 0.3835594558058648
+      },
+      "v52_order_coordinate": {
+        "first_report": "reports/run_024/screen_results.csv",
+        "accuracy": 0.8192407247627265,
+        "log_loss": 0.381805451457515
+      },
+      "v53_compact_spatial": {
+        "first_report": "reports/run_025/screen_results.csv",
+        "accuracy": 0.813632441760138,
+        "log_loss": 0.3879701355377188
+      },
+      "TabPFN_v2_compact8_matched": {
+        "first_report": "reports/run_026/screen_results.csv",
+        "accuracy": 0.8155018694276676,
+        "log_loss": 0.380790743825762
+      },
+      "v54_TabPFN_architecture_ensemble": {
+        "first_report": "reports/run_026/screen_results.csv",
+        "accuracy": 0.8140638481449526,
+        "log_loss": 0.37946247497296987
+      },
+      "v56_nested_linear_leaf": {
+        "first_report": "reports/run_027/screen_results.csv",
+        "accuracy": 0.812482024733966,
+        "log_loss": 0.39153069688662095
+      },
+      "v55_constant_leaf_spatial": {
+        "first_report": "reports/run_027/screen_results.csv",
+        "accuracy": 0.8101811906816221,
+        "log_loss": 0.38843725499574844
+      },
+      "v57_seed_architecture_fusion": {
+        "first_report": "reports/run_028/screen_results.csv",
+        "accuracy": 0.818809318377912,
+        "log_loss": 0.376144452298344
+      },
+      "v58_homeplanet_marginal": {
+        "first_report": "reports/run_029/screen_results.csv",
+        "accuracy": 0.8192407247627265,
+        "log_loss": 0.3812159370956996
+      },
+      "v59_monotone_control": {
+        "first_report": "reports/run_030/screen_results.csv",
+        "accuracy": 0.815933275812482,
+        "log_loss": 0.38853607124479994
+      },
+      "v60_monotone_spatial": {
+        "first_report": "reports/run_030/screen_results.csv",
+        "accuracy": 0.813920046016681,
+        "log_loss": 0.3887729148928695
+      },
+      "v61_nested_global_fusion": {
+        "first_report": "reports/run_031/screen_results.csv",
+        "accuracy": 0.8186655162496405,
+        "log_loss": 0.37647094628297106
+      },
+      "v62_nested_cryo_fusion": {
+        "first_report": "reports/run_031/screen_results.csv",
+        "accuracy": 0.8175150992234685,
+        "log_loss": 0.37667557615160707
+      },
+      "v63_crossentropy_control": {
+        "first_report": "reports/run_032/screen_results.csv",
+        "accuracy": 0.8192407247627265,
+        "log_loss": 0.38178962622693957
+      },
+      "v64_label_smoothing": {
+        "first_report": "reports/run_032/screen_results.csv",
+        "accuracy": 0.8146390566580385,
+        "log_loss": 0.3849661370931021
+      },
+      "v65_TabPFN_default32": {
+        "first_report": "reports/run_033/screen_results.csv",
+        "accuracy": 0.81765890135174,
+        "log_loss": 0.37956587227367505
+      },
+      "v67_FTTransformer_default": {
+        "first_report": "reports/run_035/screen_results.csv",
+        "accuracy": 0.8047167098073051,
+        "log_loss": 0.40434089933238593
+      },
+      "v68_TabR_S": {
+        "first_report": "reports/run_036/screen_results.csv",
+        "accuracy": 0.7966637906241012,
+        "log_loss": 0.41890009285765945
+      },
+      "v70_SCARF": {
+        "first_report": "reports/run_037/screen_results.csv",
+        "accuracy": 0.7979580097785447,
+        "log_loss": 0.42629566445144734
+      },
+      "v69_matched_scratch_MLP": {
+        "first_report": "reports/run_037/screen_results.csv",
+        "accuracy": 0.7962323842392868,
+        "log_loss": 0.4293924303293861
+      },
+      "v71_Mitra2_zeroshot": {
+        "first_report": "reports/run_038/screen_results.csv",
+        "accuracy": 0.816508484325568,
+        "log_loss": 0.38019593489424935
+      },
+      "v73_AutoGluon_multilayer": {
+        "first_report": "reports/run_039/screen_results.csv",
+        "accuracy": 0.8073051481161921,
+        "log_loss": 0.38473969379881284
+      },
+      "v74_Mitra_mirror4": {
+        "first_report": "reports/run_040/screen_results.csv",
+        "accuracy": 0.8157894736842105,
+        "log_loss": 0.37911320279730165
+      },
+      "v75_Mitra_lastblock50": {
+        "first_report": "reports/run_041/screen_results.csv",
+        "accuracy": 0.8152142651711245,
+        "log_loss": 0.3791897947002023
+      },
+      "v76_Mitra_lastblock100": {
+        "first_report": "reports/run_042/screen_results.csv",
+        "accuracy": 0.816508484325568,
+        "log_loss": 0.3788984543405884
+      },
+      "v77_Mitra_context20": {
+        "first_report": "reports/run_043/screen_results.csv",
+        "accuracy": 0.8157894736842105,
+        "log_loss": 0.38078345747383413
+      },
+      "v79_Mitra12_mean": {
+        "first_report": "reports/run_044/screen_results.csv",
+        "accuracy": 0.8116192119643371,
+        "log_loss": 0.39458476745499454
+      },
+      "v78_Mitra1_zeroshot": {
+        "first_report": "reports/run_044/screen_results.csv",
+        "accuracy": 0.7995398331895313,
+        "log_loss": 0.41970895779031236
+      },
+      "v80_MitraCat_mean": {
+        "first_report": "reports/run_045/screen_results.csv",
+        "accuracy": 0.819672131147541,
+        "log_loss": 0.3758781139960661
+      },
+      "v81_Mitra_full_episode50": {
+        "first_report": "reports/run_046/screen_results.csv",
+        "accuracy": 0.817946505608283,
+        "log_loss": 0.3750928747453614
+      },
+      "v82_TabDPT13_full8": {
+        "first_report": "reports/run_047/screen_results.csv",
+        "accuracy": 0.8119068162208801,
+        "log_loss": 0.3794749686418978
+      },
+      "v83_Kumo_medium8": {
+        "first_report": "reports/run_048/screen_results.csv",
+        "accuracy": 0.8183779119930975,
+        "log_loss": 0.3696693949807155
+      },
+      "v84_Mitra_TabDPT_Kumo_equal3": {
+        "first_report": "reports/run_049/screen_results.csv",
+        "accuracy": 0.8157894736842105,
+        "log_loss": 0.3735336307915838
+      },
+      "v86_Mitra_prior_adapt_equal2": {
+        "first_report": "reports/run_050/screen_results.csv",
+        "accuracy": 0.8180903077365546,
+        "log_loss": 0.376336060676996
+      },
+      "v87_Mitra_full_episode50_seed100": {
+        "first_report": "reports/run_051/screen_results.csv",
+        "accuracy": 0.816508484325568,
+        "log_loss": 0.37483878659371683
+      },
+      "v88_Mitra_full_episode50_two_seed_mean": {
+        "first_report": "reports/run_051/screen_results.csv",
+        "accuracy": 0.8189531205061835,
+        "log_loss": 0.3740018824295269
+      },
+      "v89_Mitra2_missing_flags": {
+        "first_report": "reports/run_052/screen_results.csv",
+        "accuracy": 0.8163646821972965,
+        "log_loss": 0.3789453325595731
+      },
+      "EXAONE_v91_CAST_default8": {
+        "first_report": "reports/run_054/screen_results.csv",
+        "accuracy": 0.8098935864250791,
+        "log_loss": 0.3762841176631881
+      },
+      "EXAONE_v92_rawMitra_half": {
+        "first_report": "reports/run_055/screen_results.csv",
+        "accuracy": 0.8142076502732241,
+        "log_loss": 0.37598562803281804
+      }
+    }
+  },
+  "coverage": [
+    {
+      "topic": "树的局部边界、平滑和结构选择",
+      "completed_random_recipes": [
+        {
+          "version": "v6_no_id_features",
+          "first_report": "reports/run_003/screen_results.csv",
+          "accuracy": 0.8157894736842105,
+          "log_loss": 0.3820719196668547
+        },
+        {
+          "version": "v17_ordered",
+          "first_report": "reports/run_004/screen_results.csv",
+          "accuracy": 0.815933275812482,
+          "log_loss": 0.38147109187812744
+        },
+        {
+          "version": "v18_lgb15",
+          "first_report": "reports/run_005/screen_results.csv",
+          "accuracy": 0.8054357204486626,
+          "log_loss": 0.3880400145361516
+        },
+        {
+          "version": "v19_lgb31",
+          "first_report": "reports/run_005/screen_results.csv",
+          "accuracy": 0.8042853034224906,
+          "log_loss": 0.4060180306590798
+        },
+        {
+          "version": "v29_ebm",
+          "first_report": "reports/run_010/screen_results.csv",
+          "accuracy": 0.8034224906528616,
+          "log_loss": 0.4012389906217712
+        },
+        {
+          "version": "v31_depth8",
+          "first_report": "reports/run_011/screen_results.csv",
+          "accuracy": 0.8098935864250791,
+          "log_loss": 0.3857192763313514
+        },
+        {
+          "version": "v46_nested_structure_search",
+          "first_report": "reports/run_020/screen_results.csv",
+          "accuracy": 0.8155018694276676,
+          "log_loss": 0.3849901519092349
+        },
+        {
+          "version": "v49_xgboost",
+          "first_report": "reports/run_022/screen_results.csv",
+          "accuracy": 0.808455565142364,
+          "log_loss": 0.3878100506367244
+        },
+        {
+          "version": "v55_constant_leaf_spatial",
+          "first_report": "reports/run_027/screen_results.csv",
+          "accuracy": 0.8101811906816221,
+          "log_loss": 0.38843725499574844
+        },
+        {
+          "version": "v56_nested_linear_leaf",
+          "first_report": "reports/run_027/screen_results.csv",
+          "accuracy": 0.812482024733966,
+          "log_loss": 0.39153069688662095
+        }
+      ],
+      "additional_evidence": [
+        "reports/run_020/protocol.json",
+        "reports/run_027/protocol.json"
+      ],
+      "assessment": "已覆盖对称/局部生长树、直方图提升、加性与二阶交互、线性叶及训练内结构选择，不能把另一种常规树实现作为未覆盖的大方向。",
+      "limit": "只有指定配置；没有证明这些模型族优化后均无效，亦没有义务为穷尽其参数空间继续搜索。"
+    },
+    {
+      "topic": "消费构成、斜向边界与先验约束",
+      "completed_random_recipes": [
+        {
+          "version": "v33_spend_contrasts",
+          "first_report": "reports/run_012/screen_results.csv",
+          "accuracy": 0.8183779119930975,
+          "log_loss": 0.3816067527126354
+        },
+        {
+          "version": "v34_contrasts_spatial",
+          "first_report": "reports/run_012/screen_results.csv",
+          "accuracy": 0.8192407247627265,
+          "log_loss": 0.38178962622693957
+        },
+        {
+          "version": "v39_spending_projection",
+          "first_report": "reports/run_015/screen_results.csv",
+          "accuracy": 0.8123382226056945,
+          "log_loss": 0.3831555619769878
+        },
+        {
+          "version": "v40_projection_spatial",
+          "first_report": "reports/run_015/screen_results.csv",
+          "accuracy": 0.8143514524014955,
+          "log_loss": 0.3831807532344182
+        },
+        {
+          "version": "v51_hierarchical_spend",
+          "first_report": "reports/run_023/screen_results.csv",
+          "accuracy": 0.816508484325568,
+          "log_loss": 0.3835594558058648
+        },
+        {
+          "version": "v59_monotone_control",
+          "first_report": "reports/run_030/screen_results.csv",
+          "accuracy": 0.815933275812482,
+          "log_loss": 0.38853607124479994
+        },
+        {
+          "version": "v60_monotone_spatial",
+          "first_report": "reports/run_030/screen_results.csv",
+          "accuracy": 0.813920046016681,
+          "log_loss": 0.3887729148928695
+        }
+      ],
+      "additional_evidence": [
+        "spending_projection.py",
+        "spending_shares.py",
+        "monotone_spatial.py"
+      ],
+      "assessment": "既有手工单位消费差、严格内层crossfit监督投影、层级占比、匹配单调约束。v34是有效的具体表征改进；后续几何变体没有形成更强证据。",
+      "limit": "不能据此宣称知道模拟器真实公式，也不能从指标方向推出消费的因果效应。"
+    },
+    {
+      "topic": "空间位置及不同睡眠机制",
+      "completed_random_recipes": [
+        {
+          "version": "v23_spatial5",
+          "first_report": "reports/run_006/screen_results.csv",
+          "accuracy": 0.815933275812482,
+          "log_loss": 0.381449255915305
+        },
+        {
+          "version": "v24_spatial9",
+          "first_report": "reports/run_006/screen_results.csv",
+          "accuracy": 0.8140638481449526,
+          "log_loss": 0.3814795078938112
+        },
+        {
+          "version": "v25_spatial_blend",
+          "first_report": "reports/run_006/screen_results.csv",
+          "accuracy": 0.8186655162496405,
+          "log_loss": 0.38182180692352774
+        },
+        {
+          "version": "v45_cryo_experts",
+          "first_report": "reports/run_018/screen_results.csv",
+          "accuracy": 0.8180903077365546,
+          "log_loss": 0.3822368268795094
+        },
+        {
+          "version": "v52_order_coordinate",
+          "first_report": "reports/run_024/screen_results.csv",
+          "accuracy": 0.8192407247627265,
+          "log_loss": 0.381805451457515
+        }
+      ],
+      "additional_evidence": [
+        "reports/gp_spatial_route_review.json",
+        "conditional_experts.py"
+      ],
+      "assessment": "空间样条及与全局模型固定收缩确实已试；已区分Cryo状态专家，并换过顺序坐标。不能把简单再分睡眠/清醒当全新结构。",
+      "limit": "尚未覆盖任意高阶生成模型；GP仅审查后暂缓而非已训练失败。"
+    },
+    {
+      "topic": "缺失值、属性重建和不确定性",
+      "completed_random_recipes": [
+        {
+          "version": "v26_logic_only",
+          "first_report": "reports/run_009/screen_results.csv",
+          "accuracy": 0.815645671555939,
+          "log_loss": 0.3803313032177754
+        },
+        {
+          "version": "v27_unanimous_only",
+          "first_report": "reports/run_009/screen_results.csv",
+          "accuracy": 0.815070463042853,
+          "log_loss": 0.3816379564106453
+        },
+        {
+          "version": "v28_logic_unanimous",
+          "first_report": "reports/run_009/screen_results.csv",
+          "accuracy": 0.8146390566580385,
+          "log_loss": 0.38193093620857094
+        },
+        {
+          "version": "v42_surname_planet",
+          "first_report": "reports/run_017/screen_results.csv",
+          "accuracy": 0.813632441760138,
+          "log_loss": 0.38056797449102386
+        },
+        {
+          "version": "v43_surname_contrasts_spatial",
+          "first_report": "reports/run_017/screen_results.csv",
+          "accuracy": 0.818234109864826,
+          "log_loss": 0.3812622641005374
+        },
+        {
+          "version": "v58_homeplanet_marginal",
+          "first_report": "reports/run_029/screen_results.csv",
+          "accuracy": 0.8192407247627265,
+          "log_loss": 0.3812159370956996
+        },
+        {
+          "version": "v89_Mitra2_missing_flags",
+          "first_report": "reports/run_052/screen_results.csv",
+          "accuracy": 0.8163646821972965,
+          "log_loss": 0.3789453325595731
+        }
+      ],
+      "additional_evidence": [
+        "reports/attribute_mask_research.json",
+        "planet_marginal.py",
+        "rule_ablation.py"
+      ],
+      "assessment": "已测试明确逻辑与同行属性补全、姓氏恢复Planet、训练推理一致的Planet概率展开以及Mitra原13加7数值mask。missing子集总体错误率接近完整子集不是无条件缺失信息的证明，v89的干净实测才是具体反证。",
+      "limit": "v58只覆盖HomePlanet，且是加权complete-data logloss近似，不是全属性精确Bayesian marginal likelihood。Spa正消费恢复R2约0.302并不支持准确重建隐藏消费；实际缺失可能不同于随机遮罩。"
+    },
+    {
+      "topic": "关系、姓名与部署组隔离",
+      "completed_random_recipes": [
+        {
+          "version": "v11_group_context",
+          "first_report": "reports/run_003/screen_results.csv",
+          "accuracy": 0.813057233247052,
+          "log_loss": 0.3851779299215498
+        },
+        {
+          "version": "v12_group_deeper",
+          "first_report": "reports/run_003/screen_results.csv",
+          "accuracy": 0.810468794938165,
+          "log_loss": 0.38678187434525274
+        },
+        {
+          "version": "v77_Mitra_context20",
+          "first_report": "reports/run_043/screen_results.csv",
+          "accuracy": 0.8157894736842105,
+          "log_loss": 0.38078345747383413
+        }
+      ],
+      "additional_evidence": [
+        "reports/top5_group_phase/RESULTS.md",
+        "reports/query_group_review/review.json",
+        "reports/name_representation_review.json",
+        "reports/group_episode_20261116/summary.json"
+      ],
+      "assessment": "已完成无标签peer属性和group-disjoint适配。v85在matched group12为0.81564567，raw为0.81693989；不是与random混比较。query-query图机制不同于训练测试同组标签传播，但已有groupOOF残差和边际改进方向诊断弱。",
+      "limit": "图耦合、原生姓名文本不是已运行候选；GroupId零交集不否定query-query属性信息。保持marginal的copula不能改变逐人最优决策，jointMAP不是逐人accuracy目标。"
+    },
+    {
+      "topic": "从零神经网络、检索和自监督",
+      "completed_random_recipes": [
+        {
+          "version": "v22_mlp",
+          "first_report": "reports/run_005/screen_results.csv",
+          "accuracy": 0.8005464480874317,
+          "log_loss": 0.42461446813873566
+        },
+        {
+          "version": "v41_TabM",
+          "first_report": "reports/run_016/screen_results.csv",
+          "accuracy": 0.8088869715271786,
+          "log_loss": 0.38387284961868473
+        },
+        {
+          "version": "v67_FTTransformer_default",
+          "first_report": "reports/run_035/screen_results.csv",
+          "accuracy": 0.8047167098073051,
+          "log_loss": 0.40434089933238593
+        },
+        {
+          "version": "v68_TabR_S",
+          "first_report": "reports/run_036/screen_results.csv",
+          "accuracy": 0.7966637906241012,
+          "log_loss": 0.41890009285765945
+        },
+        {
+          "version": "v69_matched_scratch_MLP",
+          "first_report": "reports/run_037/screen_results.csv",
+          "accuracy": 0.7962323842392868,
+          "log_loss": 0.4293924303293861
+        },
+        {
+          "version": "v70_SCARF",
+          "first_report": "reports/run_037/screen_results.csv",
+          "accuracy": 0.7979580097785447,
+          "log_loss": 0.42629566445144734
+        }
+      ],
+      "additional_evidence": [
+        "reports/neural_screen_strategy_review.json"
+      ],
+      "assessment": "涵盖MLP、分段线性数值embedding、feature transformer、可训练邻居检索和匹配scratch的SCARF。FTT/TabR/SCARF均patience结束而非触cap；SCARF只比scratch净多12正确且折间方向混合。",
+      "limit": "不能把compact13对engineered树的结果当架构纯因果对照，也不把一个默认配置否定整个NN家族。VIME重建式辅助任务未直接运行，但仅换自监督损失尚无独立支持改善Transported的证据。"
+    },
+    {
+      "topic": "不同预训练先验及实际全上下文",
+      "completed_random_recipes": [
+        {
+          "version": "TabPFN_v2_compact8",
+          "first_report": "reports/run_008/screen_results.csv",
+          "accuracy": 0.8155018694276676,
+          "log_loss": 0.38080959344071424
+        },
+        {
+          "version": "v54_TabPFN_architecture_ensemble",
+          "first_report": "reports/run_026/screen_results.csv",
+          "accuracy": 0.8140638481449526,
+          "log_loss": 0.37946247497296987
+        },
+        {
+          "version": "v65_TabPFN_default32",
+          "first_report": "reports/run_033/screen_results.csv",
+          "accuracy": 0.81765890135174,
+          "log_loss": 0.37956587227367505
+        },
+        {
+          "version": "v36_TabICL_compact4",
+          "first_report": "reports/run_014/screen_results.csv",
+          "accuracy": 0.8097497842968076,
+          "log_loss": 0.38594811029740045
+        },
+        {
+          "version": "v71_Mitra2_zeroshot",
+          "first_report": "reports/run_038/screen_results.csv",
+          "accuracy": 0.816508484325568,
+          "log_loss": 0.38019593489424935
+        },
+        {
+          "version": "v78_Mitra1_zeroshot",
+          "first_report": "reports/run_044/screen_results.csv",
+          "accuracy": 0.7995398331895313,
+          "log_loss": 0.41970895779031236
+        },
+        {
+          "version": "v82_TabDPT13_full8",
+          "first_report": "reports/run_047/screen_results.csv",
+          "accuracy": 0.8119068162208801,
+          "log_loss": 0.3794749686418978
+        },
+        {
+          "version": "v83_Kumo_medium8",
+          "first_report": "reports/run_048/screen_results.csv",
+          "accuracy": 0.8183779119930975,
+          "log_loss": 0.3696693949807155
+        },
+        {
+          "version": "EXAONE_v91_CAST_default8",
+          "first_report": "reports/run_054/screen_results.csv",
+          "accuracy": 0.8098935864250791,
+          "log_loss": 0.3762841176631881
+        }
+      ],
+      "additional_evidence": [
+        "reports/top5_generation_phase/RESULTS.md"
+      ],
+      "assessment": "已经存在多个实际可复现的合成预训练先验及结构，区别于只改模型名称。后续新权重必须先证明交付结构、来源及资源边界；本次不重开已关闭的授权或来源检索。",
+      "limit": "这些结果不是所有表格foundation模型的穷尽清单，模型数不能充当可达准确率上界。"
+    },
+    {
+      "topic": "任务适配、训练随机性及支持集长度",
+      "completed_random_recipes": [
+        {
+          "version": "v47_TabPFN_frozen1",
+          "first_report": "reports/run_021/screen_results.csv",
+          "accuracy": 0.8088869715271786,
+          "log_loss": 0.389043444071874
+        },
+        {
+          "version": "v48_TabPFN_finetuned1",
+          "first_report": "reports/run_021/screen_results.csv",
+          "accuracy": 0.8087431693989071,
+          "log_loss": 0.38951149872990687
+        },
+        {
+          "version": "v75_Mitra_lastblock50",
+          "first_report": "reports/run_041/screen_results.csv",
+          "accuracy": 0.8152142651711245,
+          "log_loss": 0.3791897947002023
+        },
+        {
+          "version": "v76_Mitra_lastblock100",
+          "first_report": "reports/run_042/screen_results.csv",
+          "accuracy": 0.816508484325568,
+          "log_loss": 0.3788984543405884
+        },
+        {
+          "version": "v81_Mitra_full_episode50",
+          "first_report": "reports/run_046/screen_results.csv",
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.3750928747453614
+        },
+        {
+          "version": "v87_Mitra_full_episode50_seed100",
+          "first_report": "reports/run_051/screen_results.csv",
+          "accuracy": 0.816508484325568,
+          "log_loss": 0.37483878659371683
+        },
+        {
+          "version": "v88_Mitra_full_episode50_two_seed_mean",
+          "first_report": "reports/run_051/screen_results.csv",
+          "accuracy": 0.8189531205061835,
+          "log_loss": 0.3740018824295269
+        }
+      ],
+      "additional_evidence": [
+        "reports/top5_adaptation_phase/RESULTS.md",
+        "reports/group_episode_20261116/summary.json",
+        "reports/mitra_support3072_screen_review.json"
+      ],
+      "assessment": "已经覆盖预训练冻结/任务微调、末块与全参、限定50到100延长、训练程序第二seed及均值。1024训练支持与部署完整上下文的差距是具体未解决假设，当前v93正按配对query/原support前缀的唯一3072方案检验，不能另提相同方向当新路线。",
+      "limit": "本报告不读取run056 OOF、训练曲线或结果；父任务/项目说明中已出现的中间结果不用于结论。即使v93成功也不能自动延长support/steps/seed，失败也不能说明所有context适配无效。"
+    },
+    {
+      "topic": "融合、校准及元学习",
+      "completed_random_recipes": [
+        {
+          "version": "v35_nested_stack",
+          "first_report": "reports/run_013/screen_results.csv",
+          "accuracy": 0.8153580672993961,
+          "log_loss": 0.3786607777711561
+        },
+        {
+          "version": "v57_seed_architecture_fusion",
+          "first_report": "reports/run_028/screen_results.csv",
+          "accuracy": 0.818809318377912,
+          "log_loss": 0.376144452298344
+        },
+        {
+          "version": "v61_nested_global_fusion",
+          "first_report": "reports/run_031/screen_results.csv",
+          "accuracy": 0.8186655162496405,
+          "log_loss": 0.37647094628297106
+        },
+        {
+          "version": "v62_nested_cryo_fusion",
+          "first_report": "reports/run_031/screen_results.csv",
+          "accuracy": 0.8175150992234685,
+          "log_loss": 0.37667557615160707
+        },
+        {
+          "version": "v73_AutoGluon_multilayer",
+          "first_report": "reports/run_039/screen_results.csv",
+          "accuracy": 0.8073051481161921,
+          "log_loss": 0.38473969379881284
+        },
+        {
+          "version": "v80_MitraCat_mean",
+          "first_report": "reports/run_045/screen_results.csv",
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.3758781139960661
+        },
+        {
+          "version": "v84_Mitra_TabDPT_Kumo_equal3",
+          "first_report": "reports/run_049/screen_results.csv",
+          "accuracy": 0.8157894736842105,
+          "log_loss": 0.3735336307915838
+        },
+        {
+          "version": "v86_Mitra_prior_adapt_equal2",
+          "first_report": "reports/run_050/screen_results.csv",
+          "accuracy": 0.8180903077365546,
+          "log_loss": 0.376336060676996
+        },
+        {
+          "version": "EXAONE_v92_rawMitra_half",
+          "first_report": "reports/run_055/screen_results.csv",
+          "accuracy": 0.8142076502732241,
+          "log_loss": 0.37598562803281804
+        }
+      ],
+      "additional_evidence": [
+        "reports/strong_model_complementarity_review.json",
+        "reports/automl_method_review.json",
+        "reports/top5_crossfamily_phase/RESULTS.md",
+        "reports/threshold_oracle_diagnostic.json",
+        "reports/fusion_threshold_oracle_diagnostic.json"
+      ],
+      "assessment": "严格nested线性及条件融合、带原始特征的两层异构bagged stacking、预固定跨架构与prior/adapt均值均有完整结果。互补错误oracle不等于有可泛化的路由信号，logloss改善不等于accuracy改善。",
+      "limit": "现有AutoGluon未使用Mitra作base，故不是三强模型非线性nested stack的等价实验；但后者需重新计算inner baseOOF并承受约3090到4636训练量漂移，没有已证实的路由变量支撑。"
+    },
+    {
+      "topic": "训练目标与软标签",
+      "completed_random_recipes": [
+        {
+          "version": "v63_crossentropy_control",
+          "first_report": "reports/run_032/screen_results.csv",
+          "accuracy": 0.8192407247627265,
+          "log_loss": 0.38178962622693957
+        },
+        {
+          "version": "v64_label_smoothing",
+          "first_report": "reports/run_032/screen_results.csv",
+          "accuracy": 0.8146390566580385,
+          "log_loss": 0.3849661370931021
+        }
+      ],
+      "additional_evidence": [
+        "reports/native_head_diagnostic/result.json",
+        "reports/pseudolabel_route_review.json"
+      ],
+      "assessment": "已做匹配label smoothing。native10与binary条件CE的差项在三个冻结未更新episode平均约6.6e-5到7.9e-5，最大不到0.0006，故不把压8个无用类别当主瓶颈。固定双教师0.98伪标签仅为描述性审查，主要覆盖已有容易例，未训练自举候选。",
+      "limit": "未更新checkpoint诊断不证明适配全程两种损失相等，也不证明focal/样本重加权一定无效；但目前无独立标签审计或已验证的噪声/成本不对称机制可支持改变目标。"
+    }
+  ],
+  "unresolved_but_not_recommended_gaps": [
+    {
+      "gap": "query自适应检索训练上下文，代替全局uniform support",
+      "difference": "不是增加support数量，也不完全等同TabR：可在已有预训练模型中依query选择labelled context。",
+      "reason_not_selected": "没有经过独立验证的任务距离/检索表示；raw13尺度、类别和缺失混合，检索可能偏置类先验及丢失全局参照。既有TabR弱只是相关反证而非等价否定；v93已检验更直接且控制更清楚的context不足假设。此刻再选择距离、邻居数、监督embedding会引入新自由度。"
+    },
+    {
+      "gap": "显式潜变量生成模型或模拟器逆推",
+      "difference": "可从联合属性生成/潜在状态推断个体结果，而非判别式边界。",
+      "reason_not_selected": "公开属性逻辑只支持零消费、同行与位置等局部约束，不能唯一识别Transported生成公式或共同冲击。新模型仍需用同6954标签选择隐变量/结构，容易把已见残差写成故事。现有专家/平滑/关系与单调诊断没有支持一个可预先固定的新生成结构；不猜模拟器或外部答案。"
+    },
+    {
+      "gap": "显式标签噪声建模、难例重加权、accuracy驱动选步",
+      "difference": "改变训练风险或checkpoint选择而不是权重来源。",
+      "reason_not_selected": "没有独立重复标注或可信噪声机制；模型间共错既可能来自不可观测信息也可能是共同偏差，不能当错标签。通过同一OOF识别噪声再过滤会造成选择偏差。把51个step按927/928行inner accuracy选点还会增加离散选择方差；尚无训练目标失配的大量级证据，不建议仅为换目标而试。"
+    },
+    {
+      "gap": "域适配/label shift与conditional shift校正",
+      "difference": "按部署分布改变估计而非调模型容量。",
+      "reason_not_selected": "已知GroupId不交集已进入matched GroupCV及v85协议，raw group12略高于random，不支持旧random主要依靠同组泄漏。此审查没有独立识别p(y|x)或标签先验变化的证据；未标注属性分布即使有差异也不足以认定label shift。不能从本地与线上总分差、或预测正例比例倒推测试标签先验。"
+    }
+  ],
+  "validation_and_stopping": {
+    "new_minimal_model_validation_design": null,
+    "why_no_design": "未推荐新候选，故不虚构一个供继续搜索的默认模型/超参/阈值；上述缺口是反方讨论，不是待执行队列。",
+    "existing_plan_unchanged": "v93只按已冻结plan完整三折、既定acc/LL/折间门槛、资源截止及单独导出decision处置，不用本报告改门槛或追认中间结果。",
+    "conditions_to_reopen": "需要具体可审计的新前提：例如训练/推理实际接口错误证据，合法来源的明确生成结构，或一个与既有配方实质不同、在不读取外层标签选择参数的条件下能冻结的机制。仅名字新、更多计算、oracle纠错上限、少量online增减或未用完次数均不够。",
+    "future_validation_boundaries": "若后来形成新证据，须先另冻一个候选及matched control；所有预处理/结构选择/元训练限定outertrain，保存原dev与group identities、禁止复用old holdout或full-dev OOF训练新meta。模型选择须有同等输入与运行预算的对照；新划分仍同开发标签，不称独立确认。",
+    "falsifiability": "新机制必须预先说明它应改变什么以及不改变什么，资源完整通过后只完成一次预定检验；不一致、对照不复现或未通过预定收益条件即归档，不追加关系/子群/阈值/seed/weight作为救援。",
+    "online": "没有任何新上传授权或候选文件。本轮剩余名额是上限，不是需要消耗的实验目标；若没有合格且另行批准的候选，保留名额。",
+    "interpretation": "用户1pp以内同等实用性能规则保留；A是筛选档而非统计等效。反复使用6954标签导致适应性选择偏差，bootstrap和多split不能消除；本报告不产出S结论。"
+  },
+  "resource_estimate": {
+    "new_training_seconds": 0,
+    "new_gpu_work": false,
+    "new_submission_attempts": 0,
+    "review_only": "仅本地已完成汇总、协议和描述性诊断阅读，约15分钟上限；不拟合、不下载、不安装、不评分新概率、不运行已有模型。",
+    "hypothetical_routes": "没有实际候选所以不报未经探针的训练时长或内存承诺。现行v93预算以其独立已冻结plan为准。"
+  },
+  "provenance": {
+    "inputs": "已完成reports与少量现有实现静态阅读；没有读取原始train/test数据或新的labels/OOF数组。AGENTS.md被读作范围约束，其中既有中间状态不作为方法证据。",
+    "closed_branches": "不重新研究TabPFN授权、Orion、Forest或TabFlex，也不重新搜索权重。",
+    "modified_files": [
+      "reports/remaining_method_coverage_review_20261117.json"
+    ],
+    "commit_performed": false,
+    "source_result_or_protocol_modified": false,
+    "new_accuracy_or_candidate_probability_computed": false,
+    "old_holdout_labels_read": false,
+    "test_answers_read": false,
+    "source_sha256": {
+      "reports/run_003/screen_results.csv": "5c06fe367ee1a981ac098d366ce8288de0180d82408bcf54c5abf88d6f794acc",
+      "reports/run_004/screen_results.csv": "7f87662e390f0579f317af6a93ecd2fc6fdeb6fc49722bc3a0ee5524bf758f20",
+      "reports/run_005/screen_results.csv": "ed7383cebb8200412cfc9c8a1addde4c70ee44a7de873072b93fb16e60d3d135",
+      "reports/run_006/screen_results.csv": "ad3a8cdbc2b49eaff8527f976cf2c16b51f433511d3a48f46fe81df10735869c",
+      "reports/run_007/screen_results.csv": "2fe536f153195832229abdeac09730fa174faa36c436eb46dacf6f35ebf68e85",
+      "reports/run_008/screen_results.csv": "dcba195c76709983fbf770ad6c4e06327fc90b99068cee9903e92c0e580f1c9b",
+      "reports/run_009/screen_results.csv": "474c943071744758e40b780e94d576f6de0291c118f681a7bf09265deeee896a",
+      "reports/run_010/screen_results.csv": "d1d538a70478f414b13535f62c8eaa0ebe14f46679b34ce68fafda5f7d9a1d5f",
+      "reports/run_011/screen_results.csv": "cb9c4428569b09cbea72d0673071fbb0e0b1f89d4661d3f6962aec9985c17f9c",
+      "reports/run_012/screen_results.csv": "eaa7673c7236ac6021686b9e3cf9618e94997aa6e64fb2750c2b8b90cca70980",
+      "reports/run_013/screen_results.csv": "c7a8856713e6410b2c8cda58e547fc7d1f9dbc9cfa36b1ca5196d32949913aa0",
+      "reports/run_014/screen_results.csv": "873d0944985e0c033c0aec73827fb7aa9565ba7903f3bcf2eb76d32f4fba3277",
+      "reports/run_015/screen_results.csv": "b47d7da5db2409972345361bf04bf1cc7704fabff0e0f77323692a0bc97c33ac",
+      "reports/run_016/screen_results.csv": "a4063436c99a69a9e68c33696b155c9b2b847b51c4d285e09825d20fe1138bff",
+      "reports/run_017/screen_results.csv": "d8c266e3b1bf2b64f3c782b3180b064c5ec6fcf213d1d70ecbf021711391a81d",
+      "reports/run_018/screen_results.csv": "3b5caf221e2ce754b5cd51231f9c2ed634fcce7c556f136dc76514b05181b1ab",
+      "reports/run_019/screen_results.csv": "a3729925984f413e41f85ef03f2acbbc630ff57afab626e801fd0831cac65bf2",
+      "reports/run_020/screen_results.csv": "39ead9e9e6c451cec76159ed084b36fd51ec9637a0cf7d30159f414b03035d9e",
+      "reports/run_021/screen_results.csv": "250780c355fb132675936256f709c78ddc362a5478c7a24528ca791ee31d7233",
+      "reports/run_022/screen_results.csv": "98178da1e315ceeec978a71852e19e79c7d4d93434f1774ca15d80be9ec55da0",
+      "reports/run_023/screen_results.csv": "4c4833d2fdfccc77f1aaa3f4cab31af94e9a9861a5108c3c78db294042ecf2de",
+      "reports/run_024/screen_results.csv": "efd123f73c068bd9551eb67964145d86f4a8b0fd0a8a6a46b712d98b7da08732",
+      "reports/run_025/screen_results.csv": "9c085b213537380ee41d9079e0342558edf9be64785de11bd30f84563b692879",
+      "reports/run_026/screen_results.csv": "4b0d2917b966534e514d77a192994a81c6896ee81e1922204e67b81dafbb8c15",
+      "reports/run_027/screen_results.csv": "1480e7afda443cb7c131960bd1319d806dafbb044ef63238a6286a5b9664c5c5",
+      "reports/run_028/screen_results.csv": "78e82958f44ac1f2a6e2237170d93ac6dc47854c7596aaff34b4a919524ba10a",
+      "reports/run_029/screen_results.csv": "6c0e645727f7746f108b7b3e32d8363fec7bd8433d5fecffce85a0fdef0f98e5",
+      "reports/run_030/screen_results.csv": "65ddb3678312ef90a3d2849625bec9299eb2ce48fdd120f7995ebc8b65218ff9",
+      "reports/run_031/screen_results.csv": "ad3f94696c8a280087dd77ad025f54104c9b21bcdbbe55bc23004433c9c638d7",
+      "reports/run_032/screen_results.csv": "31c80ff1d536360dc03468ccd5e0dfcb67c99b942f562cafd4950189c739f405",
+      "reports/run_033/screen_results.csv": "5c36248f1b16f5c009e748a712715efed6379250f6b27adca9cbe05d2aa71e02",
+      "reports/run_035/screen_results.csv": "d264b6d03820173ecffb6a7d686706d989b69bad483bfe6405c3ffe734f625da",
+      "reports/run_036/screen_results.csv": "c6a16c91b7b4e9eb4c68396e75ffd2426db3a819bcd65cf843a5e25e7b10265b",
+      "reports/run_037/screen_results.csv": "ab3e927a7b6bd6670847340cc30d25974589b01bf828997412442af571a082e3",
+      "reports/run_038/screen_results.csv": "54b4eda9bdbd330b06dc3ff53b8e38624e91a92945c063de93b1cc32dc16a05d",
+      "reports/run_039/screen_results.csv": "730026123eb8a2f4eef670f1aa29bc7b14cf3ecb489c18e14d51ebfd628df11d",
+      "reports/run_040/screen_results.csv": "88a9f7f40f85cc5a0d31526ab72a6f166be4c1bbd65bf8e2deecf596d87b33d4",
+      "reports/run_041/screen_results.csv": "0ba185ccab9865559559390474407ee6ab1ce01b6731eb28f2f2ee051c269b15",
+      "reports/run_042/screen_results.csv": "d681f96e2f90c33291b69b57688f5da5f615a5b55cae523781e56a1447518cd4",
+      "reports/run_043/screen_results.csv": "77246c0891c5e1990ecc8894a9ec1ef357330a16d0a461fd9c40f64753296f33",
+      "reports/run_044/screen_results.csv": "ce097a6799360495c6e6ecb21cae6b19734dbf9b04ceeb3e957fa6def273c9da",
+      "reports/run_045/screen_results.csv": "1b96f0b0fbad67c11a46b487e105835682b35ec05b1a0facbbe57558beb8144e",
+      "reports/run_046/screen_results.csv": "6d19d1a57c4bc2b1f8f4d3ecfa5ce472c123e2dbf0cc123d53318717eccaacb4",
+      "reports/run_047/screen_results.csv": "de8bdeba721fedc0bf6c02f5484724d534db58b1c02909bbee212844c0264e35",
+      "reports/run_048/screen_results.csv": "519b7db60cded82a7fdbd62798d42f50807fe351fb63923939eafe470278b371",
+      "reports/run_049/screen_results.csv": "05e560f28aa944a3a411fd747a2dc8ae82450e2ee8507a4e3394bb37e0ea132a",
+      "reports/run_050/screen_results.csv": "007cde754416df3683bcb9cc6745d8ff7f04357b557910b0b1a645c61689910e",
+      "reports/run_051/screen_results.csv": "f59ed68cea527d2b632fa19e1c5b4924618454d6ce0480ad6c2d5de314330d0c",
+      "reports/run_052/screen_results.csv": "19a6cad1323a7211191faa97f16f811217463c4623ebedecc7a1c3f8bc0f367c",
+      "reports/run_054/screen_results.csv": "18c2afd2338d0a8f20d09df804e6be8c93d6b6d3222b0260073d82c07029f6ee",
+      "reports/run_055/screen_results.csv": "97b4bbef4abf7d665c6b8f3d70f5ab50701a9e34316a262cdd0c183a370d006b"
+    },
+    "supporting_evidence_sha256": {
+      "reports/neural_screen_strategy_review.json": "5cd6695499789f70914237a5ab69cf78ab21203138b64d6c446c00a2123d0715",
+      "reports/name_representation_review.json": "4673e973aeea23707eb7b82c8117e188dedfe0abfe1b206a6d7d3cb94eddb91e",
+      "reports/gp_spatial_route_review.json": "a2431e9388585cecc9b2b0446e17422f42161802428c4c7545b92f728e75cd5c",
+      "reports/query_group_review/review.json": "52711a6346011594357bdcd1e47779b5ab1377814bc8a9e93aacbdb3d28e807d",
+      "reports/pseudolabel_route_review.json": "e17526dbe82e7ad005081d9b645fef289c1d5b4251048ea51421d87546141dc9",
+      "reports/threshold_oracle_diagnostic.json": "f9b664d8cdd2f4100bfebab4e534dece542c641dc410da9adac784a767eb37f0",
+      "reports/fusion_threshold_oracle_diagnostic.json": "231dcfd6093abe149b390d0bf256780aeca06c914ddbbde03f8191733da168f3",
+      "reports/attribute_mask_research.json": "961f4eb1e71c4bc73c60d1c504f4fea927e93d441d81c540c1217e776f462501",
+      "reports/strong_model_complementarity_review.json": "39dba104086bbef723a5c406f2ee162ae1ec46aec497a31a83889005e22806f1",
+      "reports/automl_method_review.json": "c8bc00e85d8bc778a3717445a6d79990b4a81c3352ed1a21ffbfcfba5ef0b7ad",
+      "reports/native_head_diagnostic/result.json": "e98bbe1743ed395b0648873b316285ed598efde732a36e341a269b4afd8ce619",
+      "reports/group_episode_20261116/summary.json": "1d5e0a8a7055f9d052986d2cf87d240479b36e9f2aedc1829a6ab0a35273745c",
+      "reports/top5_group_phase/RESULTS.md": "211c7ea3aa7444a1e59d5e2ccf353d6d5da3861d5820f834f315e502601d5cbb",
+      "reports/top5_generation_phase/RESULTS.md": "692ec3ddf7bffbafa0c44f0551aa0cd57391ff0e15412d5ff1f5ea1b3d8fbf8b",
+      "reports/top5_crossfamily_phase/RESULTS.md": "aa621aab76861a849321209ff57829c250b4e88c903db3fbd444644d1ade88b5",
+      "reports/top5_adaptation_phase/RESULTS.md": "53a4e0efee2db86ee9bf9a6246383d2f3f7474e4c2d09ed85830bb9ad56f10d7",
+      "reports/mitra_support3072_screen_review.json": "e90165ae596e2d251b775cf6fba4f073281ada655ce13b147cebdf498fb8341a"
+    }
+  }
+}
