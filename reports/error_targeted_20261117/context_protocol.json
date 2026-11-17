@@ -1,0 +1,17 @@
+{
+  "name": "Mitra_Earth_Cryo_conditional_context_zeroshot",
+  "status": "frozen_before_execution",
+  "seed": 20261112,
+  "fold_index": 0,
+  "states": ["True", "False"],
+  "budget_seconds": 1200,
+  "training": "OriginalSKF3 fold0 4636 training rows. Each Earth/Cryo-known query uses all and only outertraining rows with identical Earth and Cryo state. Training labels only; no support sampling/truncation or adaptation.",
+  "input": "Original compact13; original MitraPreprocessor fitted separately on each matching support pool; native constant-column deletion, no manual feature deletion or added columns.",
+  "prediction": "Fresh original checkpoint per route, zero-shot, seed20261112, MPSbf16/FP32weights, CPU4, memoryfraction0.65, querychunk2318. Both routes are one fixed candidate; other rows remain bitwise equal to authenticated rawMitra cache.",
+  "control": "Authenticated run038 v71 original randomfold0 rawMitra probabilities, same2318 queryIDs. Not the fixed15 adapted model.",
+  "labels": "Only original6954 development labels read; old1739 labels never read. Query labels/error masks used only after prediction for reporting.",
+  "report": "Whole2318 accuracy/logloss/paired repairs-breaks; original292 commonwrong and1736 commonright; fixed Earth/CryoTrue andEarth/CryoFalse slices and falsepositive/falsenegative counts. No state selection, thresholds, blend weights or additionalfolds.",
+  "interpretation": "Adaptive reused singlefold diagnostic, not stable-superiority evidence. GroupIDs may overlap across original randomsplit but passengerIDs cannot; no peer labels are looked up. Attribute conditioning legitimately changes support label distribution. The recipe also changes local vocabularies, means, quantiles, active features and corresponding mirror assignments, so it is not a pure causal isolation of support selection.",
+  "counterevidence": "RawMitra already observes Planet/Cryo; smaller support can lose information. Learning curves favor more data. Old Cryo CatBoost experts and spatial offsets failed, but neither tested this zero-shot support restriction.",
+  "execution": "Requires committed source/protocol dependencies before either model. Both routes must finish; failures preserve evidence without a completed score. No new CV/resourceprobe/export/upload. Parent decides whether to execute after reviewing current experiments."
+}

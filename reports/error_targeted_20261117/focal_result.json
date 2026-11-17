@@ -1,0 +1,48 @@
+{
+  "status": "complete_single_fold_adaptive_diagnostic",
+  "name": "v100_Mitra_focal_gamma2_fixed15",
+  "source_commit": "d5098462a166e771143a32687ed27a4ea97407ee",
+  "accuracy": 0.8093183779119931,
+  "log_loss": 0.3873917758464813,
+  "control_accuracy": 0.8218291630716135,
+  "control_log_loss": 0.3761722147464752,
+  "paired": {
+    "all": {
+      "rows": 2318,
+      "repairs": 26,
+      "breaks": 55,
+      "net_correct": -29
+    },
+    "five_common_wrong": {
+      "rows": 292,
+      "repairs": 3,
+      "breaks": 1,
+      "net_correct": 2
+    },
+    "five_common_correct": {
+      "rows": 1736,
+      "repairs": 2,
+      "breaks": 8,
+      "net_correct": -6
+    },
+    "Earth_asleep": {
+      "rows": 387,
+      "repairs": 12,
+      "breaks": 14,
+      "net_correct": -2
+    },
+    "Earth_awake": {
+      "rows": 808,
+      "repairs": 11,
+      "breaks": 20,
+      "net_correct": -9
+    }
+  },
+  "common_wrong_correct": 3,
+  "common_correct_damaged": 9,
+  "fixed_steps": 15,
+  "matched_episode_ids": true,
+  "seconds": 163.98947495804168,
+  "interpretation": "Only loss changed versus cached fixed15compact13; one reused fold, no stable-superiority claim or automatic upload.",
+  "prediction_sha256": "fbbbcf68405b68aa457afc5242ea5ef0bc35b3824376b728624ba0187b90b5f0"
+}
