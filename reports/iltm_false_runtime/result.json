@@ -1,0 +1,124 @@
+{
+  "status": "complete",
+  "exit_code": 0,
+  "timed_out": false,
+  "seconds": 2.641958166961558,
+  "worker": {
+    "status": "complete",
+    "no_weights_or_real_data": true,
+    "stages": [
+      {
+        "name": "before_numeric_imports",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_threadpoolctl",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_numpy_pandas_torch_sklearn",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_complete_native_iltm_import",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_torch_matmul_backward",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_numpy_reduced_svd",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_native_preprocessing",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_torch_again",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "finished",
+        "duplicate_runtime_tolerance": "FALSE"
+      }
+    ],
+    "svd_max_reconstruction_error": 9.880984919163893e-15,
+    "openmp_runtimes": [
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libomp",
+        "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/torch/lib/libomp.dylib"
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libomp",
+        "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib"
+      }
+    ]
+  },
+  "no_candidate_scores": true,
+  "no_complete_training_qualification": true,
+  "no_automatic_cv": true,
+  "failure_policy": "Close this fixed FALSE runtime route on failure; do not enable TRUE or search overrides.",
+  "last_progress": {
+    "status": "incomplete",
+    "no_weights_or_real_data": true,
+    "stages": [
+      {
+        "name": "before_numeric_imports",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_threadpoolctl",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_numpy_pandas_torch_sklearn",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_complete_native_iltm_import",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_torch_matmul_backward",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_numpy_reduced_svd",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_native_preprocessing",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "after_torch_again",
+        "duplicate_runtime_tolerance": "FALSE"
+      },
+      {
+        "name": "finished",
+        "duplicate_runtime_tolerance": "FALSE"
+      }
+    ],
+    "svd_max_reconstruction_error": 9.880984919163893e-15,
+    "openmp_runtimes": [
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libomp",
+        "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/torch/lib/libomp.dylib"
+      },
+      {
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libomp",
+        "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib"
+      }
+    ]
+  }
+}
