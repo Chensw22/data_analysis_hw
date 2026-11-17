@@ -1,131 +1,88 @@
 {
-  "status": "incomplete",
-  "completed_folds": 2,
-  "folds": [
-    {
-      "status": "complete",
-      "fold": 0,
-      "seed": 20261112,
-      "metrics": {
-        "accuracy": 0.8192407247627265,
-        "log_loss": 0.3718455996912753,
-        "fold_accuracy": [
-          0.8192407247627265
-        ],
-        "fold_log_loss": [
-          0.3718455996912753
-        ]
-      },
-      "reference": {
-        "accuracy": 0.814495254529767,
-        "log_loss": 0.3771940487220633,
-        "fold_accuracy": [
-          0.814495254529767
-        ],
-        "fold_log_loss": [
-          0.3771940487220633
-        ]
-      },
-      "selected_steps": 29,
-      "train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
-      "validation_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
-      "paired": {
-        "overall": {
-          "corrected": 64,
-          "regressed": 53,
-          "disagreements": 117,
-          "accuracy_delta": 0.004745470232959459
-        },
-        "folds": [
-          {
-            "corrected": 64,
-            "regressed": 53,
-            "disagreements": 117,
-            "accuracy_delta": 0.004745470232959459
-          }
-        ]
-      },
-      "paired_inner_steps": 50,
-      "paired_common_refit_steps": 29,
-      "training_log_sha256": "e4a15f2d120c323d04fe71c9bd5c9c75f06ea5e4ac393dd76526c0154c8dcdbf",
-      "seconds": 3557.7907961249584,
-      "resources_after_forward": {
-        "max_rss_bytes": 688357376,
-        "mps_current_bytes": 302680320,
-        "mps_driver_bytes": 3617374208,
-        "mps_recommended_max_bytes": 12713115648,
-        "mps_measurement": "snapshots_not_peak"
-      },
-      "resources_after_release": {
-        "max_rss_bytes": 689913856,
-        "mps_current_bytes": 0,
-        "mps_driver_bytes": 1867776,
-        "mps_recommended_max_bytes": 12713115648,
-        "mps_measurement": "snapshots_not_peak"
-      }
+  "status": "complete",
+  "candidate": "v93_Mitra_support3072",
+  "completed_folds": 3,
+  "metrics": {
+    "accuracy": 0.821110152430256,
+    "log_loss": 0.37185271199904935,
+    "fold_accuracy": [
+      0.8192407247627265,
+      0.8235547886108714,
+      0.82053494391717
+    ],
+    "fold_log_loss": [
+      0.3718455996912753,
+      0.3629980913396436,
+      0.38071444496622914
+    ]
+  },
+  "reference": {
+    "accuracy": 0.817946505608283,
+    "log_loss": 0.3750928747453614,
+    "fold_accuracy": [
+      0.814495254529767,
+      0.8244176013805005,
+      0.8149266609145815
+    ],
+    "fold_log_loss": [
+      0.3771940487220633,
+      0.36420196514987585,
+      0.3838826103641451
+    ]
+  },
+  "continuation": {
+    "passed": true,
+    "checks": {
+      "pooled_accuracy": true,
+      "pooled_log_loss": true,
+      "two_nonlower_folds": true,
+      "strict_pooled_improvement": true
     },
-    {
-      "status": "complete",
-      "fold": 1,
-      "seed": 20261113,
-      "metrics": {
-        "accuracy": 0.8235547886108714,
-        "log_loss": 0.3629980913396436,
-        "fold_accuracy": [
-          0.8235547886108714
-        ],
-        "fold_log_loss": [
-          0.3629980913396436
-        ]
+    "nonlower_folds": 2,
+    "S_supported": false,
+    "automatic_export": false,
+    "automatic_upload": false
+  },
+  "paired": {
+    "overall": {
+      "corrected": 138,
+      "regressed": 116,
+      "disagreements": 254,
+      "accuracy_delta": 0.0031636468219730096
+    },
+    "folds": [
+      {
+        "corrected": 64,
+        "regressed": 53,
+        "disagreements": 117,
+        "accuracy_delta": 0.004745470232959459
       },
-      "reference": {
-        "accuracy": 0.8244176013805005,
-        "log_loss": 0.36420196514987585,
-        "fold_accuracy": [
-          0.8244176013805005
-        ],
-        "fold_log_loss": [
-          0.36420196514987585
-        ]
+      {
+        "corrected": 31,
+        "regressed": 33,
+        "disagreements": 64,
+        "accuracy_delta": -0.0008628127696290733
       },
-      "selected_steps": 50,
-      "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
-      "validation_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
-      "paired": {
-        "overall": {
-          "corrected": 31,
-          "regressed": 33,
-          "disagreements": 64,
-          "accuracy_delta": -0.0008628127696290733
-        },
-        "folds": [
-          {
-            "corrected": 31,
-            "regressed": 33,
-            "disagreements": 64,
-            "accuracy_delta": -0.0008628127696290733
-          }
-        ]
-      },
-      "paired_inner_steps": 50,
-      "paired_common_refit_steps": 47,
-      "training_log_sha256": "28340d8f1f05956373b3e3c860ab26ba29c3988efa17fb27ce6e872dee5a22f9",
-      "seconds": 4709.601982791908,
-      "resources_after_forward": {
-        "max_rss_bytes": 698843136,
-        "mps_current_bytes": 302680320,
-        "mps_driver_bytes": 3617374208,
-        "mps_recommended_max_bytes": 12713115648,
-        "mps_measurement": "snapshots_not_peak"
-      },
-      "resources_after_release": {
-        "max_rss_bytes": 698843136,
-        "mps_current_bytes": 0,
-        "mps_driver_bytes": 1867776,
-        "mps_recommended_max_bytes": 12713115648,
-        "mps_measurement": "snapshots_not_peak"
+      {
+        "corrected": 43,
+        "regressed": 30,
+        "disagreements": 73,
+        "accuracy_delta": 0.005608283002588421
       }
-    }
-  ],
-  "partial_not_a_winner": true
+    ]
+  },
+  "disclosure": "Adaptive development after earlier experiments and online v81; reused folds, not independent confirmation. Same maximum query-target updates, larger FLOPs; selected refit counts may differ. No S claim.",
+  "old_holdout_labels_read": false,
+  "S_supported": false,
+  "automatic_export": false,
+  "automatic_upload": false,
+  "externally_supervised": true,
+  "budget_seconds": 18000,
+  "result_files_sha256": {
+    "v93_Mitra_support3072_seed20261112.npz": "cf0028810e39bde75d9cd534a18dc4e9019ae21b96fcee1f9d0944de975a19fb",
+    "screen_results.csv": "d9ee2242c6dc17ff86cd8946f4bb15a49ebe8f8e3a893726d55cf29a9cbc5b57",
+    "assessment.json": "2767dca193031f5db3c818d17bf07b86088844ad8f353b4335437a1100606295",
+    "selection.json": "ab00a42b1fe8f85c48f4eebed8e9bc8ba413cbb09acdee40426c84a2769a7f96",
+    "worker_result.json": "77b95dc7747e15969cb2751d9df7ebce921e44feddc8b746456d448227335e85"
+  }
 }

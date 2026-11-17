@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "fold": 2,
+  "seed": 20261114,
+  "metrics": {
+    "accuracy": 0.82053494391717,
+    "log_loss": 0.38071444496622914,
+    "fold_accuracy": [
+      0.82053494391717
+    ],
+    "fold_log_loss": [
+      0.38071444496622914
+    ]
+  },
+  "reference": {
+    "accuracy": 0.8149266609145815,
+    "log_loss": 0.3838826103641451,
+    "fold_accuracy": [
+      0.8149266609145815
+    ],
+    "fold_log_loss": [
+      0.3838826103641451
+    ]
+  },
+  "selected_steps": 17,
+  "train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+  "validation_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+  "paired": {
+    "overall": {
+      "corrected": 43,
+      "regressed": 30,
+      "disagreements": 73,
+      "accuracy_delta": 0.005608283002588421
+    },
+    "folds": [
+      {
+        "corrected": 43,
+        "regressed": 30,
+        "disagreements": 73,
+        "accuracy_delta": 0.005608283002588421
+      }
+    ]
+  },
+  "paired_inner_steps": 50,
+  "paired_common_refit_steps": 17,
+  "training_log_sha256": "d93efea3fc1f7a57deb217735839101e402274f2fdca1acc0e43872cf7ed43e4",
+  "seconds": 3408.794473667047,
+  "resources_after_forward": {
+    "max_rss_bytes": 698843136,
+    "mps_current_bytes": 302680320,
+    "mps_driver_bytes": 3617374208,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "resources_after_release": {
+    "max_rss_bytes": 698843136,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 1867776,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  }
+}
