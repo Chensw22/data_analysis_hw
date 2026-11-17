@@ -1,0 +1,78 @@
+{
+  "status": "prospective_nested_experiment_before_new_inner_predictions",
+  "candidate": "planet_conditioned_rawMitra_Kumo",
+  "control": "constant_weight_rawMitra_Kumo",
+  "motivation": "Fixed preexisting OOF slices showed Kumo-vs-rawMitra accuracy gains in Europa and Mars in all3folds, while Earth differs; Kumo logloss also improves in Earth, so accuracy gains are uncertain. Test conditional weighting against a matched learned constant, not oracle selection.",
+  "diagnostic_evidence": [
+    "reports/data_error_diagnosis_20261117/error_overlap.json",
+    "reports/data_error_diagnosis_20261117/gating_feasibility.json"
+  ],
+  "recipe": {
+    "development_rows": 6954,
+    "outer_folds": 3,
+    "outer_seed": 20261112,
+    "inner_folds": 3,
+    "inner_seed_base": 20261117,
+    "fit_seed_base": 20261117,
+    "fit_seed_outer_multiplier": 100,
+    "models": [
+      "rawMitra",
+      "Kumo"
+    ],
+    "raw_version": "v71_Mitra2_zeroshot",
+    "kumo_version": "v83_Kumo_medium8",
+    "outer_prediction_source": "Authenticated original run038/run048 exact outerOOF; no retraining needed for unchanged outer fits.",
+    "inner_prediction_source": "Fresh inner fits only on each outer-training partition, 9splits times2models=18fits, fresh sequential process per fit.",
+    "gate_feature": "HomePlanet",
+    "categories": [
+      "Earth",
+      "Europa",
+      "Mars",
+      "__MISSING__"
+    ],
+    "alpha_bounds": [
+      0.0,
+      1.0
+    ],
+    "alpha_initial": 0.5,
+    "mixture": "(1-alpha)*raw + alpha*Kumo",
+    "objective": "mean binary logloss + 0.01*mean((alpha-0.5)^2)",
+    "regularization": 0.01,
+    "optimizer": "L-BFGS-B",
+    "optimizer_maxiter": 500,
+    "optimizer_ftol": 1e-12,
+    "optimization_probability_clip": 1e-07,
+    "final_prediction_uses_original_base_probabilities": true,
+    "unknown_category_fallback": "matched constant alpha",
+    "threshold": 0.5,
+    "budget_seconds": 7200,
+    "threads": 4,
+    "device": "mps",
+    "backend_fallback": false
+  },
+  "leakage_boundary": [
+    "Parent parses original6954dev targets only; no oldholdout labels.",
+    "Each worker receives only own training labels; no outervalidation labels or targets for queries.",
+    "Gate/control fit exclusively on complete innerOOF within outertraining. No metaCV on existing full-dev OOF.",
+    "Unlabeled full roster attributes match original baseline feature policy.",
+    "Outer predictions are authenticated cached fits that never trained on their outervalidation labels."
+  ],
+  "continuation": {
+    "accuracy_at_least_each_of": [
+      "rawMitra",
+      "Kumo",
+      "constant_control"
+    ],
+    "log_loss_at_most": "constant_control",
+    "fold_accuracy_at_least_constant_minimum": 2,
+    "at_least_one_overall_strict_improvement_vs_constant": true,
+    "if_pass": "Only separate review for frozen group confirmation; no automatic export/upload.",
+    "if_fail": "Archive; do not upload constant as fallback or change planet/features/shrinkage/folds/weights.",
+    "stable_superiority_claim": false
+  },
+  "limits": [
+    "Reused adaptive development; nested execution prevents fold contamination, not historical selection bias.",
+    "Do not reinterpret source quota fields; user explicitly canceled current weekly reserve, new orchestration does not call quota guard.",
+    "No CV/model sweeps, label changes, row removal, test-label inference or uploads."
+  ]
+}
