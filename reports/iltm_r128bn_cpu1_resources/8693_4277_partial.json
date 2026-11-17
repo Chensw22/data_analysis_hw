@@ -1,0 +1,251 @@
+{
+  "status": "failed_inconclusive",
+  "training_rows": 8693,
+  "query_rows": 4277,
+  "probe_members": 1,
+  "candidate_members": 8,
+  "no_real_data": true,
+  "no_query_labels": true,
+  "no_accuracy_reported": true,
+  "current_stage": "final_identity",
+  "monotonic_seconds": 311.3773742079502,
+  "schema": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side"
+  ],
+  "categorical_indices": [
+    0,
+    1,
+    2,
+    4,
+    10,
+    12
+  ],
+  "training_input_sha256": "08ef5527d6f3c0307b53391a9d2e77770cac0e9ddb380f4e42caf69ee68b57e4",
+  "query_input_sha256": "794154a92b49fc5da959d43e66e35bb7dac28545b8c049419e67611ac97614f4",
+  "synthetic_labels_sha256": "906552a604ccb1b315da58c82b52d90685d7276bf322e3b0a1957cfad810adf3",
+  "fit_eval_set": null,
+  "fit_max_time": null,
+  "configuration": {
+    "device": "cpu",
+    "n_ensemble": 1,
+    "batch_size": 4096,
+    "seed": 20261117,
+    "finetuning": true,
+    "finetuning_optimizer": "lion",
+    "finetuning_data": "entire_dataset",
+    "finetuning_val_frac": 0.1,
+    "finetuning_batch_size": 2048,
+    "finetuning_dropout": 0.15,
+    "finetuning_max_steps": 2048,
+    "finetuning_lr": 0.0012,
+    "finetuning_classification_val_metric": "auto",
+    "initial_transformations_finetuning": true,
+    "early_stopping_mode": "auto",
+    "patience_epochs": 50,
+    "patience_checks": null,
+    "val_checks_per_epoch_target": "auto",
+    "val_check_interval_batches": null,
+    "max_train_batches_per_epoch": 128,
+    "finetuning_subset_frac": null,
+    "finetuning_subset_max_samples": 100000,
+    "val_max_samples": 25000,
+    "val_subsample_before_preprocessing": true,
+    "min_epochs": 0,
+    "cooldown_checks": 2,
+    "gradient_clip_norm": 1.18,
+    "scheduler_min_lr": 6e-07,
+    "checkpoint": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/artifacts/pretrained/iltm/r128bn.pth",
+    "checkpoint_mix": null,
+    "stratify_sampling": false,
+    "feature_bagging": false,
+    "feature_bagging_size": 3000,
+    "feature_bagging_type": "uniform",
+    "cat_features": [
+      0,
+      1,
+      2,
+      4,
+      10,
+      12
+    ],
+    "task_type": "classification",
+    "preprocessing": "realmlp_td_s_v0",
+    "dim_exp_type": "rf",
+    "rf_size": 32768,
+    "n_dims": 512,
+    "pca_fit": "reduced",
+    "pca_sampling": "zeropad",
+    "pca_svd_driver": null,
+    "clip_data_value": 1000000,
+    "n_classes_limit": 100,
+    "hn_n_layers": 4,
+    "hn_hidden_size": 1024,
+    "hyper_dropout": 0.0,
+    "main_n_layers": 3,
+    "bottleneck_size": 128,
+    "tree_embedding": false,
+    "tree_model": "XGBoost",
+    "tree_n_estimators": 200,
+    "tree_lr": 0.55,
+    "tree_max_depth": 5,
+    "tree_min_samples_leaf": 12,
+    "tree_subsample": 0.63,
+    "tree_feature_fraction": 0.99,
+    "tree_data_split": "all",
+    "tree_for_each_predictor": true,
+    "tree_use_default_params": false,
+    "tree_select_best_model": true,
+    "tree_use_external_eval_set": false,
+    "concat_tree_with_orig_features": false,
+    "tree_max_leaves": null,
+    "tree_gamma": 0.0,
+    "tree_l2_leaf_reg": 1.25,
+    "tree_bagging_temperature": null,
+    "onehot_max_features": true,
+    "do_retrieval": true,
+    "retrieval_alpha": 0.75,
+    "retrieval_temperature": 1.05,
+    "retrieval_distance": "cosine",
+    "retrieval_alpha_finetuning": false,
+    "retrieval_temperature_finetuning": false,
+    "retrieval_alpha_adaptive": true,
+    "logging_level": 30,
+    "clip_predictions": false,
+    "normalize_predictions": false,
+    "use_amp_inference": false,
+    "use_amp_finetuning": false,
+    "voting": "soft",
+    "adaptive_memory": false,
+    "gpu_mem_low_mb": 2048,
+    "gpu_mem_very_low_mb": 1024,
+    "min_finetuning_batch_size": 64,
+    "gpu_oom_retries": 0,
+    "auto_disable_retrieval_on_low_mem": false,
+    "auto_amp_on_low_mem": false,
+    "auto_stop_on_low_cpu_memory": false,
+    "cpu_memory_limit_gb": null,
+    "cpu_memory_safety_margin_gb": 2.0,
+    "corr_select_k": 0,
+    "inference_storage_dtype": "float16",
+    "corr_select_k_non_tree": null,
+    "xgb_min_samples_leaf": null,
+    "xgb_subsample": null,
+    "xgb_feature_fraction": null,
+    "finetuning_lr_adamw": null,
+    "finetuning_lr_lion": null
+  },
+  "native_observation": {
+    "loads": [
+      {
+        "seconds": 0.13875920802820474,
+        "checkpoint_tensor_keys": 28,
+        "strict_native_load": true,
+        "model_parameters": 76730113,
+        "floating_parameter_dtypes": [
+          "torch.float32"
+        ]
+      }
+    ],
+    "sampling": [
+      {
+        "input_rows": 8693,
+        "generation_rows": 4096
+      }
+    ],
+    "finetuning": [
+      {
+        "normal_return": true,
+        "seconds": 281.7542970420327,
+        "epoch_cap": 2048,
+        "epochs_entered": 97,
+        "optimizer_updates": 388,
+        "early_stopped": true,
+        "timed_out": false,
+        "validation_checks": 98,
+        "selected_weights_restored": true,
+        "train_rows": 7823,
+        "validation_rows": 870,
+        "training_retrieval_rows": 7823
+      }
+    ],
+    "best_weight_positions": [
+      {
+        "where": "init",
+        "epoch_index": -1,
+        "updates": 0
+      },
+      {
+        "where": "epoch 45",
+        "epoch_index": 44,
+        "updates": 180
+      }
+    ],
+    "last_progress": {
+      "where": "epoch 97",
+      "epoch_index": 96,
+      "updates": 388
+    }
+  },
+  "fit_seconds": 303.41840729198884,
+  "inference_retrieval_rows": 8192,
+  "retained_predictor_tensors": {
+    "unique_tensor_storage_bytes": 540123152,
+    "tensor_storage_count": 12,
+    "dtypes": [
+      "torch.float16",
+      "torch.float32",
+      "torch.int64"
+    ]
+  },
+  "full_prediction_seconds": 0.9581689169863239,
+  "partition_query_rows": [
+    1024,
+    1024,
+    1024,
+    1024,
+    181
+  ],
+  "invariance": {
+    "permutation": 0.0,
+    "subset": 0.0,
+    "partition": 0.0,
+    "threshold_equal": true
+  },
+  "save_seconds": 0.7041366250487044,
+  "portable_bytes": 544348732,
+  "reload_seconds": 1.0441024999599904,
+  "reload_difference": 0.0,
+  "reload_threshold_equal": true,
+  "model_sha256": "cf7c779bb9326711f7d18b826da6712329a0b7b1865b06d1825e6e77e1254b2a",
+  "probabilities_sha256": "68fba66c0b57e5345d5c841518e9aec9746f10f7ed1d9ab952533cb575aa6840",
+  "original_released_before_reload": true,
+  "portable_cpu": true,
+  "full_prediction_rows": 4277,
+  "reload_rows": 4277,
+  "openmp_runtimes": [
+    {
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libomp",
+      "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/torch/lib/libomp.dylib"
+    },
+    {
+      "internal_api": "openmp",
+      "num_threads": 4,
+      "prefix": "libomp",
+      "filepath": "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/.venv-iltm/lib/python3.12/site-packages/sklearn/.dylibs/libomp.dylib"
+    }
+  ]
+}
