@@ -1,0 +1,42 @@
+{
+  "competition": "spaceship-titanic",
+  "batch_id": "online_iteration_20261117",
+  "allow_full_export": true,
+  "allow_direct_submit": true,
+  "versions": [
+    "v97_v81_v44_equal2_online_first"
+  ],
+  "maximum_new_upload_attempts_current_batch": 9,
+  "independent_additional_budget": false,
+  "maximum_upload_attempts_for_this_file": 1,
+  "local_cv_or_group_gate_required": false,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "threshold": 0.5,
+  "components": [
+    "v81_Mitra_full_episode50",
+    "v44_seed_ensemble"
+  ],
+  "reason": "User requested continued direct online iteration. Earlier v80 used raw v71; this uses adapted v81.",
+  "no_weight_search": true,
+  "evidence_files": {
+    "artifacts/proposal_nov16_full_episode/manifest.json": "a08836bf502d8e0d5362f18d5ca78c8cfd2378fc33079dd768117c881a6a7319",
+    "artifacts/proposal_nov16_full_episode/model.joblib": "ecdccfeb552166f504b44a1e36006e14f20999fe81482a73062a73c407f80cf6",
+    "artifacts/proposal_nov16_full_episode/test_probabilities.csv": "a16198c67dabf521d8624170b58e089aa8fa793fa733c6ef16e2fe7ccde4be0a",
+    "artifacts/proposal_nov16_full_episode/submission.csv": "f8c5e71bb80193d4697ac86586146d0f6f73c6fd327bf24e25be4e42a2f995da",
+    "artifacts/proposal_batch_v44/manifest.json": "2aa888719831e49693a40f9aacb64517333b49632ac1067a450a7e4c059766f3",
+    "artifacts/proposal_batch_v44/model.joblib": "59fe26d5963d07cf2650edf5116966e6fa0fa6715b5bba673adf8d8ce3611724",
+    "artifacts/proposal_batch_v44/test_probabilities.csv": "7dc29fa1d1f79590d34d75547ea86fcdf423ebc571e67c56627d0b98fabff465",
+    "artifacts/proposal_batch_v44/submission.csv": "c25ac96d3c305ac6005fc27afb53589d59bb3de7c1344153279aa6325331fc49",
+    "artifacts/proposal_crossfamily_v80/v44/complete.json": "45e909f83805fa4e0b670661dc260c100818f72c85b8542960b1e394f2824a00",
+    "artifacts/proposal_crossfamily_v80/v44/probabilities.csv": "7dc29fa1d1f79590d34d75547ea86fcdf423ebc571e67c56627d0b98fabff465",
+    "reports/proposal_crossfamily_v80/manifest.json": "6faad244e545a9679e7013b368c124db19f345338b0b7483e838796260751876",
+    "reports/proposal_nov16_full_episode/manifest.json": "a08836bf502d8e0d5362f18d5ca78c8cfd2378fc33079dd768117c881a6a7319",
+    "reports/proposal_batch_v44/manifest.json": "2aa888719831e49693a40f9aacb64517333b49632ac1067a450a7e4c059766f3",
+    "prepare_v84_online_first.py": "daf57a11071d16b04cf439dfd00117173bf34c0c8710daeede82d34fb3e5eb02",
+    "prepare_adapt_tree_online_first.py": "cfa5a24127edf8563640375b496969c15abb5a671aeea9c7fecacb4122c019bf",
+    "data/raw/test.csv": "3c02b0703423d27d51a657a111b15a37b8d03b3c1de325e3a1e6b26f6572fc88"
+  }
+}
