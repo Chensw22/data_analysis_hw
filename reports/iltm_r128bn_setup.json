@@ -1,0 +1,79 @@
+{
+  "status": "official_checkpoint_download_verified_no_model_load",
+  "created_at_utc": "2026-11-17T05:59:30.353371+00:00",
+  "checkpoint": {
+    "filename": "r128bn.pth",
+    "path": "artifacts/pretrained/iltm/r128bn.pth",
+    "repository": "dbonet/iLTM",
+    "revision": "ef783ec2a246686ad4bd43f35b590c196e70a1ba",
+    "bytes": 306936952,
+    "sha256": "9e24c80ee0de16b658344eb8f61ff308205619c219b6de6e5fbd79c6914731a5",
+    "url": "https://huggingface.co/dbonet/iLTM/resolve/ef783ec2a246686ad4bd43f35b590c196e70a1ba/r128bn.pth",
+    "download_seconds": 46.35414616705384,
+    "verified_before_atomic_rename": true
+  },
+  "checkpoint_overrides": {
+    "preprocessing": "realmlp_td_s_v0",
+    "bottleneck_size": 128,
+    "tree_embedding": false,
+    "concat_tree_with_orig_features": false
+  },
+  "source": {
+    "repository": "https://github.com/AI-sandbox/iLTM",
+    "commit": "1e644b5420ccc2fe3f78a3b62272a3030e074af4",
+    "manifest_path": "third_party/iltm/SOURCE.json",
+    "manifest_sha256": "b847073515a0daf576441a08ab54e44256a9607dee75f14717b34ff8a8a69d0f",
+    "original_files_verified": 71,
+    "all_original_source_hashes_match": true,
+    "override_source": "third_party/iltm/iltm/model_checkpoints.py",
+    "override_source_sha256": "2bcbe8674744221589210a0234c6d363a28b0df0e53f570a00ec92530d131d33",
+    "override_read_method": "AST literal only, no module/model construction"
+  },
+  "license": {
+    "code": "Apache-2.0",
+    "code_path": "third_party/iltm/LICENSE",
+    "code_sha256": "38730bf87a5804800b5f7d320d2ebb8d7285b9a5462db237866c7649fe4bcb71",
+    "weights": "Apache-2.0 in pinned official model card",
+    "model_card_path": "artifacts/pretrained/iltm/MODEL_CARD.md",
+    "model_card_sha256": "91bebbce7100d48e26af134a46928b54a6aa23f393516944acddd5fe82ddfdc4",
+    "public": true,
+    "gated": false,
+    "account_or_credentials_used": false
+  },
+  "environment": {
+    "reference_report": "reports/iltm_setup.json",
+    "reference_report_sha256": "c34d1fad57fe49bcded09fd9ae3f39febf1a5d0d3ed5bfcfa89b981f0f73d325",
+    "reference_field": "environment",
+    "venv": ".venv-iltm",
+    "requirements": "requirements-iltm.lock.txt",
+    "requirements_sha256": "a33b07c8ce41a2f5094f90d82d1421a0daeec95b44513aaa50583287b51b542f",
+    "installed_distribution_versions_equal_reference": true,
+    "installed_or_changed_packages": false
+  },
+  "manifest_evidence": {
+    "path": "artifacts/pretrained/iltm/HF_MANIFEST.json",
+    "sha256": "f423899872c3d6c861bde1ccb213e95a460c74043574e01c7ad79ebec3e583d7",
+    "revision": "ef783ec2a246686ad4bd43f35b590c196e70a1ba",
+    "lfs_metadata_matches_download": true
+  },
+  "old_branch": {
+    "checkpoint_path": "artifacts/pretrained/iltm/xgbrconcat.pth",
+    "bytes": 2188605510,
+    "sha256": "3aae6cd5e22e0a5f6a11284ddf2862a78ac59009ddcd40aa831c72468a2e852a",
+    "old_checkpoint_reverified_unchanged": true,
+    "old_resource_result": "reports/iltm_native_cpu1_resources/result.json",
+    "old_resource_result_sha256": "733f5ffb16a6c9003e803fe752dca6595438ca8e5e9b37f461f633db84fc8b20",
+    "old_status_preserved": "failed_inconclusive / resource_qualification=false; this is a separately named official recipe, not a pass or continuation of the old gate"
+  },
+  "scope": {
+    "torch_load": false,
+    "model_constructor": false,
+    "fit_or_inference": false,
+    "gpu": false,
+    "data_or_labels_read": false,
+    "other_weights_downloaded": false,
+    "resource_qualified": false,
+    "temporary_part_removed_by_atomic_rename": true,
+    "automatic_cv_or_upload": false
+  }
+}
