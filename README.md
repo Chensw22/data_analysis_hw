@@ -2,6 +2,8 @@
 
 目标：三人团队稳妥完成可复现的竞赛项目，保留基线、改进、失败尝试和答辩证据。
 
+2026-11-17数据诊断：在相同6954条开发OOF上，五个代表家族共同错914人，分类分歧777人；共同错误占线上最佳v81本地错误的72.2%。Earth与G层是高度重叠的困难人群，缺失值不是当前可见的主要解释；这些结果不能证明80%是数据上限。完整[统计](reports/data_error_diagnosis_20261117/error_overlap.json)、[错误重叠图](reports/data_error_diagnosis_20261117/error_overlap.png)、[数据质量](reports/data_error_diagnosis_20261117/data_quality.json)和[独立审查](reports/data_error_diagnosis_20261117/gating_feasibility.json)已保存。下一固定实验为严格嵌套的HomePlanet条件Mitra/Kumo混合与常数权重对照，当前尚无新分数；[事前协议](reports/planet_mixture_20261117/protocol.json)。
+
 ## 当前实际成绩
 
 当前最佳为 **v81 Mitra 全参数适配，Kaggle Public Score 0.81412（81.412%）**，提交 ID `58424738`，上传 commit `8e65a567eed7`。2026-11-17 11:45（北京时间）的官方账号最佳排名为 **116 / 2161，约前 5.368%**：前10%已达成，前5%尚未达成。滚动榜快照不是比赛最终名次；[官方快照](reports/proposal_nov17_support3072_lifecycle/online_attempts/20261117T034337004379Z.json)与[本轮逐次提交记录](reports/online_iteration_20261116/RESULTS.md)保留完整证据。
