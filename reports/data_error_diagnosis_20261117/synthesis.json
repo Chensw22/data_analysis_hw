@@ -1,0 +1,41 @@
+{
+  "scope": "Data/error diagnosis and three prospectively frozen adaptive-development experiments, no new online uploads.",
+  "conclusions": [
+    {
+      "finding": "Model errors are highly shared, not identical.",
+      "evidence": "Same6954rows,5families allwrong914,disagreement777;914/1266=72.2% ofv81 errors.",
+      "source": "error_overlap.json"
+    },
+    {
+      "finding": "No evidence for an80% data ceiling or widespread confirmed wrong labels.",
+      "evidence": "Exact compact13 mixed-label patterns involve5people; unobserved factors/common biases remain possible, not established.",
+      "source": "data_quality.json"
+    },
+    {
+      "finding": "Fixed CatBoost recipe still benefits from more training samples.",
+      "evidence": "512/1536/3090/4636rows accuracy77.8545/80.2991/80.5436/81.5789%;laststep eachfold improves.",
+      "source": "../learning_curve_20261117/result.json"
+    },
+    {
+      "finding": "Missing-value improvements exist but small; data slices do not automatically yield deployable improvements.",
+      "evidence": "Repair+5correct;spatial+3;planet mixture worse thanconstant by8. All frozen continuation gates failed.",
+      "source": [
+        "../consistent_repair_20261117/summary.json",
+        "../spatial_offset_20261117/result.json",
+        "../planet_mixture_20261117/summary.json"
+      ]
+    }
+  ],
+  "not_claimed": [
+    "80% irreducible ceiling",
+    "Verified mislabels",
+    "90% impossible or guaranteed",
+    "Independent holdout or independent3seed evidence",
+    "Any new stable-superiority candidate"
+  ],
+  "current_best_online_unchanged": {
+    "version": "v81",
+    "score": 0.81412
+  },
+  "next": "Independent architecture/resource review; do not tune failed data-driven candidates or upload their matched controls."
+}

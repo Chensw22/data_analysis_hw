@@ -2,7 +2,7 @@
 
 目标：三人团队稳妥完成可复现的竞赛项目，保留基线、改进、失败尝试和答辩证据。
 
-2026-11-17数据诊断：在相同6954条开发OOF上，五个代表家族共同错914人，分类分歧777人；共同错误占线上最佳v81本地错误的72.2%。Earth与G层是高度重叠的困难人群，缺失值不是当前可见的主要解释；这些结果不能证明80%是数据上限。完整[统计](reports/data_error_diagnosis_20261117/error_overlap.json)、[错误重叠图](reports/data_error_diagnosis_20261117/error_overlap.png)、[数据质量](reports/data_error_diagnosis_20261117/data_quality.json)和[独立审查](reports/data_error_diagnosis_20261117/gating_feasibility.json)已保存。下一固定实验为严格嵌套的HomePlanet条件Mitra/Kumo混合与常数权重对照，当前尚无新分数；[事前协议](reports/planet_mixture_20261117/protocol.json)。
+2026-11-17数据诊断：在相同6954条开发OOF上，五个代表家族共同错914人，分类分歧777人；共同错误占线上最佳v81本地错误的72.2%。Earth与G层是高度重叠的困难人群，缺失值不是当前可见的主要解释；这些结果不能证明80%是数据上限。完整[统计](reports/data_error_diagnosis_20261117/error_overlap.json)、[错误重叠图](reports/data_error_diagnosis_20261117/error_overlap.png)、[数据质量](reports/data_error_diagnosis_20261117/data_quality.json)和[独立审查](reports/data_error_diagnosis_20261117/gating_feasibility.json)已保存。三个固定对照已完成：HomePlanet混合81.766%低于常数81.881%；awake空间校准81.694%净+3人；精确属性修复81.723%净+5人，均未通过各自事前继续条件，没有上传。固定CatBoost学习曲线从3090增至4636训练样本时三折均改善，整体+1.035pp，不能认定80%为数据上限；[综合证据](reports/data_error_diagnosis_20261117/synthesis.json)。
 
 ## 当前实际成绩
 

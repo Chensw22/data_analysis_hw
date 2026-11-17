@@ -1,0 +1,109 @@
+{
+  "status": "complete",
+  "candidate": "rawMitra13_consistent_attribute_repair",
+  "completed_folds": 3,
+  "metrics": {
+    "accuracy": 0.8172274949669255,
+    "log_loss": 0.3791862384986856,
+    "fold_accuracy": [
+      0.8192407247627265,
+      0.8183779119930975,
+      0.8140638481449526
+    ],
+    "fold_log_loss": [
+      0.3803197689280954,
+      0.3705948157466039,
+      0.38664413082135757
+    ]
+  },
+  "reference": {
+    "accuracy": 0.816508484325568,
+    "log_loss": 0.38019593489424935,
+    "fold_accuracy": [
+      0.817946505608283,
+      0.819672131147541,
+      0.8119068162208801
+    ],
+    "fold_log_loss": [
+      0.38102819387768605,
+      0.3719704257434014,
+      0.38758918506166057
+    ]
+  },
+  "paired": {
+    "rows": 6954,
+    "repaired": 59,
+    "broken": 54,
+    "net_correct": 5
+  },
+  "subsets": {
+    "CryoTrue_missing_spend": {
+      "rows": 280,
+      "repaired": 11,
+      "broken": 8,
+      "net_correct": 3,
+      "candidate_accuracy": 0.8,
+      "raw_accuracy": 0.7892857142857143,
+      "descriptive_only": true
+    },
+    "HomePlanet": {
+      "rows": 82,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "candidate_accuracy": 0.8780487804878049,
+      "raw_accuracy": 0.8780487804878049,
+      "descriptive_only": true
+    },
+    "Side": {
+      "rows": 78,
+      "repaired": 1,
+      "broken": 1,
+      "net_correct": 0,
+      "candidate_accuracy": 0.8205128205128205,
+      "raw_accuracy": 0.8205128205128205,
+      "descriptive_only": true
+    },
+    "any_repair": {
+      "rows": 428,
+      "repaired": 12,
+      "broken": 9,
+      "net_correct": 3,
+      "candidate_accuracy": 0.8130841121495327,
+      "raw_accuracy": 0.8060747663551402,
+      "descriptive_only": true
+    },
+    "unrepaired": {
+      "rows": 6526,
+      "repaired": 47,
+      "broken": 45,
+      "net_correct": 2,
+      "candidate_accuracy": 0.8174992338338952,
+      "raw_accuracy": 0.8171927673919706,
+      "descriptive_only": true
+    }
+  },
+  "continuation": {
+    "passed": false,
+    "checks": {
+      "accuracy_gain_at_least_001": false,
+      "log_loss_not_higher": true,
+      "at_least_two_nonlower_folds": true
+    },
+    "automatic_export": false,
+    "automatic_upload": false,
+    "next_if_pass": "separate fixed group validation review only",
+    "stable_superiority_claim": false
+  },
+  "old_holdout_labels_read": false,
+  "validation_kind": "adaptive_development_fixed_three_fold",
+  "automatic_export": false,
+  "automatic_upload": false,
+  "budget_seconds": 1800,
+  "repair_proof_sha256": "9e0c2924ae285159cc72c065589f39e9c3dbb96c1107c1f5a973a674bcc7a7e6",
+  "seconds": 42.70024845795706,
+  "result_files_sha256": {
+    "oof.npz": "d42a695afac07eccf417707a9d0db2afba6976f73ee445dc4523c37e512c6c7c",
+    "worker_result.json": "821d9204a37a33d2fde708892b1353b39ceff2d3b4f7948ba8e96b785c9197d6"
+  }
+}
