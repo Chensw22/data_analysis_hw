@@ -1,5 +1,7 @@
 # 项目约定
 
+- 2026-11-17后续待提交：v99_Mitra_peercryo_fixed15_ready 已完整训练和4277保存重载（差0），尚未上传；新增PeerCryoSleepRate/PeerKnownCryoCount，排除本人，原v96前15列保持不变，固定15步/同seed。产物artifacts/proposal_ready_peercryo17，记录reports/next_round_20261117/ready_candidate.json。用户提出新账号增加次数；核实Kaggle Terms第3节禁止同人多活跃账号，未切换CLI或用第二账号绕过次数，原账号仍chen532。新policy只授权本地导出，不新增提交预算；待主账号配额刷新后另建释放授权绑定现成manifest/CSV，不修改冻结source policy/hash、不需要重训。当前无运行中训练，有1个待提交候选；最佳仍v96=.81529。以上状态优先于后文旧“无待上传”快照。
+
 - 最新执行状态（2026-11-17 19:43）：新最佳v96=.81529（58467382），原13列+GroupSize/CabinOccupants、固定15步、seed20261112；全部8693训练，4277保存重载差0，346.22秒，不跑CV。账号109/2169约前5.025%，严格前5%仍差1名。v97适配v81/树模型各半=.81155；v98新旧最佳各半=.81365。今日总10次、剩0次，新batch共用9次已全部耗尽，各独立policy预算不可叠加。当前无运行中训练或待上传文件；后续保持线上优先，不恢复已中断CV。刷新后重新查询官方次数并创建新批次，不复用本批授权计数；不因小幅线上提升宣称S档。完整记录reports/online_iteration_20261117/RESULTS.md，当前最佳定位reports/current_best_submission.json。
 
 - 仓库：`Chensw22/data_analysis_hw`；当前本地目录就是该仓库的工作副本。
