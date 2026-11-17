@@ -1,0 +1,47 @@
+{
+  "status": "failed_inconclusive",
+  "resource_qualification": false,
+  "settings": {
+    "replace_fields": [
+      "HomePlanet",
+      "Destination"
+    ],
+    "keep_fields": [
+      "CryoSleep",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "encoding": "train-only known one-hot plus missing; unknown all-zero",
+    "mirror_rule": "Original13 active-name signs; every nominal child inherits its parent sign; no expanded-dimension RNG draw.",
+    "query_chunk": 2318,
+    "weights_and_input_dtype": "float32",
+    "mps_autocast_dtype": "bfloat16",
+    "mps_memory_fraction": 0.65,
+    "threads": 4,
+    "sdpa_batch_chunk": 1,
+    "sdpa_long_sequence_threshold": 512,
+    "full_support": true,
+    "optimizer_steps": 0,
+    "n_estimators": 1,
+    "threshold": 0.5,
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09"
+  },
+  "budget_seconds": 1200,
+  "no_accuracy_computed": true,
+  "real_targets_read": false,
+  "externally_supervised": true,
+  "worker_error_type": "RuntimeError",
+  "worker_error": "Fixed tiny CPU/MPS probability tolerance failed.",
+  "worker_current_stage": "tiny_cpu_mps",
+  "error_type": "RuntimeError",
+  "error": "Resource worker failed: RuntimeError: Fixed tiny CPU/MPS probability tolerance failed.",
+  "seconds": 3.922665165970102
+}
