@@ -24,20 +24,29 @@ def digest(path):
     return result.hexdigest()
 
 
-def verify(proposal):
+def verify(proposal, policy_path=POLICY):
     if not re.fullmatch(r'[A-Za-z0-9_-]+',proposal):raise ValueError('Invalid proposal name.')
-    policy=read(POLICY);out=ROOT/'artifacts'/proposal;public=ROOT/'reports'/proposal
+    policy=read(policy_path);out=ROOT/'artifacts'/proposal;public=ROOT/'reports'/proposal
     if policy.get('allow_direct_submit') is not True:raise RuntimeError('Direct upload not authorized.')
     for name in ['manifest.json','selection.json']:
         if digest(out/name)!=digest(public/name):raise RuntimeError('Export report/artifact mismatch.')
     manifest=read(out/'manifest.json');selection=read(out/'selection.json')
-    if (manifest.get('status')!='complete' or manifest.get('export_reload_inference_verified') is not True
+    if (manifest.get('status')!='complete' or (manifest.get('artifact_kind')!='cached_probability_ensemble' and manifest.get('export_reload_inference_verified') is not True)
             or manifest.get('training_rows')!=8693 or manifest.get('rows')!=4277
             or selection.get('version') not in policy['versions'] or manifest.get('version')!=selection['version']):
         raise RuntimeError('Complete authorized full-data export required.')
     check=workflow.validate_submission(out/'submission.csv',ROOT/'data/raw/test.csv')
-    if manifest.get('sha256')!=check['sha256'] or manifest.get('model_sha256')!=digest(out/'model.joblib'):
-        raise RuntimeError('Prepared CSV/model identity differs.')
+    if manifest.get('sha256')!=check['sha256']:
+        raise RuntimeError('Prepared CSV identity differs.')
+    if manifest.get('policy_sha256')!=digest(policy_path):
+        raise RuntimeError('Prepared policy identity differs.')
+    if manifest.get('artifact_kind')=='cached_probability_ensemble':
+        if manifest.get('cached_ensemble_verified') is not True:
+            raise RuntimeError('Cached ensemble arithmetic and component evidence required.')
+        if manifest.get('test_probabilities_sha256')!=digest(out/'test_probabilities.csv'):
+            raise RuntimeError('Cached ensemble probability identity differs.')
+    elif manifest.get('model_sha256')!=digest(out/'model.joblib'):
+        raise RuntimeError('Prepared model identity differs.')
     sources=manifest.get('source_hashes')
     if not sources:raise RuntimeError('Missing source identity.')
     for name,expected in sources.items():
@@ -57,11 +66,12 @@ def verify(proposal):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--proposal',required=True);parser.add_argument('--submit',action='store_true')
+    parser.add_argument('--policy',type=Path,default=POLICY)
     args=parser.parse_args()
     lock=ROOT/'artifacts/online_iteration_20261117/submission.lock';lock.parent.mkdir(parents=True,exist_ok=True)
     with lock.open('a') as stream:
         fcntl.flock(stream,fcntl.LOCK_EX|fcntl.LOCK_NB)
-        policy,selection,check,used=verify(args.proposal)
+        policy,selection,check,used=verify(args.proposal,args.policy)
         from kaggle.api.kaggle_api_extended import KaggleApi
         api=KaggleApi();api.authenticate()
         limits=json.loads(str(api.competition_get_submission_limits(workflow.COMPETITION)))
@@ -73,7 +83,7 @@ def main():
         if not auth.exists():raise RuntimeError('Commit per-file authorization before upload.')
         bound=read(auth)
         if (bound.get('batch_id')!=policy['batch_id'] or bound.get('file_sha256')!=check['sha256']
-                or bound.get('policy_sha256')!=digest(POLICY) or bound.get('maximum_upload_attempts_for_this_file')!=1):
+                or bound.get('policy_sha256')!=digest(args.policy) or bound.get('maximum_upload_attempts_for_this_file')!=1):
             raise RuntimeError('Per-file online-first authorization differs.')
         message=f"{selection['version']}：按你最新的线上优先授权，即将提交一次；当前可用{limits['numAllowedNow']}次。"
         subprocess.Popen(['osascript',str(ROOT/'remind_online_first_submission.applescript'),message],
