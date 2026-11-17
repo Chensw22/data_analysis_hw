@@ -1,0 +1,128 @@
+{
+  "scope": "Descriptive properties of the original five-family 914 shared OOF errors; no fit or selection.",
+  "profiles": {
+    "all_shared_wrong": {
+      "rows": 914,
+      "actual_transported_all_predict_not": 424,
+      "actual_not_transported_all_predict_yes": 490,
+      "all_five_bills_known_zero": 375,
+      "any_bill_missing": 95,
+      "median_total_spend_complete_bills": 677.0,
+      "median_age": 24.0,
+      "deck_counts": {
+        "G": 427,
+        "F": 254,
+        "E": 106,
+        "D": 39,
+        "missing": 27,
+        "A": 24,
+        "C": 20,
+        "B": 17
+      },
+      "all_five_confidence_at_least80": 182,
+      "all_five_confidence_at_least95": 9,
+      "median_v81_predicted_class_probability": 0.665410578250885,
+      "solo_group": 553
+    },
+    "Earth_asleep": {
+      "rows": 300,
+      "actual_transported_all_predict_not": 4,
+      "actual_not_transported_all_predict_yes": 296,
+      "all_five_bills_known_zero": 265,
+      "any_bill_missing": 35,
+      "median_total_spend_complete_bills": 0.0,
+      "median_age": 22.0,
+      "deck_counts": {
+        "G": 283,
+        "missing": 11,
+        "E": 4,
+        "F": 2
+      },
+      "all_five_confidence_at_least80": 1,
+      "all_five_confidence_at_least95": 0,
+      "median_v81_predicted_class_probability": 0.6076632142066956,
+      "solo_group": 177
+    },
+    "Earth_awake": {
+      "rows": 396,
+      "actual_transported_all_predict_not": 279,
+      "actual_not_transported_all_predict_yes": 117,
+      "all_five_bills_known_zero": 57,
+      "any_bill_missing": 36,
+      "median_total_spend_complete_bills": 806.0,
+      "median_age": 23.0,
+      "deck_counts": {
+        "F": 195,
+        "G": 132,
+        "E": 60,
+        "missing": 9
+      },
+      "all_five_confidence_at_least80": 100,
+      "all_five_confidence_at_least95": 0,
+      "median_v81_predicted_class_probability": 0.7310585826635361,
+      "solo_group": 267
+    },
+    "Earth_sleep_unknown": {
+      "rows": 8,
+      "actual_transported_all_predict_not": 6,
+      "actual_not_transported_all_predict_yes": 2,
+      "all_five_bills_known_zero": 5,
+      "any_bill_missing": 1,
+      "median_total_spend_complete_bills": 0.0,
+      "median_age": 28.0,
+      "deck_counts": {
+        "G": 6,
+        "F": 2
+      },
+      "all_five_confidence_at_least80": 0,
+      "all_five_confidence_at_least95": 0,
+      "median_v81_predicted_class_probability": 0.6441927999258041,
+      "solo_group": 5
+    },
+    "other_or_unknown_planet": {
+      "rows": 210,
+      "actual_transported_all_predict_not": 135,
+      "actual_not_transported_all_predict_yes": 75,
+      "all_five_bills_known_zero": 48,
+      "any_bill_missing": 23,
+      "median_total_spend_complete_bills": 1325.0,
+      "median_age": 32.0,
+      "deck_counts": {
+        "F": 55,
+        "E": 42,
+        "D": 39,
+        "A": 24,
+        "C": 20,
+        "B": 17,
+        "missing": 7,
+        "G": 6
+      },
+      "all_five_confidence_at_least80": 81,
+      "all_five_confidence_at_least95": 9,
+      "median_v81_predicted_class_probability": 0.8175744637846947,
+      "solo_group": 104
+    }
+  },
+  "all_development_Earth_asleep": {
+    "rows": 1106,
+    "actual_transported": 722,
+    "actual_not_transported": 384,
+    "v81_true_positive": 703,
+    "v81_true_negative": 21,
+    "v81_false_positive": 363,
+    "v81_false_negative": 19,
+    "always_transported_accuracy": 0.6528028933092225,
+    "v81_accuracy": 0.6546112115732369
+  },
+  "caveats": [
+    "Model probability is not a calibrated probability that a prediction is correct.",
+    "Attributes describe errors, not causal explanations or evidence of incorrect labels.",
+    "These are reused development rows, not the hidden Kaggle test labels."
+  ],
+  "sources": {
+    "artifacts/error_rescue_20261117/shared_error_cases.csv": "cec89cda2609f4746a0f1d8b6a81513944cdf0eb0bb056f610b779b3380eac5b",
+    "artifacts/data_error_diagnosis_20261117/aligned_rows.csv": "aa70f64091c10c8a5705ec374507b0396b39ec3e0b35001b4ebdafa8a3a731b4",
+    "data/raw/train.csv": "17336d553f49ebdf6ecb266d2b5d3746e5dd308445f7c7864141c4f28d2a88d0",
+    "shared_error_case_profile.py": "512f40247cfbde4dd1a61cb0a60d9ac02e905573969005bbe04e191644cc81d2"
+  }
+}
