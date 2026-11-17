@@ -62,17 +62,25 @@ def main():
         v81_false_negative=int((~prediction & y.eq(1)).sum()),
         always_transported_accuracy=float(y.mean()), v81_accuracy=float(prediction.eq(y).mean()),
     )
+    catalog_path = ROOT / 'artifacts/error_rescue_20261117/catalog_rows.csv'
+    catalog = pd.read_csv(catalog_path)
+    assert np.array_equal(catalog.row_id, aligned.row_id) and np.array_equal(catalog.y, aligned.y)
+    persistent = rows.loc[rows.row_id.isin(catalog.loc[catalog.all_primary_still_wrong, 'row_id'])]
+    assert len(persistent) == 616
+    persistent_counts = persistent.groupby(['HomePlanet', 'CryoSleep', 'y'], dropna=False).size().reset_index(name='rows')
+    persistent_counts = persistent_counts.astype(object).where(persistent_counts.notna(), None)
     result = dict(
         scope='Descriptive properties of the original five-family 914 shared OOF errors; no fit or selection.',
         profiles=profiles,
         all_development_Earth_asleep=earth_asleep_all,
+        all_16_primary_families_wrong=persistent_counts.to_dict(orient='records'),
         caveats=[
             'Model probability is not a calibrated probability that a prediction is correct.',
             'Attributes describe errors, not causal explanations or evidence of incorrect labels.',
             'These are reused development rows, not the hidden Kaggle test labels.',
         ],
         sources={str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-                 for p in [path, aligned_path, raw_path, Path(__file__)]},
+                 for p in [path, aligned_path, catalog_path, raw_path, Path(__file__)]},
     )
     target = ROOT / 'reports/error_rescue_20261117/case_profile.json'
     target.write_text(json.dumps(result, indent=2)+'\n')
