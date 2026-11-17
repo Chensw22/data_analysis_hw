@@ -1,0 +1,168 @@
+{
+  "status": "read_only_failure_review_complete_no_gpu_retry_or_source_change",
+  "created_at_utc": "2026-11-17T01:00:31.049199+00:00",
+  "decision": "确认正式全量首次验证/更新顺序未被旧资源探针覆盖；尚未证实具体张量泄漏或纯allocator碎片。仅支持另行冻结一个保持数值程序不变的生命周期屏障诊断，不支持直接重试旧导出或宣称已修复。",
+  "actual_failure": {
+    "proposal": "proposal_nov16_support3072",
+    "status": "failed_incomplete_not_upload_eligible",
+    "elapsed_seconds": 55.04578433302231,
+    "failed_stage": "inner:step1:before_validation",
+    "completed_inner_validations": [
+      0
+    ],
+    "refit_started": false,
+    "error": "MPS backend out of memory (MPS allocated: 7.59 GiB, other allocations: 95.89 MiB, max allowed: 7.70 GiB). Tried to allocate 95.10 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+    "support_rows": 6954,
+    "query_rows": 1739,
+    "max_allowed_bytes": 8263525171,
+    "interpretation": "step0验证成功，首次3072/256更新返回，进入step1完整6954/1739验证后OOM。没有完成51次选步，更没有fresh refit或可提交模型；日志selected_steps=0只是迄今状态，不能据此绕过后续选择。",
+    "release_record": {
+      "max_rss_bytes": 547913728,
+      "mps_current_bytes": 0,
+      "mps_driver_bytes": 100352000,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    }
+  },
+  "verified_contract": {
+    "same_frozen_sources": "当前mitra_support3072/long_context_probe/full_episode/candidate及vendor tab2d/base的SHA均与失败proposal/source快照及preparation_protocol一致。",
+    "same_environment_sha": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "resource_environment_matches": true,
+    "same_backend": "同FP32权重/上下文、MPS bf16 autocast、.65 allocator限制、原layer+长SDPA chunk checkpoint、full支持、querychunk2318；未发现参数或环境漂移。",
+    "same_model_loading": "formal fresh_model只在base.load_initial_model后断言参数数量/FP32/requires_grad；资源probe直接调用同loader。不是额外保留一个GPU模型的实现差异。"
+  },
+  "confirmed_resource_gap": {
+    "probe_order": [
+      "update1",
+      "update2",
+      "validation3708x928",
+      "update3",
+      "validation6954x1739",
+      "update4"
+    ],
+    "formal_order": [
+      "validation6954x1739_step0_without_Adam_moments",
+      "update1",
+      "validation6954x1739_step1_with_Adam_moments"
+    ],
+    "source_refs": [
+      "mitra_long_context_probe.py:217 sequence",
+      "mitra_long_context_probe.py:266 worker",
+      "mitra_support3072.py:113 selection loop",
+      "mitra_support3072.py:56 validation_prediction"
+    ],
+    "additional_differences": [
+      "探针预处理8693合成行并从tensor取前6954作为大验证support；正式预处理仅inner6954真属性，并与1739验证属性分开。",
+      "探针大验证在第3次更新之后，正式失败在第1次更新之后；先前shape和调用顺序可能影响缓存/临时对象生命周期。",
+      "探针seed42/合成属性与正式seed20261112/实际属性不同；无证据能把差异全部归于数值或全部归于allocator。"
+    ],
+    "scope_of_prior_success": "旧probe确实完整测过大形状和驻留moments，但不是正式首次交替生命周期；不能据其通过声称所有相同shape执行顺序都已验证。"
+  },
+  "memory_evidence": {
+    "formal_before_failed_validation": {
+      "max_rss_bytes": 547913728,
+      "mps_current_bytes": 1188813056,
+      "mps_driver_bytes": 6207455232,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    },
+    "probe_before_large_validation": {
+      "stage": "validation6954x1739:before",
+      "max_rss_bytes": 518619136,
+      "mps_current_bytes": 984443392,
+      "mps_driver_bytes": 7264501760,
+      "mps_recommended_max_bytes": 12713115648,
+      "mps_measurement": "snapshots_not_peak"
+    },
+    "current_allocated_delta_bytes": 204369664,
+    "current_allocated_delta_MiB": 194.902099609375,
+    "driver_allocated_delta_bytes": -1057046528,
+    "interpretation": "正式验证前current多204369664字节（194.902MiB），但driver比旧probe更低。current按本机PyTorch文档不含空闲allocator池；因此不能直接把额外占用称纯空闲缓存或预判都能被empty_cache释放。",
+    "limits": "全部是同步时刻快照，不是峰值。OOM消息和current/driver快照不是同一时刻，单位GiB/MiB与十进制GB亦不能混用；旧probe的7.29GB记录不是经过证明的峰值上限。"
+  },
+  "live_reference_audit": {
+    "explicit_cleanup_present": [
+      "probe.update在返回前del logits/loss/s/q、optimizer.zero_grad(set_to_none=True)并同步；返回row仅标量/列表/哈希/快照。",
+      "formal validation_prediction先检查grad=None，验证前后核moments对象身份/step/bytes不变。",
+      "base.predict_arrays有torch.no_grad装饰，返回CPU numpy概率；formal inner_history记录标量，不把GPU logits或loss加入history。",
+      "保存的probabilities是CPU numpy，prep和sampler在CPU；模型和Adam状态在inner阶段本就应当驻留。",
+      "base.model_forward每次结束独立autocast上下文并clone输入防vendor原地写；未在本审查发现持久GPU预测缓存或第二engine。"
+    ],
+    "no_explicit_bug_confirmed": "静态未发现某个应释放却被项目变量显式保留的巨大张量；不把未证明的框架引用环/后端缓冲当已定位bug。",
+    "torch_checkpoint_note": "本机torch/utils/checkpoint.py的non-reentrant实现使用weak references，并明确规避部分decorator闭包循环；no_grad分支直接yield/return。这不是本次checkpoint泄漏的证据。",
+    "collection_not_currently_at_boundary": "当前正式inner循环未在每次update返回后、validation前执行gc.collect或empty_cache；base.release_memory仅在阶段切换/最终finally等位置调用。同步已经通过snapshot完成，因此仅再同步不是有证据的单独修复。"
+  },
+  "bounded_diagnostic_proposal": {
+    "status": "design_only_requires_separate_root_freeze_and_authorization; not executed",
+    "single_hypothesis": "更新结束后存在可回收的不可达Python张量或空闲缓存；显式清理可降低随后的full-context验证峰值，而不改变数值状态。若不是这种生命周期问题，诊断应否决该修复。",
+    "one_barrier": [
+      "torch.mps.synchronize()",
+      "gc.collect()",
+      "torch.mps.empty_cache()",
+      "torch.mps.synchronize()"
+    ],
+    "invariant_boundary": "只在原update已返回且grad=None之后插入；model/optimizer/moments均保持原对象，不卸载/重建/复制回CPU，不修改网络/采样/precision/backend/steps或算法。",
+    "why_mathematically_plausible": "gc只尝试回收不可达对象；empty_cache只释放未占用缓存。持有的参数、optimizer state和支持tensor应不变；这是一项待核验的运行期生命周期改动，不是改模型公式。",
+    "state_checks_before_after": [
+      "全部parameter及buffer字节哈希、dtype/device、对象及storage身份",
+      "全部AdamW moments字节哈希、storage身份、step counters、参数组lr/wd",
+      "numpy sampler和counterfactual sampler完整RNG状态；Python、torchCPU与MPS RNG状态",
+      "support/query/labels字节与shape，以及grad=None和model.training状态"
+    ],
+    "small_sequence": "使用真实属性但独立固定synthetic targets；3708/928形状按原顺序validation0→update1。在同一更新权重上先做完整validation，再执行一次屏障并重复完整validation；采用既定2e-6/阈值一致性，验证前后state不变。没有真实accuracy或选步。",
+    "full_sequence": "新进程/新输出中重新从原权重开始；真实属性构造完整inner6954/support和1739/query，synthetic targets，原3072/256 sampler与原fitseed。validation0→update1→唯一屏障→validation1→update2→唯一屏障→validation2。保持同一AdamW及全部moment对象，不能从旧失败进程/半成品resume。",
+    "monitoring": "分别记录屏障四个子步骤前后current/driver及gc返回回收数；核验完整support/query实际forward覆盖。哈希审计本身会同步/拷CPU，不能把观测日志声称无扰动峰值；同步峰值仍只是快照。",
+    "falsification_and_stop": [
+      "任何权重/moment/step/RNG/输入字节或设备变化，或小形状概率/阈值不一致：否决修复。",
+      "完整实际顺序仍OOM、超出另行冻结deadline或无法完成第2次更新后验证：归档，不提高cap/减少support或query/改backend/precision/checkpoint/offload。",
+      "GC不能回收全部204MB并不自动等于失败；但若没有可记录的生命周期释放，只是一次偶然运行通过，不能据此宣称已证实根因。需要把结论限定资源可行性，不归因特定泄漏。",
+      "即使通过也只证明该固定诊断，不能伪造原CV逐值等效或已完成全量导出；另行root修复决定、新source/protocol及新proposal仍必要。"
+    ],
+    "artifact_policy": "原failed proposal、旧resource成功记录及CV冻结源保持不变。诊断使用独立目录、独立提交、固定deadline和.65cap；不得重启旧proposal或把失败改complete。",
+    "true_labels_policy": "诊断不得为仿真顺序读取旧holdout真标签；只固定synthetic标签，实际全量标签只允许后续另行批准的正式fit。",
+    "not_proposed": [
+      "提高allocator上限或使用环境变量关闭限制",
+      "缩短support/query或重新采样",
+      "更改backend/精度/checkpoint/训练步数/优化器",
+      "重启失败proposal",
+      "用已选step0替代未完成选步",
+      "自动延长7200秒导出或原资源预算"
+    ]
+  },
+  "overall_conclusion": "存在可审查且保持数学程序不变的清理屏障诊断方向，但没有已证实修复。首要已确认问题是资源覆盖顺序缺口；更高current占用需要通过独立状态保持诊断解释。旧失败应继续标记incomplete且不可上传。",
+  "local_primary_docs": {
+    "torch.mps.current_allocated_memory": "本机torch/mps/__init__.py:110-117：GPU张量占用，不含空闲allocator cache。",
+    "torch.mps.driver_allocated_memory": "同文件120-127：含allocator池及MPS/MPSGraph框架分配。",
+    "torch.mps.empty_cache": "同文件78-82：只释放unoccupied cached memory。",
+    "torch.mps.synchronize": "同文件30-32：等待所有MPS kernels完成。"
+  },
+  "actions": {
+    "read_only_source_and_logs": true,
+    "gpu_executed": false,
+    "training_or_new_model_inference": false,
+    "raw_targets_read": false,
+    "test_answers_read": false,
+    "source_modified": false,
+    "old_artifacts_modified": false,
+    "commit_performed": false,
+    "only_new_file": "reports/support3072_export_failure_review.json"
+  },
+  "evidence_sha256": {
+    "artifacts/proposal_nov16_support3072/failure.json": "323d24ab0da53f36b9c362f7a834d30e0212a51e8fcff14e577413c830af2763",
+    "artifacts/proposal_nov16_support3072/worker_result.json": "2eab980c0f9d3dcd9d44b2ecc733a1c9f870687c273549c6889908b1e3074958",
+    "artifacts/proposal_nov16_support3072/training_log.json": "a3baf1451cc272bd6cd6b6ab1353392daa7cd412262d8a87969d6c657cf48ccd",
+    "artifacts/proposal_nov16_support3072/preparation_protocol.json": "6e0201f11dbc877baf852be36b4c6b3b7ab9277baaf80cf28393432b6a6f818c",
+    "artifacts/proposal_nov16_support3072/environment.lock.txt": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "reports/mitra_long_context_resources/worker_result.json": "ae72deb5708197975be5843a536abd06efe676bb1c27fde8829d469e43c1ff1b",
+    "reports/mitra_long_context_resources/freeze.json": "bb2c0c79cbd700fdc7c810228583c44b4fca32b5015a40e3d1cb1ef424fc954e",
+    "reports/mitra_long_context_resources/result.json": "c3c485d4168f7de1f1e90c42dc9c4e53db81392cca666861e2332c13aad0e46d",
+    "reports/mitra_long_context_resources/requirements.lock": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "mitra_long_context_probe.py": "77a30b8fdd9e080b90f2c12ba333e41144230ef03d7fa5b8bc237cc8e93b5f0c",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_full_episode_probe.py": "4f1e5c8a33ca2ac0704fe9129ab16758964cfca807052057122a6a823eb4dfdd",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "prepare_support3072_submission.py": "81f790e74ba0f65eadce323f4a27557b41f7d2bc7e044f0918d32ad172e8578d",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465"
+  }
+}

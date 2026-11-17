@@ -1,0 +1,78 @@
+{
+  "status": "root_approved_single_diagnostic_before_execution",
+  "review_sha256": "260881038b4ea30a222955aa9380acaa0159ef2a20c784d30fc5924dd0ca17d9",
+  "review_path": "reports/support3072_export_failure_review.json",
+  "hypothesis": "更新结束后存在可回收的不可达Python张量或空闲缓存；显式清理可降低随后的full-context验证峰值，而不改变数值状态。若不是这种生命周期问题，诊断应否决该修复。",
+  "barrier": [
+    "torch.mps.synchronize()",
+    "gc.collect()",
+    "torch.mps.empty_cache()",
+    "torch.mps.synchronize()"
+  ],
+  "state_invariants": [
+    "全部parameter及buffer字节哈希、dtype/device、对象及storage身份",
+    "全部AdamW moments字节哈希、storage身份、step counters、参数组lr/wd",
+    "numpy sampler和counterfactual sampler完整RNG状态；Python、torchCPU与MPS RNG状态",
+    "support/query/labels字节与shape，以及grad=None和model.training状态"
+  ],
+  "small_sequence": "使用真实属性但独立固定synthetic targets；3708/928形状按原顺序validation0→update1。在同一更新权重上先做完整validation，再执行一次屏障并重复完整validation；采用既定2e-6/阈值一致性，验证前后state不变。没有真实accuracy或选步。",
+  "full_sequence": "新进程/新输出中重新从原权重开始；真实属性构造完整inner6954/support和1739/query，synthetic targets，原3072/256 sampler与原fitseed。validation0→update1→唯一屏障→validation1→update2→唯一屏障→validation2。保持同一AdamW及全部moment对象，不能从旧失败进程/半成品resume。",
+  "budget_seconds": 1200,
+  "external_supervision": true,
+  "seed": 20261112,
+  "support_per_update": 3072,
+  "query_per_update": 256,
+  "small_shape": [
+    3708,
+    928
+  ],
+  "full_shape": [
+    6954,
+    1739
+  ],
+  "query_chunk": 2318,
+  "allocator_fraction": 0.65,
+  "probability_comparison_tolerance": 2e-06,
+  "threshold_equality": true,
+  "data_policy": "Read only explicitly selected train.csv attribute columns, excluding Transported; synthetic y=np.arange(8693)%2. Stratified train_test_split(.2,random_state20261112) on synthetic y gives6954/1739. Small case uses first3708 of this synthetic inner and first928 of synthetic validation, preprocess fit only small support. Full case fresh original model/preprocessing/optimizer/RNG on entire synthetic inner. No real targets or test answers; these IDs differ from real-label split, not exact replay of failed fit.",
+  "full_feature_count": 13,
+  "stage_separation": "Release small-case model/optimizer/tensors and caches before creating fresh full-case state. Same original weight/backend/dual checkpoint/FP32+bf16; same moments persist across full update1 and2.",
+  "state_hash_observation": "Record synchronized current/driver before hashing, after hashing and at each barrier substep. Snapshot hashes return scalar/byte hashes and metadata only, never retain GPU clones. Hashing copies toCPU and may perturb timing/allocator; do not call measurements peaks.",
+  "required_evidence": [
+    "Complete state object/storage/bytes/RNG identity across each barrier",
+    "Small updated-weight fullvalidation before/after barrier <=2e-6 and identical .5 decisions",
+    "Full validation0, update1, barrier, validation1, update2, barrier, validation2 with original optimizer counters and unchanged moments",
+    "Actual full support/query forward coverage and finite probabilities at each validation",
+    "Substep gc collected count and current/driver snapshots, clean release"
+  ],
+  "output": "artifacts/probes/mitra_support3072_gc",
+  "report": "reports/mitra_support3072_gc_resources",
+  "stop_rules": [
+    "任何权重/moment/step/RNG/输入字节或设备变化，或小形状概率/阈值不一致：否决修复。",
+    "完整实际顺序仍OOM、超出另行冻结deadline或无法完成第2次更新后验证：归档，不提高cap/减少support或query/改backend/precision/checkpoint/offload。",
+    "GC不能回收全部204MB并不自动等于失败；但若没有可记录的生命周期释放，只是一次偶然运行通过，不能据此宣称已证实根因。需要把结论限定资源可行性，不归因特定泄漏。",
+    "即使通过也只证明该固定诊断，不能伪造原CV逐值等效或已完成全量导出；另行root修复决定、新source/protocol及新proposal仍必要。"
+  ],
+  "no_old_proposal_resume": true,
+  "no_automatic_full_fit_or_upload": true,
+  "no_new_model_accuracy": true,
+  "S_supported": false,
+  "evidence_sha256": {
+    "artifacts/proposal_nov16_support3072/failure.json": "323d24ab0da53f36b9c362f7a834d30e0212a51e8fcff14e577413c830af2763",
+    "artifacts/proposal_nov16_support3072/worker_result.json": "2eab980c0f9d3dcd9d44b2ecc733a1c9f870687c273549c6889908b1e3074958",
+    "artifacts/proposal_nov16_support3072/training_log.json": "a3baf1451cc272bd6cd6b6ab1353392daa7cd412262d8a87969d6c657cf48ccd",
+    "artifacts/proposal_nov16_support3072/preparation_protocol.json": "6e0201f11dbc877baf852be36b4c6b3b7ab9277baaf80cf28393432b6a6f818c",
+    "artifacts/proposal_nov16_support3072/environment.lock.txt": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "reports/mitra_long_context_resources/worker_result.json": "ae72deb5708197975be5843a536abd06efe676bb1c27fde8829d469e43c1ff1b",
+    "reports/mitra_long_context_resources/freeze.json": "bb2c0c79cbd700fdc7c810228583c44b4fca32b5015a40e3d1cb1ef424fc954e",
+    "reports/mitra_long_context_resources/result.json": "c3c485d4168f7de1f1e90c42dc9c4e53db81392cca666861e2332c13aad0e46d",
+    "reports/mitra_long_context_resources/requirements.lock": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "mitra_long_context_probe.py": "77a30b8fdd9e080b90f2c12ba333e41144230ef03d7fa5b8bc237cc8e93b5f0c",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_full_episode_probe.py": "4f1e5c8a33ca2ac0704fe9129ab16758964cfca807052057122a6a823eb4dfdd",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "prepare_support3072_submission.py": "81f790e74ba0f65eadce323f4a27557b41f7d2bc7e044f0918d32ad172e8578d",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465"
+  }
+}
