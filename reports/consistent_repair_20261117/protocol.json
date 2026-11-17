@@ -1,0 +1,48 @@
+{
+  "status": "prospective_before_new_candidate_fit",
+  "candidate": "rawMitra13_consistent_attribute_repair",
+  "reference": "v71_Mitra2_zeroshot run038 exact original3foldOOF",
+  "evidence": "reports/data_error_diagnosis_20261117/data_quality.json",
+  "recipe": {
+    "development_rows": 6954,
+    "folds": 3,
+    "split_seed": 20261112,
+    "fit_seed": "20261112+fold",
+    "threshold": 0.5,
+    "model": "unchanged original rawMitra compact13, checkpoint/preprocessing/mirror/fullcontext/querybatch/backend unchanged",
+    "rules": [
+      "Observed CryoSleep=True: fill missing RoomService/FoodCourt/ShoppingMall/Spa/VRDeck with0",
+      "Missing HomePlanet: fill if nonmissing original same-GroupId roster values are unanimous",
+      "Missing Side: fill if nonmissing original same-GroupId Cabin-derived Side values are unanimous"
+    ],
+    "unlabeled_roster": "full train+test attributes; Transported excluded before aggregation",
+    "rule_evidence": "Only original observed attribute values; no cascading newly imputed evidence",
+    "input_format": "Original build_features(False)30-column matrix; change only the seven allowed compact13 columns. Model selects original compact13; extra columns remain unchanged. Side filled in feature matrix only, not by inventing Cabin/Deck/number.",
+    "forbidden": [
+      "Observed-value replacement",
+      "Label changes/row removal",
+      "Filling Destination/Deck/CryoSleep/Age/CabinNumber",
+      "Adding flags/counts/IDs",
+      "Choosing rules or affected people based on OOF errors",
+      "Probability routing restricted to repaired rows"
+    ],
+    "budget_seconds": 1800,
+    "threads": 4,
+    "device": "mps",
+    "backend_fallback": false
+  },
+  "continuation": {
+    "minimum_accuracy_gain_vs_raw": 0.001,
+    "log_loss_not_higher_than_raw": true,
+    "minimum_folds_accuracy_not_lower": 2,
+    "if_pass": "Separate review for fixed group validation only; no automatic upload or adaptation.",
+    "if_fail": "Archive exact package; do not split/select rules, add new rules, change backend/threshold, or route by repaired status."
+  },
+  "interpretation": [
+    "This is a small falsifiable data-representation check, not the main explanation of common errors.",
+    "Observed rule consistency does not prove true missing values.",
+    "Preprocessing fitted in each training fold may change numeric centering/scaling after repairs; do not claim transformed unaffected rows remain identical.",
+    "Adaptive reused6954development, old1739holdout labels not parsed.",
+    "Related CatBoost rule bundles and Mitra context20 failed; this package isolates different changes but those are important counterevidence."
+  ]
+}
