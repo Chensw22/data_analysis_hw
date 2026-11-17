@@ -1,0 +1,380 @@
+{
+  "status": "complete",
+  "verified_inner_barriers": 50,
+  "step0_barriers": 0,
+  "refit_barriers": 0,
+  "source_hashes": {
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "mitra_long_context_probe.py": "77a30b8fdd9e080b90f2c12ba333e41144230ef03d7fa5b8bc237cc8e93b5f0c",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_support3072_lifecycle.py": "2b1a021afefb8efe1c913f4dde467481143f0fbe0605c27b6f0325de5d73fc4c",
+    "mitra_lifecycle_guard.py": "153ccee673b4ca1e42ad80263391d46b7420788c98ac2266d47f0a234c8759cc",
+    "reports/support3072_lifecycle_repair_design.json": "3fd17854831438dd23884d35b3827115224a10acf6b33b86ed0ee51de0539d3f",
+    "reports/support3072_gc_diagnostic_plan.json": "7d1aa13e0c227e10d423007adaf5659dd02b5560a050371a6fc0b5b335c1b544"
+  },
+  "runtime_provenance": {
+    "runtime_module": "mitra_support3072_lifecycle",
+    "change": "Audited lifecycle barrier only before inner validation steps1..50; no step0/refit barrier.",
+    "inherited_algorithm": "v93_Mitra_support3072",
+    "inherited_algorithm_evidence": "reports/run_056/summary.json",
+    "complete_three_fold_runtime_reproduction": false,
+    "new_cv_score_computed": false,
+    "S_supported": false,
+    "automatic_fullfit": false,
+    "automatic_upload": false,
+    "execution_condition": "Complete diagnostic pass plus separate committed root decision required before new fullfit."
+  },
+  "proofs": [
+    {
+      "step": 1,
+      "file": "training_log.lifecycle_step01.json",
+      "sha256": "434b8fb35e9ab8ee6baedca74302d451b47572e802c20a07bbc25d7437b4ab44",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 2,
+      "file": "training_log.lifecycle_step02.json",
+      "sha256": "15ca360aff22d8305a5801f42391047f80d520b45696081bba3524d6e61a324c",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 3,
+      "file": "training_log.lifecycle_step03.json",
+      "sha256": "4b323cd440e65c58fa4c869474b96a3a218f1c16cae804e911084beb31e3c34d",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 4,
+      "file": "training_log.lifecycle_step04.json",
+      "sha256": "076c0af8b18949ff216b738bb1c3534c1c3b6f9547786925ff7fa6a083be6541",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 5,
+      "file": "training_log.lifecycle_step05.json",
+      "sha256": "83957ac296f19898eec6e63d77921abebbc4cae2c299fe6ba7170c105377040b",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 6,
+      "file": "training_log.lifecycle_step06.json",
+      "sha256": "b039c7e79ec6befd0f619e6c5f0aa108c7fbdc263418ab3c4512c8a26a35bee7",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 7,
+      "file": "training_log.lifecycle_step07.json",
+      "sha256": "030ff3d87e0a08b2d3e9061553224cd82df7bd98b4a5a3c58578d17a34ae0075",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 8,
+      "file": "training_log.lifecycle_step08.json",
+      "sha256": "4a9d6dccb88677c1356a72ee1f68d535684064acba4fa1be86d7d19f7efa93e9",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 9,
+      "file": "training_log.lifecycle_step09.json",
+      "sha256": "88717b99ca7f3a3d885aa7918ca56ede08a9d5955d6d90a4737c18bd3fe888e4",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 10,
+      "file": "training_log.lifecycle_step10.json",
+      "sha256": "f5ee050fc984545227af6fa6122425eb6d2d6a423733582b35599103d469de96",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 11,
+      "file": "training_log.lifecycle_step11.json",
+      "sha256": "8ca91bbabf4ae45b612dfbe4134e3a33befd759fc2c4ff8d9f73dc1ab2bbeb30",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 12,
+      "file": "training_log.lifecycle_step12.json",
+      "sha256": "01c5e8f4120d91264da0591507826370ad689bc5db101eade0d9fc734ec21e8a",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 13,
+      "file": "training_log.lifecycle_step13.json",
+      "sha256": "4fa5fcf9bc3d8140c907e2abcea5754d0a1c3391571648650dcf4fe4316a299a",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 14,
+      "file": "training_log.lifecycle_step14.json",
+      "sha256": "5c99d07866a6066d7b0b7770eb9e2bab7d820077577f2f42bcfd15b497a4bf56",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 15,
+      "file": "training_log.lifecycle_step15.json",
+      "sha256": "de54d8a2a923f841744b5d535e3c4e92cb09c89b2e036eba3790c4f77c10da50",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 16,
+      "file": "training_log.lifecycle_step16.json",
+      "sha256": "08e133783f965fac45735c803e8ea2171a65a9daf5ee0e0bdca8bc9c751b158f",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 17,
+      "file": "training_log.lifecycle_step17.json",
+      "sha256": "7d9ceb0a640e1d238d245ba4791f94975a76842485e9229ea11d76f1b88e2667",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 18,
+      "file": "training_log.lifecycle_step18.json",
+      "sha256": "93d47384bb5b1561720f0476e76e73718103a73470fd8ac50a2b8abb9f42381f",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 19,
+      "file": "training_log.lifecycle_step19.json",
+      "sha256": "ab24f4dfe38b88830c038173a8334d0091eaad6ede830119aeef400e1f82d591",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 20,
+      "file": "training_log.lifecycle_step20.json",
+      "sha256": "9b798e9b659cec97719731779d7e10ae3301eca736ead12d86e49c9cea536d6c",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 21,
+      "file": "training_log.lifecycle_step21.json",
+      "sha256": "9af2c860f818eae265c7b6853dc24fa6b4b6f147b9e1b6191c41db06c18ecce6",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 22,
+      "file": "training_log.lifecycle_step22.json",
+      "sha256": "f8a999b14418987084d45bb9ccf96da70e8b8b2fb129662eff974a0cab353a14",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 23,
+      "file": "training_log.lifecycle_step23.json",
+      "sha256": "5c2f4aca0006d41c18503198ccb49daa4d7f77351eb0028e2e5d0e51f3f65399",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 24,
+      "file": "training_log.lifecycle_step24.json",
+      "sha256": "499fe8b8b4901e6e96e863abaee6656115d063c286aaab71e87809d0fddc6b62",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 25,
+      "file": "training_log.lifecycle_step25.json",
+      "sha256": "67c687282d7a285f158f8e918d4c20735be3a1cec59116112b090ea35be48fd6",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 26,
+      "file": "training_log.lifecycle_step26.json",
+      "sha256": "a9cd9c6ce33e3c909ed9e44366e78c7be9b3b3dc9b5fcffd993e898b33d72e74",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 27,
+      "file": "training_log.lifecycle_step27.json",
+      "sha256": "c972c07746fec06bc018e35faad6dc0313173ac8b586b80968f7e66655f50156",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 28,
+      "file": "training_log.lifecycle_step28.json",
+      "sha256": "41b594ec3c76a034d6c2612830804b86ab9dbf3c3852c60db2f0968596670cd9",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 29,
+      "file": "training_log.lifecycle_step29.json",
+      "sha256": "3794e587507585315f24f99c95a710315fd3e29e2c9a6617c5ed073498db5429",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 30,
+      "file": "training_log.lifecycle_step30.json",
+      "sha256": "e3dbff84d0f257a6a839b7c758206a6bafb3a5b3201924209a64568a24017d96",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 31,
+      "file": "training_log.lifecycle_step31.json",
+      "sha256": "7e07fd24b2de12a383a15fdc8833b362f1dfebae7ae1127f11c8fbde322e4088",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 32,
+      "file": "training_log.lifecycle_step32.json",
+      "sha256": "f3066cbcbc74d217961fd977ca2e2602b16dd9bb66fa9380e1ca07d98bba2c1e",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 33,
+      "file": "training_log.lifecycle_step33.json",
+      "sha256": "33daba75c861fb5b155cdf50132388f068b743241f13c7ad01a8929a29dc2dc1",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 34,
+      "file": "training_log.lifecycle_step34.json",
+      "sha256": "1927cde8f53226e4c08486cb232a1ef06d6a0e5045580874a0e13dfa8d6e9269",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 35,
+      "file": "training_log.lifecycle_step35.json",
+      "sha256": "7308c11b9c7b654caf23f5e3e4fbac6899492fff87aedf1faf128ff609549bce",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 36,
+      "file": "training_log.lifecycle_step36.json",
+      "sha256": "a787863b614b702a4c76cd639df117c62bc1863b77954b6bc3ac8bed8ae8fa02",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 37,
+      "file": "training_log.lifecycle_step37.json",
+      "sha256": "879aec7c1197fe1761130635512815690b55fe167e92f9301108b8354db8ff46",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 38,
+      "file": "training_log.lifecycle_step38.json",
+      "sha256": "53ff6c7fa2ae420189d87030010c8713516faefdcc33eee2fe5689149fbdb388",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 39,
+      "file": "training_log.lifecycle_step39.json",
+      "sha256": "f77b0b5ce47702ee76df3f9c85bcb60b32ed4847279eaa06a00d6c34d03470a4",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 40,
+      "file": "training_log.lifecycle_step40.json",
+      "sha256": "f3dd43024d64a68666177eed0db24ecda937486d9be7d088be142bd54ba8877b",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 41,
+      "file": "training_log.lifecycle_step41.json",
+      "sha256": "6bdf0fc4cf956bae9b5cec6cf8ad3dd9b3736eab1910ea4dad1efa41e339d66d",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 42,
+      "file": "training_log.lifecycle_step42.json",
+      "sha256": "cb1eebbc64ca82565579ac884289edb2f51827643f7627489c19e6ddaba262b4",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 43,
+      "file": "training_log.lifecycle_step43.json",
+      "sha256": "43ffa9230040192fb2d0992497ab93e099d3e8f6294e1ea34f887b07ffb92f35",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 44,
+      "file": "training_log.lifecycle_step44.json",
+      "sha256": "319df82884be822093378677a948e3e97870081cd70f634500ef011e8aa24ff2",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 45,
+      "file": "training_log.lifecycle_step45.json",
+      "sha256": "7b7d4cf13dfef85d1a7aa96b6ffafdfb2c03887e2c2815b9e07196c108a68af2",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 46,
+      "file": "training_log.lifecycle_step46.json",
+      "sha256": "a660828cfbf1a454a9bce4169aefc677806a8c858f0a76eb839b78bb95afe698",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 47,
+      "file": "training_log.lifecycle_step47.json",
+      "sha256": "f08b2f071854f9b8bfd348e881db5c3d1e4e49e63046d1aae1c4f1517af93b21",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 48,
+      "file": "training_log.lifecycle_step48.json",
+      "sha256": "3256a417b4bebfeae304967d119abc7fe32081effbe699767d24824e2c872110",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 49,
+      "file": "training_log.lifecycle_step49.json",
+      "sha256": "a010ff26d99b6694118c3e09e3a8352187925ad932724b2c0c5dae36520a8925",
+      "state_preserved": true,
+      "gc_collected": 80
+    },
+    {
+      "step": 50,
+      "file": "training_log.lifecycle_step50.json",
+      "sha256": "f2a30d4e43eb780f73f9ed24f08644af7eaceb66edc167237551b98c02cf2fa6",
+      "state_preserved": true,
+      "gc_collected": 80
+    }
+  ]
+}

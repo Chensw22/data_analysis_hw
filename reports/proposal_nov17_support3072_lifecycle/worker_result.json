@@ -1,0 +1,83 @@
+{
+  "status": "worker_complete",
+  "fit_rows": 8693,
+  "prediction_rows": 4277,
+  "reload_rows": 4277,
+  "reload_max_absolute_difference": 0.0,
+  "reload_threshold_decisions_equal": true,
+  "original_model_released_before_reload": true,
+  "restored_cpu_state": true,
+  "preprocessing_identity": {
+    "support_sha256": "91117b7c7c08be45b76e6fcb6e0a2358c874a3be1549e6675497d1ef54d885d9",
+    "labels_sha256": "0de12ee8a643ec5a06456b7a636ef4bd0ad695c6e9fc5adaa70119619ee1f43c",
+    "transformed_query_sha256": "0796b936080670734d32a5c01649c07e5e76f47a078873043d5d49ffcf71537a",
+    "columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "config": {
+      "dim": 512,
+      "dim_output": 10,
+      "n_layers": 12,
+      "n_heads": 4,
+      "task": "CLASSIFICATION"
+    },
+    "full_support_rows": 8693,
+    "query_rows": 4277,
+    "query_chunk": 2318
+  },
+  "first_forward_records": [
+    {
+      "support_rows": 8693,
+      "label_rows": 8693,
+      "query_rows": 2318
+    },
+    {
+      "support_rows": 8693,
+      "label_rows": 8693,
+      "query_rows": 1959
+    }
+  ],
+  "reload_forward_records": [
+    {
+      "support_rows": 8693,
+      "label_rows": 8693,
+      "query_rows": 2318
+    },
+    {
+      "support_rows": 8693,
+      "label_rows": 8693,
+      "query_rows": 1959
+    }
+  ],
+  "paired_inner_steps": 50,
+  "paired_common_refit_steps": 15,
+  "selected_steps": 47,
+  "lifecycle_proofs_sha256": "aa1f96e5e85d9e15c777deb636e553d80ef4465ba880461d9db1516a6e0b2f6b",
+  "files_sha256": {
+    "model.joblib": "eea0a8fc36bfaaf01e6bb7961af6f8f2dfd31422bd9b7c9604aa5ec21e2e35e8",
+    "fit_metadata.json": "609e48da3c30b4ff6005fadd2aeba4498c7929f5e076500edf2ecf319e3c765e",
+    "reload_metadata.json": "609e48da3c30b4ff6005fadd2aeba4498c7929f5e076500edf2ecf319e3c765e",
+    "training_log.json": "5929ec6d639ca39098e2171e117dc120261eab938f03c45699eda7675fa60fa1",
+    "predictions.npz": "dd423a426f001057b09b953914c54aa9c45daec0c12e3a8571d510a39aef7f20"
+  },
+  "resources_after_release": {
+    "max_rss_bytes": 966918144,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 1785856,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "release_complete": true
+}
