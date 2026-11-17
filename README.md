@@ -18,7 +18,7 @@
 
 ## 当前实际成绩
 
-当前最佳为 **v81 Mitra 全参数适配，Kaggle Public Score 0.81412（81.412%）**，提交 ID `58424738`，上传 commit `8e65a567eed7`。2026-11-17 16:59（北京时间）的官方账号最佳排名为 **116 / 2169，约前 5.348%**：前10%已达成，前5%尚未达成。滚动榜快照不是比赛最终名次；[官方快照](reports/proposal_online_first_v84/online_attempts/20261117T085115823439Z.json)与[本轮逐次提交记录](reports/online_iteration_20261116/RESULTS.md)保留完整证据。
+当前最佳为 **v81 Mitra 全参数适配，Kaggle Public Score 0.81412（81.412%）**，提交 ID `58424738`，上传 commit `8e65a567eed7`。2026-11-17 17:59（北京时间）的官方账号最佳排名为 **116 / 2169，约前 5.348%**：前10%已达成，前5%尚未达成。滚动榜快照不是比赛最终名次；[官方快照](reports/proposal_online_first_v84/online_attempts/20261117T085115823439Z.json)与[本轮逐次提交记录](reports/online_iteration_20261116/RESULTS.md)保留完整证据。
 
 | 方案 | 同一开发集随机三折 | Kaggle Public Score |
 |---|---:|---:|
@@ -31,6 +31,7 @@
 | EXAONE v91 默认8视图 | 80.98936% | 80.664% |
 | EXAONE v92 / 原始 Mitra 各半 | 81.42077% | 未上传 |
 | v93 Mitra support3072 | **82.11102%** | 81.295% |
+| iLTM r128bn 原生8成员 | 未完成（按用户转向停止CV） | 78.138% |
 
 本地最高更新为 v93 的82.11102%，未达到历史83%门槛；线上最佳是v81，两者分开报告。新版本的探索提交使用后续明确授权，原门槛失败和历史例外不改写。原始Mitra首次达到前10%的[独立复核](reports/online_batch_20261112/goal_verification.json)和[早期8个代表方案对照](reports/a_tier_batch_20261112/RESULTS.md)继续保留。
 
@@ -38,7 +39,7 @@
 
 ## 当前实验方向
 
-用户最新选择 **线上探索优先**：暂停额外随机/分组交叉验证，先用全部训练数据拟合、检查完整提交与保存重载，再直接线上评测。iLTM的FALSE版CV已按这一要求中断，尚无完整折分数；该中断不代表模型效果差。当前iLTM正在全量训练；EXAONE已直接提交，线上80.664%，未超过最佳，参见[新授权](reports/online_iteration_20261117/online_first_policy.json)。复用完整缓存的v84三结构等权已直接提交，得到80.967%，未超过最佳；参见[本批线上结果](reports/online_iteration_20261117/RESULTS.md)。
+用户最新选择 **线上探索优先**：暂停额外随机/分组交叉验证，先用全部训练数据拟合、检查完整提交与保存重载，再直接线上评测。iLTM的FALSE版CV已按这一要求中断，尚无完整折分数；该中断不代表模型效果差。iLTM和EXAONE均已直接提交，分别78.138%、80.664%，未超过最佳，参见[新授权](reports/online_iteration_20261117/online_first_policy.json)。复用完整缓存的v84三结构等权已直接提交，得到80.967%，未超过最佳；参见[本批线上结果](reports/online_iteration_20261117/RESULTS.md)。
 
 已覆盖逻辑回归、CatBoost/LightGBM、AutoGluon、MLP、TabM、FT-Transformer、TabR、SCARF，以及TabPFN、TabICL、两代Mitra、TabDPT、Kumo、EXAONE等预训练表格模型。FT-Transformer80.47%、TabR79.67%、SCARF79.80%（匹配scratch79.62%）是固定首轮配方的结果；不能凭一个配置否定整个模型族。早期方法的输入与评估边界见[方法比较](reports/method_comparison.json)，后续新增结果以各 `reports/run_*/` 及本轮提交记录为准。
 
