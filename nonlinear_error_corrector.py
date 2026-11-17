@@ -1,8 +1,36 @@
 """One fixed LightGBM logit residual on strict nested rawMitra OOF; CPU only."""
 import hashlib
+import importlib.util
 import json
+import os
 from pathlib import Path
+import sys
 import time
+
+
+def ensure_openmp():
+    """Reuse this environment's sklearn libomp before any numeric imports."""
+    if any(name in sys.modules for name in ['numpy','scipy','sklearn','lightgbm','torch']):
+        raise RuntimeError('Runtime entry must precede numeric imports.')
+    if os.environ.get('KMP_DUPLICATE_LIB_OK') not in (None,'FALSE'):
+        raise RuntimeError('Duplicate-runtime tolerance must not be enabled.')
+    env={**os.environ,'KMP_DUPLICATE_LIB_OK':'FALSE'}
+    if sys.platform=='darwin':
+        spec=importlib.util.find_spec('sklearn')
+        library=Path(spec.origin).parent/'.dylibs'
+        if not (library/'libomp.dylib').is_file():
+            raise RuntimeError('Existing sklearn libomp is unavailable; no fallback install.')
+        if not library.resolve().is_relative_to(Path(sys.prefix).resolve()):
+            raise RuntimeError('OpenMP library outside current Python environment.')
+        current=os.environ.get('DYLD_FALLBACK_LIBRARY_PATH','')
+        if str(library) not in current.split(':'):
+            env['DYLD_FALLBACK_LIBRARY_PATH']=str(library)+((':'+current) if current else '')
+    if any(os.environ.get(k)!=v for k,v in env.items()):
+        os.execve(sys.executable,[sys.executable,*sys.argv],env)
+
+
+if __name__=='__main__':
+    ensure_openmp()
 
 import numpy as np
 import pandas as pd
@@ -14,7 +42,8 @@ import relational_error_corrector as relational
 ROOT = Path(__file__).resolve().parent
 PLAN = ROOT/'reports/error_targeted_20261117/residual_protocol.json'
 REPORT = ROOT/'reports/error_targeted_20261117'
-OUT = ROOT/'artifacts/error_targeted_20261117/residual'
+OUT = ROOT/'artifacts/error_targeted_20261117/residual_runtime_fixed'
+PREFIX = 'residual_runtime_fixed'
 SPEND = ['RoomService','FoodCourt','ShoppingMall','Spa','VRDeck']
 COLUMNS = ['HomePlanet','CryoSleep','Destination','Age','VIP',*SPEND,'Deck','CabinNumber','Side',
            'MissingCount','TotalSpend','AllSpendingZero','SpendMissingCount','PaidServices','LuxurySpend',
@@ -94,12 +123,15 @@ def constant_reference(dev,fold_ids,raw,splits):
 
 
 def run():
+    if os.environ.get('KMP_DUPLICATE_LIB_OK')!='FALSE':
+        raise RuntimeError('Use fresh CLI runtime entry with explicit FALSE.')
     plan=check_protocol()
-    if OUT.exists() or (REPORT/'residual_result.json').exists():
+    if OUT.exists() or (REPORT/(PREFIX+'_result.json')).exists():
         raise FileExistsError('One frozen residual experiment; no overwrite/resume.')
     OUT.mkdir(parents=True);started=time.monotonic()
     try:
         import lightgbm as lgb
+        if os.environ.get('KMP_DUPLICATE_LIB_OK')!='FALSE':raise RuntimeError('Runtime flag changed.')
         inputs,splits,fold_ids,bases,evidence=overlap.load_authenticated()
         dev,y=inputs['dev'],inputs['y'];raw=bases['rawMitra']
         x=features();constant,control_evidence=constant_reference(dev,fold_ids,raw,splits)
@@ -146,7 +178,7 @@ def run():
                      reload_max_absolute_difference=float(np.max(np.abs(p-reload_p))),
                      feature_gain=dict(zip(COLUMNS,model.feature_importance(importance_type='gain').tolist())),
                      seconds=time.monotonic()-tick)
-            folds.append(row);write(REPORT/f'residual_fold{outer}.json',row)
+            folds.append(row);write(REPORT/f'{PREFIX}_fold{outer}.json',row)
             print(json.dumps(row),flush=True)
             del model,restored,dataset
         if len(folds)!=3 or not np.isfinite(candidate).all():raise RuntimeError('Three complete folds required.')
@@ -172,14 +204,26 @@ def run():
                     seconds=time.monotonic()-started,lightgbm_version=lgb.__version__,
                     base_models_retrained=False,old_holdout_labels_read=False,automatic_upload=False,
                     disclosure='One fixed adaptive-development diagnostic. Strict nested base OOF; no shared-error subset fitting. Inner/outer base training size differs.')
-        write(REPORT/'residual_evidence.json',evidence);write(REPORT/'residual_result.json',result)
+        if os.environ.get('KMP_DUPLICATE_LIB_OK')!='FALSE':raise RuntimeError('Runtime flag changed.')
+        write(REPORT/(PREFIX+'_evidence.json'),evidence);write(REPORT/(PREFIX+'_result.json'),result)
         return result
     except BaseException as error:
         path=OUT/'oof.npz'
         if path.exists():path.rename(OUT/'oof.partial.npz')
-        write(REPORT/'residual_failure.json',dict(status='failed_inconclusive',error_type=type(error).__name__,error=str(error)))
+        write(REPORT/(PREFIX+'_failure.json'),dict(status='failed_inconclusive',error_type=type(error).__name__,error=str(error)))
         raise
 
 
 if __name__=='__main__':
-    print(json.dumps(run(),indent=2))
+    if sys.argv[1:]==['--check-import']:
+        import lightgbm as lgb
+        from threadpoolctl import threadpool_info
+        if os.environ.get('KMP_DUPLICATE_LIB_OK')!='FALSE':raise RuntimeError('Runtime flag changed.')
+        print(json.dumps(dict(status='import_only_complete',model_constructed=False,fit_called=False,
+            lightgbm=lgb.__version__,duplicate_runtime_tolerance=os.environ['KMP_DUPLICATE_LIB_OK'],
+            loader_path=os.environ.get('DYLD_FALLBACK_LIBRARY_PATH'),
+            openmp=[v for v in threadpool_info() if v.get('user_api')=='openmp']),indent=2))
+    elif sys.argv[1:]:
+        raise ValueError('Only optional --check-import is supported.')
+    else:
+        print(json.dumps(run(),indent=2))

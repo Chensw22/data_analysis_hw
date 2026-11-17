@@ -83,7 +83,7 @@
     "labels_read": false
   },
   "sources_sha256": {
-    "nonlinear_error_corrector.py": "a176c8207bbed9d697e68725539b8ce557c4b6f63e41c54d33b2fdf2dcff2d59",
+    "nonlinear_error_corrector.py": "49c3da59a4ce2f2bb5641cc19eda0ae21c3facf5428b572d75b8e82fb238f0d1",
     "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
     "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
     "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
@@ -97,5 +97,19 @@
   },
   "no_old_holdout_labels": true,
   "no_new_base_models": true,
-  "automatic_upload": false
+  "automatic_upload": false,
+  "runtime_repair": {
+    "scope": "Only process-local loader startup and explicit duplicate-runtime tolerance FALSE; numeric recipe/feature/splits/offset unchanged.",
+    "previous_source_sha256": "a176c8207bbed9d697e68725539b8ce557c4b6f63e41c54d33b2fdf2dcff2d59",
+    "previous_protocol_sha256": "941bf3aef9d8b0e5a397c5f22a0ca9a546b7beeea263a1cabb29c84b4ec87caa",
+    "preserved_failure": "reports/error_targeted_20261117/residual_failure.json",
+    "preserved_failure_sha256": "1ffa6d76cb1b74aee3dd32fe7277d1a5bc772391ff49b6bb10aa70691dddc8ed",
+    "previous_completed_fits": 0,
+    "cause": "LightGBM import could not resolve @rpath/libomp.dylib before any fit.",
+    "implementation": "Fresh CLI before numpy/scipy/sklearn imports reexecs same interpreter with existing same-environment sklearn/.dylibs prefixed to DYLD_FALLBACK_LIBRARY_PATH and KMP_DUPLICATE_LIB_OK=FALSE. Reject enabled inherited override; no install or shell/system modification.",
+    "precedent": "model_families.py:ensure_openmp; explicit FALSE additionally prevents package setdefault(True).",
+    "output": "artifacts/error_targeted_20261117/residual_runtime_fixed",
+    "report_prefix": "residual_runtime_fixed",
+    "import_check": "--check-import does not construct or fit any model."
+  }
 }
