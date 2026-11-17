@@ -1,0 +1,33 @@
+{
+  "status": "verified_complete_FALSE_runtime_bridge",
+  "bridge_result_sha256": "83715da6f4b171463098b37c3d2c17d67d0f002eccd02dcf31610b46f216326e",
+  "single_FALSE_training_completed": true,
+  "historical_eight_FALSE_inference_and_reload_completed": true,
+  "eight_FALSE_training_repeated": false,
+  "probability_differences_independently_recomputed": {
+    "single": {
+      "first": 0.0,
+      "reloaded": 0.0,
+      "permuted": 0.0,
+      "partition": 0.0,
+      "subset": 0.0,
+      "own_reload": 0.0
+    },
+    "eight": {
+      "first": 0.0,
+      "reloaded": 0.0,
+      "permuted": 5.960464477539063e-08,
+      "partition": 0.0,
+      "subset": 2.9802322387695312e-08,
+      "own_reload": 0.0
+    }
+  },
+  "same_synthetic_inputs_labels_configuration_verified": true,
+  "original_single_validation_checks": 98,
+  "all_recorded_runtime_stages_FALSE": true,
+  "sampled_tree_rss_highwater_GiB": 6.19268798828125,
+  "monotonic_seconds": 498.5900582500035,
+  "no_new_candidate_scores": true,
+  "limitation": "FALSE runtime new training covered one native member, not eight. Historical eight-member model inference/persistence tested completely. Existing full8 structural/cost evidence plus this limited equivalence bridge supports only separately reviewed guarded CV migration.",
+  "old_failed_cv_preserved": true
+}

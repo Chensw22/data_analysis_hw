@@ -53,7 +53,7 @@ iLTM新结构的两个合成CPU单成员案例已完整通过训练、预测、�
 
 后续独立立项的官方 **iLTM r128bn（128维瓶颈、无树特征）** 已通过原生完整8成员资源检查：8693条合成训练行、4277条查询，32分钟有效运行/46分钟墙钟，采样进程树RSS峰值6.08GiB，全部预测保存重载差0，顺序/子集最大差约6e−8且分类一致。仅资源资格通过，尚无真实准确率；不能把较小checkpoint视为效果更好。旧xgbrconcat失败记录不改。下一步依[固定CV协议](reports/iltm_r128bn_cv_design.json)运行原6954开发集三折，完整结果达到当前A档地板81.1110%才做原分组三折，两阶段通过也仅供另行评估探索价值。见[资源复核](reports/iltm_r128bn_full8_resources/root_audit.json)与[12项测试及独立代码审查](reports/iltm_r128bn_cv_static_review.json)。
 
-首次真实CV在启动训练前被环境检查拦下，0折、无候选分数：`threadpoolctl`与`sklearn`导入时都会自动设置OpenMP重复运行库容忍开关。旧资源入口只检查变量不存在，不足以证明训练期间仍禁用；旧成功运行事实保留，但不能作为显式禁用开关后的资源资格。现在暂停该CV路径，另行验证新进程显式`FALSE`的兼容性；不直接绕过检查或覆盖失败。见[导入边界诊断](reports/iltm_r128bn_import_boundary_diagnostic.json)。
+首次真实CV在启动训练前被环境检查拦下，0折、无候选分数：`threadpoolctl`与`sklearn`导入时都会自动设置OpenMP重复运行库容忍开关。旧资源入口只检查变量不存在，不足以证明训练期间仍禁用；旧成功运行事实保留，但不能作为显式禁用开关后的资源资格。该旧CV路径已归档。独立显式`FALSE`迁移验证现已通过：完整新单成员训练与原概率差0，旧8成员在新环境中全4277预测和保存重载差0，顺序/子集差不超过6e−8；498.59秒、采样峰值6.193GiB。此验证没有重新训练8成员，只支持在完整硬限制下继续同配方CV，不能改写旧证据。新入口保持核心数据/评分及模型调用AST一致，并强制检查已提交的独立审核。见[导入边界诊断](reports/iltm_r128bn_import_boundary_diagnostic.json)、[迁移复核](reports/iltm_false_runtime_bridge/root_audit.json)及[新入口审查](reports/iltm_r128bn_cv_false_static_review.json)。
 
 ## 数据与线上成绩
 
