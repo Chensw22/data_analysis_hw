@@ -78,3 +78,5 @@
 - 后备TabDPT原生query检索经独立battle确认未被旧context_size=None覆盖，但固定环境CPU依赖初始化即重复libomp中止（root独立复现returncode-6）。报告tabdpt_retrieval_cpu_setup及最小reproducer保留，完整探针草稿移入ignored取证；无权重/GPU/真实数据/准确率，未创建新候选，不改env或OMP绕过救援。它是环境不可行记录，不是模型效果失败。v93生命周期修复fullfit由ecff94a独立批准，正在固定50step内层验证；新fullfit尚未完成、未新增上传。
 
 - v93独立生命周期导出已完整成功：50step内层选47，fresh全8693行refit47，50份state证明全部核验，4277完整保存/释放/重载maxdiff0；reports/proposal_nov17_support3072_lifecycle。总计6324.1009单调时钟秒，原7200监督未改变。root此前用wall文件时间估算风险，混用时钟高估超时，已在root_audit更正；条件fixed-refit设计fb8c0d3未触发，四草稿已删除，未新增fit/决定。下一步原lifecycle候选一次探索上传，本批上传前仍8/10。
+
+- 第9次v93 support3072生命周期修复已提交58454737/0.81295，commit1a8296e9f367；两次官方核验COMPLETE，未超过v81=.81412。最新账号116/2161约前5.368%（2026-11-17T03:43后快照），仍未达前5%，本批9/10剩1（每日次数另查）。全量导出完整，条件fixed-refit未触发、不执行；本地82.11102仍同A档、无S。下一步仅核查未覆盖HyperFast官方交付与资源可行性，无新实验/提交授权记录。
