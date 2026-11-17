@@ -74,3 +74,5 @@
 - v93首次全量导出已失败：inner step0验证通过，step1更新后6954/1739验证OOM（MPS allocated7.59GiB，limit7.70GiB），55.046s退出。proposal_nov16_support3072/failure及training_log等证据保留，无CSV/manifest/上传，本批仍8/10；不覆盖或直接重启旧proposal。只读核查实际分配顺序与合成资源探针覆盖，未确认原因前不提高cap/缩context/改backend。最新官方115/2163（2026-11-17T00:53:52Z，前5.317%）仍未达标。
 
 - 唯一GC诊断首轮在入口设备字符串检查失败（mps:0 vs mps），未执行屏障；1c15014保留。0caf350修正为device.type匹配且保留输入indexed equality，新plan/devicefix目录及17项CPU检查。修正后的诊断176.196s完整通过：small3708/928同权重前后概率逐值0，full6954/1739连续V0/U1/guard/V1/U2/guard/V2通过，3份完整state/storage/RNG/input证明相等。current未下降，fullstep1 driver减少134414336字节、step2减少1216544768字节；只支持运行期路径，不宣称活跃泄漏已定位或完整CV等价。准备独立proposal_nov17_support3072_lifecycle，只改inner验证前内存屏障；新fullfit尚未执行，需另committed decision，fixed7200s仅一次。
+
+- 后备TabDPT原生query检索经独立battle确认未被旧context_size=None覆盖，但固定环境CPU依赖初始化即重复libomp中止（root独立复现returncode-6）。报告tabdpt_retrieval_cpu_setup及最小reproducer保留，完整探针草稿移入ignored取证；无权重/GPU/真实数据/准确率，未创建新候选，不改env或OMP绕过救援。它是环境不可行记录，不是模型效果失败。v93生命周期修复fullfit由ecff94a独立批准，正在固定50step内层验证；新fullfit尚未完成、未新增上传。

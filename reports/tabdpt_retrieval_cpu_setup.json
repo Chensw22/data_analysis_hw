@@ -1,0 +1,145 @@
+{
+  "status": "closed_environment_inconclusive_no_model_or_GPU_resource_test",
+  "decision": "Stop this retrieval branch under the fixed environment. No OpenMP override, dependency replacement or implementation substitution. This is not a model accuracy failure.",
+  "original_design": {
+    "status": "closed_before_model_resource_native_faiss_cpu_failure",
+    "blocking_evidence": "reports/tabdpt_retrieval_cpu_setup.json; no model or GPU resource stage may be treated as passed. No environment or OpenMP override rescue authorized.",
+    "purpose": "Only assess native TabDPT retrieval feasibility and cost; no candidate CV, accuracy, real rows, labels, export or upload authorization.",
+    "source": {
+      "repository": "https://github.com/layer6ai-labs/TabDPT-inference",
+      "commit": "3cef828a0bbfe8818bcdd6d855940e1949f2b4cd",
+      "local_vendor": "third_party/tabdpt",
+      "checkpoint": "artifacts/pretrained/tabdpt-v1.3/tabdpt1_3.safetensors",
+      "checkpoint_sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+      "environment": "Unchanged reports/run_047/requirements.lock.txt and requirements-tabdpt.lock.txt",
+      "license": "Previously verified Apache-2.0. No download or install in this task."
+    },
+    "mechanism_and_limit": "Official default is subsample. README context2048/ensemble8 does not establish retrieval benchmark usage or pretraining sampling. Retrieval is an author-supported optional exactL2 selection policy, distinct from our completed fullcontext run047. No claim of expected accuracy gain.",
+    "settings": {
+      "context_policies": [
+        "retrieval",
+        "subsample"
+      ],
+      "context_size": 2048,
+      "ensemble_views": 8,
+      "query_batch_size": 8,
+      "seed": 20261117,
+      "temperature": 1,
+      "threshold": 0.5,
+      "dtype": "FP32 weights and execution; no AMP",
+      "memory_fraction": 0.65,
+      "threads": 4,
+      "input": "compact13, original train-only CompactEncoder then official mean imputer/StandardScaler",
+      "faiss": "Official IndexFlatL2 on every row of fitted training pool; exactly2048 distinct training IDs per query. This is explicitly not fullcontext inference.",
+      "no_fallback": "No context/view/batch/dtype/tolerance/distance changes on failure. No CPU fallback for MPS, no HPO."
+    },
+    "ordered_operations": [
+      "Parent validates fresh reserve30 guard, committed sources/design, old exact environment and checkpoint; freezes sources/environment/checkpoint/settings before any model load.",
+      "Spawn fresh child; hard600second total parent deadline includes all resource work and loading/serialization. Failed timeout preserves partial evidence but never passes.",
+      "For each mode, synthetic2049pool/1query, all8views: CPU original neural forward then release, MPS then release, compare activated reduction probabilities/decisions and actual neighbor IDs. Same compact13 train-only encoding.",
+      "Each pool4636 and8693, each mode, synthetic64queries, all8views: time loading/fit and fullpredict, capture actualforward tensors and perview perquery neighbors.",
+      "Check query reversal and19row reordered subset including tailbatch3; duplicated observation values and deliberate distance ties have distinct IDs. No query labels accepted.",
+      "CPU-portable joblib save, release engine, load/move and repeat all64queries; verify same neighbor IDs, probabilities and threshold decisions. Only one neural engine exists at a time.",
+      "Record CPU arrays/neighbors/IDs, source hashes, timing and RSS/MPS point snapshots; delete synthetic model artifact after evidence is captured. Recheck frozen sources/environment/checkpoint before complete status."
+    ],
+    "tolerances_before_execution": {
+      "CPU_MPS_max_probability_error": 2e-05,
+      "partition_permutation_max_probability_error": 2e-05,
+      "same_backend_reload_max_probability_error": 2e-06,
+      "all_comparisons": "Identical threshold0.5 decisions and exact perview neighborID arrays required. Values inherited from existing TabDPT resource contract, not adjusted after results."
+    },
+    "cost_gate": {
+      "resource_hard_seconds": 600,
+      "paired_threefold_projection": "1.25 * SUM_modes(3*fit_time4636 +6954/64*full8view_prediction_time4636)",
+      "paired_threefold_max_seconds": 3600,
+      "each_final_projection": "1.25*(fit_time8693+serialization+release+reload_load+2*4277/64*full8view_prediction_time8693)",
+      "each_final_max_seconds": 3600,
+      "meaning": "Synthetic throughput forecast with25%margin, not a timing guarantee for real data. Both modes/pools must finish; cost failure closes route without smallerK/views/batch rescue. All passed only permits root to consider a separately frozen candidate, never automatic CV or upload."
+    },
+    "tests": "CPU logic tests use tiny fake neural module and explicit numpy mock FAISS index with official preprocessing/context selection/batching. Native FAISS crashed and hung; mock passes DO NOT qualify native retrieval. No pretrained model load. Test ID separation, unknown maps, ties/duplicate observations, active2048 selection, neighbor permutation/subsets, persistence, invalid evidence and cost gate.",
+    "owned_files": [
+      "tabdpt_retrieval_resource_probe.py",
+      "test_tabdpt_retrieval_resource_probe.py",
+      "reports/tabdpt_retrieval_resource_design.json"
+    ]
+  },
+  "native_failures": [
+    {
+      "stage": "first CPU fake-network test using actual official FAISS",
+      "command": ".venv-tabdpt/bin/python -m unittest -v test_tabdpt_retrieval_resource_probe",
+      "exit_code": 139,
+      "evidence": "Three pure logic tests passed, then native retrieval test segfaulted. Repeat with PYTHONFAULTHANDLER=1 also exit139; stack at faiss/swigfaiss.py:2710 search and class_wrappers.py:364 replacement_search.",
+      "thread_limit_gap": "First test did not explicitly set FAISS thread count. No model checkpoint was read."
+    },
+    {
+      "stage": "declared torch4 and FAISS4 thread constraints added",
+      "command": "PYTHONFAULTHANDLER=1 .venv-tabdpt/bin/python -m unittest -v test_tabdpt_retrieval_resource_probe",
+      "result": "Native search did not complete; process89834 observed alive at39seconds and subsequently terminated by SIGTERM. This is an observed hang, not a completed timeout benchmark.",
+      "evidence": "Same three logic tests passed before native retrieval; no subsequent progress. No model weights or GPU."
+    },
+    {
+      "stage": "fresh dependency-only subprocess plus tiny native-index intent",
+      "returncode": -6,
+      "stdout": "imports_ok\n",
+      "stderr_key": "OMP: Error #15: Initializing libomp.dylib, but found libomp.dylib already initialized.",
+      "elapsed_seconds": 0.6575277920346707,
+      "boundary": "Aborted during declared thread initialization, before printing thread counts, before constructing/searching the planned tiny index. No checkpoint or model read.",
+      "exact_executed_child_source": "import numpy as np, torch, faiss\nprint('imports_ok',flush=True)\ntorch.set_num_threads(4);faiss.omp_set_num_threads(4)\nprint('torch_threads',torch.get_num_threads(),'faiss_threads',faiss.omp_get_max_threads(),flush=True)\nrng=np.random.default_rng(42);x=rng.normal(size=(2049,13)).astype('float32');q=x[:19].copy()\nindex=faiss.IndexFlatL2(13);index.add(x)\nprint('index_rows',index.ntotal,'before_search',flush=True)\nd,i=index.search(q,2048)\nprint('passed',i.shape,flush=True)\n"
+    }
+  ],
+  "interpretation": "Fresh minimal error identifies duplicate OpenMP initialization in this environment. It is consistent with the earlier native crash/hang but does not prove every crash has the identical root cause. We do not use the unsafe KMP_DUPLICATE_LIB_OK suggestion printed by the runtime.",
+  "reproducer": {
+    "path": "tabdpt_retrieval_cpu_reproduce.py",
+    "command": ".venv-tabdpt/bin/python tabdpt_retrieval_cpu_reproduce.py --out artifacts/probes/tabdpt_retrieval_setup/dependency_only_repeat.json",
+    "limit": "15second parent watchdog; imports and four-thread initialization only, no index/model/weights/GPU. Newly written reproducer not executed in this handoff; exact prior executed child is preserved above."
+  },
+  "mock_test_result": {
+    "exitcode": 0,
+    "tests": 5,
+    "seconds": 0.287,
+    "scope": "After native failure, explicitly mocked FAISS index and tiny fake neural module exercised official preprocessing/selection/batching logic, identity isolation, tie/duplicate fixtures, serialization and projections. Does not establish native numerical behavior or resource feasibility. These tests are archived only, not retained as a runnable candidate suite."
+  },
+  "provenance": {
+    "draft_sources_sha256": {
+      "artifacts/probes/tabdpt_retrieval_setup/draft_source/tabdpt_retrieval_resource_probe.py": "74a88ac9b30fb1d59eefbc52a48fd0cb561b165ff85022d558cc223e29510bcf",
+      "artifacts/probes/tabdpt_retrieval_setup/draft_source/test_tabdpt_retrieval_resource_probe.py": "c20bd76201cc35f0cc724703e5de670f9a30e6046b245910d00b1e94662a3a55",
+      "artifacts/probes/tabdpt_retrieval_setup/draft_source/tabdpt_retrieval_resource_design.json": "74e72e971c42830a383e8035ca5e6f02099405de098d0e87233d42f5486b45ea"
+    },
+    "draft_source_hash_limit": "Archived hashes describe final unqualified drafts after CPU checks, not a pre-execution frozen protocol. First pre-thread-fix draft was not independently snapshotted; do not claim a historical SHA was captured before that run.",
+    "old_sources_and_environments_modified": false,
+    "read_real_labels_or_OOF": false,
+    "read_v93_export_outputs": false,
+    "gpu_or_pretrained_model_run": false,
+    "new_accuracy_or_candidate_number": null,
+    "commit": false
+  },
+  "package_versions": {
+    "numpy": "2.5.4",
+    "torch": "2.13.0",
+    "faiss-cpu": "1.12.0",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.1",
+    "joblib": "1.6.0"
+  },
+  "source_sha256": {
+    "tabdpt_retrieval_cpu_reproduce.py": "4380af602e39769cd8f78124b4b082bae5236671fba7ed84ba90b78e36fe2697",
+    "tabdpt_resource_probe.py": "e177ec4b89a92591210f33f2be531138ebe867f6c5c88d5d64c68e7c84b75a8f",
+    "third_party/tabdpt/tabdpt/estimator.py": "f49aa82df041287e13e4660b54afc0f5e51eff6885ed284936e1e740a86750ff",
+    "third_party/tabdpt/tabdpt/classifier.py": "9504cda178899138434c73241f83454ea6e1cad1195073ecfb930e4ef86a831e",
+    "third_party/tabdpt/tabdpt/utils.py": "2d576b6e1d6c95ab4926459e6cc91b4d5528aa0a850cd00269c2b93d1c3954cb",
+    "third_party/tabdpt/README.md": "6f24ad0a0b9f14f1e063c43518afba0968875c12a25cfc96458f08151dc97d50",
+    "third_party/tabdpt/SOURCE.json": "218c4607a1dc4dd8b184bcbf09242d868ffdc0bfb1819d0758168ab7974df263",
+    "requirements-tabdpt.lock.txt": "d88ee46a402d057eaa1ceb7d67944b219a2cfd4cf434973dadfa02a3863915c7",
+    "reports/run_047/requirements.lock.txt": "996946ff32a6f69de4180a0d107893c2c7d5a17f9c6b97070a5de3ffab77823f"
+  },
+  "root_verification": {
+    "status": "independently_reproduced_dependency_abort_before_model",
+    "evidence": "reports/tabdpt_retrieval_dependency_repeat.json",
+    "sha256": "f172a5a7fa81809fa53a8d20dc951bf77883748eb7caa575684b48d04007a693",
+    "source_and_draft_hashes_verified": true,
+    "returncode": -6,
+    "seconds": 0.9686145830200985,
+    "new_model_score": false,
+    "prior_review": "review_current independently confirmed distinct retrieval mechanism and appropriate resource-only scope, corrected official default/benchmark interpretation before implementation; root now closes on reproduced dependency failure."
+  }
+}
