@@ -1,0 +1,158 @@
+import pytest
+import numpy as np
+from sklearn.utils.estimator_checks import check_estimator
+from sklearn.utils import get_tags
+from sklearn.base import clone, is_classifier, is_regressor
+
+from iltm import iLTMClassifier, iLTMRegressor
+
+
+class TestSklearnAPI:
+
+    @pytest.mark.parametrize("estimator_class", [iLTMClassifier, iLTMRegressor])
+    def test_finetuning_defaults(self, estimator_class):
+        estimator = estimator_class(checkpoint=None, device="cpu")
+
+        assert estimator.n_ensemble == 8
+        assert estimator.finetuning_batch_size == 2048
+        assert estimator.max_train_batches_per_epoch == 128
+        assert estimator.finetuning_subset_max_samples == 100_000
+        assert estimator.val_checks_per_epoch_target == "auto"
+        assert estimator.val_max_samples == 25_000
+        assert estimator.val_subsample_before_preprocessing is True
+
+    @pytest.mark.parametrize("estimator_class", [iLTMClassifier, iLTMRegressor])
+    def test_validation_check_target_accepts_explicit_overrides(self, estimator_class):
+        assert estimator_class(
+            checkpoint=None,
+            device="cpu",
+            val_checks_per_epoch_target=2,
+        ).val_checks_per_epoch_target == 2
+        assert estimator_class(
+            checkpoint=None,
+            device="cpu",
+            val_checks_per_epoch_target=4,
+        ).val_checks_per_epoch_target == 4
+
+    @pytest.mark.parametrize("invalid", [0, -1, "adaptive"])
+    @pytest.mark.parametrize("estimator_class", [iLTMClassifier, iLTMRegressor])
+    def test_validation_check_target_rejects_invalid_values(
+        self,
+        estimator_class,
+        invalid,
+    ):
+        with pytest.raises(ValueError, match="positive integer or 'auto'"):
+            estimator_class(
+                checkpoint=None,
+                device="cpu",
+                val_checks_per_epoch_target=invalid,
+            )
+
+    @pytest.mark.parametrize("estimator_class", [iLTMClassifier, iLTMRegressor])
+    def test_scheduler_min_lr_cannot_exceed_finetuning_lr(self, estimator_class):
+        with pytest.raises(ValueError, match="scheduler_min_lr"):
+            estimator_class(
+                checkpoint=None,
+                device="cpu",
+                finetuning_lr=1e-4,
+                scheduler_min_lr=1.1e-4,
+            )
+
+    @pytest.mark.parametrize(
+        ("estimator_class", "estimator_type"),
+        [
+            (iLTMClassifier, "classifier"),
+            (iLTMRegressor, "regressor"),
+        ],
+    )
+    def test_estimator_tags(self, estimator_class, estimator_type):
+        estimator = estimator_class(checkpoint=None, device="cpu")
+        tags = get_tags(estimator)
+
+        assert tags.estimator_type == estimator_type
+        assert tags.target_tags.required
+        assert tags.input_tags.allow_nan
+        assert tags.requires_fit
+        assert not tags.non_deterministic
+        assert is_classifier(estimator) == (estimator_type == "classifier")
+        assert is_regressor(estimator) == (estimator_type == "regressor")
+    
+    def test_classifier_clone(self, tiny_classification_data):
+        X, y = tiny_classification_data
+        
+        clf1 = iLTMClassifier(
+            n_ensemble=1,
+            finetuning_max_steps=5,
+            checkpoint="xgbrconcat",
+            device="cpu"
+        )
+        clf2 = clone(clf1)
+        
+        assert clf2.n_ensemble == clf1.n_ensemble
+        assert clf2.finetuning_max_steps == clf1.finetuning_max_steps
+        assert clf2 is not clf1
+    
+    def test_regressor_clone(self, tiny_regression_data):
+        X, y = tiny_regression_data
+        
+        reg1 = iLTMRegressor(
+            n_ensemble=1,
+            finetuning_max_steps=5,
+            checkpoint="cbrconcat",
+            device="cpu"
+        )
+        reg2 = clone(reg1)
+        
+        assert reg2.n_ensemble == reg1.n_ensemble
+        assert reg2.finetuning_max_steps == reg1.finetuning_max_steps
+        assert reg2 is not reg1
+    
+    def test_classifier_get_params(self):
+        clf = iLTMClassifier(
+            n_ensemble=3,
+            finetuning_max_steps=100,
+            checkpoint="cbrconcat",
+            device="cpu"
+        )
+        params = clf.get_params()
+        
+        assert 'n_ensemble' in params
+        assert 'finetuning_max_steps' in params
+        assert params['n_ensemble'] == 3
+        assert params['finetuning_max_steps'] == 100
+    
+    def test_regressor_get_params(self):
+        reg = iLTMRegressor(
+            n_ensemble=3,
+            finetuning_max_steps=100,
+            checkpoint="cbrconcat",
+            device="cpu"
+        )
+        params = reg.get_params()
+        
+        assert 'n_ensemble' in params
+        assert 'finetuning_max_steps' in params
+        assert params['n_ensemble'] == 3
+        assert params['finetuning_max_steps'] == 100
+    
+    def test_classifier_set_params(self):
+        clf = iLTMClassifier(
+            n_ensemble=1,
+            checkpoint="cbrconcat",
+            device="cpu"
+        )
+        clf.set_params(n_ensemble=5, finetuning_max_steps=200)
+        
+        assert clf.n_ensemble == 5
+        assert clf.finetuning_max_steps == 200
+    
+    def test_regressor_set_params(self):
+        reg = iLTMRegressor(
+            n_ensemble=1,
+            checkpoint="cbrconcat",
+            device="cpu"
+        )
+        reg.set_params(n_ensemble=5, finetuning_max_steps=200)
+        
+        assert reg.n_ensemble == 5
+        assert reg.finetuning_max_steps == 200
