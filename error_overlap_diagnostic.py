@@ -115,7 +115,7 @@ def main():
     frame = train.iloc[inputs['dev']].reset_index(drop=True)
     slice_rows = []
     for feature, values in slices(frame, pd.concat([train, test], ignore_index=True), probabilities).items():
-        values = values.astype(str)
+        values = values.astype(str).fillna('__MISSING__')
         for value in sorted(values.unique()):
             mask = (values == value).to_numpy(); n = int(mask.sum())
             row = dict(feature=feature, value=value, rows=n, positive_rate=float(y[mask].mean()),
