@@ -1,0 +1,95 @@
+{
+  "status": "fixed_proposed_bridge_before_execution",
+  "scope": "One bounded FALSE native1 training plus portable historical8 inference bridge; no real data/scores/CV.",
+  "budget_seconds": 1200,
+  "rss_limit_bytes": 10737418240,
+  "threads": 4,
+  "seed": 20261117,
+  "rows": 8693,
+  "queries": 4277,
+  "environment_flag": {
+    "name": "KMP_DUPLICATE_LIB_OK",
+    "parent_entry": "must be absent; reject every existing value",
+    "child_value": "FALSE",
+    "policy": "snapshot isolated child loader/thread environment before any qualification/numeric import; never enableTRUE or deleteFALSE insideworker"
+  },
+  "first_stage": {
+    "function": "iltm_r128bn_resource_probe.run_case",
+    "members": 1,
+    "reuse": "unchanged source, native parameters, synthetic generator, shapes, seed,2048epochcap/nativeearlystop, full4277/partition/subset/permutation/save/release/reload",
+    "baseline": "artifacts/probes/iltm_r128bn_cpu1/8693_4277/probabilities.npz",
+    "baseline_probability_tolerance": 2e-06,
+    "same_threshold_decisions": true
+  },
+  "second_stage": {
+    "members": 8,
+    "fit": false,
+    "model": "artifacts/probes/iltm_r128bn_full8/8693_4277/model.joblib",
+    "baseline": "artifacts/probes/iltm_r128bn_full8/8693_4277/probabilities.npz",
+    "queries": [
+      "all4277",
+      "reverse all4277",
+      "subset arange(0,4277,7)",
+      "partition1024+1024+1024+1024+181"
+    ],
+    "baseline_probability_tolerance": 2e-05,
+    "reload_probability_tolerance": 2e-06,
+    "same_threshold_decisions": true,
+    "persistence": "hash before trustedjoblibload; exact native8 config/classes/membercount/sharedpreprocessor/CPU tensors and retrieval8192permember; save/release/cacheclear/reload all4277; no retained model across reload",
+    "storage_alias_disclosure": "Require CPU tensors, original dtypes, exact native config/member/context counts and complete probability equality. Observe storage count/bytes but do not require alias-layout equality across joblib loads."
+  },
+  "observation": {
+    "method": "Read-only outer sys.settrace, restricted to originalsingle stage entries and native validate_and_update return events; preserve original sys.setprofile NativeObservation and restore previous trace in finally. Copy scalar stage/counters only, no frames/tensors retained.",
+    "flag_checks": "before numeric imports, every originalsingle stage, each native training validation/progress return, all bridge inference/save/load/release stages, before/after final qualification",
+    "overhead": "included in total wall/monotonic durations; not zero perturbation; no numerical/native program edits"
+  },
+  "prerequisites": {
+    "false_runtime": "complete committed reports/iltm_false_runtime/result.json, all recordedstagesFALSE; this covered nativepreprocessing/torch/NumPy but not unusedArgKmin",
+    "historical_resource": "originalsingle/full8 complete and full8costpass; authentic sources/env/weight/checkpoint/worker/report/artifact/NPZ/modelSHA, recompute original saved-array qualifications without deserialize in parent",
+    "old_runtime_disclosure": "Oldsingle/full8 completed with package-import implicitTRUE; preserve old results. They are not FALSE training qualification. CV attempt failed atparent0fold beforechild, preserved."
+  },
+  "evidence_sha256": {
+    "iltm_r128bn_resource_probe.py": "21b2c3a22dd63e6d7ee18f5bf62c946bbdac0684dd130af05db69f063efc4657",
+    "iltm_r128bn_full8_probe.py": "c960b93cb637d126e890f2fea3613056f5dcf21a7205fdef1308c9ade10d0384",
+    "iltm_false_runtime_probe.py": "bd441e1f533d33bcb2232540c23c4e18f7237a0a00020db74b030ed07f916b8e",
+    "reports/iltm_r128bn_setup.json": "2a04b777a415323e6dc9aafd58f71647b323bbd0d9dd18fada7fd285a75a8757",
+    "reports/iltm_false_runtime/result.json": "569f08cdbe582038fbd5c37223e250e35158f44e9cdc351015e988bdc7422592",
+    "reports/iltm_false_runtime/freeze.json": "9a94eb6bb04a5636bc93487a29e02cdf962ad33c155b20e0cbada32140fa2722",
+    "reports/iltm_r128bn_cv/random/failure.json": "cd188c3c85daf37ab9c95294fe715229b6eb7f7063739568a35a7f3dd2459a81",
+    "reports/iltm_r128bn_full8_resources/root_audit.json": "9631fa3bc4829be473adf4a5dffb5f5ddf5dbc65e99fd6a4893d556f012e1800",
+    "reports/iltm_r128bn_cpu1_resources/freeze.json": "c69b14de0a1b65b4b3af7af9e1a1118473f81790f4afb1bad082995bdbcc5c79",
+    "reports/iltm_r128bn_cpu1_resources/result.json": "bef821d7ea25e3591fe3a2a9e150edb3a727980ffb1a0f73dfe8cdc772814b9e",
+    "reports/iltm_r128bn_cpu1_resources/8693_4277_worker_result.json": "421b9032cf9b22ad822aceff0f0f488a493299b76e6328f7836146ae354396f3",
+    "reports/iltm_r128bn_cpu1_resources/8693_4277_external_monitor.json": "973ce14007a233f619235195b99a1825745f0d247b8259b2ef8edea80200b3a1",
+    "reports/iltm_r128bn_full8_resources/freeze.json": "c231d377c08000ef984bbc88419ef3fd49f1244f5d05774268d9e9dfe1380df9",
+    "reports/iltm_r128bn_full8_resources/result.json": "a28f0c7c5e8a8522266a6998bde2aec770418cdcca94e14f62e20de27a6fc6b9",
+    "reports/iltm_r128bn_full8_resources/8693_4277_worker_result.json": "b71676846286302422cb92b380be78b8135634246064d4162e5d18972cdac649",
+    "reports/iltm_r128bn_full8_resources/8693_4277_external_monitor.json": "a6c7e34ed5a6f67376b701beb61303313601d4849ff384e09f38907fce8d0593"
+  },
+  "paths": {
+    "artifacts": "artifacts/probes/iltm_false_runtime_bridge",
+    "reports": "reports/iltm_false_runtime_bridge"
+  },
+  "failure": "One attempt only. Preserve first error/stage/partial/native stderr and externalRSS/timeout evidence; no overwrite/resume/retry/TRUE/precision/member/context/horizon rescue. Failed bridge cannot authorize CV.",
+  "qualification": {
+    "single_FALSE_training_completed": true,
+    "historical_eight_FALSE_inference_and_reload_completed": true,
+    "eight_FALSE_training_repeated": false,
+    "scope": "A passed bridge permits only separate review of a new environment-migration CVwrapper; no automatic realfit, export, upload or rewritten oldresourcequalification."
+  },
+  "no_real_data": true,
+  "no_accuracy": true,
+  "automatic_cv": false,
+  "automatic_upload": false,
+  "old_reports_unchanged": true,
+  "installed_import_sources_sha256": {
+    ".venv-iltm/lib/python3.12/site-packages/threadpoolctl.py": "bc96c525c34e83ef7cac997181a784c8c6662e61a3f38f58d202bd3b50e1d866",
+    ".venv-iltm/lib/python3.12/site-packages/sklearn/__init__.py": "7dddca4734d14252e358db0ae8bfa0b54da4de7a1f66ba4c92b39b751bb363b4"
+  },
+  "reusable_interfaces": {
+    "entry_environment": "Snapshot before numeric/qualification imports; parent flag must be absent; return child env withFALSE, does not mutate parent.",
+    "require_false": "Worker runtime assertion; use before/after stages and progress.",
+    "resource_gate": "Verify committed complete limited bridge and old baselines; returns frozen source/evidence mapping; cannot launch CV.",
+    "assert_frozen": "Recheck sources/evidence/original environment/checkpoint for returned mapping."
+  }
+}
