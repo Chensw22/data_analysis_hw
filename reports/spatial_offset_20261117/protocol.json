@@ -1,0 +1,56 @@
+{
+  "status": "prospective_before_inner_predictions_or_new_scores",
+  "candidate": "EarthG_awake_rank4_side_offset",
+  "base": "rawMitra original run038 outerOOF",
+  "motivation": "Fixed attribute quartiles reveal residual difference in Earth/G/awake across cached3GroupCV seeds for rawMitra andv44; original spatial expert only covers CryoTrue. This is an adaptive hypothesis, not confirmation.",
+  "counterevidence": [
+    "Same labels reused across seeds, not independent repetitions.",
+    "Third-bin positive prediction counts already near label counts: mean underprediction does not imply accuracy gain.",
+    "Group residual diagnostic motivates hypothesis; current initial test uses original random outer folds and cannot be called group confirmation."
+  ],
+  "recipe": {
+    "outer_seed": 20261112,
+    "outer_folds": 3,
+    "nested_source": "planet_mixture_20261117 exact complete raw innerOOF: each outertrain3innerSKF seed20261117+outer, fitseed20261117+100*outer+inner",
+    "eligible": "Observed HomePlanet Earth AND Deck G AND CryoSleep False AND known P/S AND numeric CabinNumber",
+    "spatial_rank": "Within full unlabeled train/test roster Deck x Side, CabinNumber average percentile rank",
+    "rank_bins": "min(floor(rank*4),3); missing=-1",
+    "cells": [
+      "P0",
+      "P1",
+      "P2",
+      "P3",
+      "S0",
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "candidate_probability": "sigmoid(logit(p_raw)+beta_cell) on eligible rows; other rows bitwise raw",
+    "objective": "mean binary logloss on outertrain eligible innerOOF + 0.1*mean(beta^2)",
+    "regularization": 0.1,
+    "initial_beta": 0.0,
+    "optimizer": "L-BFGS-B",
+    "maxiter": 500,
+    "ftol": 1e-12,
+    "probability_clip": 1e-07,
+    "threshold": 0.5,
+    "unknown_or_missing": "Unchanged raw probability; no unseen-category fitting",
+    "empty_train_cell": "Ridge optimum zero; assert zero",
+    "resource_budget_seconds": 300
+  },
+  "reuse_boundary": "Reuse only exact same random outer/inner partition, base weights and features. Never train correction on full-dev outerOOF, and never reuse random-inner predictions for group outer evaluation.",
+  "continuation": {
+    "minimum_accuracy_gain_vs_raw": 0.001,
+    "log_loss_at_most_raw": "overall and eligible subgroup",
+    "minimum_folds_accuracy_at_least_raw": 2,
+    "if_pass": "Separate review and frozen group confirmation only; no automatic upload.",
+    "if_fail": "Archive; no new knots/bins/regions/regularization/threshold/ensembles or probability offsets from diagnostic residuals."
+  },
+  "unchanged": [
+    "Target labels",
+    "Original base training",
+    "Outer test predictions except frozen eligible cells",
+    "Existing failed protocols and scores"
+  ],
+  "no_automatic_export_or_upload": true
+}
