@@ -38,7 +38,9 @@ def verify(proposal, policy_path=POLICY):
     check=workflow.validate_submission(out/'submission.csv',ROOT/'data/raw/test.csv')
     if manifest.get('sha256')!=check['sha256']:
         raise RuntimeError('Prepared CSV identity differs.')
-    if manifest.get('policy_sha256')!=digest(policy_path):
+    policy_key=str(policy_path.resolve().relative_to(ROOT))
+    bound_policy=manifest.get('policy_sha256',manifest.get('source_hashes',{}).get(policy_key))
+    if bound_policy!=digest(policy_path):
         raise RuntimeError('Prepared policy identity differs.')
     if manifest.get('artifact_kind')=='cached_probability_ensemble':
         if manifest.get('cached_ensemble_verified') is not True:
