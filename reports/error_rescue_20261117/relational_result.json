@@ -1,0 +1,318 @@
+{
+  "status": "complete",
+  "protocol_sha256": "5766f24d5c1e36749f57d009eec9ac53d9810058e66beea7109979767fc1def9",
+  "folds": [
+    {
+      "fold": 0,
+      "train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+      "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+      "scaling_mean": [
+        0.490729672638197,
+        0.37459603724225593,
+        -0.08063716831271979,
+        -0.029877314375229336,
+        0.023943054357204487
+      ],
+      "scaling_std": [
+        0.61600712349394,
+        0.5610016082526211,
+        0.7731946590131094,
+        0.6641963900139337,
+        0.15287179107099752
+      ],
+      "constant": {
+        "intercept": -0.004266541531913947,
+        "standardized_coefficients": [],
+        "objective": 0.3869431101402968,
+        "gradient_max": 9.399301168661003e-10,
+        "iterations": 2,
+        "success": true
+      },
+      "relational": {
+        "intercept": -0.004198240848715003,
+        "standardized_coefficients": [
+          -0.005876528926515379,
+          -0.009401005158629806,
+          0.005138457796951218,
+          0.010680009421619141,
+          0.001455397961952427
+        ],
+        "objective": 0.3868831091960953,
+        "gradient_max": 2.472464403769888e-08,
+        "iterations": 8,
+        "success": true
+      },
+      "metrics": {
+        "raw": {
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.38102819387768605
+        },
+        "constant": {
+          "accuracy": 0.816220880069025,
+          "log_loss": 0.3810310893281117
+        },
+        "relational": {
+          "accuracy": 0.8192407247627265,
+          "log_loss": 0.38102854341850223
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 8,
+          "broken": 5,
+          "net_correct": 3,
+          "both_correct": 1891,
+          "both_wrong": 414
+        },
+        "constant": {
+          "rows": 2318,
+          "repaired": 34,
+          "broken": 27,
+          "net_correct": 7,
+          "both_correct": 1865,
+          "both_wrong": 392
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
+      "query_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
+      "scaling_mean": [
+        0.4931825804555134,
+        0.3790965582895785,
+        -0.09110358438855481,
+        -0.03821070615544335,
+        0.02200172562553926
+      ],
+      "scaling_std": [
+        0.6159400408608287,
+        0.5643856578385295,
+        0.7724127690540115,
+        0.6688365437679916,
+        0.14668895560006365
+      ],
+      "constant": {
+        "intercept": 0.001420725642198944,
+        "standardized_coefficients": [],
+        "objective": 0.3888742091144443,
+        "gradient_max": 2.0602877662958552e-10,
+        "iterations": 2,
+        "success": true
+      },
+      "relational": {
+        "intercept": 0.0011929962820299515,
+        "standardized_coefficients": [
+          0.0013314126524200374,
+          -0.001053078204671736,
+          0.0028035308424399687,
+          -0.005040599986304718,
+          0.0016309130581228888
+        ],
+        "objective": 0.38886971990083247,
+        "gradient_max": 1.6074302087683897e-08,
+        "iterations": 8,
+        "success": true
+      },
+      "metrics": {
+        "raw": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.3719704257434014
+        },
+        "constant": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.37197850222094814
+        },
+        "relational": {
+          "accuracy": 0.8175150992234685,
+          "log_loss": 0.37197081133116794
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 4,
+          "broken": 9,
+          "net_correct": -5,
+          "both_correct": 1891,
+          "both_wrong": 414
+        },
+        "constant": {
+          "rows": 2318,
+          "repaired": 4,
+          "broken": 9,
+          "net_correct": -5,
+          "both_correct": 1891,
+          "both_wrong": 414
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+      "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+      "scaling_mean": [
+        0.49860259504552845,
+        0.38433780061194117,
+        -0.07356990782556157,
+        -0.03096200822290488,
+        0.022217428817946507
+      ],
+      "scaling_std": [
+        0.620228045589752,
+        0.5663621746738035,
+        0.7808051689780946,
+        0.6733803717418383,
+        0.1473900087341955
+      ],
+      "constant": {
+        "intercept": -0.013493680476216517,
+        "standardized_coefficients": [],
+        "objective": 0.38569935800628385,
+        "gradient_max": 9.591496506438305e-09,
+        "iterations": 2,
+        "success": true
+      },
+      "relational": {
+        "intercept": -0.017720921206428635,
+        "standardized_coefficients": [
+          -0.020735541455979296,
+          -0.017464569620236407,
+          -0.014211860216741404,
+          -0.014228076736640342,
+          -0.005928905560602034
+        ],
+        "objective": 0.3854613381972282,
+        "gradient_max": 1.0808161394516846e-08,
+        "iterations": 8,
+        "success": true
+      },
+      "metrics": {
+        "raw": {
+          "accuracy": 0.8119068162208801,
+          "log_loss": 0.38758918506166057
+        },
+        "constant": {
+          "accuracy": 0.8157894736842105,
+          "log_loss": 0.3875997065264295
+        },
+        "relational": {
+          "accuracy": 0.8132010353753235,
+          "log_loss": 0.3881760140966021
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 19,
+          "broken": 16,
+          "net_correct": 3,
+          "both_correct": 1866,
+          "both_wrong": 417
+        },
+        "constant": {
+          "rows": 2318,
+          "repaired": 17,
+          "broken": 23,
+          "net_correct": -6,
+          "both_correct": 1868,
+          "both_wrong": 410
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.3802030993584964
+    },
+    "relational": {
+      "accuracy": 0.8166522864538395,
+      "log_loss": 0.380391789615424
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 6954,
+      "repaired": 31,
+      "broken": 30,
+      "net_correct": 1,
+      "both_correct": 5648,
+      "both_wrong": 1245
+    },
+    "constant": {
+      "rows": 6954,
+      "repaired": 55,
+      "broken": 59,
+      "net_correct": -4,
+      "both_correct": 5624,
+      "both_wrong": 1216
+    }
+  },
+  "diagnostic_subsets": {
+    "five_family_common_wrong": {
+      "rows": 914,
+      "correct_by_model": {
+        "raw": 15,
+        "constant": 20,
+        "relational": 18
+      },
+      "paired": {
+        "raw": {
+          "rows": 914,
+          "repaired": 5,
+          "broken": 2,
+          "net_correct": 3,
+          "both_correct": 13,
+          "both_wrong": 894
+        },
+        "constant": {
+          "rows": 914,
+          "repaired": 10,
+          "broken": 12,
+          "net_correct": -2,
+          "both_correct": 8,
+          "both_wrong": 884
+        }
+      }
+    },
+    "five_family_common_correct": {
+      "rows": 5263,
+      "correct_by_model": {
+        "raw": 5245,
+        "constant": 5241,
+        "relational": 5242
+      },
+      "paired": {
+        "raw": {
+          "rows": 5263,
+          "repaired": 3,
+          "broken": 6,
+          "net_correct": -3,
+          "both_correct": 5239,
+          "both_wrong": 15
+        },
+        "constant": {
+          "rows": 5263,
+          "repaired": 8,
+          "broken": 7,
+          "net_correct": 1,
+          "both_correct": 5234,
+          "both_wrong": 14
+        }
+      }
+    }
+  },
+  "seconds": 1.670637333067134,
+  "oof_path": "artifacts/error_rescue_20261117/relational_oof.npz",
+  "oof_sha256": "74cd8d0b608a9bf472b84ce2eb86858cf72165ac4015a2605946e5a022098bdc",
+  "no_new_base_model_fits": true,
+  "no_old_holdout_targets": true,
+  "no_upload": true,
+  "disclosure": "One fixed adaptive-development relational correction; all training rows, strict cached innerOOF. No subset fitting or new continuation gate."
+}

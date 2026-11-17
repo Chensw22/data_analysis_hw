@@ -1,0 +1,22 @@
+{
+  "scope": "Descriptive reused-development error structure; no accuracy selection or model fit",
+  "rows": 6954,
+  "shared_errors": 914,
+  "all_five_correct": 5263,
+  "test_label_neighbor_coverage": {
+    "test_rows": 4277,
+    "test_with_training_group": 0,
+    "test_with_training_cabin": 0,
+    "interpretation": "No training-label neighbor is available for any test row through exact group or cabin; random-fold label propagation would have a different coverage regime."
+  },
+  "shared_errors_with_group_peers": 361,
+  "shared_errors_with_known_peer_cryo": 358,
+  "shared_errors_without_group_peers": 553,
+  "source_sha256": "d5bd04cdbb1e95bf02a866127a1cb4bbe42acaff13eae0c9a8d3da4d1dd30d02",
+  "aligned_sha256": "aa70f64091c10c8a5705ec374507b0396b39ec3e0b35001b4ebdafa8a3a731b4",
+  "limitations": [
+    "Slice differences do not prove a causal error mechanism or label corruption.",
+    "v96/v99 lack OOF and test labels; their full-training fitted predictions must not be presented as error repair evaluation.",
+    "Raw row-level cases remain in ignored artifacts; public reports contain aggregates only."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "status": "frozen_before_new_corrector_fit",
+  "features": [
+    "log_group_peers",
+    "log_cabin_peers",
+    "cryo_x_log_group_peers",
+    "cryo_x_log_cabin_peers",
+    "cabin_count_missing"
+  ],
+  "definition": "Full unlabeled roster counts. g=log1p(GroupSize-1), h=log1p(CabinOccupants-1); missing cabin h=0. Cryo c=True:+1/False:-1/missing:0. Features g,h,c*g,c*h,missingCabin.",
+  "preprocessing": "Each outertrain computes its own feature mean/std; zero std becomes1. Query transformed with these constants.",
+  "base": "rawMitra run038 original same three outer folds",
+  "inner": "Only original planet_mixture jobs for the matching outerfold; original inner3 seeds20261117+outer.",
+  "objective": "mean(logaddexp(0, offset+intercept+Z@beta)-y*(offset+intercept+Z@beta)) + .1*sum(beta**2)",
+  "offset": "logit(clip(p,1e-7,1-1e-7)); coefficient fixed1",
+  "control": "Same offset, fitted intercept only; no penalty on intercept.",
+  "optimizer": {
+    "method": "L-BFGS-B",
+    "maxiter": 500,
+    "ftol": 1e-12,
+    "gtol": 1e-08,
+    "initial": "all zero"
+  },
+  "threshold": 0.5,
+  "outer_seed": 20261112,
+  "folds": 3,
+  "old_holdout_targets_read": false,
+  "training_population": "All outertrain rows; never select914commonwrong or any outcome-based subset.",
+  "diagnostic_subsets": "Five-family914commonwrong and5263commoncorrect are posthoc reporting only; no fitting/selection use.",
+  "continuation": "No new pass threshold or automatic upload. Report all folds, repairs and regressions; root interprets the single fixed experiment.",
+  "limitations": [
+    "Adaptive reused development evidence.",
+    "Inner base support about3090 vs outer4636; constant control does not remove all distribution differences.",
+    "Public roster attributes are transductive and contain no target propagation."
+  ],
+  "sources_sha256": {
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab"
+  }
+}
