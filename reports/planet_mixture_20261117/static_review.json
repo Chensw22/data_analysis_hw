@@ -1,0 +1,18 @@
+{
+  "status": "reviewed_before_native_execution",
+  "sources": {
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "test_planet_mixture_experiment.py": "8d33029ad1053bfa663597bde3dbafb7d05818b78445940ae54f939c55392c8e"
+  },
+  "cpu_mock_tests": 11,
+  "independent_reviewer": "review_current",
+  "checks": [
+    "18 inner-fit label boundaries and complete exactly-once coverage",
+    "Analytic gate gradient and frozen convex objective",
+    "Original cached outer predictions only applied after innerOOF training",
+    "Unknown category fallback",
+    "Fixed shared7200s supervision, incomplete outputs clearly partial"
+  ],
+  "root_review": "Read complete implementation; no model/feature/threshold changes to frozen recipe.",
+  "real_fits_executed": false
+}
