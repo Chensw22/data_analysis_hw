@@ -1,0 +1,55 @@
+{
+  "status": "prospective_migration_only_before_false_bridge_qualification_or_new_cv",
+  "candidate": "iLTM_r128bn_native8",
+  "original_plan": "reports/iltm_r128bn_cv_design.json",
+  "original_plan_sha256": "21d7453dba8ebd69adf2230d9a74cf5a9ca6927e8d51f20533055de4e9f1d4fd",
+  "original_cv_source": "iltm_r128bn_cv.py",
+  "original_cv_source_sha256": "f01c8a8d86d30c9a8b06091544dd1c5edcc298bb70d36dd012a4f7a67795ed99",
+  "runtime_flag": "FALSE",
+  "requires_committed_complete_bridge": true,
+  "bridge_module": "iltm_false_runtime_bridge",
+  "bridge_contract": {
+    "entry_environment": "stdlib-only; reject any initial flag; returns FALSE child env without changing parent",
+    "require_false": "require_false(stage) guards parent/worker throughout",
+    "resource_gate": "validate committed complete result/freeze/source/env/array/reload; return frozen JSON evidence",
+    "assert_frozen": "assert_frozen(frozen) revalidates bridge identity; no entry_environment calls"
+  },
+  "startup": "Fresh parent records initial flag/numeric module status, snapshots entry_environment once, explicitly sets its own flag FALSE before any numeric/data imports. Spawned workers inherit saved FALSE env before imports. Any non-FALSE transition fails; no deleting flag or rebuilding env after data imports.",
+  "candidate_members": 8,
+  "budget_seconds_per_phase": 14400,
+  "rss_limit_bytes": 10737418240,
+  "unchanged": [
+    "Native constructor/fit/predict calls and model hyperparameters",
+    "Compact13 data, label boundaries, packet serialization, splits, model seed, threshold",
+    "Paired statistics, random/group continuation rules, original plan SHA",
+    "Native8/no fit_time_limit/no partial model, external process-tree RSS monitor"
+  ],
+  "paths": {
+    "artifacts": "artifacts/iltm_r128bn_cv_false",
+    "reports": "reports/iltm_r128bn_cv_false"
+  },
+  "prerequisite": "Original complete8 source/structure/cost evidence remains necessary but is not sufficient. Complete committed FALSE bridge plus root audit must pass before this wrapper reads development labels.",
+  "old_evidence_rewritten": false,
+  "limitation": "Old full8 resource training had implicit TRUE. Bridge proves new single-member FALSE training plus historical8 FALSE prediction/reload, not new8 FALSE training. This new CV would be the first8 FALSE training; on failure preserve and stop.",
+  "tests": "AST equality for core packet/split/scoring functions and exact native constructor/fit/predict call AST; pure-mock startup/gate/flag mutation rejection. No native model construction/fit/load or CV authorized by tests.",
+  "automatic_cv": false,
+  "automatic_export": false,
+  "automatic_upload": false,
+  "failure": "No overwrite/resume/retry, TRUE/KMP override, smaller ensemble, feature/parameter/precision/threshold rescue. Complete bridge absence or identity mismatch rejects before labels.",
+  "observation": "Original NativeObservation receives a scalar flag-check progress callback. A thin FailClosedObservation wrapper rethrows its captured callback errors immediately instead of allowing native fitting to continue after a FALSE violation. No native math/call/parameters changed; profiling/logging overhead included in the14400s budget.",
+  "validation_completed": {
+    "tests": 11,
+    "seconds": 0.074,
+    "scope": "Pure stdlib AST and mocks only; missing/uncommitted/failed/wrong-SHA/wrong-completion root audits reject before old resource/data paths; no native model, weights or real data."
+  },
+  "root_audit_gate": {
+    "path": "reports/iltm_false_runtime_bridge/root_audit.json",
+    "must_be_committed": true,
+    "status": "verified_complete_FALSE_runtime_bridge",
+    "bridge_result_sha256": "Must exactly equal current reports/iltm_false_runtime_bridge/result.json SHA256; result must also be committed.",
+    "single_FALSE_training_completed": true,
+    "historical_eight_FALSE_inference_and_reload_completed": true,
+    "eight_FALSE_training_repeated": false,
+    "ordering": "After bridge.resource_gate and before any development-label read. Audit and result hashes join frozen.evidence and are rechecked by assert_frozen."
+  }
+}

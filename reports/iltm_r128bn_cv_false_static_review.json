@@ -1,0 +1,48 @@
+{
+  "status": "static_and_ast_mock_review_passed_after_root_audit_gate_fix",
+  "reviewer": "review_current",
+  "reviewed_sha256": {
+    "iltm_r128bn_cv_false.py": "9859bc73ada65f6bb92e2195cc8fcd91d9cf4155bbf937cf9631e976d7d20fab",
+    "test_iltm_r128bn_cv_false.py": "d1b60a605ae706fd7e0cf78a47d4a282e66a3a258729376f182bfe1acfc3cb38",
+    "reports/iltm_r128bn_cv_false_design.json": "e97a0a58f3131bdff2208a57ea6f7bcc81acaeb71ff66a187be9ddf38b512b2a"
+  },
+  "blocking_findings": [],
+  "resolved_finding": {
+    "problem": "Migration prerequisite required an independent root audit, but initial code only enforced bridge self-qualification.",
+    "fix": "Current resource_gate requires committed root_audit and bridge result, exact verified_complete_FALSE_runtime_bridge status, matching result SHA, single training and historical8 inference booleans true, eight_FALSE_training_repeated false. Both file hashes enter frozen evidence and are rechecked."
+  },
+  "independent_tests": [
+    {
+      "command": ".venv-iltm/bin/python -m unittest test_iltm_r128bn_cv_false -v",
+      "revision": "80b2515e67d6a9741b28c63f06ceeec71a9f427b6d729dcb33256f54d59cbdeb",
+      "tests": 9,
+      "seconds": 0.026,
+      "passed": true
+    },
+    {
+      "command": ".venv-iltm/bin/python -m unittest test_iltm_r128bn_cv_false.FalseMigrationTests.test_missing_failed_or_wrong_bridge_root_audit_rejected test_iltm_r128bn_cv_false.FalseMigrationTests.test_bridge_root_audit_must_be_committed -v",
+      "revision": "9859bc73ada65f6bb92e2195cc8fcd91d9cf4155bbf937cf9631e976d7d20fab",
+      "tests": 2,
+      "seconds": 0.008,
+      "passed": true
+    }
+  ],
+  "verified": [
+    "Initial parent flag and numeric-module snapshot precedes numeric imports. Parent rejects inherited values, captures FALSE child environment once, and sets its own FALSE before qualification/data imports. Spawned workers inherit FALSE from process startup.",
+    "Bridge and independent root audit gates precede any dev-target reader; original full8 cost and source/environment identities remain required but are explicitly insufficient alone.",
+    "Twelve core packet/split/metric/gate functions and native constructor/fit/predict call ASTs match original CV. No model/data/split/seed/threshold/precision/member or budget changes.",
+    "FailClosedObservation delegates original observer unchanged on successful calls and immediately raises a recorded callback failure. It strengthens only error handling; it does not alter normal model mathematics.",
+    "Worker stage/progress/after-fit/after-predict/release and parent guards reject non-FALSE transitions; profile restored in finally. Exact8 and1shared-preprocessor checks remain inherited.",
+    "New output directories preserve original zero-fold failed attempt. Original partial-result cleanup and whole-threefold requirement remain, with14400s/10GiB limits.",
+    "Root audit and bridge result hashes persist in frozen evidence. Missing/uncommitted/failed/wrong-result/inconsistent-scope audits fail before model execution."
+  ],
+  "scope": "Static diff and AST/mock checks only; no native model, weight load, real-data scoring or resource rerun.",
+  "limitations": [
+    "Bridge only demonstrates new FALSE1 training and historical8 inference/reload; no FALSE8 training has been verified by these tests.",
+    "Actual CV may start only after complete committed bridge and independent audit satisfy the runtime gates.",
+    "Same adaptive development splits and practical-band rules; no stable-superiority claim or automatic export/upload."
+  ],
+  "automatic_cv": false,
+  "automatic_export": false,
+  "automatic_upload": false
+}
