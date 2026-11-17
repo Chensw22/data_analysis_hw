@@ -4,7 +4,7 @@
 
 ## 当前实际成绩
 
-当前最佳为 **v81 Mitra 全参数适配，Kaggle Public Score 0.81412（81.412%）**，提交 ID `58424738`，上传 commit `8e65a567eed7`。2026-11-17 04:52（北京时间）的官方账号最佳排名为 **114 / 2158，约前 5.283%**：前10%已达成，前5%尚未达成。滚动榜快照不是比赛最终名次；[官方快照](reports/online_iteration_20261116/post_exaone_screen_rank.json)与[本轮逐次提交记录](reports/online_iteration_20261116/RESULTS.md)保留完整证据。
+当前最佳为 **v81 Mitra 全参数适配，Kaggle Public Score 0.81412（81.412%）**，提交 ID `58424738`，上传 commit `8e65a567eed7`。2026-11-17 08:53（北京时间）的官方账号最佳排名为 **115 / 2163，约前 5.317%**：前10%已达成，前5%尚未达成。滚动榜快照不是比赛最终名次；[官方快照](reports/online_iteration_20261116/pre_support3072_export_rank.json)与[本轮逐次提交记录](reports/online_iteration_20261116/RESULTS.md)保留完整证据。
 
 | 方案 | 同一开发集随机三折 | Kaggle Public Score |
 |---|---:|---:|
@@ -15,7 +15,7 @@
 | v88 Mitra 双训练种子均值 | 81.89531% | 81.365% |
 | EXAONE v91 默认8视图 | 80.98936% | 未上传 |
 | EXAONE v92 / 原始 Mitra 各半 | 81.42077% | 未上传 |
-| v93 Mitra support3072 | **82.11102%** | 全量导出中，未上传 |
+| v93 Mitra support3072 | **82.11102%** | 全量导出OOM，未上传 |
 
 本地最高更新为 v93 的82.11102%，未达到历史83%门槛；线上最佳是v81，两者分开报告。新版本的探索提交使用后续明确授权，原门槛失败和历史例外不改写。原始Mitra首次达到前10%的[独立复核](reports/online_batch_20261112/goal_verification.json)和[早期8个代表方案对照](reports/a_tier_batch_20261112/RESULTS.md)继续保留。
 
@@ -29,7 +29,7 @@ v81训练全部75,670,026个参数，使用1024支持行/256查询行的训练ep
 
 EXAONE v91分组三折81.66523%，匹配原始Mitra81.69399%；固定各半v92分组81.86655%，但随机三折低于原始Mitra且三折均下降，因此未通过双划分继续条件，已归档、不上传、不继续搜索权重。新代TabPFN按用户决定关闭；Orion-BiX、TabForestPFN与TabFlex的交付/复现限制分别留有独立调查记录，不能把资源或来源问题说成模型准确率差。
 
-固定 **v93 Mitra support3072** 已完成：保持v81每步相同的256行查询和原1024行支持样本，只追加2048行支持。三折82.11102%、logloss0.371853，较v81净多22正确，逐折+11/−2/+13，三折logloss均降低；选步为29/50/17。root独立复算通过，满足事前继续条件，已另行批准一次全量导出探索；当前未上传。仍小于1pp、复用开发集且计算量更大，不构成S档。[完整结果](reports/run_056/summary.json)、[事前协议](reports/mitra_support3072_screen_review.json)和[独立导出决定](reports/online_iteration_20261116/support3072_decision.json)均已保存。
+固定 **v93 Mitra support3072** 已完成：保持v81每步相同的256行查询和原1024行支持样本，只追加2048行支持。三折82.11102%、logloss0.371853，较v81净多22正确，逐折+11/−2/+13，三折logloss均降低；选步为29/50/17。root独立复算通过，满足事前继续条件，已另行批准一次全量导出探索，但inner step1 validation触发MPS内存上限，未生成可提交文件，未上传；正在核查资源探针与真实运行的覆盖差异。仍小于1pp、复用开发集且计算量更大，不构成S档。[完整结果](reports/run_056/summary.json)、[事前协议](reports/mitra_support3072_screen_review.json)和[独立导出决定](reports/online_iteration_20261116/support3072_decision.json)均已保存。
 
 方法覆盖复核与反方审查又提出v94：仅将Mitra的HomePlanet/Destination改为train-only one-hot，保留其余11列与原mirror。27项CPU/mock检查通过，但真实小型CPU/MPS数值检查未通过事前0.02容差，因此停止于资源阶段，没有准确率、未运行run057、没有上传。不能据此判定one-hot效果差；[覆盖复核](reports/remaining_method_coverage_review_20261117.json)、[反方报告](reports/remaining_method_coverage_battle_20261117.json)、[失败记录](reports/mitra_nominal_onehot_resources/result.json)保留。
 

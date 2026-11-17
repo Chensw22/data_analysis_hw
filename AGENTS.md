@@ -70,3 +70,5 @@
 - v93/run056完整并root独立复算：82.11102%/LL.371853 vs v81 81.79465%/.375093，138修复116损坏，fold净+11/-2/+13，选步29/50/17，全部固定continue通过。结果08c084c；另commit41bd25b的support3072_decision批准一次7200s全量导出探索，当前正在执行，尚未上传；同1pp实用带、S=false。当前完整random87配方A64/B16/C7，锚点82.11102%。
 
 - 方法覆盖审查先认为暂无新候选，反方发现原Mitra无序类别ordinal几何是具体遗漏；两方修订为固定v94 raw nominal one-hot一次对照，报告和计划978f451，代码e06cc5e/27CPU检查通过。但真实tiny CPU/MPS比较未满足固定0.02概率容差，资源failed_inconclusive，e13ef7e保留证据；未运行run057/真实准确率，不修改容差/编码/精度救援，不追加适配或线上。该故障与v93无关。
+
+- v93首次全量导出已失败：inner step0验证通过，step1更新后6954/1739验证OOM（MPS allocated7.59GiB，limit7.70GiB），55.046s退出。proposal_nov16_support3072/failure及training_log等证据保留，无CSV/manifest/上传，本批仍8/10；不覆盖或直接重启旧proposal。只读核查实际分配顺序与合成资源探针覆盖，未确认原因前不提高cap/缩context/改backend。最新官方115/2163（2026-11-17T00:53:52Z，前5.317%）仍未达标。

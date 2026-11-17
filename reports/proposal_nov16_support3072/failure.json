@@ -1,0 +1,12 @@
+{
+  "status": "failed_incomplete_not_upload_eligible",
+  "candidate": "v93_Mitra_support3072",
+  "error_type": "RuntimeError",
+  "error": "Incomplete export worker: RuntimeError: MPS backend out of memory (MPS allocated: 7.59 GiB, other allocations: 95.89 MiB, max allowed: 7.70 GiB). Tried to allocate 95.10 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+  "seconds": 55.04578433302231,
+  "budget_seconds": 7200,
+  "externally_supervised": true,
+  "worker_error_type": "RuntimeError",
+  "worker_error": "MPS backend out of memory (MPS allocated: 7.59 GiB, other allocations: 95.89 MiB, max allowed: 7.70 GiB). Tried to allocate 95.10 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+  "worker_current_stage": "inner:step1:before_validation"
+}

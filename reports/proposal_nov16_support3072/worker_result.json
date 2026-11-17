@@ -1,0 +1,14 @@
+{
+  "status": "failed_inconclusive",
+  "release_complete": true,
+  "error_type": "RuntimeError",
+  "error": "MPS backend out of memory (MPS allocated: 7.59 GiB, other allocations: 95.89 MiB, max allowed: 7.70 GiB). Tried to allocate 95.10 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure).",
+  "current_stage": "inner:step1:before_validation",
+  "resources_after_release": {
+    "max_rss_bytes": 547913728,
+    "mps_current_bytes": 0,
+    "mps_driver_bytes": 100352000,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  }
+}

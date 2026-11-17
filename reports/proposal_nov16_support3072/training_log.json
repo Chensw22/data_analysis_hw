@@ -1,0 +1,63 @@
+{
+  "status": "failed_inconclusive",
+  "recipe": {
+    "max_steps": 50,
+    "episode_support": 3072,
+    "episode_query": 256,
+    "validation_fraction": 0.2,
+    "query_chunk": 2318,
+    "trainable_parameters": 75670026,
+    "selection": "minimum full-context inner binary logloss; earliest exact tie including step0",
+    "sampler": "support=concat(perm[:1024],perm[1280:3328]);query=perm[1024:1280]",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.3,
+    "warmup": "literal official schedule",
+    "fresh_full_refit": true
+  },
+  "seed": 20261112,
+  "training_rows": 8693,
+  "training_ids_sha256": "53cc227695b9e926f905a87e81e66c36d3a274400b4c72896069011f3a342734",
+  "inner_train_ids_sha256": "1309940f130c678c483e3cbeec0a341a1fa2102fb99d00497790a3da6a8c5eaf",
+  "inner_validation_ids_sha256": "7056d50772d4db6b01673b376a0a276c2aacaef6c0bf86342b5f6daac1d54d01",
+  "inner_training_rows": 6954,
+  "inner_validation_rows": 1739,
+  "inner_history": [
+    {
+      "step": 0,
+      "stage": "inner",
+      "validation_log_loss": 0.3703055679798126,
+      "validation_support_rows": 6954,
+      "validation_query_rows": 1739,
+      "validation_full_support": true,
+      "validation_optimizer_steps": [],
+      "validation_optimizer_state_tensor_bytes": 0,
+      "total_seconds": 15.862868750002235
+    }
+  ],
+  "refit_history": [],
+  "selected_steps": 0,
+  "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+  "validation_support_order": "fixed all inner-training rows",
+  "precision": "MPS bf16 autocast with FP32 weights",
+  "source_hashes": {
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "mitra_long_context_probe.py": "77a30b8fdd9e080b90f2c12ba333e41144230ef03d7fa5b8bc237cc8e93b5f0c",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394"
+  },
+  "environment_sha256": "25062a4f9cf7a1033b3c0882b37a70394023110538c55448925dcd57a1e6e98c",
+  "paired_reference": "v81_Mitra_full_episode50",
+  "episode_global_ids_verified": true,
+  "current_stage": "inner:step1:before_validation",
+  "current_resources": {
+    "max_rss_bytes": 547913728,
+    "mps_current_bytes": 1188813056,
+    "mps_driver_bytes": 6207455232,
+    "mps_recommended_max_bytes": 12713115648,
+    "mps_measurement": "snapshots_not_peak"
+  },
+  "best_inner_log_loss": 0.3703055679798126,
+  "error_type": "RuntimeError",
+  "error": "MPS backend out of memory (MPS allocated: 7.59 GiB, other allocations: 95.89 MiB, max allowed: 7.70 GiB). Tried to allocate 95.10 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure)."
+}
