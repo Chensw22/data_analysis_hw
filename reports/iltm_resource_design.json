@@ -1,0 +1,83 @@
+{
+  "status": "fixed_resource_only_before_any_iltm_model_load_or_score",
+  "method": "iLTM xgbrconcat default architecture; CPU feasibility only",
+  "setup_evidence": {
+    "reports/iltm_setup.json": "c34d1fad57fe49bcded09fd9ae3f39febf1a5d0d3ed5bfcfa89b981f0f73d325",
+    "third_party/iltm/SOURCE.json": "b847073515a0daf576441a08ab54e44256a9607dee75f14717b34ff8a8a69d0f",
+    "requirements-iltm.lock.txt": "a33b07c8ce41a2f5094f90d82d1421a0daeec95b44513aaa50583287b51b542f"
+  },
+  "official_sources": [
+    "https://github.com/AI-sandbox/iLTM/tree/1e644b5420ccc2fe3f78a3b62272a3030e074af4",
+    "https://huggingface.co/dbonet/iLTM/tree/ef783ec2a246686ad4bd43f35b590c196e70a1ba",
+    "https://arxiv.org/abs/2511.15941"
+  ],
+  "mechanism": "Tree-derived representations feed a meta-trained hypernetwork that generates task-specific neural classifiers, followed by native adaptation and retrieval; distinct from probability blending or scratch TabR. No expected score is claimed.",
+  "alternative_not_pursued": "HyperFast officialcheckpoint5094131890bytes and roughly1.27B generator parameters/default16members make it less attractive on16GiB. No HyperFast model downloaded/run. Do not switch to iLTM r128bn or other checkpoint on failure.",
+  "checkpoint": "xgbrconcat.pth",
+  "checkpoint_bytes": 2188605510,
+  "checkpoint_sha256": "3aae6cd5e22e0a5f6a11284ddf2862a78ac59009ddcd40aa831c72468a2e852a",
+  "backend": "cpu",
+  "threads": 4,
+  "resource_monotonic_seconds": 1200,
+  "rss_limit_bytes": 10737418240,
+  "seed": 20261117,
+  "probe_member_count": 1,
+  "intended_candidate_member_count": 8,
+  "important_count_boundary": "n_ensemble=1 is explicitly a resource instrument, not an8-member candidate or a partial8-member success. No real target or candidate score at this phase.",
+  "settings": "All pinned classifier/checkpoint defaults retained except explicitcpu,threads4,seed20261117,n_ensemble1,compact13 categorical indices[0,1,2,4,10,12],local pinnedcheckpoint and fail-closed resource switches. No checkpoint_mix. KeepFP32 execution/defaultfloat16 stored predictor, rf32768,reducedSVD512, generationpool sample4096, Lion/default2048epoch cap/native earlystop, tree200depth5/defaultretrieval8192 cap. Verify actual checkpoint overrides and runtime settings before/after eachcase.",
+  "fail_closed_overrides": {
+    "adaptive_memory": false,
+    "gpu_oom_retries": 0,
+    "auto_stop_on_low_cpu_memory": false,
+    "auto_amp_on_low_mem": false,
+    "auto_disable_retrieval_on_low_mem": false
+  },
+  "fit_call": {
+    "eval_set": null,
+    "fit_max_time": null,
+    "return_partial_on_timeout": false
+  },
+  "native_partial_warning": "Even return_partial_on_timeout=False may retain a firsttimedout member. Require exactlen(predictors_)=1 and everytimed_out=False plus normalcomplete training/fit. External parentdeadline andRSSguard are authoritative. No nativepartialreturn is acceptable.",
+  "cases": [
+    {
+      "training_rows": 4636,
+      "query_rows": 2318
+    },
+    {
+      "training_rows": 8693,
+      "query_rows": 4277
+    }
+  ],
+  "data": "Syntheticcompact13 only: numeric/categorical/missing values, deterministic fixedseed, syntheticbalancedbinarytargets; no realtrain/test/OOF/holdout parsing. Queryhasno labels. Retain completeinput hashes/schema andtrain-onlypreprocessing.",
+  "execution": [
+    "Requirecommittedsource/plan/setup andfreshreserve30; freezeoriginalsource/environment/exactcheckpoint before any model construction/deserialization. Use only isolated .venv-iltm; unchangedvendor source.",
+    "One fresh childprocess per case, sequentialshared1200s parent budget. Runtimeenv only childDYLD_FALLBACK_LIBRARY_PATH derived from that venv torch/lib; OMP/BLAS/PyTorchthreads4. Two observedOMPpaths disclosed, no KMP_DUPLICATE_LIB_OK/binary/system changes.",
+    "Strictload actualfullcheckpoint via pinnedofficialAPI. Complete oneactual defaultmember generation andnativefinetuning; observeepoch/update/earlystop/selectedcheckpoint info where available, loading/fit time and retainedtensor memory. No syntheticaccuracy report.",
+    "Predict all2318/4277 queries, reversed/order-subset andchunk partition includingnonfulltail, thenportableCPU save/release/reload allqueries and compare. No engine retained across reload. Validateclassorder0/1,finiteprobabilities,sum1,threshold.5.",
+    "Parentmonitors childprocess-treeRSS andtime; kill/reap onRSS>10GiB or1200monotonic seconds. Preservefirsterror/stage/partialtiming; nooverwrite/retry/resume. ReportRSSsampledhighwater andOSselfpeak separately, not a claim of exactprocess-treepeak. Record wall andmonotonic durations separately.",
+    "Bothcases complete pluscostgate allows only a separately reviewed full8member resourcequalification, neverautomaticCV/fulltargets/upload."
+  ],
+  "tolerances": {
+    "reload_max_absolute_probability_difference": 2e-06,
+    "partition_permutation_max_absolute_probability_difference": 2e-05,
+    "identical_threshold_decisions": true
+  },
+  "cost_gate": {
+    "single_member_to_eight_margin": 1.25,
+    "three_fold_seconds_max": 14400,
+    "full_fit_and_reload_seconds_max": 7200,
+    "projection": "Include sharedload overhead,8*measuredfit+fullpredictionpercase and8*retainedpredictortensors plus measuredworkingmemory, serialization/reload overhead with>=25%margin. Record conservativeformula explicitly; no treating sharedhypernetwork as8copies or omittingretained8predictors. These are forecasts, not full8proof.",
+    "memory_forecast_bytes_max": 10737418240
+  },
+  "validation_disclosure": "Officialtree_data_split=all andhypernetworkgeneration precede internal10%fine-tune split, so internalearlystop validation is not whollyunseen. FutureouterCV can remain valid only ifall fitsteps seeoutertrain exclusively andeval_set=None; do not passouterval to nativefit or alpha selection.",
+  "stop_rules": [
+    "Anydependency/numerical/identity/resource/time/cost failure closes this fixedresourcebranch as inconclusive, not poor modelaccuracy.",
+    "No changingcheckpoint/PCA/device/precision/membercount/finetuninghorizon/distance or rerunning partiallycompleted experiment as rescue.",
+    "No candidateversion/run reserved untilcomplete8qualification andseparatefrozenCVdecision.",
+    "At everynewstage honorreserve30 and one remaining batchupload; this plan grants no online submission."
+  ],
+  "independent_review": "fresh_strategy recommended oneiLTMCPU feasibility path; review_current independently confirmed epoch semantics, fullreducedSVDcost, partialensemble andinternalvalidationlimits, and required complete8qualificationbefore scoring. Rootaccepts onebounded resourcecheck.",
+  "automatic_cv": false,
+  "automatic_upload": false,
+  "real_scores_seen": false
+}
