@@ -33,7 +33,9 @@ EXAONE v91分组三折81.66523%，匹配原始Mitra81.69399%；固定各半v92�
 
 方法覆盖复核与反方审查又提出v94：仅将Mitra的HomePlanet/Destination改为train-only one-hot，保留其余11列与原mirror。27项CPU/mock检查通过，但真实小型CPU/MPS数值检查未通过事前0.02容差，因此停止于资源阶段，没有准确率、未运行run057、没有上传。不能据此判定one-hot效果差；[覆盖复核](reports/remaining_method_coverage_review_20261117.json)、[反方报告](reports/remaining_method_coverage_battle_20261117.json)、[失败记录](reports/mitra_nominal_onehot_resources/result.json)保留。
 
-后备TabDPT原生逐查询检索确实不同于已测完整上下文，但CPU依赖初始化独立复现重复OpenMP运行库错误，未进入模型或准确率实验；保持环境不变并归档，[故障证据](reports/tabdpt_retrieval_cpu_setup.json)。本批已用9/10次提交；当前仍未达到前5%，最后一次仅留给有依据的候选。
+后备TabDPT原生逐查询检索确实不同于已测完整上下文，但CPU依赖初始化独立复现重复OpenMP运行库错误，未进入模型或准确率实验；保持环境不变并归档，[故障证据](reports/tabdpt_retrieval_cpu_setup.json)。11月16日批次历史已用9/10次；11月17日13:03重新核验，今日已用1次、可用9次。按用户最新要求更新[今日计划](reports/online_iteration_20261117/PLAN.md)，未来最多新增9次，旧批剩余1次不叠加。当前仍未达到前5%。
+
+iLTM新结构已完成隔离环境及官方权重准备，下一步执行固定1200秒、10GiB上限的合成CPU资源验证；没有真实准确率或提交资格。资源验证通过后，才考虑完整8成员及正式交叉验证。
 
 ## 数据与线上成绩
 

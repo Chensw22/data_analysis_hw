@@ -1,0 +1,11 @@
+{
+  "scope": "Static and CPU/mock validation only; no native model, weights, data, or accuracy execution.",
+  "source_sha256": {
+    "iltm_resource_probe.py": "7f392b18af9e939851dfafefa2e83f292170201745f4203dbab4194ee1243cc3",
+    "test_iltm_resource_probe.py": "620e1e4bbda6ac68ce7a1e005d49fad3d7a5af6b69cb2f6fbeb74a7fa587e175"
+  },
+  "cpu_mock_tests_passed": 11,
+  "independent_review": "review_current reviewed final source and independently ran 11 tests; no blocking findings.",
+  "root_review": "Verified final hashes, frozen contract, monitoring, complete prediction/reload gates, and original checkpoint initialization path: second initialization only occurs for checkpoint_mix, disabled in this recipe.",
+  "next": "One bounded synthetic resource run under the previously committed design; no CV or upload."
+}
