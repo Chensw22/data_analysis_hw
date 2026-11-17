@@ -1,0 +1,24 @@
+{
+  "scope": "Upstream boolean semantics and local import behavior, not an installed-binary source audit",
+  "primary_sources": [
+    {
+      "url": "https://openmp.llvm.org/doxygen/kmp__runtime_8cpp_source.html",
+      "claim": "Library startup tests KMP_DUPLICATE_LIB_OK via __kmp_str_match_true; non-true does not permit a detected duplicate runtime."
+    },
+    {
+      "url": "https://openmp.llvm.org/doxygen/kmp__str_8cpp_source.html",
+      "claim": "Boolean string matching distinguishes true and false values."
+    }
+  ],
+  "local_evidence": [
+    "reports/iltm_r128bn_import_boundary_diagnostic.json",
+    "reports/iltm_false_runtime/result.json"
+  ],
+  "decision": "Explicit FALSE prevents sklearn/threadpoolctl setdefault(True) from enabling tolerance. Keep FALSE before all numeric imports and throughout observed computation; never describe this as variable absence.",
+  "limits": [
+    "Upstream source is not proof of the exact installed libomp build.",
+    "Successful small operations are not complete model-training qualification.",
+    "Two OpenMP paths remain loaded; do not claim a single runtime.",
+    "No TRUE fallback or library replacement is authorized by this diagnostic."
+  ]
+}
