@@ -1,0 +1,34 @@
+{
+  "user_direction": "Continue experiments without previous user-imposed weekly quota reserve; investigate data and whether model errors coincide.",
+  "scope": "Descriptive adaptive diagnostics, not new model validation or holdout.",
+  "labels": "Original6954development only; all train/test attributes allowed, no test targets or oldholdout labels.",
+  "models": {
+    "v44": "run_019/v44_seed_ensemble",
+    "rawMitra": "run_038/v71_Mitra2_zeroshot",
+    "v81": "run_046/v81_Mitra_full_episode50",
+    "TabDPT": "run_047/v82_TabDPT13_full8",
+    "Kumo": "run_048/v83_Kumo_medium8",
+    "EXAONE": "run_054/EXAONE_v91_CAST_default8",
+    "v93": "run_056/v93_Mitra_support3072"
+  },
+  "family_representatives": [
+    "v44",
+    "v81",
+    "TabDPT",
+    "Kumo",
+    "EXAONE"
+  ],
+  "fixed_threshold": 0.5,
+  "analyses": [
+    "Authenticate common row/fold alignment and cached metrics",
+    "Error intersection/Jaccard/conditional repair/error correlation; family consensus and oracle diagnostic",
+    "Predefined missingness/CryoSleep/spending/Age/HomePlanet/Deck/group-size/decision-margin slices",
+    "Missing and duplicate/conflicting attributes, unlabeled train/test shift; no mislabel or Bayes ceiling claim"
+  ],
+  "selection_limits": [
+    "No fitted error router/stacker evaluated with same outerOOF",
+    "No threshold/ensemble weight search",
+    "Any subsequent candidate requires separate frozen training/validation protocol"
+  ],
+  "raw_rows": "Keep per-row analysis in ignored artifacts only; publish aggregates and code."
+}
