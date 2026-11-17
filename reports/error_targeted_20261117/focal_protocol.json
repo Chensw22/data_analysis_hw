@@ -1,0 +1,20 @@
+{
+  "name": "v100_Mitra_focal_gamma2_fixed15",
+  "status": "frozen_before_training",
+  "user_request": "Continue trying methods targeted at shared errors, judged by overall accuracy.",
+  "formula": "mean((1-exp(-CE_native10_per_query))**2 * CE_native10_per_query); differentiate through weight; alpha1",
+  "paper": "https://arxiv.org/abs/1708.02002",
+  "paper_scope": "Originally dense object detection; benefit on this table is a hypothesis, not established by paper.",
+  "gamma": 2,
+  "alpha": 1,
+  "steps": 15,
+  "seed": 20261112,
+  "features": "Original compact13, unchanged train-only preprocessor and original checkpoint",
+  "training": "4636 outer-training rows; original fold0,1024support256query, persistent AdamW/lr/native10 head/MPS mixed precision unchanged",
+  "validation": "2318 held-out fold0 rows; original reused adaptive development split",
+  "control": "Authenticated compact13_fixed15_fold0 cache; require per-step support/query draw hashes equal",
+  "difficulty": "Computed dynamically from training-episode query loss only; no validation error mask, mislabeled assumption, class imbalance weight or row deletion",
+  "fixed_scope": "One gamma2 recipe, one fold, no gamma/step/threshold search or additional CV. Postprediction report all rows, shared errors, shared correct, Earth asleep/awake. Full export/online decision separate.",
+  "budget_seconds": 2400,
+  "no_old_holdout_targets": true
+}
