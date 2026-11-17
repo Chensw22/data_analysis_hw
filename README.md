@@ -37,6 +37,8 @@
 
 ## 当前实验方向
 
+用户最新选择 **线上探索优先**：暂停额外随机/分组交叉验证，先用全部训练数据拟合、检查完整提交与保存重载，再直接线上评测。iLTM的FALSE版CV已按这一要求中断，尚无完整折分数；该中断不代表模型效果差。当前先安排iLTM和未单独上传过的EXAONE，各一次探索测试，参见[新授权](reports/online_iteration_20261117/online_first_policy.json)。
+
 已覆盖逻辑回归、CatBoost/LightGBM、AutoGluon、MLP、TabM、FT-Transformer、TabR、SCARF，以及TabPFN、TabICL、两代Mitra、TabDPT、Kumo、EXAONE等预训练表格模型。FT-Transformer80.47%、TabR79.67%、SCARF79.80%（匹配scratch79.62%）是固定首轮配方的结果；不能凭一个配置否定整个模型族。早期方法的输入与评估边界见[方法比较](reports/method_comparison.json)，后续新增结果以各 `reports/run_*/` 及本轮提交记录为准。
 
 v81训练全部75,670,026个参数，使用1024支持行/256查询行的训练episode，在完整内层上下文上从0至50步选择，再从原始权重重新拟合所选步数。最终全量模型选择15步，全部4277行保存重载一致。它取得了目前最佳线上成绩；后续双种子、分组episode、原始/适配均值等探索均未超过它。历史较早的全参数内存失败保留，不代表当前实现仍不可运行。

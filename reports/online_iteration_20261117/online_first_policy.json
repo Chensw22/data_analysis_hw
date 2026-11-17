@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-11-17T08:30:09.958631+00:00",
+  "user_instruction": "我感觉你花了太多时间在本地验证上，我感觉每天都有十次机会可以提交，可以直接线上提交",
+  "competition": "spaceship-titanic",
+  "batch_id": "online_iteration_20261117",
+  "allow_full_export": true,
+  "allow_direct_submit": true,
+  "versions": [
+    "iLTM_r128bn_native8_online_first",
+    "EXAONE_v91_CAST_online_first"
+  ],
+  "maximum_new_upload_attempts_current_batch": 9,
+  "initial_daily_already_submitted": 1,
+  "initial_daily_available": 9,
+  "weekly_quota_reserve_required": false,
+  "local_cv_or_group_gate_required": false,
+  "explicit_scope_change": "User prioritizes direct online exploration. Previous CV/group continuation gates are not prerequisites for these new online-first proposals. Preserve all previous failure/unfinished evidence and do not claim stable superiority.",
+  "minimum_checks": [
+    "Fit complete declared recipe on all8693training labels; do not submit partial training.",
+    "Validate4277PassengerIds/order, literalTrue/False and source/model/CSV identities.",
+    "Save, release and reload model; compare all4277predictions and threshold decisions.",
+    "Commit/push completed source and results; check actual Kaggle limits and duplicateCSV attempts.",
+    "Desktop reminder before one upload per candidate; ambiguous upload status means reconcile, never blindly retry."
+  ],
+  "automatic_submit_without_further_confirmation": true,
+  "not_required": [
+    "Repeated random CV",
+    "Additional group CV",
+    "New per-candidate resource investigation when existing recipe can complete full export"
+  ],
+  "no_test_labels_or_other_people_predictions": true
+}
