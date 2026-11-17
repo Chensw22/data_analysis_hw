@@ -26,7 +26,7 @@ import time
 
 ROOT = Path(__file__).resolve().parent
 VERSION = 'EXAONE_v91_CAST_online_first'
-PROPOSAL = 'proposal_online_first_exaone'
+PROPOSAL = 'proposal_online_first_exaone_fixed'
 POLICY = 'reports/online_iteration_20261117/online_first_policy.json'
 RESOURCE = 'reports/exaone_resources/mps/result.json'
 BUDGET = 3600
@@ -105,7 +105,7 @@ def prepare():
         import joblib
         import exaone_candidate as core
         import exaone_resource_probe as resource
-        import iterate
+        import exaone_validation_data as data
         import kaggle_workflow
         require_false()
         policy = read(ROOT/POLICY)
@@ -118,7 +118,9 @@ def prepare():
         if (previous.get('status') != 'complete' or previous.get('resource_qualification') is not True
                 or any(previous.get(k) != contract[k] for k in ('sources', 'environment_sha256', 'checkpoint_sha256', 'checkpoint_bytes', 'settings'))):
             raise RuntimeError('Existing complete resource recipe/environment changed.')
-        own = [Path(__file__).name, 'iterate.py', 'experiment.py', 'kaggle_workflow.py', POLICY, RESOURCE]
+        own = [Path(__file__).name, 'exaone_validation_data.py', 'audit_top5_references.py',
+               'three_family_mean_screen.py', 'prior_adapt_mean_screen.py', data.PROOF,
+               'kaggle_workflow.py', POLICY, RESOURCE]
         source_commit = committed(list(contract['sources']) + own)
         sources = {**contract['sources'], **{name: sha(ROOT/name) for name in own}}
         raw_hashes = {f'data/raw/{name}.csv': sha(ROOT/f'data/raw/{name}.csv') for name in ('train', 'test', 'sample_submission')}
@@ -140,8 +142,16 @@ def prepare():
         core.torch.set_num_threads(4)
         core.torch.mps.set_per_process_memory_fraction(.65)
         # No development split or historical holdout evaluation is performed.
-        train, test, sample = iterate.base.load_data()
-        frame, _ = iterate.build_features(pd.concat([train.drop(columns='Transported'), test], ignore_index=True), False)
+        proof = read(ROOT/data.PROOF)
+        for name, expected in proof['source_data_sha256'].items():
+            if sha(ROOT/name) != expected:
+                raise RuntimeError('Original feature-proof input changed: ' + name)
+        train = pd.read_csv(ROOT/'data/raw/train.csv')
+        test = pd.read_csv(ROOT/'data/raw/test.csv')
+        sample = pd.read_csv(ROOT/'data/raw/sample_submission.csv')
+        frame = data.compact_features(pd.concat([train.drop(columns='Transported'), test], ignore_index=True))
+        if len(train) != 8693 or data.feature_hash(frame) != proof['compact_values_sha256']:
+            raise RuntimeError('Exact original compact13 values required.')
         x, q = frame.iloc[:8693][core.COMPACT], frame.iloc[8693:][core.COMPACT]
         y, ids = train.Transported.astype(np.int64).to_numpy(), np.arange(8693, dtype=np.int64)
         if len(q) != 4277 or not test.PassengerId.equals(sample.PassengerId):
