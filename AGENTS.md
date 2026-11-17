@@ -66,3 +66,7 @@
 - 下一项仅资源实验：固定Mitra3072支持/256查询，query和原1024支持前缀与v81逐step一致，只追加2048支持；保持既有双checkpoint/FP32+bf16/optimizer/backend。design见mitra_long_context_resource_design，四次persistent AdamW更新中插入3708/928及6954/1739验证；父进程监督1200s，13CPU/mock及独立审查通过。只有资源和预设成本gate通过后才能另commit是否运行正式三折；当前未授权CV/fullfit，失败不降支持大小或改backend救援。
 
 - 资源实验随后完整通过（reports/mitra_long_context_resources，commit166e560），root已在任何新准确率前冻结正式v93/run056三折方案（reports/mitra_support3072_screen_review.json，e898b97），代码bd3a8af及17项CPU/mock检查通过。固定总时限18000s；仅与同划分缓存v81比较，完整三折acc不低、LL不高、至少2折acc不降且至少一个总指标严格改善才允许另审导出。失败归档，不追加支持大小/步数/seed/融合。当前第一折81.92407% vs v81 81.44953%，净+11correct，选29并重训29（4461152）；其余折仍在运行，不是完整候选结论。条件导出代码4eb9d10及13项检查已通过，但必须完整gate通过、root单独commit决定后才能读取全量标签；固定7200s及完整4277重载检查，尚未执行。线上本批仍8/10，最佳v81=.81412，最近快照114/2158（2026-11-16T20:52:08Z），前5%目标尚未达。
+
+- v93/run056完整并root独立复算：82.11102%/LL.371853 vs v81 81.79465%/.375093，138修复116损坏，fold净+11/-2/+13，选步29/50/17，全部固定continue通过。结果08c084c；另commit41bd25b的support3072_decision批准一次7200s全量导出探索，当前正在执行，尚未上传；同1pp实用带、S=false。当前完整random87配方A64/B16/C7，锚点82.11102%。
+
+- 方法覆盖审查先认为暂无新候选，反方发现原Mitra无序类别ordinal几何是具体遗漏；两方修订为固定v94 raw nominal one-hot一次对照，报告和计划978f451，代码e06cc5e/27CPU检查通过。但真实tiny CPU/MPS比较未满足固定0.02概率容差，资源failed_inconclusive，e13ef7e保留证据；未运行run057/真实准确率，不修改容差/编码/精度救援，不追加适配或线上。该故障与v93无关。
