@@ -1,0 +1,47 @@
+{
+  "status": "design_review_passed_conditional_not_execution_approval",
+  "reviewer": "review_current",
+  "plan": "reports/iltm_r128bn_cv_design.json",
+  "plan_sha256": "21d7453dba8ebd69adf2230d9a74cf5a9ca6927e8d51f20533055de4e9f1d4fd",
+  "scope": "Static design and existing data/cache helper review only; no model construction, native fit, GPU, new candidate scores, or resource rerun.",
+  "blocking_findings": [],
+  "resource_boundary": {
+    "required": "Committed complete full8 result, resource_execution_complete, cost_gate_passed, resource_qualification, exact source/environment/checkpoint, recomputed saved-array and native-count checks before dev-target parsing.",
+    "pending_is_not_pass": true,
+    "counts": "One native n_ensemble=8 fit per fold, eight generation samples/predictors/normal fine-tunes, one shared preprocessor and generator load; no eight separately fitted n1 substitutes.",
+    "limits": "Fresh sequential workers; 14400 seconds for each entire three-fold phase, process-tree RSS 10 GiB. Measured largest synthetic full8 is a planning reference, not a real-data convergence bound.",
+    "cost": "Largest full8 complete-case cost threshold 3840 seconds follows 3*1.25*elapsed<=14400. No further model-count extrapolation."
+  },
+  "data_and_cache_review": {
+    "helper": "exaone_validation_data.py",
+    "helper_sha256": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "dev_only": "load_data checks original6954 development identity, raw attribute checksums and compact13 value proof; audit.read_development_only excludes other train labels. Whole-roster attributes are row-local, not learned preprocessing.",
+    "random": "random_references authenticates rawMitra/v44/v81 historic protocol/OOF evidence and original fold membership; historical lock files are not required to equal the new iLTM runtime.",
+    "group": "group_references authenticates stored fold arrays, dev/passenger/group IDs, matched references and per-fold logs; rejects group overlap and mismatched raw/v44 folds. Reuse exact saved indices, do not rebuild under new sklearn.",
+    "worker_boundary": "Implementation must pass only features.iloc[dev[train_positions]] and y[train_positions] to fit; validation attributes only for predict, no query labels or eval_set. Do not pass full features frame into native preprocessing.",
+    "seed": "Model seed20261117 is fixed in every fold; split seed20261112 is distinct. This is a recipe choice, not an additional independent split."
+  },
+  "native_internal_validation": "Generation/preprocessing sees eventual native internal holdout rows before internal split. That inner metric is not wholly unseen; honest outer isolation remains sufficient for the stated adaptive outer CV. No extra validation set should be passed.",
+  "gate_interpretation": {
+    "random_floor": 0.811110152430256,
+    "group_raw_floor": 0.8069398907103825,
+    "group_v44_floor": 0.804495254529767,
+    "challenge": "These floors can admit a model weaker than current best. Passing both is practical-band exploratory eligibility only, not stable superiority, statistical equivalence, S status, or automatic export/upload.",
+    "accepted_response": "Draft explicitly preserves separate phase results, reused-development disclosure, no S claim and a separate root decision after both complete phases."
+  },
+  "implementation_review_requirements": [
+    "Authenticate all prerequisite evidence and freeze transitive helper/source dependencies before targets; implementation/test approval remains outstanding.",
+    "Verify all eight native members completed without timeout, exact parameters before/after fit, original class order and finite normalized full validation predictions.",
+    "Publish pooled results only after three folds cover all6954 rows once; failure retains partial evidence but no complete eligibility or uploadable output.",
+    "Record actual epochs/updates and optionally a derived hit_epoch_cap flag per member. This is reporting, not a new gate or permission to extend budget.",
+    "Keep logloss and paired errors descriptive under the frozen gate; no post-outcome threshold, seed, blend or subgroup selection."
+  ],
+  "battle": {
+    "root_notified": true,
+    "peer_message_delivery": "Direct author path unavailable; challenge relayed through root. Root supplied final frozen draft SHA for this review."
+  },
+  "verification": "Parsed and checked exact plan SHA, resource flags, seed separation, phase budgets and anchor arithmetic using stdlib only. No new candidate scores computed.",
+  "automatic_cv": false,
+  "automatic_export": false,
+  "automatic_upload": false
+}

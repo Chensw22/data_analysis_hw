@@ -1,0 +1,225 @@
+{
+  "status": "conditional_cv_design_pending_full8_resource_qualification_and_root_review",
+  "method": "One fixed official iLTM r128bn native8 recipe; adaptive development validation only",
+  "candidate_label": "iLTM_r128bn_native8",
+  "candidate_version_and_run_number": "Not assigned by this draft; root assigns once resource and source implementation gates pass.",
+  "new_candidate_scores_seen": false,
+  "full8_resource_qualification_claimed": false,
+  "current_scope": "Protocol preparation only. No model construction, fit, CV, full-label read or online action authorized by this draft.",
+  "prerequisite_evidence_sha256": {
+    "reports/iltm_r128bn_full8_design.json": "e90f4ae033f8744ffb0124a5f101557e5fffcab0b8bb7d93fd5aeb788a325924",
+    "reports/iltm_r128bn_resource_design.json": "32bc6d7097eeaf02e81f2f176d69e6d6eff5a969d05130a5234afc30f446a72c",
+    "reports/iltm_r128bn_setup.json": "2a04b777a415323e6dc9aafd58f71647b323bbd0d9dd18fada7fd285a75a8757",
+    "reports/iltm_r128bn_cpu1_resources/result.json": "bef821d7ea25e3591fe3a2a9e150edb3a727980ffb1a0f73dfe8cdc772814b9e",
+    "reports/iltm_r128bn_cpu1_resources/root_audit.json": "dc61bbcfeef9cc9c7b58fee3b1ecd47aaeb15d1d14ac595bf3d1ea913a650307",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "reports/exaone_validation_features.json": "ab0d539d0ee8c79b893262f8f8efc2d4142eb475137ebd6b028d65b998d6f2a7",
+    "reports/exaone_screen_review.json": "815146bf7ba6b7a47bf683ebf556c29de0066d6416c648902f0a7ed4ecd581e0",
+    "reports/run_056/summary.json": "81adc7d8c2f9446701c4185503d19951c1ce2a8eb7519fc5f06c1609ef368aab",
+    "reports/method_tiers.json": "e5c75a6a083b6de626d071f78151085d3e892d84a8a7ff9f3042152191236749"
+  },
+  "resource_gate": {
+    "result": "reports/iltm_r128bn_full8_resources/result.json",
+    "required_fields": {
+      "status": "complete",
+      "resource_execution_complete": true,
+      "cost_gate_passed": true,
+      "resource_qualification": true,
+      "probe_members": 8,
+      "candidate_members": 8
+    },
+    "case": {
+      "training_rows": 8693,
+      "query_rows": 4277,
+      "member_count": 8
+    },
+    "verification": "Require committed full8 result/freeze/worker/monitor/root audit and current exact source/environment/checkpoint identities. Recompute all native counts, saved probability/reload/partition/permutation qualification and measured cost gate; hash ignored model/NPZ without deserializing them in the parent. Freeze complete evidence before development targets. A running/partial case or complete execution with failed cost gate is insufficient.",
+    "native_counts": {
+      "predictors": 8,
+      "generation_samples": 8,
+      "normally_completed_finetunes": 8,
+      "shared_preprocessors": 1,
+      "strict_original_model_loads": 1
+    },
+    "largest_case_monotonic_seconds_max_for_three_fold_plan": 3840,
+    "rss_limit_bytes": 10737418240,
+    "qualification_scope": "Only largest8693/4277 shape has complete8 resource test; smaller4636/2318 has single-member evidence. Do not claim smaller shape8 was measured.",
+    "execution_authorization": "After full8 gate passes, root must review/commit this final protocol and implementation/tests before launching random CV. This draft never turns a pending resource run into a pass."
+  },
+  "recipe": {
+    "source_repository": "https://github.com/AI-sandbox/iLTM",
+    "source_commit": "1e644b5420ccc2fe3f78a3b62272a3030e074af4",
+    "checkpoint_path": "artifacts/pretrained/iltm/r128bn.pth",
+    "checkpoint_revision": "ef783ec2a246686ad4bd43f35b590c196e70a1ba",
+    "checkpoint_bytes": 306936952,
+    "checkpoint_sha256": "9e24c80ee0de16b658344eb8f61ff308205619c219b6de6e5fbd79c6914731a5",
+    "checkpoint_overrides": {
+      "bottleneck_size": 128,
+      "tree_embedding": false,
+      "concat_tree_with_orig_features": false,
+      "preprocessing": "realmlp_td_s_v0"
+    },
+    "n_ensemble": 8,
+    "fit_seed_every_fold": 20261117,
+    "backend": "cpu",
+    "threads": 4,
+    "rf_size": 32768,
+    "n_dims": 512,
+    "pca_fit": "reduced",
+    "generation_sample_rows": 4096,
+    "finetuning": true,
+    "finetuning_optimizer": "lion",
+    "finetuning_max_steps_parameter": 2048,
+    "epoch_semantics": "Native finetuning_max_steps=2048 is a maximum epoch count, not2048optimizer updates; record actual epochs/updates/early-stop positions for every member.",
+    "native_internal_validation": "Keep default internal10%split, native early stopping and selected-weight restore, default train/validation sampling and all other pinned classifier defaults. Every preprocessing/generation/internal-validation step uses only outer training rows. Generation precedes internal split, so internal early-stop validation is not wholly unseen.",
+    "fit_call": {
+      "eval_set": null,
+      "fit_max_time": null,
+      "return_partial_on_timeout": false
+    },
+    "precision": "Official FP32 execution; default float16 stored predictor; AMP disabled; no precision change.",
+    "retrieval": "Native default retrieval, cap8192; do not truncate outer training input. Record all member inference and internal-training retrieval row counts.",
+    "preprocessors": "Exactly1 shared train-only preprocessor for no-tree/no-checkpoint-mix path, not8.",
+    "unused_tree_model": "Official default XGBoost retained; no XGBoost_hist override, tree embeddings disabled.",
+    "fail_closed_overrides": {
+      "adaptive_memory": false,
+      "gpu_oom_retries": 0,
+      "auto_stop_on_low_cpu_memory": false,
+      "auto_amp_on_low_mem": false,
+      "auto_disable_retrieval_on_low_mem": false
+    },
+    "threshold": 0.5,
+    "forbidden_changes": [
+      "checkpoint mixing",
+      "model member search",
+      "seed search",
+      "feature repair or new columns",
+      "generation/retrieval truncation beyond original native limits",
+      "alternate preprocessing",
+      "threshold or calibration search",
+      "early-stop/epoch-limit changes",
+      "blending or fallback uploads"
+    ]
+  },
+  "data": {
+    "helper": "exaone_validation_data.load_data",
+    "development_rows": 6954,
+    "development_ids_sha256": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+    "split_archive": "artifacts/run_002/split_indices.npz",
+    "old_holdout_rows": 1739,
+    "old_holdout_targets_read": false,
+    "reader": "audit_top5_references.read_development_only; exclude all other train targets, use attributes-only test.",
+    "columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "categorical_indices": [
+      0,
+      1,
+      2,
+      4,
+      10,
+      12
+    ],
+    "feature_proof": "Original row-local compact13 attributes, exact ordered value hash from reports/exaone_validation_features.json; no GroupId/PassengerId/model-engineered features. Full-roster attributes may be parsed, but native learned preprocessing is fit on each outer train only.",
+    "target_boundary": "Parent reads6954dev targets to reconstruct/check original splits and score completed outer predictions. Each fresh worker receives only its outer training labels and row IDs plus unlabeled validation attributes; outer validation targets never enter classifier.fit, eval_set, preprocessing, generation, native early-stop selection, or retry decisions.",
+    "official_data_identity": "Verify frozen raw train/test checksums and compact feature proof before target parsing; raw files remain ignored."
+  },
+  "random_split": {
+    "reader": "exaone_validation_data.random_references",
+    "kind": "Original StratifiedKFold",
+    "folds": 3,
+    "shuffle": true,
+    "seed": 20261112,
+    "alignment": "Exact original development order and random fold membership authenticated by run038 rawMitra, run019 v44 and run046 v81 OOF/source/environment/fold-ID evidence; no control reruns.",
+    "references": [
+      "v71_Mitra2_zeroshot",
+      "v44_seed_ensemble",
+      "v81_Mitra_full_episode50"
+    ],
+    "split_seed_is_not_fit_seed": true
+  },
+  "group_split": {
+    "reader": "exaone_validation_data.group_references",
+    "kind": "Original saved StratifiedGroupKFold",
+    "folds": 3,
+    "seed": 20261112,
+    "group_key": "PassengerId prefix, split/provenance only; absent from model features.",
+    "alignment": "Load exact artifacts/top5_reference_audit/mitra/group_20261112.npz and all group_20261112_fold{0,1,2}_rows.npz. Authenticate same v44 group membership, train/query IDs and zero GroupId overlap; do not regenerate under current sklearn.",
+    "references": [
+      "v71_Mitra2_zeroshot",
+      "v44_seed_ensemble"
+    ],
+    "activation": "Only after all random folds complete and fixed A-band gate passes; require committed random summary/protocol/OOF hashes and recomputed gate before group labels/scores are used for a new fit."
+  },
+  "budgets_seconds": {
+    "random_three_folds_total": 14400,
+    "group_three_folds_total": 14400
+  },
+  "execution": {
+    "supervision": "One parent monotonic deadline per entire3fold phase, including setup/hash checks, fresh worker startup, native fits, complete validation predictions, serialization of evidence and cleanup. Fresh sequential subprocess per fold; no concurrent nativefits. Parent monitors numeric process-tree RSS and kills/reaps its own worker on deadline or RSS>10GiB.",
+    "rss_limit_bytes": 10737418240,
+    "environment": ".venv-iltm pinned original environment; DYLD_FALLBACK_LIBRARY_PATH only child torch/lib; exact4OMP/BLAS/PyTorch threads; preserve disclosed two OpenMP libraries; no KMP_DUPLICATE_LIB_OK or environment changes.",
+    "native_completion": "Exactly8 normally completed predictors and8 fine-tune records,1 shared preprocessor/load; all timed_out=False; all generation samples=min(outer_train_rows,4096); native2048epoch cap and finite/classordered normalized binary predictions. Verify all frozen native parameters before/after fit/prediction. Any partial member is failure even if predict_proba returns.",
+    "fold_isolation": "Fresh original checkpoint, ensemble RNG seed20261117, predictor state and preprocessing each fold. Clear/release shared native cache before worker exits; no warm start across folds/phases.",
+    "no_retry_resume_overwrite": true,
+    "failure": "Preserve first native/external error, current stage, completed-member/epoch/sample records, per-fold partial outputs and monitor. Failed/incomplete phase publishes no aggregate winner, continuation pass, complete OOF or uploadable file; do not extend budget or change recipe."
+  },
+  "random_continue_to_group": {
+    "all_three_folds_complete": true,
+    "fixed_anchor_version": "v93_Mitra_support3072",
+    "fixed_anchor_accuracy": 0.821110152430256,
+    "anchor_evidence": "reports/run_056/summary.json and reports/method_tiers.json at protocol freeze",
+    "maximum_gap": 0.01,
+    "minimum_accuracy": 0.811110152430256,
+    "tolerance": 1e-12,
+    "formula": "candidate pooled accuracy +1e-12 >=0.811110152430256",
+    "meaning": "Current same-fold observed-model practical A band under user1pp rule. Updates EXAONE-era old v44 anchor to current fixed best before any iLTM score. Not statistical significance, stable superiority or upload eligibility."
+  },
+  "group_continue_to_root_decision": {
+    "all_three_folds_complete": true,
+    "matched_raw_reference_accuracy": 0.8169398907103825,
+    "matched_v44_reference_accuracy": 0.814495254529767,
+    "maximum_deficit_to_each_reference": 0.01,
+    "tolerance": 1e-12,
+    "formula": "candidate pooled accuracy +1e-12 >= each authenticated matched reference accuracy -0.01",
+    "meaning": "Same pre-existing protective group screen as EXAONE; pass permits only separate root review of exploratory value. Do not select the more favorable random/group score, replace references, or treat reused groups as independent confirmation."
+  },
+  "reporting": [
+    "Every fold and pooled accuracy and binary logloss for candidate and exact matched references; thresholds fixed.5. Logloss is reported, not an added post-outcome veto or tuning target.",
+    "Per reference and fold: correct/wrong2x2 counts, corrected/regressed/net counts, decision disagreement, error correlation (null plus reason when undefined), mean absolute probability difference. These diagnose complementarity descriptively; no blend weights, subset routing, threshold search or new upload fallback.",
+    "Per member actual generation/retrieval sizes, epochs/updates/earlystop and selected-weight positions without claiming independent internal validation; complete parameter/config and checkpoint/source/env hashes.",
+    "Preserve6954OOF with dev/passenger/group/foldIDs, per-fold train/queryIDs, probability hashes, observed runtime/RSS/release records; all3folds covered once before aggregate eligibility.",
+    "Random and group results remain separate and clearly adaptive. No S/stable lead from0.xpp. Any later single export requires independent decision, full8693/4277 persistence qualification and actual online authorization/limits."
+  ],
+  "risks": [
+    "Synthetic random labels and feature distributions do not bound real-data native early-stopping epochs, SVD/workspace memory, runtime or accuracy. Even largest synthetic8 qualification cannot guarantee3real folds complete within4hours.",
+    "Only largest shape full8 is measured, not smaller shape full8; realfold native preprocessing dimensionality and convergence can differ. Hard per-phase time/RSS guards remain authoritative.",
+    "Same6954development and savedgroup folds have informed many previous choices; this is adaptively chosen model development, not independent confirmation. Old1739targets remain excluded.",
+    "An architecture/checkpoint that saves memory need not improve competition accuracy. Internal generation uses eventual early-stop rows, so its internal metric is not a clean outer estimate.",
+    "A-band/group pass may still be worse than existing models and is intentionally only eligibility for further review; paired error complementarity alone does not validate a blend."
+  ],
+  "stop_rules": [
+    "Resource pending/failed or costgate failed: no real-data CV.",
+    "Random below fixed A band or incomplete: archive; do not run group or upload fallback.",
+    "Group below either fixed1pp floor or incomplete: archive; no fullfit/export/upload.",
+    "No additional group seeds, repeated model seeds, view/member reductions, checkpoint changes, alternate preprocessing, time extensions or automatic retry.",
+    "Even both phases pass, no automatic fullfit/export/upload. Root independently reviews all evidence and records a separate decision; any online attempt rechecks current authorization and actual Kaggle daily limits."
+  ],
+  "S_supported": false,
+  "automatic_export": false,
+  "automatic_upload": false,
+  "quota_policy": "User canceled prior weekly reserve limit; no quota_guard/session-file gate. Platform limits and fixed compute/resource budgets still apply.",
+  "independent_review": "Pending root/review_current cross-check; this field does not assert approval."
+}
