@@ -1,0 +1,46 @@
+{
+  "status": "static_and_cpu_mock_review_passed_conditional_on_complete_resource_gate",
+  "reviewer": "review_current",
+  "source_sha256": {
+    "iltm_r128bn_cv.py": "f01c8a8d86d30c9a8b06091544dd1c5edcc298bb70d36dd012a4f7a67795ed99",
+    "test_iltm_r128bn_cv.py": "9219ad54659d7ae9c588f7d5313dfb0bf6ed166f428853afc1f2df8c357fb46d"
+  },
+  "protocol": "reports/iltm_r128bn_cv_design.json",
+  "protocol_sha256": "21d7453dba8ebd69adf2230d9a74cf5a9ca6927e8d51f20533055de4e9f1d4fd",
+  "blocking_findings": [],
+  "tests": {
+    "command": ".venv-iltm/bin/python -m unittest test_iltm_r128bn_cv -v",
+    "count": 12,
+    "seconds": 1.192,
+    "outcome": "all passed",
+    "native_model_constructed": false,
+    "weights_deserialized": false,
+    "real_candidate_fit_or_score": false
+  },
+  "verified": [
+    "resource_gate precedes data.load_data and requires committed complete full8 execution, cost and qualification flags, worker/report/local identities, actual recomputed projection and probability persistence checks.",
+    "Resource current contract is compared with original freeze on every field except Git source_commit; source bytes/environment/checkpoint remain strict. New CV commit alone does not invalidate a qualified resource run.",
+    "Source and evidence hashes include data helper, historical references and committed plan; no resource source or current helper was modified by this review.",
+    "Parent reconstructs original6954dev splits only; worker NPZ keys strictly permit train_labels and unlabeled query attributes. Extra query_labels fail. Hashes bind row IDs, label values, feature values and packet bytes.",
+    "Fresh worker per fold, original CPU constructor and modelseed20261117, eval_set=None/fit_max_time=None/no partial timeout return. Native get_params and checkpoint overrides use the already reviewed resource API.",
+    "Exactly8 complete native members, sampling and fine-tuning records plus1 shared preprocessor/load are enforced. Internal train+validation row counts sum to outertrain; retrieval training rows cannot exceed native innertrain.",
+    "Pinned vendor _generate_predictor passes full outertrain to fine_tune_main_network after generation sample4096; this matches count assertions. Internal early-stop rows are not independent of initialization, as disclosed in protocol.",
+    "Prediction class order/range/normalization/full query IDs are checked before assigning OOF; native cache cleared and estimator weakref checked before successful worker completion.",
+    "Three sequential workers share one14400s monotonic deadline and external10GiB process-tree supervisor. No model retry, warmstart, member fallback or budget extension.",
+    "Random/group thresholds exactly match frozen practical-band rules. Group requires committed passed random phase, rechecks underlying worker predictions and recreates identical OOF/gate from authenticated data.",
+    "Completed three-fold row partition required before aggregate results. Worker failure keeps its original error and partial evidence; final OOF/assessment/summary files are moved to partial upon exceptions, preventing complete-phase eligibility."
+  ],
+  "limitations": [
+    "This verifies static logic and synthetic mocks only. Full8 resource execution was still pending during review and was not reclassified or rerun.",
+    "No native end-to-end real-data API execution was attempted; actual epochs, memory and time remain subject to hard guards.",
+    "Practical A-band and group-floor passes do not establish stable superiority or authorize automatic export/upload.",
+    "Same development labels and folds have informed past choices; this is adaptive development validation."
+  ],
+  "changes_requested": [],
+  "review_artifacts_only": [
+    "reports/iltm_r128bn_cv_static_review.json"
+  ],
+  "automatic_cv": false,
+  "automatic_export": false,
+  "automatic_upload": false
+}
