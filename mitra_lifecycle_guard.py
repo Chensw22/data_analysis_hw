@@ -107,7 +107,9 @@ def capture_state(model, optimizer, data, targets, query, rng, reference_rng, de
 
 
 def lifecycle_barrier(model, optimizer, data, targets, query, rng, reference_rng, device='mps', log_path=None):
-    if str(data.device)!=device or targets.device!=data.device or query.device!=data.device:
+    # PyTorch canonical tensors report mps:0 although the runtime argument is mps.
+    # Compare backend type here and retain exact indexed equality across inputs.
+    if device not in ('cpu','mps') or data.device.type!=device or targets.device!=data.device or query.device!=data.device:
         raise RuntimeError('Barrier input devices must match the declared runtime.')
     result=dict(status='incomplete',barrier=BARRIER,device=device,observations=[],
                 observation_caveat='Full state hashing copies to CPU and can perturb allocator/timing; snapshots are not peaks.')

@@ -5,6 +5,7 @@ import tempfile
 from pathlib import Path
 import unittest
 from unittest.mock import patch
+from types import SimpleNamespace
 
 import numpy as np
 import torch
@@ -18,6 +19,21 @@ class Model(torch.nn.Linear):
 
 
 class GuardTests(unittest.TestCase):
+    def test_canonical_mps_backend_accepts_index_zero_and_rejects_mixed_devices(self):
+        data=SimpleNamespace(device=torch.device('mps:0'))
+        target=SimpleNamespace(device=torch.device('mps:0'))
+        query=SimpleNamespace(device=torch.device('mps:0'))
+        with patch.object(g,'capture_state',return_value={'fixture':'unchanged'}), \
+                patch.object(g,'synchronize'),patch.object(g,'observe',return_value={}), \
+                patch.object(g.gc,'collect',return_value=0),patch.object(g,'empty_cache') as cache:
+            proof=g.lifecycle_barrier(None,None,data,target,query,None,None,device='mps')
+            self.assertTrue(proof['state_preserved']);cache.assert_called_once_with('mps')
+            for bad in [torch.device('cpu'),torch.device('mps:1')]:
+                query.device=bad
+                with self.assertRaises(RuntimeError):g.lifecycle_barrier(None,None,data,target,query,None,None,device='mps')
+            query.device=torch.device('mps:0')
+            with self.assertRaises(RuntimeError):g.lifecycle_barrier(None,None,data,target,query,None,None,device='cpu')
+
     def state(self):
         torch.manual_seed(7);np.random.seed(9);random.seed(11)
         model=Model();optimizer=torch.optim.AdamW(model.parameters(),lr=.001,weight_decay=.3)

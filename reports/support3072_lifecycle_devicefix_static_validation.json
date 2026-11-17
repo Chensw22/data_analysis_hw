@@ -1,0 +1,35 @@
+{
+  "status": "passed_cpu_and_static_after_device_dispatch_fix",
+  "observed_at_utc": "2026-11-17T01:24:41.348483+00:00",
+  "tests_run": 17,
+  "source_sha256": {
+    "mitra_lifecycle_guard.py": "153ccee673b4ca1e42ad80263391d46b7420788c98ac2266d47f0a234c8759cc",
+    "test_mitra_lifecycle_guard.py": "0f8ea9c0558be08a949ac8864a5151f34ea99df7ed8cec0d6fc3f25f555941bc",
+    "mitra_support3072_gc_probe.py": "fb0fd9bfcf059d93a672226e5e65ad5ea0997be6fb2f1f14b0454225b9b92f82",
+    "test_mitra_support3072_gc_probe.py": "bab7d92a381945628c803853ff5d3c856f98401f096d28aa419d1ae37de4836c",
+    "mitra_support3072_lifecycle.py": "2b1a021afefb8efe1c913f4dde467481143f0fbe0605c27b6f0325de5d73fc4c",
+    "test_mitra_support3072_lifecycle.py": "ce4f72566fc20523d134494038d1d1db40499eab2ab5e92b78bb42fd935c31b8"
+  },
+  "ast": {
+    "status": "passed",
+    "frozen_original_sha256": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "numerical_program_ast_identical_after_whitelist": true,
+    "allowed_changes": [
+      "module_docstring",
+      "guard_import",
+      "appended_source_provenance",
+      "literal_runtime_provenance",
+      "one_logging_helper",
+      "one_metadata_provenance_keyword",
+      "one_inner_step_positive_barrier_assignment"
+    ],
+    "step0_or_refit_barrier_added": false,
+    "new_runtime_full_cv_empirically_reproduced": false
+  },
+  "cpu_two_update_tab2d_exact": true,
+  "mps_index_zero_dispatch_regression_mock": true,
+  "real_single_element_device_identity_probe": "mps:0/type=mps/index=0",
+  "real_model_GPU_execution": false,
+  "full_runtime_CV_reproduced": false,
+  "required_resource_plan": "reports/support3072_gc_devicefix_plan.json"
+}

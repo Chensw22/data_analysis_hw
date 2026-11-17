@@ -21,10 +21,10 @@ import mitra_lifecycle_guard as guard
 import exaone_validation_data as attributes
 
 ROOT=Path(__file__).resolve().parent
-PLAN='reports/support3072_gc_diagnostic_plan.json'
-PLAN_SHA='7d1aa13e0c227e10d423007adaf5659dd02b5560a050371a6fc0b5b335c1b544'
-OUTPUT=ROOT/'artifacts/probes/mitra_support3072_gc'
-REPORT=ROOT/'reports/mitra_support3072_gc_resources'
+PLAN='reports/support3072_gc_devicefix_plan.json'
+PLAN_SHA='7cf319a7e2848f9e40282305d67449200a73bc12ca33b631a707985c1276d93d'
+OUTPUT=ROOT/'artifacts/probes/mitra_support3072_gc_devicefix'
+REPORT=ROOT/'reports/mitra_support3072_gc_devicefix_resources'
 BUDGET,SEED=1200,20261112
 ATTRIBUTES=['PassengerId','HomePlanet','CryoSleep','Destination','Age','VIP','RoomService',
             'FoodCourt','ShoppingMall','Spa','VRDeck','Cabin']
