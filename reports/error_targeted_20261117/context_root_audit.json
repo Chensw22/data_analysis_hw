@@ -8,5 +8,20 @@
     "net_correct": 6
   },
   "unrouted_exact": true,
-  "prediction_sha256": "b0a5198e65b6a1e3d22d28038d389b57ca29b639fd46028e5765fc13c82eab6e"
+  "prediction_sha256": "b0a5198e65b6a1e3d22d28038d389b57ca29b639fd46028e5765fc13c82eab6e",
+  "Earth_asleep_confusion": {
+    "raw": {
+      "true_negative": 19,
+      "true_positive": 229,
+      "false_negative": 24,
+      "false_positive": 115
+    },
+    "prob": {
+      "true_negative": 4,
+      "true_positive": 251,
+      "false_negative": 2,
+      "false_positive": 130
+    }
+  },
+  "interpretation": "Positive total gain is not improved minority detection: conditional context identifies fewer actual negatives and misses fewer actual positives."
 }
