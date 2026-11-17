@@ -1,0 +1,18 @@
+{
+  "status": "prospective_fixed_sample_size_diagnostic",
+  "model": "Original v6 CatBoost: depth6 iterations700 learning_rate.045 l2_leaf_reg5 threads4",
+  "features": "Original30 engineered_no_ids; unchanged source/environment",
+  "outer": "Original6954 dev SKF3 seed20261112, original model seed20261112+fold",
+  "subsets": "Per outertrain one RNG20261117+fold, shuffle each class once, exact nested prefixes at512/1536/3090, positive count round(n*outertrain_positive_fraction), restore original row order",
+  "full": "Reuse authenticated exact v6 OOF trained on4636 each fold",
+  "budget_seconds": 600,
+  "fits": 9,
+  "outputs": "Per-fold and pooled accuracy/logloss and differences to full; no candidate/selection/upload",
+  "interpretation": [
+    "One fixed sampling path, not subset-variance assessment.",
+    "Fixed model capacity and regularization make this recipe-specific sample sensitivity, not a pure sample-size causal effect.",
+    "Rising curve supports this recipe still benefits from training samples; plateau does not prove data ceiling, mislabels, representational limit or useless extra data.",
+    "Same adaptive development labels, no oldholdout labels."
+  ],
+  "review": "review_current accepted with these boundaries before any diagnostic fit."
+}
