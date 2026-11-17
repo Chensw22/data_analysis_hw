@@ -1,0 +1,34 @@
+{
+  "status": "verified_fixed_forecast_gate_failed",
+  "source_commit": "87bcff4",
+  "result_sha256": "733f5ffb16a6c9003e803fe752dca6595438ca8e5e9b37f461f633db84fc8b20",
+  "cases": [
+    {
+      "shape": "4636_2318",
+      "probability_sha256": "eacbbc815c7ca7aac1f90a8429acdd3f000ef655bc75af45f1ead07868a34d95",
+      "max_probability_difference": {
+        "reloaded": 0.0,
+        "permuted": 0.0,
+        "partition": 0.0,
+        "subset": 0.0
+      },
+      "threshold_equal_all": true,
+      "eight_member_forecast_GiB": 11.141945854760706
+    },
+    {
+      "shape": "8693_4277",
+      "probability_sha256": "96d613c1d6329dc269da76a630da25825c6717fba9469b0c41438c83bc63c844",
+      "max_probability_difference": {
+        "reloaded": 0.0,
+        "permuted": 0.0,
+        "partition": 0.0,
+        "subset": 0.0
+      },
+      "threshold_equal_all": true,
+      "eight_member_forecast_GiB": 10.886044749058783
+    }
+  ],
+  "conclusion": "Both synthetic single-member cases complete; original 25% headroom full8 memory forecast exceeds 10GiB. No measured eight-member OOM, no accuracy conclusion. Close this fixed branch without altering members, precision, backend, PCA, or budget.",
+  "real_data_used": false,
+  "new_submission": false
+}
