@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-18",
+  "status": "planned_not_executed_workspace_unavailable",
+  "objective": "Correct historically unanimous errors while preserving overall accuracy; do not equate aggregate gains with hard-case rescue.",
+  "evidence": {
+    "analysis": "reports/error_rescue_20261117/ANALYSIS.md",
+    "residual_audit": "reports/error_targeted_20261117/residual_root_audit.json",
+    "all16_common_errors": 616,
+    "all24_common_errors": 546,
+    "previous_residual": {
+      "overall_repairs": 67,
+      "overall_breaks": 50,
+      "net_correct": 17,
+      "all24_errors_corrected": 1
+    },
+    "earth_asleep": {
+      "population": 1106,
+      "actual_not_transported": 384,
+      "actual_transported": 722,
+      "v81_correct_not_transported": 21,
+      "v81_correct_transported": 703
+    }
+  },
+  "priority": [
+    "Authenticate recovered development IDs, historical predictions and masks; preserve previous experiments and unfinished exports.",
+    "Contrast hard cases with correctly predicted passengers sharing observable planet, cryo status, deck, spending status and predicted class. Inspect both outcome directions, missingness and remaining feature distributions. Do not select controls using true-label similarity.",
+    "Measure exact observable-feature collisions with conflicting labels and nearest-neighbor contrasts. Any ceiling applies only to the explicitly chosen feature signature on this observed sample, not to all possible models or the competition.",
+    "Check existing feature implementations before proposing new cabin-neighborhood or roster-context features; avoid rebranding previously tested counts or spatial features.",
+    "Run one fixed CPU exception detector using existing strict inner rawMitra OOF, then report hard-case rescue AND regression on all held-out rows."
+  ],
+  "candidate_design": {
+    "name": "rawMitra conditional error-probability detector",
+    "training_target": "e_i = 1[(inner_oof_probability_i >= 0.5) != y_i], computed only within the outer training partition.",
+    "training_features": "Existing 30 engineered attributes plus inner rawMitra probability, margin abs(p-0.5), and predicted class. Categorical vocabulary and any transforms fitted on outer training rows only.",
+    "query_features": "Same attributes plus authenticated outer rawMitra probability; no query labels or historical error flags.",
+    "candidate_model": "One fixed small binary classifier, implementation and parameters to be committed before fitting after runtime inspection; no parameter sweep.",
+    "decision": "Flip the raw predicted class only when estimated error probability exceeds 0.5; no class balancing or threshold search.",
+    "probability_formula": "Let c=1[p_raw>=0.5], q=P(raw prediction incorrect|X,p_raw); p_new=c*(1-q)+(1-c)*q. At q==0.5 retain original predicted class.",
+    "comparison": "Matched rawMitra and previous nonlinear residual, same original three outer folds. Reuse inner base predictions; no new foundation-model CV.",
+    "limitations": [
+      "Alternative error representation adds no information by itself; it may fail like existing residual models.",
+      "Inner and outer base training sizes differ.",
+      "Historical validation sets have been repeatedly inspected: adaptive development, not independent confirmation."
+    ]
+  },
+  "reporting": {
+    "primary": [
+      "overall repaired/broken/net correct",
+      "historical 546 all-recipe-errors rescued",
+      "historical 616 all-family-errors rescued",
+      "historical 914 five-family-errors rescued",
+      "mistakes introduced among historical common-correct passengers"
+    ],
+    "secondary": [
+      "fold-level direction",
+      "Earth asleep true-negative/true-positive counts",
+      "Earth awake false-negative recovery",
+      "probability log loss"
+    ],
+    "interpretation": "A rescue-only gain with larger overall damage is not a useful replacement. A small net gain is exploratory, not stable superiority under the user's 1pp practical-equivalence rule.",
+    "label_boundary": "All historical shared-error masks are reporting-only. Never train on globally selected error rows or use outer validation labels for a learned gate.",
+    "online": "No new CV gate required. Consider a concrete useful candidate for exploratory submission under existing user authorization, after full export integrity checks and a fresh official primary-account quota query."
+  },
+  "execution_blocker": {
+    "original_workspace": "/Users/chenshuaiwen/Desktop/ml1",
+    "observed": "Original directory missing; same-name directory exists in /Users/chenshuaiwen/.Trash but both ordinary and escalated read attempts returned Operation not permitted.",
+    "required": "Restore original directory through Finder, or provide new project path.",
+    "not_done": [
+      "No new model fit or accuracy measurement on 2026-11-18 in this turn.",
+      "No current Kaggle quota check or submission.",
+      "No confirmation of local v101 completed-export manifest; remains pending recovery."
+    ]
+  }
+}
