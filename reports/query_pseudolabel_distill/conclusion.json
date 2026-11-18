@@ -1,0 +1,67 @@
+{
+  "decision": "No accuracy benefit of this fixed query-pseudolabel recipe versus matched hard-only student; no threshold/weight followup.",
+  "metrics": {
+    "hard_control": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "pseudo_student": {
+      "accuracy": 0.8111878055795225,
+      "log_loss": 0.3818014474952606
+    },
+    "hard_half_v96": {
+      "accuracy": 0.817083692838654,
+      "log_loss": 0.37623780213432756
+    },
+    "pseudo_half_v96": {
+      "accuracy": 0.815933275812482,
+      "log_loss": 0.3748640258512687
+    },
+    "raw_teacher": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "v96": {
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3774137567085704
+    }
+  },
+  "pseudo_student_vs_hard": {
+    "rows": 6954,
+    "repaired": 134,
+    "broken": 148,
+    "net_correct": -14,
+    "both_correct": 5507,
+    "both_wrong": 1165
+  },
+  "pseudo_half_vs_hard_half": {
+    "rows": 6954,
+    "repaired": 62,
+    "broken": 70,
+    "net_correct": -8,
+    "both_correct": 5612,
+    "both_wrong": 1210
+  },
+  "hard546_correct": {
+    "hard_control": 4,
+    "pseudo_student": 8,
+    "hard_half_v96": 1,
+    "pseudo_half_v96": 1,
+    "raw_teacher": 0,
+    "v96": 1
+  },
+  "fold_net_pseudo_vs_hard": [
+    -11,
+    1,
+    -4
+  ],
+  "pseudolabel_selected": [
+    928,
+    937,
+    910
+  ],
+  "seconds": 33.69839158299874,
+  "interpretation": "Lower logloss does not compensate accuracy loss in this objective. Pseudo/v96 mixture beats v96 alone on this reused dev set but remains below matched hard-only/v96 mixture; cannot attribute that gain to semisupervised learning.",
+  "boundary": "No query groundtruth to fit_student API, only authenticated foldteacher softprobabilities. Officialtest never entered student input/trainingpool; historical authentication helper reads attribute/provenance files only. All CBM saved/reloaded exact.",
+  "reusable_api": "fit_student(train_x,train_y,unlabeled_x,teacher_p,seed,use_pseudo=True) exists, but actual full-data fit/export not recommended or executed by this experiment."
+}
