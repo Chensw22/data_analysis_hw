@@ -563,6 +563,194 @@
       }
     }
   },
+  "v108": {
+    "experts": {
+      "bills": {
+        "accuracy": 0.22346850733390855,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 1004,
+        "breaks": 5113,
+        "net": -4109,
+        "error_recall": 0.7776917118512781,
+        "correct_lost": 0.9028783330390252,
+        "change_precision": 0.16413274480954718,
+        "hard546_correct": 525,
+        "hard546_new": 522,
+        "fold_net": [
+          -1365,
+          -1392,
+          -1352
+        ],
+        "unique_repairs": 8,
+        "unique_hard": 0
+      },
+      "passenger": {
+        "accuracy": 0.27653149266609145,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 949,
+        "breaks": 4689,
+        "net": -3740,
+        "error_recall": 0.7350890782339272,
+        "correct_lost": 0.8280063570545647,
+        "change_precision": 0.16832210003547357,
+        "hard546_correct": 502,
+        "hard546_new": 499,
+        "fold_net": [
+          -1248,
+          -1267,
+          -1225
+        ],
+        "unique_repairs": 29,
+        "unique_hard": 9
+      },
+      "two_teacher_errors": {
+        "accuracy": 0.21498418176589013,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 1009,
+        "breaks": 5177,
+        "net": -4168,
+        "error_recall": 0.7815646785437645,
+        "correct_lost": 0.9141797633763024,
+        "change_precision": 0.16311024894924023,
+        "hard546_correct": 531,
+        "hard546_new": 528,
+        "fold_net": [
+          -1390,
+          -1409,
+          -1369
+        ],
+        "unique_repairs": 4,
+        "unique_hard": 2
+      },
+      "matched_party": {
+        "accuracy": 0.6578947368421053,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 506,
+        "breaks": 1594,
+        "net": -1088,
+        "error_recall": 0.3919442292796282,
+        "correct_lost": 0.2814762493378068,
+        "change_precision": 0.24095238095238095,
+        "hard546_correct": 155,
+        "hard546_new": 155,
+        "fold_net": [
+          -355,
+          -413,
+          -320
+        ],
+        "unique_repairs": 73,
+        "unique_hard": 0
+      }
+    },
+    "joint": {
+      "0.35": {
+        "accuracy": 0.7989646246764452,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 463,
+        "breaks": 570,
+        "net": -107,
+        "error_recall": 0.35863671572424477,
+        "correct_lost": 0.10065336394137384,
+        "change_precision": 0.4482090997095837,
+        "hard546_correct": 82,
+        "hard546_new": 82,
+        "fold_net": [
+          -41,
+          -31,
+          -35
+        ]
+      },
+      "0.5": {
+        "accuracy": 0.8147828587863101,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 17,
+        "breaks": 14,
+        "net": 3,
+        "error_recall": 0.013168086754453912,
+        "correct_lost": 0.002472187886279357,
+        "change_precision": 0.5483870967741935,
+        "hard546_correct": 2,
+        "hard546_new": 0,
+        "fold_net": [
+          0,
+          0,
+          3
+        ]
+      },
+      "0.65": {
+        "accuracy": 0.8143514524014955,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 0,
+        "breaks": 0,
+        "net": 0,
+        "error_recall": 0.0,
+        "correct_lost": 0.0,
+        "change_precision": 0.0,
+        "hard546_correct": 3,
+        "hard546_new": 0,
+        "fold_net": [
+          0,
+          0,
+          0
+        ]
+      },
+      "three_of_four": {
+        "accuracy": 0.2750934713833765,
+        "base_wrong": 1291,
+        "base_correct": 5663,
+        "repairs": 902,
+        "breaks": 4652,
+        "net": -3750,
+        "error_recall": 0.6986831913245546,
+        "correct_lost": 0.8214727176408264,
+        "change_precision": 0.16240547353258913,
+        "hard546_correct": 492,
+        "hard546_new": 489,
+        "fold_net": [
+          -1237,
+          -1285,
+          -1228
+        ]
+      }
+    },
+    "oracle_only": {
+      "any_expert_recovers": 1163,
+      "any_expert_recovers_hard": 540,
+      "pairwise_intersection": {
+        "bills": {
+          "bills": 1004,
+          "passenger": 868,
+          "two_teacher_errors": 987,
+          "matched_party": 387
+        },
+        "passenger": {
+          "bills": 868,
+          "passenger": 949,
+          "two_teacher_errors": 878,
+          "matched_party": 402
+        },
+        "two_teacher_errors": {
+          "bills": 987,
+          "passenger": 878,
+          "two_teacher_errors": 1009,
+          "matched_party": 393
+        },
+        "matched_party": {
+          "bills": 387,
+          "passenger": 402,
+          "two_teacher_errors": 393,
+          "matched_party": 506
+        }
+      }
+    }
+  },
   "training": [
     [
       {

@@ -87,7 +87,7 @@ def summarize(y,p,base,hard,fold):
                 fold_net=[int((repaired&(fold==j)).sum()-(broken&(fold==j)).sum()) for j in range(3)])
 
 
-def score_reference(name,base,y,hard,fold,expert_prob,member_prob,gate_risks):
+def score_reference(base,y,hard,fold,expert_prob,gate_risks):
     pred=base>=.5
     result={"experts":{},"joint":{}}
     repairs={}
@@ -124,6 +124,14 @@ def run():
         from scipy.special import expit
         proxy=expit(ref.logit(v96)+z["peer_bills"])
     baselines={"raw":raw,"v96":v96,"v108_proxy":proxy}
+    exact=ROOT/"artifacts/v108_exact_oof/oof.npz"
+    if exact.exists():
+        record=json.loads((ROOT/"reports/v108_exact_oof/result.json").read_text())
+        assert ref.sha(exact)==record["oof_sha256"]
+        with np.load(exact) as z:
+            np.testing.assert_array_equal(z["dev_ids"],dev)
+            np.testing.assert_array_equal(z["fold_id"],fold)
+            baselines["v108"]=z["v108"].copy()
     expert_oof=np.empty((len(dev),len(EXPERTS)))
     members=np.empty((len(dev),3,len(EXPERTS)))
     risks={k:np.empty(len(dev)) for k in baselines}
@@ -160,7 +168,7 @@ def run():
     catalog=pd.read_csv(ROOT/"artifacts/error_rescue_20261117/catalog_rows.csv")
     np.testing.assert_array_equal(dev,catalog.row_id)
     hard=catalog.all_recipes_still_wrong.to_numpy(bool)
-    results={name:score_reference(name,p,y,hard,fold,expert_oof,members,risks[name]) for name,p in baselines.items()}
+    results={name:score_reference(p,y,hard,fold,expert_oof,risks[name]) for name,p in baselines.items()}
     results["training"]=splits_record
     ref.write(REPORT/"result.json",results)
     np.savez_compressed(ROOT/"artifacts/error_trained_experts.npz",dev=dev,fold=fold,
