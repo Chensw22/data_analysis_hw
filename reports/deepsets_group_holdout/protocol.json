@@ -1,0 +1,33 @@
+{
+  "status": "fixed_before_group_fit",
+  "outer": "SGKF3shuffle seed20261112 firstfold only",
+  "inner": "SGKF5shuffle seed20261112 firstfold of outertrain",
+  "seed": 20261112,
+  "recipe": {
+    "hidden": 64,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "weight_decay": 0.001,
+    "epochs": 250,
+    "patience": 30,
+    "grad_clip": 1.0,
+    "CPU_threads": 4,
+    "budget_seconds": 600
+  },
+  "control": "Same masked-vs-mean peer network from random probe; no hyperparameter changes.",
+  "authorization": "Parent explicitly requested one true whole-group holdout if initialCPU3fold fast; random completion23.998s.",
+  "no_v96_blend": true,
+  "no_base_reference_from_different_split": true,
+  "transductive": "All12970 X may appear as peer attributes; whole queryGroup labels absent from training/selection.",
+  "limitations": [
+    "One group split, not threefold groupOOF or independent holdout.",
+    "Original546 set reporting only; already adaptively observed."
+  ],
+  "sources_sha256": {
+    "deepsets_group_holdout.py": "7a3adce1844ce380e7938df54186e670c286598de560ef01f910073f45615987",
+    "deepsets_peer_probe.py": "4d51a130a363b93013e36d121afe637c42f216662a688a2e67c2c0801f1fd629",
+    "reports/deepsets_peer_probe/protocol.json": "4f89294c792cbd687a998ca24a8f11a1def7d6e569a7f5293673e1b174c916c0",
+    "reports/deepsets_peer_probe/result.json": "a8743cdc9154dc1acf3dd13c815558df80447f0385ad84a8bfe44a88cabfe092",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}

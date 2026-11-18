@@ -1,0 +1,35 @@
+{
+  "status": "fixed_before_training",
+  "settings": {
+    "hidden": 64,
+    "dropout": 0.1,
+    "lr": 0.003,
+    "weight_decay": 0.001,
+    "epochs": 250,
+    "patience": 30,
+    "grad_clip": 1.0,
+    "CPU_threads": 4,
+    "budget_seconds": 600
+  },
+  "architecture": "two64widthselfencoder plus exclude-self mean of sameGroup allroster encodings; [self64,peer64,log(peerCount+1)]\u219264\u2192binary. Matched control has peer vector0, retains samecountinput and architecture.",
+  "preprocessing": "Each innertrain or fulloutertrain alone fits numeric logspending/median/mean/std and categorical vocabulary; numericmissing indicators and unknown onehot. No Name/PassengerId/GroupId as network feature.",
+  "labels": "Only current training IDs BCE labels. All12970 public attribute rows may serve as unlabeled peers; no group label/stat/teacherprediction fed network. Old1739 labels never loaded.",
+  "evaluation": "Original6954dev SKF3seed20261112 to compare/halfblend matchedv96; internal SGKF5 firstfold seed20261112+outer, train-onlyepochselection then discard/reseed/refit fresh sameepochs on fulloutertrain.",
+  "mixtures": "For both independently reported masked and peer models, fixed0.5 NN+0.5 v96. No weight/model/seedselection.",
+  "limitations": [
+    "Outer random splits allow some supervised groupmates; this is transductive randomCV, not deployment-matched groupCV.",
+    "Both models receive groupcount; effect estimates learned peermean beyondcount.",
+    "Same reused dev labels; hard546 reporting only after predictions.",
+    "Short fixed CPU recipe cannot negate all DeepSets architectures; report cap/curves."
+  ],
+  "sources_sha256": {
+    "deepsets_peer_probe.py": "4d51a130a363b93013e36d121afe637c42f216662a688a2e67c2c0801f1fd629",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "reports/v96_oof_completion/result.json": "cf35a24742d936ff2b4caa1fa7f6d79985b226195e06dc5a06380af6462eaf64",
+    "artifacts/v96_oof_completion/result.json": "cf35a24742d936ff2b4caa1fa7f6d79985b226195e06dc5a06380af6462eaf64",
+    "artifacts/v96_oof_completion/oof.npz": "a09bbb6d61766e20e56acd14f0c5ae90062a4ab732b736c7888c4afe7c625329",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}

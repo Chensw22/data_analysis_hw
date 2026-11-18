@@ -1,0 +1,106 @@
+{
+  "decision": "Reject this fixed Deep Sets peer-mean recipe; no fullfit/upload recommendation.",
+  "random_metrics": {
+    "masked": {
+      "accuracy": 0.8004026459591602,
+      "log_loss": 0.4262866768754245
+    },
+    "peers": {
+      "accuracy": 0.7966637906241012,
+      "log_loss": 0.4318767743234689
+    },
+    "masked_half_v96": {
+      "accuracy": 0.8111878055795225,
+      "log_loss": 0.39143031387045363
+    },
+    "peers_half_v96": {
+      "accuracy": 0.8093183779119931,
+      "log_loss": 0.3935820824397532
+    },
+    "v96": {
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3774137567085704
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    }
+  },
+  "random_peer_vs_masked": {
+    "rows": 6954,
+    "repaired": 72,
+    "broken": 98,
+    "net_correct": -26,
+    "both_correct": 5468,
+    "both_wrong": 1316
+  },
+  "random_hard546_correct": {
+    "masked": 4,
+    "peers": 6,
+    "masked_half_v96": 1,
+    "peers_half_v96": 0,
+    "v96": 1,
+    "raw": 0
+  },
+  "random_combo_vs_v96": {
+    "rows": 6954,
+    "repaired": 160,
+    "broken": 190,
+    "net_correct": -30,
+    "both_correct": 5468,
+    "both_wrong": 1136
+  },
+  "whole_group_holdout": {
+    "status": "complete_one_group_holdout",
+    "training_rows": 4636,
+    "query_rows": 2318,
+    "outer_group_intersection": 0,
+    "inner_group_intersection": 0,
+    "metrics": {
+      "masked": {
+        "accuracy": 0.7929249352890423,
+        "log_loss": 0.44016796350479126
+      },
+      "peers": {
+        "accuracy": 0.7842968075927523,
+        "log_loss": 0.45256152749061584
+      }
+    },
+    "paired": {
+      "rows": 2318,
+      "repaired": 41,
+      "broken": 61,
+      "net_correct": -20,
+      "both_correct": 1777,
+      "both_wrong": 439
+    },
+    "hard546_subset_rows": 188,
+    "hard_correct": {
+      "masked": 3,
+      "peers": 3
+    },
+    "hard_paired": {
+      "rows": 188,
+      "repaired": 1,
+      "broken": 1,
+      "net_correct": 0,
+      "both_correct": 2,
+      "both_wrong": 184
+    },
+    "selected_epochs": {
+      "masked": 53,
+      "peers": 35
+    },
+    "hit_cap": {
+      "masked": false,
+      "peers": false
+    },
+    "seconds": 7.079983791001723,
+    "protocol_sha256": "a056efd9ee1d641a5ee226e9a43a60a9ebdb3a29b82f37a2592ee04a6aceeab8",
+    "no_v96_blend": true,
+    "predictions_sha256": "23911e11950ed5b7ffcf0ce74190d0947f0b721868417b74e2472c9b03900b20"
+  },
+  "training_sufficiency": "All6 random selections and both group selections terminated by patience before250cap; no evidence that the fixed epoch cap truncated optimization.",
+  "interpretation": "Neither matched random folds nor one independently reported group-disjoint split support useful learned peer-mean representations. Hard cases rescued in isolation are outweighed by regressions. This rules against this small fixed recipe, not all permutation-invariant neural models.",
+  "boundary": "Only current training labels enter BCE; prep fit training subset, inner groups disjoint, fresh fullouter refit; groupIDs only index pool, no Name/ID inputs or target propagation. All-roster X transductive, outerrandom not group validation."
+}
