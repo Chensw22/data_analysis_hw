@@ -1,0 +1,77 @@
+{
+  "status": "independently_recomputed_from_saved_OOF",
+  "result_sha256": "f8babf7f9259f5e121916c6787f18e66627f573a4447fe35b4bade23895f34cd",
+  "oof_path": "artifacts/error_targeted_20261118/name_character_residual/oof.npz",
+  "oof_sha256": "d08c506b1c4e0bd2dca0d68abb7a23c314db7c87c0cbc47449e8cf0cd0ea6b6b",
+  "catalog_rows_sha256": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.38020309940175845
+    },
+    "name": {
+      "accuracy": 0.8101811906816221,
+      "log_loss": 0.39119655858468966
+    }
+  },
+  "relative_raw": {
+    "rows": 6954,
+    "repaired": 219,
+    "broken": 263,
+    "net_correct": -44
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "rows": 2318,
+      "repaired": 75,
+      "broken": 96,
+      "net_correct": -21
+    },
+    {
+      "fold": 1,
+      "rows": 2318,
+      "repaired": 72,
+      "broken": 76,
+      "net_correct": -4
+    },
+    {
+      "fold": 2,
+      "rows": 2318,
+      "repaired": 72,
+      "broken": 91,
+      "net_correct": -19
+    }
+  ],
+  "hard_rescue": {
+    "hard546_total": 546,
+    "hard546_raw_correct": 0,
+    "hard546_candidate_correct": 32,
+    "hard546_earth_sleep_rescued": 23,
+    "hard546_group_seen_rescued": 10,
+    "hard546_group_unseen_rescued": 22
+  },
+  "common_correct5263": {
+    "rows": 5263,
+    "repaired": 10,
+    "broken": 141,
+    "net_correct": -131
+  },
+  "identity_checks": [
+    "Unicode passenger IDs, dev positions and fold IDs exactly match catalog",
+    "546 mask exactly matches catalog",
+    "Earth_sleep rebuilt using attributes only",
+    "Query group seen/unseen reconstructed separately for each saved outer fold"
+  ],
+  "interpretation": [
+    "Name corrects32 previously universal errors, including23 Earth sleepers, but219 total repairs cost263 new errors; all three fold net counts are negative.",
+    "22 hard rescues occur in groups absent from that outertrain; this excludes direct GroupId overlap for those rows, but does not establish transferable name information or eliminate surname/attribute confounding.",
+    "The546 intersection and follow-up interpretation are adaptive outcome-defined diagnostics, not training populations or independent significance tests.",
+    "These results do not justify deploying this exact model or claim an80percent data ceiling."
+  ],
+  "scope": "Read saved predictions and original development labels from existing catalog; attributes-only raw CSV; no fit or new predictions."
+}

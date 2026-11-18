@@ -1,0 +1,69 @@
+{
+  "status": "fixed_before_single_adaptive_L2_followup_fit",
+  "candidate": "Name_char_tfidf_fixed_offset_residual_L2_10",
+  "vectorizer": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      2,
+      4
+    ],
+    "min_df": 5,
+    "max_features": 2048,
+    "sublinear_tf": true,
+    "norm": "l2",
+    "lowercase": true
+  },
+  "optimizer": "L-BFGS-B",
+  "optimizer_options": {
+    "maxiter": 500,
+    "ftol": 1e-12,
+    "gtol": 1e-06
+  },
+  "objective": "sum(binaryNLL(y,raw_logit_offset+b+Xw)) + 5*sum(w*w); intercept b unpenalized; offset coefficient fixed1; C0.1 sum-loss convention",
+  "initialization": "all parameters zero",
+  "constant_control": "Same strict innerraw fixed offset, same sum-loss optimizer, zero feature columns, unpenalized intercept",
+  "training": "Original6954dev SKF3 seed20261112; each outertrain TFIDF.fit on Name only; Name missing becomes empty string; all outertrain samples, no outcome/mask subgroup selection",
+  "training_base": "relational.load_inner original matching9innerraw jobs, authenticated rowIDs/labels/predictions; only outertrain y in sparse objectives",
+  "query": "originalrun038 raw outerOOF + trainfit vocabulary and residual; no outerlabels in optimization/preprocessing",
+  "threshold": 0.5,
+  "epsilon": 1e-07,
+  "budget_seconds": 120,
+  "save_reload": "Each of3 vectorizers+coefficients+control intercept joblib; complete same query probabilities bitwise equal on reload",
+  "reporting": "All3fits completed before loading914/616/546/5263 catalog masks; per-fold and whole raw/constant comparisons; Earth sleep/awake confusion; query sameGroup present in outertrain vs absent fixed descriptive slices, never routing; emptyName and empty-feature fractions",
+  "no_new_base_fits": true,
+  "no_old_holdout_labels": true,
+  "no_upload": true,
+  "limitations": [
+    "New supervised sparse text route, not equivalent to previous16-dimensional unsupervised SVD diagnostic; old recommendation remains unchanged.",
+    "Name may mostly encode known planet or identity; random split family/group repetition can inflate apparent transfer.",
+    "Group-overlap slices are descriptive, not a new gate or permission to select a route.",
+    "Strict nested raw predictions have smaller support than outer raw predictions; calibration shift remains.",
+    "Adaptive reused development labels and historical error masks do not establish independent generalization or a data ceiling.",
+    "This single follow-up was chosen after inspecting the preceding negative aggregate result and32 hard-case rescues; adaptive reuse is explicit."
+  ],
+  "source_hashes": {
+    "name_character_residual_nov18.py": "790329376bf6fb32246c8e0291323a792a135b06a38f59497911301ca6022617",
+    "exception_error_detector_nov18.py": "cf1a027631b8a9747d5f3b4ccd3b5e97b4dbfb3889241bcd30cb6a2336957ca1",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "nonlinear_error_corrector.py": "49c3da59a4ce2f2bb5641cc19eda0ae21c3facf5428b572d75b8e82fb238f0d1",
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "three_family_mean_screen.py": "c828c152fa9eb240ff782c96891369320a08ac0fb4e09e119cce555ffe2345a9",
+    "prior_adapt_mean_screen.py": "1805ed788913a7ce9b371d9594f8b5121fca7612b8644ffe571bdc474d29f550",
+    "name_character_strong_l2_nov18.py": "3409acca524e9edc2463cd30ab14a104aa950e8137695b712402d7737e90af12"
+  },
+  "historical_evidence_sha256": {
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "artifacts/planet_mixture_20261117/freeze.json": "0f23c050439d7f352c4c826b67c93540f2ed61737debf61551317d780c02c0e2",
+    "reports/error_targeted_20261118/name_protocol.json": "a8905c0520030f9b60f9889b9a3a81b924bf0f342fe9888bd2301dc412c23c75",
+    "reports/error_targeted_20261118/name_result.json": "f8babf7f9259f5e121916c6787f18e66627f573a4447fe35b4bade23895f34cd",
+    "reports/error_targeted_20261118/name_root_audit.json": "0a449ae4145cab3d69a37f27392331bf10ac47ce87d3f35e43770bdfac4089f4"
+  },
+  "l2_multiplier": 10.0,
+  "single_factor_followup": true,
+  "no_parameter_grid": true,
+  "followup_scope": "Explicit adaptive single-factor follow-up after C1 rescued32 of546 but broke263 vs repaired219 overall. Only L2 changes1->10. All prior source/protocol/results remain unchanged; this was not predeclared before the first Name experiment. Do not claim independent validation or tune further values."
+}
