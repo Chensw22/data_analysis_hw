@@ -1,0 +1,90 @@
+{
+  "source_hashes": {
+    "tabdpt_numpy_retrieval_nov18.py": "4614ac1783695becf8579041c686a72e1897717226f320e0e04573fb1f66f694",
+    "reports/error_followup_20261118/retrieval_protocol.json": "df29da6c5b334c6a2d9a61ea5cd64e59332df19dc1da7e58d82ad69d13078ebd",
+    "tabdpt_adapter.py": "3a7648c1841e85ce40f921f2a605fdb1fff353b67190ebd5945677e60d7bb84e",
+    "tabdpt_resource_probe.py": "e177ec4b89a92591210f33f2be531138ebe867f6c5c88d5d64c68e7c84b75a8f",
+    "requirements-tabdpt.lock.txt": "d88ee46a402d057eaa1ceb7d67944b219a2cfd4cf434973dadfa02a3863915c7",
+    "third_party/tabdpt/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "third_party/tabdpt/SOURCE.json": "218c4607a1dc4dd8b184bcbf09242d868ffdc0bfb1819d0758168ab7974df263",
+    "third_party/tabdpt/pyproject.toml": "ddc5512d04e0d883e3718a532f5773bfafff6562c9834f0650fd1f64578382eb",
+    "third_party/tabdpt/README.md": "6f24ad0a0b9f14f1e063c43518afba0968875c12a25cfc96458f08151dc97d50",
+    "third_party/tabdpt/tabdpt/classifier.py": "9504cda178899138434c73241f83454ea6e1cad1195073ecfb930e4ef86a831e",
+    "third_party/tabdpt/tabdpt/self_training.py": "28820febe630221e2565b299365eef533dc4f02d48f1828e083e84c1c4f959b8",
+    "third_party/tabdpt/tabdpt/__init__.py": "4305d3ac1e168f9c562a87f89cab5230e8bac3ee9d50444379f44ce48a6f762d",
+    "third_party/tabdpt/tabdpt/model.py": "f7059d9040d46d883bc9f4df1456c77c369f9b3d9d59c3bf31c7e077af0fb381",
+    "third_party/tabdpt/tabdpt/utils.py": "2d576b6e1d6c95ab4926459e6cc91b4d5528aa0a850cd00269c2b93d1c3954cb",
+    "third_party/tabdpt/tabdpt/bar_distribution.py": "d7abbe7fed213ef003fd9c50684de712cce91348fc2da738c408902bae2f3669",
+    "third_party/tabdpt/tabdpt/regressor.py": "86629167ca12ba1daf6d275e285051573e7d0484148fc1bb0237b9d6de7c1874",
+    "third_party/tabdpt/tabdpt/estimator.py": "f49aa82df041287e13e4660b54afc0f5e51eff6885ed284936e1e740a86750ff",
+    "third_party/tabdpt/tabdpt/explain.py": "88019f0189fb977a3cbafef2de0be6a1d7e4e8a662bbc4a456577199b43b8bf8"
+  },
+  "checkpoint_path": "artifacts/pretrained/tabdpt-v1.3/tabdpt1_3.safetensors",
+  "checkpoint_sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+  "environment_sha256": "775376514d411a83ccf75a4d9e776f170e5a11f4134108ed2428fbf28d0c4c4d",
+  "source_commit": "09d81ec9c823c3ff7f09e35d202bd84539c26b63",
+  "plan": {
+    "status": "fixed_before_native_resource_execution",
+    "scope": "Synthetic resource only; no actual train/test rows, accuracy, CV or upload",
+    "K": 256,
+    "predict": {
+      "n_ensembles": 1,
+      "temperature": 1.0,
+      "context_size": 256,
+      "batch_size": 8,
+      "permute_classes": true,
+      "seed": 20261112
+    },
+    "backend": {
+      "device": "mps",
+      "weights": "float32",
+      "input": "float32",
+      "use_flash": false,
+      "compile": false,
+      "mps_memory_fraction": 0.65,
+      "cpu_threads": 4,
+      "KMP_DUPLICATE_LIB_OK": "FALSE_before_numeric_imports"
+    },
+    "retrieval": "Independent subclass overrides only _get_faiss_knn_indices. Official train-only SimpleImputer and StandardScaler produce self.X_train/self.X_test. Float64 explicit squared differences summed perfeature; blocks8; stable argsort by distance then original training position. Labels never enter distance. No approximate search.",
+    "source": "Original frozen TabDPT1.3 vendor/CompactEncoder/fit/preprocess/network remain unchanged. faiss may be imported transitively but no native search/index/thread API is invoked by this path.",
+    "checkpoint_sha256": "97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb",
+    "probe": {
+      "deadline_seconds": 600,
+      "external_parent_kill_own_worker_group": true,
+      "small": {
+        "support": 257,
+        "query": 2,
+        "cpu_mps_tolerance": 2e-05,
+        "same_threshold_decisions": true
+      },
+      "main": {
+        "support_pool": 8693,
+        "query": 32,
+        "selected_context_per_query": 256,
+        "views": 1
+      },
+      "invariance": [
+        "full32 save-release-CPUportable-load-MPS predict",
+        "reverse32 query order",
+        "subset19 including3-row tail batch"
+      ],
+      "invariance_tolerance": 2e-06,
+      "same_threshold_decisions": true,
+      "actual_forward": "For every batch assert257 x tokens and256 y labels; exact input values, independent lexsort neighbor IDs, and source training label indexing match returned NumPy neighbors"
+    },
+    "cost": {
+      "formula": "1.25*(2*max_setup_seconds + 2*(2318/32)*max_complete32_prediction_seconds)",
+      "maximum_projected_single_fold_two_predictions_seconds": 1200,
+      "qualification": "All correctness checks and cost limit pass; root separately activates single-fold diagnostic, not automatic"
+    },
+    "persistence": "Predictor stores only CPU encoder/support/labels/IDs/provenance/settings and scalar/JSON observations; rebuilds engine from pinned local weights each prediction; no GPU engine cached",
+    "failures": "Preserve independent failed result; no K/view/precision/OMP fallback, no download or environment change",
+    "limitations": [
+      "New256/1 recipe, not rescue or equivalence claim for prior2048/8 FAISS failure.",
+      "Float64 arithmetic and explicit tie ordering can differ from FAISS float32 search; only exact declared NumPy metric is claimed.",
+      "Small32query timings extrapolate query-specific forward work, not a guaranteed real-fold runtime.",
+      "Training pool8693 is searchable but each network context is256; no claim of full8693 attention context.",
+      "Synthetic success does not imply real-data accuracy or independent group transfer."
+    ]
+  }
+}
