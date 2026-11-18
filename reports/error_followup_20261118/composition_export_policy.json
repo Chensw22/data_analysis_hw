@@ -1,0 +1,52 @@
+{
+  "version": "v103_Mitra_spend_composition19_zeroshot",
+  "proposal": "proposal_nov18_composition19",
+  "allow_full_export": true,
+  "allow_direct_submit": false,
+  "requires_separate_release": true,
+  "requires_fresh_primary_account_quota": true,
+  "new_upload_budget": 0,
+  "seed": 20261112,
+  "budget_seconds": 1800,
+  "columns": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side",
+    "TotalSpendComplete",
+    "RoomServiceCompleteShare",
+    "FoodCourtCompleteShare",
+    "ShoppingMallCompleteShare",
+    "SpaCompleteShare",
+    "VRDeckCompleteShare"
+  ],
+  "recipe": "Exact alreadytested CompositionPreprocessor19, originalMitra2checkpoint, zerooptimizerupdates, full8693support/4277query, querychunk2318, originalMPSFP32weights/bf16,CPU4,memoryfraction0.65. No newfolds/steps/parametersearch/resourcegrid.",
+  "authorization": "Root authorizes one online-first exploratory full export following completedfold0. This file does not authorize automatic upload; a later release binds unchanged manifest/policy/CSV and checks primary-account quota.",
+  "evidence_sha256": {
+    "reports/error_followup_20261118/composition_protocol.json": "15e00f20550c05362ce4c18cd7e869f9dad2e76f5910c878e1f6c1f1d68dbb81",
+    "reports/error_followup_20261118/composition_result.json": "83aa01393764e16cfd3f7270e0ae168257bc37b9ced212ff275e95fc16e65ee8",
+    "reports/error_followup_20261118/composition_root_audit.json": "298904486f2fde35fe1700d728c3432744e2010fc6c7831a7066c09c29fae120",
+    "artifacts/error_followup_20261118/composition_fold0/freeze.json": "198f8846ce78559d292936c601539a5db986bfadf14a11efcb4bc81c61a22130",
+    "artifacts/error_followup_20261118/composition_fold0/predictions.npz": "05b813c7ce0c04ca2f4d554a2f2db604cae66fec354fe89512ab77b8f1ebb1f8"
+  },
+  "observed_evidence": "One reusedfold0:81.92407%vsraw81.79465%,38repair35break/net3;LL.375938vs.381028;historicalhard546 fold178 rescued0;Earthawake netminus1/sleep netplus3. Not stablegain orhard-casebreakthrough.",
+  "feature_rule": "Originalcompact13 unchanged. If all5 spending observed: TotalSpendComplete=sum; positive total gives eachamount/total, completezero gives all6zeros. If anyspending missing: all6 derivedvalues NaN. Negative/infinite amounts fail. No partialtotal or missing-tozero rule. Native train-only mean imputation remains unchanged after featureconstruction.",
+  "source_and_label_boundary": "Verify committed source/policy/result/audit, diagnostic frozen sources and originalenvironment first, thenread fulltrain labels forauthorizedfinalcontext. Test attributes excludeTransported. No labels used for tuning/selection.",
+  "persistence": "Standalone base.MitraPredictor with CompositionPreprocessor portableCPU joblib. Complete4277 save/release/reload must have maxdiffexact0 and same.5decisions; any nonzero difference fails without relaxedtolerance.",
+  "failure": "No overwrite/resume; preservefailure/evidence, removecomplete manifest/selection/submission; no upload. Validate4277 exactPassengerIds/bools and reject anyhistorical attemptedCSV SHA.",
+  "limitations": [
+    "Same deterministic derivedinformation, not newlyobservedcovariates.",
+    "v51composition ontrees andv95twoMitra contrasts are priornegative/overlappingevidence.",
+    "Completezero sleepers receiveidentical6derivedzeros; no claim toresolvehardminority.",
+    "This onefold-basedonline-first decision is adaptive, not an independentvalidation or a newCVgate."
+  ]
+}
