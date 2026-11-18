@@ -1,0 +1,349 @@
+{
+  "fold": 0,
+  "status": "complete",
+  "worker": {
+    "status": "complete",
+    "fold": 0,
+    "routes": [
+      {
+        "route": "Earth",
+        "support_rows": 2048,
+        "query_rows": 1229,
+        "support_planet_counts": {
+          "Earth": 1536,
+          "Europa": 279,
+          "Mars": 205,
+          "__MISSING__": 28
+        },
+        "seconds": 157.11948199999824
+      },
+      {
+        "route": "Europa",
+        "support_rows": 2048,
+        "query_rows": 564,
+        "support_planet_counts": {
+          "Earth": 601,
+          "Europa": 1163,
+          "Mars": 255,
+          "__MISSING__": 29
+        },
+        "seconds": 99.9109516660028
+      },
+      {
+        "route": "Mars",
+        "support_rows": 2048,
+        "query_rows": 463,
+        "support_planet_counts": {
+          "Earth": 718,
+          "Europa": 354,
+          "Mars": 937,
+          "__MISSING__": 39
+        },
+        "seconds": 68.85169912499987
+      },
+      {
+        "route": "__MISSING__",
+        "support_rows": 2048,
+        "query_rows": 62,
+        "support_planet_counts": {
+          "Earth": 1083,
+          "Europa": 488,
+          "Mars": 425,
+          "__MISSING__": 52
+        },
+        "seconds": 29.12726670900156
+      }
+    ],
+    "packet_sha256": "e416d5d584443fe59dd5601cbdf230b6145df1f80a90092e56e17431cbb369d7",
+    "prediction_sha256": "aee66c88c7debf7a30377c390857ac367dcdf5c2edda1954b73877abdff80e46",
+    "seconds": 357.3231957079988,
+    "peak_rss_bytes": 4918919168
+  },
+  "metrics": {
+    "LimiX2": {
+      "rows": 2318,
+      "accuracy": 0.7761000862812769,
+      "log_loss": 0.4406327154679093,
+      "vs_rawMitra": {
+        "repairs": 96,
+        "breaks": 193,
+        "net": -97
+      },
+      "vs_v96": {
+        "repairs": 105,
+        "breaks": 194,
+        "net": -89
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 292,
+          "correct": 36,
+          "repairs_vs_raw": 36,
+          "breaks_vs_raw": 2
+        },
+        "common_correct5263": {
+          "rows": 1736,
+          "correct": 1605,
+          "repairs_vs_raw": 3,
+          "breaks_vs_raw": 130
+        },
+        "primary_common_wrong616": {
+          "rows": 202,
+          "correct": 8,
+          "repairs_vs_raw": 8,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 178,
+          "correct": 6,
+          "repairs_vs_raw": 6,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 387,
+          "tn": 42,
+          "fp": 92,
+          "fn": 58,
+          "tp": 195
+        },
+        "awake": {
+          "rows": 808,
+          "tn": 477,
+          "fp": 79,
+          "fn": 131,
+          "tp": 121
+        }
+      }
+    },
+    "rawMitra": {
+      "rows": 2318,
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.38102819387768605,
+      "vs_rawMitra": {
+        "repairs": 0,
+        "breaks": 0,
+        "net": 0
+      },
+      "vs_v96": {
+        "repairs": 37,
+        "breaks": 29,
+        "net": 8
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 292,
+          "correct": 2,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "common_correct5263": {
+          "rows": 1736,
+          "correct": 1732,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "primary_common_wrong616": {
+          "rows": 202,
+          "correct": 0,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 178,
+          "correct": 0,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 387,
+          "tn": 19,
+          "fp": 115,
+          "fn": 24,
+          "tp": 229
+        },
+        "awake": {
+          "rows": 808,
+          "tn": 480,
+          "fp": 76,
+          "fn": 111,
+          "tp": 141
+        }
+      }
+    },
+    "v96": {
+      "rows": 2318,
+      "accuracy": 0.814495254529767,
+      "log_loss": 0.3768084716420821,
+      "vs_rawMitra": {
+        "repairs": 29,
+        "breaks": 37,
+        "net": -8
+      },
+      "vs_v96": {
+        "repairs": 0,
+        "breaks": 0,
+        "net": 0
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 292,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 2
+        },
+        "common_correct5263": {
+          "rows": 1736,
+          "correct": 1731,
+          "repairs_vs_raw": 2,
+          "breaks_vs_raw": 3
+        },
+        "primary_common_wrong616": {
+          "rows": 202,
+          "correct": 0,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 178,
+          "correct": 0,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 387,
+          "tn": 13,
+          "fp": 121,
+          "fn": 16,
+          "tp": 237
+        },
+        "awake": {
+          "rows": 808,
+          "tn": 471,
+          "fp": 85,
+          "fn": 111,
+          "tp": 141
+        }
+      }
+    },
+    "half_rawMitra": {
+      "rows": 2318,
+      "accuracy": 0.8123382226056945,
+      "log_loss": 0.39979629867054073,
+      "vs_rawMitra": {
+        "repairs": 52,
+        "breaks": 65,
+        "net": -13
+      },
+      "vs_v96": {
+        "repairs": 66,
+        "breaks": 71,
+        "net": -5
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 292,
+          "correct": 11,
+          "repairs_vs_raw": 11,
+          "breaks_vs_raw": 2
+        },
+        "common_correct5263": {
+          "rows": 1736,
+          "correct": 1712,
+          "repairs_vs_raw": 3,
+          "breaks_vs_raw": 23
+        },
+        "primary_common_wrong616": {
+          "rows": 202,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 178,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 387,
+          "tn": 31,
+          "fp": 103,
+          "fn": 46,
+          "tp": 207
+        },
+        "awake": {
+          "rows": 808,
+          "tn": 489,
+          "fp": 67,
+          "fn": 125,
+          "tp": 127
+        }
+      }
+    },
+    "half_v96": {
+      "rows": 2318,
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3975513899037318,
+      "vs_rawMitra": {
+        "repairs": 49,
+        "breaks": 59,
+        "net": -10
+      },
+      "vs_v96": {
+        "repairs": 53,
+        "breaks": 55,
+        "net": -2
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 292,
+          "correct": 10,
+          "repairs_vs_raw": 10,
+          "breaks_vs_raw": 2
+        },
+        "common_correct5263": {
+          "rows": 1736,
+          "correct": 1714,
+          "repairs_vs_raw": 3,
+          "breaks_vs_raw": 21
+        },
+        "primary_common_wrong616": {
+          "rows": 202,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 178,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 387,
+          "tn": 26,
+          "fp": 108,
+          "fn": 33,
+          "tp": 220
+        },
+        "awake": {
+          "rows": 808,
+          "tn": 481,
+          "fp": 75,
+          "fn": 121,
+          "tp": 131
+        }
+      }
+    }
+  }
+}
