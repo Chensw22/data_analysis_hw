@@ -1,0 +1,131 @@
+{
+  "graph": [
+    {
+      "fold": 0,
+      "isolates": 25,
+      "edges": 55268
+    },
+    {
+      "fold": 1,
+      "isolates": 27,
+      "edges": 55345
+    },
+    {
+      "fold": 2,
+      "isolates": 13,
+      "edges": 55126
+    }
+  ],
+  "raw": {
+    "one_hop": {
+      "metrics": {
+        "accuracy": 0.8087431693989071,
+        "log_loss": 0.38981745144596236
+      },
+      "vs_base": {
+        "rows": 6954,
+        "repaired": 197,
+        "broken": 251,
+        "net_correct": -54,
+        "both_correct": 5427,
+        "both_wrong": 1079
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 17,
+        "broken": 0,
+        "net_correct": 17,
+        "both_correct": 0,
+        "both_wrong": 529
+      },
+      "fold_net": [
+        -28,
+        -17,
+        -9
+      ]
+    },
+    "diffusion": {
+      "metrics": {
+        "accuracy": 0.8088869715271786,
+        "log_loss": 0.3903802888243985
+      },
+      "vs_base": {
+        "rows": 6954,
+        "repaired": 211,
+        "broken": 264,
+        "net_correct": -53,
+        "both_correct": 5414,
+        "both_wrong": 1065
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 16,
+        "broken": 0,
+        "net_correct": 16,
+        "both_correct": 0,
+        "both_wrong": 530
+      },
+      "fold_net": [
+        -29,
+        -11,
+        -13
+      ]
+    }
+  },
+  "v96": {
+    "one_hop": {
+      "metrics": {
+        "accuracy": 0.8100373885533506,
+        "log_loss": 0.38720986827478887
+      },
+      "vs_base": {
+        "rows": 6954,
+        "repaired": 185,
+        "broken": 210,
+        "net_correct": -25,
+        "both_correct": 5448,
+        "both_wrong": 1111
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 11,
+        "broken": 0,
+        "net_correct": 11,
+        "both_correct": 1,
+        "both_wrong": 534
+      },
+      "fold_net": [
+        -14,
+        -12,
+        1
+      ]
+    },
+    "diffusion": {
+      "metrics": {
+        "accuracy": 0.8101811906816221,
+        "log_loss": 0.3877939117732661
+      },
+      "vs_base": {
+        "rows": 6954,
+        "repaired": 194,
+        "broken": 218,
+        "net_correct": -24,
+        "both_correct": 5440,
+        "both_wrong": 1102
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 12,
+        "broken": 0,
+        "net_correct": 12,
+        "both_correct": 1,
+        "both_wrong": 533
+      },
+      "fold_net": [
+        -14,
+        -11,
+        1
+      ]
+    }
+  }
+}
