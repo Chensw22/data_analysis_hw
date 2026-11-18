@@ -1,0 +1,62 @@
+{
+  "status": "verified_complete",
+  "source_hashes_verified": true,
+  "OOF_identity_and_metrics_recomputed": true,
+  "landmarks_all_training_rows_same_across_kernels": true,
+  "all6_saved_readouts_exact": true,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.3802030995217259
+    },
+    "hidden": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.3801389369220999
+    },
+    "pca_linear": {
+      "accuracy": 0.817083692838654,
+      "log_loss": 0.380258491142674
+    },
+    "rbf": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.38020315407635946
+    }
+  },
+  "hard546_correct": {
+    "raw": 0,
+    "constant": 0,
+    "hidden": 5,
+    "pca_linear": 5,
+    "rbf": 1
+  },
+  "rbf_vs_raw": {
+    "rows": 6954,
+    "repaired": 68,
+    "broken": 63,
+    "net_correct": 5,
+    "both_correct": 5615,
+    "both_wrong": 1208
+  },
+  "rbf_vs_constant": {
+    "rows": 6954,
+    "repaired": 57,
+    "broken": 57,
+    "net_correct": 0,
+    "both_correct": 5626,
+    "both_wrong": 1214
+  },
+  "rbf_vs_pca_linear": {
+    "rows": 6954,
+    "repaired": 60,
+    "broken": 59,
+    "net_correct": 1,
+    "both_correct": 5623,
+    "both_wrong": 1212
+  },
+  "seconds": 1.4126116249972256,
+  "conclusion": "RBF accuracy ties intercept-only (57 repairs/57 regressions relative to intercept); hard546 rescued1 versus linear512/PCA-linear5. No overall nonlinear increment for this fixed recipe. No regularization/bandwidth search."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "frozen_before_PCA_kernel_or_readout_fit",
+  "source": "Authenticated strictnested 512-dimensional label-token vectors, raw/constant/linear512 control unchanged",
+  "preprocessing": "Original outertrainOOF mean/std then full-SVD PCA32 fitted only outertrainOOF; outerquery transformed only.",
+  "landmarks": "256 training rows selected by sklearn Nystroem random_state20261112+fold; RBF and linear share exact component_indices_",
+  "bandwidth": "Median of all nonself pairwise Euclidean distances among outertrain PCA32 rows; gamma=1/(2*median**2). No query distances used.",
+  "kernels": [
+    "rbf",
+    "linear"
+  ],
+  "kernel_normalization": "sklearn native Nystr\u00f6m inverse-square-root landmark kernel, singular values floor1e-12. No subsequent column scaling: preserve kernel feature geometry.",
+  "control": "Linear-kernel Nystr\u00f6m with same256 landmarks; its rank<=32 and function space is linear in PCA32.",
+  "objective": "Same fixed raw logit offset; mean binary NLL+.1||w||\u00b2; intercept free; L-BFGS-B500/ftol1e-12/gtol1e-8, no search",
+  "threshold": 0.5,
+  "CPU_threads": 4,
+  "budget_seconds": 600,
+  "no_GPU": true,
+  "no_base_fit": true,
+  "limitations": [
+    "Adaptive reuseddev, not independent validation.",
+    "RBF and linear kernel norms differ despite same penalty, so result is recipe comparison not isolated causality.",
+    "Inner versus outercontext size shift persists.",
+    "Hard546 only posthoc reporting."
+  ]
+}
