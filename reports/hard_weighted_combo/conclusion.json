@@ -1,0 +1,56 @@
+{
+  "decision": "Reject this fixed difficulty-weighting recipe; do not tune slope or choose subgroup from these results.",
+  "seconds": 27.430229375000636,
+  "metrics": {
+    "ordinary_cat": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "weighted_cat": {
+      "accuracy": 0.8107563991947081,
+      "log_loss": 0.39136751886027904
+    },
+    "ordinary_half_raw": {
+      "accuracy": 0.818809318377912,
+      "log_loss": 0.37745755868760145
+    },
+    "weighted_half_raw": {
+      "accuracy": 0.816220880069025,
+      "log_loss": 0.3792654270718048
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    }
+  },
+  "weighted_cat_vs_ordinary": {
+    "rows": 6954,
+    "repaired": 158,
+    "broken": 175,
+    "net_correct": -17,
+    "both_correct": 5480,
+    "both_wrong": 1141
+  },
+  "weighted_half_vs_ordinary_half": {
+    "rows": 6954,
+    "repaired": 78,
+    "broken": 96,
+    "net_correct": -18,
+    "both_correct": 5598,
+    "both_wrong": 1182
+  },
+  "hard546_correct": {
+    "ordinary_cat": 4,
+    "weighted_cat": 17,
+    "ordinary_half_raw": 1,
+    "weighted_half_raw": 2,
+    "raw": 0
+  },
+  "weighted_half_fold_net_vs_ordinary_half": [
+    -18,
+    -9,
+    9
+  ],
+  "interpretation": "Weighted learner rescues more historical all24 errors but causes more losses elsewhere. The fixed .5 mixture does not improve raw accuracy and is inferior to the matched ordinary Cat mixture. No independent generalization or >85% claim.",
+  "limitations": "Both Cat models omit Name including its missingness; original raw remains authenticated cached baseline. Historical546 defined from prior methods is only reporting, not training selector. All6954 labels reused adaptively."
+}
