@@ -1,0 +1,7 @@
+{
+  "eligible": "Original v115 and first-only changes protected. Aggregate first expert supports raw direction, second opposes; use calibrated votes only from packets with same exclusive challenge.",
+  "regression": "Each packet: restrict disjoint C to first head supports raw teacher and sequential second opposes. Predict teacher error via standardized logistic C=.15 on original margins. Enriched model adds forest-chain CatBoost, latent EM and Kumo signed logits. Match all else.",
+  "decision": "Take mean over active packets only. Require >=.5 and at least one active packet. Compare both fixed recipes on all original development rows; no outer-label fitting or thresholds.",
+  "limitations": "Kumo uses original inner teacher support in calibration but full outertrain when scoring an outer query; v108 is also a stronger baseline at inference. Reused adaptive 6954 rows.",
+  "seed_run": "545abf94d31bdad61066beca988ecf48980949c86fc3890197e412b381698501"
+}
