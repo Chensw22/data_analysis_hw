@@ -1,0 +1,103 @@
+{
+  "fold": 1,
+  "models": {
+    "hard": {
+      "model_sha256": "68b0f3b59c796bad33a316a88782bfe7603876dfcb54c42079248a906fddb756",
+      "reload_difference": 0.0,
+      "target_min": 0.0,
+      "target_max": 1.0
+    },
+    "uniform": {
+      "model_sha256": "1aed57c31da77ad0279e364f6429d7cb446815b114d00ead1709f28f7d9f2147",
+      "reload_difference": 0.0,
+      "target_min": 0.25,
+      "target_max": 0.75
+    },
+    "distilled": {
+      "model_sha256": "9f49ef9a238c9bb4a075c97dac02c2cdf58cf73c08a4e4ab1677696e190581ac",
+      "reload_difference": 0.0,
+      "target_min": 0.0009690600272733718,
+      "target_max": 0.9998804032802582
+    }
+  },
+  "metrics": {
+    "raw": {
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3719704257434014
+    },
+    "hard": {
+      "accuracy": 0.8209663503019845,
+      "log_loss": 0.3745705742923944
+    },
+    "uniform": {
+      "accuracy": 0.8201035375323554,
+      "log_loss": 0.4919203089471912
+    },
+    "distilled": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.37108474946426406
+    },
+    "hard_raw_half": {
+      "accuracy": 0.823123382226057,
+      "log_loss": 0.3689571957861293
+    },
+    "uniform_raw_half": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.41825029047659873
+    },
+    "distilled_raw_half": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.36964316768464
+    }
+  },
+  "paired_to_raw": {
+    "hard": {
+      "rows": 2318,
+      "repaired": 75,
+      "broken": 72,
+      "net_correct": 3,
+      "both_correct": 1828,
+      "both_wrong": 343
+    },
+    "uniform": {
+      "rows": 2318,
+      "repaired": 70,
+      "broken": 69,
+      "net_correct": 1,
+      "both_correct": 1831,
+      "both_wrong": 348
+    },
+    "distilled": {
+      "rows": 2318,
+      "repaired": 51,
+      "broken": 55,
+      "net_correct": -4,
+      "both_correct": 1845,
+      "both_wrong": 367
+    },
+    "hard_raw_half": {
+      "rows": 2318,
+      "repaired": 39,
+      "broken": 31,
+      "net_correct": 8,
+      "both_correct": 1869,
+      "both_wrong": 379
+    },
+    "uniform_raw_half": {
+      "rows": 2318,
+      "repaired": 21,
+      "broken": 25,
+      "net_correct": -4,
+      "both_correct": 1875,
+      "both_wrong": 397
+    },
+    "distilled_raw_half": {
+      "rows": 2318,
+      "repaired": 19,
+      "broken": 23,
+      "net_correct": -4,
+      "both_correct": 1877,
+      "both_wrong": 399
+    }
+  }
+}

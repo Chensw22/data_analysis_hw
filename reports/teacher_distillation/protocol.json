@@ -1,0 +1,79 @@
+{
+  "status": "frozen_before_student_fits",
+  "parameters": {
+    "loss_function": "CrossEntropy",
+    "depth": 6,
+    "iterations": 700,
+    "learning_rate": 0.045,
+    "l2_leaf_reg": 5,
+    "thread_count": 4,
+    "verbose": false,
+    "allow_writing_files": false
+  },
+  "features": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side",
+    "MissingCount",
+    "TotalSpend",
+    "AllSpendingZero",
+    "SpendMissingCount",
+    "PaidServices",
+    "LuxurySpend",
+    "RoomService_log1p",
+    "RoomService_missing",
+    "FoodCourt_log1p",
+    "FoodCourt_missing",
+    "ShoppingMall_log1p",
+    "ShoppingMall_missing",
+    "Spa_log1p",
+    "Spa_missing",
+    "VRDeck_log1p",
+    "VRDeck_missing",
+    "Age_missing"
+  ],
+  "teacher": "0.5*strict_outertrain_innerOOF_rawMitra+0.5*strict_outertrain_innerOOF_Kumo",
+  "targets": {
+    "hard": "y",
+    "uniform": "0.5*y+0.25",
+    "distilled": "0.5*y+0.5*teacher"
+  },
+  "predictions": "Each standalone student and fixed 0.5*student+0.5*authenticated outer rawMitra",
+  "folds": 3,
+  "outer_seed": 20261112,
+  "model_seed": "20261112+outer",
+  "budget_seconds": 600,
+  "labels": "Only original6954 development labels; no historical-hard-subset fitting or teacher reuse across outer folds.",
+  "masks": "Load914/616/546/5263 only after all9student fits/predictions.",
+  "controls": "Same CrossEntropy loss, features30 and params for all3targets; hard label control is fresh, not assumed identical to oldLogloss.",
+  "no_Name": true,
+  "no_base_fits": true,
+  "no_holdout_labels": true,
+  "no_upload": true,
+  "limitations": [
+    "Teacher task-specific probabilities add sample-specific training information, not new raw inputs.",
+    "Inner teacher support is about3090 vs outer4636; teacher errors/calibration may propagate.",
+    "Repeated adaptive development is not independent evidence of public85percent accuracy."
+  ],
+  "source_hashes": {
+    "teacher_distillation.py": "4e957d3887e0906a9d9630c55348944918329689eee6edd856a5f3e27307f628",
+    "nonlinear_error_corrector.py": "49c3da59a4ce2f2bb5641cc19eda0ae21c3facf5428b572d75b8e82fb238f0d1",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "exception_error_detector_nov18.py": "cf1a027631b8a9747d5f3b4ccd3b5e97b4dbfb3889241bcd30cb6a2336957ca1",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e"
+  },
+  "historical_hashes": {
+    "artifacts/planet_mixture_20261117/freeze.json": "0f23c050439d7f352c4c826b67c93540f2ed61737debf61551317d780c02c0e2"
+  }
+}
