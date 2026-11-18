@@ -1,0 +1,75 @@
+{
+  "errors_by_party_size": {
+    "solo": {
+      "rows": 3817,
+      "wrong": 751,
+      "historical_hard_still_wrong": 339
+    },
+    "multi": {
+      "rows": 3137,
+      "wrong": 523,
+      "historical_hard_still_wrong": 202
+    }
+  },
+  "rows": 6954,
+  "correct_base": 5680,
+  "required_net": 231,
+  "data": {
+    "all_train_rows": 8693,
+    "previous_holdout_rows": 1739,
+    "test_rows": 4277,
+    "labeled_dev_used": 6954,
+    "test_rows_sharing_train_party": 0,
+    "test_rows_sharing_observed_train_cabin": 0
+  },
+  "fold_diagnostics": [
+    {
+      "train_passengers": 3674,
+      "discordant_fit_pairs": 306,
+      "fixed_count_oracle_net": 14,
+      "eligible_groups": 106
+    },
+    {
+      "train_passengers": 3716,
+      "discordant_fit_pairs": 347,
+      "fixed_count_oracle_net": 12,
+      "eligible_groups": 114
+    },
+    {
+      "train_passengers": 3726,
+      "discordant_fit_pairs": 372,
+      "fixed_count_oracle_net": 10,
+      "eligible_groups": 96
+    }
+  ],
+  "pooled_party_oracle_net": 90,
+  "fold_query_party_oracle_net": 36,
+  "models": {
+    "within_party_rank": {
+      "correct": 5658,
+      "accuracy": 0.813632441760138,
+      "repairs": 20,
+      "harms": 42,
+      "hard_repairs": 5,
+      "hard_harms": 1,
+      "fold_net": [
+        -14,
+        -4,
+        -4
+      ]
+    },
+    "v108_order_control": {
+      "correct": 5680,
+      "accuracy": 0.8167960885821111,
+      "repairs": 1,
+      "harms": 1,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
