@@ -1,0 +1,127 @@
+{
+  "fold": 2,
+  "models": {
+    "control": {
+      "model_sha256": "5758ccdb6d385a44691a56867bad2a391d8c38b307541e7db28c5a6a81cccdb7",
+      "schema_sha256": "6aa34b4bda56c01ace9b917f9b452a1756a514b3521cd1eeba5bf3c6011fe8de",
+      "reload_difference": 0.0,
+      "iterations": 60,
+      "gain_importance": {
+        "HomePlanet": 0.0,
+        "CryoSleep": 0.0,
+        "Destination": 32.97860038280487,
+        "Age": 129.0030597448349,
+        "VIP": 0.0,
+        "RoomService": 61.1368203163147,
+        "FoodCourt": 75.49922931194305,
+        "ShoppingMall": 138.66135907173157,
+        "Spa": 20.401679754257202,
+        "VRDeck": 0.5208969712257385,
+        "Deck": 150.90991961956024,
+        "CabinNumber": 122.88923525810242,
+        "Side": 3.0639639496803284,
+        "MissingCount": 12.023439884185791,
+        "TotalSpend": 186.79909944534302,
+        "AllSpendingZero": 0.0,
+        "SpendMissingCount": 0.0,
+        "PaidServices": 0.0,
+        "LuxurySpend": 115.89350974559784,
+        "RoomService_log1p": 0.0,
+        "RoomService_missing": 0.0,
+        "FoodCourt_log1p": 0.0,
+        "FoodCourt_missing": 0.0,
+        "ShoppingMall_log1p": 0.0,
+        "ShoppingMall_missing": 0.0,
+        "Spa_log1p": 0.0,
+        "Spa_missing": 0.0,
+        "VRDeck_log1p": 0.0,
+        "VRDeck_missing": 0.0,
+        "Age_missing": 0.0
+      }
+    },
+    "party_position": {
+      "model_sha256": "baa682af4b86e352ae4c041f4c8bb82dd2c991d194ffe677be8e000487bbe544",
+      "schema_sha256": "8c7ab89b1251de8663eac4235c94f5ac6a301f7cb259047b80074d88277bad45",
+      "reload_difference": 0.0,
+      "iterations": 60,
+      "gain_importance": {
+        "HomePlanet": 0.0,
+        "CryoSleep": 0.0,
+        "Destination": 19.639870047569275,
+        "Age": 157.73839104175568,
+        "VIP": 0.0,
+        "RoomService": 26.46248984336853,
+        "FoodCourt": 70.57553017139435,
+        "ShoppingMall": 86.23492991924286,
+        "Spa": 0.0,
+        "VRDeck": 2.5726699829101562,
+        "Deck": 84.44867098331451,
+        "CabinNumber": 63.23304130882025,
+        "Side": 3.2267301082611084,
+        "MissingCount": 25.559049606323242,
+        "TotalSpend": 132.2114200592041,
+        "AllSpendingZero": 4.41483998298645,
+        "SpendMissingCount": 0.0,
+        "PaidServices": 0.0,
+        "LuxurySpend": 167.4601298570633,
+        "RoomService_log1p": 0.0,
+        "RoomService_missing": 0.0,
+        "FoodCourt_log1p": 0.0,
+        "FoodCourt_missing": 0.0,
+        "ShoppingMall_log1p": 0.0,
+        "ShoppingMall_missing": 0.0,
+        "Spa_log1p": 0.0,
+        "Spa_missing": 0.0,
+        "VRDeck_log1p": 0.0,
+        "VRDeck_missing": 0.0,
+        "Age_missing": 0.0,
+        "PartyOrderFraction": 45.70105028152466,
+        "PartySameCabinOrderFraction": 0.0,
+        "PartyCabinLeader": 0.0,
+        "PartyCabinBlockFraction": 0.0,
+        "PartyKnownCabinFraction": 0.0,
+        "PartyCabinFragmentation": 70.0048496723175,
+        "PartyOtherDeckFraction": 0.0,
+        "PartyOtherSideFraction": 0.0,
+        "PartyCabinNumberRankFraction": 0.0,
+        "PartyCabinDistanceFromMinLog": 0.0,
+        "PartyCabinDistanceToMaxLog": 0.0,
+        "PartyPreviousSameCabin": 0.0,
+        "PartyNextSameCabin": 18.748080015182495
+      }
+    }
+  },
+  "exact_old_control": true,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "control": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.38545950841709997
+    },
+    "party": {
+      "accuracy": 0.8157894736842105,
+      "log_loss": 0.38623461089194705
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 30,
+      "broken": 21,
+      "net_correct": 9,
+      "both_correct": 1861,
+      "both_wrong": 406
+    },
+    "control": {
+      "rows": 2318,
+      "repaired": 13,
+      "broken": 19,
+      "net_correct": -6,
+      "both_correct": 1878,
+      "both_wrong": 408
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "frozen_before_any_party_position_fit",
+  "new_columns": [
+    "PartyOrderFraction",
+    "PartySameCabinOrderFraction",
+    "PartyCabinLeader",
+    "PartyCabinBlockFraction",
+    "PartyKnownCabinFraction",
+    "PartyCabinFragmentation",
+    "PartyOtherDeckFraction",
+    "PartyOtherSideFraction",
+    "PartyCabinNumberRankFraction",
+    "PartyCabinDistanceFromMinLog",
+    "PartyCabinDistanceToMaxLog",
+    "PartyPreviousSameCabin",
+    "PartyNextSameCabin"
+  ],
+  "parameters": {
+    "objective": "binary",
+    "learning_rate": 0.03,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_data_in_leaf": 100,
+    "lambda_l2": 10.0,
+    "feature_fraction": 1.0,
+    "bagging_fraction": 1.0,
+    "bagging_freq": 0,
+    "num_threads": 2,
+    "deterministic": true,
+    "force_col_wise": true,
+    "boost_from_average": false,
+    "verbosity": -1
+  },
+  "rounds": 60,
+  "base_features": "original engineered_no_ids30",
+  "candidate": "same30 plus13 fixed unlabeled party position fields",
+  "training": "Matching originaldev6954SKF3seed20261112; strict matching outertrain innerOOF rawMitra logits as fixed offset; all outertrain labels; no query labels in fit.3fresh control +3augmented CPUfits.",
+  "comparison": "Control must reproduce prior30feature residualOOF bitwise everyfold; compareparty tobothcontrolandraw.",
+  "roster": "Full train+test attributes, usecols exactlyPassengerId/Cabin; reject any additional columns in derivation. No Transported/Name/age/spending/Cryo enters newfeatures. Transductive use ofpublic testattributes disclosed.",
+  "definitions": {
+    "PartyOrderFraction": "Rank of suffix within party/(n-1), singleton0; no rawGroupNumber/GroupMember input.",
+    "PartySameCabinOrderFraction": "Suffix rank among sameparty exactknowncabin/(n-1), singleoccupant0; unknowncabinNaN.",
+    "PartyCabinLeader": "First suffix among sameparty cabin=1.",
+    "PartyCabinBlockFraction": "Order ofdistinctknowncabins by theirfirstparty member, normalized0..1; onecabin0.",
+    "PartyKnownCabinFraction": "Knowncabins/partyrows.",
+    "PartyCabinFragmentation": "Distinctknowncabins/knownpartyrows, no known NaN.",
+    "PartyOtherDeckFraction": "Differentdeckfraction among otherparty members with knowncabins; no comparisonNaN.",
+    "PartyOtherSideFraction": "Differentsidefraction among otherknownparty members; no comparisonNaN.",
+    "PartyCabinNumberRankFraction": "Average numericcabinnumber rank among sameparty/sameDeck/Side normalized(n-1); singleton0.",
+    "PartyCabinDistanceFromMinLog": "log1p(ownCabinNumber-min sameparty/deck/side number).",
+    "PartyCabinDistanceToMaxLog": "log1p(max sameparty/deck/side number-ownCabinNumber).",
+    "PartyPreviousSameCabin": "Previous suffix-sortedparty memberexactsameknowncabin; missing/no previousNaN.",
+    "PartyNextSameCabin": "Next suffix-sortedparty memberexactsameknowncabin; missing/no nextNaN."
+  },
+  "reporting": "546/616/914/5263 read only afterallfits; full/fold repairsbreaks,Earthsleep/awakeconfusion; featuregain descriptive noselection.",
+  "threshold": 0.5,
+  "budget_seconds": 300,
+  "limitations": [
+    "Early ID-based models already used rawGroupMember, so memberorder alone is not claimed entirelynew; thistestsrelative occupancy layout with fixedmatchedcontrol.",
+    "Counts and fragmentation overlap some oldgroupinformation, but crossdeck/relativecabins/order conditional geometry differs from globalcounts/peerCryo/neighborwindows/missingcabinrepair.",
+    "Cabin numbers/Passenger suffixes are identifierordering; no proven physicaldistance,boardingtime orcausal role.",
+    "Samepublicrosterattributes available atfinalprediction; train/test groupIDs disjoint, no training-label propagation ortesttruth.",
+    "Adaptive development reused repeatedly; a result is not independent validation orguaranteed85percentpublicscore."
+  ],
+  "source_hashes": {
+    "party_position_probe.py": "25a9fba59d0325a94d47d22b17ca97aa4412fa7cbd54601b88c2c57322ef2a45",
+    "nonlinear_error_corrector.py": "49c3da59a4ce2f2bb5641cc19eda0ae21c3facf5428b572d75b8e82fb238f0d1",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "exception_error_detector_nov18.py": "cf1a027631b8a9747d5f3b4ccd3b5e97b4dbfb3889241bcd30cb6a2336957ca1",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67"
+  },
+  "historical_hashes": {
+    "reports/error_targeted_20261117/residual_runtime_fixed_result.json": "cf8471eabc87f6e61ed7aec659118f6f78800972098f9400bca978fbaf8e73b2",
+    "artifacts/error_targeted_20261117/residual_runtime_fixed/oof.npz": "4c4c3afe97fbb42c0896bc6d89a04a718e9ffae3f58c8ec697043c76e675dd44",
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}
