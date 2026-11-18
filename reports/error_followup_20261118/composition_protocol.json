@@ -1,0 +1,51 @@
+{
+  "status": "fixed_before_composition_diagnostic",
+  "candidate": "Mitra_complete_spending_composition19_zeroshot",
+  "seed": 20261112,
+  "fold": 0,
+  "budget_seconds": 1200,
+  "columns": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side",
+    "TotalSpendComplete",
+    "RoomServiceCompleteShare",
+    "FoodCourtCompleteShare",
+    "ShoppingMallCompleteShare",
+    "SpaCompleteShare",
+    "VRDeckCompleteShare"
+  ],
+  "feature_definition": "Originalcompact13 unchanged. If all5 spending observed: TotalSpendComplete=sum; positive total gives eachamount/total, completezero gives all6zeros. If anyspending missing: all6 derivedvalues NaN. Negative/infinite amounts fail. No partialtotal or missing-tozero rule. Native train-only mean imputation remains unchanged after featureconstruction.",
+  "preprocessing": "Own19column MitraPreprocessor subclass; original vocabulary copied and original13 active values/means/randommirror asserted exactly equal on train and every query. Both references fit onlyoutertrain. Actualformal input19columns required.",
+  "model": "OriginalMitra-v2 checkpoint, zerooptimizerupdates, full4636train support,2318query, originalMPSFP32weights/bf16, .65 memorycap,CPU4,querychunk2318. No newresourcegrid or tuning.",
+  "control": "Authenticated originalrawMitra SKF3seed20261112 fold0 cache, same2318IDs.",
+  "reload": "PortableCPU model.joblib inclownpreprocessor, completefold save/release/reload without refit, maxabs<=2e-6 and identical.5decisions. Unicode passenger/groupIDs inNPZ.",
+  "label_boundary": "Only original6954 via authenticated loader; old1739 neverread. fit_predict accepts onlyoutertrainy. Historical546/914 masks loaded afterpredict/reload, solelyreporting.",
+  "catalog_rows": "artifacts/error_rescue_20261117/catalog_rows.csv",
+  "pinned_evidence_sha256": {
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "spending_shares.py": "0b17cb59968a20a9e263cbace2833b37cc40308f7aac81bb70b8a3713716f1a9",
+    "reports/run_023/screen_results.csv": "4c4833d2fdfccc77f1aaa3f4cab31af94e9a9861a5108c3c78db294042ecf2de",
+    "mitra_contrasts_fixed15_online_first.py": "e38661b274051e6796f43b0378d0b2d9a2565b8629b89482829c9505b4a413a5"
+  },
+  "counterevidence": "Oldv51 hierarchical3shares onCat/spatial scored81.65085 versusv34 81.92407; composition is not untested globally. v95 alreadytested2D/Lcontrasts onMitra. This recipe changesrepresentation/modelinductivebias, not externalinformation.",
+  "mechanism": "External sklearnquantile disabled, but vendorTab2D alwayscalls support-dependent Tab2DQuantileEmbeddingX beforeembedding. Per-columnranks do not directlyretain cross-bill magnitude relationships; total+shares expose those relationships. This is a hypothesis, not a demonstrated lostsignal orbug.",
+  "limitations": [
+    "One reused adaptivefold, not independentvalidation/stablegain/automaticupload.",
+    "Adding6redundantcolumns also changesfeatureweight/attention geometry; not purecausal isolation.",
+    "Earthsleep completezero travelers allreceive identical6zeros; cannot distinguish their minorityFalse labels bythisinformation alone.",
+    "No state-specific routing, weight/seed/feature-subset/threshold sweep or furtherfolds.",
+    "Any allocatorfailure is retained withoutchangingprecision/support/features/cap."
+  ]
+}
