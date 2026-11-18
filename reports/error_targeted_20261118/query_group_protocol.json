@@ -1,0 +1,52 @@
+{
+  "status": "fixed_before_any_beta_fit",
+  "energy": "sum_i logit(clip(p_i,1e-7,1-1e-7))*y_i + beta/(n-1)*sum_i<j(2y_i-1)(2y_j-1)",
+  "beta_bounds": [
+    0,
+    1
+  ],
+  "penalty": 0.1,
+  "epsilon": 1e-07,
+  "objective": "Mean per-passenger marginal binaryNLL over all outertraining rows +.1beta\u00b2; not jointlikelihood or jointMAP.",
+  "optimizer": {
+    "method": "scipy minimize_scalar bounded",
+    "xatol": 1e-05,
+    "endpoints": [
+      0,
+      1
+    ],
+    "selection": "Lowest exact training objective among interior solution and0/1; lowerbeta wins exacttie."
+  },
+  "inner_boundary": "Call relational.load_inner for each outerfold. Rebuild StratifiedKFold3 shuffle seed20261117+outer. Groups keyed by(innerquery_partition,GroupId); never combine passengers from different innerfolds. No peer query targets are prediction inputs.",
+  "outer_boundary": "Original randomSKF3seed20261112, rawMitra cached outer predictions, each query split independently grouped. Not oldGroupCV. Train beta only on matching outertrain innerOOF/labels.",
+  "prediction": "Exact sum-product over <=256states(max8members), individual marginalthreshold.5. Singleton andbeta0 retain original probability values/dtype. No state/edge/weight/threshold search.",
+  "serialization": "Onlybeta and fixedrecipe JSON, reload identical complete outerquery probabilities andcoverage.",
+  "catalog_rows": "artifacts/error_rescue_20261117/catalog_rows.csv",
+  "reporting": "After all three predictions complete, read546/616/914 catalog masks for repair/break/coverage; wholepopulation andEarthCryoTrue/False confusion. No error-mask training, selection, or inferred achievableoracle.",
+  "source_dependencies": [
+    "relational_error_corrector.py",
+    "error_overlap_diagnostic.py",
+    "planet_mixture_experiment.py",
+    "exaone_validation_data.py",
+    "audit_top5_references.py",
+    "three_family_mean_screen.py",
+    "prior_adapt_mean_screen.py"
+  ],
+  "pinned_evidence_sha256": {
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "artifacts/planet_mixture_20261117/freeze.json": "0f23c050439d7f352c4c826b67c93540f2ed61737debf61551317d780c02c0e2",
+    "reports/planet_mixture_20261117/protocol.json": "5902ed8f9450248e115ecbe29f6fe918dec81da06831a7c1178b53215824dfd4"
+  },
+  "budget_seconds": 120,
+  "limitations": [
+    "Adaptive reused development labels; no new independentvalidation or automaticupload.",
+    "Inner query graphs about1545rows vsouter2318 vsdeploy4277: relationdensity andsupport-size shift remain.",
+    "Old groupOOF marginaldirection nearzero withmixedfoldsigns is counterevidence, not a prior fittedcandidatefailure.",
+    "Positivecoupling may double-count sharedattributes and amplify correlated mistakes. Degree normalization limitsbutdoesnotremove graphsizeshift.",
+    "FullgroupCV caching is not valid nestedmeta training and is not used.",
+    "If zero/no netoverall repair, stop this fixedrecipe rather than changingcoupling/relations/threshold."
+  ],
+  "authorization_and_revision": "Separately authorized cheap random-query-subgraph experiment under today's continue-testing instruction. Earlier artifacts/query_group_review/review.json recommended against a strictgroup route on weak direct evidence; that decision/source remains intact. This uses no new innergroup fits and does not claim to satisfy the previous nine-innergroup requirement, group validation, or full deployment-graph evaluation.",
+  "coverage_reporting": "Each fold reports inner query-subgraph sizehistogram/coveredrowfraction and outerquery graph sizehistogram/coveredrowfraction. Test4277 is a disclosed deploymentdensity risk, not evaluated in this experiment."
+}
