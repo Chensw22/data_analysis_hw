@@ -1,0 +1,40 @@
+{
+  "status": "fixed_before_fit",
+  "K": 24,
+  "EM_iterations": 80,
+  "seed": "20261112+outer",
+  "columns": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "VIP",
+    "Deck",
+    "Side",
+    "Age",
+    "CabinNumber",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck"
+  ],
+  "initialization": "Shared attributes-only onehot KMeans24/n_init1/max_iter100, responsibilities .98onehot+.02/K; no restarts/selection.",
+  "categories": "Training vocabulary multinomial with pseudo-count1; missing/unknown excluded from likelihood, not filled.",
+  "age": "Fixed boundaries13,18,30,50,80; missing marginalized.",
+  "cabin": "16 quantile bins fitted on observed outertrain only.",
+  "bills": "Each bill: zero-vs-positive Bernoulli pseudo-count1 each; positive amount8 quantile bins outertrain only, Dirichlet pseudo-count1. Missing bill integrates entire bill likelihood to1.",
+  "supervision": "Supervised arm observes y ONLY on outertrain as extra Bernoulli factor during EM; predict accepts attributes only and sums latent classes. Unsupervised arm EM never sees y then estimates class probability from final training responsibilities.",
+  "controls": "Same initializer, K, schema, smoothing,80EM iterations; both solo and fixed half-v96 probabilities; no thresholds/weights/seed search.",
+  "split": "Original6954dev SKF3seed20261112; old1739 targets never read; full test not model training.",
+  "threshold": 0.5,
+  "CPU_threads": 4,
+  "budget_seconds": 600,
+  "difference": "Finite mixture of conditional-independent typed likelihoods with y-guided latent classes, not a single dependency tree, directed bill chain, or rule imputation.",
+  "limitations": [
+    "No claim of new observed information.",
+    "Fixed discretization can lose metric/spatial information; initialization/local optimum may matter.",
+    "Within-class conditional independence may remain false.",
+    "Missingness mechanism not modeled; marginalization assumes ignorable missingness.",
+    "Adaptive reuseddev; hard masks are reporting only."
+  ]
+}

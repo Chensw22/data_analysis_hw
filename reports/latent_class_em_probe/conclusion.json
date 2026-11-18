@@ -1,0 +1,25 @@
+{
+  "status": "fixed_recipe_evaluated_no_overall_gain",
+  "supervised_vs_unsupervised_net": 304,
+  "supervised_half_vs_v96_net": -44,
+  "supervised_half_fold_net": [
+    -6,
+    3,
+    -41
+  ],
+  "complete_fields": {
+    "rows": 5424,
+    "historical_hard_rows": 430,
+    "supervised_hard_correct": 31,
+    "supervised_complete_net_vs_v96": -145,
+    "supervised_half_hard_correct": 5,
+    "supervised_half_complete_net_vs_v96": -31
+  },
+  "Earth_sleep_interpretation": "Supervised solo TN47 versus v96 TN42, but TP664 versus671: net−2. Fixedhalf TN44/TP671 versusv96 TN42/TP671: net+2. Unsupervised solo predicts all1106 transported, its net+9 is majority shift, not minority rescue.",
+  "limits": [
+    "The 24-class model provides a genuinely different generative representation, but current gains on selected hard samples are outweighed by total regressions.",
+    "All80 iterations completed; training observed likelihood still improves slightly in some folds, so no global-convergence or family-impossibility claim.",
+    "Binning discards detail; conditional independence and ignorable-missing assumptions may fail. No posthoc component count/bin/smoothing/iteration search."
+  ],
+  "next_action": "Archive this fixed recipe; no export or upload performed."
+}

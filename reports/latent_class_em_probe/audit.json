@@ -1,0 +1,205 @@
+{
+  "status": "verified_complete",
+  "all_sources_and_OOF_identity_verified": true,
+  "all6_models_fullquery_reload_exact": true,
+  "all_missing_likelihood_integrates_to_one": true,
+  "complete_rows": 5424,
+  "hard_complete_rows": 430,
+  "models": {
+    "unsupervised": {
+      "accuracy": 0.7451826287029047,
+      "log_loss": 0.5093718673588289,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 314,
+        "broken": 810,
+        "net_correct": -496,
+        "both_correct": 4868,
+        "both_wrong": 962
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 322,
+        "broken": 798,
+        "net_correct": -476,
+        "both_correct": 4860,
+        "both_wrong": 974
+      },
+      "hard546_correct": 44,
+      "hard_complete_correct": 38,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 245,
+        "broken": 643,
+        "net_correct": -398,
+        "both_correct": 3776,
+        "both_wrong": 760
+      }
+    },
+    "supervised": {
+      "accuracy": 0.7888984756974403,
+      "log_loss": 0.4400488982282531,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 297,
+        "broken": 489,
+        "net_correct": -192,
+        "both_correct": 5189,
+        "both_wrong": 979
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 310,
+        "broken": 482,
+        "net_correct": -172,
+        "both_correct": 5176,
+        "both_wrong": 986
+      },
+      "hard546_correct": 41,
+      "hard_complete_correct": 31,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 235,
+        "broken": 380,
+        "net_correct": -145,
+        "both_correct": 4039,
+        "both_wrong": 770
+      }
+    },
+    "unsupervised_half_v96": {
+      "accuracy": 0.8068737417313776,
+      "log_loss": 0.4207723987010045,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 227,
+        "broken": 294,
+        "net_correct": -67,
+        "both_correct": 5384,
+        "both_wrong": 1049
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 224,
+        "broken": 271,
+        "net_correct": -47,
+        "both_correct": 5387,
+        "both_wrong": 1072
+      },
+      "hard546_correct": 16,
+      "hard_complete_correct": 16,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 175,
+        "broken": 205,
+        "net_correct": -30,
+        "both_correct": 4214,
+        "both_wrong": 830
+      }
+    },
+    "supervised_half_v96": {
+      "accuracy": 0.8073051481161921,
+      "log_loss": 0.3955563057377979,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 193,
+        "broken": 257,
+        "net_correct": -64,
+        "both_correct": 5421,
+        "both_wrong": 1083
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 187,
+        "broken": 231,
+        "net_correct": -44,
+        "both_correct": 5427,
+        "both_wrong": 1109
+      },
+      "hard546_correct": 5,
+      "hard_complete_correct": 5,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 149,
+        "broken": 180,
+        "net_correct": -31,
+        "both_correct": 4239,
+        "both_wrong": 856
+      }
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 5678,
+        "both_wrong": 1276
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 121,
+        "broken": 101,
+        "net_correct": 20,
+        "both_correct": 5557,
+        "both_wrong": 1175
+      },
+      "hard546_correct": 0,
+      "hard_complete_correct": 0,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 100,
+        "broken": 76,
+        "net_correct": 24,
+        "both_correct": 4343,
+        "both_wrong": 905
+      }
+    },
+    "v96": {
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3774137567085704,
+      "vs_raw": {
+        "rows": 6954,
+        "repaired": 101,
+        "broken": 121,
+        "net_correct": -20,
+        "both_correct": 5557,
+        "both_wrong": 1175
+      },
+      "vs_v96": {
+        "rows": 6954,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 5658,
+        "both_wrong": 1296
+      },
+      "hard546_correct": 1,
+      "hard_complete_correct": 0,
+      "complete_vs_v96": {
+        "rows": 5424,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 4419,
+        "both_wrong": 1005
+      }
+    }
+  },
+  "supervised_half_fold_net_vs_v96": [
+    -6,
+    3,
+    -41
+  ],
+  "supervised_vs_unsupervised": {
+    "rows": 6954,
+    "repaired": 593,
+    "broken": 289,
+    "net_correct": 304,
+    "both_correct": 4893,
+    "both_wrong": 1179
+  },
+  "seconds": 4.318476249998639,
+  "conclusion": "Supervised latent classes improve over identical unlabeled mixture, but solo and fixed half-v96 both trail strong baselines. Hard-case repairs do not justify greater overall regressions; no component/bin/iteration search performed."
+}
