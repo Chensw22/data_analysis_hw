@@ -1,0 +1,299 @@
+{
+  "status": "complete_adaptive_development_experiment",
+  "folds": [
+    {
+      "fold": 0,
+      "fit": {
+        "beta": 0.005346038447676097,
+        "objective": 0.38694106433085396,
+        "baseline_objective": 0.3869442864522723,
+        "optimizer_success": true,
+        "nfev": 11,
+        "endpoint_objectives": [
+          0.3869442864522723,
+          0.497438786920985
+        ],
+        "training_rows": 4636,
+        "covered_training_rows": 698,
+        "covered_training_fraction": 0.15056082830025885,
+        "training_query_graph_size_counts": {
+          "1": 3938,
+          "2": 274,
+          "3": 39,
+          "4": 7,
+          "5": 1
+        },
+        "penalty": 0.1
+      },
+      "model_sha256": "5b2edc00988bc28f525693186eb51204e62b1b66a94ab92efe527e04f9f71c42",
+      "reload_difference": 0.0,
+      "metrics": {
+        "accuracy": 0.817946505608283,
+        "log_loss": 0.3809981299687236
+      },
+      "raw_metrics": {
+        "accuracy": 0.817946505608283,
+        "log_loss": 0.38102819387768605
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 3,
+        "broken": 3,
+        "net_correct": 0,
+        "both_correct": 1893,
+        "both_wrong": 419
+      },
+      "covered_query_rows": 489,
+      "covered_query_fraction": 0.21095772217428818,
+      "query_graph_size_counts": {
+        "1": 1829,
+        "2": 169,
+        "3": 38,
+        "4": 8,
+        "5": 1
+      }
+    },
+    {
+      "fold": 1,
+      "fit": {
+        "beta": 0.0,
+        "objective": 0.3888743396092493,
+        "baseline_objective": 0.3888743396092493,
+        "optimizer_success": true,
+        "nfev": 25,
+        "endpoint_objectives": [
+          0.3888743396092493,
+          0.49969906654847895
+        ],
+        "training_rows": 4636,
+        "covered_training_rows": 679,
+        "covered_training_fraction": 0.14646246764452114,
+        "training_query_graph_size_counts": {
+          "1": 3957,
+          "2": 272,
+          "3": 39,
+          "4": 2,
+          "5": 2
+        },
+        "penalty": 0.1
+      },
+      "model_sha256": "83afd1dcc42ba0c3bd19368b5d5300b8be6a7078402b734e5801e8be5b204582",
+      "reload_difference": 0.0,
+      "metrics": {
+        "accuracy": 0.819672131147541,
+        "log_loss": 0.3719704257434014
+      },
+      "raw_metrics": {
+        "accuracy": 0.819672131147541,
+        "log_loss": 0.3719704257434014
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1900,
+        "both_wrong": 418
+      },
+      "covered_query_rows": 480,
+      "covered_query_fraction": 0.2070750647109577,
+      "query_graph_size_counts": {
+        "1": 1838,
+        "2": 169,
+        "3": 33,
+        "4": 7,
+        "5": 3
+      }
+    },
+    {
+      "fold": 2,
+      "fit": {
+        "beta": 0.0,
+        "objective": 0.385711066204159,
+        "baseline_objective": 0.385711066204159,
+        "optimizer_success": true,
+        "nfev": 25,
+        "endpoint_objectives": [
+          0.385711066204159,
+          0.49738039376993104
+        ],
+        "training_rows": 4636,
+        "covered_training_rows": 703,
+        "covered_training_fraction": 0.15163934426229508,
+        "training_query_graph_size_counts": {
+          "1": 3933,
+          "2": 256,
+          "3": 47,
+          "4": 10,
+          "5": 2
+        },
+        "penalty": 0.1
+      },
+      "model_sha256": "fb12891d22da5762417e6d4ec46dfb1c8bfa5e48673c65a21430c7931ce0f935",
+      "reload_difference": 0.0,
+      "metrics": {
+        "accuracy": 0.8119068162208801,
+        "log_loss": 0.38758918506166057
+      },
+      "raw_metrics": {
+        "accuracy": 0.8119068162208801,
+        "log_loss": 0.38758918506166057
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1882,
+        "both_wrong": 436
+      },
+      "covered_query_rows": 487,
+      "covered_query_fraction": 0.2100949094046592,
+      "query_graph_size_counts": {
+        "1": 1831,
+        "2": 166,
+        "3": 37,
+        "4": 11
+      }
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.816508484325568,
+    "log_loss": 0.3801859135912618
+  },
+  "raw_metrics": {
+    "accuracy": 0.816508484325568,
+    "log_loss": 0.38019593489424935
+  },
+  "subsets": {
+    "all": {
+      "rows": 6954,
+      "repaired": 3,
+      "broken": 3,
+      "net_correct": 0,
+      "both_correct": 5675,
+      "both_wrong": 1273,
+      "covered_rows": 1456,
+      "candidate_correct": 5678,
+      "raw_correct": 5678,
+      "candidate_TN": 2763,
+      "candidate_TP": 2915,
+      "candidate_FP": 689,
+      "candidate_FN": 587,
+      "raw_TN": 2760,
+      "raw_TP": 2918,
+      "raw_FP": 692,
+      "raw_FN": 584
+    },
+    "all24_wrong546": {
+      "rows": 546,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 0,
+      "both_wrong": 546,
+      "covered_rows": 107,
+      "candidate_correct": 0,
+      "raw_correct": 0,
+      "candidate_TN": 0,
+      "candidate_TP": 0,
+      "candidate_FP": 254,
+      "candidate_FN": 292,
+      "raw_TN": 0,
+      "raw_TP": 0,
+      "raw_FP": 254,
+      "raw_FN": 292
+    },
+    "primary_wrong616": {
+      "rows": 616,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 2,
+      "both_wrong": 614,
+      "covered_rows": 115,
+      "candidate_correct": 2,
+      "raw_correct": 2,
+      "candidate_TN": 0,
+      "candidate_TP": 2,
+      "candidate_FP": 303,
+      "candidate_FN": 311,
+      "raw_TN": 0,
+      "raw_TP": 2,
+      "raw_FP": 303,
+      "raw_FN": 311
+    },
+    "five_wrong914": {
+      "rows": 914,
+      "repaired": 1,
+      "broken": 0,
+      "net_correct": 1,
+      "both_correct": 15,
+      "both_wrong": 898,
+      "covered_rows": 179,
+      "candidate_correct": 16,
+      "raw_correct": 15,
+      "candidate_TN": 3,
+      "candidate_TP": 13,
+      "candidate_FP": 487,
+      "candidate_FN": 411,
+      "raw_TN": 2,
+      "raw_TP": 13,
+      "raw_FP": 488,
+      "raw_FN": 411
+    },
+    "Earth_Cryo_True": {
+      "rows": 1106,
+      "repaired": 2,
+      "broken": 2,
+      "net_correct": 0,
+      "both_correct": 718,
+      "both_wrong": 384,
+      "covered_rows": 250,
+      "candidate_correct": 720,
+      "raw_correct": 720,
+      "candidate_TN": 41,
+      "candidate_TP": 679,
+      "candidate_FP": 343,
+      "candidate_FN": 43,
+      "raw_TN": 39,
+      "raw_TP": 681,
+      "raw_FP": 345,
+      "raw_FN": 41
+    },
+    "Earth_Cryo_False": {
+      "rows": 2464,
+      "repaired": 1,
+      "broken": 0,
+      "net_correct": 1,
+      "both_correct": 1906,
+      "both_wrong": 557,
+      "covered_rows": 362,
+      "candidate_correct": 1907,
+      "raw_correct": 1906,
+      "candidate_TN": 1467,
+      "candidate_TP": 440,
+      "candidate_FP": 202,
+      "candidate_FN": 355,
+      "raw_TN": 1466,
+      "raw_TP": 440,
+      "raw_FP": 203,
+      "raw_FN": 355
+    }
+  },
+  "oof_sha256": "17c622e0f613028484836e7c3fcb62ba68892fa14edf07946e4ae5ae79026812",
+  "freeze_sha256": "837d2486e3c449dfb9cc717dabe96d3efb9c0f39adf477e7e9e7c45353137bc4",
+  "seconds": 3.5005689169993275,
+  "source_commit": "49b1002d06074c2f294370e013098d8f48afb600",
+  "no_new_base_fits": true,
+  "no_old_holdout_labels": true,
+  "no_upload": true,
+  "interpretation": [
+    "Adaptive reused development labels; no new independentvalidation or automaticupload.",
+    "Inner query graphs about1545rows vsouter2318 vsdeploy4277: relationdensity andsupport-size shift remain.",
+    "Old groupOOF marginaldirection nearzero withmixedfoldsigns is counterevidence, not a prior fittedcandidatefailure.",
+    "Positivecoupling may double-count sharedattributes and amplify correlated mistakes. Degree normalization limitsbutdoesnotremove graphsizeshift.",
+    "FullgroupCV caching is not valid nestedmeta training and is not used.",
+    "If zero/no netoverall repair, stop this fixedrecipe rather than changingcoupling/relations/threshold."
+  ]
+}
