@@ -1,0 +1,49 @@
+{
+  "metrics": {
+    "accuracy": 0.818234109864826,
+    "log_loss": 0.37540435405778383
+  },
+  "vs_v96": {
+    "rows": 6954,
+    "repaired": 139,
+    "broken": 107,
+    "net_correct": 32,
+    "both_correct": 5551,
+    "both_wrong": 1157
+  },
+  "hard546": {
+    "rows": 546,
+    "repaired": 1,
+    "broken": 1,
+    "net_correct": 0,
+    "both_correct": 0,
+    "both_wrong": 544
+  },
+  "folds": [
+    {
+      "rows": 2318,
+      "repaired": 59,
+      "broken": 36,
+      "net_correct": 23,
+      "both_correct": 1852,
+      "both_wrong": 371
+    },
+    {
+      "rows": 2318,
+      "repaired": 40,
+      "broken": 28,
+      "net_correct": 12,
+      "both_correct": 1868,
+      "both_wrong": 382
+    },
+    {
+      "rows": 2318,
+      "repaired": 40,
+      "broken": 43,
+      "net_correct": -3,
+      "both_correct": 1831,
+      "both_wrong": 404
+    }
+  ],
+  "source": "Local v96 backbone; full export uses v106 with peer-cabin imputation."
+}
