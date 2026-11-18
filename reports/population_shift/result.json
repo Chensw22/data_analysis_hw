@@ -1,0 +1,81 @@
+{
+  "domain": {
+    "auc": 0.4830095841144105,
+    "fold_auc": [
+      0.474121409325105,
+      0.4816010937877351,
+      0.4919887661228931,
+      0.48660488855272443
+    ],
+    "membership_prevalence": 0.3297609868928296,
+    "weight_quantiles_train": [
+      0.7212272698132302,
+      0.9384162511080502,
+      1.0076124475840744,
+      1.0668581907035755,
+      2.0
+    ]
+  },
+  "native": {
+    "metrics": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "vs_native": {
+      "rows": 6954,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 5655,
+      "both_wrong": 1299
+    },
+    "hard546": {
+      "rows": 546,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 4,
+      "both_wrong": 542
+    },
+    "fold_net": [
+      0,
+      0,
+      0
+    ],
+    "half_v96": {
+      "accuracy": 0.817083692838654,
+      "log_loss": 0.37623780213432756
+    }
+  },
+  "target_weighted": {
+    "metrics": {
+      "accuracy": 0.8157894736842105,
+      "log_loss": 0.38159582274786713
+    },
+    "vs_native": {
+      "rows": 6954,
+      "repaired": 108,
+      "broken": 90,
+      "net_correct": 18,
+      "both_correct": 5565,
+      "both_wrong": 1191
+    },
+    "hard546": {
+      "rows": 546,
+      "repaired": 5,
+      "broken": 2,
+      "net_correct": 3,
+      "both_correct": 2,
+      "both_wrong": 537
+    },
+    "fold_net": [
+      4,
+      4,
+      10
+    ],
+    "half_v96": {
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3748597863832536
+    }
+  }
+}
