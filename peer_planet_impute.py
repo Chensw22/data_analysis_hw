@@ -44,7 +44,9 @@ def consensus():
     return roster, answers[query], stats
 
 
-def export(roster, replacements, stats):
+def export(roster, replacements, stats, proposal=PROPOSAL, version=VERSION):
+    out = ROOT / "artifacts" / proposal
+    report = ROOT / "reports" / proposal
     import joblib
     import torch
     import mitra_counts_fixed15_online_first as counts
@@ -60,12 +62,14 @@ def export(roster, replacements, stats):
     np.testing.assert_array_equal(probs.probability, probs.reload_probability)
     assert workflow.sha256(SOURCE/"submission.csv") == manifest["sha256"]
     np.testing.assert_array_equal(probs.probability >= .5, pd.read_csv(SOURCE/"submission.csv").Transported)
+    if isinstance(replacements, pd.Series):
+        replacements = replacements.to_frame("HomePlanet")
     idx = replacements.index
     base = probs.probability.to_numpy()
     torch.set_num_threads(4)
     torch.mps.set_per_process_memory_fraction(.65)
-    if OUT.exists():
-        raise FileExistsError(OUT)
+    if out.exists():
+        raise FileExistsError(out)
     runs = []
     for _ in range(2):
         counts.base.seed_everything(counts.SEED, "mps")
@@ -73,8 +77,10 @@ def export(roster, replacements, stats):
         model.device = "mps"
         lookup = model.preprocessor.roster
         np.testing.assert_array_equal(lookup.passenger_ids, roster.PassengerId)
-        assert roster.HomePlanet.iloc[idx].isna().all()
-        lookup.plain.loc[idx,"HomePlanet"] = replacements
+        for column in replacements:
+            old = lookup.plain.loc[idx, column]
+            assert (old.isna() | old.eq("__MISSING__")).all(), column
+            lookup.plain.loc[idx, column] = replacements[column]
         updated = base.copy()
         updated[idx-8693] = model.predict_proba(lookup.plain.loc[idx])[:,1]
         assert np.isfinite(updated).all()
@@ -85,17 +91,17 @@ def export(roster, replacements, stats):
     np.testing.assert_array_equal(*runs)
     changed = int(np.sum((base >= .5) != (runs[0] >= .5)))
     assert changed <= len(idx)
-    OUT.mkdir(parents=True)
-    probs.assign(probability=runs[0],reload_probability=runs[1]).to_csv(OUT/"test_probabilities.csv",index=False)
-    pd.DataFrame(dict(PassengerId=probs.PassengerId,Transported=runs[0]>=.5)).to_csv(OUT/"submission.csv",index=False)
-    check = workflow.validate_submission(OUT/"submission.csv", ROOT/"data/raw/test.csv")
-    selection = dict(version=VERSION,components=[manifest["version"]],threshold=.5)
+    out.mkdir(parents=True)
+    probs.assign(probability=runs[0],reload_probability=runs[1]).to_csv(out/"test_probabilities.csv",index=False)
+    pd.DataFrame(dict(PassengerId=probs.PassengerId,Transported=runs[0]>=.5)).to_csv(out/"submission.csv",index=False)
+    check = workflow.validate_submission(out/"submission.csv", ROOT/"data/raw/test.csv")
+    selection = dict(version=version,components=[manifest["version"]],threshold=.5)
     result = dict(**stats, **check, changes_from_v96=changed, reload_max_difference=0,
-                  version=VERSION, training_rows=8693, source_model_sha256=manifest["model_sha256"],
+                  version=version, training_rows=8693, source_model_sha256=manifest["model_sha256"],
                   source_manifest_sha256=workflow.sha256(SOURCE/"manifest.json"),
                   recipe_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip())
-    REPORT.mkdir(parents=True,exist_ok=True)
-    for folder in [OUT,REPORT]:
+    report.mkdir(parents=True,exist_ok=True)
+    for folder in [out,report]:
         for name, obj in [("selection",selection),("manifest",result)]:
             (folder/(name+".json")).write_text(json.dumps(obj,indent=2)+"\n")
     print(json.dumps(result))
