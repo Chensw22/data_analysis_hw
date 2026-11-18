@@ -1,0 +1,329 @@
+{
+  "status": "complete",
+  "metrics": {
+    "native_missing": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "forest_chain": {
+      "accuracy": 0.8134886396318666,
+      "log_loss": 0.38177418406785857
+    }
+  },
+  "subsets": {
+    "all": {
+      "rows": 6954,
+      "correct": {
+        "native_missing": 5655,
+        "forest_chain": 5657
+      },
+      "paired": {
+        "rows": 6954,
+        "repaired": 198,
+        "broken": 196,
+        "net_correct": 2,
+        "both_correct": 5459,
+        "both_wrong": 1101
+      }
+    },
+    "hard546": {
+      "rows": 546,
+      "correct": {
+        "native_missing": 4,
+        "forest_chain": 19
+      },
+      "paired": {
+        "rows": 546,
+        "repaired": 17,
+        "broken": 2,
+        "net_correct": 15,
+        "both_correct": 2,
+        "both_wrong": 525
+      }
+    },
+    "complete13": {
+      "rows": 5424,
+      "correct": {
+        "native_missing": 4436,
+        "forest_chain": 4437
+      },
+      "paired": {
+        "rows": 5424,
+        "repaired": 127,
+        "broken": 126,
+        "net_correct": 1,
+        "both_correct": 4310,
+        "both_wrong": 861
+      }
+    },
+    "any_missing13": {
+      "rows": 1530,
+      "correct": {
+        "native_missing": 1219,
+        "forest_chain": 1220
+      },
+      "paired": {
+        "rows": 1530,
+        "repaired": 71,
+        "broken": 70,
+        "net_correct": 1,
+        "both_correct": 1149,
+        "both_wrong": 240
+      }
+    },
+    "hard546_complete": {
+      "rows": 430,
+      "correct": {
+        "native_missing": 3,
+        "forest_chain": 10
+      },
+      "paired": {
+        "rows": 430,
+        "repaired": 8,
+        "broken": 1,
+        "net_correct": 7,
+        "both_correct": 2,
+        "both_wrong": 419
+      }
+    },
+    "hard546_missing": {
+      "rows": 116,
+      "correct": {
+        "native_missing": 1,
+        "forest_chain": 9
+      },
+      "paired": {
+        "rows": 116,
+        "repaired": 9,
+        "broken": 1,
+        "net_correct": 8,
+        "both_correct": 0,
+        "both_wrong": 106
+      }
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "attribute_forests": 26,
+      "training_missing_counts": {
+        "HomePlanet": 106,
+        "CryoSleep": 112,
+        "Destination": 93,
+        "Age": 95,
+        "VIP": 116,
+        "RoomService": 94,
+        "FoodCourt": 95,
+        "ShoppingMall": 124,
+        "Spa": 95,
+        "VRDeck": 102,
+        "Deck": 111,
+        "CabinNumber": 111,
+        "Side": 111
+      },
+      "train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+      "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+      "metrics": {
+        "native_missing": {
+          "accuracy": 0.818809318377912,
+          "log_loss": 0.38519244988864876
+        },
+        "forest_chain": {
+          "accuracy": 0.8101811906816221,
+          "log_loss": 0.38362430092014754
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 52,
+        "broken": 72,
+        "net_correct": -20,
+        "both_correct": 1826,
+        "both_wrong": 368
+      },
+      "seconds": 16.193148334001307,
+      "complete13": {
+        "rows": 1833,
+        "correct": {
+          "native_missing": 1510,
+          "forest_chain": 1496
+        },
+        "paired": {
+          "rows": 1833,
+          "repaired": 34,
+          "broken": 48,
+          "net_correct": -14,
+          "both_correct": 1462,
+          "both_wrong": 289
+        }
+      },
+      "hard546": {
+        "rows": 178,
+        "correct": {
+          "native_missing": 2,
+          "forest_chain": 7
+        },
+        "paired": {
+          "rows": 178,
+          "repaired": 6,
+          "broken": 1,
+          "net_correct": 5,
+          "both_correct": 1,
+          "both_wrong": 170
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "attribute_forests": 26,
+      "training_missing_counts": {
+        "HomePlanet": 124,
+        "CryoSleep": 119,
+        "Destination": 90,
+        "Age": 92,
+        "VIP": 105,
+        "RoomService": 90,
+        "FoodCourt": 84,
+        "ShoppingMall": 112,
+        "Spa": 91,
+        "VRDeck": 100,
+        "Deck": 102,
+        "CabinNumber": 102,
+        "Side": 102
+      },
+      "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
+      "query_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
+      "metrics": {
+        "native_missing": {
+          "accuracy": 0.817083692838654,
+          "log_loss": 0.3761641704630274
+        },
+        "forest_chain": {
+          "accuracy": 0.8201035375323554,
+          "log_loss": 0.37515686354263045
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 64,
+        "broken": 57,
+        "net_correct": 7,
+        "both_correct": 1837,
+        "both_wrong": 360
+      },
+      "seconds": 18.845692625000083,
+      "complete13": {
+        "rows": 1792,
+        "correct": {
+          "native_missing": 1470,
+          "forest_chain": 1475
+        },
+        "paired": {
+          "rows": 1792,
+          "repaired": 38,
+          "broken": 33,
+          "net_correct": 5,
+          "both_correct": 1437,
+          "both_wrong": 284
+        }
+      },
+      "hard546": {
+        "rows": 177,
+        "correct": {
+          "native_missing": 2,
+          "forest_chain": 4
+        },
+        "paired": {
+          "rows": 177,
+          "repaired": 3,
+          "broken": 1,
+          "net_correct": 2,
+          "both_correct": 1,
+          "both_wrong": 172
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "attribute_forests": 26,
+      "training_missing_counts": {
+        "HomePlanet": 106,
+        "CryoSleep": 115,
+        "Destination": 97,
+        "Age": 93,
+        "VIP": 103,
+        "RoomService": 98,
+        "FoodCourt": 93,
+        "ShoppingMall": 116,
+        "Spa": 102,
+        "VRDeck": 88,
+        "Deck": 103,
+        "CabinNumber": 103,
+        "Side": 103
+      },
+      "train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+      "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+      "metrics": {
+        "native_missing": {
+          "accuracy": 0.8037100949094047,
+          "log_loss": 0.3893534334800535
+        },
+        "forest_chain": {
+          "accuracy": 0.8101811906816221,
+          "log_loss": 0.3865413877407977
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 82,
+        "broken": 67,
+        "net_correct": 15,
+        "both_correct": 1796,
+        "both_wrong": 373
+      },
+      "seconds": 16.926407333001407,
+      "complete13": {
+        "rows": 1799,
+        "correct": {
+          "native_missing": 1456,
+          "forest_chain": 1466
+        },
+        "paired": {
+          "rows": 1799,
+          "repaired": 55,
+          "broken": 45,
+          "net_correct": 10,
+          "both_correct": 1411,
+          "both_wrong": 288
+        }
+      },
+      "hard546": {
+        "rows": 191,
+        "correct": {
+          "native_missing": 0,
+          "forest_chain": 8
+        },
+        "paired": {
+          "rows": 191,
+          "repaired": 8,
+          "broken": 0,
+          "net_correct": 8,
+          "both_correct": 0,
+          "both_wrong": 183
+        }
+      }
+    }
+  ],
+  "seconds": 57.71990516599908,
+  "protocol_sha256": "003dd85cdf25a6bd440193905046a6e930415ec9c328482635221630c0d31df0",
+  "oof_sha256": "b0bb5ee1893674ceded2eecd6bca5e1798d7973d306a8295b0be5b0743db3513",
+  "no_upload": true,
+  "old_holdout_labels_read": false,
+  "reusable_entry": "fit_pair(train_x,train_y,seed) -> native/forest Predictor; query predicts via frozen forest sequence. Full-data execution not performed."
+}

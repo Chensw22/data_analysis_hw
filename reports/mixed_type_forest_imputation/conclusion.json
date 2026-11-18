@@ -1,0 +1,117 @@
+{
+  "decision": "Completed fixed experiment; net+2correct is not evidence of a reliable accuracy gain or a >85% route.",
+  "metrics": {
+    "native_missing": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "forest_chain": {
+      "accuracy": 0.8134886396318666,
+      "log_loss": 0.38177418406785857
+    }
+  },
+  "subsets": {
+    "all": {
+      "rows": 6954,
+      "correct": {
+        "native_missing": 5655,
+        "forest_chain": 5657
+      },
+      "paired": {
+        "rows": 6954,
+        "repaired": 198,
+        "broken": 196,
+        "net_correct": 2,
+        "both_correct": 5459,
+        "both_wrong": 1101
+      }
+    },
+    "hard546": {
+      "rows": 546,
+      "correct": {
+        "native_missing": 4,
+        "forest_chain": 19
+      },
+      "paired": {
+        "rows": 546,
+        "repaired": 17,
+        "broken": 2,
+        "net_correct": 15,
+        "both_correct": 2,
+        "both_wrong": 525
+      }
+    },
+    "complete13": {
+      "rows": 5424,
+      "correct": {
+        "native_missing": 4436,
+        "forest_chain": 4437
+      },
+      "paired": {
+        "rows": 5424,
+        "repaired": 127,
+        "broken": 126,
+        "net_correct": 1,
+        "both_correct": 4310,
+        "both_wrong": 861
+      }
+    },
+    "any_missing13": {
+      "rows": 1530,
+      "correct": {
+        "native_missing": 1219,
+        "forest_chain": 1220
+      },
+      "paired": {
+        "rows": 1530,
+        "repaired": 71,
+        "broken": 70,
+        "net_correct": 1,
+        "both_correct": 1149,
+        "both_wrong": 240
+      }
+    },
+    "hard546_complete": {
+      "rows": 430,
+      "correct": {
+        "native_missing": 3,
+        "forest_chain": 10
+      },
+      "paired": {
+        "rows": 430,
+        "repaired": 8,
+        "broken": 1,
+        "net_correct": 7,
+        "both_correct": 2,
+        "both_wrong": 419
+      }
+    },
+    "hard546_missing": {
+      "rows": 116,
+      "correct": {
+        "native_missing": 1,
+        "forest_chain": 9
+      },
+      "paired": {
+        "rows": 116,
+        "repaired": 9,
+        "broken": 1,
+        "net_correct": 8,
+        "both_correct": 0,
+        "both_wrong": 106
+      }
+    }
+  },
+  "fold_net": [
+    -20,
+    7,
+    15
+  ],
+  "seconds": 57.71990516599908,
+  "source": "https://github.com/jclopezsDS/kaggle-spaceship-titanic/blob/main/src/tools.py",
+  "official_data": "https://www.kaggle.com/competitions/spaceship-titanic/data",
+  "author_score_status": "0.82020/rank6 is authorREADMEclaim, not independently verified officialmodel/scorebinding; not imported as evidence for this result.",
+  "method": "Ours differs from author all-regression imputation: classifiersforcategoricals/regressorsfornumerics, exactly2rounds50treesdepth10leaf2; pure13attrs, noName/target, indicatorspreserved.",
+  "reusable": "fit_pair + Predictor support same-configuration futurefulltrain fitting and inductive querytransform; nofullfit/exportrun.",
+  "limitations": "Observed-positive publicsource score not reproduced; mixed signs acrossfolds. No threshold/round/count/feature-selection followup, no implicitchoiceofsecondor thirdfold. Singlechain, not posterior multipleimputation."
+}
