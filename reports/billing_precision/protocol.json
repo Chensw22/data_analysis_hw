@@ -1,0 +1,42 @@
+{
+  "status": "frozen_before_new_fit",
+  "hypothesis": "Positive billing last digits and round hundreds may identify different generation/price regimes beyond amount scale, zero and missingness; no new information beyond amounts.",
+  "amount_fields": [
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "complete_total"
+  ],
+  "digits": "For each positive integer amount: ten one-hot decimal lastdigits and indicator divisible100. Zero/missing/noninteger: all0. Total only if all5 observed.",
+  "controls": "Six log1p amounts and squares (training mean/std); positive/missing flags; train-vocabulary Planet\u00d7Cryo indicators. No Name.",
+  "negative_control": "Permute the 11-column digit block within Planet\u00d7Cryo\u00d7floor(log10 positive amount), separately per bill/total and separately train/query, seeds20261118+100fold and+1. Keep amount controls unchanged. No label access in shuffle.",
+  "objective": "sum binary NLL with fixed strictnested rawlogit offset + 5*sum(coefficient\u00b2), unpenalized intercept; all coefficients regularized equally after continuous-controls scaling, digits remain0/1.",
+  "models": [
+    "magnitude_control",
+    "precision",
+    "shuffled_precision"
+  ],
+  "fixed_L2": 10.0,
+  "threshold": 0.5,
+  "seed": 20261112,
+  "folds": 3,
+  "training": "All outertrain rows, same cached9innerOOF; no546 weighting/selection. Outerlabels only score afterprediction.",
+  "limitations": [
+    "Same reused6954dev adaptive experiment.",
+    "One shuffled negative control is descriptive, not a permutation significance test.",
+    "Digit terms are mostly zero for Earthsleep: cannot discriminate allzero minority.",
+    "Total digits depend on component digits, not independent evidence.",
+    "Residual digit association could reflect unmodeled magnitude/price bands rather than a causal generation regime."
+  ],
+  "budget_seconds": 120,
+  "sources_sha256": {
+    "billing_precision_probe.py": "c9384e4203cba9f188dde6ae89ea0900ac30fe359eef9c34f7d33a25596295b7",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}

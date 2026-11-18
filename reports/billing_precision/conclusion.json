@@ -1,0 +1,56 @@
+{
+  "decision": "No useful incremental billing-digit signal demonstrated by this fixed probe; no fullfit or online recommendation.",
+  "metrics": {
+    "magnitude_control": {
+      "accuracy": 0.8149266609145815,
+      "log_loss": 0.3805641083403844
+    },
+    "precision": {
+      "accuracy": 0.8134886396318666,
+      "log_loss": 0.38182664918675974
+    },
+    "shuffled_precision": {
+      "accuracy": 0.813920046016681,
+      "log_loss": 0.38340986751483375
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    }
+  },
+  "precision_vs_magnitude": {
+    "rows": 6954,
+    "repaired": 60,
+    "broken": 70,
+    "net_correct": -10,
+    "both_correct": 5597,
+    "both_wrong": 1227
+  },
+  "precision_vs_raw": {
+    "rows": 6954,
+    "repaired": 121,
+    "broken": 142,
+    "net_correct": -21,
+    "both_correct": 5536,
+    "both_wrong": 1155
+  },
+  "precision_fold_net_vs_magnitude": [
+    -9,
+    2,
+    -3
+  ],
+  "hard546_correct": {
+    "magnitude_control": 0,
+    "precision": 1,
+    "shuffled_precision": 2,
+    "raw": 0
+  },
+  "seconds": 3.806550249999418,
+  "interpretation": "All observed positive amounts are integral, so displayed monetary precision itself is constant. Lastdigit and round100 vary but true-digit model is worse than matched magnitude control on accuracy and logloss; worse accuracy than one stratified shuffled-digit control. Real-vs-shuffled LL difference alone does not establish beneficial signal.",
+  "limitations": [
+    "One negative-control permutation is not a significance test.",
+    "Conditional magnitude controls are finite, not exact conditioning on all amounts.",
+    "Same development labels reused adaptively; no claim billing digits are universally uninformative.",
+    "Do not select individual digits, reroute slices, vary regularization, or call this a data ceiling."
+  ]
+}
