@@ -41,7 +41,7 @@ def write(p,v):
 
 class Prep:
     def fit(self,frame):
-        x=frame[NUM].to_numpy(float);x[:,1:6]=np.log1p(x[:,1:6])
+        x=frame[NUM].to_numpy(dtype=float,copy=True);x[:,1:6]=np.log1p(x[:,1:6])
         if np.isinf(x).any():raise ValueError('Invalid numeric values.')
         median=np.asarray([np.nanmedian(c) if np.isfinite(c).any() else 0. for c in x.T])
         filled=np.where(np.isfinite(x),x,median)
@@ -51,7 +51,7 @@ class Prep:
         return self
 
     def transform(self,frame):
-        x=frame[NUM].to_numpy(float);known=np.isfinite(x);x[:,1:6]=np.log1p(x[:,1:6])
+        x=frame[NUM].to_numpy(dtype=float,copy=True);known=np.isfinite(x);x[:,1:6]=np.log1p(x[:,1:6])
         x=(np.where(known,x,np.asarray(self.state['median']))-np.asarray(self.state['mean']))/np.asarray(self.state['scale'])
         cats=[];c_known=[]
         for c in CAT:
