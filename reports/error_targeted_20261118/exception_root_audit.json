@@ -1,0 +1,48 @@
+{
+  "status": "independently_recomputed_from_saved_OOF",
+  "result_sha256": "57f9d4cb84ee1ce5555241cf55810ef99cdcf4c1a9ab6cb87f636e2214b1d40a",
+  "oof_path": "artifacts/error_targeted_20261118/exception_detector/oof.npz",
+  "oof_sha256": "524aaf4a0d6d9c641f3ca1aeaa1d1cb43bc88ff0b15ebb263f804429919e8403",
+  "rows": 6954,
+  "error_probability": {
+    "min": 0.044090484928636896,
+    "max": 0.46961056264129797,
+    "above_half": 0,
+    "exact_half": 0
+  },
+  "metrics": {
+    "accuracy": 0.816508484325568,
+    "log_loss": 0.3898571507702088
+  },
+  "relative_raw": {
+    "repaired": 0,
+    "broken": 0,
+    "net_correct": 0
+  },
+  "relative_nonlinear_residual": {
+    "repaired": 50,
+    "broken": 67,
+    "net_correct": -17
+  },
+  "historical": {
+    "common_wrong914_correct": 15,
+    "common_wrong914_new_repairs_vs_raw": 0,
+    "all_recipes_wrong546_correct": 0,
+    "common_correct5263_new_breaks_vs_raw": 0
+  },
+  "earth_sleep": {
+    "rows": 1106,
+    "tn": 39,
+    "fp": 345,
+    "fn": 41,
+    "tp": 681
+  },
+  "interpretation": "No classification changed because all predicted error probabilities remained below0.5. Zero damage accompanies zero repair, not an improvement. Logloss worsened relative to raw;50 repairs against residual undo residual changes and are not new repairs against raw.",
+  "checks": [
+    "SHA matches saved complete result",
+    "dev row order matches authenticated historical catalog row_id",
+    "recomputed full accuracy/logloss, flips, repairs/breaks and546/5263 subset counts directly from saved NPZ",
+    "No model fit, new prediction, threshold tuning or source modification"
+  ],
+  "limits": "Adaptive development diagnostic, not independent validation or evidence of an irreducible data ceiling."
+}

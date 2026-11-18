@@ -1,0 +1,20 @@
+{
+  "status": "independently_verified",
+  "method": "Direct pandas groupby of compact fields with missingness retained, separate from tuple-key implementation",
+  "conflicts": [
+    {
+      "columns": 13,
+      "conflicting_patterns": 2,
+      "conflicting_rows": 5,
+      "hard_rows": 1
+    },
+    {
+      "columns": 12,
+      "conflicting_patterns": 180,
+      "conflicting_rows": 875,
+      "hard_rows": 141
+    }
+  ],
+  "input_csv_sha256": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+  "limitations": "Exact collisions are representation-specific; near-unique cabin numbers do not prove predictive information or learnability."
+}
