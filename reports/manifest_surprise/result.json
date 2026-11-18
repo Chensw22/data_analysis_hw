@@ -1,0 +1,166 @@
+{
+  "auxiliary": {
+    "RoomService": {
+      "scored": 12707,
+      "field_accuracy": 0.7251908396946565
+    },
+    "FoodCourt": {
+      "scored": 12681,
+      "field_accuracy": 0.736377257314092
+    },
+    "ShoppingMall": {
+      "scored": 12664,
+      "field_accuracy": 0.7255211623499684
+    },
+    "Spa": {
+      "scored": 12686,
+      "field_accuracy": 0.687450733091597
+    },
+    "VRDeck": {
+      "scored": 12702,
+      "field_accuracy": 0.7082349236340734
+    },
+    "Age": {
+      "scored": 12700,
+      "field_accuracy": 0.47181102362204724
+    },
+    "CryoSleep": {
+      "scored": 12660,
+      "field_accuracy": 0.9511848341232227
+    },
+    "HomePlanet": {
+      "scored": 12682,
+      "field_accuracy": 0.9328970193975714
+    },
+    "Destination": {
+      "scored": 12696,
+      "field_accuracy": 0.6959672337744172
+    },
+    "Deck": {
+      "scored": 12671,
+      "field_accuracy": 0.644463736090285
+    },
+    "Side": {
+      "scored": 12671,
+      "field_accuracy": 0.5035119564359561
+    }
+  },
+  "models": {
+    "control": {
+      "metrics": {
+        "accuracy": 0.8107563991947081,
+        "log_loss": 0.3875842279393886
+      },
+      "versus_raw": {
+        "rows": 6954,
+        "repaired": 215,
+        "broken": 255,
+        "net_correct": -40,
+        "both_correct": 5423,
+        "both_wrong": 1061
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 7,
+        "broken": 0,
+        "net_correct": 7,
+        "both_correct": 0,
+        "both_wrong": 539
+      },
+      "fold_net": [
+        -4,
+        -18,
+        -18
+      ]
+    },
+    "control_with_raw": {
+      "metrics": {
+        "accuracy": 0.8157894736842105,
+        "log_loss": 0.3796742103722634
+      },
+      "versus_raw": {
+        "rows": 6954,
+        "repaired": 136,
+        "broken": 141,
+        "net_correct": -5,
+        "both_correct": 5537,
+        "both_wrong": 1140
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 2,
+        "broken": 0,
+        "net_correct": 2,
+        "both_correct": 0,
+        "both_wrong": 544
+      },
+      "fold_net": [
+        -7,
+        -3,
+        5
+      ]
+    },
+    "augmented": {
+      "metrics": {
+        "accuracy": 0.8035662927811331,
+        "log_loss": 0.39858944394730217
+      },
+      "versus_raw": {
+        "rows": 6954,
+        "repaired": 269,
+        "broken": 359,
+        "net_correct": -90,
+        "both_correct": 5319,
+        "both_wrong": 1007
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 27,
+        "broken": 0,
+        "net_correct": 27,
+        "both_correct": 0,
+        "both_wrong": 519
+      },
+      "fold_net": [
+        -21,
+        -29,
+        -40
+      ]
+    },
+    "augmented_with_raw": {
+      "metrics": {
+        "accuracy": 0.8087431693989071,
+        "log_loss": 0.38264518123072055
+      },
+      "versus_raw": {
+        "rows": 6954,
+        "repaired": 164,
+        "broken": 218,
+        "net_correct": -54,
+        "both_correct": 5460,
+        "both_wrong": 1112
+      },
+      "hard546": {
+        "rows": 546,
+        "repaired": 7,
+        "broken": 0,
+        "net_correct": 7,
+        "both_correct": 0,
+        "both_wrong": 539
+      },
+      "fold_net": [
+        -8,
+        -24,
+        -22
+      ]
+    },
+    "added_features_vs_control": {
+      "rows": 6954,
+      "repaired": 258,
+      "broken": 308,
+      "net_correct": -50,
+      "both_correct": 5330,
+      "both_wrong": 1058
+    }
+  }
+}
