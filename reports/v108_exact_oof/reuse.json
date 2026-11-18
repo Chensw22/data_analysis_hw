@@ -1,0 +1,95 @@
+{
+  "status": "ready_for_same_fold_inference_reuse",
+  "environment": ".venv-mitra",
+  "version": "v108 exact development OOF",
+  "oof": {
+    "path": "artifacts/v108_exact_oof/oof.npz",
+    "sha256": "cb8a0273b2248ef0e173ca1957698774fc31d20b69f36a7602c4e28d60276f68",
+    "rows": 6954,
+    "keys": [
+      "dev_id",
+      "dev_ids",
+      "fold",
+      "fold_id",
+      "PassengerId",
+      "true",
+      "v96",
+      "v106",
+      "v108",
+      "peer_shift",
+      "peer_eligible"
+    ],
+    "PassengerId_dtype": "Unicode",
+    "label_scope": "original authorized6954development only"
+  },
+  "components": [
+    {
+      "fold": 0,
+      "base_model": "artifacts/v108_exact_oof/fold0_v96_model.joblib",
+      "base_sha256": "dbe33fa1cc2342acd029a1b6446d599f2ab368b1d17ad362abacc6da5df9f153",
+      "peer_coefficients": "artifacts/v108_exact_oof/fold0_peer_coefficients.joblib",
+      "peer_sha256": "17af4941fdf2aa090123d258d2548d4bcd4bf9bf828733f961c26b20547bc001",
+      "query_patch_packet": "artifacts/v108_exact_oof/fold0_packet.json",
+      "query_patch_packet_sha256": "ec01bf67fea7a1306c9217e94425550a1501a8318c8e7f9e8412938a36e4e3a9"
+    },
+    {
+      "fold": 1,
+      "base_model": "artifacts/v108_exact_oof/fold1_v96_model.joblib",
+      "base_sha256": "a94b166b443aa2bf0e8a3f981adf4f2db5a16330eafb4e69cded0829634d507f",
+      "peer_coefficients": "artifacts/v108_exact_oof/fold1_peer_coefficients.joblib",
+      "peer_sha256": "af79f56cc35bc04cbb27fedf3f9120943fd210ef78ffbd91e9d3de812d59babb",
+      "query_patch_packet": "artifacts/v108_exact_oof/fold1_packet.json",
+      "query_patch_packet_sha256": "df8aaacb3858c4256cf469eb7e32dff4e972d56904b56c31673ab21a793f94aa"
+    },
+    {
+      "fold": 2,
+      "base_model": "artifacts/v108_exact_oof/fold2_v96_model.joblib",
+      "base_sha256": "5c2bc444ff1ad4e0e1e635a37531e77e4074c88166986c64aa7bc6d97696684e",
+      "peer_coefficients": "artifacts/v108_exact_oof/fold2_peer_coefficients.joblib",
+      "peer_sha256": "9bf28e15aba9a4f67b0e6b1617709c137ea72a37d983ef639ebaac646331f144",
+      "query_patch_packet": "artifacts/v108_exact_oof/fold2_packet.json",
+      "query_patch_packet_sha256": "f528f55696f94a65e05ce6bf8e19a7b17c1d00b744f6bb7c1f725095e67d80f8"
+    }
+  ],
+  "reuse_steps": [
+    "Load only the fold model whose stored query_ids contains the target row; training IDs remain in foldN_packet.json.",
+    "The saved foldN_v96_model.joblib is original pre-cabin v96, CPU-portable; set device=mps explicitly for original inference.",
+    "For v106, patch only Deck/Side/CabinNumber in model.preprocessor.roster.plain for missing query rows specified in foldN_packet.json via v108_exact_oof.patch_query. Do not refit preprocessing, change support or recompute count features.",
+    "For original query rows, prefer cached v96 and infer only patched subset. All unaffected v106 probabilities equal v96.",
+    "For v108, use the saved foldN_peer_coefficients.joblib with original peer_bill_correction.context features and eligibility. Add offset to clipped v106 logit on eligible rows only; no changes to other rows.",
+    "Original-context inference of training rows must not be mislabeled as OOF. New second-level training needs its own honest inner boundaries."
+  ],
+  "float64_logloss_for_cross_report_comparison": {
+    "v96": 0.3774137567085704,
+    "v106": 0.3775320863788835,
+    "v108": 0.3780276608786294
+  },
+  "validation": [
+    "All three complete v96 predictions bitwise equal historical OOF.",
+    "All45 training updates match historical fields exactly except elapsedseconds.",
+    "68 patched query predictions reproduced bitwise after model reload.",
+    "Peer offsets independently refit from strictinnerraw and match historical cache bitwise.",
+    "No redundant full-query reload inference."
+  ],
+  "summary": {
+    "v108_accuracy": 0.8143514524014955,
+    "v108_errors": 1291,
+    "fold_errors": [
+      427,
+      426,
+      438
+    ],
+    "v96_errors": 1296,
+    "v106_errors": 1296,
+    "v108_vs_v96": {
+      "repairs": 27,
+      "breaks": 22,
+      "net": 5
+    },
+    "hard546_correct": 3,
+    "seconds": 673.0510964999994
+  },
+  "proxy_correction": "Previous v96+peer proxy was81.47829%; actual v106+peer v108 is81.43515%, 3fewer correct. This keeps the previous proxy historical; it does not replace it silently.",
+  "no_submission": true,
+  "no_git_commit_by_subagent": true
+}
