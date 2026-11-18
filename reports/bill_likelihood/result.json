@@ -1,0 +1,145 @@
+{
+  "passenger_prior": {
+    "metrics": {
+      "accuracy": 0.7562553925798102,
+      "log_loss": 0.4935320624481505
+    },
+    "versus_raw": {
+      "rows": 6954,
+      "repaired": 382,
+      "broken": 801,
+      "net_correct": -419,
+      "both_correct": 4877,
+      "both_wrong": 894
+    },
+    "hard": {
+      "rows": 546,
+      "repaired": 58,
+      "broken": 0,
+      "net_correct": 58,
+      "both_correct": 0,
+      "both_wrong": 488
+    },
+    "fold_net": [
+      -134,
+      -137,
+      -148
+    ]
+  },
+  "bill_posterior": {
+    "metrics": {
+      "accuracy": 0.7958009778544722,
+      "log_loss": 0.41466112938278177
+    },
+    "versus_raw": {
+      "rows": 6954,
+      "repaired": 215,
+      "broken": 359,
+      "net_correct": -144,
+      "both_correct": 5319,
+      "both_wrong": 1061
+    },
+    "hard": {
+      "rows": 546,
+      "repaired": 12,
+      "broken": 0,
+      "net_correct": 12,
+      "both_correct": 0,
+      "both_wrong": 534
+    },
+    "fold_net": [
+      -48,
+      -44,
+      -52
+    ]
+  },
+  "direct_classifier": {
+    "metrics": {
+      "accuracy": 0.810468794938165,
+      "log_loss": 0.3926948060974009
+    },
+    "versus_raw": {
+      "rows": 6954,
+      "repaired": 191,
+      "broken": 233,
+      "net_correct": -42,
+      "both_correct": 5445,
+      "both_wrong": 1085
+    },
+    "hard": {
+      "rows": 546,
+      "repaired": 2,
+      "broken": 0,
+      "net_correct": 2,
+      "both_correct": 0,
+      "both_wrong": 544
+    },
+    "fold_net": [
+      -6,
+      -11,
+      -25
+    ]
+  },
+  "bill_posterior_half_raw": {
+    "metrics": {
+      "accuracy": 0.8121944204774231,
+      "log_loss": 0.3913896846340372
+    },
+    "versus_raw": {
+      "rows": 6954,
+      "repaired": 125,
+      "broken": 155,
+      "net_correct": -30,
+      "both_correct": 5523,
+      "both_wrong": 1151
+    },
+    "hard": {
+      "rows": 546,
+      "repaired": 3,
+      "broken": 0,
+      "net_correct": 3,
+      "both_correct": 0,
+      "both_wrong": 543
+    },
+    "fold_net": [
+      -13,
+      -4,
+      -13
+    ]
+  },
+  "direct_classifier_half_raw": {
+    "metrics": {
+      "accuracy": 0.8149266609145815,
+      "log_loss": 0.382990421381863
+    },
+    "versus_raw": {
+      "rows": 6954,
+      "repaired": 102,
+      "broken": 113,
+      "net_correct": -11,
+      "both_correct": 5565,
+      "both_wrong": 1174
+    },
+    "hard": {
+      "rows": 546,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 0,
+      "both_wrong": 546
+    },
+    "fold_net": [
+      0,
+      -5,
+      -6
+    ]
+  },
+  "posterior_vs_direct": {
+    "rows": 6954,
+    "repaired": 198,
+    "broken": 300,
+    "net_correct": -102,
+    "both_correct": 5336,
+    "both_wrong": 1120
+  }
+}
