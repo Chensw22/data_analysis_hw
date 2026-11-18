@@ -1,0 +1,204 @@
+{
+  "status": "complete",
+  "metrics": {
+    "original": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3835700179439099
+    },
+    "marginal": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.3832419051326149
+    }
+  },
+  "all": {
+    "rows": 6954,
+    "original_correct": 5655,
+    "marginal_correct": 5655,
+    "paired": {
+      "rows": 6954,
+      "repaired": 7,
+      "broken": 7,
+      "net_correct": 0,
+      "both_correct": 5648,
+      "both_wrong": 1292
+    }
+  },
+  "missing": {
+    "rows": 173,
+    "original_correct": 144,
+    "marginal_correct": 144,
+    "paired": {
+      "rows": 173,
+      "repaired": 7,
+      "broken": 7,
+      "net_correct": 0,
+      "both_correct": 137,
+      "both_wrong": 22
+    }
+  },
+  "hard546": {
+    "rows": 546,
+    "original_correct": 4,
+    "marginal_correct": 5,
+    "paired": {
+      "rows": 546,
+      "repaired": 1,
+      "broken": 0,
+      "net_correct": 1,
+      "both_correct": 4,
+      "both_wrong": 541
+    }
+  },
+  "hard546_missing": {
+    "rows": 7,
+    "original_correct": 0,
+    "marginal_correct": 1,
+    "paired": {
+      "rows": 7,
+      "repaired": 1,
+      "broken": 0,
+      "net_correct": 1,
+      "both_correct": 0,
+      "both_wrong": 6
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "train_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+      "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+      "posterior_training_rows": 4524,
+      "query_missing_rows": 61,
+      "query_observed_rows": 2257,
+      "observed_attribute_accuracy": 0.9521488701816571,
+      "observed_attribute_brier": 0.03422966185334892,
+      "observed_attribute_log_loss": 0.11560866404214563,
+      "metrics": {
+        "original": {
+          "accuracy": 0.818809318377912,
+          "log_loss": 0.38519244988864876
+        },
+        "marginal": {
+          "accuracy": 0.818809318377912,
+          "log_loss": 0.384640460563991
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 2,
+        "broken": 2,
+        "net_correct": 0,
+        "both_correct": 1896,
+        "both_wrong": 418
+      },
+      "seconds": 3.943681500000821,
+      "reload_max_diff": 0.0,
+      "hard546": {
+        "rows": 178,
+        "original_correct": 2,
+        "marginal_correct": 2,
+        "paired": {
+          "rows": 178,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 2,
+          "both_wrong": 176
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "train_ids_sha256": "38e7dd3e5f8b85ad71c6250a18585c5f19376f644970b8e87043e79cd92ad140",
+      "query_ids_sha256": "ad644d713caeb15dc0786d83d0276b44855552147cbae0b5bd918a8522df01df",
+      "posterior_training_rows": 4517,
+      "query_missing_rows": 54,
+      "query_observed_rows": 2264,
+      "observed_attribute_accuracy": 0.950530035335689,
+      "observed_attribute_brier": 0.03211452002746853,
+      "observed_attribute_log_loss": 0.10768172673152038,
+      "metrics": {
+        "original": {
+          "accuracy": 0.817083692838654,
+          "log_loss": 0.3761641704630274
+        },
+        "marginal": {
+          "accuracy": 0.8175150992234685,
+          "log_loss": 0.3765115476688191
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 4,
+        "broken": 3,
+        "net_correct": 1,
+        "both_correct": 1891,
+        "both_wrong": 420
+      },
+      "seconds": 5.507904583999334,
+      "reload_max_diff": 0.0,
+      "hard546": {
+        "rows": 177,
+        "original_correct": 2,
+        "marginal_correct": 3,
+        "paired": {
+          "rows": 177,
+          "repaired": 1,
+          "broken": 0,
+          "net_correct": 1,
+          "both_correct": 2,
+          "both_wrong": 174
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "train_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+      "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+      "posterior_training_rows": 4521,
+      "query_missing_rows": 58,
+      "query_observed_rows": 2260,
+      "observed_attribute_accuracy": 0.9407079646017699,
+      "observed_attribute_brier": 0.036362784522568116,
+      "observed_attribute_log_loss": 0.11759787377340339,
+      "metrics": {
+        "original": {
+          "accuracy": 0.8037100949094047,
+          "log_loss": 0.3893534334800535
+        },
+        "marginal": {
+          "accuracy": 0.8032786885245902,
+          "log_loss": 0.3885737071650348
+        }
+      },
+      "paired": {
+        "rows": 2318,
+        "repaired": 1,
+        "broken": 2,
+        "net_correct": -1,
+        "both_correct": 1861,
+        "both_wrong": 454
+      },
+      "seconds": 7.182157333001669,
+      "reload_max_diff": 0.0,
+      "hard546": {
+        "rows": 191,
+        "original_correct": 0,
+        "marginal_correct": 0,
+        "paired": {
+          "rows": 191,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 0,
+          "both_wrong": 191
+        }
+      }
+    }
+  ],
+  "seconds": 19.894242832997406,
+  "protocol_sha256": "6c546aece51a30fa7d66104b126e2138c52947fb91f58eb2ee8a8c33acc3f933",
+  "oof_sha256": "b0f4741ef01b2b80893feb321b9dcdb547eb90e6f86880324f3b59d6c91be2a6",
+  "no_upload": true,
+  "old_holdout_labels_read": false
+}

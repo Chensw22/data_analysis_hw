@@ -1,0 +1,58 @@
+{
+  "status": "fixed_before_fit",
+  "target": {
+    "iterations": 700,
+    "depth": 6,
+    "learning_rate": 0.045,
+    "l2_leaf_reg": 5
+  },
+  "attribute_model": {
+    "iterations": 200,
+    "depth": 4,
+    "learning_rate": 0.06,
+    "l2_leaf_reg": 5
+  },
+  "seed": "20261112+fold",
+  "threshold": 0.5,
+  "folds": 3,
+  "devrows": 6954,
+  "features": "Original engineered_no_ids30 excluding Name before construction, including MissingCount without Name; same target model for both predictions.",
+  "posterior_features": [
+    "HomePlanet",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side"
+  ],
+  "posterior_training": "Only observedCryo outertrain, binaryCryo as label; noTransported input/labels.",
+  "rule": "Only missingCryo outerquery: qTrue*target(Cryo=True)+(1-qTrue)*target(Cryo=False). Keep original MissingCount, all other columns and full observed-query probabilities unchanged.",
+  "control": "Same fitted target model predicting original missingCryo input, no altered target training/sample weights.",
+  "prior": "HomePlanet posterior-weighted training expansion v58 already tested (run029), not claimed newfamily. This fixes different missing attribute and query-only same-model integration.",
+  "fixed_budget_seconds": 300,
+  "no_gpu": true,
+  "no_new_base_inference": true,
+  "limitations": [
+    "Conditional distribution of missingCryo assumed transportable from observed outertrain; MNAR can invalidate it.",
+    "This is fitted predictive marginalization, not exact Bayesian inference or causal intervention.",
+    "Missingness retained via original MissingCount; two categorical branches may be off observed joint support.",
+    "Small missing subset and adapted same dev labels; no independent generalization claim."
+  ],
+  "sources_sha256": {
+    "cryo_marginal_probe.py": "d73943685ab995a2f777abf661a81628a20621b4dde6df7a694849c7f81abb87",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "planet_marginal.py": "8f076aac3c3031b78b92de0e5098d5f3d519af0ce2a06217d18e1e0f65dfc345",
+    "reports/local_iterations.csv": "ec0c7e1a5de1337ea4b01f8c052ca728c90f39002ed6d8bbf9754a2543c9ee12",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}
