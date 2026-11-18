@@ -1,0 +1,58 @@
+{
+  "status": "fixed_before_diagnostic_execution",
+  "budget_seconds": 120,
+  "labels": "Only original6954 via error_overlap_diagnostic.load_authenticated -> audit.read_development_only. Never old1739 labels; no model fits or scores.",
+  "case_definition": "Historical24-recipe all-wrong546, pinned catalog_rows; verify IDs/y/folds and seven authenticated caches plus all24 Boolean intersection. This is historical not every later model.",
+  "strata": [
+    "HomePlanet",
+    "CryoSleep",
+    "Deck",
+    "Side",
+    "raw_prediction"
+  ],
+  "numeric_columns": [
+    "Age",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "CabinNumber"
+  ],
+  "comparators": [
+    "Same strata and raw predicted class: rawMitra-correct controls, weighted to case stratum frequencies",
+    "Same strata: all24-correct sensitivity comparator",
+    "Exactcompact13 patterns and exactcompact13 minusCabinNumber, preserving missingness and full numeric precision",
+    "Earth asleep all negatives versus positives within same strata/raw predicted class; historicalhard negatives versus raw-correct positives"
+  ],
+  "statistics": "Aggregate counts, matched coverage and control effectiveN; weighted observed means/missing rates and all categorical proportions. No bins/cutoff/signal ranking/multiple-test pvalues/model training/threshold choice. Exact-feature conflict counts are diagnostic, no inferred ceiling.",
+  "source_dependencies": [
+    "error_overlap_diagnostic.py",
+    "exaone_validation_data.py",
+    "audit_top5_references.py",
+    "three_family_mean_screen.py",
+    "prior_adapt_mean_screen.py"
+  ],
+  "pinned_evidence_sha256": {
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "reports/name_representation_review.json": "4673e973aeea23707eb7b82c8117e188dedfe0abfe1b206a6d7d3cb94eddb91e",
+    "reports/spatial_offset_20261117/result.json": "006b34f4bbc1bb1990a1236a2b30b26877d1b4bccc045d4f1682ff50fcd7430e",
+    "reports/error_rescue_20261117/relational_result.json": "f18819c33609ae8f1fec9466d27a725eb508a909c0251f7ea5c2e9d85ba28a19",
+    "reports/consistent_repair_20261117/summary.json": "1f66269fdb25d1e7f62867417153f398bc783064ac0c9f914dca1a266a913182",
+    "reports/error_rescue_20261117/feature_probe_result.json": "0ecf639d838adf21da416a48cc2d548c59698513c53c5e1379b27ab89cbe49e5"
+  },
+  "limitations": [
+    "Same reused development labels and error-selected cases: association is not independent evidence or a predictive model.",
+    "Exactcompacts omit Name/PassengerId and derived relations; droppingCabinNumber intentionally discards information. Conflicts are not proven mislabels, irreducibility, or an80percent ceiling.",
+    "Sparse exact matches or unmatched coarse strata limit comparison; report coverage, do not silently drop the limitation.",
+    "Same raw predicted class deliberately conditions on model output and may induce selection bias; no causal interpretation.",
+    "Related recipes are not24 independent voters. Individual rows/IDs/labels are never exported to tracked reports."
+  ],
+  "prior_coverage": "Spatial offsets, conditionalcontext, group/cabin counts and peerCryo, linear/nonlinear residuals, ruleimputation and surname/firstname diagnostics already exist; differences in these fields do not alone justify repeating them.",
+  "next_information_hypothesis": {
+    "status": "conditional investigation only, no new candidate proposed before results",
+    "hypothesis": "If exactcompact13 conflicts concentrate among Earth asleep negatives, any useful repair must resolve within-pattern variation using additional observed attributes or relations; merely relabeling all sleepers cannot do so. If conflicts only appear after removingCabinNumber, retain spatial information rather than assert missing information.",
+    "novelty_limit": "Existing counts/peerCryo/space/name routes overlap heavily; no evidence yet supports another specific additional-input recipe. At most one subsequent proposal after comparing diagnostic facts to these recorded failures."
+  }
+}
