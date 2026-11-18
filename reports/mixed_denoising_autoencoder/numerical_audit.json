@@ -1,0 +1,150 @@
+{
+  "status": "independently_recomputed",
+  "source_and_input_hashes_verified": true,
+  "labels_and_inner_partitions_verified": true,
+  "train_only_preprocessing_recomputed": true,
+  "query_reload_checks": [
+    {
+      "fold": 0,
+      "name": "scratch",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 7,
+      "cap_hit": false
+    },
+    {
+      "fold": 0,
+      "name": "denoising",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 14,
+      "cap_hit": false
+    },
+    {
+      "fold": 1,
+      "name": "scratch",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 29,
+      "cap_hit": false
+    },
+    {
+      "fold": 1,
+      "name": "denoising",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 48,
+      "cap_hit": false
+    },
+    {
+      "fold": 2,
+      "name": "scratch",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 20,
+      "cap_hit": false
+    },
+    {
+      "fold": 2,
+      "name": "denoising",
+      "reload_diff": 0.0,
+      "train_only_preprocessing_recomputed": true,
+      "selected_epoch": 29,
+      "cap_hit": false
+    }
+  ],
+  "masked_reconstruction_target_test": {
+    "natural_missing_and_unmasked_targets_ignored": true,
+    "empty_mask_zero_loss": true
+  },
+  "metrics": {
+    "scratch": {
+      "accuracy": 0.7871728501581824,
+      "hard546": 27
+    },
+    "denoising": {
+      "accuracy": 0.7909117054932413,
+      "hard546": 28
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "hard546": 0
+    },
+    "v96": {
+      "accuracy": 0.813632441760138,
+      "hard546": 1
+    },
+    "half_scratch_v96": {
+      "accuracy": 0.8058671268334772,
+      "hard546": 3
+    },
+    "half_denoising_v96": {
+      "accuracy": 0.8080241587575496,
+      "hard546": 4
+    }
+  },
+  "complete_attributes_subsets": {
+    "scratch": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4298
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 18
+      }
+    },
+    "denoising": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4322
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 21
+      }
+    },
+    "raw": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4443
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 0
+      }
+    },
+    "v96": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4419
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 0
+      }
+    },
+    "half_scratch_v96": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4386
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 2
+      }
+    },
+    "half_denoising_v96": {
+      "complete13": {
+        "rows": 5424,
+        "correct": 4409
+      },
+      "complete13_hard546": {
+        "rows": 430,
+        "correct": 3
+      }
+    }
+  },
+  "oof_sha256": "cb6371d149f16fb304a01950ad9ad45ca8219894ad078a23630e9735962ffc48",
+  "interface_limitation": "Prep currently mutates an intermediate to_numpy array; actual JSON-restored worker frames are writable and all6 independent reloads bitwise match. Direct canonical helper readonly DataFrame views may raise ValueError; future reuse should add copy=True without changing transformations. Existing executed source preserved."
+}
