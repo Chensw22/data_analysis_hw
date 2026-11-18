@@ -1,0 +1,162 @@
+{
+  "status": "complete_single_fold_adaptive_diagnostic",
+  "name": "Mitra_complete_spending_composition19_zeroshot",
+  "source_commit": "8484b5aadbe69cd036b2f4ef35fa001224e6d65a",
+  "accuracy": 0.8192407247627265,
+  "log_loss": 0.3759375512599945,
+  "raw_accuracy": 0.817946505608283,
+  "raw_log_loss": 0.38102819387768605,
+  "subsets": {
+    "all": {
+      "rows": 2318,
+      "repairs": 38,
+      "breaks": 35,
+      "net_correct": 3,
+      "candidate_correct": 1899,
+      "raw_correct": 1896,
+      "candidate_confusion": {
+        "TN": 933,
+        "FP": 218,
+        "FN": 201,
+        "TP": 966
+      },
+      "raw_confusion": {
+        "TN": 930,
+        "FP": 221,
+        "FN": 201,
+        "TP": 966
+      }
+    },
+    "historical546": {
+      "rows": 178,
+      "repairs": 0,
+      "breaks": 0,
+      "net_correct": 0,
+      "candidate_correct": 0,
+      "raw_correct": 0,
+      "candidate_confusion": {
+        "TN": 0,
+        "FP": 87,
+        "FN": 91,
+        "TP": 0
+      },
+      "raw_confusion": {
+        "TN": 0,
+        "FP": 87,
+        "FN": 91,
+        "TP": 0
+      }
+    },
+    "historical914": {
+      "rows": 292,
+      "repairs": 1,
+      "breaks": 1,
+      "net_correct": 0,
+      "candidate_correct": 2,
+      "raw_correct": 2,
+      "candidate_confusion": {
+        "TN": 1,
+        "FP": 158,
+        "FN": 132,
+        "TP": 1
+      },
+      "raw_confusion": {
+        "TN": 1,
+        "FP": 158,
+        "FN": 132,
+        "TP": 1
+      }
+    },
+    "Earth_awake": {
+      "rows": 808,
+      "repairs": 11,
+      "breaks": 12,
+      "net_correct": -1,
+      "candidate_correct": 620,
+      "raw_correct": 621,
+      "candidate_confusion": {
+        "TN": 480,
+        "FP": 76,
+        "FN": 112,
+        "TP": 140
+      },
+      "raw_confusion": {
+        "TN": 480,
+        "FP": 76,
+        "FN": 111,
+        "TP": 141
+      }
+    },
+    "Earth_sleep": {
+      "rows": 387,
+      "repairs": 18,
+      "breaks": 15,
+      "net_correct": 3,
+      "candidate_correct": 251,
+      "raw_correct": 248,
+      "candidate_confusion": {
+        "TN": 26,
+        "FP": 108,
+        "FN": 28,
+        "TP": 225
+      },
+      "raw_confusion": {
+        "TN": 19,
+        "FP": 115,
+        "FN": 24,
+        "TP": 229
+      }
+    }
+  },
+  "metadata": {
+    "name": "Mitra_complete_spending_composition19_zeroshot",
+    "recipe": "zero-shot",
+    "seed": 20261112,
+    "selected_steps": 0,
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "training_rows": 4636,
+    "query_rows": 2318,
+    "training_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+    "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+    "labels_sha256": "481ffa52b7070f2531cde5f597890dcbc7c624cb29b56e32535c56097334c6d8",
+    "input_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side",
+      "TotalSpendComplete",
+      "RoomServiceCompleteShare",
+      "FoodCourtCompleteShare",
+      "ShoppingMallCompleteShare",
+      "SpaCompleteShare",
+      "VRDeckCompleteShare"
+    ],
+    "actual_features": 19,
+    "original13_prefix_exact": true,
+    "query_chunk": 2318,
+    "full_prediction_support": true,
+    "reload_rows": 2318,
+    "reload_max_absolute_difference": 0.0,
+    "model_sha256": "066d2e14c8466a7b4758b6cf356fbc43c39746ff32639269b3f2f39ce1acbdc2"
+  },
+  "seconds": 85.60316800000146,
+  "prediction_sha256": "05b813c7ce0c04ca2f4d554a2f2db604cae66fec354fe89512ab77b8f1ebb1f8",
+  "freeze_sha256": "198f8846ce78559d292936c601539a5db986bfadf14a11efcb4bc81c61a22130",
+  "no_new_upload_authorization": true,
+  "interpretation": [
+    "One reused adaptivefold, not independentvalidation/stablegain/automaticupload.",
+    "Adding6redundantcolumns also changesfeatureweight/attention geometry; not purecausal isolation.",
+    "Earthsleep completezero travelers allreceive identical6zeros; cannot distinguish their minorityFalse labels bythisinformation alone.",
+    "No state-specific routing, weight/seed/feature-subset/threshold sweep or furtherfolds.",
+    "Any allocatorfailure is retained withoutchangingprecision/support/features/cap."
+  ]
+}
