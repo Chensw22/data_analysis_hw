@@ -1,0 +1,26 @@
+{
+  "seed": 20261112,
+  "fold": 0,
+  "training_pool_rows": 4636,
+  "support_rows": 2318,
+  "query_rows": 2318,
+  "budget_seconds": 1200,
+  "sampler": "Within trueoutertrainlabel\u00d7HomePlanet\u00d7CryoSleep layers: quota floor(n/2), assign remaining positions to lexicographically first oddsize layers until2318. Both arms samequota. Fixedrng20261112 drawswithoutreplacement p proportional1+2abs(y-innerrawp) oruniform; sortselectedpositionsbeforeprep.",
+  "inner": "Authenticated matchingouter0 threeinnerrawOOF via relational.load_inner; no globaldevOOF teacher reused for support difficulty.",
+  "recipes": [
+    "uniform2318",
+    "difficulty2318",
+    "uniform2318_half_rawfull",
+    "difficulty2318_half_rawfull"
+  ],
+  "model": "Originalzero-shot Mitra compact13/seed20261112/fullselectedsupport/querychunk2318/MPSbf16/.65/CPU4. Eachsubset independently fits originalprep; changescanincludequantiles/vocab/constantfilter as intendedsampleeffect.",
+  "boundary": "Samplefunction only outertrainattrs/y/innerprob. Querylabels and546mask neverselectsupport; masks loadedafterbothpredictions.",
+  "references": "Cached rawMitra original4636support samefold0. No adaptation, cutoffsearch, mixtureweightsearch or otherfolds.",
+  "limitations": [
+    "Adaptive singlefold, not stabilityproof.",
+    "Hardness may reflectnoise; halvingcontext losescoverage.",
+    "Stratification uses trueSUPPORTlabels only, allowed labelledICL context.",
+    "Outcomehard178 reportingonly, never samplingmask."
+  ],
+  "catalog_rows_sha256": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+}
