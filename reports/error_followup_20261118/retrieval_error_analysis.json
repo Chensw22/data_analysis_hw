@@ -5,7 +5,7 @@
     "artifacts/error_followup_20261118/retrieval_fold0/predictions.npz": "217899e7ca3f96faa895819104cef0277f4b5ae3e20fa3d33f76f1bfe951d905",
     "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
     "data/raw/train.csv": "17336d553f49ebdf6ecb266d2b5d3746e5dd308445f7c7864141c4f28d2a88d0",
-    "analyze_retrieval_errors_nov18.py": "733b2efeae328752217b99938f6a666117b76f023563cda34957dec170228731"
+    "analyze_retrieval_errors_nov18.py": "58e94b6877baf08e431c218b95614cbab0f74e1e12bdb8d06b8c7bfde1cb647c"
   },
   "scope": "Only saved fold0 predictions, existing development catalog labels, and query-only raw attributes excluding Name/Transported. No fit, model load, threshold optimization or online routing.",
   "rows": 2318,
@@ -481,6 +481,6 @@
     "Rescued hard cases are selected by outcomes after inference; their traits cannot define a reliable router or justify targeting only those rows.",
     "RawMitra is a different architecture and context recipe. This comparison does not isolate retrieval versus fullcontext; cached TabDPT-full8 also differs in ensemble count.",
     "Feature counts are descriptive within this repeatedly used single fold; sample counts and denominators are explicit, not causal explanations.",
-    "Three rescues disprove universal irreparability of those cases, but do not offset80 new mistakes or establish a generalizable hidden rule."
+    "Three predictions became correct on this reused fold; this neither establishes unseen-case predictability nor rules out irreducible uncertainty, and does not offset80 new mistakes."
   ]
 }

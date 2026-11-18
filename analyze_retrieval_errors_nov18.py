@@ -85,7 +85,7 @@ def main():
         limits=['Rescued hard cases are selected by outcomes after inference; their traits cannot define a reliable router or justify targeting only those rows.',
                 'RawMitra is a different architecture and context recipe. This comparison does not isolate retrieval versus fullcontext; cached TabDPT-full8 also differs in ensemble count.',
                 'Feature counts are descriptive within this repeatedly used single fold; sample counts and denominators are explicit, not causal explanations.',
-                'Three rescues disprove universal irreparability of those cases, but do not offset80 new mistakes or establish a generalizable hidden rule.'])
+                'Three predictions became correct on this reused fold; this neither establishes unseen-case predictability nor rules out irreducible uncertainty, and does not offset80 new mistakes.'])
     OUT.write_text(json.dumps(report,indent=2,allow_nan=False)+'\n')
     print(json.dumps({k:report[k] for k in ['relative_raw','repair_profile','break_profile','hard178_rescues','hard_accounting']},indent=2))
 
