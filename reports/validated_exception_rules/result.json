@@ -1,0 +1,136 @@
+{
+  "folds": [
+    {
+      "fold": 0,
+      "rules": 2,
+      "query_flips": {
+        "raw": 15,
+        "v96": 15
+      },
+      "rule_definitions": [
+        {
+          "fields": [
+            "services_bought",
+            "position"
+          ],
+          "values": [
+            "0",
+            "(3.0, 6.0]"
+          ],
+          "direction": false
+        },
+        {
+          "fields": [
+            "dominant",
+            "position"
+          ],
+          "values": [
+            "none",
+            "(3.0, 6.0]"
+          ],
+          "direction": false
+        }
+      ]
+    },
+    {
+      "fold": 1,
+      "rules": 0,
+      "query_flips": {
+        "raw": 0,
+        "v96": 0
+      },
+      "rule_definitions": []
+    },
+    {
+      "fold": 2,
+      "rules": 3,
+      "query_flips": {
+        "raw": 17,
+        "v96": 11
+      },
+      "rule_definitions": [
+        {
+          "fields": [
+            "Destination",
+            "services_bought"
+          ],
+          "values": [
+            "PSO J318.5-22",
+            "0"
+          ],
+          "direction": false
+        },
+        {
+          "fields": [
+            "Destination",
+            "dominant"
+          ],
+          "values": [
+            "PSO J318.5-22",
+            "none"
+          ],
+          "direction": false
+        },
+        {
+          "fields": [
+            "services_bought",
+            "position"
+          ],
+          "values": [
+            "2",
+            "(6.0, inf]"
+          ],
+          "direction": true
+        }
+      ]
+    }
+  ],
+  "raw": {
+    "accuracy": 0.8153580672993961,
+    "vs_base": {
+      "rows": 6954,
+      "repaired": 12,
+      "broken": 20,
+      "net_correct": -8,
+      "both_correct": 5658,
+      "both_wrong": 1264
+    },
+    "hard546": {
+      "rows": 546,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 0,
+      "both_wrong": 546
+    },
+    "fold_net": [
+      -3,
+      0,
+      -5
+    ]
+  },
+  "v96": {
+    "accuracy": 0.812482024733966,
+    "vs_base": {
+      "rows": 6954,
+      "repaired": 9,
+      "broken": 17,
+      "net_correct": -8,
+      "both_correct": 5641,
+      "both_wrong": 1287
+    },
+    "hard546": {
+      "rows": 546,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 1,
+      "both_wrong": 545
+    },
+    "fold_net": [
+      -5,
+      0,
+      -3
+    ]
+  }
+}
