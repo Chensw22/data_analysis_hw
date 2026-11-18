@@ -1,0 +1,22 @@
+{
+  "status": "frozen_before_full_training_labels_read",
+  "training_rows": 8693,
+  "query_rows": 4277,
+  "teacher": "Existing v101 rawMitra full8693 3foldOOF, originalSKFseed20261112; T=other2folds, teacher querypacket=D+C. Verify original split IDs and fitmetadata.",
+  "calibration": "PerpacketGroupShuffleSplit .33,seed20261118+packet; identical D/C recipe. Challengers fit ONLY T; gate fits challenged C only. D unused because margin-only needs no retrieval.",
+  "challenger": "Original mixed forest2round50trees/depth10+Cat700 and supervised latentK24/EM80, seed20261118+packet; same parameters as development experiment.",
+  "gate": "Original margin-only4features and StandardScaler+LogisticRegression C=.15;3 independentpacket gate risks zero when neither challenger disagrees, average3 and >=.5. No v114 or other voters involved.",
+  "baseline": "Actual saved full-data v108 test probabilities, exact arithmetic reconstruction from v106+peer correction.",
+  "outputs": "Reusable CPUmodel + all3member probabilities/risks/challenge flags and margin_flip, not final upload CSV.",
+  "full_labels_authorized": true,
+  "no_CV_scoring": true,
+  "no_GPU": true,
+  "no_upload": true,
+  "budget_seconds": 1200,
+  "CPU_threads": 4,
+  "limitations": [
+    "Full-data component, no new validation score.",
+    "Gate calibrated against raw teacher margin transferred to actualv108.",
+    "No new weighting,threshold or candidate selection."
+  ]
+}
