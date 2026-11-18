@@ -1,0 +1,52 @@
+{
+  "rows": 6954,
+  "metrics": {
+    "rank": {
+      "accuracy": 0.7992522289329882,
+      "log_loss": 0.40524520413207155
+    },
+    "classifier": {
+      "accuracy": 0.8061547310900201,
+      "log_loss": 0.395401013094892
+    }
+  },
+  "rank_vs_classifier": {
+    "rows": 6954,
+    "repaired": 136,
+    "broken": 184,
+    "net_correct": -48,
+    "both_correct": 5422,
+    "both_wrong": 1212
+  },
+  "rank_vs_raw": {
+    "rows": 6954,
+    "repaired": 252,
+    "broken": 372,
+    "net_correct": -120,
+    "both_correct": 5306,
+    "both_wrong": 1024
+  },
+  "hard546": {
+    "rank": {
+      "rows": 546,
+      "repaired": 13,
+      "broken": 0,
+      "net_correct": 13,
+      "both_correct": 0,
+      "both_wrong": 533
+    },
+    "classifier": {
+      "rows": 546,
+      "repaired": 10,
+      "broken": 0,
+      "net_correct": 10,
+      "both_correct": 0,
+      "both_wrong": 536
+    }
+  },
+  "fold_net_vs_classifier": [
+    -7,
+    -11,
+    -30
+  ]
+}
