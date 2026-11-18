@@ -1,0 +1,486 @@
+{
+  "status": "complete_readonly_accounting_not_new_candidate",
+  "source_sha256": {
+    "reports/error_followup_20261118/retrieval_fold0/result.json": "f0b6aad593c5a20ac3c1279863d8a378e16b80bb84f469b6bbb868994d072978",
+    "artifacts/error_followup_20261118/retrieval_fold0/predictions.npz": "217899e7ca3f96faa895819104cef0277f4b5ae3e20fa3d33f76f1bfe951d905",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "data/raw/train.csv": "17336d553f49ebdf6ecb266d2b5d3746e5dd308445f7c7864141c4f28d2a88d0",
+    "analyze_retrieval_errors_nov18.py": "733b2efeae328752217b99938f6a666117b76f023563cda34957dec170228731"
+  },
+  "scope": "Only saved fold0 predictions, existing development catalog labels, and query-only raw attributes excluding Name/Transported. No fit, model load, threshold optimization or online routing.",
+  "rows": 2318,
+  "metrics": {
+    "retrieval256_oneview": {
+      "accuracy": 0.813632441760138,
+      "log_loss": 0.3932077884674072
+    },
+    "rawMitra": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.38102819387768605
+    },
+    "TabDPT_full8": {
+      "accuracy": 0.822260569456428,
+      "log_loss": 0.3739902006925597
+    }
+  },
+  "relative_raw": {
+    "repairs": 70,
+    "breaks": 80,
+    "net_correct": -10,
+    "accuracy_delta_percentage_points": -0.4314063848144953,
+    "logloss_delta": 0.012179594589721177
+  },
+  "repair_profile": {
+    "rows": 70,
+    "actual_false": 38,
+    "actual_true": 32,
+    "complete_zero": 30,
+    "any_bill_missing": 13,
+    "Earth_sleep": 27,
+    "Earth_awake": 28,
+    "raw_confidence": {
+      "median": 0.531209409236908,
+      "q25": 0.5156199336051941,
+      "q75": 0.5926666110754013,
+      "at_least_08": 1
+    },
+    "retrieval_confidence": {
+      "median": 0.5543873310089111,
+      "q25": 0.5153393745422363,
+      "q75": 0.609924852848053,
+      "at_least_08": 0
+    }
+  },
+  "break_profile": {
+    "rows": 80,
+    "actual_false": 37,
+    "actual_true": 43,
+    "complete_zero": 29,
+    "any_bill_missing": 8,
+    "Earth_sleep": 23,
+    "Earth_awake": 35,
+    "raw_confidence": {
+      "median": 0.5621764659881592,
+      "q25": 0.5312093496322632,
+      "q75": 0.6224593296647072,
+      "at_least_08": 1
+    },
+    "retrieval_confidence": {
+      "median": 0.5443392992019653,
+      "q25": 0.5162877440452576,
+      "q75": 0.5866255164146423,
+      "at_least_08": 1
+    }
+  },
+  "hard178_rescues": [
+    {
+      "row_id": 2589,
+      "PassengerId": "2774_02",
+      "HomePlanet": "Earth",
+      "CryoSleep": false,
+      "Age": 17.0,
+      "Cabin": "F/575/P",
+      "actual_transported": false,
+      "raw_probability": 0.6893056035041809,
+      "retrieval_probability": 0.4021153151988983,
+      "complete_zero": false,
+      "any_bill_missing": false,
+      "total_spend": 1226.0
+    },
+    {
+      "row_id": 4150,
+      "PassengerId": "4433_01",
+      "HomePlanet": "Earth",
+      "CryoSleep": true,
+      "Age": 21.0,
+      "Cabin": "G/729/P",
+      "actual_transported": false,
+      "raw_probability": 0.7057850360870361,
+      "retrieval_probability": 0.29420068860054016,
+      "complete_zero": true,
+      "any_bill_missing": false,
+      "total_spend": 0.0
+    },
+    {
+      "row_id": 4570,
+      "PassengerId": "4871_01",
+      "HomePlanet": "Earth",
+      "CryoSleep": false,
+      "Age": 13.0,
+      "Cabin": "F/990/P",
+      "actual_transported": false,
+      "raw_probability": 0.6513549089431763,
+      "retrieval_probability": 0.4332660734653473,
+      "complete_zero": false,
+      "any_bill_missing": false,
+      "total_spend": 611.0
+    }
+  ],
+  "hard_accounting": {
+    "subset_rows": 178,
+    "rescued": 3,
+    "still_wrong": 175,
+    "additional_repairs_outside_hard178": 67,
+    "breaks_outside_hard178": 80
+  },
+  "feature_tables": {
+    "HomePlanet": [
+      {
+        "value": "Earth",
+        "query_rows": 1229,
+        "repairs": 56,
+        "breaks": 58,
+        "net_correct": -2,
+        "fraction_of70_repairs": 0.8,
+        "fraction_of80_breaks": 0.725,
+        "raw_errors": 331,
+        "raw_correct": 898
+      },
+      {
+        "value": "Europa",
+        "query_rows": 564,
+        "repairs": 5,
+        "breaks": 9,
+        "net_correct": -4,
+        "fraction_of70_repairs": 0.07142857142857142,
+        "fraction_of80_breaks": 0.1125,
+        "raw_errors": 36,
+        "raw_correct": 528
+      },
+      {
+        "value": "Mars",
+        "query_rows": 463,
+        "repairs": 5,
+        "breaks": 11,
+        "net_correct": -6,
+        "fraction_of70_repairs": 0.07142857142857142,
+        "fraction_of80_breaks": 0.1375,
+        "raw_errors": 46,
+        "raw_correct": 417
+      },
+      {
+        "value": "__MISSING__",
+        "query_rows": 62,
+        "repairs": 4,
+        "breaks": 2,
+        "net_correct": 2,
+        "fraction_of70_repairs": 0.05714285714285714,
+        "fraction_of80_breaks": 0.025,
+        "raw_errors": 9,
+        "raw_correct": 53
+      }
+    ],
+    "CryoSleep": [
+      {
+        "value": "False",
+        "query_rows": 1431,
+        "repairs": 40,
+        "breaks": 51,
+        "net_correct": -11,
+        "fraction_of70_repairs": 0.5714285714285714,
+        "fraction_of80_breaks": 0.6375,
+        "raw_errors": 261,
+        "raw_correct": 1170
+      },
+      {
+        "value": "True",
+        "query_rows": 826,
+        "repairs": 29,
+        "breaks": 28,
+        "net_correct": 1,
+        "fraction_of70_repairs": 0.4142857142857143,
+        "fraction_of80_breaks": 0.35,
+        "raw_errors": 153,
+        "raw_correct": 673
+      },
+      {
+        "value": "__MISSING__",
+        "query_rows": 61,
+        "repairs": 1,
+        "breaks": 1,
+        "net_correct": 0,
+        "fraction_of70_repairs": 0.014285714285714285,
+        "fraction_of80_breaks": 0.0125,
+        "raw_errors": 8,
+        "raw_correct": 53
+      }
+    ],
+    "Deck": [
+      {
+        "value": "A",
+        "query_rows": 70,
+        "repairs": 0,
+        "breaks": 1,
+        "net_correct": -1,
+        "fraction_of70_repairs": 0.0,
+        "fraction_of80_breaks": 0.0125,
+        "raw_errors": 10,
+        "raw_correct": 60
+      },
+      {
+        "value": "B",
+        "query_rows": 203,
+        "repairs": 1,
+        "breaks": 4,
+        "net_correct": -3,
+        "fraction_of70_repairs": 0.014285714285714285,
+        "fraction_of80_breaks": 0.05,
+        "raw_errors": 6,
+        "raw_correct": 197
+      },
+      {
+        "value": "C",
+        "query_rows": 203,
+        "repairs": 3,
+        "breaks": 1,
+        "net_correct": 2,
+        "fraction_of70_repairs": 0.04285714285714286,
+        "fraction_of80_breaks": 0.0125,
+        "raw_errors": 16,
+        "raw_correct": 187
+      },
+      {
+        "value": "D",
+        "query_rows": 126,
+        "repairs": 1,
+        "breaks": 3,
+        "net_correct": -2,
+        "fraction_of70_repairs": 0.014285714285714285,
+        "fraction_of80_breaks": 0.0375,
+        "raw_errors": 12,
+        "raw_correct": 114
+      },
+      {
+        "value": "E",
+        "query_rows": 227,
+        "repairs": 7,
+        "breaks": 14,
+        "net_correct": -7,
+        "fraction_of70_repairs": 0.1,
+        "fraction_of80_breaks": 0.175,
+        "raw_errors": 50,
+        "raw_correct": 177
+      },
+      {
+        "value": "F",
+        "query_rows": 716,
+        "repairs": 20,
+        "breaks": 21,
+        "net_correct": -1,
+        "fraction_of70_repairs": 0.2857142857142857,
+        "fraction_of80_breaks": 0.2625,
+        "raw_errors": 107,
+        "raw_correct": 609
+      },
+      {
+        "value": "G",
+        "query_rows": 726,
+        "repairs": 38,
+        "breaks": 36,
+        "net_correct": 2,
+        "fraction_of70_repairs": 0.5428571428571428,
+        "fraction_of80_breaks": 0.45,
+        "raw_errors": 210,
+        "raw_correct": 516
+      },
+      {
+        "value": "__MISSING__",
+        "query_rows": 47,
+        "repairs": 0,
+        "breaks": 0,
+        "net_correct": 0,
+        "fraction_of70_repairs": 0.0,
+        "fraction_of80_breaks": 0.0,
+        "raw_errors": 11,
+        "raw_correct": 36
+      }
+    ],
+    "Destination": [
+      {
+        "value": "55 Cancri e",
+        "query_rows": 453,
+        "repairs": 6,
+        "breaks": 9,
+        "net_correct": -3,
+        "fraction_of70_repairs": 0.08571428571428572,
+        "fraction_of80_breaks": 0.1125,
+        "raw_errors": 54,
+        "raw_correct": 399
+      },
+      {
+        "value": "PSO J318.5-22",
+        "query_rows": 232,
+        "repairs": 9,
+        "breaks": 5,
+        "net_correct": 4,
+        "fraction_of70_repairs": 0.12857142857142856,
+        "fraction_of80_breaks": 0.0625,
+        "raw_errors": 77,
+        "raw_correct": 155
+      },
+      {
+        "value": "TRAPPIST-1e",
+        "query_rows": 1586,
+        "repairs": 54,
+        "breaks": 66,
+        "net_correct": -12,
+        "fraction_of70_repairs": 0.7714285714285715,
+        "fraction_of80_breaks": 0.825,
+        "raw_errors": 287,
+        "raw_correct": 1299
+      },
+      {
+        "value": "__MISSING__",
+        "query_rows": 47,
+        "repairs": 1,
+        "breaks": 0,
+        "net_correct": 1,
+        "fraction_of70_repairs": 0.014285714285714285,
+        "fraction_of80_breaks": 0.0,
+        "raw_errors": 4,
+        "raw_correct": 43
+      }
+    ],
+    "age_band": [
+      {
+        "value": "0-12",
+        "query_rows": 230,
+        "repairs": 9,
+        "breaks": 11,
+        "net_correct": -2,
+        "fraction_of70_repairs": 0.12857142857142856,
+        "fraction_of80_breaks": 0.1375,
+        "raw_errors": 53,
+        "raw_correct": 177
+      },
+      {
+        "value": "13-17",
+        "query_rows": 185,
+        "repairs": 6,
+        "breaks": 8,
+        "net_correct": -2,
+        "fraction_of70_repairs": 0.08571428571428572,
+        "fraction_of80_breaks": 0.1,
+        "raw_errors": 28,
+        "raw_correct": 157
+      },
+      {
+        "value": "18-29",
+        "query_rows": 881,
+        "repairs": 28,
+        "breaks": 33,
+        "net_correct": -5,
+        "fraction_of70_repairs": 0.4,
+        "fraction_of80_breaks": 0.4125,
+        "raw_errors": 156,
+        "raw_correct": 725
+      },
+      {
+        "value": "30+",
+        "query_rows": 977,
+        "repairs": 27,
+        "breaks": 27,
+        "net_correct": 0,
+        "fraction_of70_repairs": 0.38571428571428573,
+        "fraction_of80_breaks": 0.3375,
+        "raw_errors": 174,
+        "raw_correct": 803
+      },
+      {
+        "value": "missing",
+        "query_rows": 45,
+        "repairs": 0,
+        "breaks": 1,
+        "net_correct": -1,
+        "fraction_of70_repairs": 0.0,
+        "fraction_of80_breaks": 0.0125,
+        "raw_errors": 11,
+        "raw_correct": 34
+      }
+    ],
+    "spend_status": [
+      {
+        "value": "any_missing",
+        "query_rows": 225,
+        "repairs": 13,
+        "breaks": 8,
+        "net_correct": 5,
+        "fraction_of70_repairs": 0.18571428571428572,
+        "fraction_of80_breaks": 0.1,
+        "raw_errors": 54,
+        "raw_correct": 171
+      },
+      {
+        "value": "complete_positive",
+        "query_rows": 1205,
+        "repairs": 27,
+        "breaks": 43,
+        "net_correct": -16,
+        "fraction_of70_repairs": 0.38571428571428573,
+        "fraction_of80_breaks": 0.5375,
+        "raw_errors": 196,
+        "raw_correct": 1009
+      },
+      {
+        "value": "complete_zero",
+        "query_rows": 888,
+        "repairs": 30,
+        "breaks": 29,
+        "net_correct": 1,
+        "fraction_of70_repairs": 0.42857142857142855,
+        "fraction_of80_breaks": 0.3625,
+        "raw_errors": 172,
+        "raw_correct": 716
+      }
+    ],
+    "planet_sleep": [
+      {
+        "value": "Earth_awake",
+        "query_rows": 808,
+        "repairs": 28,
+        "breaks": 35,
+        "net_correct": -7,
+        "fraction_of70_repairs": 0.4,
+        "fraction_of80_breaks": 0.4375,
+        "raw_errors": 187,
+        "raw_correct": 621
+      },
+      {
+        "value": "Earth_sleep",
+        "query_rows": 387,
+        "repairs": 27,
+        "breaks": 23,
+        "net_correct": 4,
+        "fraction_of70_repairs": 0.38571428571428573,
+        "fraction_of80_breaks": 0.2875,
+        "raw_errors": 139,
+        "raw_correct": 248
+      },
+      {
+        "value": "other_or_unknown",
+        "query_rows": 1123,
+        "repairs": 15,
+        "breaks": 22,
+        "net_correct": -7,
+        "fraction_of70_repairs": 0.21428571428571427,
+        "fraction_of80_breaks": 0.275,
+        "raw_errors": 96,
+        "raw_correct": 1027
+      }
+    ]
+  },
+  "explanation": [
+    "The3 hard rescues are a subset of70 repairs;80 other predictions changed from correct to incorrect, so overall net is-10.",
+    "Errors do not concentrate uniquely in Earth sleepers: that group repairs27/breaks23(net+4), Earth awake28/35(net-7), other/unknown15/22(net-7).",
+    "Complete-positive-spend rows account for27 repairs and43 breaks(net-16); complete-zero30/29(net+1), any-bill-missing13/8(net+5). These are descriptive accounting identities, not a conditional deployment rule.",
+    "Most changed cases lie near the decision boundary: median raw confidence .531 for repairs and .562 for breaks; retrieval medians .554 and .544. This is consistent with unstable local decision changes, not proof of a particular causal mechanism.",
+    "The3 hard rescues are all actually False and Earth, but only1 is asleep/zero-spend;2 are awake with complete positive bills. No single zero-spend rule explains all3."
+  ],
+  "confidence_note": "Confidence means max(p,1-p), a model probability magnitude, not evidence that estimates are calibrated.",
+  "limits": [
+    "Rescued hard cases are selected by outcomes after inference; their traits cannot define a reliable router or justify targeting only those rows.",
+    "RawMitra is a different architecture and context recipe. This comparison does not isolate retrieval versus fullcontext; cached TabDPT-full8 also differs in ensemble count.",
+    "Feature counts are descriptive within this repeatedly used single fold; sample counts and denominators are explicit, not causal explanations.",
+    "Three rescues disprove universal irreparability of those cases, but do not offset80 new mistakes or establish a generalizable hidden rule."
+  ]
+}
