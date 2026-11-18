@@ -1,0 +1,37 @@
+{
+  "status": "fixed_before_new_fits",
+  "teacher": "Authenticated original raw inner3 packets; each support T disjoint from entirequery D+C. Originalouterquery never fit.",
+  "partition": "Exactly error_trained_experts: innerSKF seed20261117+outer; packet seed20261118+100outer+inner; GroupShuffleSplit(test_size=.33) withinpacketquery gives D/C. No sharedGroup D\u2194C.",
+  "challengers": {
+    "forest_cat": {
+      "imputer": "Original mixed_type_forest_imputation two-round50trees/depth10/leaf2; observed attributes only, trained onlyT",
+      "target": {
+        "iterations": 700,
+        "depth": 6,
+        "learning_rate": 0.045,
+        "l2_leaf_reg": 5,
+        "loss_function": "Logloss",
+        "thread_count": 4,
+        "verbose": false,
+        "allow_writing_files": false
+      }
+    },
+    "latent_em": "Original supervisedK24/80EM and original bins/smoothing, onlyT labels. No resampling/selection."
+  },
+  "cases": "D labels plus corresponding teacher rawOOF define errors/correctcontrols; two original retrieval views,K32,samepredicted direction,exclude sameID/Group,library-only scaling. AllD retained, no hard546 mask.",
+  "gates": "Separate for EACH packet: C challenged rows only, StandardScaler and LogisticRegression(C=.15,max_iter1000); control4features absbase logit/baseclass/two opposite-orientedchallengerlogits; experimental adds2 retrieval logits. No cross-packet calibration pool.",
+  "selection": "Packet risk zero when neither challenger opposes base. Fixed arithmetic mean of3packet risks, flip iff>=.5; no weights/threshold search.",
+  "fallbacks": "If challenged C has fewer than2 errorclasses, smoothed constant(errorcount+1)/(n+2), recorded. No expert discarded for low outerperformance.",
+  "replay": "Save outerquery challenger probabilities[n,3,2], retrievalscores[n,3,2directions,2views], all18gate models, exactdev/Passenger/foldIDs. replay(newauthenticatedbase,...) recomputes margins/direction/active and .5decision without fitting or targets.",
+  "limitations": [
+    "Adaptive original6954dev; no independent holdout.",
+    "Outerraw uses4636support versus innerteacher3090; calibration margin distribution shift remains.",
+    "Challenges within same packet are independent of D/C targets; D\u2192C and T\u2192D/C boundaries fixed.",
+    "Teacher/challenger T may shareGroup with packetquery under originalrandomCV; only case neighbors and D/C have explicitGroup exclusion.",
+    "Oracle any-challenger correctness is diagnostic, not deployable selection."
+  ],
+  "budget_seconds": 1200,
+  "CPU_threads": 4,
+  "no_GPU": true,
+  "threshold": 0.5
+}

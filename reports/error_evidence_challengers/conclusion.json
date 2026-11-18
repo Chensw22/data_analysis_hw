@@ -1,0 +1,157 @@
+{
+  "status": "completed_primary_exact_v108_reference",
+  "primary_reference_accuracy": 0.8143514524014955,
+  "baseline_errors": 1291,
+  "baseline_correct": 5663,
+  "margin_control": {
+    "rows": 6954,
+    "baseline_errors": 1291,
+    "baseline_correct": 5663,
+    "repairs": 49,
+    "breaks": 38,
+    "net": 11,
+    "error_recall": 0.037955073586367155,
+    "correct_harm_rate": 0.006710224262758255,
+    "correct": 5674,
+    "accuracy": 0.815933275812482
+  },
+  "case_augmented": {
+    "rows": 6954,
+    "baseline_errors": 1291,
+    "baseline_correct": 5663,
+    "repairs": 65,
+    "breaks": 60,
+    "net": 5,
+    "error_recall": 0.05034856700232378,
+    "correct_harm_rate": 0.010595090941197245,
+    "correct": 5668,
+    "accuracy": 0.815070463042853
+  },
+  "added_case_evidence_increment": {
+    "rows": 6954,
+    "repaired": 37,
+    "broken": 43,
+    "net_correct": -6,
+    "both_correct": 5631,
+    "both_wrong": 1243
+  },
+  "fold_net": {
+    "margin": [
+      2,
+      4,
+      5
+    ],
+    "case": [
+      1,
+      11,
+      -7
+    ]
+  },
+  "hard546": {
+    "baseline_correct": 3,
+    "baseline_errors": 543,
+    "margin": {
+      "rows": 546,
+      "baseline_errors": 543,
+      "baseline_correct": 3,
+      "repairs": 0,
+      "breaks": 2,
+      "net": -2,
+      "error_recall": 0.0,
+      "correct_harm_rate": 0.6666666666666666,
+      "correct": 1,
+      "accuracy": 0.0018315018315018315
+    },
+    "case": {
+      "rows": 546,
+      "baseline_errors": 543,
+      "baseline_correct": 3,
+      "repairs": 0,
+      "breaks": 3,
+      "net": -3,
+      "error_recall": 0.0,
+      "correct_harm_rate": 1.0,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  },
+  "oracle_not_deployable": {
+    "two_mean_challengers": 412,
+    "two_mean_hard546_new": 39,
+    "any_of_six_members": 699,
+    "any_member_hard546_new": 117
+  },
+  "direction_breakdown": {
+    "base_predicts_positive": {
+      "margin": {
+        "rows": 3543,
+        "baseline_errors": 666,
+        "baseline_correct": 2877,
+        "repairs": 9,
+        "breaks": 6,
+        "net": 3,
+        "error_recall": 0.013513513513513514,
+        "correct_harm_rate": 0.0020855057351407717,
+        "correct": 2880,
+        "accuracy": 0.8128704487722269
+      },
+      "case": {
+        "rows": 3543,
+        "baseline_errors": 666,
+        "baseline_correct": 2877,
+        "repairs": 7,
+        "breaks": 11,
+        "net": -4,
+        "error_recall": 0.010510510510510511,
+        "correct_harm_rate": 0.0038234271810914148,
+        "correct": 2873,
+        "accuracy": 0.8108947219870166
+      }
+    },
+    "base_predicts_negative": {
+      "margin": {
+        "rows": 3411,
+        "baseline_errors": 625,
+        "baseline_correct": 2786,
+        "repairs": 40,
+        "breaks": 32,
+        "net": 8,
+        "error_recall": 0.064,
+        "correct_harm_rate": 0.01148600143575018,
+        "correct": 2794,
+        "accuracy": 0.8191146291410144
+      },
+      "case": {
+        "rows": 3411,
+        "baseline_errors": 625,
+        "baseline_correct": 2786,
+        "repairs": 58,
+        "breaks": 49,
+        "net": 9,
+        "error_recall": 0.0928,
+        "correct_harm_rate": 0.017587939698492462,
+        "correct": 2795,
+        "accuracy": 0.8194077982996189
+      }
+    }
+  },
+  "interpretation": [
+    "Margin-only gate has small positive net11 with fold+2/+4/+5; no claim of stable online gain.",
+    "Adding fixed two case-retrieval scores yields net5 versus champion, but loses6 versus matched margin-only on exactly the same queries.",
+    "Independent challengers have genuine alternative correct answers (39 new hard repairs among two averaged families;117 among six members), but no evaluated arbiter routes them successfully on hard546.",
+    "Keep all challenger/member/evidence/gate outputs and fitted models; do not discard a specialist solely for poor solo accuracy.",
+    "Arbiters trained on strict raw-teacher packetC were transferred unchanged to exactv108; no exactv108-specific inner calibration.",
+    "Oracle union uses labels only after all predictions and cannot be deployed as a selector."
+  ],
+  "runtime_seconds": {
+    "nine_packets_CPU": 44.27985041700231,
+    "audit_and_v108_replay": 1.8078666660003364
+  },
+  "deliverables": [
+    "error_evidence_challengers.py",
+    "error_evidence_challengers_v108.py",
+    "artifacts/error_evidence_challengers/oof.npz",
+    "artifacts/error_evidence_challengers/v108_replay.npz",
+    "reports/error_evidence_challengers/v108_result.json"
+  ]
+}
