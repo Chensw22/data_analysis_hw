@@ -1,0 +1,107 @@
+{
+  "fold": 0,
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "feature_count": 2048,
+  "fit": {
+    "success": true,
+    "iterations": 70,
+    "objective": 1662.5538607472977,
+    "gradient_max": 0.00025750141660729753
+  },
+  "constant_fit": {
+    "success": true,
+    "iterations": 3,
+    "objective": 1793.868258610416,
+    "gradient_max": 7.471356866517453e-12
+  },
+  "model_sha256": "3567883fc91a4738a764f9a4c0f8332b41227efd6f2b2c9158a8e5ae51defe94",
+  "rows_sha256": "ef924c026afe310a40e85c590e1bebb38ec2acdeb8c2c4ebe72574355bb59bcd",
+  "reload_max_abs_difference": 0.0,
+  "query_empty_name_rows": 58,
+  "query_empty_feature_rows": 58,
+  "query_empty_name_fraction": 0.025021570319240724,
+  "query_empty_feature_fraction": 0.025021570319240724,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.38102819387768605
+    },
+    "constant": {
+      "accuracy": 0.816220880069025,
+      "log_loss": 0.3810310893350334
+    },
+    "name": {
+      "accuracy": 0.8088869715271786,
+      "log_loss": 0.39217293774846596
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 75,
+      "broken": 96,
+      "net_correct": -21,
+      "both_correct": 1800,
+      "both_wrong": 347,
+      "candidate_correct": 1875
+    },
+    "constant": {
+      "rows": 2318,
+      "repaired": 81,
+      "broken": 98,
+      "net_correct": -17,
+      "both_correct": 1794,
+      "both_wrong": 345,
+      "candidate_correct": 1875
+    }
+  },
+  "group_overlap_slices": {
+    "seen": {
+      "rows": 759,
+      "paired": {
+        "raw": {
+          "rows": 759,
+          "repaired": 22,
+          "broken": 24,
+          "net_correct": -2,
+          "both_correct": 609,
+          "both_wrong": 104,
+          "candidate_correct": 631
+        },
+        "constant": {
+          "rows": 759,
+          "repaired": 27,
+          "broken": 30,
+          "net_correct": -3,
+          "both_correct": 604,
+          "both_wrong": 98,
+          "candidate_correct": 631
+        }
+      }
+    },
+    "unseen": {
+      "rows": 1559,
+      "paired": {
+        "raw": {
+          "rows": 1559,
+          "repaired": 53,
+          "broken": 72,
+          "net_correct": -19,
+          "both_correct": 1191,
+          "both_wrong": 243,
+          "candidate_correct": 1244
+        },
+        "constant": {
+          "rows": 1559,
+          "repaired": 54,
+          "broken": 68,
+          "net_correct": -14,
+          "both_correct": 1190,
+          "both_wrong": 247,
+          "candidate_correct": 1244
+        }
+      }
+    }
+  }
+}

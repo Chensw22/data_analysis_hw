@@ -1,0 +1,107 @@
+{
+  "fold": 2,
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "feature_count": 2048,
+  "fit": {
+    "success": true,
+    "iterations": 24,
+    "objective": 1655.1980614627832,
+    "gradient_max": 0.00021724652400223476
+  },
+  "constant_fit": {
+    "success": true,
+    "iterations": 3,
+    "objective": 1788.10222371713,
+    "gradient_max": 2.4804336362649337e-10
+  },
+  "model_sha256": "3dfd996bce0a832cc4a5006e5434832a519a483250798aefce3997d667f1f719",
+  "rows_sha256": "4ead56728f30689fb8fb927890b9218cb234f513f65ff4e2a915c43a312a0208",
+  "reload_max_abs_difference": 0.0,
+  "query_empty_name_rows": 52,
+  "query_empty_feature_rows": 52,
+  "query_empty_name_fraction": 0.022433132010353754,
+  "query_empty_feature_fraction": 0.022433132010353754,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "constant": {
+      "accuracy": 0.8157894736842105,
+      "log_loss": 0.38759970664929394
+    },
+    "name": {
+      "accuracy": 0.8037100949094047,
+      "log_loss": 0.4014162546402065
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 72,
+      "broken": 91,
+      "net_correct": -19,
+      "both_correct": 1791,
+      "both_wrong": 364,
+      "candidate_correct": 1863
+    },
+    "constant": {
+      "rows": 2318,
+      "repaired": 72,
+      "broken": 100,
+      "net_correct": -28,
+      "both_correct": 1791,
+      "both_wrong": 355,
+      "candidate_correct": 1863
+    }
+  },
+  "group_overlap_slices": {
+    "seen": {
+      "rows": 748,
+      "paired": {
+        "raw": {
+          "rows": 748,
+          "repaired": 23,
+          "broken": 33,
+          "net_correct": -10,
+          "both_correct": 590,
+          "both_wrong": 102,
+          "candidate_correct": 613
+        },
+        "constant": {
+          "rows": 748,
+          "repaired": 22,
+          "broken": 37,
+          "net_correct": -15,
+          "both_correct": 591,
+          "both_wrong": 98,
+          "candidate_correct": 613
+        }
+      }
+    },
+    "unseen": {
+      "rows": 1570,
+      "paired": {
+        "raw": {
+          "rows": 1570,
+          "repaired": 49,
+          "broken": 58,
+          "net_correct": -9,
+          "both_correct": 1201,
+          "both_wrong": 262,
+          "candidate_correct": 1250
+        },
+        "constant": {
+          "rows": 1570,
+          "repaired": 50,
+          "broken": 63,
+          "net_correct": -13,
+          "both_correct": 1200,
+          "both_wrong": 257,
+          "candidate_correct": 1250
+        }
+      }
+    }
+  }
+}
