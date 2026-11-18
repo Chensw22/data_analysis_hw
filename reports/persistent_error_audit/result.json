@@ -1,0 +1,115 @@
+{
+  "cohorts": {
+    "all_splits_both_families_wrong": {
+      "rows": 803,
+      "v115_correct": 18,
+      "majority_plus_specialist": {
+        "correct": 17,
+        "fixed": 8,
+        "harmed": 9
+      },
+      "second_confirms": {
+        "correct": 20,
+        "fixed": 8,
+        "harmed": 6
+      },
+      "second_alone": {
+        "correct": 471,
+        "fixed": 462,
+        "harmed": 9
+      }
+    },
+    "hard546": {
+      "rows": 546,
+      "v115_correct": 5,
+      "majority_plus_specialist": {
+        "correct": 3,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "second_confirms": {
+        "correct": 6,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "second_alone": {
+        "correct": 294,
+        "fixed": 289,
+        "harmed": 0
+      }
+    },
+    "hard_all_splits_wrong": {
+      "rows": 510,
+      "v115_correct": 3,
+      "majority_plus_specialist": {
+        "correct": 2,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "second_confirms": {
+        "correct": 4,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "second_alone": {
+        "correct": 274,
+        "fixed": 271,
+        "harmed": 0
+      }
+    },
+    "hard_split_sensitive": {
+      "rows": 36,
+      "v115_correct": 2,
+      "majority_plus_specialist": {
+        "correct": 1,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "second_confirms": {
+        "correct": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "second_alone": {
+        "correct": 20,
+        "fixed": 18,
+        "harmed": 0
+      }
+    },
+    "at_least_one_split_correct": {
+      "rows": 6151,
+      "v115_correct": 5662,
+      "majority_plus_specialist": {
+        "correct": 5694,
+        "fixed": 124,
+        "harmed": 92
+      },
+      "second_confirms": {
+        "correct": 5683,
+        "fixed": 105,
+        "harmed": 84
+      },
+      "second_alone": {
+        "correct": 4106,
+        "fixed": 238,
+        "harmed": 1794
+      }
+    }
+  },
+  "definition": "Two models (raw Mitra, v44) evaluated on the same rows under three random and three party-group CV splits, 12 votes per row. Only after prediction, for diagnostics. This does not revalidate the new routes on new folds or new labels.",
+  "histogram_hard_by_number_correct": [
+    510,
+    19,
+    9,
+    3,
+    2,
+    1,
+    0,
+    2,
+    0,
+    0,
+    0,
+    0,
+    0
+  ]
+}
