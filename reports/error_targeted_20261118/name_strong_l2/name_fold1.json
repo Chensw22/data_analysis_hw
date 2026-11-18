@@ -1,0 +1,107 @@
+{
+  "fold": 1,
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "feature_count": 2048,
+  "fit": {
+    "success": true,
+    "iterations": 10,
+    "objective": 1780.2794049183703,
+    "gradient_max": 5.413962875233658e-07
+  },
+  "constant_fit": {
+    "success": true,
+    "iterations": 2,
+    "objective": 1802.8208334545636,
+    "gradient_max": 9.551494217774348e-07
+  },
+  "model_sha256": "39f4e921252d1d8578e8f959f8641efa73393328c5059d3d8c922871e0b57869",
+  "rows_sha256": "f585220c5e9b4f46a524c31311f7ec5431a1a85cacd5aeba6379a396c62c2c4c",
+  "reload_max_abs_difference": 0.0,
+  "query_empty_name_rows": 50,
+  "query_empty_feature_rows": 50,
+  "query_empty_name_fraction": 0.021570319240724764,
+  "query_empty_feature_fraction": 0.021570319240724764,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3719704257434014
+    },
+    "constant": {
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.37197850222094814
+    },
+    "name": {
+      "accuracy": 0.816220880069025,
+      "log_loss": 0.37167342780173146
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 13,
+      "broken": 21,
+      "net_correct": -8,
+      "both_correct": 1879,
+      "both_wrong": 405,
+      "candidate_correct": 1892
+    },
+    "constant": {
+      "rows": 2318,
+      "repaired": 13,
+      "broken": 21,
+      "net_correct": -8,
+      "both_correct": 1879,
+      "both_wrong": 405,
+      "candidate_correct": 1892
+    }
+  },
+  "group_overlap_slices": {
+    "seen": {
+      "rows": 756,
+      "paired": {
+        "raw": {
+          "rows": 756,
+          "repaired": 4,
+          "broken": 5,
+          "net_correct": -1,
+          "both_correct": 615,
+          "both_wrong": 132,
+          "candidate_correct": 619
+        },
+        "constant": {
+          "rows": 756,
+          "repaired": 4,
+          "broken": 5,
+          "net_correct": -1,
+          "both_correct": 615,
+          "both_wrong": 132,
+          "candidate_correct": 619
+        }
+      }
+    },
+    "unseen": {
+      "rows": 1562,
+      "paired": {
+        "raw": {
+          "rows": 1562,
+          "repaired": 9,
+          "broken": 16,
+          "net_correct": -7,
+          "both_correct": 1264,
+          "both_wrong": 273,
+          "candidate_correct": 1273
+        },
+        "constant": {
+          "rows": 1562,
+          "repaired": 9,
+          "broken": 16,
+          "net_correct": -7,
+          "both_correct": 1264,
+          "both_wrong": 273,
+          "candidate_correct": 1273
+        }
+      }
+    }
+  }
+}
