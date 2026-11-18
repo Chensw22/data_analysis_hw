@@ -1,0 +1,137 @@
+{
+  "version": "v114_v108_three_expert_unanimous_flip",
+  "status": "fixed_before_fit",
+  "base": "v108 exact cached v106 plus saved peer offset",
+  "rule": "matched_party_and_two_challengers",
+  "threshold": 0.5,
+  "full_training_rows": 8693,
+  "test_rows": 4277,
+  "no_Name": true,
+  "matched_party": {
+    "packets": "authenticated v101 full raw OOF SKF3 seed20261112; do not resplit packets",
+    "discovery": "GroupShuffleSplit(test_size=.33), seed20261118+packet; reserve other groups",
+    "controls": "Original select_correct_controls within discovery; matched rawclass\u00d7planet\u00d7sleep",
+    "model": "Original Cat180/depth3/lr.05/L2=10; seed=20261118+packet+3; mean three probabilities"
+  },
+  "forest_chain": {
+    "seed": 20261112,
+    "rounds": 2,
+    "forest": {
+      "n_estimators": 50,
+      "max_depth": 10,
+      "min_samples_leaf": 2,
+      "n_jobs": 4
+    },
+    "classifier": {
+      "iterations": 700,
+      "depth": 6,
+      "learning_rate": 0.045,
+      "l2_leaf_reg": 5,
+      "loss_function": "Logloss",
+      "thread_count": 4,
+      "verbose": false,
+      "allow_writing_files": false
+    }
+  },
+  "supervised_em": {
+    "seed": 20261112,
+    "K": 24,
+    "iterations": 80,
+    "original_encoder": true
+  },
+  "vote": "Flip only if all three >=.5 classes oppose base. Member averaging occurs BEFORE matched_party vote.",
+  "probability_semantics": "Unchanged rows retain v108 probability; changed rows encode unanimous decision as0/1, NOT calibrated confidence.",
+  "scope": "Final fitting on all labeled training rows authorized. No test targets, no new CV/accuracy, no upload.",
+  "prior_development_result": {
+    "accuracy": 0.8152142651711245,
+    "base_wrong": 1291,
+    "base_correct": 5663,
+    "repairs": 62,
+    "breaks": 56,
+    "net": 6,
+    "error_recall": 0.048024786986831915,
+    "correct_lost": 0.009888751545117428,
+    "change_precision": 0.5254237288135594,
+    "hard546_correct": 3,
+    "hard546_new": 2,
+    "fold_net": [
+      2,
+      8,
+      -4
+    ],
+    "confidence_only_same_changes": {
+      "repairs": 53,
+      "breaks": 65,
+      "net": -12,
+      "hard546_new": 0
+    },
+    "error_direction": {
+      "base_positive": {
+        "available": 666,
+        "repaired": 22,
+        "broken": 26
+      },
+      "base_negative": {
+        "available": 625,
+        "repaired": 40,
+        "broken": 30
+      }
+    }
+  },
+  "limitations": [
+    "Adaptive rule selected on reused6954dev; +6 is not stable superiority.",
+    "Full teacher is3fold OOF, not historical nested development packets; full-fit extrapolation disclosed.",
+    "Peer features use target-free full roster; no train/test group target propagation.",
+    "Fixed-roster composite reuses authenticated v108 cached base; it is not an arbitrary-new-row predictor."
+  ],
+  "evidence": {
+    "reports/proposal_ready_nonlinear_residual_v2/manifest.json": "9c282a33b750df628b8ad219a2702da155db84616551ff529ed8bf81b63da9c8",
+    "artifacts/proposal_ready_nonlinear_residual_v2/manifest.json": "9c282a33b750df628b8ad219a2702da155db84616551ff529ed8bf81b63da9c8",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_model.joblib": "266d54597181bf4cfa81fe3c91843cb83509b715aee535af63ead9e44104ada8",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_probabilities.npz": "a806d0a5ac34fcfc31326cd0b929e34716bf27d7af7e87e825a19a7a3126d9ba",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_reload_probabilities.npz": "22a1865fa410e141a9a603f09b71199b4482d977361acb48e779ea9ba8bf8da3",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_metadata.json": "36d30f291a8ff2f127cc3111db7c6c86c4c10686778a306403478a275e5c794c",
+    "prepare_residual_ready.py": "363cef293a25ea0f5dce5a8e7abc87889d57676f93dbe30c60d3144d472c0a5b",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "iterate.py": "63fa5e15fce61cd14b585c9a34340e4e88e41049edeb1a0bb3d7758db2581efa",
+    "experiment.py": "2a14e7f11cdb28160991c534666e1e4421c272ca2d888244ca98ca7fda679c67",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold0_rows.npz": "1c1cfb50f99a0d26fb5fd49a621933c4e3ddb7a1115f31f33fe7529f53cc4270",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold0.json": "1b2e7ffc4074bb1afef6a288e54c6e7b24388458736d323ab9b5aaca20ad957d",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold1_rows.npz": "ffcf2c571842c3358c766dfe1c039139fb9647335042927843d1c316b8bd3bfb",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold1.json": "4c20a28c50e085f3ddecf49ef402d0c211874f1867fe419b055cec6b58de8657",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold2_rows.npz": "555c83ef5d1d1ef5a5c13989c8625c1cc66a7ef75335e2241e440a35c9f18744",
+    "artifacts/proposal_ready_nonlinear_residual_v2/raw_oof_fold2.json": "eaa9943c81d589b7b509ed79f0409b232557152ba46c3e2b95e66726ceda1da0",
+    "reports/proposal_v108_party_bills/manifest.json": "d210195d91cf18a0dae5ff901c3601d9fc8e60bac36434e6921ea359c7226d1b",
+    "artifacts/proposal_v108_party_bills/manifest.json": "d210195d91cf18a0dae5ff901c3601d9fc8e60bac36434e6921ea359c7226d1b",
+    "reports/proposal_nov18_peer_cabin/manifest.json": "c86269f332cd8c65d737d02b523b240ab0aedfa9f6791ee47adb82703d115017",
+    "artifacts/proposal_nov18_peer_cabin/manifest.json": "c86269f332cd8c65d737d02b523b240ab0aedfa9f6791ee47adb82703d115017",
+    "artifacts/proposal_nov18_peer_cabin/submission.csv": "82125cf38a7a9ba16b82fd40477cbe7275ca7e1092b679eb1436b54d155bb5cb",
+    "artifacts/proposal_nov18_peer_cabin/test_probabilities.csv": "6ab50cad9e7b2c3b19d206ba7055fb91b7fd12bb698dee93729ed6fb4bbf4fa7",
+    "artifacts/proposal_v108_party_bills/submission.csv": "4397cd6813a5c384a5d708ad8aa072e915b42f48e4cc921d25ed2025aecb6cf1",
+    "artifacts/proposal_v108_party_bills/test_probabilities.csv": "3e156b197d84c731c8a92f9b42ae48358a17ad888c80411fe03578d68494fd6a",
+    "artifacts/proposal_v108_party_bills/peer_coefficients.joblib": "8f307a199ffdb571b1e03ba1db2ee54da938adcae703aaeb3823c810462c139c",
+    "data/raw/train.csv": "17336d553f49ebdf6ecb266d2b5d3746e5dd308445f7c7864141c4f28d2a88d0",
+    "data/raw/test.csv": "3c02b0703423d27d51a657a111b15a37b8d03b3c1de325e3a1e6b26f6572fc88",
+    "reports/champion_error_portfolio/result.json": "f237ef8fa399378eaf36ad4a017f8149e842a79e21c4e4852c8a6e5f27e85c0e",
+    "prepare_v114_error_joint.py": "f32a8d3cd0bce0db814bf79aab6ea29429b1d0d37b3d6e5d7edb9949dca82d56",
+    "error_trained_experts.py": "ee5f92c8fca4bb77cd3102ed6a6ac0f5af99e99cce9e1dd37a3abc50b3655fdf",
+    "teacher_distillation.py": "4e957d3887e0906a9d9630c55348944918329689eee6edd856a5f3e27307f628",
+    "mixed_type_forest_imputation.py": "53f6923dfb2b6007c3568dc264978ad89376f74e07e9591a7e6a7de8e023c92e",
+    "latent_class_em_probe.py": "b30c849ac1183f7305bfd22fd0a2a3f31377143c6704f31b06bfa3240502db85",
+    "peer_bill_correction.py": "a84aab3096d2829ead9d7f42e40b1c5af4f2b5165fcd99e84ba03f38dab69a02",
+    "export_party_bill.py": "74d2147484fb3fa0a2c7c6b45b8b7559bc0cecbde55c793a44bb0e59fac4c412",
+    "nonlinear_error_corrector.py": "49c3da59a4ce2f2bb5641cc19eda0ae21c3facf5428b572d75b8e82fb238f0d1",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "kaggle_workflow.py": "ae165a2f80553822fc87993ee18b2063716646ced3ed9f5513ac52279466d65d",
+    "submit_committed_export.py": "f2502bbce119dcd0c7db9bedbb654fabf4cb871f82db2e77db824b15a52f3e83"
+  },
+  "environment": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.1",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "catboost": "1.2.10",
+    "joblib": "1.6.0"
+  },
+  "recipe_commit": "319d5352f047777871d923168d7ac1acbbae5e3a"
+}
