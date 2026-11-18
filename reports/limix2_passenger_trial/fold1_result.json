@@ -1,0 +1,303 @@
+{
+  "fold": 1,
+  "status": "complete",
+  "worker": {
+    "status": "complete",
+    "fold": 1,
+    "support_rows": 512,
+    "query_rows": 2318,
+    "pipelines": 1,
+    "prediction_seconds": 12.576858874999743,
+    "packet_sha256": "e53b194dd746ce88792f7d16b5ae0b163e31c144bcc60bd113c2dc850fff734a",
+    "prediction_sha256": "d4fd54a883e2a94c89ede14d9e4bec3f683ce1e899e4f125d4d7c9cbd842f7c5",
+    "seconds": 16.480557540999143,
+    "peak_rss_bytes": 3781459968
+  },
+  "metrics": {
+    "LimiX2": {
+      "rows": 2318,
+      "accuracy": 0.7510785159620362,
+      "log_loss": 0.49324801564216614,
+      "vs_rawMitra": {
+        "repairs": 108,
+        "breaks": 267,
+        "net": -159
+      },
+      "vs_v96": {
+        "repairs": 119,
+        "breaks": 274,
+        "net": -155
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 300,
+          "correct": 51,
+          "repairs_vs_raw": 51,
+          "breaks_vs_raw": 5
+        },
+        "common_correct5263": {
+          "rows": 1776,
+          "correct": 1557,
+          "repairs_vs_raw": 2,
+          "breaks_vs_raw": 216
+        },
+        "primary_common_wrong616": {
+          "rows": 193,
+          "correct": 17,
+          "repairs_vs_raw": 17,
+          "breaks_vs_raw": 1
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 177,
+          "correct": 11,
+          "repairs_vs_raw": 11,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 357,
+          "tn": 0,
+          "fp": 122,
+          "fn": 0,
+          "tp": 235
+        },
+        "awake": {
+          "rows": 822,
+          "tn": 511,
+          "fp": 50,
+          "fn": 195,
+          "tp": 66
+        }
+      }
+    },
+    "rawMitra": {
+      "rows": 2318,
+      "accuracy": 0.819672131147541,
+      "log_loss": 0.3719704257434014,
+      "vs_rawMitra": {
+        "repairs": 0,
+        "breaks": 0,
+        "net": 0
+      },
+      "vs_v96": {
+        "repairs": 38,
+        "breaks": 34,
+        "net": 4
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 300,
+          "correct": 5,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "common_correct5263": {
+          "rows": 1776,
+          "correct": 1771,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "primary_common_wrong616": {
+          "rows": 193,
+          "correct": 1,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 177,
+          "correct": 0,
+          "repairs_vs_raw": 0,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 357,
+          "tn": 17,
+          "fp": 105,
+          "fn": 14,
+          "tp": 221
+        },
+        "awake": {
+          "rows": 822,
+          "tn": 496,
+          "fp": 65,
+          "fn": 122,
+          "tp": 139
+        }
+      }
+    },
+    "v96": {
+      "rows": 2318,
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.3699948427057803,
+      "vs_rawMitra": {
+        "repairs": 34,
+        "breaks": 38,
+        "net": -4
+      },
+      "vs_v96": {
+        "repairs": 0,
+        "breaks": 0,
+        "net": 0
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 300,
+          "correct": 6,
+          "repairs_vs_raw": 6,
+          "breaks_vs_raw": 5
+        },
+        "common_correct5263": {
+          "rows": 1776,
+          "correct": 1769,
+          "repairs_vs_raw": 3,
+          "breaks_vs_raw": 5
+        },
+        "primary_common_wrong616": {
+          "rows": 193,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 1
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 177,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 357,
+          "tn": 24,
+          "fp": 98,
+          "fn": 29,
+          "tp": 206
+        },
+        "awake": {
+          "rows": 822,
+          "tn": 497,
+          "fp": 64,
+          "fn": 124,
+          "tp": 137
+        }
+      }
+    },
+    "half_rawMitra": {
+      "rows": 2318,
+      "accuracy": 0.811044003451251,
+      "log_loss": 0.41064101827916044,
+      "vs_rawMitra": {
+        "repairs": 69,
+        "breaks": 89,
+        "net": -20
+      },
+      "vs_v96": {
+        "repairs": 82,
+        "breaks": 98,
+        "net": -16
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 300,
+          "correct": 21,
+          "repairs_vs_raw": 21,
+          "breaks_vs_raw": 5
+        },
+        "common_correct5263": {
+          "rows": 1776,
+          "correct": 1725,
+          "repairs_vs_raw": 2,
+          "breaks_vs_raw": 48
+        },
+        "primary_common_wrong616": {
+          "rows": 193,
+          "correct": 2,
+          "repairs_vs_raw": 2,
+          "breaks_vs_raw": 1
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 177,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 357,
+          "tn": 0,
+          "fp": 122,
+          "fn": 0,
+          "tp": 235
+        },
+        "awake": {
+          "rows": 822,
+          "tn": 516,
+          "fp": 45,
+          "fn": 149,
+          "tp": 112
+        }
+      }
+    },
+    "half_v96": {
+      "rows": 2318,
+      "accuracy": 0.8140638481449526,
+      "log_loss": 0.408019979899359,
+      "vs_rawMitra": {
+        "repairs": 69,
+        "breaks": 82,
+        "net": -13
+      },
+      "vs_v96": {
+        "repairs": 75,
+        "breaks": 84,
+        "net": -9
+      },
+      "subsets": {
+        "common_wrong914": {
+          "rows": 300,
+          "correct": 18,
+          "repairs_vs_raw": 18,
+          "breaks_vs_raw": 5
+        },
+        "common_correct5263": {
+          "rows": 1776,
+          "correct": 1736,
+          "repairs_vs_raw": 3,
+          "breaks_vs_raw": 38
+        },
+        "primary_common_wrong616": {
+          "rows": 193,
+          "correct": 2,
+          "repairs_vs_raw": 2,
+          "breaks_vs_raw": 1
+        },
+        "all_recipes_common_wrong546": {
+          "rows": 177,
+          "correct": 1,
+          "repairs_vs_raw": 1,
+          "breaks_vs_raw": 0
+        }
+      },
+      "earth": {
+        "sleep": {
+          "rows": 357,
+          "tn": 1,
+          "fp": 121,
+          "fn": 0,
+          "tp": 235
+        },
+        "awake": {
+          "rows": 822,
+          "tn": 512,
+          "fp": 49,
+          "fn": 148,
+          "tp": 113
+        }
+      }
+    }
+  }
+}
