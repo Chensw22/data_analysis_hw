@@ -1,0 +1,31 @@
+{
+  "status": "frozen_before_any_inference",
+  "recipe": "OriginalrawMitra compact13 all4636outertrain support; flip onlylabels y\u21921-y, correctedprobability1\u2212p_flip. Sameoriginal checkpoint/prep/seed perarm.",
+  "folds": 3,
+  "split_seed": 20261112,
+  "fit_seed": "20261112+fold, matches originalrun038 metadata",
+  "query_chunk": 2318,
+  "device": "mps",
+  "memory_fraction": 0.65,
+  "cpu_threads": 4,
+  "candidates": [
+    "raw_cached",
+    "flipped_corrected",
+    "fixed_half_mean"
+  ],
+  "threshold": 0.5,
+  "mean": "0.5raw+0.5flipped_corrected; no tuning",
+  "original_check": "Recompute fold0 original labels first; require np.array_equal freshp/cachedraw before anyflipped inference.",
+  "boundary": "Onlyoutertrain labels passed to model, querylabels/hardmask notpassed; noadaptation, no supportselection, no seedsearch.",
+  "budget_seconds": 1200,
+  "historical_metadata": [
+    "artifacts/run_038/v71_Mitra2_zeroshot_seed20261112_38b837397a8e_training.json",
+    "artifacts/run_038/v71_Mitra2_zeroshot_seed20261113_38e7dd3e5f8b_training.json",
+    "artifacts/run_038/v71_Mitra2_zeroshot_seed20261114_00e1e32df8e7_training.json"
+  ],
+  "limitations": [
+    "Adaptive reused6954dev, not independent validation.",
+    "Unequal probabilities imply checkpoint class-label asymmetry, not necessarily a beneficial average.",
+    "No v96 reverse-label adaptation authorized in this experiment."
+  ]
+}

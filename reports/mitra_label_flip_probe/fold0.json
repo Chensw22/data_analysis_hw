@@ -1,0 +1,101 @@
+{
+  "fold": 0,
+  "model": {
+    "seed": 20261112,
+    "training_rows": 4636,
+    "query_rows": 2318,
+    "selected_steps": 0,
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "training_ids_sha256": "38b837397a8e3931ebdcec6d08078248159702ea020a5819fb885e2a713ac10c",
+    "query_ids_sha256": "6446e42ded604b325f646ec370bd0fa8ff8d3dc4a8225e1c14db035626a18b0e",
+    "labels_sha256": "c4be0e559c32a468a5971d607aa091894db5baa87f2fb532e3b043e719b9db03",
+    "feature_count": 13,
+    "seconds": 11.058094749998418
+  },
+  "mean_abs_raw_difference": 0.015965990738124998,
+  "max_abs_raw_difference": 0.1736270785331726,
+  "metrics": {
+    "raw_cached": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.38102819387768605
+    },
+    "flipped_corrected": {
+      "accuracy": 0.8153580672993961,
+      "log_loss": 0.37858853086945643
+    },
+    "fixed_half_mean": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.37937767152187996
+    }
+  },
+  "paired": {
+    "raw_cached": {
+      "correct": 1896,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1896,
+        "both_wrong": 422
+      }
+    },
+    "flipped_corrected": {
+      "correct": 1890,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 21,
+        "broken": 27,
+        "net_correct": -6,
+        "both_correct": 1869,
+        "both_wrong": 401
+      }
+    },
+    "fixed_half_mean": {
+      "correct": 1897,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 9,
+        "broken": 8,
+        "net_correct": 1,
+        "both_correct": 1888,
+        "both_wrong": 413
+      }
+    }
+  },
+  "hard546": {
+    "raw_cached": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 178
+      }
+    },
+    "flipped_corrected": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 178
+      }
+    },
+    "fixed_half_mean": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 178
+      }
+    }
+  }
+}

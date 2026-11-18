@@ -1,0 +1,91 @@
+{
+  "status": "NPZ_identity_inverse_mean_scores_pairs_and_source_hashes_independently_verified",
+  "seconds": 47.34990512499644,
+  "metrics": {
+    "raw_cached": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "flipped_corrected": {
+      "accuracy": 0.816220880069025,
+      "log_loss": 0.3788325097539858
+    },
+    "fixed_half_mean": {
+      "accuracy": 0.8167960885821111,
+      "log_loss": 0.37910862486600094
+    }
+  },
+  "paired": {
+    "raw_cached": {
+      "rows": 6954,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 5678,
+      "both_wrong": 1276
+    },
+    "flipped_corrected": {
+      "rows": 6954,
+      "repaired": 68,
+      "broken": 70,
+      "net_correct": -2,
+      "both_correct": 5608,
+      "both_wrong": 1208
+    },
+    "fixed_half_mean": {
+      "rows": 6954,
+      "repaired": 30,
+      "broken": 28,
+      "net_correct": 2,
+      "both_correct": 5650,
+      "both_wrong": 1246
+    }
+  },
+  "hard546": {
+    "raw_cached": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      }
+    },
+    "flipped_corrected": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      }
+    },
+    "fixed_half_mean": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      }
+    }
+  },
+  "fold_mean_net": [
+    1,
+    4,
+    -3
+  ],
+  "fold_reverse_net": [
+    -6,
+    5,
+    -1
+  ],
+  "first_fold_raw_recompute_exact": true,
+  "interpretation": "Class-label encoding asymmetry exists. Fixed mean netgain is only2correct onreuseddevelopment, not stable improvement and not support for >85%. Reversealone net\u22122; LL modestlylower. No reversedv96adaptation performed."
+}

@@ -1,0 +1,101 @@
+{
+  "fold": 2,
+  "model": {
+    "seed": 20261114,
+    "training_rows": 4636,
+    "query_rows": 2318,
+    "selected_steps": 0,
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "training_ids_sha256": "00e1e32df8e7a94594b48803118037b42df64831464f1557507a64bee1fc570f",
+    "query_ids_sha256": "6024f56d1a7f89258425a75cccfa1cda67c3fa4c0a4090d418b44777bb6f2304",
+    "labels_sha256": "607ab085dd2c8ea567de8de102c9267ec6f080cad5e1ca78f54d9c794c724dba",
+    "feature_count": 13,
+    "seconds": 13.076947249999648
+  },
+  "mean_abs_raw_difference": 0.01440912769642129,
+  "max_abs_raw_difference": 0.1286051869392395,
+  "metrics": {
+    "raw_cached": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "flipped_corrected": {
+      "accuracy": 0.8114754098360656,
+      "log_loss": 0.38691075024075433
+    },
+    "fixed_half_mean": {
+      "accuracy": 0.8106125970664366,
+      "log_loss": 0.3868563609020039
+    }
+  },
+  "paired": {
+    "raw_cached": {
+      "correct": 1882,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1882,
+        "both_wrong": 436
+      }
+    },
+    "flipped_corrected": {
+      "correct": 1881,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 23,
+        "broken": 24,
+        "net_correct": -1,
+        "both_correct": 1858,
+        "both_wrong": 413
+      }
+    },
+    "fixed_half_mean": {
+      "correct": 1879,
+      "vs_raw": {
+        "rows": 2318,
+        "repaired": 9,
+        "broken": 12,
+        "net_correct": -3,
+        "both_correct": 1870,
+        "both_wrong": 427
+      }
+    }
+  },
+  "hard546": {
+    "raw_cached": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 191,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 191
+      }
+    },
+    "flipped_corrected": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 191,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 191
+      }
+    },
+    "fixed_half_mean": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 191,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 191
+      }
+    }
+  }
+}
