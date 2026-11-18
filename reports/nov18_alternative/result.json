@@ -1,0 +1,446 @@
+{
+  "status": "complete_fixed_adaptive_CPU_experiment",
+  "folds": [
+    {
+      "fold": 0,
+      "training_patterns": 291,
+      "unseen_query_patterns": 54,
+      "pack_sha256": "98e1cb73f0c2b4205f5b10c452698d4e3a6527982b7765777c16d1d31fc273e3",
+      "reload_max_difference": 0.0,
+      "metrics": {
+        "activity": {
+          "accuracy": 0.8166522864538395,
+          "log_loss": 0.38137728176397373
+        },
+        "constant": {
+          "accuracy": 0.816220880069025,
+          "log_loss": 0.3810310893350334
+        },
+        "raw": {
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.38102819387768605
+        }
+      },
+      "versus_raw": {
+        "rows": 2318,
+        "repaired": 33,
+        "broken": 36,
+        "net_correct": -3,
+        "both_correct": 1860,
+        "both_wrong": 389
+      },
+      "versus_constant": {
+        "rows": 2318,
+        "repaired": 6,
+        "broken": 5,
+        "net_correct": 1,
+        "both_correct": 1887,
+        "both_wrong": 420
+      }
+    },
+    {
+      "fold": 1,
+      "training_patterns": 305,
+      "unseen_query_patterns": 44,
+      "pack_sha256": "59e34db86e399a5c5daaf44fff32555a62fa12f2923c7c433b56ac73197e2695",
+      "reload_max_difference": 0.0,
+      "metrics": {
+        "activity": {
+          "accuracy": 0.8166522864538395,
+          "log_loss": 0.3720855599693266
+        },
+        "constant": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.37197850222094814
+        },
+        "raw": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.3719704257434014
+        }
+      },
+      "versus_raw": {
+        "rows": 2318,
+        "repaired": 20,
+        "broken": 27,
+        "net_correct": -7,
+        "both_correct": 1873,
+        "both_wrong": 398
+      },
+      "versus_constant": {
+        "rows": 2318,
+        "repaired": 20,
+        "broken": 27,
+        "net_correct": -7,
+        "both_correct": 1873,
+        "both_wrong": 398
+      }
+    },
+    {
+      "fold": 2,
+      "training_patterns": 286,
+      "unseen_query_patterns": 62,
+      "pack_sha256": "c25a8978b19dc4089eaf5a066e287e85a7c7efa95df216162f32a13f941d2ba1",
+      "reload_max_difference": 0.0,
+      "metrics": {
+        "activity": {
+          "accuracy": 0.8127696289905091,
+          "log_loss": 0.388398341891142
+        },
+        "constant": {
+          "accuracy": 0.8157894736842105,
+          "log_loss": 0.38759970664929394
+        },
+        "raw": {
+          "accuracy": 0.8119068162208801,
+          "log_loss": 0.38758918506166057
+        }
+      },
+      "versus_raw": {
+        "rows": 2318,
+        "repaired": 26,
+        "broken": 24,
+        "net_correct": 2,
+        "both_correct": 1858,
+        "both_wrong": 410
+      },
+      "versus_constant": {
+        "rows": 2318,
+        "repaired": 6,
+        "broken": 13,
+        "net_correct": -7,
+        "both_correct": 1878,
+        "both_wrong": 421
+      }
+    }
+  ],
+  "metrics": {
+    "activity": {
+      "accuracy": 0.8153580672993961,
+      "log_loss": 0.3806203945414807
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.38020309940175845
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    }
+  },
+  "subsets": {
+    "all": {
+      "versus_raw": {
+        "rows": 6954,
+        "repaired": 79,
+        "broken": 87,
+        "net_correct": -8,
+        "both_correct": 5591,
+        "both_wrong": 1197
+      },
+      "versus_constant": {
+        "rows": 6954,
+        "repaired": 32,
+        "broken": 45,
+        "net_correct": -13,
+        "both_correct": 5638,
+        "both_wrong": 1239
+      },
+      "correct": {
+        "activity": 5670,
+        "constant": 5683,
+        "raw": 5678
+      },
+      "confusion": {
+        "activity": {
+          "tn": 2834,
+          "fp": 618,
+          "fn": 666,
+          "tp": 2836
+        },
+        "constant": {
+          "tn": 2829,
+          "fp": 623,
+          "fn": 648,
+          "tp": 2854
+        },
+        "raw": {
+          "tn": 2760,
+          "fp": 692,
+          "fn": 584,
+          "tp": 2918
+        }
+      }
+    },
+    "hard546": {
+      "versus_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      },
+      "versus_constant": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      },
+      "correct": {
+        "activity": 0,
+        "constant": 0,
+        "raw": 0
+      },
+      "confusion": {
+        "activity": {
+          "tn": 0,
+          "fp": 254,
+          "fn": 292,
+          "tp": 0
+        },
+        "constant": {
+          "tn": 0,
+          "fp": 254,
+          "fn": 292,
+          "tp": 0
+        },
+        "raw": {
+          "tn": 0,
+          "fp": 254,
+          "fn": 292,
+          "tp": 0
+        }
+      }
+    },
+    "hard616": {
+      "versus_raw": {
+        "rows": 616,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 2,
+        "both_wrong": 614
+      },
+      "versus_constant": {
+        "rows": 616,
+        "repaired": 1,
+        "broken": 0,
+        "net_correct": 1,
+        "both_correct": 1,
+        "both_wrong": 614
+      },
+      "correct": {
+        "activity": 2,
+        "constant": 1,
+        "raw": 2
+      },
+      "confusion": {
+        "activity": {
+          "tn": 0,
+          "fp": 303,
+          "fn": 311,
+          "tp": 2
+        },
+        "constant": {
+          "tn": 0,
+          "fp": 303,
+          "fn": 312,
+          "tp": 1
+        },
+        "raw": {
+          "tn": 0,
+          "fp": 303,
+          "fn": 311,
+          "tp": 2
+        }
+      }
+    },
+    "hard914": {
+      "versus_raw": {
+        "rows": 914,
+        "repaired": 15,
+        "broken": 4,
+        "net_correct": 11,
+        "both_correct": 11,
+        "both_wrong": 884
+      },
+      "versus_constant": {
+        "rows": 914,
+        "repaired": 8,
+        "broken": 2,
+        "net_correct": 6,
+        "both_correct": 18,
+        "both_wrong": 886
+      },
+      "correct": {
+        "activity": 26,
+        "constant": 20,
+        "raw": 15
+      },
+      "confusion": {
+        "activity": {
+          "tn": 17,
+          "fp": 473,
+          "fn": 415,
+          "tp": 9
+        },
+        "constant": {
+          "tn": 12,
+          "fp": 478,
+          "fn": 416,
+          "tp": 8
+        },
+        "raw": {
+          "tn": 2,
+          "fp": 488,
+          "fn": 411,
+          "tp": 13
+        }
+      }
+    },
+    "commoncorrect5263": {
+      "versus_raw": {
+        "rows": 5263,
+        "repaired": 5,
+        "broken": 18,
+        "net_correct": -13,
+        "both_correct": 5227,
+        "both_wrong": 13
+      },
+      "versus_constant": {
+        "rows": 5263,
+        "repaired": 3,
+        "broken": 12,
+        "net_correct": -9,
+        "both_correct": 5229,
+        "both_wrong": 19
+      },
+      "correct": {
+        "activity": 5232,
+        "constant": 5241,
+        "raw": 5245
+      },
+      "confusion": {
+        "activity": {
+          "tn": 2594,
+          "fp": 4,
+          "fn": 27,
+          "tp": 2638
+        },
+        "constant": {
+          "tn": 2596,
+          "fp": 2,
+          "fn": 20,
+          "tp": 2645
+        },
+        "raw": {
+          "tn": 2590,
+          "fp": 8,
+          "fn": 10,
+          "tp": 2655
+        }
+      }
+    },
+    "Earth_awake": {
+      "versus_raw": {
+        "rows": 2464,
+        "repaired": 21,
+        "broken": 28,
+        "net_correct": -7,
+        "both_correct": 1878,
+        "both_wrong": 537
+      },
+      "versus_constant": {
+        "rows": 2464,
+        "repaired": 14,
+        "broken": 18,
+        "net_correct": -4,
+        "both_correct": 1885,
+        "both_wrong": 547
+      },
+      "correct": {
+        "activity": 1899,
+        "constant": 1903,
+        "raw": 1906
+      },
+      "confusion": {
+        "activity": {
+          "tn": 1482,
+          "fp": 187,
+          "fn": 378,
+          "tp": 417
+        },
+        "constant": {
+          "tn": 1490,
+          "fp": 179,
+          "fn": 382,
+          "tp": 413
+        },
+        "raw": {
+          "tn": 1466,
+          "fp": 203,
+          "fn": 355,
+          "tp": 440
+        }
+      }
+    },
+    "Earth_sleep": {
+      "versus_raw": {
+        "rows": 1106,
+        "repaired": 41,
+        "broken": 53,
+        "net_correct": -12,
+        "both_correct": 667,
+        "both_wrong": 345
+      },
+      "versus_constant": {
+        "rows": 1106,
+        "repaired": 10,
+        "broken": 23,
+        "net_correct": -13,
+        "both_correct": 698,
+        "both_wrong": 375
+      },
+      "correct": {
+        "activity": 708,
+        "constant": 721,
+        "raw": 720
+      },
+      "confusion": {
+        "activity": {
+          "tn": 80,
+          "fp": 304,
+          "fn": 94,
+          "tp": 628
+        },
+        "constant": {
+          "tn": 72,
+          "fp": 312,
+          "fn": 73,
+          "tp": 649
+        },
+        "raw": {
+          "tn": 39,
+          "fp": 345,
+          "fn": 41,
+          "tp": 681
+        }
+      }
+    }
+  },
+  "seconds": 3.306037500002276,
+  "protocol_sha256": "99722d92ca00f7646476a7b80ca7d6d421271c6cd06286b4ff53e1b91bfab38c",
+  "predictions_path": "artifacts/nov18_alternative_oof.npz",
+  "predictions_sha256": "21e1b83eb24dd45f8d2e15bfce009913f897d0b0234d50a6af5b025e8a615e61",
+  "limitations": [
+    "Adaptive reusedsame6954labels, no independence/generalization claim.",
+    "Every allzero Earthsleep passenger receives the same patternoffset; cannot discriminatewithinpattern minorityFalse.",
+    "Originalquantile alreadypreserveszero atoms; oldmissing/aggregate/offset failures arecounterevidence.",
+    "Many patterns sparse, unseenpatterns fallbackglobalintercept. Fixedridge intendedto limitmemorization, notguarantee netgain.",
+    "No threshold/weight/pattern/grids, no followup lambda rescue or subgroup routing basedonresults."
+  ],
+  "no_new_base_fit": true,
+  "no_upload": true
+}

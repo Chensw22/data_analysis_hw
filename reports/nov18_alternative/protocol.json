@@ -1,0 +1,40 @@
+{
+  "status": "fixed_before_any_new_fit",
+  "name": "joint_spending_activity_pattern_offset",
+  "spending_order": [
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck"
+  ],
+  "pattern": "Full jointtuple(HomePlanet,CryoSleep,each5service state missing0/zero1/positive2). Base3 integer used onlycategorically, no ordinaldistance. No Name/cabin/neighbors/groups/amountcutoffs.",
+  "objective": "sum binaryNLL(y,sigmoid(strictnestedrawlogit+b+delta_pattern))+10sum(delta_pattern\u00b2); globalb unpenalized; lambda20fixed; unseenpattern delta0.",
+  "control": "Same strictinnerraw offset and alloutertrain rows, globalinterceptonly; originalraw assecondreference.",
+  "optimizer": "L-BFGS-B analyticgradient,zero init,maxiter500,ftol1e-12,gtol1e-6; noregularization search.",
+  "evaluation": "Original6954dev SKF3seed20261112, all9matching cachedinnerraw predictions fromrelational.load_inner authenticated beforefit. ThreeCPU fits+threeconstant controls; no newbaseinference.",
+  "label_boundary": "Onlyoriginaldevlabels via load_authenticated/read_development_only. Errorcatalog read afterallpredictions, not fitted labels/weights/subsetselector.",
+  "prior_difference": "Explicit highorder categorical service-activity pattern withpooledshrunkintercepts; existingPaidServices/AllSpendingZero aggregate states, lowleaf residualtrees, missingflags, andnumericshares do not instantiate thisfixed saturated pattern model. No additionalinformation; inductivebias experiment only.",
+  "limitations": [
+    "Adaptive reusedsame6954labels, no independence/generalization claim.",
+    "Every allzero Earthsleep passenger receives the same patternoffset; cannot discriminatewithinpattern minorityFalse.",
+    "Originalquantile alreadypreserveszero atoms; oldmissing/aggregate/offset failures arecounterevidence.",
+    "Many patterns sparse, unseenpatterns fallbackglobalintercept. Fixedridge intendedto limitmemorization, notguarantee netgain.",
+    "No threshold/weight/pattern/grids, no followup lambda rescue or subgroup routing basedonresults."
+  ],
+  "budget_seconds": 120,
+  "source_and_prior_sha256": {
+    "nov18_alternative_activity.py": "438c4d41c0c7dacc920447d2062e6401fd6c4aba87373f1ce7fd1b215376356c",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "planet_mixture_experiment.py": "f648ea0ea6b78e5f53fb2007b2b7266771ae2805b5eab44a406ae16113be7adb",
+    "exaone_validation_data.py": "0e5e2327201ccc2d409f8c76c61f06fbcab337942962890a2547db83928aa4ab",
+    "audit_top5_references.py": "c39c6ef7815af324dd7bef71c0e0915510de51cccd2d56fdabee620540e08780",
+    "three_family_mean_screen.py": "c828c152fa9eb240ff782c96891369320a08ac0fb4e09e119cce555ffe2345a9",
+    "prior_adapt_mean_screen.py": "1805ed788913a7ce9b371d9594f8b5121fca7612b8644ffe571bdc474d29f550",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e",
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "reports/error_targeted_20261118/query_group_result.json": "63f9f80fbd8d84f93ac9e937edb94e362819ccc32c4425facd6ab52e001629d8"
+  },
+  "authorization": "Parent explicitly requests completing one independent lowcostCPU alternative; no commit/upload or basefit."
+}

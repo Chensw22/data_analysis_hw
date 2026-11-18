@@ -1,0 +1,39 @@
+{
+  "decision": "archive_no_fullfit_or_upload",
+  "finding": "固定消费活动联合模式校准没有净收益；不是新信息，而是稀疏高阶条件截距。",
+  "accuracy": {
+    "activity": {
+      "accuracy": 0.8153580672993961,
+      "log_loss": 0.3806203945414807
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.38020309940175845
+    },
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    }
+  },
+  "repairs_breaks_vs_raw": {
+    "rows": 6954,
+    "repaired": 79,
+    "broken": 87,
+    "net_correct": -8,
+    "both_correct": 5591,
+    "both_wrong": 1197
+  },
+  "hard546_rescued": 0,
+  "hard914": "相对raw新增15修复、4破坏，但整体79修复87破坏；局部救错不足以支持继续。",
+  "earth_sleep": "TN39→80，同时FN41→94，总体净−12；不能将更多少数类识别单独称成功。",
+  "fold_net_vs_raw": [
+    -3,
+    -7,
+    2
+  ],
+  "matched_intercept_control": "比同训练offset的仅截距对照少13个正确，三个fold分别+1/−7/−7；LL也更差。",
+  "validation": "纯合成状态/有限差分梯度/未知模式回退/JSON恢复检查通过；9份严格innerOOF已认证，3个pack重载概率逐位相同。",
+  "scope": "只用原6954dev；546/914仅拟合完成后报告，不参与训练、模型选择或权重；未读旧1739标签，未新训练基础模型，未上传。",
+  "stop": "不追加lambda搜索、按状态挑路由或阈值修补；保留所有失败及比较结果。",
+  "runtime_seconds": 3.306037500002276
+}
