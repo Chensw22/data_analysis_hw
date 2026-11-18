@@ -1,0 +1,486 @@
+{
+  "status": "complete",
+  "protocol_sha256": "b8267b5233760b38d72cd8ead779fb068c4e2d750c5ca2ed8453de9a6d1404a3",
+  "folds": [
+    {
+      "fold": 0,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "training_error_rate": 0.1902502157031924,
+      "seed": 20261112,
+      "requested_rounds": 60,
+      "actual_iterations": 60,
+      "exact_q_half_count": 0,
+      "booster_sha256": "341a01c87e601d554b3a9289ae8097fd1128b20cd6805ed432a1e4ae8926c9f3",
+      "schema_sha256": "36e1793b256ccd529815d079122f030c97f91ebc9a0071ccb7c3f4b2bb343d52",
+      "rows_sha256": "ca4ed255722e3ea3e9d14a7cdcd27754410629de601baac472eaf5d4f084d1b0",
+      "reload_max_abs_difference": 0.0,
+      "metrics": {
+        "raw": {
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.38102819387768605
+        },
+        "nonlinear_residual": {
+          "accuracy": 0.82053494391717,
+          "log_loss": 0.37967922932883563
+        },
+        "exception_detector": {
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.39164726846540926
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 1896,
+          "both_wrong": 422
+        },
+        "nonlinear_residual": {
+          "rows": 2318,
+          "repaired": 22,
+          "broken": 28,
+          "net_correct": -6,
+          "both_correct": 1874,
+          "both_wrong": 394
+        }
+      },
+      "earth_confusion": {
+        "Earth_sleep": {
+          "raw": {
+            "rows": 387,
+            "tn": 19,
+            "fp": 115,
+            "fn": 24,
+            "tp": 229
+          },
+          "nonlinear_residual": {
+            "rows": 387,
+            "tn": 39,
+            "fp": 95,
+            "fn": 40,
+            "tp": 213
+          },
+          "exception_detector": {
+            "rows": 387,
+            "tn": 19,
+            "fp": 115,
+            "fn": 24,
+            "tp": 229
+          }
+        },
+        "Earth_awake": {
+          "raw": {
+            "rows": 808,
+            "tn": 480,
+            "fp": 76,
+            "fn": 111,
+            "tp": 141
+          },
+          "nonlinear_residual": {
+            "rows": 808,
+            "tn": 485,
+            "fp": 71,
+            "fn": 115,
+            "tp": 137
+          },
+          "exception_detector": {
+            "rows": 808,
+            "tn": 480,
+            "fp": 76,
+            "fn": 111,
+            "tp": 141
+          }
+        }
+      }
+    },
+    {
+      "fold": 1,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "training_error_rate": 0.1878774805867127,
+      "seed": 20261113,
+      "requested_rounds": 60,
+      "actual_iterations": 60,
+      "exact_q_half_count": 0,
+      "booster_sha256": "768e0325e103b3effc429f4af3d30741d604054000ec1a6f919eb8e039d55854",
+      "schema_sha256": "36e1793b256ccd529815d079122f030c97f91ebc9a0071ccb7c3f4b2bb343d52",
+      "rows_sha256": "3a116a18af18f7093719a781e261a7a6ffd9866e7d8e4d15cb60586a0e44ea9f",
+      "reload_max_abs_difference": 0.0,
+      "metrics": {
+        "raw": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.3719704257434014
+        },
+        "nonlinear_residual": {
+          "accuracy": 0.817946505608283,
+          "log_loss": 0.37144850931560924
+        },
+        "exception_detector": {
+          "accuracy": 0.819672131147541,
+          "log_loss": 0.38276778013875423
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 1900,
+          "both_wrong": 418
+        },
+        "nonlinear_residual": {
+          "rows": 2318,
+          "repaired": 13,
+          "broken": 9,
+          "net_correct": 4,
+          "both_correct": 1887,
+          "both_wrong": 409
+        }
+      },
+      "earth_confusion": {
+        "Earth_sleep": {
+          "raw": {
+            "rows": 357,
+            "tn": 17,
+            "fp": 105,
+            "fn": 14,
+            "tp": 221
+          },
+          "nonlinear_residual": {
+            "rows": 357,
+            "tn": 21,
+            "fp": 101,
+            "fn": 21,
+            "tp": 214
+          },
+          "exception_detector": {
+            "rows": 357,
+            "tn": 17,
+            "fp": 105,
+            "fn": 14,
+            "tp": 221
+          }
+        },
+        "Earth_awake": {
+          "raw": {
+            "rows": 822,
+            "tn": 496,
+            "fp": 65,
+            "fn": 122,
+            "tp": 139
+          },
+          "nonlinear_residual": {
+            "rows": 822,
+            "tn": 498,
+            "fp": 63,
+            "fn": 124,
+            "tp": 137
+          },
+          "exception_detector": {
+            "rows": 822,
+            "tn": 496,
+            "fp": 65,
+            "fn": 122,
+            "tp": 139
+          }
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "training_rows": 4636,
+      "query_rows": 2318,
+      "training_error_rate": 0.1878774805867127,
+      "seed": 20261114,
+      "requested_rounds": 60,
+      "actual_iterations": 60,
+      "exact_q_half_count": 0,
+      "booster_sha256": "d06800747e1b2fe5ddc78ab0c738da1a04135d1fb961f949fcd152c51c49d387",
+      "schema_sha256": "36e1793b256ccd529815d079122f030c97f91ebc9a0071ccb7c3f4b2bb343d52",
+      "rows_sha256": "cd1afcfe214a09c61511a7544d28b11e3d64a4ed9fb98105156795cb6c947f70",
+      "reload_max_abs_difference": 0.0,
+      "metrics": {
+        "raw": {
+          "accuracy": 0.8119068162208801,
+          "log_loss": 0.38758918506166057
+        },
+        "nonlinear_residual": {
+          "accuracy": 0.8183779119930975,
+          "log_loss": 0.38545950841709997
+        },
+        "exception_detector": {
+          "accuracy": 0.8119068162208801,
+          "log_loss": 0.395156403706463
+        }
+      },
+      "paired": {
+        "raw": {
+          "rows": 2318,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 1882,
+          "both_wrong": 436
+        },
+        "nonlinear_residual": {
+          "rows": 2318,
+          "repaired": 15,
+          "broken": 30,
+          "net_correct": -15,
+          "both_correct": 1867,
+          "both_wrong": 406
+        }
+      },
+      "earth_confusion": {
+        "Earth_sleep": {
+          "raw": {
+            "rows": 362,
+            "tn": 3,
+            "fp": 125,
+            "fn": 3,
+            "tp": 231
+          },
+          "nonlinear_residual": {
+            "rows": 362,
+            "tn": 11,
+            "fp": 117,
+            "fn": 7,
+            "tp": 227
+          },
+          "exception_detector": {
+            "rows": 362,
+            "tn": 3,
+            "fp": 125,
+            "fn": 3,
+            "tp": 231
+          }
+        },
+        "Earth_awake": {
+          "raw": {
+            "rows": 834,
+            "tn": 490,
+            "fp": 62,
+            "fn": 122,
+            "tp": 160
+          },
+          "nonlinear_residual": {
+            "rows": 834,
+            "tn": 500,
+            "fp": 52,
+            "fn": 129,
+            "tp": 153
+          },
+          "exception_detector": {
+            "rows": 834,
+            "tn": 490,
+            "fp": 62,
+            "fn": 122,
+            "tp": 160
+          }
+        }
+      }
+    }
+  ],
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "nonlinear_residual": {
+      "accuracy": 0.8189531205061835,
+      "log_loss": 0.37886241568718154
+    },
+    "exception_detector": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.3898571507702088
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 6954,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 5678,
+      "both_wrong": 1276
+    },
+    "nonlinear_residual": {
+      "rows": 6954,
+      "repaired": 50,
+      "broken": 67,
+      "net_correct": -17,
+      "both_correct": 5628,
+      "both_wrong": 1209
+    }
+  },
+  "historical_subsets": {
+    "common_wrong914": {
+      "rows": 914,
+      "correct": {
+        "raw": 15,
+        "nonlinear_residual": 22,
+        "exception_detector": 15
+      },
+      "paired": {
+        "raw": {
+          "rows": 914,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 15,
+          "both_wrong": 899
+        },
+        "nonlinear_residual": {
+          "rows": 914,
+          "repaired": 6,
+          "broken": 13,
+          "net_correct": -7,
+          "both_correct": 9,
+          "both_wrong": 886
+        }
+      }
+    },
+    "common_correct5263": {
+      "rows": 5263,
+      "correct": {
+        "raw": 5245,
+        "nonlinear_residual": 5244,
+        "exception_detector": 5245
+      },
+      "paired": {
+        "raw": {
+          "rows": 5263,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 5245,
+          "both_wrong": 18
+        },
+        "nonlinear_residual": {
+          "rows": 5263,
+          "repaired": 5,
+          "broken": 4,
+          "net_correct": 1,
+          "both_correct": 5240,
+          "both_wrong": 14
+        }
+      }
+    },
+    "primary_common_wrong616": {
+      "rows": 616,
+      "correct": {
+        "raw": 2,
+        "nonlinear_residual": 2,
+        "exception_detector": 2
+      },
+      "paired": {
+        "raw": {
+          "rows": 616,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 2,
+          "both_wrong": 614
+        },
+        "nonlinear_residual": {
+          "rows": 616,
+          "repaired": 1,
+          "broken": 1,
+          "net_correct": 0,
+          "both_correct": 1,
+          "both_wrong": 613
+        }
+      }
+    },
+    "all_recipes_common_wrong546": {
+      "rows": 546,
+      "correct": {
+        "raw": 0,
+        "nonlinear_residual": 1,
+        "exception_detector": 0
+      },
+      "paired": {
+        "raw": {
+          "rows": 546,
+          "repaired": 0,
+          "broken": 0,
+          "net_correct": 0,
+          "both_correct": 0,
+          "both_wrong": 546
+        },
+        "nonlinear_residual": {
+          "rows": 546,
+          "repaired": 0,
+          "broken": 1,
+          "net_correct": -1,
+          "both_correct": 0,
+          "both_wrong": 545
+        }
+      }
+    }
+  },
+  "earth_confusion": {
+    "Earth_sleep": {
+      "raw": {
+        "rows": 1106,
+        "tn": 39,
+        "fp": 345,
+        "fn": 41,
+        "tp": 681
+      },
+      "nonlinear_residual": {
+        "rows": 1106,
+        "tn": 71,
+        "fp": 313,
+        "fn": 68,
+        "tp": 654
+      },
+      "exception_detector": {
+        "rows": 1106,
+        "tn": 39,
+        "fp": 345,
+        "fn": 41,
+        "tp": 681
+      }
+    },
+    "Earth_awake": {
+      "raw": {
+        "rows": 2464,
+        "tn": 1466,
+        "fp": 203,
+        "fn": 355,
+        "tp": 440
+      },
+      "nonlinear_residual": {
+        "rows": 2464,
+        "tn": 1483,
+        "fp": 186,
+        "fn": 368,
+        "tp": 427
+      },
+      "exception_detector": {
+        "rows": 2464,
+        "tn": 1466,
+        "fp": 203,
+        "fn": 355,
+        "tp": 440
+      }
+    }
+  },
+  "oof_path": "artifacts/error_targeted_20261118/exception_detector/oof.npz",
+  "oof_sha256": "524aaf4a0d6d9c641f3ca1aeaa1d1cb43bc88ff0b15ebb263f804429919e8403",
+  "seconds": 4.508231499999965,
+  "base_models_retrained": false,
+  "old_holdout_labels_read": false,
+  "automatic_upload": false,
+  "disclosure": [
+    "Same information re-expressed as an error-probability task, not a new independent signal.",
+    "Inner raw supports3090/3091 versus outer4636 creates a training-size calibration shift.",
+    "Adaptively reused development labels and historical reporting subsets do not establish independent generalization or an80percent data ceiling.",
+    "No new continuation gate; complete fixed experiment reported whether good or bad."
+  ]
+}

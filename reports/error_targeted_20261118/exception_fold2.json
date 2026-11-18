@@ -1,0 +1,94 @@
+{
+  "fold": 2,
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "training_error_rate": 0.1878774805867127,
+  "seed": 20261114,
+  "requested_rounds": 60,
+  "actual_iterations": 60,
+  "exact_q_half_count": 0,
+  "booster_sha256": "d06800747e1b2fe5ddc78ab0c738da1a04135d1fb961f949fcd152c51c49d387",
+  "schema_sha256": "36e1793b256ccd529815d079122f030c97f91ebc9a0071ccb7c3f4b2bb343d52",
+  "rows_sha256": "cd1afcfe214a09c61511a7544d28b11e3d64a4ed9fb98105156795cb6c947f70",
+  "reload_max_abs_difference": 0.0,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "nonlinear_residual": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.38545950841709997
+    },
+    "exception_detector": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.395156403706463
+    }
+  },
+  "paired": {
+    "raw": {
+      "rows": 2318,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 1882,
+      "both_wrong": 436
+    },
+    "nonlinear_residual": {
+      "rows": 2318,
+      "repaired": 15,
+      "broken": 30,
+      "net_correct": -15,
+      "both_correct": 1867,
+      "both_wrong": 406
+    }
+  },
+  "earth_confusion": {
+    "Earth_sleep": {
+      "raw": {
+        "rows": 362,
+        "tn": 3,
+        "fp": 125,
+        "fn": 3,
+        "tp": 231
+      },
+      "nonlinear_residual": {
+        "rows": 362,
+        "tn": 11,
+        "fp": 117,
+        "fn": 7,
+        "tp": 227
+      },
+      "exception_detector": {
+        "rows": 362,
+        "tn": 3,
+        "fp": 125,
+        "fn": 3,
+        "tp": 231
+      }
+    },
+    "Earth_awake": {
+      "raw": {
+        "rows": 834,
+        "tn": 490,
+        "fp": 62,
+        "fn": 122,
+        "tp": 160
+      },
+      "nonlinear_residual": {
+        "rows": 834,
+        "tn": 500,
+        "fp": 52,
+        "fn": 129,
+        "tp": 153
+      },
+      "exception_detector": {
+        "rows": 834,
+        "tn": 490,
+        "fp": 62,
+        "fn": 122,
+        "tp": 160
+      }
+    }
+  }
+}
