@@ -1,0 +1,20 @@
+{
+  "status": "frozen_before_any_new_representation_or_readout",
+  "representation": "Official Tab2D post-final_layer_norm, pre-final_layer, query label token index0; 512dimensions. No backbone updates.",
+  "head_verification": "Every forward: F.linear full native input inside same autocast reproduces all10 native logits exactly; returned query logits equal head token0.",
+  "data": "Original6954dev only targets, original3 SKF seed20261112; no old1739 targets.",
+  "nested": "For outer i, inner3 SKF seed20261117+i, model seeds20261117+100*i+j; matches authenticated cached raw inner predictions. Each row is absent from its own context and preprocessing fit.",
+  "outer": "Full4636 outertrain support,2318queries, modelseed20261112+outer, compact13. Require fresh probability exactly matches authenticated rawOOF.",
+  "readout": "StandardScaler fit on 4636 nestedOOF512vectors only; fixed raw logit offset. mean binary NLL +0.1*sum(w**2), free intercept. L-BFGS-B500/ftol1e-12/gtol1e-8, zero init; no hyperparameter search.",
+  "control": "Same nested raw offsets, intercept only, identical objective and optimizer.",
+  "prediction": "sigmoid(logit(raw_outer)+intercept+standardized_outer_embedding@w), threshold0.5",
+  "precision": "Original MPS bf16 autocast, FP32 weights/input; 0.65memory, CPU4",
+  "budget_seconds": 1800,
+  "execution": "Fold0 first, then same frozen recipe folds1/2; no selection based on fold0.",
+  "limitations": [
+    "Adaptive reuseddev, not independent validation.",
+    "Training representations use about3090 support; validation4636; context distribution shift remains.",
+    "Representation is supervised by other support labels, never own/query labels.",
+    "546mask is posthoc reporting only; not used to train or select rows."
+  ]
+}

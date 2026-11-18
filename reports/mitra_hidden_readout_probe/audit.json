@@ -1,0 +1,126 @@
+{
+  "status": "verified_complete",
+  "oof_sha256": "f8d976f0e2e58d9501c10fe1ba804feb997e3c5ac0fe1411e4c01e032fb2a3de",
+  "source_hashes_verified": true,
+  "all12_packet_ids_verified": true,
+  "outer_query_labels_never_support": true,
+  "training_scaler_recomputed": true,
+  "readout_reload_and_predict_exact": true,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.816508484325568,
+      "log_loss": 0.38019593489424935
+    },
+    "constant": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.3802030995217259
+    },
+    "hidden": {
+      "accuracy": 0.8172274949669255,
+      "log_loss": 0.3801389369220999
+    }
+  },
+  "hard546": {
+    "raw": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      },
+      "vs_constant": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      }
+    },
+    "constant": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      },
+      "vs_constant": {
+        "rows": 546,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 546
+      }
+    },
+    "hidden": {
+      "correct": 5,
+      "vs_raw": {
+        "rows": 546,
+        "repaired": 5,
+        "broken": 0,
+        "net_correct": 5,
+        "both_correct": 0,
+        "both_wrong": 541
+      },
+      "vs_constant": {
+        "rows": 546,
+        "repaired": 5,
+        "broken": 0,
+        "net_correct": 5,
+        "both_correct": 0,
+        "both_wrong": 541
+      }
+    }
+  },
+  "overall_vs_raw": {
+    "rows": 6954,
+    "repaired": 87,
+    "broken": 82,
+    "net_correct": 5,
+    "both_correct": 5596,
+    "both_wrong": 1189
+  },
+  "overall_vs_constant": {
+    "rows": 6954,
+    "repaired": 101,
+    "broken": 101,
+    "net_correct": 0,
+    "both_correct": 5582,
+    "both_wrong": 1170
+  },
+  "fold_vs_raw": [
+    {
+      "rows": 2318,
+      "repaired": 15,
+      "broken": 19,
+      "net_correct": -4,
+      "both_correct": 1877,
+      "both_wrong": 407
+    },
+    {
+      "rows": 2318,
+      "repaired": 19,
+      "broken": 25,
+      "net_correct": -6,
+      "both_correct": 1875,
+      "both_wrong": 399
+    },
+    {
+      "rows": 2318,
+      "repaired": 53,
+      "broken": 38,
+      "net_correct": 15,
+      "both_correct": 1844,
+      "both_wrong": 383
+    }
+  ],
+  "seconds": 100.30194941700029,
+  "conclusion": "Fixed hidden linear readout ties intercept-only accuracy; +5 vs raw is not evidence of embedding accuracy increment. Fold directions mixed. Hard recovery assessed descriptively, not selected for fitting."
+}
