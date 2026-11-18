@@ -1,0 +1,428 @@
+{
+  "population": {
+    "rows": 6954,
+    "errors": 1291,
+    "correct": 5663,
+    "hard": 546,
+    "hard_already_correct": 3,
+    "compatible_retrieval_rows": 6711
+  },
+  "disjoint_retrieval_contributions": {
+    "spending_only": {
+      "covered_errors": 137,
+      "potential_breaks": 1189,
+      "covered_hard_errors": 61
+    },
+    "cabin_only": {
+      "covered_errors": 353,
+      "potential_breaks": 1219,
+      "covered_hard_errors": 170
+    },
+    "both": {
+      "covered_errors": 547,
+      "potential_breaks": 1458,
+      "covered_hard_errors": 222
+    }
+  },
+  "components": {
+    "spending_high": {
+      "accuracy": 0.5320678746045442,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 684,
+      "breaks": 2647,
+      "net": -1963,
+      "error_recall": 0.5298218435321457,
+      "correct_lost": 0.46742009535581847,
+      "change_precision": 0.2053437406184329,
+      "hard546_correct": 286,
+      "hard546_new": 283,
+      "fold_net": [
+        -439,
+        -385,
+        -1139
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 1040,
+        "breaks": 2291,
+        "net": -1251,
+        "hard546_new": 333
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 306,
+          "broken": 1185
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 378,
+          "broken": 1462
+        }
+      }
+    },
+    "cabin_high": {
+      "accuracy": 0.5588150704630429,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 900,
+      "breaks": 2677,
+      "net": -1777,
+      "error_recall": 0.69713400464756,
+      "correct_lost": 0.4727176408264171,
+      "change_precision": 0.2516074923119933,
+      "hard546_correct": 395,
+      "hard546_new": 392,
+      "fold_net": [
+        -653,
+        -438,
+        -686
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 1135,
+        "breaks": 2442,
+        "net": -1307,
+        "hard546_new": 398
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 492,
+          "broken": 906
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 408,
+          "broken": 1771
+        }
+      }
+    },
+    "either_high": {
+      "accuracy": 0.4075352315214265,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 1037,
+      "breaks": 3866,
+      "net": -2829,
+      "error_recall": 0.8032532920216886,
+      "correct_lost": 0.6826770263111425,
+      "change_precision": 0.21150316132979807,
+      "hard546_correct": 456,
+      "hard546_new": 453,
+      "fold_net": [
+        -812,
+        -673,
+        -1344
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 1239,
+        "breaks": 3664,
+        "net": -2425,
+        "hard546_new": 492
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 550,
+          "broken": 1622
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 487,
+          "broken": 2244
+        }
+      }
+    },
+    "matched_party": {
+      "accuracy": 0.6578947368421053,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 506,
+      "breaks": 1594,
+      "net": -1088,
+      "error_recall": 0.3919442292796282,
+      "correct_lost": 0.2814762493378068,
+      "change_precision": 0.24095238095238095,
+      "hard546_correct": 155,
+      "hard546_new": 155,
+      "fold_net": [
+        -355,
+        -413,
+        -320
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 872,
+        "breaks": 1228,
+        "net": -356,
+        "hard546_new": 201
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 259,
+          "broken": 1010
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 247,
+          "broken": 584
+        }
+      }
+    },
+    "imputation": {
+      "accuracy": 0.8134886396318666,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 254,
+      "breaks": 260,
+      "net": -6,
+      "error_recall": 0.1967467079783114,
+      "correct_lost": 0.04591206074518806,
+      "change_precision": 0.49416342412451364,
+      "hard546_correct": 19,
+      "hard546_new": 18,
+      "fold_net": [
+        -13,
+        9,
+        -2
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 249,
+        "breaks": 265,
+        "net": -16,
+        "hard546_new": 8
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 140,
+          "broken": 159
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 114,
+          "broken": 101
+        }
+      }
+    },
+    "latent": {
+      "accuracy": 0.7888984756974403,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 318,
+      "breaks": 495,
+      "net": -177,
+      "error_recall": 0.24632068164213788,
+      "correct_lost": 0.08740950026487727,
+      "change_precision": 0.39114391143911437,
+      "hard546_correct": 41,
+      "hard546_new": 41,
+      "fold_net": [
+        -41,
+        -45,
+        -91
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 392,
+        "breaks": 421,
+        "net": -29,
+        "hard546_new": 20
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 141,
+          "broken": 271
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 177,
+          "broken": 224
+        }
+      }
+    }
+  },
+  "joint": {
+    "retrieval_calibrated": {
+      "accuracy": 0.7968075927523728,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 209,
+      "breaks": 331,
+      "net": -122,
+      "error_recall": 0.16189000774593337,
+      "correct_lost": 0.0584495850256048,
+      "change_precision": 0.387037037037037,
+      "hard546_correct": 45,
+      "hard546_new": 42,
+      "fold_net": [
+        -3,
+        -19,
+        -100
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 254,
+        "breaks": 286,
+        "net": -32,
+        "hard546_new": 15
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 164,
+          "broken": 245
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 45,
+          "broken": 86
+        }
+      }
+    },
+    "retrieval_and_imputation": {
+      "accuracy": 0.8121944204774231,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 64,
+      "breaks": 79,
+      "net": -15,
+      "error_recall": 0.049573973663826494,
+      "correct_lost": 0.013950203072576373,
+      "change_precision": 0.44755244755244755,
+      "hard546_correct": 8,
+      "hard546_new": 5,
+      "fold_net": [
+        -5,
+        -5,
+        -5
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 66,
+        "breaks": 77,
+        "net": -11,
+        "hard546_new": 1
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 48,
+          "broken": 68
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 16,
+          "broken": 11
+        }
+      }
+    },
+    "retrieval_and_latent": {
+      "accuracy": 0.8091745757837217,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 48,
+      "breaks": 84,
+      "net": -36,
+      "error_recall": 0.037180480247869865,
+      "correct_lost": 0.014833127317676144,
+      "change_precision": 0.36363636363636365,
+      "hard546_correct": 8,
+      "hard546_new": 5,
+      "fold_net": [
+        -1,
+        -5,
+        -30
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 63,
+        "breaks": 69,
+        "net": -6,
+        "hard546_new": 1
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 34,
+          "broken": 67
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 14,
+          "broken": 17
+        }
+      }
+    },
+    "matched_party_and_two_challengers": {
+      "accuracy": 0.8152142651711245,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 62,
+      "breaks": 56,
+      "net": 6,
+      "error_recall": 0.048024786986831915,
+      "correct_lost": 0.009888751545117428,
+      "change_precision": 0.5254237288135594,
+      "hard546_correct": 3,
+      "hard546_new": 2,
+      "fold_net": [
+        2,
+        8,
+        -4
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 53,
+        "breaks": 65,
+        "net": -12,
+        "hard546_new": 0
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 22,
+          "broken": 26
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 40,
+          "broken": 30
+        }
+      }
+    },
+    "both_retrieval_views_and_two_challengers": {
+      "accuracy": 0.8143514524014955,
+      "base_wrong": 1291,
+      "base_correct": 5663,
+      "repairs": 53,
+      "breaks": 53,
+      "net": 0,
+      "error_recall": 0.041053446940356314,
+      "correct_lost": 0.009358996998057567,
+      "change_precision": 0.5,
+      "hard546_correct": 5,
+      "hard546_new": 2,
+      "fold_net": [
+        7,
+        10,
+        -17
+      ],
+      "confidence_only_same_changes": {
+        "repairs": 46,
+        "breaks": 60,
+        "net": -14,
+        "hard546_new": 0
+      },
+      "error_direction": {
+        "base_positive": {
+          "available": 666,
+          "repaired": 17,
+          "broken": 34
+        },
+        "base_negative": {
+          "available": 625,
+          "repaired": 36,
+          "broken": 19
+        }
+      }
+    }
+  },
+  "notes": "Complete exact champion development predictions. Cases for the retrieval route were learned using inner raw errors. Direction mismatch abstains. All labels are used only after constructing joint query decisions. Rules evaluated on repeatedly used development folds."
+}
