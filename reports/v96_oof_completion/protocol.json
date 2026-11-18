@@ -1,0 +1,27 @@
+{
+  "version": "v96_Mitra_counts_fixed15_online_first",
+  "historical_fold0": "artifacts/error_rescue_20261117/feature_probe_fold0/v96_Mitra_counts_fixed15_online_first.npz",
+  "new_folds": [
+    1,
+    2
+  ],
+  "seed_each_fold": 20261112,
+  "fixed_updates": 15,
+  "budget_seconds": 3600,
+  "algorithm": "Exact original fixed15 helper numerical path: CountsPreprocessor train-only fit, original checkpoint, 1024support/256query native10CE persistentAdamW, full4636 support/2318 query, original15 features. No inner selection, no other controls.",
+  "seed_policy": "Historical helper hardcodes SEED20261112 for prep/model/episode RNG. Preserve constant in both new folds; do not add fold index.",
+  "resources": {
+    "device": "mps",
+    "memory_fraction": 0.65,
+    "cpu_threads": 4,
+    "query_chunk": 2318
+  },
+  "checks": "Authenticate historical result+source hashes+cache SHA+prediction byte hash+train/query IDs+labels+metrics+15 update logs; source/environment freeze before newfit and after; original546 is post-prediction reporting.",
+  "limitations": [
+    "Adaptive same6954dev OOF completion, not new independent validation.",
+    "Historical fold0 observed before completing folds1/2, allthree retained without selection.",
+    "Follows actualfixed15fold0 seed strategy, distinct from historicalv81 varying selectedsteps.",
+    "No old1739 holdout label reads, no upload or full-data export."
+  ],
+  "catalog_rows_sha256": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+}
