@@ -1,0 +1,148 @@
+{
+  "solo_count": 3817,
+  "solo_baseline_correct": 3066,
+  "baseline_correct": 5680,
+  "catboost_features": [
+    "HomePlanet",
+    "CryoSleep",
+    "Destination",
+    "Age",
+    "VIP",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Deck",
+    "CabinNumber",
+    "Side",
+    "spend_known_sum",
+    "spend_missing_count",
+    "spend_positive_count"
+  ],
+  "confidence_cutoff": 0.8,
+  "support": [
+    {
+      "solo": 2545,
+      "multi": 2091,
+      "multi_effective_n": 1083.6796312541228
+    },
+    {
+      "solo": 2552,
+      "multi": 2084,
+      "multi_effective_n": 924.7685366040341
+    },
+    {
+      "solo": 2537,
+      "multi": 2099,
+      "multi_effective_n": 957.2664946710318
+    }
+  ],
+  "results": {
+    "pooled_always": {
+      "correct": 5678,
+      "accuracy": 0.816508484325568,
+      "repairs": 126,
+      "harms": 128,
+      "hard_repairs": 5,
+      "hard_harms": 2,
+      "fold_net": [
+        3,
+        -5,
+        0
+      ],
+      "solo_correct": 3064,
+      "solo_accuracy": 0.8027246528687451
+    },
+    "pooled_confident": {
+      "correct": 5681,
+      "accuracy": 0.8169398907103825,
+      "repairs": 2,
+      "harms": 1,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        1
+      ],
+      "solo_correct": 3067,
+      "solo_accuracy": 0.803510610427037
+    },
+    "solo_only_always": {
+      "correct": 5615,
+      "accuracy": 0.8074489502444636,
+      "repairs": 123,
+      "harms": 188,
+      "hard_repairs": 11,
+      "hard_harms": 2,
+      "fold_net": [
+        -32,
+        -18,
+        -15
+      ],
+      "solo_correct": 3001,
+      "solo_accuracy": 0.7862195441446161
+    },
+    "solo_only_confident": {
+      "correct": 5676,
+      "accuracy": 0.816220880069025,
+      "repairs": 2,
+      "harms": 6,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        -1,
+        -2,
+        -1
+      ],
+      "solo_correct": 3062,
+      "solo_accuracy": 0.8022006811632172
+    },
+    "solo_odds_transfer_always": {
+      "correct": 5644,
+      "accuracy": 0.8116192119643371,
+      "repairs": 113,
+      "harms": 149,
+      "hard_repairs": 5,
+      "hard_harms": 2,
+      "fold_net": [
+        -10,
+        -11,
+        -15
+      ],
+      "solo_correct": 3030,
+      "solo_accuracy": 0.7938171338747707
+    },
+    "solo_odds_transfer_confident": {
+      "correct": 5679,
+      "accuracy": 0.8166522864538395,
+      "repairs": 1,
+      "harms": 2,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        -2,
+        0,
+        1
+      ],
+      "solo_correct": 3065,
+      "solo_accuracy": 0.802986638721509
+    },
+    "all_three_confident": {
+      "correct": 5679,
+      "accuracy": 0.8166522864538395,
+      "repairs": 0,
+      "harms": 1,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        -1,
+        0,
+        0
+      ],
+      "solo_correct": 3065,
+      "solo_accuracy": 0.802986638721509
+    }
+  }
+}
