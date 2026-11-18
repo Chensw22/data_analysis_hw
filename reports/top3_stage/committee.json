@@ -1,0 +1,66 @@
+{
+  "rows": 6954,
+  "accuracy": 0.815070463042853,
+  "paired": {
+    "rows": 6954,
+    "repaired": 41,
+    "broken": 51,
+    "net_correct": -10,
+    "both_correct": 5627,
+    "both_wrong": 1235
+  },
+  "hard": {
+    "rows": 546,
+    "repaired": 0,
+    "broken": 0,
+    "net_correct": 0,
+    "both_correct": 0,
+    "both_wrong": 546
+  },
+  "folds": [
+    {
+      "rows": 2318,
+      "repaired": 14,
+      "broken": 12,
+      "net_correct": 2,
+      "both_correct": 1884,
+      "both_wrong": 408
+    },
+    {
+      "rows": 2318,
+      "repaired": 10,
+      "broken": 17,
+      "net_correct": -7,
+      "both_correct": 1883,
+      "both_wrong": 408
+    },
+    {
+      "rows": 2318,
+      "repaired": 17,
+      "broken": 22,
+      "net_correct": -5,
+      "both_correct": 1860,
+      "both_wrong": 419
+    }
+  ],
+  "hard_at_least_one": 71,
+  "hard_still_all_wrong": 475,
+  "hard_exact_vote_patterns": {
+    "(0, 0, 0)": 475,
+    "(0, 0, 1)": 38,
+    "(0, 1, 0)": 15,
+    "(0, 1, 1)": 1,
+    "(1, 0, 0)": 17,
+    "(1, 0, 1)": 0,
+    "(1, 1, 0)": 0,
+    "(1, 1, 1)": 0
+  },
+  "vote_order": [
+    "weighted_cat",
+    "mechanism",
+    "density"
+  ],
+  "both_clause": "Base rawMitra unless all three new models vote for the same class.",
+  "correct_needed_for_over_85": 5911,
+  "raw_correct": 5678
+}
