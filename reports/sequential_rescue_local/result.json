@@ -1,0 +1,187 @@
+{
+  "routes": {
+    "first_only": {
+      "accuracy": 0.817946505608283,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 25,
+      "breaks": 17,
+      "net": 8,
+      "error_recall": 0.019623233908948195,
+      "correct_lost": 0.002992957746478873,
+      "change_precision": 0.5952380952380952,
+      "hard546_correct": 5,
+      "hard546_new": 0,
+      "fold_net": [
+        0,
+        2,
+        6
+      ],
+      "hard_lost": 0
+    },
+    "parallel": {
+      "accuracy": 0.817083692838654,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 15,
+      "breaks": 13,
+      "net": 2,
+      "error_recall": 0.011773940345368918,
+      "correct_lost": 0.002288732394366197,
+      "change_precision": 0.5357142857142857,
+      "hard546_correct": 5,
+      "hard546_new": 0,
+      "fold_net": [
+        0,
+        2,
+        0
+      ],
+      "hard_lost": 0
+    },
+    "sequential": {
+      "accuracy": 0.8172274949669255,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 16,
+      "breaks": 13,
+      "net": 3,
+      "error_recall": 0.012558869701726845,
+      "correct_lost": 0.002288732394366197,
+      "change_precision": 0.5517241379310345,
+      "hard546_correct": 5,
+      "hard546_new": 0,
+      "fold_net": [
+        0,
+        3,
+        0
+      ],
+      "hard_lost": 0
+    }
+  },
+  "training": [
+    {
+      "fold": 0,
+      "packet": 0,
+      "teacher_errors": 208,
+      "uncovered": 161
+    },
+    {
+      "fold": 0,
+      "packet": 1,
+      "teacher_errors": 205,
+      "uncovered": 161
+    },
+    {
+      "fold": 0,
+      "packet": 2,
+      "teacher_errors": 205,
+      "uncovered": 130
+    },
+    {
+      "fold": 1,
+      "packet": 0,
+      "teacher_errors": 207,
+      "uncovered": 149
+    },
+    {
+      "fold": 1,
+      "packet": 1,
+      "teacher_errors": 195,
+      "uncovered": 144
+    },
+    {
+      "fold": 1,
+      "packet": 2,
+      "teacher_errors": 194,
+      "uncovered": 138
+    },
+    {
+      "fold": 2,
+      "packet": 0,
+      "teacher_errors": 193,
+      "uncovered": 140
+    },
+    {
+      "fold": 2,
+      "packet": 1,
+      "teacher_errors": 191,
+      "uncovered": 137
+    },
+    {
+      "fold": 2,
+      "packet": 2,
+      "teacher_errors": 188,
+      "uncovered": 138
+    }
+  ],
+  "standalone": {
+    "first": {
+      "accuracy": 0.7785447224618924,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 289,
+      "breaks": 555,
+      "net": -266,
+      "error_recall": 0.22684458398744112,
+      "correct_lost": 0.0977112676056338,
+      "change_precision": 0.3424170616113744,
+      "hard546_correct": 43,
+      "hard546_new": 43,
+      "fold_net": [
+        -75,
+        -59,
+        -132
+      ],
+      "hard_lost": 5
+    },
+    "parallel_second": {
+      "accuracy": 0.7029048029910843,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 622,
+      "breaks": 1414,
+      "net": -792,
+      "error_recall": 0.48822605965463106,
+      "correct_lost": 0.248943661971831,
+      "change_precision": 0.3055009823182711,
+      "hard546_correct": 227,
+      "hard546_new": 222,
+      "fold_net": [
+        -299,
+        -232,
+        -261
+      ],
+      "hard_lost": 0
+    },
+    "cascade_second": {
+      "accuracy": 0.6581823410986483,
+      "base_wrong": 1274,
+      "base_correct": 5680,
+      "repairs": 700,
+      "breaks": 1803,
+      "net": -1103,
+      "error_recall": 0.5494505494505495,
+      "correct_lost": 0.3174295774647887,
+      "change_precision": 0.2796644027167399,
+      "hard546_correct": 294,
+      "hard546_new": 289,
+      "fold_net": [
+        -447,
+        -334,
+        -322
+      ],
+      "hard_lost": 0
+    }
+  },
+  "oracle_extra_beyond_first": {
+    "parallel": {
+      "all": 502,
+      "hard": 204
+    },
+    "sequential": {
+      "all": 603,
+      "hard": 270
+    }
+  },
+  "oof_sha256": "545abf94d31bdad61066beca988ecf48980949c86fc3890197e412b381698501"
+}
