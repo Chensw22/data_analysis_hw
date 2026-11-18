@@ -1,0 +1,72 @@
+{
+  "status": "cpu_tiny_verified_mps_executes_but_cross_device_comparison_confounded",
+  "attribution": "Built with StableAI LimiX",
+  "code_commit": "db592af4a2f6f97ae20d9bf5fe56facdc00d7441",
+  "hf_revision": "de07b679e74a41b50b9de18251a8fa245e537440",
+  "weight_sha256": "ed01f7a0a18d25451bc9d1058b479ba6b68048aa1ebde06156c8fcfaf8b8fe81",
+  "weight_bytes": 1625774719,
+  "weights_only_load": true,
+  "checkpoint_unsafe_globals": [],
+  "actual_config": {
+    "nlayers": 24,
+    "nhead": 8,
+    "embed_dim": 256,
+    "features_per_group": 2,
+    "rmsnorm_impl": "triton",
+    "feature_attention_pipeline": "decoupled",
+    "separate_x_y_ffn": true,
+    "num_cls_tokens": 4,
+    "tf_norm_type": "rmsnorm",
+    "dsti_attention_backend": "auto"
+  },
+  "state_elements": 406232101,
+  "cpu_native32pipelines": {
+    "support": 32,
+    "query": 4,
+    "features": 13,
+    "prediction_seconds": 7.584457917000691,
+    "peak_rss_bytes": 3672457216,
+    "strict_state_match": true
+  },
+  "mps_tiny": {
+    "same_shape": true,
+    "max_abs_vs_cpu": 0.006278514862060547,
+    "fixed_tolerance": 2e-05,
+    "decisions_equal": true,
+    "driver_bytes": 2369929216,
+    "prediction_seconds": {
+      "cpu": 7.728980334002699,
+      "mps": 11.904111083000316
+    },
+    "status": "fixed_comparison_failed_not_full_resource_qualified"
+  },
+  "specific_confound": {
+    "source": "model/v2_0/transformer.py:add_embeddings",
+    "line": 799,
+    "operation": "torch.randn(...,device=x.device,dtype=x.dtype,generator=generator)",
+    "meaning": "CPU and MPS same seed does not imply identical random positional vectors; not yet diagnosed as kernel error. Any replay must be isolated diagnostic and explicitly recorded."
+  },
+  "modifications": [
+    "Only two locally injected norm modules use exact original nonCUDA functional RMSNorm; vendor files immutable.",
+    "No global torch patch, no CUDA/Triton execution, no unsafe pickle allowlist."
+  ],
+  "environment": "New isolated .venv-limix2; existing environments unchanged; all versions in environment.lock.txt",
+  "no_real_data_or_scores": true,
+  "no_MPS_full_context": true,
+  "no_training": true,
+  "next_options": [
+    "Explicitly authorized same-random-input CPU/MPS diagnostic before numerical claims.",
+    "Bounded CPU1000support onepipeline runtime observation; single tiny measurement cannot establish 4636/8693 or full32pipeline feasibility."
+  ],
+  "license": {
+    "model": "StableAI LimiX Non-Commercial License1.0; research/education/noncommercial Kaggle permitted subject to rules/attribution.",
+    "source": "StableAI Apache-derived1.0 with added naming/attribution; preserved officialLICENSE.txt.",
+    "public_distribution_of_modified_model": "Apply required LimiX prefix and attribution; model retained locally."
+  },
+  "sources": {
+    "limix2_cpu_probe.py": "22e4857c182a161b974523f763c641ce704935d4e14b016b829915a49bd253e5",
+    "limix2_cpu_compat.py": "61d2fd8d21b7ecb2402a132d5d8031bde325a28aeb8b7cc4c067e1468eb6a4a5",
+    "limix2_device_probe.py": "f1d7ba7a9e27029c2dc11d17bf02a48ad181199842407ca4138214b0c52a8eb8",
+    "limix2_setup.py": "8d77d693ef1e2941633937b95adb06219b2ad0ce2e5f9377bb7c5e9da57f0024"
+  }
+}

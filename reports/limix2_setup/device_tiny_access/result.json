@@ -1,0 +1,60 @@
+{
+  "status": "failed",
+  "real_data_read": false,
+  "MPS_fraction": 0.65,
+  "tolerance": 2e-05,
+  "norm_equivalence": [
+    {
+      "class": "TritonRMSNorm",
+      "affine": true,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": [
+        "weight"
+      ]
+    },
+    {
+      "class": "TritonRMSNorm",
+      "affine": false,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": []
+    },
+    {
+      "class": "TritonQKNorm",
+      "affine": true,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": [
+        "weight"
+      ]
+    },
+    {
+      "class": "TritonQKNorm",
+      "affine": false,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": []
+    }
+  ],
+  "cpu_parameter_devices": [
+    "cpu"
+  ],
+  "mps_parameter_devices": [
+    "mps:0"
+  ],
+  "mps_current_bytes": 1625003008,
+  "mps_driver_bytes": 2369929216,
+  "max_absolute_difference": 0.006278514862060547,
+  "decisions_equal": true,
+  "prediction_seconds": {
+    "cpu": 7.728980334002699,
+    "mps": 11.904111083000316
+  },
+  "pipelines": 32,
+  "support_rows": 32,
+  "query_rows": 4,
+  "features": 13,
+  "weights_only": true,
+  "no_accuracy_computed": true,
+  "error_type": "RuntimeError",
+  "error": "Fixed CPU/MPS tolerance or decisions check failed.",
+  "seconds": 30.225382291999267,
+  "peak_rss_bytes": 3644751872
+}

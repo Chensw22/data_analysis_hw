@@ -1,0 +1,20 @@
+initializing cpu
+arch_version=2.0 -> inference.v2_0.predictor (inference.v2_0.predictor)
+Mixed precision is not supported for CPU inference, so it has been automatically disabled
+use limix v2.0
+completed cpu 7.728980334002699
+initializing mps
+arch_version=2.0 -> inference.v2_0.predictor (inference.v2_0.predictor)
+use limix v2.0
+completed mps 11.904111083000316
+Traceback (most recent call last):
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 74, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 59, in main
+    if sys.argv[1:]==['--worker']:return worker()
+                                         ^^^^^^^^
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 49, in worker
+    if diff>2e-5 or not same:raise RuntimeError('Fixed CPU/MPS tolerance or decisions check failed.')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Fixed CPU/MPS tolerance or decisions check failed.

@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 73, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 58, in main
+    if sys.argv[1:]==['--worker']:return worker()
+                                         ^^^^^^^^
+  File "/Users/chenshuaiwen/Desktop/ml1/spaceship_titanic/limix2_device_probe.py", line 21, in worker
+    if not torch.backends.mps.is_available():raise RuntimeError('MPS unavailable; no fallback.')
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: MPS unavailable; no fallback.

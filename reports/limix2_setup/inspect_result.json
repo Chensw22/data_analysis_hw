@@ -1,0 +1,33 @@
+{
+  "status": "safe_checkpoint_inspected",
+  "mode": "inspect",
+  "device": "cpu",
+  "real_data_read": false,
+  "unsafe_checkpoint_globals": [],
+  "weights_only": true,
+  "checkpoint_keys": [
+    "state_dict",
+    "config",
+    "arch_version"
+  ],
+  "state_keys": 1496,
+  "state_elements": 406232101,
+  "tensor_bytes": 1624928404,
+  "runtime_KMP_DUPLICATE_LIB_OK": "FALSE",
+  "seconds": 13.765714791999926,
+  "peak_rss_bytes": 1860190208,
+  "config_sha256": "e15707536a8e6998f6ce7283d6b292217cc61d0a6fb05a37d7473b2caf0397b3",
+  "config_summary": {
+    "nlayers": 24,
+    "nhead": 8,
+    "embed_dim": 256,
+    "features_per_group": 2,
+    "rmsnorm_impl": "triton",
+    "feature_attention_pipeline": "decoupled",
+    "separate_x_y_ffn": true,
+    "num_cls_tokens": 4,
+    "tf_norm_type": "rmsnorm",
+    "dsti_attention_backend": "auto"
+  },
+  "unabridged_inspection_artifact": "artifacts/limix2_setup/inspect_full_result.json"
+}

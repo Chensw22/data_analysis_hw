@@ -1,0 +1,75 @@
+{
+  "status": "cpu_tiny_complete",
+  "mode": "smoke",
+  "device": "cpu",
+  "real_data_read": false,
+  "unsafe_checkpoint_globals": [],
+  "weights_only": true,
+  "checkpoint_keys": [
+    "state_dict",
+    "config",
+    "arch_version"
+  ],
+  "config_sha256": "e15707536a8e6998f6ce7283d6b292217cc61d0a6fb05a37d7473b2caf0397b3",
+  "config_summary": {
+    "nlayers": 24,
+    "nhead": 8,
+    "embed_dim": 256,
+    "features_per_group": 2,
+    "rmsnorm_impl": "triton",
+    "feature_attention_pipeline": "decoupled",
+    "separate_x_y_ffn": true,
+    "num_cls_tokens": 4,
+    "tf_norm_type": "rmsnorm",
+    "dsti_attention_backend": "auto"
+  },
+  "state_keys": 1496,
+  "state_elements": 406232101,
+  "tensor_bytes": 1624928404,
+  "norm_equivalence": [
+    {
+      "class": "TritonRMSNorm",
+      "affine": true,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": [
+        "weight"
+      ]
+    },
+    {
+      "class": "TritonRMSNorm",
+      "affine": false,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": []
+    },
+    {
+      "class": "TritonQKNorm",
+      "affine": true,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": [
+        "weight"
+      ]
+    },
+    {
+      "class": "TritonQKNorm",
+      "affine": false,
+      "noncontiguous_cpu_output_bitwise_equal": true,
+      "state_keys": []
+    }
+  ],
+  "local_import_adapter": [
+    "model.v2_0.operators.rmsnorm.triton_rmsnorm",
+    "model.v2_0.operators.rmsnorm.triton_qknorm"
+  ],
+  "pipelines": 32,
+  "strict_loaded_state_equal": true,
+  "prediction_seconds": 7.584457917000691,
+  "support_rows": 32,
+  "query_rows": 4,
+  "features": 13,
+  "probability_sha256": "b0be42e433815bfd68325b206fa5d73ed90140d178465315a165edea70787d0c",
+  "model_parameters": 406222100,
+  "no_accuracy_computed": true,
+  "runtime_KMP_DUPLICATE_LIB_OK": "FALSE",
+  "seconds": 75.25468220899711,
+  "peak_rss_bytes": 3672457216
+}
