@@ -8,7 +8,7 @@ PROPOSAL = "proposal_nov18_peer_cabin"
 VERSION = "v106_v96_peer_cabin"
 
 
-def infer():
+def infer(test_only=True):
     frame = pd.concat([pd.read_csv(common.ROOT/"data/raw"/file, usecols=["PassengerId","Cabin"])
                        for file in ["train.csv","test.csv"]], ignore_index=True)
     group = frame.PassengerId.str.split("_").str[0].astype(int)
@@ -49,7 +49,7 @@ def infer():
     stats = dict(masked_cabins=observed, correct_deck_and_side=correct,
                  median_number_error_when_deck_side_correct=float(np.median(distances)),
                  test_fillable=len(test), hard546_fillable=int(hard.isin(updates.index).sum()))
-    return frame,test,stats
+    return frame, test if test_only else updates.sort_index(), stats
 
 
 if __name__ == "__main__":
