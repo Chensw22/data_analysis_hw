@@ -1,0 +1,46 @@
+{
+  "fold": 2,
+  "fit": {
+    "success": true,
+    "iterations": 159,
+    "objective": 1964.851645673101,
+    "gradient_max": 0.0018685702890265388,
+    "features": 543
+  },
+  "training_rows": 4636,
+  "query_rows": 2318,
+  "model_sha256": "0fcf61b391f3bcaeac4706b17d436f5a44a55153b06b858fd9f9bedb77b814d1",
+  "reload_difference": 0.0,
+  "metrics": {
+    "raw": {
+      "accuracy": 0.8119068162208801,
+      "log_loss": 0.38758918506166057
+    },
+    "mechanism": {
+      "accuracy": 0.7933563416738568,
+      "log_loss": 0.4346357434609844
+    },
+    "fixed_half": {
+      "accuracy": 0.8041415012942191,
+      "log_loss": 0.40241110138525293
+    }
+  },
+  "paired": {
+    "mechanism": {
+      "rows": 2318,
+      "repaired": 80,
+      "broken": 123,
+      "net_correct": -43,
+      "both_correct": 1759,
+      "both_wrong": 356
+    },
+    "fixed_half": {
+      "rows": 2318,
+      "repaired": 42,
+      "broken": 60,
+      "net_correct": -18,
+      "both_correct": 1822,
+      "both_wrong": 394
+    }
+  }
+}

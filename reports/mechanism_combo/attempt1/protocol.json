@@ -1,0 +1,37 @@
+{
+  "status": "fixed_before_any_mechanism_fit",
+  "hypothesis": "Hierarchical hurdle-dose response: zero participation, missingness and smooth positive consumption effects shared globally with strongly shrunk Planet\u00d7Cryo deviations; statistical hypothesis, not recovered physical transmission mechanism.",
+  "global_l2": 3.0,
+  "state_l2": 30.0,
+  "optimizer_options": {
+    "maxiter": 1000,
+    "ftol": 1e-11,
+    "gtol": 1e-05
+  },
+  "objective": "sum binaryNLL +.5\u03a3lambda_j theta_j\u00b2; intercept lambda0; global coefficients lambda3; state-specific dose/age deviations lambda30",
+  "dose": "Five services: positive indicator, missing indicator, log1p(amount) quadratic B-spline (4 uniform training-range knots, include_biasFalse, linear extrapolation), structural zero reference gives exact0 contribution; missing continuous contribution0 with separate indicator.",
+  "states": "Observed train-only HomePlanet\u00d7Cryo string states; unseen state no deviation. Shared category/global curves remain.",
+  "controls": "Train-only categorical one-hot HomePlanet/Cryo/Destination/VIP/Deck/Side; train-centered age spline+missing and state age deviations; independently train-centered CabinNumber spline within each Deck\u00d7Side+missing.",
+  "comparison": "Standalone mechanism trained on each original outertrain; fixed0.5 probability mean with authenticated samefold rawMitra, no learned offset or blend weights.",
+  "validation": "Original6954 dev SKF3 seed20261112; all preprocessing/knots/ranges/state vocab on outertrain only; outerquery targets used only after prediction.3CPU fits, no heldout targets or Name.",
+  "reporting": "All rows/folds and546/616/914/5263 outcome masks read only after3fits; Earth sleep/awake confusion. Full per-feature coefficients saved for audit.",
+  "budget_seconds": 300,
+  "threshold": 0.5,
+  "limitations": [
+    "No new external information; explicit high-order smooth structure/hurdle decomposition is an inductive bias.",
+    "Old EBM15 with automatically selected10pair interactions performed poorly; this explicit Planet\u00d7Cryo\u00d7dose hierarchical model is not that recipe but is not independent evidence of a true mechanism.",
+    "Zero-spend Earthsleep rows still lack dose variation; age/spatial controls may be insufficient to identify their minority outcomes.",
+    "One adaptive fixed recipe; same repeatedly used development labels, no claim of independent validation,85percent guaranteed performance or data ceiling.",
+    "No hyperparameter/weight/threshold search and no upload."
+  ],
+  "source_hashes": {
+    "mechanism_combo.py": "2707e8ab347fae015e41debdc8cdae77af79362bc37469dcc248e7e212b89d83",
+    "error_overlap_diagnostic.py": "c145fdaa82a51f3265470e4a6c33781a7b608068d947a45cb0e1a379aa225f5e",
+    "relational_error_corrector.py": "fdf9bf36928e3970ed28ef72c63aaef2b88c0fbd4458ecd4fd937c28f7f7170e",
+    "exception_error_detector_nov18.py": "cf1a027631b8a9747d5f3b4ccd3b5e97b4dbfb3889241bcd30cb6a2336957ca1"
+  },
+  "historical_hashes": {
+    "reports/error_rescue_20261117/catalog.json": "f8157b1f84cc63c5afac03769920e718a466fb7149d36944cc9583fbc5c381ae",
+    "artifacts/error_rescue_20261117/catalog_rows.csv": "dc8ee3f4a522a8470f2e3a801ed090bb8e37bf368e72c226e5972cd9c0f9426e"
+  }
+}
