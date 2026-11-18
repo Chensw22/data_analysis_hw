@@ -1,0 +1,19 @@
+{
+  "status": "export_failed_resource_no_upload",
+  "proposal": "proposal_nov18_composition19",
+  "source_commit": "3e9ceea",
+  "failure": {
+    "status": "failed_not_upload_eligible",
+    "error_type": "RuntimeError",
+    "error": "MPS backend out of memory (MPS allocated: 7.80 GiB, other allocations: 736.00 KiB, max allowed: 7.70 GiB). Tried to allocate 169.79 MiB on shared pool. Use PYTORCH_MPS_HIGH_WATERMARK_RATIO=0.0 to disable upper limit for memory allocations (may cause system failure)."
+  },
+  "complete_model_exists": false,
+  "submission_exists": false,
+  "console_sha256": "fc7e144caa04867e2c99621af457cab0d30df35a49cab6c26ef3f422d36c593a",
+  "decision": "Archive full-support MPS OOM without retry or new settings. One-fold net3/hard178 rescue0 does not justify spending further time on this branch; prioritize retrieval. This is a resource failure, not new accuracy evidence.",
+  "official_limits_observed_before_retrieval": {
+    "numToday": 1,
+    "numAllowedNow": 9,
+    "limitedByTotal": false
+  }
+}
