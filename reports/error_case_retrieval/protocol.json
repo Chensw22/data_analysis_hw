@@ -1,0 +1,31 @@
+{
+  "status": "fixed_before_cases_or_threshold_selection",
+  "base": "Authenticated rawMitra inner OOF for all case labels. No authenticated v96 innerOOF available; v96 is reported only as direction-compatible selector transfer, not v96-specific case training.",
+  "views": {
+    "consumption": "5log1p bills,5zero bits,5missing bits",
+    "passenger_cabin": "Age,CabinNumber robust scaled+missing; HomePlanet,CryoSleep,Destination,VIP,Deck,Side onehot; no Name/ID feature"
+  },
+  "scaling": "Median/IQR fit only case library; fill numeric missing with median; clip standardized to[-8,8].",
+  "neighbors": "K32 or all available, same baseline predicted class; exclude same row and sameGroup in both neighbors and prior. Stable ascending distance/library-order ties. No available => abstain.",
+  "score": "Neighbor weights exp(-squared_distance/max(kth_squared_distance,1e-12)); (weighted error sum+2*allowed-pool-error-rate)/(weight sum+2).",
+  "calibration": "Only innerquery packet0 of each outerfold: GroupShuffleSplit50/50 seed20261132+outer yields case and independent calibration parts. That teacher support excludes BOTH sets. Do not aggregate calibration across inner packets whose teachers may have seen other calibration labels.",
+  "final_library": "All4636 outertrain with strict3innerOOF raw p/error labels after thresholds frozen. Query2318 true targets never used.",
+  "thresholds": "Separate predicted0/FN and predicted1/FP per view. Low/medium/high target calibration error recalls25/50/75%; quantile higher with >= threshold. deploy max calibration(repairs-breaks), tie fewer flips, includes abstention.",
+  "joint": "Continuous max(two view scores), calibrated independently by same procedure. Also report OR of two separately calibrated flip decisions. Neither uses querylabels.",
+  "oracle": "Union of rows correctly flipped by either individual expert uses query truth only for diagnostic upper bound; cannot deploy without errors.",
+  "v96_transfer": "Apply fixed raw-case selector only where v96/raw predicted classes agree; other rows abstain, not training v96 case labels.",
+  "threshold_levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "CPU_threads": 4,
+  "budget_seconds": 600,
+  "no_GPU": true,
+  "limitations": [
+    "Adaptive same6954 development labels;546mask reporting only.",
+    "Calibration library about772 rows vs final4636; neighbor density/score distribution shift remains.",
+    "One calibration subset per outerfold limits threshold reliability; no seed/K/view/weight scan.",
+    "High-recall experts retained even if overall worse; reported with all errors and all correct denominators."
+  ]
+}
