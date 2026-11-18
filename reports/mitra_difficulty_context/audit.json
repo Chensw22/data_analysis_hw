@@ -1,0 +1,223 @@
+{
+  "status": "independent_npz_identity_score_pair_and_source_checks_passed",
+  "metrics": {
+    "raw_full": {
+      "accuracy": 0.817946505608283,
+      "log_loss": 0.38102819387768605
+    },
+    "uniform": {
+      "accuracy": 0.8132010353753235,
+      "log_loss": 0.39430496096611023
+    },
+    "uniform_half_raw": {
+      "accuracy": 0.8183779119930975,
+      "log_loss": 0.3856307007821973
+    },
+    "difficulty": {
+      "accuracy": 0.8097497842968076,
+      "log_loss": 0.4029415547847748
+    },
+    "difficulty_half_raw": {
+      "accuracy": 0.8157894736842105,
+      "log_loss": 0.38914132344685376
+    }
+  },
+  "seconds": 13.471059415998752,
+  "paired": {
+    "raw_full": {
+      "rows": 2318,
+      "repaired": 0,
+      "broken": 0,
+      "net_correct": 0,
+      "both_correct": 1896,
+      "both_wrong": 422
+    },
+    "uniform": {
+      "rows": 2318,
+      "repaired": 73,
+      "broken": 84,
+      "net_correct": -11,
+      "both_correct": 1812,
+      "both_wrong": 349
+    },
+    "uniform_half_raw": {
+      "rows": 2318,
+      "repaired": 47,
+      "broken": 46,
+      "net_correct": 1,
+      "both_correct": 1850,
+      "both_wrong": 375
+    },
+    "difficulty": {
+      "rows": 2318,
+      "repaired": 61,
+      "broken": 80,
+      "net_correct": -19,
+      "both_correct": 1816,
+      "both_wrong": 361
+    },
+    "difficulty_half_raw": {
+      "rows": 2318,
+      "repaired": 37,
+      "broken": 42,
+      "net_correct": -5,
+      "both_correct": 1854,
+      "both_wrong": 385
+    }
+  },
+  "hard178": {
+    "raw_full": {
+      "correct": 0,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 0,
+        "both_wrong": 178
+      },
+      "vs_uniform": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 5,
+        "net_correct": -5,
+        "both_correct": 0,
+        "both_wrong": 173
+      },
+      "vs_uniform_half": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 1,
+        "net_correct": -1,
+        "both_correct": 0,
+        "both_wrong": 177
+      }
+    },
+    "uniform": {
+      "correct": 5,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 5,
+        "broken": 0,
+        "net_correct": 5,
+        "both_correct": 0,
+        "both_wrong": 173
+      },
+      "vs_uniform": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 5,
+        "both_wrong": 173
+      },
+      "vs_uniform_half": {
+        "rows": 178,
+        "repaired": 4,
+        "broken": 0,
+        "net_correct": 4,
+        "both_correct": 1,
+        "both_wrong": 173
+      }
+    },
+    "uniform_half_raw": {
+      "correct": 1,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 1,
+        "broken": 0,
+        "net_correct": 1,
+        "both_correct": 0,
+        "both_wrong": 177
+      },
+      "vs_uniform": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 4,
+        "net_correct": -4,
+        "both_correct": 1,
+        "both_wrong": 173
+      },
+      "vs_uniform_half": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1,
+        "both_wrong": 177
+      }
+    },
+    "difficulty": {
+      "correct": 1,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 1,
+        "broken": 0,
+        "net_correct": 1,
+        "both_correct": 0,
+        "both_wrong": 177
+      },
+      "vs_uniform": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 4,
+        "net_correct": -4,
+        "both_correct": 1,
+        "both_wrong": 173
+      },
+      "vs_uniform_half": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1,
+        "both_wrong": 177
+      }
+    },
+    "difficulty_half_raw": {
+      "correct": 1,
+      "vs_raw": {
+        "rows": 178,
+        "repaired": 1,
+        "broken": 0,
+        "net_correct": 1,
+        "both_correct": 0,
+        "both_wrong": 177
+      },
+      "vs_uniform": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 4,
+        "net_correct": -4,
+        "both_correct": 1,
+        "both_wrong": 173
+      },
+      "vs_uniform_half": {
+        "rows": 178,
+        "repaired": 0,
+        "broken": 0,
+        "net_correct": 0,
+        "both_correct": 1,
+        "both_wrong": 177
+      }
+    }
+  },
+  "difficulty_vs_uniform": {
+    "rows": 2318,
+    "repaired": 87,
+    "broken": 95,
+    "net_correct": -8,
+    "both_correct": 1790,
+    "both_wrong": 346
+  },
+  "difficulty_half_vs_uniform_half": {
+    "rows": 2318,
+    "repaired": 49,
+    "broken": 55,
+    "net_correct": -6,
+    "both_correct": 1842,
+    "both_wrong": 372
+  },
+  "no_second_recipe": true,
+  "prior_failure": "startup_failure_sandbox only: Metal invisible before model; archived and originalrecipe rerun with authorized Metal access."
+}
