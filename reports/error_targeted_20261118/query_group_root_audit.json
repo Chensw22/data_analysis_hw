@@ -1,0 +1,46 @@
+{
+  "status": "independently_verified_cached_outputs",
+  "result_sha256": "63f9f80fbd8d84f93ac9e937edb94e362819ccc32c4425facd6ab52e001629d8",
+  "freeze_sha256": "837d2486e3c449dfb9cc717dabe96d3efb9c0f39adf477e7e9e7c45353137bc4",
+  "oof_sha256": "17c622e0f613028484836e7c3fcb62ba68892fa14edf07946e4ae5ae79026812",
+  "rows": 6954,
+  "accuracy": 0.816508484325568,
+  "log_loss": 0.3801859135912618,
+  "repairs": 3,
+  "breaks": 3,
+  "net_correct": 0,
+  "betas": [
+    0.005346038447676097,
+    0.0,
+    0.0
+  ],
+  "subsets": {
+    "all24_wrong546": {
+      "rows": 546,
+      "covered": 107,
+      "repaired_vs_raw": 0,
+      "broken_vs_raw": 0,
+      "candidate_correct": 0
+    },
+    "primary_wrong616": {
+      "rows": 616,
+      "covered": 115,
+      "repaired_vs_raw": 0,
+      "broken_vs_raw": 0,
+      "candidate_correct": 2
+    },
+    "five_wrong914": {
+      "rows": 914,
+      "covered": 179,
+      "repaired_vs_raw": 1,
+      "broken_vs_raw": 0,
+      "candidate_correct": 16
+    }
+  },
+  "singleton_and_beta0_unchanged": true,
+  "source_and_all_frozen_evidence_verified": true,
+  "raw_reference_and_all_row_identities_verified": true,
+  "new_fit_or_inference_performed": false,
+  "serialization_note": "HistoricalNPZ group/passenger identity arrays are objectdtype. allow_pickle=False rejected their loading; this audit usedallow_pickle=True only after authenticating this locally generated NPZ against frozenSHA. Numericalarrays unaffected; future outputs shouldcastIDs toUnicode.",
+  "conclusion": "No accuracy gain and none of historical546 rescued. Archive this fixed random-query subgraph recipe; no beta/edge/threshold rescue. This is not a test of complete deployed graphs or all graph methods."
+}
