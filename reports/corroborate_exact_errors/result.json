@@ -1,0 +1,131 @@
+{
+  "methods": {
+    "manifest_majority": {
+      "accuracy": 0.813632441760138,
+      "fixed": 93,
+      "harmed": 98,
+      "fold_net": [
+        2,
+        4,
+        -11
+      ],
+      "hard_fixed": 19,
+      "hard_harmed": 0,
+      "persistent_fixed": 12,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.46390594402089713,
+        0.3283580488573302
+      ]
+    },
+    "manifest_unanimous": {
+      "accuracy": 0.8140638481449526,
+      "fixed": 47,
+      "harmed": 49,
+      "fold_net": [
+        9,
+        2,
+        -13
+      ],
+      "hard_fixed": 11,
+      "hard_harmed": 0,
+      "persistent_fixed": 6,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.31226337204632976,
+        0.24289531405538275
+      ]
+    },
+    "model_unanimous": {
+      "accuracy": 0.8133448375035951,
+      "fixed": 25,
+      "harmed": 32,
+      "fold_net": [
+        2,
+        1,
+        -10
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.30338271791540083,
+        0.11484352569623887
+      ]
+    },
+    "both_stable": {
+      "accuracy": 0.814495254529767,
+      "fixed": 20,
+      "harmed": 19,
+      "fold_net": [
+        4,
+        2,
+        -5
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.17108700852150785,
+        0.18756379883922808
+      ]
+    },
+    "manifest_and_prototype": {
+      "accuracy": 0.8152142651711245,
+      "fixed": 36,
+      "harmed": 30,
+      "fold_net": [
+        9,
+        4,
+        -7
+      ],
+      "hard_fixed": 5,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.15787759367310317,
+        0.3182456014066604
+      ]
+    },
+    "manifest_and_sequential": {
+      "accuracy": 0.8149266609145815,
+      "fixed": 46,
+      "harmed": 42,
+      "fold_net": [
+        11,
+        3,
+        -10
+      ],
+      "hard_fixed": 10,
+      "hard_harmed": 0,
+      "persistent_fixed": 6,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.21584056856634984,
+        0.3157472133005856
+      ]
+    },
+    "manifest_and_both_specialists": {
+      "accuracy": 0.8157894736842105,
+      "fixed": 36,
+      "harmed": 26,
+      "fold_net": [
+        10,
+        5,
+        -5
+      ],
+      "hard_fixed": 5,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.08666856895712458,
+        0.36214894037240447
+      ]
+    }
+  },
+  "design": "Repeated group-held-out calibration predictions on the same adaptive development set; repeated calibrators share training data. Intersections are exploratory and their bootstrap intervals do not correct for choosing among rules. Fresh-party calibration for a full-data v108 remains untested."
+}
