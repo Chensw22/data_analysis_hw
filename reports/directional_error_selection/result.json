@@ -1,0 +1,237 @@
+{
+  "calibration": [
+    {
+      "outer": 0,
+      "packet": 0,
+      "positive": false,
+      "cal_rows": 212,
+      "cal_errors": 35
+    },
+    {
+      "outer": 0,
+      "packet": 0,
+      "positive": true,
+      "cal_rows": 179,
+      "cal_errors": 31
+    },
+    {
+      "outer": 0,
+      "packet": 1,
+      "positive": false,
+      "cal_rows": 191,
+      "cal_errors": 26
+    },
+    {
+      "outer": 0,
+      "packet": 1,
+      "positive": true,
+      "cal_rows": 181,
+      "cal_errors": 29
+    },
+    {
+      "outer": 0,
+      "packet": 2,
+      "positive": false,
+      "cal_rows": 222,
+      "cal_errors": 40
+    },
+    {
+      "outer": 0,
+      "packet": 2,
+      "positive": true,
+      "cal_rows": 180,
+      "cal_errors": 31
+    },
+    {
+      "outer": 1,
+      "packet": 0,
+      "positive": false,
+      "cal_rows": 199,
+      "cal_errors": 37
+    },
+    {
+      "outer": 1,
+      "packet": 0,
+      "positive": true,
+      "cal_rows": 190,
+      "cal_errors": 37
+    },
+    {
+      "outer": 1,
+      "packet": 1,
+      "positive": false,
+      "cal_rows": 201,
+      "cal_errors": 36
+    },
+    {
+      "outer": 1,
+      "packet": 1,
+      "positive": true,
+      "cal_rows": 192,
+      "cal_errors": 26
+    },
+    {
+      "outer": 1,
+      "packet": 2,
+      "positive": false,
+      "cal_rows": 193,
+      "cal_errors": 29
+    },
+    {
+      "outer": 1,
+      "packet": 2,
+      "positive": true,
+      "cal_rows": 181,
+      "cal_errors": 26
+    },
+    {
+      "outer": 2,
+      "packet": 0,
+      "positive": false,
+      "cal_rows": 212,
+      "cal_errors": 39
+    },
+    {
+      "outer": 2,
+      "packet": 0,
+      "positive": true,
+      "cal_rows": 186,
+      "cal_errors": 34
+    },
+    {
+      "outer": 2,
+      "packet": 1,
+      "positive": false,
+      "cal_rows": 208,
+      "cal_errors": 43
+    },
+    {
+      "outer": 2,
+      "packet": 1,
+      "positive": true,
+      "cal_rows": 206,
+      "cal_errors": 45
+    },
+    {
+      "outer": 2,
+      "packet": 2,
+      "positive": false,
+      "cal_rows": 222,
+      "cal_errors": 46
+    },
+    {
+      "outer": 2,
+      "packet": 2,
+      "positive": true,
+      "cal_rows": 177,
+      "cal_errors": 32
+    }
+  ],
+  "cohorts": {
+    "false_negative": {
+      "rows": 3012,
+      "wrong": 421,
+      "correct": 2591,
+      "historic_errors": 292,
+      "persistent_errors": 277
+    },
+    "false_positive": {
+      "rows": 3122,
+      "wrong": 478,
+      "correct": 2644,
+      "historic_errors": 251,
+      "persistent_errors": 231
+    }
+  },
+  "methods": {
+    "shared_false_negative": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repairs": 0,
+      "persistent_harms": 0,
+      "max_risk": 0.4876593920340451,
+      "all_AUC": 0.7115274781790796,
+      "all_AP": 0.2937113571299308,
+      "hard_AUC": 0.6273507346293545,
+      "hard_AP": 0.13462041509616457,
+      "persistent_AUC": 0.6107074335348548,
+      "persistent_AP": 0.11849277757679273
+    },
+    "separate_false_negative": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repairs": 0,
+      "persistent_harms": 0,
+      "max_risk": 0.45721353486412725,
+      "all_AUC": 0.7138037661886432,
+      "all_AP": 0.29455761602015545,
+      "hard_AUC": 0.6294007708453393,
+      "hard_AP": 0.1347758063656692,
+      "persistent_AUC": 0.6128434026698918,
+      "persistent_AP": 0.11866123655162392
+    },
+    "shared_false_positive": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repairs": 0,
+      "persistent_harms": 0,
+      "max_risk": 0.4759895226030301,
+      "all_AUC": 0.8635593971350622,
+      "all_AP": 0.4371987815061253,
+      "hard_AUC": 0.8282151273875753,
+      "hard_AP": 0.2196328066358841,
+      "persistent_AUC": 0.8203315847037481,
+      "persistent_AP": 0.19667191588304267
+    },
+    "separate_false_positive": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repairs": 0,
+      "persistent_harms": 0,
+      "max_risk": 0.4719549386464359,
+      "all_AUC": 0.8584352983624407,
+      "all_AP": 0.42963748861141043,
+      "hard_AUC": 0.8243832536721496,
+      "hard_AP": 0.218948802826204,
+      "persistent_AUC": 0.8174172020616801,
+      "persistent_AP": 0.19819011662324235
+    }
+  },
+  "notes": "Original 6954 repeatedly used dev rows. Each discovery and calibration party is excluded from the outer evaluation parties, and both sets are mutually party-disjoint. Frozen rawMitra/Kumo themselves use the historic passenger splits. Calibration uses raw/Kumo agreement as a proxy for five-family agreement with the deployed v108. Both direction-specific .5 rules fixed before scoring. Ranking statistics compare retrospective hard errors with genuinely correct consensus passengers; average precision is prevalence-sensitive."
+}
