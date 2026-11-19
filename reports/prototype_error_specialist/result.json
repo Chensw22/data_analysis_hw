@@ -1,0 +1,188 @@
+{
+  "protocol": "Within each existing teacher packet select discovery and calibration passengers where rawMitra and Kumo agree. On discovery, separate k-means mixtures by prediction direction and correct/wrong, independently for log-spend and passenger/cabin views. Use independent calibration parties for a logistic error selector. At inference, average three packet probabilities; only flip on a five-family agreement with v108 and risk >=.5. Uncalibrated control uses discovery class prior and equal mean log density ratios. No Name; 546/510 labels only for final scoring; adaptive development set.",
+  "packets": [
+    {
+      "outer": 0,
+      "packet": 0,
+      "discovery": 986,
+      "errors": 183,
+      "calibration": 488
+    },
+    {
+      "outer": 0,
+      "packet": 1,
+      "discovery": 986,
+      "errors": 177,
+      "calibration": 496
+    },
+    {
+      "outer": 0,
+      "packet": 2,
+      "discovery": 975,
+      "errors": 172,
+      "calibration": 483
+    },
+    {
+      "outer": 1,
+      "packet": 0,
+      "discovery": 978,
+      "errors": 183,
+      "calibration": 492
+    },
+    {
+      "outer": 1,
+      "packet": 1,
+      "discovery": 999,
+      "errors": 172,
+      "calibration": 499
+    },
+    {
+      "outer": 1,
+      "packet": 2,
+      "discovery": 988,
+      "errors": 165,
+      "calibration": 485
+    },
+    {
+      "outer": 2,
+      "packet": 0,
+      "discovery": 1003,
+      "errors": 177,
+      "calibration": 495
+    },
+    {
+      "outer": 2,
+      "packet": 1,
+      "discovery": 998,
+      "errors": 169,
+      "calibration": 492
+    },
+    {
+      "outer": 2,
+      "packet": 2,
+      "discovery": 990,
+      "errors": 161,
+      "calibration": 488
+    }
+  ],
+  "methods": {
+    "confidence": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repaired": 0,
+      "persistent_harmed": 0
+    },
+    "one_center": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repaired": 0,
+      "persistent_harmed": 0
+    },
+    "four_centers": {
+      "correct": 5663,
+      "accuracy": 0.8143514524014955,
+      "repairs": 0,
+      "harms": 0,
+      "hard_repairs": 0,
+      "hard_harms": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "persistent_repaired": 0,
+      "persistent_harmed": 0
+    },
+    "uncalibrated_four": {
+      "correct": 5378,
+      "accuracy": 0.7733678458441184,
+      "repairs": 277,
+      "harms": 562,
+      "hard_repairs": 119,
+      "hard_harms": 0,
+      "fold_net": [
+        -104,
+        -91,
+        -90
+      ],
+      "persistent_repaired": 110,
+      "persistent_harmed": 0
+    }
+  },
+  "matched_traffic": {
+    "confidence": {
+      "correct": 5552,
+      "accuracy": 0.7983894161633592,
+      "repairs": 364,
+      "harms": 475,
+      "hard_repairs": 118,
+      "hard_harms": 0,
+      "fold_net": [
+        -58,
+        -45,
+        -8
+      ],
+      "persistent_repaired": 94
+    },
+    "one_center": {
+      "correct": 5538,
+      "accuracy": 0.7963761863675582,
+      "repairs": 357,
+      "harms": 482,
+      "hard_repairs": 124,
+      "hard_harms": 0,
+      "fold_net": [
+        -56,
+        -35,
+        -34
+      ],
+      "persistent_repaired": 102
+    },
+    "four_centers": {
+      "correct": 5566,
+      "accuracy": 0.8004026459591602,
+      "repairs": 371,
+      "harms": 468,
+      "hard_repairs": 133,
+      "hard_harms": 0,
+      "fold_net": [
+        -50,
+        -41,
+        -6
+      ],
+      "persistent_repaired": 108
+    },
+    "uncalibrated_four": {
+      "correct": 5378,
+      "accuracy": 0.7733678458441184,
+      "repairs": 277,
+      "harms": 562,
+      "hard_repairs": 119,
+      "hard_harms": 0,
+      "fold_net": [
+        -104,
+        -91,
+        -90
+      ],
+      "persistent_repaired": 110
+    }
+  }
+}
