@@ -1,0 +1,451 @@
+{
+  "rows": 6954,
+  "eligible": 6134,
+  "reference_label_disagreements": 26,
+  "design": "Within each original teacher's held-out fold, partition eligible parties into three blocks. Fit the gate on two blocks, score on the third. Keep predictors identical in the v108 versus raw-teacher target ablation. Three repeated partitions of the same labels; no tuning on the repeats. The full-data baseline would need OOF-to-full transfer or a separately labeled calibration sample.",
+  "calibration": [
+    {
+      "seed": 119,
+      "outer": 0,
+      "block": 0,
+      "train": 1326,
+      "query": 691
+    },
+    {
+      "seed": 119,
+      "outer": 0,
+      "block": 1,
+      "train": 1352,
+      "query": 665
+    },
+    {
+      "seed": 119,
+      "outer": 0,
+      "block": 2,
+      "train": 1356,
+      "query": 661
+    },
+    {
+      "seed": 119,
+      "outer": 1,
+      "block": 0,
+      "train": 1366,
+      "query": 696
+    },
+    {
+      "seed": 119,
+      "outer": 1,
+      "block": 1,
+      "train": 1378,
+      "query": 684
+    },
+    {
+      "seed": 119,
+      "outer": 1,
+      "block": 2,
+      "train": 1380,
+      "query": 682
+    },
+    {
+      "seed": 119,
+      "outer": 2,
+      "block": 0,
+      "train": 1393,
+      "query": 662
+    },
+    {
+      "seed": 119,
+      "outer": 2,
+      "block": 1,
+      "train": 1358,
+      "query": 697
+    },
+    {
+      "seed": 119,
+      "outer": 2,
+      "block": 2,
+      "train": 1359,
+      "query": 696
+    },
+    {
+      "seed": 220,
+      "outer": 0,
+      "block": 0,
+      "train": 1339,
+      "query": 678
+    },
+    {
+      "seed": 220,
+      "outer": 0,
+      "block": 1,
+      "train": 1358,
+      "query": 659
+    },
+    {
+      "seed": 220,
+      "outer": 0,
+      "block": 2,
+      "train": 1337,
+      "query": 680
+    },
+    {
+      "seed": 220,
+      "outer": 1,
+      "block": 0,
+      "train": 1367,
+      "query": 695
+    },
+    {
+      "seed": 220,
+      "outer": 1,
+      "block": 1,
+      "train": 1377,
+      "query": 685
+    },
+    {
+      "seed": 220,
+      "outer": 1,
+      "block": 2,
+      "train": 1380,
+      "query": 682
+    },
+    {
+      "seed": 220,
+      "outer": 2,
+      "block": 0,
+      "train": 1364,
+      "query": 691
+    },
+    {
+      "seed": 220,
+      "outer": 2,
+      "block": 1,
+      "train": 1369,
+      "query": 686
+    },
+    {
+      "seed": 220,
+      "outer": 2,
+      "block": 2,
+      "train": 1377,
+      "query": 678
+    },
+    {
+      "seed": 321,
+      "outer": 0,
+      "block": 0,
+      "train": 1349,
+      "query": 668
+    },
+    {
+      "seed": 321,
+      "outer": 0,
+      "block": 1,
+      "train": 1343,
+      "query": 674
+    },
+    {
+      "seed": 321,
+      "outer": 0,
+      "block": 2,
+      "train": 1342,
+      "query": 675
+    },
+    {
+      "seed": 321,
+      "outer": 1,
+      "block": 0,
+      "train": 1375,
+      "query": 687
+    },
+    {
+      "seed": 321,
+      "outer": 1,
+      "block": 1,
+      "train": 1373,
+      "query": 689
+    },
+    {
+      "seed": 321,
+      "outer": 1,
+      "block": 2,
+      "train": 1376,
+      "query": 686
+    },
+    {
+      "seed": 321,
+      "outer": 2,
+      "block": 0,
+      "train": 1362,
+      "query": 693
+    },
+    {
+      "seed": 321,
+      "outer": 2,
+      "block": 1,
+      "train": 1378,
+      "query": 677
+    },
+    {
+      "seed": 321,
+      "outer": 2,
+      "block": 2,
+      "train": 1370,
+      "query": 685
+    }
+  ],
+  "results": {
+    "v108_confidence_119": {
+      "accuracy": 0.8140638481449526,
+      "fixed": 18,
+      "harmed": 20,
+      "fold_net": [
+        0,
+        2,
+        -4
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "v108_expert_evidence_119": {
+      "accuracy": 0.8143514524014955,
+      "fixed": 71,
+      "harmed": 71,
+      "fold_net": [
+        5,
+        0,
+        -5
+      ],
+      "hard_fixed": 10,
+      "hard_harmed": 0,
+      "persistent_fixed": 6,
+      "persistent_harmed": 0
+    },
+    "v108_expert_and_manifest_119": {
+      "accuracy": 0.8116192119643371,
+      "fixed": 105,
+      "harmed": 124,
+      "fold_net": [
+        2,
+        -12,
+        -9
+      ],
+      "hard_fixed": 22,
+      "hard_harmed": 0,
+      "persistent_fixed": 14,
+      "persistent_harmed": 0
+    },
+    "proxy_confidence_119": {
+      "accuracy": 0.814495254529767,
+      "fixed": 24,
+      "harmed": 23,
+      "fold_net": [
+        0,
+        4,
+        -3
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_evidence_119": {
+      "accuracy": 0.815070463042853,
+      "fixed": 80,
+      "harmed": 75,
+      "fold_net": [
+        6,
+        -1,
+        0
+      ],
+      "hard_fixed": 11,
+      "hard_harmed": 0,
+      "persistent_fixed": 7,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_and_manifest_119": {
+      "accuracy": 0.8132010353753235,
+      "fixed": 109,
+      "harmed": 117,
+      "fold_net": [
+        5,
+        -9,
+        -4
+      ],
+      "hard_fixed": 22,
+      "hard_harmed": 0,
+      "persistent_fixed": 15,
+      "persistent_harmed": 0
+    },
+    "v108_confidence_220": {
+      "accuracy": 0.8142076502732241,
+      "fixed": 9,
+      "harmed": 10,
+      "fold_net": [
+        -2,
+        1,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "v108_expert_evidence_220": {
+      "accuracy": 0.8142076502732241,
+      "fixed": 60,
+      "harmed": 61,
+      "fold_net": [
+        6,
+        0,
+        -7
+      ],
+      "hard_fixed": 5,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0
+    },
+    "v108_expert_and_manifest_220": {
+      "accuracy": 0.813632441760138,
+      "fixed": 93,
+      "harmed": 98,
+      "fold_net": [
+        0,
+        7,
+        -12
+      ],
+      "hard_fixed": 25,
+      "hard_harmed": 0,
+      "persistent_fixed": 17,
+      "persistent_harmed": 0
+    },
+    "proxy_confidence_220": {
+      "accuracy": 0.8142076502732241,
+      "fixed": 9,
+      "harmed": 10,
+      "fold_net": [
+        -3,
+        2,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_evidence_220": {
+      "accuracy": 0.8137762438884095,
+      "fixed": 61,
+      "harmed": 65,
+      "fold_net": [
+        3,
+        -1,
+        -6
+      ],
+      "hard_fixed": 7,
+      "hard_harmed": 0,
+      "persistent_fixed": 5,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_and_manifest_220": {
+      "accuracy": 0.814495254529767,
+      "fixed": 101,
+      "harmed": 100,
+      "fold_net": [
+        2,
+        11,
+        -12
+      ],
+      "hard_fixed": 26,
+      "hard_harmed": 0,
+      "persistent_fixed": 19,
+      "persistent_harmed": 0
+    },
+    "v108_confidence_321": {
+      "accuracy": 0.8127696289905091,
+      "fixed": 26,
+      "harmed": 37,
+      "fold_net": [
+        0,
+        1,
+        -12
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "v108_expert_evidence_321": {
+      "accuracy": 0.8121944204774231,
+      "fixed": 59,
+      "harmed": 74,
+      "fold_net": [
+        -3,
+        -1,
+        -11
+      ],
+      "hard_fixed": 7,
+      "hard_harmed": 0,
+      "persistent_fixed": 5,
+      "persistent_harmed": 0
+    },
+    "v108_expert_and_manifest_321": {
+      "accuracy": 0.8107563991947081,
+      "fixed": 87,
+      "harmed": 112,
+      "fold_net": [
+        -2,
+        -1,
+        -22
+      ],
+      "hard_fixed": 17,
+      "hard_harmed": 0,
+      "persistent_fixed": 10,
+      "persistent_harmed": 0
+    },
+    "proxy_confidence_321": {
+      "accuracy": 0.812482024733966,
+      "fixed": 29,
+      "harmed": 42,
+      "fold_net": [
+        0,
+        1,
+        -14
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_evidence_321": {
+      "accuracy": 0.8129134311187806,
+      "fixed": 64,
+      "harmed": 74,
+      "fold_net": [
+        -4,
+        2,
+        -8
+      ],
+      "hard_fixed": 10,
+      "hard_harmed": 0,
+      "persistent_fixed": 8,
+      "persistent_harmed": 0
+    },
+    "proxy_expert_and_manifest_321": {
+      "accuracy": 0.8109002013229796,
+      "fixed": 92,
+      "harmed": 116,
+      "fold_net": [
+        -5,
+        1,
+        -20
+      ],
+      "hard_fixed": 18,
+      "hard_harmed": 0,
+      "persistent_fixed": 10,
+      "persistent_harmed": 0
+    }
+  }
+}
