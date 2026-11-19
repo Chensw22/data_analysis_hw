@@ -1,0 +1,93 @@
+{
+  "weights": [
+    {
+      "outer": 0,
+      "type": "true_class",
+      "weight": -0.011386044177200929
+    },
+    {
+      "outer": 0,
+      "type": "shuffled_class",
+      "weight": 0.006460634815463884
+    },
+    {
+      "outer": 1,
+      "type": "true_class",
+      "weight": -0.011122020883528675
+    },
+    {
+      "outer": 1,
+      "type": "shuffled_class",
+      "weight": 0.004074091994312079
+    },
+    {
+      "outer": 2,
+      "type": "true_class",
+      "weight": 0.002591908169108703
+    },
+    {
+      "outer": 2,
+      "type": "shuffled_class",
+      "weight": -0.009781084312890213
+    }
+  ],
+  "methods": {
+    "true_class_all": {
+      "fixed": 16,
+      "harmed": 22,
+      "accuracy": 0.8134886396318666,
+      "fold_net": [
+        0,
+        -6,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "true_class_consensus": {
+      "fixed": 1,
+      "harmed": 4,
+      "accuracy": 0.813920046016681,
+      "fold_net": [
+        0,
+        -3,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "shuffled_class_all": {
+      "fixed": 16,
+      "harmed": 8,
+      "accuracy": 0.8155018694276676,
+      "fold_net": [
+        0,
+        5,
+        3
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "shuffled_class_consensus": {
+      "fixed": 3,
+      "harmed": 0,
+      "accuracy": 0.8147828587863101,
+      "fold_net": [
+        0,
+        1,
+        2
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    }
+  },
+  "design": "For each held-out teacher packet, contrast real rows with two bill-block permutations within outcome, planet and sleep strata on the training support only. Score every query under both hypothetical outcomes. Learn one regularized log-odds weight from within-outer-training OOF scores; apply to exact v108. Negative control shuffles outcome within planet and sleep before constructing the same task."
+}
