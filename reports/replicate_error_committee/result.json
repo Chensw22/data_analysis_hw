@@ -1,0 +1,167 @@
+{
+  "results": {
+    "original_committee": {
+      "accuracy": 0.8157894736842105,
+      "fixed": 36,
+      "harmed": 26,
+      "fold_net": [
+        10,
+        5,
+        -5
+      ],
+      "hard_fixed": 5,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.08666856895712458,
+        0.36214894037240447
+      ]
+    },
+    "original_tree": {
+      "accuracy": 0.8147828587863101,
+      "fixed": 85,
+      "harmed": 82,
+      "fold_net": [
+        5,
+        -3,
+        1
+      ],
+      "hard_fixed": 23,
+      "hard_harmed": 0,
+      "persistent_fixed": 21,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.3175199043279453,
+        0.41849311209397966
+      ]
+    },
+    "original_either": {
+      "accuracy": 0.8153580672993961,
+      "fixed": 95,
+      "harmed": 88,
+      "fold_net": [
+        7,
+        0,
+        0
+      ],
+      "hard_fixed": 25,
+      "hard_harmed": 0,
+      "persistent_fixed": 22,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.29105519647611094,
+        0.48754610117918995
+      ]
+    },
+    "new_party_partitions_committee": {
+      "accuracy": 0.815933275812482,
+      "fixed": 36,
+      "harmed": 25,
+      "fold_net": [
+        7,
+        3,
+        1
+      ],
+      "hard_fixed": 3,
+      "hard_harmed": 0,
+      "persistent_fixed": 3,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.057579018234851335,
+        0.36275522513463526
+      ]
+    },
+    "new_party_partitions_tree": {
+      "accuracy": 0.8140638481449526,
+      "fixed": 81,
+      "harmed": 83,
+      "fold_net": [
+        -1,
+        -2,
+        1
+      ],
+      "hard_fixed": 23,
+      "hard_harmed": 0,
+      "persistent_fixed": 19,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.4009881694411859,
+        0.31977838399219216
+      ]
+    },
+    "new_party_partitions_either": {
+      "accuracy": 0.8146390566580385,
+      "fixed": 92,
+      "harmed": 90,
+      "fold_net": [
+        -1,
+        0,
+        3
+      ],
+      "hard_fixed": 24,
+      "hard_harmed": 0,
+      "persistent_fixed": 20,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.3509593944445118,
+        0.41616301710793
+      ]
+    },
+    "boarding_blocks_committee": {
+      "accuracy": 0.8163646821972965,
+      "fixed": 42,
+      "harmed": 28,
+      "fold_net": [
+        6,
+        2,
+        6
+      ],
+      "hard_fixed": 4,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.029116987565079834,
+        0.43129165442803885
+      ]
+    },
+    "boarding_blocks_tree": {
+      "accuracy": 0.811044003451251,
+      "fixed": 84,
+      "harmed": 107,
+      "fold_net": [
+        -4,
+        -15,
+        -4
+      ],
+      "hard_fixed": 23,
+      "hard_harmed": 0,
+      "persistent_fixed": 21,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.7132956708423709,
+        0.04373257586873448
+      ]
+    },
+    "boarding_blocks_either": {
+      "accuracy": 0.8117630140926085,
+      "fixed": 99,
+      "harmed": 117,
+      "fold_net": [
+        -1,
+        -11,
+        -6
+      ],
+      "hard_fixed": 24,
+      "hard_harmed": 0,
+      "persistent_fixed": 22,
+      "persistent_harmed": 0,
+      "party_bootstrap_pp": [
+        -0.6740817279416096,
+        0.1440107726612123
+      ]
+    }
+  },
+  "scope": "Same 6954 development labels and frozen outer-fold models throughout. Only calibration splits change. The original rule is exploratory. Repeats and contiguous group blocks test sensitivity to which other labeled parties calibrate the gates, not private-test generalization."
+}
