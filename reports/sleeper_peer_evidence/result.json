@@ -1,0 +1,149 @@
+{
+  "results": {
+    "original_no_peers": {
+      "accuracy": 0.8140638481449526,
+      "fixed": 5,
+      "harmed": 7,
+      "fold_net": [
+        0,
+        -2,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "original_actual": {
+      "accuracy": 0.813920046016681,
+      "fixed": 5,
+      "harmed": 8,
+      "fold_net": [
+        0,
+        -2,
+        -1
+      ],
+      "hard_fixed": 2,
+      "hard_harmed": 0,
+      "persistent_fixed": 2,
+      "persistent_harmed": 0
+    },
+    "original_matched": {
+      "accuracy": 0.8133448375035951,
+      "fixed": 7,
+      "harmed": 14,
+      "fold_net": [
+        -2,
+        -5,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "new_party_partitions_no_peers": {
+      "accuracy": 0.814495254529767,
+      "fixed": 3,
+      "harmed": 2,
+      "fold_net": [
+        0,
+        1,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0
+    },
+    "new_party_partitions_actual": {
+      "accuracy": 0.8149266609145815,
+      "fixed": 8,
+      "harmed": 4,
+      "fold_net": [
+        0,
+        4,
+        0
+      ],
+      "hard_fixed": 3,
+      "hard_harmed": 0,
+      "persistent_fixed": 3,
+      "persistent_harmed": 0
+    },
+    "new_party_partitions_matched": {
+      "accuracy": 0.8140638481449526,
+      "fixed": 6,
+      "harmed": 8,
+      "fold_net": [
+        -2,
+        0,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "boarding_blocks_no_peers": {
+      "accuracy": 0.8142076502732241,
+      "fixed": 5,
+      "harmed": 6,
+      "fold_net": [
+        0,
+        -1,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "boarding_blocks_actual": {
+      "accuracy": 0.8137762438884095,
+      "fixed": 7,
+      "harmed": 11,
+      "fold_net": [
+        -1,
+        -2,
+        -1
+      ],
+      "hard_fixed": 2,
+      "hard_harmed": 0,
+      "persistent_fixed": 2,
+      "persistent_harmed": 0
+    },
+    "boarding_blocks_matched": {
+      "accuracy": 0.8133448375035951,
+      "fixed": 6,
+      "harmed": 13,
+      "fold_net": [
+        -4,
+        -3,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "whole_cohort": {
+      "rows": 740,
+      "errors": 242,
+      "hard": 139,
+      "persistent": 136
+    },
+    "multi": {
+      "rows": 296,
+      "errors": 93,
+      "hard": 57,
+      "persistent": 56
+    },
+    "solo": {
+      "rows": 444,
+      "errors": 149,
+      "hard": 82,
+      "persistent": 80
+    }
+  },
+  "design": "Adaptive subgroup identified from previous OOF inspection. Exact v108 positive and all five references positive, Earth/G/asleep/five observed zero bills. Only passengers with companions are changed. Per outer held-out fold, fit a ridge logistic error model on other held-out groups. Three partition modes, cutoff 0.5. Average all-companion attributes compared with matched impostor peer sets and a size and confidence control."
+}
