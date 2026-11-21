@@ -1,0 +1,36 @@
+{
+  "baseline_accuracy": 0.8155018694276676,
+  "results": {
+    "v131": {
+      "accuracy": 0.8149266609145815,
+      "fixed": 1,
+      "harmed": 5,
+      "fold_net": [
+        -4,
+        -1,
+        1
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes": 7
+    },
+    "v132": {
+      "accuracy": 0.8133448375035951,
+      "fixed": 8,
+      "harmed": 23,
+      "fold_net": [
+        -13,
+        -1,
+        -1
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes": 26
+    }
+  },
+  "development": "Original three assessment folds. Removed all group overlaps from each expert training partition. Expert fits only on other folds, using all non-observed-sleepers. Hard mask used for evaluation only. Final fit on 8693 training rows after applying same observable filter."
+}
