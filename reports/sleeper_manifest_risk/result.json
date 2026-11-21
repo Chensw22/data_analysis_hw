@@ -1,0 +1,91 @@
+{
+  "domain": 937,
+  "eligible": 740,
+  "results": {
+    "manifest_party_a": {
+      "accuracy": 0.8149266609145815,
+      "fixed": 26,
+      "harmed": 22,
+      "fold_net": [
+        6,
+        2,
+        -4
+      ],
+      "hard_fixed": 4,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0
+    },
+    "manifest_party_b": {
+      "accuracy": 0.813920046016681,
+      "fixed": 15,
+      "harmed": 18,
+      "fold_net": [
+        1,
+        -4,
+        0
+      ],
+      "hard_fixed": 1,
+      "hard_harmed": 0,
+      "persistent_fixed": 1,
+      "persistent_harmed": 0
+    },
+    "manifest_boarding_ranges": {
+      "accuracy": 0.814495254529767,
+      "fixed": 18,
+      "harmed": 17,
+      "fold_net": [
+        2,
+        -1,
+        0
+      ],
+      "hard_fixed": 4,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0
+    },
+    "manifest_berth_party_a": {
+      "accuracy": 0.813920046016681,
+      "fixed": 33,
+      "harmed": 36,
+      "fold_net": [
+        4,
+        2,
+        -9
+      ],
+      "hard_fixed": 4,
+      "hard_harmed": 0,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0
+    },
+    "manifest_berth_party_b": {
+      "accuracy": 0.815070463042853,
+      "fixed": 23,
+      "harmed": 18,
+      "fold_net": [
+        7,
+        -2,
+        0
+      ],
+      "hard_fixed": 5,
+      "hard_harmed": 0,
+      "persistent_fixed": 5,
+      "persistent_harmed": 0
+    },
+    "manifest_berth_boarding_ranges": {
+      "accuracy": 0.8153580672993961,
+      "fixed": 15,
+      "harmed": 8,
+      "fold_net": [
+        6,
+        -1,
+        2
+      ],
+      "hard_fixed": 3,
+      "hard_harmed": 0,
+      "persistent_fixed": 3,
+      "persistent_harmed": 0
+    }
+  },
+  "scope": "Alternative trained from outcome labels and passenger attributes only on development rows. Fit on group-disjoint parties, limit proposed changes to the selected consensus-positive cohort. Fold net figures use the original reference folds across all validation designs."
+}
