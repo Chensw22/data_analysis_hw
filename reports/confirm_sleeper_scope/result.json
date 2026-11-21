@@ -1,0 +1,95 @@
+{
+  "results": {
+    "original": {
+      "manifest": {
+        "accuracy": 0.8155018694276676,
+        "fixed": 18,
+        "harmed": 10,
+        "fold_net": [
+          6,
+          3,
+          -1
+        ],
+        "hard_fixed": 1,
+        "hard_harmed": 0,
+        "persistent_fixed": 1,
+        "persistent_harmed": 0
+      },
+      "manifest_berth": {
+        "accuracy": 0.8155018694276676,
+        "fixed": 23,
+        "harmed": 15,
+        "fold_net": [
+          6,
+          4,
+          -2
+        ],
+        "hard_fixed": 1,
+        "hard_harmed": 0,
+        "persistent_fixed": 1,
+        "persistent_harmed": 0
+      }
+    },
+    "new_party_partitions": {
+      "manifest": {
+        "accuracy": 0.8149266609145815,
+        "fixed": 11,
+        "harmed": 7,
+        "fold_net": [
+          2,
+          0,
+          2
+        ],
+        "hard_fixed": 0,
+        "hard_harmed": 0,
+        "persistent_fixed": 0,
+        "persistent_harmed": 0
+      },
+      "manifest_berth": {
+        "accuracy": 0.815645671555939,
+        "fixed": 16,
+        "harmed": 7,
+        "fold_net": [
+          5,
+          1,
+          3
+        ],
+        "hard_fixed": 3,
+        "hard_harmed": 0,
+        "persistent_fixed": 3,
+        "persistent_harmed": 0
+      }
+    },
+    "boarding_blocks": {
+      "manifest": {
+        "accuracy": 0.8149266609145815,
+        "fixed": 11,
+        "harmed": 7,
+        "fold_net": [
+          5,
+          0,
+          -1
+        ],
+        "hard_fixed": 1,
+        "hard_harmed": 0,
+        "persistent_fixed": 1,
+        "persistent_harmed": 0
+      },
+      "manifest_berth": {
+        "accuracy": 0.815070463042853,
+        "fixed": 10,
+        "harmed": 5,
+        "fold_net": [
+          6,
+          -1,
+          0
+        ],
+        "hard_fixed": 1,
+        "hard_harmed": 0,
+        "persistent_fixed": 1,
+        "persistent_harmed": 0
+      }
+    }
+  },
+  "interpretation": "Each member excludes the assessed passenger from its own supervised fits. The three calibration/specialist split pairings reuse the same development labels."
+}
