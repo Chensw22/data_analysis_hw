@@ -1,0 +1,51 @@
+{
+  "local_overlap": 0,
+  "vs_v128": {
+    "accuracy": 0.8152142651711245,
+    "fixed": 15,
+    "harmed": 17,
+    "fold_net": [
+      -1,
+      -4,
+      3
+    ],
+    "hard_fixed": 2,
+    "hard_harmed": 0,
+    "persistent_fixed": 2,
+    "persistent_harmed": 0
+  },
+  "vs_v131": {
+    "accuracy": 0.8152142651711245,
+    "fixed": 7,
+    "harmed": 0,
+    "fold_net": [
+      0,
+      1,
+      6
+    ],
+    "hard_fixed": 0,
+    "hard_harmed": 0,
+    "persistent_fixed": 0,
+    "persistent_harmed": 0
+  },
+  "test_overlap": 1,
+  "changed_vs_v131": 9,
+  "changed_vs_v128": 14,
+  "participant_count": 4277,
+  "input_csv_sha256": {
+    "v128": "8a910b54c9b8b518113432a815196042b9975b67f9f3576dc955de6556ed442e",
+    "v131": "ed644344cf5df8d6e5c213b5c42b109d0efbee43404cb8b00e6bafc2fde187d4",
+    "bill": "3f7b9e201e7d89b6ee6d07f739a92dee3566058d7820aa5b0aa42250a67b4b86"
+  },
+  "submission": {
+    "rows": 4277,
+    "sha256": "f92a60508e520af7a1344b3263b48351cfc1cb12a1665660b038f33c558c8656",
+    "valid": true
+  },
+  "local_rows_sha256": "ebaf498b7fa5651d2a678ea7c1c7b0e7139e7784bd8c24ff6771f6efbfa6d82c",
+  "reproduce": [
+    ".venv/bin/python party_negative_rescue.py",
+    ".venv/bin/python awake_spending_likelihood.py",
+    ".venv/bin/python combine_awake_party.py"
+  ]
+}
