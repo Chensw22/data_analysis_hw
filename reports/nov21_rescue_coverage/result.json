@@ -1,0 +1,204 @@
+{
+  "versions": [
+    "v129",
+    "v130",
+    "v131",
+    "v132",
+    "v133",
+    "v134",
+    "v135",
+    "v136"
+  ],
+  "rows": 6954,
+  "incumbent_correct": 5671,
+  "required_correct": 5911,
+  "required_net": 240,
+  "oracle_fixed": 130,
+  "oracle_correct": 5801,
+  "oracle_accuracy": 0.8341961461029623,
+  "different_originally_correct": 100,
+  "cohort": {
+    "historical_common": {
+      "size": 546,
+      "v128_correct": 4,
+      "v128_wrong": 542,
+      "oracle_additional": 20,
+      "remain_wrong": 522,
+      "exposed_correct": 3
+    },
+    "persistent": {
+      "size": 510,
+      "v128_correct": 3,
+      "v128_wrong": 507,
+      "oracle_additional": 19,
+      "remain_wrong": 488,
+      "exposed_correct": 3
+    }
+  },
+  "unique_fixes": {
+    "v129": {
+      "all": 8,
+      "hard": 1,
+      "exclusive": 6
+    },
+    "v130": {
+      "all": 42,
+      "hard": 15,
+      "exclusive": 37
+    },
+    "v131": {
+      "all": 8,
+      "hard": 2,
+      "exclusive": 0
+    },
+    "v132": {
+      "all": 24,
+      "hard": 2,
+      "exclusive": 18
+    },
+    "v133": {
+      "all": 27,
+      "hard": 0,
+      "exclusive": 17
+    },
+    "v134": {
+      "all": 26,
+      "hard": 0,
+      "exclusive": 18
+    },
+    "v135": {
+      "all": 8,
+      "hard": 2,
+      "exclusive": 6
+    },
+    "v136": {
+      "all": 15,
+      "hard": 2,
+      "exclusive": 6
+    }
+  },
+  "overlap": [
+    [
+      8,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      2,
+      42,
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      8,
+      6,
+      0,
+      0,
+      0,
+      8
+    ],
+    [
+      0,
+      0,
+      6,
+      24,
+      0,
+      0,
+      0,
+      6
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      27,
+      8,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      8,
+      26,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0,
+      8,
+      0
+    ],
+    [
+      0,
+      0,
+      8,
+      6,
+      1,
+      0,
+      0,
+      15
+    ]
+  ],
+  "historical_remaining_profile": {
+    "rows": 522,
+    "slices": {
+      "Earth": {
+        "slice_total_dev": 3659,
+        "remaining_in_slice": 401
+      },
+      "Europa": {
+        "slice_total_dev": 1727,
+        "remaining_in_slice": 46
+      },
+      "Mars": {
+        "slice_total_dev": 1400,
+        "remaining_in_slice": 61
+      },
+      "deck_G": {
+        "slice_total_dev": 2044,
+        "remaining_in_slice": 217
+      },
+      "observed_cryo": {
+        "slice_total_dev": 2442,
+        "remaining_in_slice": 174
+      },
+      "observed_awake": {
+        "slice_total_dev": 4339,
+        "remaining_in_slice": 341
+      },
+      "complete_zero_bills": {
+        "slice_total_dev": 2624,
+        "remaining_in_slice": 186
+      },
+      "any_positive_bill": {
+        "slice_total_dev": 4006,
+        "remaining_in_slice": 311
+      },
+      "Earth_G_cryo_complete_zero": {
+        "slice_total_dev": 937,
+        "remaining_in_slice": 121
+      }
+    }
+  },
+  "persistent_remaining_within_historical_remaining": 488
+}
