@@ -1,0 +1,140 @@
+{
+  "results": {
+    "v135d": {
+      "accuracy": 0.816220880069025,
+      "fixed": 8,
+      "harmed": 3,
+      "fold_net": [
+        2,
+        1,
+        2
+      ],
+      "hard_fixed": 2,
+      "hard_harmed": 0,
+      "persistent_fixed": 2,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 23
+    },
+    "v135c": {
+      "accuracy": 0.815645671555939,
+      "fixed": 2,
+      "harmed": 1,
+      "fold_net": [
+        0,
+        0,
+        1
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 2
+    },
+    "v136c": {
+      "accuracy": 0.815645671555939,
+      "fixed": 2,
+      "harmed": 1,
+      "fold_net": [
+        0,
+        0,
+        1
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 9
+    }
+  },
+  "alternate_donor_partitions": {
+    "whole_parties": {
+      "v135d": {
+        "accuracy": 0.815645671555939,
+        "fixed": 20,
+        "harmed": 19,
+        "fold_net": [
+          1,
+          -5,
+          5
+        ],
+        "hard_fixed": 8,
+        "hard_harmed": 0,
+        "persistent_fixed": 7,
+        "persistent_harmed": 0
+      },
+      "v135c": {
+        "accuracy": 0.815645671555939,
+        "fixed": 4,
+        "harmed": 3,
+        "fold_net": [
+          1,
+          0,
+          0
+        ],
+        "hard_fixed": 0,
+        "hard_harmed": 0,
+        "persistent_fixed": 0,
+        "persistent_harmed": 0
+      },
+      "v136c": {
+        "accuracy": 0.815645671555939,
+        "fixed": 13,
+        "harmed": 12,
+        "fold_net": [
+          1,
+          -2,
+          2
+        ],
+        "hard_fixed": 5,
+        "hard_harmed": 0,
+        "persistent_fixed": 5,
+        "persistent_harmed": 0
+      }
+    },
+    "boarding_blocks": {
+      "v135d": {
+        "accuracy": 0.8152142651711245,
+        "fixed": 1,
+        "harmed": 3,
+        "fold_net": [
+          0,
+          -2,
+          0
+        ],
+        "hard_fixed": 1,
+        "hard_harmed": 0,
+        "persistent_fixed": 1,
+        "persistent_harmed": 0
+      },
+      "v135c": {
+        "accuracy": 0.8155018694276676,
+        "fixed": 0,
+        "harmed": 0,
+        "fold_net": [
+          0,
+          0,
+          0
+        ],
+        "hard_fixed": 0,
+        "hard_harmed": 0,
+        "persistent_fixed": 0,
+        "persistent_harmed": 0
+      },
+      "v136c": {
+        "accuracy": 0.8155018694276676,
+        "fixed": 0,
+        "harmed": 0,
+        "fold_net": [
+          0,
+          0,
+          0
+        ],
+        "hard_fixed": 0,
+        "hard_harmed": 0,
+        "persistent_fixed": 0,
+        "persistent_harmed": 0
+      }
+    }
+  },
+  "description": "Only observed Earth/G zero-bill cryosleep with available cabin number and unanimous v108 and five historical positive decisions. Predict from all other-fold parties inside this cohort, k35 by cabin and side; k75 by cabin, age, side and destination. v135c both probabilities below half; v136c mean below half. v135d mean below .52, chosen following a development bin inspection. Same labels reused on alternate partitions, v128 fixed. Cohort derived from previous error analysis."
+}

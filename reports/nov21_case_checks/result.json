@@ -1,0 +1,66 @@
+{
+  "baseline": "proposal_v128_manifest_confirmation",
+  "results": {
+    "v135b": {
+      "accuracy": 0.813632441760138,
+      "fixed": 8,
+      "harmed": 21,
+      "fold_net": [
+        -7,
+        -2,
+        -4
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 21
+    },
+    "v136b": {
+      "accuracy": 0.8155018694276676,
+      "fixed": 0,
+      "harmed": 0,
+      "fold_net": [
+        0,
+        0,
+        0
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 7
+    },
+    "v135": {
+      "accuracy": 0.8152142651711245,
+      "fixed": 15,
+      "harmed": 17,
+      "fold_net": [
+        1,
+        -1,
+        -2
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "persistent_fixed": 0,
+      "persistent_harmed": 0,
+      "test_changes_vs_v128": 22
+    },
+    "v136": {
+      "accuracy": 0.8147828587863101,
+      "fixed": 28,
+      "harmed": 33,
+      "fold_net": [
+        -5,
+        1,
+        -1
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 1,
+      "persistent_fixed": 0,
+      "persistent_harmed": 1,
+      "test_changes_vs_v128": 47
+    }
+  },
+  "validation": "Original passenger folds, train-fold targets only, same party excluded from all donor pools. Each view uses outcome frequencies, with Manhattan distances and inverse distance smoothing. v135 requires an existing v118 correction and 25 billing neighbors above 50%. v136 requires v118 or two opposing historical votes and both views above 60%. v135b compares the average opposing vote margin to the v108 margin plus .05 among unanimous cases. v136b applies a .12 average opposing margin among unanimously classified, observed cryosleep passengers."
+}

@@ -12,10 +12,10 @@ from kaggle_workflow import ROOT, sha256, validate_submission
 from relational_error_corrector import write
 
 
-def freeze(version, folder, source):
+def freeze(version, folder, source, candidate=None):
     art = ROOT / "artifacts"
     name = "proposal_" + version
-    path = art / folder / (version.split("_")[0] + ".csv")
+    path = art / folder / ((candidate or version.split("_")[0]) + ".csv")
     test = ROOT / "data/raw/test.csv"
     validate_submission(path, test)
     frame = pd.read_csv(path)
@@ -45,7 +45,7 @@ def freeze(version, folder, source):
     pd.DataFrame(dict(PassengerId=ids,probability=label.astype(float),
                       reload_probability=replay.astype(float))).to_csv(out / "test_probabilities.csv",index=False)
     manifest = dict(**receipt, version=version, model_sha256=sha256(recipe), reload_difference=0,
-                    source_file=source, source_sha256=sha256(ROOT / source), source_csv_sha256=sha256(path),
+                    source_csv=str(path.relative_to(ROOT)), source_file=source, source_sha256=sha256(ROOT / source), source_csv_sha256=sha256(path),
                     changed_vs_v128=len(changed), baseline_sha256=anchor_hash)
     for dest in [out, ROOT / "reports" / name]:
         write(dest / "manifest.json", manifest)
@@ -58,5 +58,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     for arg in ["version", "folder", "source"]:
         parser.add_argument(arg)
+    parser.add_argument("--candidate", help="Original experiment name before assigning its release number")
     args = parser.parse_args()
-    freeze(args.version, args.folder, args.source)
+    freeze(args.version, args.folder, args.source, args.candidate)
