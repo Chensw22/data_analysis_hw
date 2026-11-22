@@ -1,0 +1,173 @@
+{
+  "results": {
+    "20261112": {
+      "direct": {
+        "accuracy": 0.8117630140926085,
+        "fixed": 134,
+        "harmed": 175,
+        "persistent1070": 70,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "direct_blend": {
+        "accuracy": 0.818809318377912,
+        "fixed": 41,
+        "harmed": 33,
+        "persistent1070": 14,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "exception": {
+        "accuracy": 0.808455565142364,
+        "fixed": 176,
+        "harmed": 240,
+        "persistent1070": 106,
+        "unresolved466": 4,
+        "unresolved_false_negative": 3,
+        "unresolved_false_positive": 1
+      },
+      "exception_blend": {
+        "accuracy": 0.818809318377912,
+        "fixed": 49,
+        "harmed": 41,
+        "persistent1070": 15,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "two_experts": {
+        "accuracy": 0.8123382226056945,
+        "fixed": 179,
+        "harmed": 216,
+        "persistent1070": 114,
+        "unresolved466": 3,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 3
+      },
+      "two_experts_blend": {
+        "accuracy": 0.819672131147541,
+        "fixed": 56,
+        "harmed": 42,
+        "persistent1070": 22,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      }
+    },
+    "20261115": {
+      "direct": {
+        "accuracy": 0.8083117630140926,
+        "fixed": 125,
+        "harmed": 160,
+        "persistent1070": 63,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "direct_blend": {
+        "accuracy": 0.8120506183491516,
+        "fixed": 27,
+        "harmed": 36,
+        "persistent1070": 10,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "exception": {
+        "accuracy": 0.8034224906528616,
+        "fixed": 160,
+        "harmed": 229,
+        "persistent1070": 85,
+        "unresolved466": 3,
+        "unresolved_false_negative": 2,
+        "unresolved_false_positive": 1
+      },
+      "exception_blend": {
+        "accuracy": 0.8117630140926085,
+        "fixed": 43,
+        "harmed": 54,
+        "persistent1070": 13,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "two_experts": {
+        "accuracy": 0.8074489502444636,
+        "fixed": 180,
+        "harmed": 221,
+        "persistent1070": 109,
+        "unresolved466": 3,
+        "unresolved_false_negative": 1,
+        "unresolved_false_positive": 2
+      },
+      "two_experts_blend": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 52,
+        "harmed": 47,
+        "persistent1070": 21,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      }
+    },
+    "20261116": {
+      "direct": {
+        "accuracy": 0.8085993672706356,
+        "fixed": 135,
+        "harmed": 171,
+        "persistent1070": 72,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "direct_blend": {
+        "accuracy": 0.8121944204774231,
+        "fixed": 32,
+        "harmed": 43,
+        "persistent1070": 13,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "exception": {
+        "accuracy": 0.8054357204486626,
+        "fixed": 173,
+        "harmed": 231,
+        "persistent1070": 88,
+        "unresolved466": 1,
+        "unresolved_false_negative": 1,
+        "unresolved_false_positive": 0
+      },
+      "exception_blend": {
+        "accuracy": 0.8113316077077941,
+        "fixed": 48,
+        "harmed": 65,
+        "persistent1070": 19,
+        "unresolved466": 0,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 0
+      },
+      "two_experts": {
+        "accuracy": 0.8087431693989071,
+        "fixed": 187,
+        "harmed": 222,
+        "persistent1070": 109,
+        "unresolved466": 7,
+        "unresolved_false_negative": 1,
+        "unresolved_false_positive": 6
+      },
+      "two_experts_blend": {
+        "accuracy": 0.8121944204774231,
+        "fixed": 50,
+        "harmed": 61,
+        "persistent1070": 26,
+        "unresolved466": 1,
+        "unresolved_false_negative": 0,
+        "unresolved_false_positive": 1
+      }
+    }
+  },
+  "definition": "Usual outcome = no positive observed bill. Includes partially missing bills. Identical inputs for direct and recoded targets; two specialists partition every passenger. Diagnostic masks never enter fitting."
+}
