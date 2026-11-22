@@ -1,0 +1,139 @@
+{
+  "codes": {
+    "20261112": {
+      "distinct": 2326,
+      "passengers_in_singletons": 2110,
+      "empirical_min_errors": 474,
+      "minority_or_tied": {
+        "all_release": 439,
+        "paid": 268,
+        "zero": 141
+      },
+      "shares_with_opposite": {
+        "all_release": 454,
+        "paid": 271,
+        "zero": 152
+      }
+    },
+    "20261115": {
+      "distinct": 2330,
+      "passengers_in_singletons": 2129,
+      "empirical_min_errors": 467,
+      "minority_or_tied": {
+        "all_release": 443,
+        "paid": 268,
+        "zero": 145
+      },
+      "shares_with_opposite": {
+        "all_release": 456,
+        "paid": 275,
+        "zero": 150
+      }
+    },
+    "20261116": {
+      "distinct": 2293,
+      "passengers_in_singletons": 2080,
+      "empirical_min_errors": 471,
+      "minority_or_tied": {
+        "all_release": 441,
+        "paid": 253,
+        "zero": 147
+      },
+      "shares_with_opposite": {
+        "all_release": 454,
+        "paid": 257,
+        "zero": 153
+      }
+    }
+  },
+  "heldout": {
+    "base": {
+      "accuracy": [
+        0.8180903077365546,
+        0.8143514524014955,
+        0.8123382226056945
+      ],
+      "fixed": [
+        19,
+        61,
+        42
+      ],
+      "harmed": [
+        16,
+        54,
+        52
+      ],
+      "stable": {
+        "all_release": 17,
+        "paid": 6,
+        "zero": 1
+      }
+    },
+    "independent": {
+      "accuracy": [
+        0.8183779119930975,
+        0.8157894736842105,
+        0.8142076502732241
+      ],
+      "fixed": [
+        35,
+        68,
+        43
+      ],
+      "harmed": [
+        30,
+        51,
+        40
+      ],
+      "stable": {
+        "all_release": 18,
+        "paid": 6,
+        "zero": 1
+      }
+    },
+    "tree": {
+      "accuracy": [
+        0.8153580672993961,
+        0.8167960885821111,
+        0.8123382226056945
+      ],
+      "fixed": [
+        41,
+        120,
+        76
+      ],
+      "harmed": [
+        57,
+        96,
+        86
+      ],
+      "stable": {
+        "all_release": 18,
+        "paid": 6,
+        "zero": 1
+      }
+    },
+    "both": {
+      "accuracy": [
+        0.8152142651711245,
+        0.818234109864826,
+        0.8121944204774231
+      ],
+      "fixed": [
+        56,
+        135,
+        79
+      ],
+      "harmed": [
+        73,
+        101,
+        90
+      ],
+      "stable": {
+        "all_release": 19,
+        "paid": 6,
+        "zero": 2
+      }
+    }
+  }
+}
