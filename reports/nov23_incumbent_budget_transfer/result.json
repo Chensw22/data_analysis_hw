@@ -1,0 +1,191 @@
+{
+  "results": {
+    "registration": {
+      "all": {
+        "rows": 6954,
+        "baseline_accuracy": 0.8142076502732241,
+        "accuracy": 0.8133448375035951,
+        "fixed": 113,
+        "harmed": 119,
+        "fn_fixed": 15,
+        "fp_introduced": 15,
+        "fp_fixed": 98,
+        "fn_introduced": 104
+      },
+      "new_booking_in_historical_fold": {
+        "rows": 4691,
+        "baseline_accuracy": 0.8051588147516521,
+        "accuracy": 0.8023875506288638,
+        "fixed": 82,
+        "harmed": 95,
+        "fn_fixed": 10,
+        "fp_introduced": 8,
+        "fp_fixed": 72,
+        "fn_introduced": 87
+      },
+      "single": {
+        "rows": 3817,
+        "baseline_accuracy": 0.7993188367828137,
+        "accuracy": 0.7953890489913544,
+        "fixed": 68,
+        "harmed": 83,
+        "fn_fixed": 6,
+        "fp_introduced": 7,
+        "fp_fixed": 62,
+        "fn_introduced": 76
+      },
+      "baseline_persistent": {
+        "rows": 1070,
+        "baseline_accuracy": 0.1102803738317757,
+        "accuracy": 0.12990654205607477,
+        "fixed": 43,
+        "harmed": 22,
+        "fn_fixed": 2,
+        "fp_introduced": 8,
+        "fp_fixed": 41,
+        "fn_introduced": 14
+      },
+      "eight_family_persistent": {
+        "rows": 466,
+        "baseline_accuracy": 0.012875536480686695,
+        "accuracy": 0.017167381974248927,
+        "fixed": 4,
+        "harmed": 2,
+        "fn_fixed": 2,
+        "fp_introduced": 2,
+        "fp_fixed": 2,
+        "fn_introduced": 0
+      }
+    },
+    "budget": {
+      "all": {
+        "rows": 6954,
+        "baseline_accuracy": 0.8142076502732241,
+        "accuracy": 0.8140638481449526,
+        "fixed": 104,
+        "harmed": 105,
+        "fn_fixed": 18,
+        "fp_introduced": 15,
+        "fp_fixed": 86,
+        "fn_introduced": 90
+      },
+      "new_booking_in_historical_fold": {
+        "rows": 4691,
+        "baseline_accuracy": 0.8051588147516521,
+        "accuracy": 0.8047324664250692,
+        "fixed": 77,
+        "harmed": 79,
+        "fn_fixed": 12,
+        "fp_introduced": 8,
+        "fp_fixed": 65,
+        "fn_introduced": 71
+      },
+      "single": {
+        "rows": 3817,
+        "baseline_accuracy": 0.7993188367828137,
+        "accuracy": 0.798008907518994,
+        "fixed": 63,
+        "harmed": 68,
+        "fn_fixed": 8,
+        "fp_introduced": 6,
+        "fp_fixed": 55,
+        "fn_introduced": 62
+      },
+      "baseline_persistent": {
+        "rows": 1070,
+        "baseline_accuracy": 0.1102803738317757,
+        "accuracy": 0.13177570093457944,
+        "fixed": 37,
+        "harmed": 14,
+        "fn_fixed": 4,
+        "fp_introduced": 4,
+        "fp_fixed": 33,
+        "fn_introduced": 10
+      },
+      "eight_family_persistent": {
+        "rows": 466,
+        "baseline_accuracy": 0.012875536480686695,
+        "accuracy": 0.023605150214592276,
+        "fixed": 6,
+        "harmed": 1,
+        "fn_fixed": 3,
+        "fp_introduced": 1,
+        "fp_fixed": 3,
+        "fn_introduced": 0
+      }
+    },
+    "full": {
+      "all": {
+        "rows": 6954,
+        "baseline_accuracy": 0.8142076502732241,
+        "accuracy": 0.8129134311187806,
+        "fixed": 48,
+        "harmed": 57,
+        "fn_fixed": 19,
+        "fp_introduced": 23,
+        "fp_fixed": 29,
+        "fn_introduced": 34
+      },
+      "new_booking_in_historical_fold": {
+        "rows": 4691,
+        "baseline_accuracy": 0.8051588147516521,
+        "accuracy": 0.8043061180984865,
+        "fixed": 37,
+        "harmed": 41,
+        "fn_fixed": 13,
+        "fp_introduced": 13,
+        "fp_fixed": 24,
+        "fn_introduced": 28
+      },
+      "single": {
+        "rows": 3817,
+        "baseline_accuracy": 0.7993188367828137,
+        "accuracy": 0.7985328792245219,
+        "fixed": 30,
+        "harmed": 33,
+        "fn_fixed": 8,
+        "fp_introduced": 10,
+        "fp_fixed": 22,
+        "fn_introduced": 23
+      },
+      "baseline_persistent": {
+        "rows": 1070,
+        "baseline_accuracy": 0.1102803738317757,
+        "accuracy": 0.10373831775700934,
+        "fixed": 10,
+        "harmed": 17,
+        "fn_fixed": 0,
+        "fp_introduced": 9,
+        "fp_fixed": 10,
+        "fn_introduced": 8
+      },
+      "eight_family_persistent": {
+        "rows": 466,
+        "baseline_accuracy": 0.012875536480686695,
+        "accuracy": 0.008583690987124463,
+        "fixed": 0,
+        "harmed": 2,
+        "fn_fixed": 0,
+        "fp_introduced": 2,
+        "fp_fixed": 0,
+        "fn_introduced": 0
+      }
+    }
+  },
+  "v131_specific_overrides": 63,
+  "training_validation_rows": [
+    [
+      3674,
+      2318
+    ],
+    [
+      3716,
+      2318
+    ],
+    [
+      3726,
+      2318
+    ]
+  ],
+  "definition": "Incumbent predictions are the historical development replay of v131. Corrections retain all v131 decisions differing from v108. Added classifiers exclude every query booking, while the original v108 used random passenger folds."
+}
