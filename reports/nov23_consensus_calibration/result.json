@@ -1,0 +1,121 @@
+{
+  "results": {
+    "missed_transports": {
+      "agreement_across_baseline_fits": {
+        "rows": 3130,
+        "bookings": 2806,
+        "observed": 480,
+        "expected": 492.13730605764766,
+        "observed_rate": 0.15335463258785942,
+        "mean_risk": 0.15723236615260308,
+        "actual_minus_expected_95_pp": [
+          -1.5712642988795615,
+          0.8290718281544194
+        ],
+        "base_within_group_auc": 0.7336721698113208,
+        "registration_within_group_auc": 0.5445695754716982
+      },
+      "baseline_confidence_at_least_80": {
+        "rows": 2053,
+        "bookings": 1879,
+        "observed": 180,
+        "expected": 178.57781585721344,
+        "observed_rate": 0.08767657087189479,
+        "mean_risk": 0.0869838362675175,
+        "actual_minus_expected_95_pp": [
+          -1.1318253314218736,
+          1.2825437726002589
+        ],
+        "base_within_group_auc": 0.6458444563089518,
+        "registration_within_group_auc": 0.4783843507148366
+      },
+      "all_eight_families_agree": {
+        "rows": 2416,
+        "bookings": 2219,
+        "observed": 267,
+        "expected": 275.9325083209642,
+        "observed_rate": 0.11051324503311258,
+        "mean_risk": 0.11421047529841233,
+        "actual_minus_expected_95_pp": [
+          -1.5349912798826535,
+          0.8629257105037121
+        ],
+        "base_within_group_auc": 0.6755707297009496,
+        "registration_within_group_auc": 0.5013384851067391
+      },
+      "all_eight_agree_and_baseline_confidence_at_least_80": {
+        "rows": 1951,
+        "bookings": 1800,
+        "observed": 170,
+        "expected": 168.79131583180484,
+        "observed_rate": 0.08713480266529984,
+        "mean_risk": 0.08651528233306245,
+        "actual_minus_expected_95_pp": [
+          -1.1819412674181384,
+          1.3821310020382092
+        ],
+        "base_within_group_auc": 0.6371073752353272,
+        "registration_within_group_auc": 0.4810367605773359
+      }
+    },
+    "false_alarms": {
+      "agreement_across_baseline_fits": {
+        "rows": 3376,
+        "bookings": 2665,
+        "observed": 590,
+        "expected": 598.6974582702107,
+        "observed_rate": 0.17476303317535544,
+        "mean_risk": 0.17733929451131836,
+        "actual_minus_expected_95_pp": [
+          -1.4042321763700751,
+          0.8707208592956527
+        ],
+        "base_within_group_auc": 0.8491911737866087,
+        "registration_within_group_auc": 0.7145114190808766
+      },
+      "baseline_confidence_at_least_80": {
+        "rows": 1863,
+        "bookings": 1460,
+        "observed": 33,
+        "expected": 67.97738209535551,
+        "observed_rate": 0.017713365539452495,
+        "mean_risk": 0.036488127802123196,
+        "actual_minus_expected_95_pp": [
+          -2.455858920540046,
+          -1.2848568231711754
+        ],
+        "base_within_group_auc": 0.7505050505050505,
+        "registration_within_group_auc": 0.6247391952309985
+      },
+      "all_eight_families_agree": {
+        "rows": 2150,
+        "bookings": 1752,
+        "observed": 199,
+        "expected": 218.68024540659215,
+        "observed_rate": 0.09255813953488372,
+        "mean_risk": 0.10171174204957774,
+        "actual_minus_expected_95_pp": [
+          -2.0023029683348104,
+          0.1957640526504606
+        ],
+        "base_within_group_auc": 0.8829514048973726,
+        "registration_within_group_auc": 0.7978088803834653
+      },
+      "all_eight_agree_and_baseline_confidence_at_least_80": {
+        "rows": 1603,
+        "bookings": 1279,
+        "observed": 24,
+        "expected": 50.889375308943144,
+        "observed_rate": 0.014971927635683094,
+        "mean_risk": 0.03174633518960895,
+        "actual_minus_expected_95_pp": [
+          -2.246562385496885,
+          -1.0535636411311142
+        ],
+        "base_within_group_auc": 0.7396822883681655,
+        "registration_within_group_auc": 0.6189967278868482
+      }
+    }
+  },
+  "interpretation": "Cohorts use predictions only. Expected is the summed probability assigned to the contrary outcome. AUC evaluates ranking rather than selection at threshold 0.5. Intervals resample whole bookings with fixed predictors."
+}
