@@ -1,0 +1,45 @@
+{
+  "method": "Average three paired accuracy differences per person. Resample entire bookings 3000 times with seed 132, holding fitted predictions fixed.",
+  "results": {
+    "joint": {
+      "mean_gain_pp": 0.22049659668296426,
+      "booking_interval_pp": [
+        -0.05794735560467091,
+        0.48485678226274853
+      ],
+      "stable_fixed": 6,
+      "stable_false_negative": 0,
+      "stable_harmed": 5
+    },
+    "fixed_quarter": {
+      "mean_gain_pp": 0.26363723516441373,
+      "booking_interval_pp": [
+        0.00954136839689768,
+        0.5156681573206869
+      ],
+      "stable_fixed": 8,
+      "stable_false_negative": 1,
+      "stable_harmed": 3
+    },
+    "score_only": {
+      "mean_gain_pp": 0.08148787268718242,
+      "booking_interval_pp": [
+        -0.1335269498072029,
+        0.2787220360339903
+      ],
+      "stable_fixed": 1,
+      "stable_false_negative": 0,
+      "stable_harmed": 1
+    },
+    "shuffled": {
+      "mean_gain_pp": 0.07669446841146581,
+      "booking_interval_pp": [
+        -0.1634546810491431,
+        0.28840158220146195
+      ],
+      "stable_fixed": 0,
+      "stable_false_negative": 0,
+      "stable_harmed": 1
+    }
+  }
+}
