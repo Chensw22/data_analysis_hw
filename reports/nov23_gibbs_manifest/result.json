@@ -1,0 +1,95 @@
+{
+  "results": {
+    "20261112": {
+      "global": {
+        "accuracy": 0.7827149841817659,
+        "fixed": 265,
+        "harmed": 508,
+        "previous1070_correct": 192,
+        "previous466_correct": 19
+      },
+      "global_blend": {
+        "accuracy": 0.818809318377912,
+        "fixed": 70,
+        "harmed": 62,
+        "previous1070_correct": 31,
+        "previous466_correct": 1
+      },
+      "adaptive": {
+        "accuracy": 0.778400920333621,
+        "fixed": 288,
+        "harmed": 561,
+        "previous1070_correct": 215,
+        "previous466_correct": 20
+      },
+      "adaptive_blend": {
+        "accuracy": 0.8189531205061835,
+        "fixed": 78,
+        "harmed": 69,
+        "previous1070_correct": 39,
+        "previous466_correct": 1
+      }
+    },
+    "20261115": {
+      "global": {
+        "accuracy": 0.7814207650273224,
+        "fixed": 280,
+        "harmed": 502,
+        "previous1070_correct": 186,
+        "previous466_correct": 10
+      },
+      "global_blend": {
+        "accuracy": 0.8153580672993961,
+        "fixed": 77,
+        "harmed": 63,
+        "previous1070_correct": 32,
+        "previous466_correct": 0
+      },
+      "adaptive": {
+        "accuracy": 0.7750934713833765,
+        "fixed": 295,
+        "harmed": 561,
+        "previous1070_correct": 203,
+        "previous466_correct": 9
+      },
+      "adaptive_blend": {
+        "accuracy": 0.814495254529767,
+        "fixed": 88,
+        "harmed": 80,
+        "previous1070_correct": 40,
+        "previous466_correct": 0
+      }
+    },
+    "20261116": {
+      "global": {
+        "accuracy": 0.7831463905665804,
+        "fixed": 298,
+        "harmed": 511,
+        "previous1070_correct": 211,
+        "previous466_correct": 16
+      },
+      "global_blend": {
+        "accuracy": 0.8098935864250791,
+        "fixed": 69,
+        "harmed": 96,
+        "previous1070_correct": 26,
+        "previous466_correct": 0
+      },
+      "adaptive": {
+        "accuracy": 0.7739430543572045,
+        "fixed": 311,
+        "harmed": 588,
+        "previous1070_correct": 226,
+        "previous466_correct": 18
+      },
+      "adaptive_blend": {
+        "accuracy": 0.8098935864250791,
+        "fixed": 85,
+        "harmed": 112,
+        "previous1070_correct": 41,
+        "previous466_correct": 0
+      }
+    }
+  },
+  "note": "Both arms share all 512 sampled landmarks, inputs, Gaussian coefficient prior, outer training and Laplace integration. Only bandwidth differs. Radius is the 64th closest outer-training passenger in a different booking."
+}
