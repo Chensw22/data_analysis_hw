@@ -1,0 +1,114 @@
+{
+  "metrics": {
+    "group": {
+      "independent": {
+        "mitra": {
+          "accuracy": 0.7933563416738568,
+          "fixed": 261,
+          "harmed": 425,
+          "hard_fixed": 37,
+          "hard_harmed": 3,
+          "fold_net": [
+            -50,
+            -46,
+            -68
+          ]
+        },
+        "v44": {
+          "accuracy": 0.7933563416738568,
+          "fixed": 282,
+          "harmed": 429,
+          "hard_fixed": 36,
+          "hard_harmed": 7,
+          "fold_net": [
+            -37,
+            -34,
+            -76
+          ]
+        }
+      },
+      "shared": {
+        "mitra": {
+          "accuracy": 0.7907679033649698,
+          "fixed": 247,
+          "harmed": 429,
+          "hard_fixed": 33,
+          "hard_harmed": 3,
+          "fold_net": [
+            -61,
+            -52,
+            -69
+          ]
+        },
+        "v44": {
+          "accuracy": 0.7907679033649698,
+          "fixed": 273,
+          "harmed": 438,
+          "hard_fixed": 32,
+          "hard_harmed": 7,
+          "fold_net": [
+            -48,
+            -40,
+            -77
+          ]
+        }
+      },
+      "shared_vs_independent": {
+        "accuracy": 0.7907679033649698,
+        "fixed": 52,
+        "harmed": 70,
+        "hard_fixed": 0,
+        "hard_harmed": 4,
+        "fold_net": [
+          -11,
+          -6,
+          -1
+        ]
+      }
+    },
+    "random_purged": {
+      "independent": {
+        "v131": {
+          "accuracy": 0.7870290480299108,
+          "fixed": 300,
+          "harmed": 489,
+          "hard_fixed": 27,
+          "hard_harmed": 3,
+          "fold_net": [
+            -75,
+            -61,
+            -53
+          ]
+        }
+      },
+      "shared": {
+        "v131": {
+          "accuracy": 0.7863100373885533,
+          "fixed": 302,
+          "harmed": 496,
+          "hard_fixed": 24,
+          "hard_harmed": 4,
+          "fold_net": [
+            -73,
+            -61,
+            -60
+          ]
+        }
+      },
+      "shared_vs_independent": {
+        "accuracy": 0.7863100373885533,
+        "fixed": 42,
+        "harmed": 47,
+        "hard_fixed": 0,
+        "hard_harmed": 4,
+        "fold_net": [
+          2,
+          0,
+          -7
+        ]
+      }
+    }
+  },
+  "rows": 6954,
+  "design": "4 states, labeled members jointly marginalized once per training group. Gate uses unlabeled roster mean, standard deviation and size. Independent likelihood has identical parameters and initialization. Historical hard546 is diagnostic and was originally defined on a different split."
+}
