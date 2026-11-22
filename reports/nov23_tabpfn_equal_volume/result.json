@@ -1,0 +1,1308 @@
+{
+  "retention": {
+    "base": {
+      "stable": 0,
+      "same_as_115": 0
+    },
+    "exceptions": {
+      "stable": 115,
+      "same_as_115": 115
+    },
+    "balanced": {
+      "stable": 22,
+      "same_as_115": 1
+    },
+    "base_rate": {
+      "stable": 166,
+      "same_as_115": 59
+    },
+    "balanced_rate": {
+      "stable": 98,
+      "same_as_115": 52
+    },
+    "base_bill_rate": {
+      "stable": 152,
+      "same_as_115": 68
+    },
+    "net_prior": {
+      "stable": 84,
+      "same_as_115": 42
+    },
+    "constant_negative": {
+      "stable": 479,
+      "same_as_115": 106
+    },
+    "constant_positive": {
+      "stable": 325,
+      "same_as_115": 9
+    }
+  },
+  "results": {
+    "20261112": {
+      "all": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 879,
+          "fixed": 351,
+          "harmed": 528,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 369,
+          "fixed": 154,
+          "harmed": 215,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 493,
+          "fixed": 217,
+          "harmed": 276,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 1690,
+          "fixed": 547,
+          "harmed": 1143,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 1969,
+          "fixed": 405,
+          "harmed": 1564,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 879,
+          "fixed": 393,
+          "harmed": 486,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 879,
+          "fixed": 377,
+          "harmed": 502,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 879,
+          "fixed": 385,
+          "harmed": 494,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 262.13048848120184,
+          "expected_harmed": 616.8695115187982
+        }
+      },
+      "baseline_positive": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 686,
+          "fixed": 286,
+          "harmed": 400,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 146,
+          "fixed": 60,
+          "harmed": 86,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 493,
+          "fixed": 217,
+          "harmed": 276,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 1690,
+          "fixed": 547,
+          "harmed": 1143,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 686,
+          "fixed": 302,
+          "harmed": 384,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 686,
+          "fixed": 295,
+          "harmed": 391,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 686,
+          "fixed": 295,
+          "harmed": 391,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 222.29357168581936,
+          "expected_harmed": 463.7064283141807
+        }
+      },
+      "baseline_negative": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 193,
+          "fixed": 65,
+          "harmed": 128,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 223,
+          "fixed": 94,
+          "harmed": 129,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 1969,
+          "fixed": 405,
+          "harmed": 1564,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 193,
+          "fixed": 91,
+          "harmed": 102,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 193,
+          "fixed": 82,
+          "harmed": 111,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 193,
+          "fixed": 90,
+          "harmed": 103,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 39.83691679538248,
+          "expected_harmed": 153.16308320461752
+        }
+      },
+      "missing": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 92,
+          "fixed": 32,
+          "harmed": 60,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 47,
+          "fixed": 21,
+          "harmed": 26,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 45,
+          "fixed": 20,
+          "harmed": 25,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 174,
+          "fixed": 57,
+          "harmed": 117,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 228,
+          "fixed": 47,
+          "harmed": 181,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 85,
+          "fixed": 35,
+          "harmed": 50,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 105,
+          "fixed": 44,
+          "harmed": 61,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 92,
+          "fixed": 41,
+          "harmed": 51,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 27.381650900812986,
+          "expected_harmed": 64.79291841358526
+        }
+      },
+      "zero": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 389,
+          "fixed": 181,
+          "harmed": 208,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 137,
+          "fixed": 61,
+          "harmed": 76,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 345,
+          "fixed": 163,
+          "harmed": 182,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 1092,
+          "fixed": 376,
+          "harmed": 716,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 145,
+          "fixed": 65,
+          "harmed": 80,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 550,
+          "fixed": 256,
+          "harmed": 294,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 477,
+          "fixed": 221,
+          "harmed": 256,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 389,
+          "fixed": 183,
+          "harmed": 206,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 158.7675679650774,
+          "expected_harmed": 299.34503372463905
+        }
+      },
+      "low": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 188,
+          "fixed": 74,
+          "harmed": 114,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 108,
+          "fixed": 41,
+          "harmed": 67,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 59,
+          "fixed": 21,
+          "harmed": 38,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 188,
+          "fixed": 52,
+          "harmed": 136,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 826,
+          "fixed": 168,
+          "harmed": 658,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 146,
+          "fixed": 58,
+          "harmed": 88,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 156,
+          "fixed": 58,
+          "harmed": 98,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 188,
+          "fixed": 80,
+          "harmed": 108,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 37.953119790970746,
+          "expected_harmed": 118.93547463342769
+        }
+      },
+      "high": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.81765890135174
+        },
+        "exceptions": {
+          "switched": 210,
+          "fixed": 64,
+          "harmed": 146,
+          "overall_accuracy": 0.7922059246476848
+        },
+        "balanced": {
+          "switched": 77,
+          "fixed": 31,
+          "harmed": 46,
+          "overall_accuracy": 0.8088869715271786
+        },
+        "net_prior": {
+          "switched": 44,
+          "fixed": 13,
+          "harmed": 31,
+          "overall_accuracy": 0.8091745757837217
+        },
+        "constant_negative": {
+          "switched": 236,
+          "fixed": 62,
+          "harmed": 174,
+          "overall_accuracy": 0.7319528329019269
+        },
+        "constant_positive": {
+          "switched": 770,
+          "fixed": 125,
+          "harmed": 645,
+          "overall_accuracy": 0.6509922346850734
+        },
+        "base_rate": {
+          "switched": 98,
+          "fixed": 44,
+          "harmed": 54,
+          "overall_accuracy": 0.8042853034224906
+        },
+        "balanced_rate": {
+          "switched": 141,
+          "fixed": 54,
+          "harmed": 87,
+          "overall_accuracy": 0.7996836353178027
+        },
+        "base_bill_rate": {
+          "switched": 210,
+          "fixed": 81,
+          "harmed": 129,
+          "overall_accuracy": 0.8019844693701467
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 38.028149824340694,
+          "expected_harmed": 133.79608474714627
+        }
+      }
+    },
+    "20261115": {
+      "all": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 809,
+          "fixed": 340,
+          "harmed": 469,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 362,
+          "fixed": 151,
+          "harmed": 211,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 549,
+          "fixed": 275,
+          "harmed": 274,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 1707,
+          "fixed": 566,
+          "harmed": 1141,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 1952,
+          "fixed": 407,
+          "harmed": 1545,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 809,
+          "fixed": 401,
+          "harmed": 408,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 809,
+          "fixed": 347,
+          "harmed": 462,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 809,
+          "fixed": 384,
+          "harmed": 425,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 255.47374346775894,
+          "expected_harmed": 553.5262565322411
+        }
+      },
+      "baseline_positive": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 679,
+          "fixed": 294,
+          "harmed": 385,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 123,
+          "fixed": 54,
+          "harmed": 69,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 549,
+          "fixed": 275,
+          "harmed": 274,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 1707,
+          "fixed": 566,
+          "harmed": 1141,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 679,
+          "fixed": 331,
+          "harmed": 348,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 679,
+          "fixed": 295,
+          "harmed": 384,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 679,
+          "fixed": 315,
+          "harmed": 364,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 228.00433705850062,
+          "expected_harmed": 450.9956629414994
+        }
+      },
+      "baseline_negative": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 130,
+          "fixed": 46,
+          "harmed": 84,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 239,
+          "fixed": 97,
+          "harmed": 142,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 1952,
+          "fixed": 407,
+          "harmed": 1545,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 130,
+          "fixed": 70,
+          "harmed": 60,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 130,
+          "fixed": 52,
+          "harmed": 78,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 130,
+          "fixed": 69,
+          "harmed": 61,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 27.469406409258326,
+          "expected_harmed": 102.53059359074167
+        }
+      },
+      "missing": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 103,
+          "fixed": 36,
+          "harmed": 67,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 38,
+          "fixed": 9,
+          "harmed": 29,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 51,
+          "fixed": 23,
+          "harmed": 28,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 181,
+          "fixed": 60,
+          "harmed": 121,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 221,
+          "fixed": 43,
+          "harmed": 178,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 79,
+          "fixed": 34,
+          "harmed": 45,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 107,
+          "fixed": 40,
+          "harmed": 67,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 103,
+          "fixed": 42,
+          "harmed": 61,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 26.239862795998476,
+          "expected_harmed": 58.577788185643655
+        }
+      },
+      "zero": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 383,
+          "fixed": 179,
+          "harmed": 204,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 135,
+          "fixed": 64,
+          "harmed": 71,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 391,
+          "fixed": 193,
+          "harmed": 198,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 1103,
+          "fixed": 381,
+          "harmed": 722,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 134,
+          "fixed": 59,
+          "harmed": 75,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 539,
+          "fixed": 267,
+          "harmed": 272,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 450,
+          "fixed": 208,
+          "harmed": 242,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 383,
+          "fixed": 188,
+          "harmed": 195,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 156.85011110309233,
+          "expected_harmed": 291.1128929836119
+        }
+      },
+      "low": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 156,
+          "fixed": 65,
+          "harmed": 91,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 98,
+          "fixed": 38,
+          "harmed": 60,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 58,
+          "fixed": 30,
+          "harmed": 28,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 189,
+          "fixed": 60,
+          "harmed": 129,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 825,
+          "fixed": 174,
+          "harmed": 651,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 103,
+          "fixed": 52,
+          "harmed": 51,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 129,
+          "fixed": 46,
+          "harmed": 83,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 156,
+          "fixed": 74,
+          "harmed": 82,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 36.97317980961728,
+          "expected_harmed": 95.21476638285105
+        }
+      },
+      "high": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8133448375035951
+        },
+        "exceptions": {
+          "switched": 167,
+          "fixed": 60,
+          "harmed": 107,
+          "overall_accuracy": 0.7947943629565718
+        },
+        "balanced": {
+          "switched": 91,
+          "fixed": 40,
+          "harmed": 51,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "net_prior": {
+          "switched": 49,
+          "fixed": 29,
+          "harmed": 20,
+          "overall_accuracy": 0.8134886396318666
+        },
+        "constant_negative": {
+          "switched": 234,
+          "fixed": 65,
+          "harmed": 169,
+          "overall_accuracy": 0.7306586137474834
+        },
+        "constant_positive": {
+          "switched": 772,
+          "fixed": 131,
+          "harmed": 641,
+          "overall_accuracy": 0.6496980155306299
+        },
+        "base_rate": {
+          "switched": 88,
+          "fixed": 48,
+          "harmed": 40,
+          "overall_accuracy": 0.8123382226056945
+        },
+        "balanced_rate": {
+          "switched": 123,
+          "fixed": 53,
+          "harmed": 70,
+          "overall_accuracy": 0.7968075927523728
+        },
+        "base_bill_rate": {
+          "switched": 167,
+          "fixed": 80,
+          "harmed": 87,
+          "overall_accuracy": 0.8074489502444636
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 35.410589759050836,
+          "expected_harmed": 108.62080898013448
+        }
+      }
+    },
+    "20261116": {
+      "all": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 773,
+          "fixed": 306,
+          "harmed": 467,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 348,
+          "fixed": 150,
+          "harmed": 198,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 377,
+          "fixed": 173,
+          "harmed": 204,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 1697,
+          "fixed": 560,
+          "harmed": 1137,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 1962,
+          "fixed": 411,
+          "harmed": 1551,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 773,
+          "fixed": 374,
+          "harmed": 399,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 773,
+          "fixed": 323,
+          "harmed": 450,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 773,
+          "fixed": 355,
+          "harmed": 418,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 232.3087515346594,
+          "expected_harmed": 540.6912484653407
+        }
+      },
+      "baseline_positive": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 575,
+          "fixed": 244,
+          "harmed": 331,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 114,
+          "fixed": 46,
+          "harmed": 68,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 377,
+          "fixed": 173,
+          "harmed": 204,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 1697,
+          "fixed": 560,
+          "harmed": 1137,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 575,
+          "fixed": 272,
+          "harmed": 303,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 575,
+          "fixed": 240,
+          "harmed": 335,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 575,
+          "fixed": 254,
+          "harmed": 321,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 190.5257279670359,
+          "expected_harmed": 384.47427203296417
+        }
+      },
+      "baseline_negative": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 198,
+          "fixed": 62,
+          "harmed": 136,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 234,
+          "fixed": 104,
+          "harmed": 130,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 1962,
+          "fixed": 411,
+          "harmed": 1551,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 198,
+          "fixed": 102,
+          "harmed": 96,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 198,
+          "fixed": 83,
+          "harmed": 115,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 198,
+          "fixed": 101,
+          "harmed": 97,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 41.783023567623545,
+          "expected_harmed": 156.21697643237647
+        }
+      },
+      "missing": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 92,
+          "fixed": 28,
+          "harmed": 64,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 48,
+          "fixed": 19,
+          "harmed": 29,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 37,
+          "fixed": 16,
+          "harmed": 21,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 176,
+          "fixed": 56,
+          "harmed": 120,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 226,
+          "fixed": 44,
+          "harmed": 182,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 72,
+          "fixed": 30,
+          "harmed": 42,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 101,
+          "fixed": 31,
+          "harmed": 70,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 92,
+          "fixed": 36,
+          "harmed": 56,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 24.34580912087079,
+          "expected_harmed": 59.88501695846844
+        }
+      },
+      "zero": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 291,
+          "fixed": 132,
+          "harmed": 159,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 132,
+          "fixed": 57,
+          "harmed": 75,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 254,
+          "fixed": 117,
+          "harmed": 137,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 1092,
+          "fixed": 373,
+          "harmed": 719,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 145,
+          "fixed": 62,
+          "harmed": 83,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 478,
+          "fixed": 226,
+          "harmed": 252,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 374,
+          "fixed": 164,
+          "harmed": 210,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 291,
+          "fixed": 141,
+          "harmed": 150,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 132.04533434554327,
+          "expected_harmed": 250.72517929814103
+        }
+      },
+      "low": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 162,
+          "fixed": 63,
+          "harmed": 99,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 105,
+          "fixed": 46,
+          "harmed": 59,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 49,
+          "fixed": 24,
+          "harmed": 25,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 184,
+          "fixed": 59,
+          "harmed": 125,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 826,
+          "fixed": 178,
+          "harmed": 648,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 133,
+          "fixed": 72,
+          "harmed": 61,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 157,
+          "fixed": 67,
+          "harmed": 90,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 162,
+          "fixed": 80,
+          "harmed": 82,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 39.21402419733515,
+          "expected_harmed": 106.09935927964106
+        }
+      },
+      "high": {
+        "base": {
+          "switched": 0,
+          "fixed": 0,
+          "harmed": 0,
+          "overall_accuracy": 0.8137762438884095
+        },
+        "exceptions": {
+          "switched": 228,
+          "fixed": 83,
+          "harmed": 145,
+          "overall_accuracy": 0.7906241012366984
+        },
+        "balanced": {
+          "switched": 63,
+          "fixed": 28,
+          "harmed": 35,
+          "overall_accuracy": 0.8068737417313776
+        },
+        "net_prior": {
+          "switched": 37,
+          "fixed": 16,
+          "harmed": 21,
+          "overall_accuracy": 0.8093183779119931
+        },
+        "constant_negative": {
+          "switched": 245,
+          "fixed": 72,
+          "harmed": 173,
+          "overall_accuracy": 0.730802415875755
+        },
+        "constant_positive": {
+          "switched": 765,
+          "fixed": 127,
+          "harmed": 638,
+          "overall_accuracy": 0.6498418176589014
+        },
+        "base_rate": {
+          "switched": 90,
+          "fixed": 46,
+          "harmed": 44,
+          "overall_accuracy": 0.8101811906816221
+        },
+        "balanced_rate": {
+          "switched": 141,
+          "fixed": 61,
+          "harmed": 80,
+          "overall_accuracy": 0.7955133735979293
+        },
+        "base_bill_rate": {
+          "switched": 228,
+          "fixed": 98,
+          "harmed": 130,
+          "overall_accuracy": 0.8047167098073051
+        },
+        "constant_score_random_ties": {
+          "expected_fixed": 36.70358387091021,
+          "expected_harmed": 123.9816929290901
+        }
+      }
+    }
+  }
+}
