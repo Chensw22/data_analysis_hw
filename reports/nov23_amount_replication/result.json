@@ -1,0 +1,184 @@
+{
+  "results": {
+    "small": {
+      "base": {
+        "accuracy": 0.816220880069025,
+        "fixed": 0,
+        "harmed": 0,
+        "fixed_false_negatives": 0,
+        "new_false_positives": 0,
+        "fixed_false_positives": 0,
+        "new_false_negatives": 0,
+        "persistent_false_negatives": 0,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 0,
+        "changes_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "budget": {
+        "accuracy": 0.8152142651711245,
+        "fixed": 63,
+        "harmed": 70,
+        "fixed_false_negatives": 14,
+        "new_false_positives": 11,
+        "fixed_false_positives": 49,
+        "new_false_negatives": 59,
+        "persistent_false_negatives": 3,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 0,
+        "changes_by_fold": [
+          -3,
+          0,
+          0,
+          -7,
+          2,
+          -2,
+          2,
+          1
+        ]
+      },
+      "full": {
+        "accuracy": 0.8132010353753235,
+        "fixed": 25,
+        "harmed": 46,
+        "fixed_false_negatives": 13,
+        "new_false_positives": 24,
+        "fixed_false_positives": 12,
+        "new_false_negatives": 22,
+        "persistent_false_negatives": 1,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 1,
+        "changes_by_fold": [
+          -10,
+          8,
+          -4,
+          -4,
+          -2,
+          -1,
+          -4,
+          -4
+        ]
+      }
+    },
+    "large": {
+      "base": {
+        "accuracy": 0.8180903077365546,
+        "fixed": 0,
+        "harmed": 0,
+        "fixed_false_negatives": 0,
+        "new_false_positives": 0,
+        "fixed_false_positives": 0,
+        "new_false_negatives": 0,
+        "persistent_false_negatives": 0,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 0,
+        "changes_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "budget": {
+        "accuracy": 0.819672131147541,
+        "fixed": 83,
+        "harmed": 72,
+        "fixed_false_negatives": 19,
+        "new_false_positives": 13,
+        "fixed_false_positives": 64,
+        "new_false_negatives": 59,
+        "persistent_false_negatives": 2,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 2,
+        "changes_by_fold": [
+          2,
+          3,
+          1,
+          -5,
+          5,
+          -2,
+          5,
+          2
+        ]
+      },
+      "full": {
+        "accuracy": 0.816220880069025,
+        "fixed": 33,
+        "harmed": 46,
+        "fixed_false_negatives": 20,
+        "new_false_positives": 21,
+        "fixed_false_positives": 13,
+        "new_false_negatives": 25,
+        "persistent_false_negatives": 3,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 2,
+        "changes_by_fold": [
+          -3,
+          0,
+          -3,
+          0,
+          -3,
+          -4,
+          -2,
+          2
+        ]
+      }
+    }
+  },
+  "rows": 6954,
+  "training_sizes": [
+    [
+      4636,
+      6067,
+      887
+    ],
+    [
+      4637,
+      6071,
+      883
+    ],
+    [
+      4636,
+      6096,
+      858
+    ],
+    [
+      4636,
+      6096,
+      858
+    ],
+    [
+      4637,
+      6114,
+      840
+    ],
+    [
+      4636,
+      6080,
+      874
+    ],
+    [
+      4636,
+      6081,
+      873
+    ],
+    [
+      4636,
+      6073,
+      881
+    ]
+  ],
+  "baseline": "Equal-weight v44 and TabICL. Both challengers use the same CatBoost settings, input rows, and 25% weight. Full adds individual amounts back while retaining the identical reduced feature block."
+}
