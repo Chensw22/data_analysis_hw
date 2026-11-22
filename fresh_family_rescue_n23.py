@@ -1,5 +1,9 @@
 """Check if new model families recover the same historical errors before combining their votes."""
 import numpy as np
+import pandas as pd
+from scipy.special import logit
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import GroupKFold
 from archive_error_recovery_n23 import ART,ROOT,SEEDS,panel,predictions
 from relational_error_corrector import write
 
@@ -13,8 +17,31 @@ NEW = {
 }
 
 
+def independent_booking_readout(base, members, labels, groups, folds):
+    # Only train a readout on passengers excluded by the same first-stage models.
+    # Their model probabilities could otherwise depend on the evaluation labels.
+    logits = logit(np.column_stack([base, members]).clip(.001, .999))
+    designs = {"base_readout": logits[:, :1], "five_family_readout": logits}
+    decisions = {name: np.empty(len(base), dtype=bool) for name in designs}
+    seen = np.zeros(len(base), dtype=int)
+    for outer in np.unique(folds):
+        rows = np.flatnonzero(folds == outer)
+        splitter = GroupKFold(n_splits=3, shuffle=True, random_state=173)
+        for fit_idx, val_idx in splitter.split(rows, groups=groups[rows]):
+            fit, val = rows[fit_idx], rows[val_idx]
+            assert not np.intersect1d(groups[fit], groups[val]).size
+            seen[val] += 1
+            for name, x in designs.items():
+                model = LogisticRegression(C=.1, max_iter=300).fit(x[fit], labels[fit])
+                decisions[name][val] = model.predict(x[val])
+    assert (seen == 1).all()
+    return decisions
+
+
 def run():
     row,y,base,old,_,_,_=panel()
+    ids = pd.read_csv(ROOT/"data/raw/train.csv", usecols=["PassengerId"])
+    groups = ids.PassengerId.str.split("_").str[0].to_numpy()[row]
     before=(base>=.5)==y
     hits=(old>=.5)==y[None,:,None]
     strong=(hits.mean(1)>=before.mean(1)[:,None]-.01).all(0)
@@ -40,6 +67,7 @@ def run():
         direct=p.mean(axis=1)
         policies={"mean_probabilities":direct>=.5,"quarter_mean":.75*b+.25*direct>=.5,
                   "majority_vote":votes.sum(1)>=3,"unanimous_reversal":(b>=.5)^(opposite==5)}
+        policies.update(independent_booking_readout(b,p,y,groups,fold))
         performance={}
         for name,d in policies.items():
             ok=d==y
