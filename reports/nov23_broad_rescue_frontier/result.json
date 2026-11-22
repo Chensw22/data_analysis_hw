@@ -1,0 +1,555 @@
+{
+  "seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "participants": 6954,
+  "experiments": 40,
+  "within_one_count": 23,
+  "target_correct": 5911,
+  "baseline_correct": [
+    5686,
+    5656,
+    5659
+  ],
+  "target_net_gains": [
+    225,
+    255,
+    252
+  ],
+  "partitions": {
+    "at_least_one_base_miss": {
+      "same_level_stable": {
+        "rows": 492,
+        "positive": 241,
+        "negative": 251,
+        "earth": 354,
+        "alone_on_training_manifest": 288
+      },
+      "only_lower_level_stable": {
+        "rows": 420,
+        "positive": 151,
+        "negative": 269,
+        "earth": 315,
+        "alone_on_training_manifest": 246
+      },
+      "intermittent_only": {
+        "rows": 354,
+        "positive": 161,
+        "negative": 193,
+        "earth": 281,
+        "alone_on_training_manifest": 203
+      },
+      "no_observed_hit": {
+        "rows": 252,
+        "positive": 163,
+        "negative": 89,
+        "earth": 179,
+        "alone_on_training_manifest": 167
+      }
+    },
+    "base_wrong_each_split": {
+      "same_level_stable": {
+        "rows": 143,
+        "positive": 45,
+        "negative": 98,
+        "earth": 105,
+        "alone_on_training_manifest": 82
+      },
+      "only_lower_level_stable": {
+        "rows": 335,
+        "positive": 114,
+        "negative": 221,
+        "earth": 249,
+        "alone_on_training_manifest": 186
+      },
+      "intermittent_only": {
+        "rows": 340,
+        "positive": 158,
+        "negative": 182,
+        "earth": 271,
+        "alone_on_training_manifest": 195
+      },
+      "no_observed_hit": {
+        "rows": 252,
+        "positive": 163,
+        "negative": 89,
+        "earth": 179,
+        "alone_on_training_manifest": 167
+      }
+    },
+    "hard365": {
+      "same_level_stable": {
+        "rows": 0,
+        "positive": 0,
+        "negative": 0,
+        "earth": 0,
+        "alone_on_training_manifest": 0
+      },
+      "only_lower_level_stable": {
+        "rows": 6,
+        "positive": 4,
+        "negative": 2,
+        "earth": 5,
+        "alone_on_training_manifest": 5
+      },
+      "intermittent_only": {
+        "rows": 107,
+        "positive": 65,
+        "negative": 42,
+        "earth": 79,
+        "alone_on_training_manifest": 64
+      },
+      "no_observed_hit": {
+        "rows": 252,
+        "positive": 163,
+        "negative": 89,
+        "earth": 179,
+        "alone_on_training_manifest": 167
+      }
+    }
+  },
+  "methods": {
+    "sparse_rules": {
+      "within_one": false,
+      "actual_acc": [
+        0.8058671268334772,
+        0.8073051481161921,
+        0.8048605119355766
+      ],
+      "stable_fixes": 44,
+      "stable_harms": 57,
+      "lower_only_fixes": 9
+    },
+    "tabular_in_context": {
+      "within_one": true,
+      "actual_acc": [
+        0.8117630140926085,
+        0.8120506183491516,
+        0.8088869715271786
+      ],
+      "stable_fixes": 7,
+      "stable_harms": 17,
+      "lower_only_fixes": 0
+    },
+    "constructed_features": {
+      "within_one": true,
+      "actual_acc": [
+        0.812482024733966,
+        0.8106125970664366,
+        0.8109002013229796
+      ],
+      "stable_fixes": 9,
+      "stable_harms": 13,
+      "lower_only_fixes": 0
+    },
+    "feature_projections": {
+      "within_one": false,
+      "actual_acc": [
+        0.8022720736266897,
+        0.8016968651136037,
+        0.8005464480874317
+      ],
+      "stable_fixes": 99,
+      "stable_harms": 133,
+      "lower_only_fixes": 58
+    },
+    "peer_attributes": {
+      "within_one": true,
+      "actual_acc": [
+        0.8081679608858211,
+        0.8071613459879207,
+        0.8057233247052057
+      ],
+      "stable_fixes": 21,
+      "stable_harms": 34,
+      "lower_only_fixes": 0
+    },
+    "manifest_likelihood": {
+      "within_one": false,
+      "actual_acc": [
+        0.7582686223756112,
+        0.7572620074777107,
+        0.7548173712970953
+      ],
+      "stable_fixes": 132,
+      "stable_harms": 432,
+      "lower_only_fixes": 88
+    },
+    "boarding_sequence": {
+      "within_one": true,
+      "actual_acc": [
+        0.8100373885533506,
+        0.8075927523727351,
+        0.8047167098073051
+      ],
+      "stable_fixes": 22,
+      "stable_harms": 28,
+      "lower_only_fixes": 0
+    },
+    "gradient_kernel": {
+      "within_one": false,
+      "actual_acc": [
+        0.8009778544722462,
+        0.7939315501869427,
+        0.7932125395455852
+      ],
+      "stable_fixes": 99,
+      "stable_harms": 170,
+      "lower_only_fixes": 59
+    },
+    "budget_prior": {
+      "within_one": false,
+      "actual_acc": [
+        0.7673281564567156,
+        0.7621512798389416,
+        0.7638769053781996
+      ],
+      "stable_fixes": 138,
+      "stable_harms": 400,
+      "lower_only_fixes": 98
+    },
+    "bayesian_forest": {
+      "within_one": true,
+      "actual_acc": [
+        0.8085993672706356,
+        0.808455565142364,
+        0.8083117630140926
+      ],
+      "stable_fixes": 36,
+      "stable_harms": 60,
+      "lower_only_fixes": 0
+    },
+    "tensor_train": {
+      "within_one": false,
+      "actual_acc": [
+        0.7992522289329882,
+        0.7965199884958297,
+        0.7998274374460742
+      ],
+      "stable_fixes": 71,
+      "stable_harms": 98,
+      "lower_only_fixes": 44
+    },
+    "passenger_relation": {
+      "within_one": false,
+      "actual_acc": [
+        0.7979580097785447,
+        0.7917745182628703,
+        0.7920621225194133
+      ],
+      "stable_fixes": 63,
+      "stable_harms": 112,
+      "lower_only_fixes": 38
+    },
+    "registration_only": {
+      "within_one": false,
+      "actual_acc": [
+        0.7448950244463618,
+        0.7417313776243888,
+        0.7438884095484614
+      ],
+      "stable_fixes": 186,
+      "stable_harms": 629,
+      "lower_only_fixes": 139
+    },
+    "conditional_router": {
+      "within_one": true,
+      "actual_acc": [
+        0.815070463042853,
+        0.8149266609145815,
+        0.8114754098360656
+      ],
+      "stable_fixes": 3,
+      "stable_harms": 3,
+      "lower_only_fixes": 0
+    },
+    "across_deck_field": {
+      "within_one": true,
+      "actual_acc": [
+        0.811044003451251,
+        0.8091745757837217,
+        0.8094621800402646
+      ],
+      "stable_fixes": 20,
+      "stable_harms": 26,
+      "lower_only_fixes": 0
+    },
+    "apple_semantics": {
+      "within_one": true,
+      "actual_acc": [
+        0.8119068162208801,
+        0.8054357204486626,
+        0.8039976991659477
+      ],
+      "stable_fixes": 19,
+      "stable_harms": 30,
+      "lower_only_fixes": 0
+    },
+    "booking_mixup": {
+      "within_one": true,
+      "actual_acc": [
+        0.8133448375035951,
+        0.8083117630140926,
+        0.8090307736554501
+      ],
+      "stable_fixes": 22,
+      "stable_harms": 27,
+      "lower_only_fixes": 0
+    },
+    "booking_scoring": {
+      "within_one": true,
+      "actual_acc": [
+        0.81765890135174,
+        0.8142076502732241,
+        0.813632441760138
+      ],
+      "stable_fixes": 1,
+      "stable_harms": 0,
+      "lower_only_fixes": 0
+    },
+    "class_analogues": {
+      "within_one": false,
+      "actual_acc": [
+        0.7981018119068162,
+        0.7996836353178027,
+        0.7996836353178027
+      ],
+      "stable_fixes": 94,
+      "stable_harms": 143,
+      "lower_only_fixes": 55
+    },
+    "conditional_view_density": {
+      "within_one": false,
+      "actual_acc": [
+        0.8022720736266897,
+        0.8037100949094047,
+        0.8019844693701467
+      ],
+      "stable_fixes": 54,
+      "stable_harms": 80,
+      "lower_only_fixes": 22
+    },
+    "exact_booking_field": {
+      "within_one": true,
+      "actual_acc": [
+        0.818809318377912,
+        0.8146390566580385,
+        0.8134886396318666
+      ],
+      "stable_fixes": 0,
+      "stable_harms": 0,
+      "lower_only_fixes": 0
+    },
+    "field_factors": {
+      "within_one": false,
+      "actual_acc": [
+        0.7817083692838654,
+        0.7868852459016393,
+        0.7818521714121369
+      ],
+      "stable_fixes": 80,
+      "stable_harms": 116,
+      "lower_only_fixes": 45
+    },
+    "gibbs_manifest": {
+      "within_one": false,
+      "actual_acc": [
+        0.778400920333621,
+        0.7750934713833765,
+        0.7739430543572045
+      ],
+      "stable_fixes": 117,
+      "stable_harms": 257,
+      "lower_only_fixes": 80
+    },
+    "group_disputes": {
+      "within_one": true,
+      "actual_acc": [
+        0.8146390566580385,
+        0.813057233247052,
+        0.811044003451251
+      ],
+      "stable_fixes": 3,
+      "stable_harms": 5,
+      "lower_only_fixes": 0
+    },
+    "masked_views": {
+      "within_one": true,
+      "actual_acc": [
+        0.8103249928098936,
+        0.811044003451251,
+        0.8123382226056945
+      ],
+      "stable_fixes": 24,
+      "stable_harms": 22,
+      "lower_only_fixes": 0
+    },
+    "ordered_states": {
+      "within_one": true,
+      "actual_acc": [
+        0.8180903077365546,
+        0.815933275812482,
+        0.8121944204774231
+      ],
+      "stable_fixes": 4,
+      "stable_harms": 2,
+      "lower_only_fixes": 0
+    },
+    "pair_pretext": {
+      "within_one": true,
+      "actual_acc": [
+        0.8146390566580385,
+        0.8067299396031061,
+        0.808455565142364
+      ],
+      "stable_fixes": 11,
+      "stable_harms": 21,
+      "lower_only_fixes": 0
+    },
+    "party_hotdeck": {
+      "within_one": true,
+      "actual_acc": [
+        0.815645671555939,
+        0.8078803566292782,
+        0.8068737417313776
+      ],
+      "stable_fixes": 22,
+      "stable_harms": 32,
+      "lower_only_fixes": 0
+    },
+    "passenger_sampler": {
+      "within_one": true,
+      "actual_acc": [
+        0.8114754098360656,
+        0.8098935864250791,
+        0.8061547310900201
+      ],
+      "stable_fixes": 19,
+      "stable_harms": 26,
+      "lower_only_fixes": 0
+    },
+    "registration_rank": {
+      "within_one": false,
+      "actual_acc": [
+        0.7811331607707794,
+        0.7834339948231234,
+        0.7844406097210239
+      ],
+      "stable_fixes": 106,
+      "stable_harms": 218,
+      "lower_only_fixes": 74
+    },
+    "residual_discovery": {
+      "within_one": true,
+      "actual_acc": [
+        0.8077365545010066,
+        0.8088869715271786,
+        0.8090307736554501
+      ],
+      "stable_fixes": 37,
+      "stable_harms": 32,
+      "lower_only_fixes": 0
+    },
+    "residual_registration": {
+      "within_one": false,
+      "actual_acc": [
+        0.7995398331895313,
+        0.7989646246764452,
+        0.8027034800115042
+      ],
+      "stable_fixes": 71,
+      "stable_harms": 113,
+      "lower_only_fixes": 35
+    },
+    "rule_context_pool": {
+      "within_one": true,
+      "actual_acc": [
+        0.818521714121369,
+        0.815070463042853,
+        0.8152142651711245
+      ],
+      "stable_fixes": 7,
+      "stable_harms": 3,
+      "lower_only_fixes": 0
+    },
+    "selective_fields": {
+      "within_one": true,
+      "actual_acc": [
+        0.8163646821972965,
+        0.8160770779407536,
+        0.8107563991947081
+      ],
+      "stable_fixes": 2,
+      "stable_harms": 2,
+      "lower_only_fixes": 0
+    },
+    "spend_copula": {
+      "within_one": false,
+      "actual_acc": [
+        0.8050043140638481,
+        0.7989646246764452,
+        0.8042853034224906
+      ],
+      "stable_fixes": 36,
+      "stable_harms": 79,
+      "lower_only_fixes": 15
+    },
+    "spend_exceptions": {
+      "within_one": true,
+      "actual_acc": [
+        0.8123382226056945,
+        0.8074489502444636,
+        0.8087431693989071
+      ],
+      "stable_fixes": 28,
+      "stable_harms": 34,
+      "lower_only_fixes": 0
+    },
+    "symbolic_residuals": {
+      "within_one": true,
+      "actual_acc": [
+        0.8178027034800115,
+        0.814495254529767,
+        0.813920046016681
+      ],
+      "stable_fixes": 1,
+      "stable_harms": 0,
+      "lower_only_fixes": 0
+    },
+    "teacher_field_offsets": {
+      "within_one": false,
+      "actual_acc": [
+        0.7903364969801553,
+        0.8016968651136037,
+        0.7973828012654587
+      ],
+      "stable_fixes": 31,
+      "stable_harms": 54,
+      "lower_only_fixes": 9
+    },
+    "training_cohort_sensitivity": {
+      "within_one": true,
+      "actual_acc": [
+        0.8157894736842105,
+        0.819096922634455,
+        0.8129134311187806
+      ],
+      "stable_fixes": 1,
+      "stable_harms": 1,
+      "lower_only_fixes": 0
+    },
+    "transported_subclasses": {
+      "within_one": false,
+      "actual_acc": [
+        0.8061547310900201,
+        0.8029910842680472,
+        0.8057233247052057
+      ],
+      "stable_fixes": 24,
+      "stable_harms": 47,
+      "lower_only_fixes": 4
+    }
+  }
+}
