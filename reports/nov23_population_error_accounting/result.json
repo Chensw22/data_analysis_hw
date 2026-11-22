@@ -1,0 +1,365 @@
+{
+  "seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "cohorts": {
+    "baseline_wrong_0_splits": {
+      "rows": 5436,
+      "true_positive_class": 2786,
+      "true_negative_class": 2650,
+      "prior_stable": 5435,
+      "expanded_stable": 5436,
+      "expanded_ever": 5436
+    },
+    "baseline_wrong_1_splits": {
+      "rows": 245,
+      "true_positive_class": 141,
+      "true_negative_class": 104,
+      "prior_stable": 229,
+      "expanded_stable": 240,
+      "expanded_ever": 245
+    },
+    "baseline_wrong_2_splits": {
+      "rows": 203,
+      "true_positive_class": 95,
+      "true_negative_class": 108,
+      "prior_stable": 163,
+      "expanded_stable": 178,
+      "expanded_ever": 203
+    },
+    "baseline_wrong_3_splits": {
+      "rows": 1070,
+      "true_positive_class": 480,
+      "true_negative_class": 590,
+      "prior_stable": 343,
+      "expanded_stable": 402,
+      "expanded_ever": 705
+    },
+    "ten_wrong_on_mean": {
+      "rows": 607,
+      "true_positive_class": 311,
+      "true_negative_class": 296,
+      "prior_stable": 0,
+      "expanded_stable": 33,
+      "expanded_ever": 242
+    },
+    "baseline_ever_wrong": {
+      "rows": 1518,
+      "true_positive_class": 716,
+      "true_negative_class": 802,
+      "prior_stable": 735,
+      "expanded_stable": 820,
+      "expanded_ever": 1153
+    }
+  },
+  "partitions": {
+    "bill_state": {
+      "all_zero": {
+        "population": 2624,
+        "ever_wrong": 602,
+        "always_wrong": 440,
+        "ten_wrong_on_mean": 267
+      },
+      "incomplete": {
+        "population": 718,
+        "ever_wrong": 172,
+        "always_wrong": 120,
+        "ten_wrong_on_mean": 68
+      },
+      "positive": {
+        "population": 3612,
+        "ever_wrong": 744,
+        "always_wrong": 510,
+        "ten_wrong_on_mean": 272
+      }
+    },
+    "booking_observed_in_train": {
+      "multiple": {
+        "population": 3137,
+        "ever_wrong": 614,
+        "always_wrong": 440,
+        "ten_wrong_on_mean": 238
+      },
+      "single": {
+        "population": 3817,
+        "ever_wrong": 904,
+        "always_wrong": 630,
+        "ten_wrong_on_mean": 369
+      }
+    },
+    "origin": {
+      "Earth": {
+        "population": 3659,
+        "ever_wrong": 1129,
+        "always_wrong": 804,
+        "ten_wrong_on_mean": 444
+      },
+      "Europa": {
+        "population": 1727,
+        "ever_wrong": 164,
+        "always_wrong": 114,
+        "ten_wrong_on_mean": 51
+      },
+      "Mars": {
+        "population": 1400,
+        "ever_wrong": 190,
+        "always_wrong": 122,
+        "ten_wrong_on_mean": 93
+      },
+      "missing": {
+        "population": 168,
+        "ever_wrong": 35,
+        "always_wrong": 30,
+        "ten_wrong_on_mean": 19
+      }
+    },
+    "sleep": {
+      "False": {
+        "population": 4339,
+        "ever_wrong": 983,
+        "always_wrong": 659,
+        "ten_wrong_on_mean": 351
+      },
+      "True": {
+        "population": 2442,
+        "ever_wrong": 499,
+        "always_wrong": 391,
+        "ten_wrong_on_mean": 250
+      },
+      "missing": {
+        "population": 173,
+        "ever_wrong": 36,
+        "always_wrong": 20,
+        "ten_wrong_on_mean": 6
+      }
+    }
+  },
+  "methods": {
+    "sparse_rules": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 57,
+      "fixes": [
+        229,
+        249,
+        232
+      ],
+      "harms": [
+        311,
+        291,
+        294
+      ]
+    },
+    "tabular_in_context": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 17,
+      "fixes": [
+        123,
+        127,
+        120
+      ],
+      "harms": [
+        164,
+        136,
+        154
+      ]
+    },
+    "constructed_features": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 13,
+      "fixes": [
+        139,
+        154,
+        149
+      ],
+      "harms": [
+        175,
+        173,
+        169
+      ]
+    },
+    "feature_projections": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 133,
+      "fixes": [
+        233,
+        225,
+        230
+      ],
+      "harms": [
+        340,
+        306,
+        322
+      ]
+    },
+    "peer_attributes": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 34,
+      "fixes": [
+        177,
+        187,
+        182
+      ],
+      "harms": [
+        243,
+        230,
+        238
+      ]
+    },
+    "manifest_likelihood": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 432,
+      "fixes": [
+        262,
+        277,
+        288
+      ],
+      "harms": [
+        675,
+        667,
+        698
+      ]
+    },
+    "boarding_sequence": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 28,
+      "fixes": [
+        168,
+        159,
+        176
+      ],
+      "harms": [
+        221,
+        199,
+        239
+      ]
+    },
+    "gradient_kernel": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 170,
+      "fixes": [
+        277,
+        264,
+        270
+      ],
+      "harms": [
+        393,
+        399,
+        413
+      ]
+    },
+    "budget_prior": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 400,
+      "fixes": [
+        292,
+        306,
+        312
+      ],
+      "harms": [
+        642,
+        662,
+        659
+      ]
+    },
+    "bayesian_forest": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 60,
+      "fixes": [
+        154,
+        172,
+        187
+      ],
+      "harms": [
+        217,
+        206,
+        225
+      ]
+    },
+    "tensor_train": {
+      "hard_stable": 7,
+      "hard_stable_pos": 3,
+      "hard_stable_neg": 4,
+      "spoiled_always_right_all_splits": 98,
+      "fixes": [
+        235,
+        226,
+        268
+      ],
+      "harms": [
+        363,
+        343,
+        365
+      ]
+    },
+    "passenger_relation": {
+      "hard_stable": 8,
+      "hard_stable_pos": 1,
+      "hard_stable_neg": 7,
+      "spoiled_always_right_all_splits": 112,
+      "fixes": [
+        286,
+        241,
+        293
+      ],
+      "harms": [
+        423,
+        391,
+        444
+      ]
+    },
+    "registration_only": {
+      "hard_stable": 18,
+      "hard_stable_pos": 2,
+      "hard_stable_neg": 16,
+      "spoiled_always_right_all_splits": 629,
+      "fixes": [
+        347,
+        360,
+        356
+      ],
+      "harms": [
+        853,
+        858,
+        842
+      ]
+    },
+    "conditional_router": {
+      "hard_stable": 0,
+      "hard_stable_pos": 0,
+      "hard_stable_neg": 0,
+      "spoiled_always_right_all_splits": 3,
+      "fixes": [
+        96,
+        114,
+        111
+      ],
+      "harms": [
+        114,
+        103,
+        127
+      ]
+    }
+  }
+}
