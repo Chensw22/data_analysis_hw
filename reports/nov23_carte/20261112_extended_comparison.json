@@ -1,0 +1,86 @@
+{
+  "seed": 20261112,
+  "rows": 6954,
+  "folds": [
+    {
+      "fold": 0,
+      "epochs": 140,
+      "best_epoch": 99,
+      "prefix_best_epoch": 12,
+      "validation_auroc10": 0.8595224049756837,
+      "validation_auroc14": 0.8584169039468245,
+      "best_validation_auroc": 0.8997988731321446,
+      "seconds": 101.1029990829993
+    },
+    {
+      "fold": 1,
+      "epochs": 89,
+      "best_epoch": 48,
+      "prefix_best_epoch": 14,
+      "validation_auroc10": 0.8652728683106736,
+      "validation_auroc14": 0.8719244543330531,
+      "best_validation_auroc": 0.8980244975312025,
+      "seconds": 66.63067158299964
+    },
+    {
+      "fold": 2,
+      "epochs": 95,
+      "best_epoch": 54,
+      "prefix_best_epoch": 12,
+      "validation_auroc10": 0.8642138169048759,
+      "validation_auroc14": 0.8651474543284081,
+      "best_validation_auroc": 0.887605847078551,
+      "seconds": 73.8579060829943
+    }
+  ],
+  "metrics": {
+    "direct": {
+      "prefix14": {
+        "correct": 5317,
+        "accuracy": 0.7645959160195571,
+        "fixed": 282,
+        "harmed": 651,
+        "repeat1070": 198,
+        "earth430": 57,
+        "archive252": 9
+      },
+      "extended": {
+        "correct": 5489,
+        "accuracy": 0.7893298820822549,
+        "fixed": 295,
+        "harmed": 492,
+        "repeat1070": 208,
+        "earth430": 81,
+        "archive252": 4
+      },
+      "full_vs_prefix": {
+        "fixed": 528,
+        "harmed": 356
+      }
+    },
+    "quarter": {
+      "prefix14": {
+        "correct": 5684,
+        "accuracy": 0.817371297095197,
+        "fixed": 58,
+        "harmed": 60,
+        "repeat1070": 20,
+        "earth430": 3,
+        "archive252": 0
+      },
+      "extended": {
+        "correct": 5683,
+        "accuracy": 0.8172274949669255,
+        "fixed": 69,
+        "harmed": 72,
+        "repeat1070": 30,
+        "earth430": 10,
+        "archive252": 0
+      },
+      "full_vs_prefix": {
+        "fixed": 75,
+        "harmed": 76
+      }
+    }
+  }
+}
