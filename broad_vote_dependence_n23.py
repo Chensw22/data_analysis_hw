@@ -1,5 +1,4 @@
 """Measure shared vote patterns and learn correlated expert errors conditional on billing."""
-from collections import Counter
 import numpy as np
 from scipy.sparse.csgraph import minimum_spanning_tree
 from scipy.special import logit
