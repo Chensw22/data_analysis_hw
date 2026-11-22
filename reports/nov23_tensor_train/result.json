@@ -1,0 +1,273 @@
+{
+  "seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "rows": 6954,
+  "rank": 8,
+  "epochs": 22,
+  "batch_size": 384,
+  "results": {
+    "20261112": {
+      "scores": {
+        "additive_recurrent": {
+          "accuracy": 0.7985332182916307,
+          "corrected_false_negative": 58,
+          "corrected_false_positive": 180,
+          "new_false_negative": 271,
+          "new_false_positive": 100,
+          "persistent1070": {
+            "false_negative": 24,
+            "false_positive": 143
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 14
+          }
+        },
+        "tensor_train": {
+          "accuracy": 0.7992522289329882,
+          "corrected_false_negative": 90,
+          "corrected_false_positive": 145,
+          "new_false_negative": 236,
+          "new_false_positive": 127,
+          "persistent1070": {
+            "false_negative": 38,
+            "false_positive": 119
+          },
+          "unresolved466": {
+            "false_negative": 1,
+            "false_positive": 12
+          }
+        },
+        "additive_recurrent_blend": {
+          "accuracy": 0.8147828587863101,
+          "corrected_false_negative": 21,
+          "corrected_false_positive": 49,
+          "new_false_negative": 70,
+          "new_false_positive": 20,
+          "persistent1070": {
+            "false_negative": 5,
+            "false_positive": 31
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 1
+          }
+        },
+        "tensor_train_blend": {
+          "accuracy": 0.8146390566580385,
+          "corrected_false_negative": 33,
+          "corrected_false_positive": 46,
+          "new_false_negative": 65,
+          "new_false_positive": 35,
+          "persistent1070": {
+            "false_negative": 3,
+            "false_positive": 34
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 1
+          }
+        }
+      },
+      "parameters_each_fold": [
+        9043,
+        9043,
+        9043
+      ]
+    },
+    "20261115": {
+      "scores": {
+        "additive_recurrent": {
+          "accuracy": 0.8005464480874317,
+          "corrected_false_negative": 76,
+          "corrected_false_positive": 154,
+          "new_false_negative": 193,
+          "new_false_positive": 126,
+          "persistent1070": {
+            "false_negative": 33,
+            "false_positive": 111
+          },
+          "unresolved466": {
+            "false_negative": 1,
+            "false_positive": 9
+          }
+        },
+        "tensor_train": {
+          "accuracy": 0.7965199884958297,
+          "corrected_false_negative": 91,
+          "corrected_false_positive": 135,
+          "new_false_negative": 192,
+          "new_false_positive": 151,
+          "persistent1070": {
+            "false_negative": 42,
+            "false_positive": 88
+          },
+          "unresolved466": {
+            "false_negative": 1,
+            "false_positive": 5
+          }
+        },
+        "additive_recurrent_blend": {
+          "accuracy": 0.814495254529767,
+          "corrected_false_negative": 29,
+          "corrected_false_positive": 53,
+          "new_false_negative": 42,
+          "new_false_positive": 32,
+          "persistent1070": {
+            "false_negative": 7,
+            "false_positive": 27
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 0
+          }
+        },
+        "tensor_train_blend": {
+          "accuracy": 0.8149266609145815,
+          "corrected_false_negative": 32,
+          "corrected_false_positive": 47,
+          "new_false_negative": 34,
+          "new_false_positive": 34,
+          "persistent1070": {
+            "false_negative": 10,
+            "false_positive": 23
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 0
+          }
+        }
+      },
+      "parameters_each_fold": [
+        9043,
+        9043,
+        9043
+      ]
+    },
+    "20261116": {
+      "scores": {
+        "additive_recurrent": {
+          "accuracy": 0.8011216566005177,
+          "corrected_false_negative": 102,
+          "corrected_false_positive": 192,
+          "new_false_negative": 235,
+          "new_false_positive": 147,
+          "persistent1070": {
+            "false_negative": 49,
+            "false_positive": 130
+          },
+          "unresolved466": {
+            "false_negative": 3,
+            "false_positive": 12
+          }
+        },
+        "tensor_train": {
+          "accuracy": 0.7998274374460742,
+          "corrected_false_negative": 94,
+          "corrected_false_positive": 174,
+          "new_false_negative": 222,
+          "new_false_positive": 143,
+          "persistent1070": {
+            "false_negative": 41,
+            "false_positive": 124
+          },
+          "unresolved466": {
+            "false_negative": 3,
+            "false_positive": 15
+          }
+        },
+        "additive_recurrent_blend": {
+          "accuracy": 0.8123382226056945,
+          "corrected_false_negative": 30,
+          "corrected_false_positive": 54,
+          "new_false_negative": 55,
+          "new_false_positive": 39,
+          "persistent1070": {
+            "false_negative": 9,
+            "false_positive": 23
+          },
+          "unresolved466": {
+            "false_negative": 1,
+            "false_positive": 0
+          }
+        },
+        "tensor_train_blend": {
+          "accuracy": 0.8109002013229796,
+          "corrected_false_negative": 38,
+          "corrected_false_positive": 48,
+          "new_false_negative": 64,
+          "new_false_positive": 42,
+          "persistent1070": {
+            "false_negative": 6,
+            "false_positive": 27
+          },
+          "unresolved466": {
+            "false_negative": 0,
+            "false_positive": 0
+          }
+        }
+      },
+      "parameters_each_fold": [
+        9043,
+        9043,
+        9043
+      ]
+    }
+  },
+  "stable": {
+    "additive_recurrent": {
+      "persistent1070": {
+        "fn": 9,
+        "fp": 51
+      },
+      "unresolved466": {
+        "fn": 0,
+        "fp": 2
+      }
+    },
+    "tensor_train": {
+      "persistent1070": {
+        "fn": 12,
+        "fp": 59
+      },
+      "unresolved466": {
+        "fn": 0,
+        "fp": 1
+      }
+    },
+    "additive_recurrent_blend": {
+      "persistent1070": {
+        "fn": 0,
+        "fp": 3
+      },
+      "unresolved466": {
+        "fn": 0,
+        "fp": 0
+      }
+    },
+    "tensor_train_blend": {
+      "persistent1070": {
+        "fn": 0,
+        "fp": 7
+      },
+      "unresolved466": {
+        "fn": 0,
+        "fp": 0
+      }
+    }
+  },
+  "populations": {
+    "persistent1070": {
+      "fn": 480,
+      "fp": 590
+    },
+    "unresolved466": {
+      "fn": 267,
+      "fp": 199
+    }
+  },
+  "comparison": "Ten semantic field blocks; bounded rank residual matrix products versus nonlinear additive state propagation with identical parameters, initialization, optimizer, epochs, batches, and additive skip. Blend weights fixed at 25% novel model."
+}
