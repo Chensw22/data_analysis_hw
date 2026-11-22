@@ -1,0 +1,447 @@
+{
+  "results": {
+    "20261112": {
+      "metrics": {
+        "raw": {
+          "accuracy": 0.8119068162208801,
+          "fixed": 118,
+          "harmed": 158,
+          "hard447_correct": 5,
+          "hard356_correct": 0
+        },
+        "raw_blend": {
+          "accuracy": 0.8180903077365546,
+          "fixed": 38,
+          "harmed": 35,
+          "hard447_correct": 1,
+          "hard356_correct": 0
+        },
+        "random": {
+          "accuracy": 0.8121944204774231,
+          "fixed": 135,
+          "harmed": 173,
+          "hard447_correct": 7,
+          "hard356_correct": 1
+        },
+        "random_blend": {
+          "accuracy": 0.818521714121369,
+          "fixed": 46,
+          "harmed": 40,
+          "hard447_correct": 1,
+          "hard356_correct": 0
+        },
+        "selected": {
+          "accuracy": 0.812482024733966,
+          "fixed": 139,
+          "harmed": 175,
+          "hard447_correct": 9,
+          "hard356_correct": 2
+        },
+        "selected_blend": {
+          "accuracy": 0.8195283290192695,
+          "fixed": 40,
+          "harmed": 27,
+          "hard447_correct": 0,
+          "hard356_correct": 0
+        }
+      },
+      "choices": [
+        {
+          "fold": 0,
+          "selected": [
+            "RoomService_diff_Spa",
+            "Spa_rank_Destination",
+            "Spa_vs_HomePlanet",
+            "ShoppingMall_rank_Deck",
+            "FoodCourt_diff_Spa",
+            "Spa_vs_Deck",
+            "RoomService_share_total",
+            "Spa_per_year"
+          ],
+          "random": [
+            "ShoppingMall_both_Spa",
+            "total_vs_Deck",
+            "RoomService_share_ShoppingMall",
+            "FoodCourt_rank_Destination",
+            "age_rank_Destination",
+            "ShoppingMall_vs_CryoSleep",
+            "total_cabin_cross",
+            "total_rank_Deck"
+          ],
+          "inner_gain": {
+            "RoomService_diff_Spa": 0.003501699925195667,
+            "Spa_rank_Destination": 0.002247741843412495,
+            "Spa_vs_HomePlanet": 0.002060164404078265,
+            "ShoppingMall_rank_Deck": 0.0019170791182457347,
+            "FoodCourt_diff_Spa": 0.001910923008948832,
+            "Spa_vs_Deck": 0.001715829565077413,
+            "RoomService_share_total": 0.0016374241914683767,
+            "Spa_per_year": 0.0015726720048400515
+          }
+        },
+        {
+          "fold": 1,
+          "selected": [
+            "VRDeck_rank_Deck",
+            "total_vs_HomePlanet",
+            "VRDeck_rank_HomePlanet",
+            "age_rank_Deck",
+            "Spa_share_VRDeck",
+            "VRDeck_rank_CryoSleep",
+            "ShoppingMall_share_VRDeck",
+            "VRDeck_vs_HomePlanet"
+          ],
+          "random": [
+            "age_vs_Destination",
+            "VRDeck_cabin_cross",
+            "RoomService_both_FoodCourt",
+            "VRDeck_vs_Destination",
+            "FoodCourt_share_Spa",
+            "FoodCourt_vs_Deck",
+            "total_share_total",
+            "total_vs_other_party_members"
+          ],
+          "inner_gain": {
+            "VRDeck_rank_Deck": 0.0022255574553911397,
+            "total_vs_HomePlanet": 0.0020111632511532287,
+            "VRDeck_rank_HomePlanet": 0.0017744241025542211,
+            "age_rank_Deck": 0.0017660639656423283,
+            "Spa_share_VRDeck": 0.0015113214234651247,
+            "VRDeck_rank_CryoSleep": 0.0009255735655129641,
+            "ShoppingMall_share_VRDeck": 0.0008562481449900794,
+            "VRDeck_vs_HomePlanet": 0.0008265392344769159
+          }
+        },
+        {
+          "fold": 2,
+          "selected": [
+            "ShoppingMall_rank_Deck",
+            "FoodCourt_share_Spa",
+            "ShoppingMall_rank_CryoSleep",
+            "ShoppingMall_rank_HomePlanet",
+            "FoodCourt_diff_ShoppingMall",
+            "FoodCourt_rank_HomePlanet",
+            "RoomService_diff_ShoppingMall",
+            "total_rank_Deck"
+          ],
+          "random": [
+            "RoomService_rank_CryoSleep",
+            "total_cabin_cross",
+            "VRDeck_rank_CryoSleep",
+            "age_vs_HomePlanet",
+            "RoomService_both_Spa",
+            "FoodCourt_vs_HomePlanet",
+            "RoomService_vs_HomePlanet",
+            "FoodCourt_both_Spa"
+          ],
+          "inner_gain": {
+            "ShoppingMall_rank_Deck": 0.001985147934498869,
+            "FoodCourt_share_Spa": 0.0013802898604654001,
+            "ShoppingMall_rank_CryoSleep": 0.0013544828094739965,
+            "ShoppingMall_rank_HomePlanet": 0.0013463998657413285,
+            "FoodCourt_diff_ShoppingMall": 0.001302959222696835,
+            "FoodCourt_rank_HomePlanet": 0.0012952201792610734,
+            "RoomService_diff_ShoppingMall": 0.0012348177988404003,
+            "total_rank_Deck": 0.001192539412760744
+          }
+        }
+      ]
+    },
+    "20261115": {
+      "metrics": {
+        "raw": {
+          "accuracy": 0.8051481161921197,
+          "fixed": 113,
+          "harmed": 170,
+          "hard447_correct": 3,
+          "hard356_correct": 1
+        },
+        "raw_blend": {
+          "accuracy": 0.8120506183491516,
+          "fixed": 27,
+          "harmed": 36,
+          "hard447_correct": 0,
+          "hard356_correct": 0
+        },
+        "random": {
+          "accuracy": 0.8071613459879207,
+          "fixed": 118,
+          "harmed": 161,
+          "hard447_correct": 4,
+          "hard356_correct": 1
+        },
+        "random_blend": {
+          "accuracy": 0.813920046016681,
+          "fixed": 33,
+          "harmed": 29,
+          "hard447_correct": 0,
+          "hard356_correct": 0
+        },
+        "selected": {
+          "accuracy": 0.8106125970664366,
+          "fixed": 154,
+          "harmed": 173,
+          "hard447_correct": 7,
+          "hard356_correct": 1
+        },
+        "selected_blend": {
+          "accuracy": 0.815070463042853,
+          "fixed": 41,
+          "harmed": 29,
+          "hard447_correct": 0,
+          "hard356_correct": 0
+        }
+      },
+      "choices": [
+        {
+          "fold": 0,
+          "selected": [
+            "ShoppingMall_rank_Deck",
+            "FoodCourt_share_VRDeck",
+            "VRDeck_vs_other_party_members",
+            "age_vs_CryoSleep",
+            "RoomService_diff_Spa",
+            "age_vs_Deck",
+            "FoodCourt_rank_Destination",
+            "ShoppingMall_share_Spa"
+          ],
+          "random": [
+            "Spa_cabin_cross",
+            "RoomService_rank_Destination",
+            "RoomService_rank_HomePlanet",
+            "total_vs_HomePlanet",
+            "ShoppingMall_rank_CryoSleep",
+            "ShoppingMall_both_VRDeck",
+            "VRDeck_vs_HomePlanet",
+            "FoodCourt_share_total"
+          ],
+          "inner_gain": {
+            "ShoppingMall_rank_Deck": 0.0015845684310112167,
+            "FoodCourt_share_VRDeck": 0.0015540913109376997,
+            "VRDeck_vs_other_party_members": 0.001388123865620372,
+            "age_vs_CryoSleep": 0.0012331475785365975,
+            "RoomService_diff_Spa": 0.0012017212552873542,
+            "age_vs_Deck": 0.0011951777277005953,
+            "FoodCourt_rank_Destination": 0.0011752205202702481,
+            "ShoppingMall_share_Spa": 0.0011233114112025138
+          }
+        },
+        {
+          "fold": 1,
+          "selected": [
+            "ShoppingMall_rank_Deck",
+            "total_rank_Deck",
+            "RoomService_rank_Deck",
+            "ShoppingMall_vs_Deck",
+            "ShoppingMall_rank_CryoSleep",
+            "total_vs_Destination",
+            "total_cabin_cross",
+            "total_per_year"
+          ],
+          "random": [
+            "RoomService_vs_Destination",
+            "VRDeck_vs_CryoSleep",
+            "Spa_diff_VRDeck",
+            "FoodCourt_vs_Destination",
+            "RoomService_vs_Deck",
+            "RoomService_diff_VRDeck",
+            "total_rank_Destination",
+            "RoomService_both_VRDeck"
+          ],
+          "inner_gain": {
+            "ShoppingMall_rank_Deck": 0.004276197251990225,
+            "total_rank_Deck": 0.0034660105428339083,
+            "RoomService_rank_Deck": 0.0034593343796509766,
+            "ShoppingMall_vs_Deck": 0.003443283583110468,
+            "ShoppingMall_rank_CryoSleep": 0.0034140126358503387,
+            "total_vs_Destination": 0.003361260596635385,
+            "total_cabin_cross": 0.003346839300459555,
+            "total_per_year": 0.0032940300405952527
+          }
+        },
+        {
+          "fold": 2,
+          "selected": [
+            "ShoppingMall_rank_Deck",
+            "total_vs_HomePlanet",
+            "Spa_per_year",
+            "Spa_share_VRDeck",
+            "age_vs_Deck",
+            "FoodCourt_diff_ShoppingMall",
+            "ShoppingMall_rank_Destination",
+            "Spa_cabin_cross"
+          ],
+          "random": [
+            "RoomService_both_Spa",
+            "VRDeck_cabin_cross",
+            "RoomService_diff_FoodCourt",
+            "FoodCourt_vs_Deck",
+            "Spa_rank_HomePlanet",
+            "VRDeck_share_total",
+            "VRDeck_vs_Deck",
+            "total_share_total"
+          ],
+          "inner_gain": {
+            "ShoppingMall_rank_Deck": 0.002540181658931976,
+            "total_vs_HomePlanet": 0.0015628914824693159,
+            "Spa_per_year": 0.0015173236971048887,
+            "Spa_share_VRDeck": 0.001457146886404877,
+            "age_vs_Deck": 0.0013761632142672564,
+            "FoodCourt_diff_ShoppingMall": 0.0013028909499342618,
+            "ShoppingMall_rank_Destination": 0.0012013907234523964,
+            "Spa_cabin_cross": 0.001127167537094594
+          }
+        }
+      ]
+    },
+    "20261116": {
+      "metrics": {
+        "raw": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 148,
+          "harmed": 158,
+          "hard447_correct": 6,
+          "hard356_correct": 0
+        },
+        "raw_blend": {
+          "accuracy": 0.8119068162208801,
+          "fixed": 32,
+          "harmed": 45,
+          "hard447_correct": 1,
+          "hard356_correct": 0
+        },
+        "random": {
+          "accuracy": 0.8077365545010066,
+          "fixed": 127,
+          "harmed": 169,
+          "hard447_correct": 3,
+          "hard356_correct": 0
+        },
+        "random_blend": {
+          "accuracy": 0.8121944204774231,
+          "fixed": 30,
+          "harmed": 41,
+          "hard447_correct": 0,
+          "hard356_correct": 0
+        },
+        "selected": {
+          "accuracy": 0.8109002013229796,
+          "fixed": 149,
+          "harmed": 169,
+          "hard447_correct": 8,
+          "hard356_correct": 2
+        },
+        "selected_blend": {
+          "accuracy": 0.813632441760138,
+          "fixed": 41,
+          "harmed": 42,
+          "hard447_correct": 2,
+          "hard356_correct": 0
+        }
+      },
+      "choices": [
+        {
+          "fold": 0,
+          "selected": [
+            "RoomService_share_FoodCourt",
+            "total_per_year",
+            "Spa_vs_CryoSleep",
+            "total_rank_Destination",
+            "Spa_per_year",
+            "FoodCourt_diff_ShoppingMall",
+            "FoodCourt_cabin_cross",
+            "ShoppingMall_vs_other_party_members"
+          ],
+          "random": [
+            "RoomService_vs_other_party_members",
+            "VRDeck_vs_Destination",
+            "Spa_diff_VRDeck",
+            "FoodCourt_vs_other_party_members",
+            "RoomService_vs_HomePlanet",
+            "RoomService_rank_CryoSleep",
+            "total_rank_HomePlanet",
+            "RoomService_diff_FoodCourt"
+          ],
+          "inner_gain": {
+            "RoomService_share_FoodCourt": 0.0014440737089455036,
+            "total_per_year": 0.0011262039013460456,
+            "Spa_vs_CryoSleep": 0.0010959678102345587,
+            "total_rank_Destination": 0.0010125287498723619,
+            "Spa_per_year": 0.0009317378153628949,
+            "FoodCourt_diff_ShoppingMall": 0.0009179124401937355,
+            "FoodCourt_cabin_cross": 0.0008417454572805886,
+            "ShoppingMall_vs_other_party_members": 0.0008293128370862416
+          }
+        },
+        {
+          "fold": 1,
+          "selected": [
+            "total_rank_Deck",
+            "FoodCourt_share_VRDeck",
+            "VRDeck_rank_Deck",
+            "FoodCourt_rank_Deck",
+            "VRDeck_rank_CryoSleep",
+            "total_rank_HomePlanet",
+            "RoomService_rank_Deck",
+            "Spa_share_VRDeck"
+          ],
+          "random": [
+            "RoomService_both_VRDeck",
+            "Spa_vs_HomePlanet",
+            "RoomService_diff_ShoppingMall",
+            "FoodCourt_vs_Destination",
+            "Spa_rank_Deck",
+            "VRDeck_share_total",
+            "VRDeck_vs_Deck",
+            "total_vs_CryoSleep"
+          ],
+          "inner_gain": {
+            "total_rank_Deck": 0.0019185819442315566,
+            "FoodCourt_share_VRDeck": 0.0018549356107434207,
+            "VRDeck_rank_Deck": 0.0017563881089375049,
+            "FoodCourt_rank_Deck": 0.0015980506467237476,
+            "VRDeck_rank_CryoSleep": 0.0015316063140419223,
+            "total_rank_HomePlanet": 0.0015311810850969592,
+            "RoomService_rank_Deck": 0.0012572140631162965,
+            "Spa_share_VRDeck": 0.0011612775222188583
+          }
+        },
+        {
+          "fold": 2,
+          "selected": [
+            "ShoppingMall_rank_Deck",
+            "ShoppingMall_share_Spa",
+            "RoomService_rank_Deck",
+            "ShoppingMall_rank_HomePlanet",
+            "ShoppingMall_vs_Deck",
+            "ShoppingMall_cabin_cross",
+            "RoomService_diff_ShoppingMall",
+            "ShoppingMall_vs_HomePlanet"
+          ],
+          "random": [
+            "RoomService_vs_Deck",
+            "VRDeck_vs_HomePlanet",
+            "FoodCourt_per_year",
+            "FoodCourt_diff_Spa",
+            "ShoppingMall_vs_Destination",
+            "Spa_rank_HomePlanet",
+            "RoomService_share_ShoppingMall",
+            "ShoppingMall_vs_other_party_members"
+          ],
+          "inner_gain": {
+            "ShoppingMall_rank_Deck": 0.0016269001561561487,
+            "ShoppingMall_share_Spa": 0.0014052647354648544,
+            "RoomService_rank_Deck": 0.0011138716230324845,
+            "ShoppingMall_rank_HomePlanet": 0.0010961408891766444,
+            "ShoppingMall_vs_Deck": 0.001090044774529601,
+            "ShoppingMall_cabin_cross": 0.0008717905905375097,
+            "RoomService_diff_ShoppingMall": 0.0007828368411919399,
+            "ShoppingMall_vs_HomePlanet": 0.0007696199339367974
+          }
+        }
+      ]
+    }
+  },
+  "expression_count": 111,
+  "note": "Outer rows/groups never participate in incremental-utility evaluation or selection. Label-free manifest aggregates use the complete roster."
+}
