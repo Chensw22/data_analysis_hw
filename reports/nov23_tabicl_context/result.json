@@ -1,0 +1,41 @@
+{
+  "assignments": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "stable": {
+    "random": {
+      "hard447_stably_correct": 0,
+      "hard356_stably_correct": 0,
+      "hard356_ever_correct": 10
+    },
+    "local": {
+      "hard447_stably_correct": 2,
+      "hard356_stably_correct": 2,
+      "hard356_ever_correct": 11
+    },
+    "global_context": {
+      "hard447_stably_correct": 0,
+      "hard356_stably_correct": 0,
+      "hard356_ever_correct": 4
+    },
+    "global_local": {
+      "hard447_stably_correct": 1,
+      "hard356_stably_correct": 1,
+      "hard356_ever_correct": 4
+    },
+    "global_plus_base": {
+      "hard447_stably_correct": 0,
+      "hard356_stably_correct": 0,
+      "hard356_ever_correct": 1
+    },
+    "local_plus_base": {
+      "hard447_stably_correct": 0,
+      "hard356_stably_correct": 0,
+      "hard356_ever_correct": 3
+    }
+  },
+  "checkpoint": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "notes": "Same riders across three partitions. Frozen weights on CPU. KMeans and support selection use only outer training features. Matched and random contexts have 960 rows each and two estimators. Global control uses all training rows."
+}
