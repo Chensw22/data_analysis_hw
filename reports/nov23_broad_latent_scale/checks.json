@@ -1,0 +1,69 @@
+{
+  "synthetic": {
+    "train": 5000,
+    "test": 40000,
+    "constant_log_loss": 0.48783456733433034,
+    "real_log_loss": 0.4100260767311296,
+    "oracle_log_loss": 0.40985575065495405,
+    "true_scales": [
+      0.4274149319487267,
+      2.3396468519259908
+    ],
+    "fitted_scales": [
+      0.4386540877877827,
+      2.2797006293573903
+    ]
+  },
+  "matched": {
+    "native": {
+      "changes": [
+        {
+          "fixed": 84,
+          "harmed": 63,
+          "log_loss_change": 0.0009494629240762165
+        },
+        {
+          "fixed": 73,
+          "harmed": 77,
+          "log_loss_change": 0.0023950763229641514
+        },
+        {
+          "fixed": 82,
+          "harmed": 92,
+          "log_loss_change": 0.005480656964364838
+        }
+      ],
+      "paired_ci_pp": [
+        -0.18668507203921014,
+        0.2532183863119842
+      ]
+    },
+    "update": {
+      "changes": [
+        {
+          "fixed": 28,
+          "harmed": 33,
+          "log_loss_change": 0.0028161761042849176
+        },
+        {
+          "fixed": 28,
+          "harmed": 37,
+          "log_loss_change": 0.005002418491074689
+        },
+        {
+          "fixed": 35,
+          "harmed": 37,
+          "log_loss_change": 0.0038325322543048546
+        }
+      ],
+      "paired_ci_pp": [
+        -0.21170207274298902,
+        0.05787895343336753
+      ]
+    }
+  },
+  "extra": {
+    "remaining_after_65": 64,
+    "new_native": 1
+  }
+}

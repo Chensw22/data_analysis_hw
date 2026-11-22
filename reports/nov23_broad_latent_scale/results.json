@@ -1,0 +1,714 @@
+{
+  "plans": {
+    "20261112": {
+      "methods": {
+        "native_constant": {
+          "accuracy": 0.7949381650848433,
+          "fixed": 243,
+          "harmed": 401,
+          "net_by_fold": [
+            -51,
+            -44,
+            -63
+          ],
+          "corrected": {
+            "ever": 243,
+            "repeat": 165,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4359072478492577
+        },
+        "native_real": {
+          "accuracy": 0.7979580097785447,
+          "fixed": 248,
+          "harmed": 385,
+          "net_by_fold": [
+            -40,
+            -42,
+            -55
+          ],
+          "corrected": {
+            "ever": 248,
+            "repeat": 164,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.43685671077333393
+        },
+        "native_shuffled": {
+          "accuracy": 0.7945067587000287,
+          "fixed": 240,
+          "harmed": 401,
+          "net_by_fold": [
+            -52,
+            -43,
+            -66
+          ],
+          "corrected": {
+            "ever": 240,
+            "repeat": 162,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.43816609530245487
+        },
+        "update_constant": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 120,
+          "harmed": 144,
+          "net_by_fold": [
+            -5,
+            -17,
+            -2
+          ],
+          "corrected": {
+            "ever": 120,
+            "repeat": 69,
+            "unresolved": 6,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38476789332265765
+        },
+        "update_real": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 119,
+          "harmed": 148,
+          "net_by_fold": [
+            0,
+            -19,
+            -10
+          ],
+          "corrected": {
+            "ever": 119,
+            "repeat": 70,
+            "unresolved": 6,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38758406942694257
+        },
+        "update_shuffled": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 124,
+          "harmed": 154,
+          "net_by_fold": [
+            -7,
+            -16,
+            -7
+          ],
+          "corrected": {
+            "ever": 124,
+            "repeat": 74,
+            "unresolved": 7,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38598900132620806
+        }
+      },
+      "scales": [
+        {
+          "fold": 0,
+          "mode": "native",
+          "scale_quantiles": [
+            0.6911427626756981,
+            0.9274550962607664,
+            1.5074830950554703
+          ]
+        },
+        {
+          "fold": 0,
+          "mode": "update",
+          "scale_quantiles": [
+            0.9009266336375997,
+            0.9637158913760167,
+            1.188213442776788
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7662285571489447,
+            1.0183511188901768,
+            1.3461379897121826
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8699168680498057,
+            1.0040339350024876,
+            1.1812478850464119
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7290502899350929,
+            0.999392475825268,
+            1.3972652150097058
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8317896322588909,
+            1.0230287381907524,
+            1.1562366592815212
+          ]
+        }
+      ]
+    },
+    "20261115": {
+      "methods": {
+        "native_constant": {
+          "accuracy": 0.7943629565717573,
+          "fixed": 245,
+          "harmed": 377,
+          "net_by_fold": [
+            -29,
+            -43,
+            -60
+          ],
+          "corrected": {
+            "ever": 245,
+            "repeat": 155,
+            "unresolved": 9,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4373847913524843
+        },
+        "native_real": {
+          "accuracy": 0.7937877480586712,
+          "fixed": 246,
+          "harmed": 382,
+          "net_by_fold": [
+            -27,
+            -46,
+            -63
+          ],
+          "corrected": {
+            "ever": 246,
+            "repeat": 155,
+            "unresolved": 11,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.43977986767544847
+        },
+        "native_shuffled": {
+          "accuracy": 0.7940753523152143,
+          "fixed": 241,
+          "harmed": 375,
+          "net_by_fold": [
+            -26,
+            -49,
+            -59
+          ],
+          "corrected": {
+            "ever": 241,
+            "repeat": 153,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4415225266180178
+        },
+        "update_constant": {
+          "accuracy": 0.813920046016681,
+          "fixed": 133,
+          "harmed": 129,
+          "net_by_fold": [
+            14,
+            1,
+            -11
+          ],
+          "corrected": {
+            "ever": 133,
+            "repeat": 78,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38315526765115687
+        },
+        "update_real": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 141,
+          "harmed": 146,
+          "net_by_fold": [
+            12,
+            -2,
+            -15
+          ],
+          "corrected": {
+            "ever": 141,
+            "repeat": 85,
+            "unresolved": 2,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38815768614223156
+        },
+        "update_shuffled": {
+          "accuracy": 0.813920046016681,
+          "fixed": 135,
+          "harmed": 131,
+          "net_by_fold": [
+            11,
+            4,
+            -11
+          ],
+          "corrected": {
+            "ever": 135,
+            "repeat": 77,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3866682204591234
+        }
+      },
+      "scales": [
+        {
+          "fold": 0,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7557090480124625,
+            0.9370994890785295,
+            1.4366160503395837
+          ]
+        },
+        {
+          "fold": 0,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8399506388276681,
+            0.9712309496076899,
+            1.2946050796162198
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7673097228004603,
+            0.9598585766907143,
+            1.3585100065964606
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8219538065402258,
+            0.9671060450229145,
+            1.2217373573948778
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "native",
+          "scale_quantiles": [
+            0.6905574902233054,
+            1.0130228034142144,
+            1.4378778412507902
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8648261883497081,
+            0.9877843228761342,
+            1.1856875661380426
+          ]
+        }
+      ]
+    },
+    "20261116": {
+      "methods": {
+        "native_constant": {
+          "accuracy": 0.7952257693413862,
+          "fixed": 257,
+          "harmed": 386,
+          "net_by_fold": [
+            -64,
+            -31,
+            -34
+          ],
+          "corrected": {
+            "ever": 257,
+            "repeat": 168,
+            "unresolved": 17,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.43567037181168816
+        },
+        "native_real": {
+          "accuracy": 0.7937877480586712,
+          "fixed": 255,
+          "harmed": 394,
+          "net_by_fold": [
+            -59,
+            -35,
+            -45
+          ],
+          "corrected": {
+            "ever": 255,
+            "repeat": 170,
+            "unresolved": 17,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.441151028776053
+        },
+        "native_shuffled": {
+          "accuracy": 0.7936439459303998,
+          "fixed": 256,
+          "harmed": 396,
+          "net_by_fold": [
+            -67,
+            -35,
+            -38
+          ],
+          "corrected": {
+            "ever": 256,
+            "repeat": 169,
+            "unresolved": 17,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.4405712747740747
+        },
+        "update_constant": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 121,
+          "harmed": 153,
+          "net_by_fold": [
+            -27,
+            -5,
+            0
+          ],
+          "corrected": {
+            "ever": 121,
+            "repeat": 77,
+            "unresolved": 8,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38741720043188654
+        },
+        "update_real": {
+          "accuracy": 0.8088869715271786,
+          "fixed": 126,
+          "harmed": 160,
+          "net_by_fold": [
+            -25,
+            -11,
+            2
+          ],
+          "corrected": {
+            "ever": 126,
+            "repeat": 79,
+            "unresolved": 6,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3912497326861914
+        },
+        "update_shuffled": {
+          "accuracy": 0.8097497842968076,
+          "fixed": 123,
+          "harmed": 151,
+          "net_by_fold": [
+            -27,
+            -1,
+            0
+          ],
+          "corrected": {
+            "ever": 123,
+            "repeat": 75,
+            "unresolved": 9,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38969551265601665
+        }
+      },
+      "scales": [
+        {
+          "fold": 0,
+          "mode": "native",
+          "scale_quantiles": [
+            0.6793899584464174,
+            0.981442262051055,
+            1.434960319133614
+          ]
+        },
+        {
+          "fold": 0,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8588208205154189,
+            0.9969757990466384,
+            1.180602627241105
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7782626081746891,
+            0.9577249151783872,
+            1.3357592242851986
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "update",
+          "scale_quantiles": [
+            0.892403727543034,
+            0.970780535224347,
+            1.150092536637797
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "native",
+          "scale_quantiles": [
+            0.687127057624883,
+            0.9831618694881227,
+            1.5184978044625383
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8456135963389685,
+            0.9981713187315524,
+            1.1942582810762752
+          ]
+        }
+      ]
+    },
+    "v131": {
+      "methods": {
+        "native_constant": {
+          "accuracy": 0.7942191544434858,
+          "fixed": 308,
+          "harmed": 447,
+          "net_by_fold": [
+            -59,
+            -28,
+            -52
+          ],
+          "corrected": {
+            "ever": 208,
+            "repeat": 132,
+            "unresolved": 11,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.44198672424332575
+        },
+        "native_real": {
+          "accuracy": 0.7972389991371872,
+          "fixed": 313,
+          "harmed": 431,
+          "net_by_fold": [
+            -52,
+            -17,
+            -49
+          ],
+          "corrected": {
+            "ever": 215,
+            "repeat": 132,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.45070173177456047
+        },
+        "native_shuffled": {
+          "accuracy": 0.7942191544434858,
+          "fixed": 302,
+          "harmed": 441,
+          "net_by_fold": [
+            -62,
+            -28,
+            -49
+          ],
+          "corrected": {
+            "ever": 204,
+            "repeat": 130,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4476972620464483
+        },
+        "update_constant": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 144,
+          "harmed": 174,
+          "net_by_fold": [
+            -21,
+            -5,
+            -4
+          ],
+          "corrected": {
+            "ever": 115,
+            "repeat": 81,
+            "unresolved": 16,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.385469629862302
+        },
+        "update_real": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 132,
+          "harmed": 162,
+          "net_by_fold": [
+            -10,
+            -13,
+            -7
+          ],
+          "corrected": {
+            "ever": 108,
+            "repeat": 74,
+            "unresolved": 14,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3906804801508132
+        },
+        "update_shuffled": {
+          "accuracy": 0.8083117630140926,
+          "fixed": 137,
+          "harmed": 178,
+          "net_by_fold": [
+            -23,
+            -10,
+            -8
+          ],
+          "corrected": {
+            "ever": 113,
+            "repeat": 79,
+            "unresolved": 15,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3866134536960625
+        }
+      },
+      "scales": [
+        {
+          "fold": 0,
+          "mode": "native",
+          "scale_quantiles": [
+            0.6183138919016582,
+            0.9395944398532382,
+            1.4415047544828732
+          ]
+        },
+        {
+          "fold": 0,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8118055431584602,
+            1.012336146006088,
+            1.275931388789545
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "native",
+          "scale_quantiles": [
+            0.7563557325392466,
+            0.8970335394489517,
+            1.3425395013777435
+          ]
+        },
+        {
+          "fold": 1,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8925875199378951,
+            0.9477091968489986,
+            1.2236464177085056
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "native",
+          "scale_quantiles": [
+            0.6724849883997629,
+            0.9874394574772042,
+            1.3700253165410776
+          ]
+        },
+        {
+          "fold": 2,
+          "mode": "update",
+          "scale_quantiles": [
+            0.8252836265529642,
+            1.0212495790845062,
+            1.1669851516984013
+          ]
+        }
+      ]
+    }
+  },
+  "stable": {
+    "native_constant": {
+      "ever": 251,
+      "repeat": 100,
+      "unresolved": 5,
+      "never": 0,
+      "gain_ci_pp": [
+        -2.596044425650837,
+        -1.409316163426938
+      ]
+    },
+    "native_real": {
+      "ever": 249,
+      "repeat": 95,
+      "unresolved": 6,
+      "never": 0,
+      "gain_ci_pp": [
+        -2.560386995578446,
+        -1.3785183630669031
+      ]
+    },
+    "native_shuffled": {
+      "ever": 245,
+      "repeat": 93,
+      "unresolved": 6,
+      "never": 0,
+      "gain_ci_pp": [
+        -2.667041155340578,
+        -1.4948741631327722
+      ]
+    },
+    "update_constant": {
+      "ever": 99,
+      "repeat": 17,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci_pp": [
+        -0.5917611765036204,
+        0.09069775285363194
+      ]
+    },
+    "update_real": {
+      "ever": 102,
+      "repeat": 19,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci_pp": [
+        -0.6827083459780617,
+        0.02896063900496304
+      ]
+    },
+    "update_shuffled": {
+      "ever": 103,
+      "repeat": 15,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci_pp": [
+        -0.5998489985337738,
+        0.09095242222806893
+      ]
+    }
+  }
+}
