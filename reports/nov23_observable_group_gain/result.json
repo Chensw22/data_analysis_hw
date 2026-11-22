@@ -1,0 +1,515 @@
+{
+  "order": [
+    "origin",
+    "sleep",
+    "purchases",
+    "multiple",
+    "missing",
+    "direction"
+  ],
+  "oracle_members": [
+    "base",
+    "sparse_rules",
+    "tabular_in_context",
+    "constructed_features",
+    "feature_projections",
+    "peer_attributes",
+    "manifest_likelihood",
+    "boarding_sequence",
+    "gradient_kernel",
+    "budget_prior",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "registration_only",
+    "conditional_router",
+    "across_deck_field",
+    "apple_semantics",
+    "booking_mixup",
+    "booking_scoring",
+    "class_analogues",
+    "conditional_view_density",
+    "exact_booking_field",
+    "field_factors",
+    "gibbs_manifest",
+    "group_disputes",
+    "masked_views",
+    "ordered_states",
+    "pair_pretext",
+    "party_hotdeck",
+    "passenger_sampler",
+    "registration_rank",
+    "residual_discovery",
+    "residual_registration",
+    "rule_context_pool",
+    "selective_fields",
+    "spend_copula",
+    "spend_exceptions",
+    "symbolic_residuals",
+    "teacher_field_offsets",
+    "training_cohort_sensitivity",
+    "transported_subclasses"
+  ],
+  "selection_members": [
+    "base",
+    "registration_only",
+    "budget_prior",
+    "feature_projections",
+    "field_factors",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "manifest_likelihood",
+    "boarding_sequence"
+  ],
+  "results": {
+    "2": {
+      "20261112": {
+        "cells": 12,
+        "largest": 2464,
+        "oracle": {
+          "accuracy": 0.8258556226632154,
+          "fixed": 141,
+          "harmed": 84,
+          "weak335": 24,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.812482024733966,
+          "fixed": 116,
+          "harmed": 152,
+          "weak335": 37,
+          "unresolved252": 0
+        }
+      },
+      "20261115": {
+        "cells": 12,
+        "largest": 2464,
+        "oracle": {
+          "accuracy": 0.823123382226057,
+          "fixed": 169,
+          "harmed": 101,
+          "weak335": 24,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.813632441760138,
+          "fixed": 150,
+          "harmed": 148,
+          "weak335": 35,
+          "unresolved252": 0
+        }
+      },
+      "20261116": {
+        "cells": 12,
+        "largest": 2464,
+        "oracle": {
+          "accuracy": 0.819959735404084,
+          "fixed": 150,
+          "harmed": 107,
+          "weak335": 19,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8113316077077941,
+          "fixed": 128,
+          "harmed": 145,
+          "weak335": 17,
+          "unresolved252": 0
+        }
+      }
+    },
+    "3": {
+      "20261112": {
+        "cells": 24,
+        "largest": 2030,
+        "oracle": {
+          "accuracy": 0.8287316652286454,
+          "fixed": 162,
+          "harmed": 85,
+          "weak335": 30,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 123,
+          "harmed": 150,
+          "weak335": 38,
+          "unresolved252": 0
+        },
+        "cells_with_at_least_100": {
+          "Earth/False/0": {
+            "rows": 253,
+            "weak335": 35,
+            "unresolved252": 7,
+            "net": 4
+          },
+          "Earth/False/1": {
+            "rows": 181,
+            "weak335": 15,
+            "unresolved252": 5,
+            "net": -5
+          },
+          "Earth/False/2": {
+            "rows": 2030,
+            "weak335": 109,
+            "unresolved252": 105,
+            "net": -5
+          },
+          "Earth/True/0": {
+            "rows": 1106,
+            "weak335": 82,
+            "unresolved252": 61,
+            "net": -13
+          },
+          "Europa/False/2": {
+            "rows": 880,
+            "weak335": 45,
+            "unresolved252": 11,
+            "net": -1
+          },
+          "Europa/True/0": {
+            "rows": 736,
+            "weak335": 0,
+            "unresolved252": 9,
+            "net": 0
+          },
+          "Mars/False/0": {
+            "rows": 103,
+            "weak335": 0,
+            "unresolved252": 2,
+            "net": 0
+          },
+          "Mars/False/2": {
+            "rows": 707,
+            "weak335": 17,
+            "unresolved252": 32,
+            "net": 1
+          },
+          "Mars/True/0": {
+            "rows": 535,
+            "weak335": 6,
+            "unresolved252": 6,
+            "net": 6
+          }
+        }
+      },
+      "20261115": {
+        "cells": 24,
+        "largest": 2030,
+        "oracle": {
+          "accuracy": 0.8261432269197584,
+          "fixed": 202,
+          "harmed": 113,
+          "weak335": 33,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8100373885533506,
+          "fixed": 168,
+          "harmed": 191,
+          "weak335": 42,
+          "unresolved252": 0
+        },
+        "cells_with_at_least_100": {
+          "Earth/False/0": {
+            "rows": 253,
+            "weak335": 35,
+            "unresolved252": 7,
+            "net": -8
+          },
+          "Earth/False/1": {
+            "rows": 181,
+            "weak335": 15,
+            "unresolved252": 5,
+            "net": -6
+          },
+          "Earth/False/2": {
+            "rows": 2030,
+            "weak335": 109,
+            "unresolved252": 105,
+            "net": -4
+          },
+          "Earth/True/0": {
+            "rows": 1106,
+            "weak335": 82,
+            "unresolved252": 61,
+            "net": 1
+          },
+          "Europa/False/2": {
+            "rows": 880,
+            "weak335": 45,
+            "unresolved252": 11,
+            "net": -6
+          },
+          "Europa/True/0": {
+            "rows": 736,
+            "weak335": 0,
+            "unresolved252": 9,
+            "net": 0
+          },
+          "Mars/False/0": {
+            "rows": 103,
+            "weak335": 0,
+            "unresolved252": 2,
+            "net": 0
+          },
+          "Mars/False/2": {
+            "rows": 707,
+            "weak335": 17,
+            "unresolved252": 32,
+            "net": 0
+          },
+          "Mars/True/0": {
+            "rows": 535,
+            "weak335": 6,
+            "unresolved252": 6,
+            "net": 0
+          }
+        }
+      },
+      "20261116": {
+        "cells": 24,
+        "largest": 2030,
+        "oracle": {
+          "accuracy": 0.8235547886108714,
+          "fixed": 150,
+          "harmed": 82,
+          "weak335": 25,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 153,
+          "harmed": 180,
+          "weak335": 28,
+          "unresolved252": 0
+        },
+        "cells_with_at_least_100": {
+          "Earth/False/0": {
+            "rows": 253,
+            "weak335": 35,
+            "unresolved252": 7,
+            "net": -5
+          },
+          "Earth/False/1": {
+            "rows": 181,
+            "weak335": 15,
+            "unresolved252": 5,
+            "net": -6
+          },
+          "Earth/False/2": {
+            "rows": 2030,
+            "weak335": 109,
+            "unresolved252": 105,
+            "net": 19
+          },
+          "Earth/True/0": {
+            "rows": 1106,
+            "weak335": 82,
+            "unresolved252": 61,
+            "net": -21
+          },
+          "Europa/False/2": {
+            "rows": 880,
+            "weak335": 45,
+            "unresolved252": 11,
+            "net": -12
+          },
+          "Europa/True/0": {
+            "rows": 736,
+            "weak335": 0,
+            "unresolved252": 9,
+            "net": 0
+          },
+          "Mars/False/0": {
+            "rows": 103,
+            "weak335": 0,
+            "unresolved252": 2,
+            "net": 0
+          },
+          "Mars/False/2": {
+            "rows": 707,
+            "weak335": 17,
+            "unresolved252": 32,
+            "net": 3
+          },
+          "Mars/True/0": {
+            "rows": 535,
+            "weak335": 6,
+            "unresolved252": 6,
+            "net": 13
+          }
+        }
+      }
+    },
+    "4": {
+      "20261112": {
+        "cells": 46,
+        "largest": 1548,
+        "oracle": {
+          "accuracy": 0.8327581248202474,
+          "fixed": 219,
+          "harmed": 114,
+          "weak335": 50,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8080241587575496,
+          "fixed": 155,
+          "harmed": 222,
+          "weak335": 56,
+          "unresolved252": 0
+        }
+      },
+      "20261115": {
+        "cells": 46,
+        "largest": 1548,
+        "oracle": {
+          "accuracy": 0.8314639056658039,
+          "fixed": 220,
+          "harmed": 94,
+          "weak335": 51,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.811044003451251,
+          "fixed": 199,
+          "harmed": 215,
+          "weak335": 52,
+          "unresolved252": 0
+        }
+      },
+      "20261116": {
+        "cells": 46,
+        "largest": 1548,
+        "oracle": {
+          "accuracy": 0.8261432269197584,
+          "fixed": 191,
+          "harmed": 105,
+          "weak335": 38,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8120506183491516,
+          "fixed": 170,
+          "harmed": 182,
+          "weak335": 39,
+          "unresolved252": 0
+        }
+      }
+    },
+    "5": {
+      "20261112": {
+        "cells": 81,
+        "largest": 1393,
+        "oracle": {
+          "accuracy": 0.8379350014380212,
+          "fixed": 234,
+          "harmed": 93,
+          "weak335": 51,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8093183779119931,
+          "fixed": 147,
+          "harmed": 205,
+          "weak335": 52,
+          "unresolved252": 0
+        }
+      },
+      "20261115": {
+        "cells": 81,
+        "largest": 1393,
+        "oracle": {
+          "accuracy": 0.8362093758987633,
+          "fixed": 269,
+          "harmed": 110,
+          "weak335": 67,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8087431693989071,
+          "fixed": 222,
+          "harmed": 254,
+          "weak335": 62,
+          "unresolved252": 0
+        }
+      },
+      "20261116": {
+        "cells": 81,
+        "largest": 1393,
+        "oracle": {
+          "accuracy": 0.8326143226919759,
+          "fixed": 260,
+          "harmed": 129,
+          "weak335": 63,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8085993672706356,
+          "fixed": 171,
+          "harmed": 207,
+          "weak335": 39,
+          "unresolved252": 0
+        }
+      }
+    },
+    "6": {
+      "20261112": {
+        "cells": 130,
+        "largest": 1119,
+        "oracle": {
+          "accuracy": 0.8462755248777681,
+          "fixed": 295,
+          "harmed": 96,
+          "weak335": 69,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8065861374748347,
+          "fixed": 153,
+          "harmed": 230,
+          "weak335": 45,
+          "unresolved252": 0
+        }
+      },
+      "20261115": {
+        "cells": 133,
+        "largest": 1130,
+        "oracle": {
+          "accuracy": 0.8431118780557952,
+          "fixed": 321,
+          "harmed": 114,
+          "weak335": 84,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8094621800402646,
+          "fixed": 231,
+          "harmed": 258,
+          "weak335": 71,
+          "unresolved252": 0
+        }
+      },
+      "20261116": {
+        "cells": 131,
+        "largest": 1118,
+        "oracle": {
+          "accuracy": 0.8387978142076503,
+          "fixed": 288,
+          "harmed": 114,
+          "weak335": 71,
+          "unresolved252": 0
+        },
+        "held_out": {
+          "accuracy": 0.8078803566292782,
+          "fixed": 178,
+          "harmed": 219,
+          "weak335": 45,
+          "unresolved252": 0
+        }
+      }
+    }
+  }
+}
