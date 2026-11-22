@@ -1,0 +1,284 @@
+{
+  "rows": 6954,
+  "ever_wrong": 1518,
+  "persistent": 1070,
+  "split_results": {
+    "20261112": {
+      "models": {
+        "quarter": {
+          "accuracy": 0.8096059821685361,
+          "fixed": 150,
+          "harmed": 206
+        },
+        "half": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 135,
+          "harmed": 159
+        },
+        "three_quarters": {
+          "accuracy": 0.8117630140926085,
+          "fixed": 117,
+          "harmed": 158
+        },
+        "full": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 144,
+          "harmed": 174
+        },
+        "full_extrapolated": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 165,
+          "harmed": 195
+        },
+        "baseline_plus_trajectory": {
+          "accuracy": 0.8180903077365546,
+          "fixed": 31,
+          "harmed": 28
+        }
+      },
+      "baseline": 0.81765890135174,
+      "block_sizes": [
+        [
+          1175,
+          1140,
+          1118,
+          1203
+        ],
+        [
+          1175,
+          1144,
+          1154,
+          1163
+        ],
+        [
+          1166,
+          1135,
+          1183,
+          1152
+        ]
+      ],
+      "full_vs_quarter": {
+        "accuracy": 0.8133448375035951,
+        "fixed": 180,
+        "harmed": 154
+      },
+      "held_size_backtest_mae": {
+        "carry_forward": 0.026316976256081592,
+        "extrapolated": 0.026925231401536198
+      }
+    },
+    "20261115": {
+      "models": {
+        "quarter": {
+          "accuracy": 0.8087431693989071,
+          "fixed": 167,
+          "harmed": 199
+        },
+        "half": {
+          "accuracy": 0.8093183779119931,
+          "fixed": 122,
+          "harmed": 150
+        },
+        "three_quarters": {
+          "accuracy": 0.8096059821685361,
+          "fixed": 140,
+          "harmed": 166
+        },
+        "full": {
+          "accuracy": 0.8052919183203912,
+          "fixed": 134,
+          "harmed": 190
+        },
+        "full_extrapolated": {
+          "accuracy": 0.8087431693989071,
+          "fixed": 157,
+          "harmed": 189
+        },
+        "baseline_plus_trajectory": {
+          "accuracy": 0.814495254529767,
+          "fixed": 38,
+          "harmed": 30
+        }
+      },
+      "baseline": 0.8133448375035951,
+      "block_sizes": [
+        [
+          1158,
+          1131,
+          1171,
+          1175
+        ],
+        [
+          1172,
+          1147,
+          1174,
+          1143
+        ],
+        [
+          1171,
+          1155,
+          1169,
+          1142
+        ]
+      ],
+      "full_vs_quarter": {
+        "accuracy": 0.8052919183203912,
+        "fixed": 188,
+        "harmed": 212
+      },
+      "held_size_backtest_mae": {
+        "carry_forward": 0.02664258345391752,
+        "extrapolated": 0.027608826070445805
+      }
+    },
+    "20261116": {
+      "models": {
+        "quarter": {
+          "accuracy": 0.8071613459879207,
+          "fixed": 156,
+          "harmed": 202
+        },
+        "half": {
+          "accuracy": 0.8090307736554501,
+          "fixed": 140,
+          "harmed": 173
+        },
+        "three_quarters": {
+          "accuracy": 0.8083117630140926,
+          "fixed": 127,
+          "harmed": 165
+        },
+        "full": {
+          "accuracy": 0.8087431693989071,
+          "fixed": 151,
+          "harmed": 186
+        },
+        "full_extrapolated": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 166,
+          "harmed": 198
+        },
+        "baseline_plus_trajectory": {
+          "accuracy": 0.813632441760138,
+          "fixed": 31,
+          "harmed": 32
+        }
+      },
+      "baseline": 0.8137762438884095,
+      "block_sizes": [
+        [
+          1164,
+          1159,
+          1171,
+          1141
+        ],
+        [
+          1148,
+          1167,
+          1171,
+          1151
+        ],
+        [
+          1166,
+          1179,
+          1164,
+          1127
+        ]
+      ],
+      "full_vs_quarter": {
+        "accuracy": 0.8087431693989071,
+        "fixed": 175,
+        "harmed": 164
+      },
+      "held_size_backtest_mae": {
+        "carry_forward": 0.026035098743745728,
+        "extrapolated": 0.02675096306879353
+      }
+    }
+  },
+  "coverage": {
+    "quarter": {
+      "ever_wrong_now_correct_all": 128,
+      "persistent_correct_all": 18,
+      "persistent_correct_once_or_more": 168,
+      "always_correct_now_wrong_all": 32
+    },
+    "half": {
+      "ever_wrong_now_correct_all": 129,
+      "persistent_correct_all": 15,
+      "persistent_correct_once_or_more": 135,
+      "always_correct_now_wrong_all": 22
+    },
+    "three_quarters": {
+      "ever_wrong_now_correct_all": 105,
+      "persistent_correct_all": 7,
+      "persistent_correct_once_or_more": 142,
+      "always_correct_now_wrong_all": 22
+    },
+    "full": {
+      "ever_wrong_now_correct_all": 94,
+      "persistent_correct_all": 17,
+      "persistent_correct_once_or_more": 176,
+      "always_correct_now_wrong_all": 15
+    },
+    "full_extrapolated": {
+      "ever_wrong_now_correct_all": 101,
+      "persistent_correct_all": 18,
+      "persistent_correct_once_or_more": 207,
+      "always_correct_now_wrong_all": 17
+    },
+    "baseline_plus_trajectory": {
+      "ever_wrong_now_correct_all": 24,
+      "persistent_correct_all": 1,
+      "persistent_correct_once_or_more": 39,
+      "always_correct_now_wrong_all": 0
+    }
+  },
+  "quarter_to_full": {
+    "total": {
+      "size": 6954,
+      "fixes": [
+        180,
+        188,
+        175
+      ],
+      "harms": [
+        154,
+        212,
+        164
+      ],
+      "fixed_every_time": 13,
+      "harmed_every_time": 9
+    },
+    "ever_wrong": {
+      "size": 1518,
+      "fixes": [
+        116,
+        114,
+        114
+      ],
+      "harms": [
+        100,
+        137,
+        92
+      ],
+      "fixed_every_time": 6,
+      "harmed_every_time": 7
+    },
+    "persistent": {
+      "size": 1070,
+      "fixes": [
+        53,
+        49,
+        45
+      ],
+      "harms": [
+        46,
+        58,
+        42
+      ],
+      "fixed_every_time": 2,
+      "harmed_every_time": 5
+    }
+  }
+}
