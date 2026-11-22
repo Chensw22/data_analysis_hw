@@ -1,0 +1,323 @@
+{
+  "rankers": [
+    "base",
+    "broad_basket_balance/basket",
+    "broad_basket_balance/weighted",
+    "broad_basket_balance/placebo",
+    "broad_basket_balance/coarse_native",
+    "broad_basket_balance/restored",
+    "service_assignment/unordered",
+    "service_assignment/factor_real",
+    "service_assignment/real",
+    "paid_register_likelihood/bill",
+    "paid_register_likelihood/forward",
+    "paid_register_likelihood/reverse",
+    "broad_service_transfer/update_native",
+    "broad_service_transfer/update_other",
+    "broad_service_transfer/update_aligned",
+    "broad_service_transfer/update_pooled"
+  ],
+  "plans": {
+    "20261112": {
+      "comparison": {
+        "hindsight": {
+          "fixed": 35,
+          "harmed": 12,
+          "accuracy": 0.8209663503019845,
+          "repeat_paid_fixed": 21
+        },
+        "held_bookings": {
+          "fixed": 52,
+          "harmed": 82,
+          "accuracy": 0.8133448375035951,
+          "repeat_paid_fixed": 29
+        }
+      },
+      "needed": 225,
+      "frontier": {
+        "all": {
+          "0": 12,
+          "25": 47,
+          "50": 66,
+          "100": 102,
+          "200": 167
+        },
+        "repeat": {
+          "0": 9,
+          "25": 34,
+          "50": 49,
+          "100": 73,
+          "200": 117
+        }
+      },
+      "groups": [
+        {
+          "service": "Spa",
+          "eligible": 763,
+          "missed": 81,
+          "oracle_fixed": 2,
+          "oracle_harmed": 0,
+          "ranker": "broad_basket_balance/placebo"
+        },
+        {
+          "service": "FoodCourt",
+          "eligible": 371,
+          "missed": 105,
+          "oracle_fixed": 5,
+          "oracle_harmed": 1,
+          "ranker": "broad_basket_balance/weighted"
+        },
+        {
+          "service": "VRDeck",
+          "eligible": 701,
+          "missed": 81,
+          "oracle_fixed": 13,
+          "oracle_harmed": 6,
+          "ranker": "base"
+        },
+        {
+          "service": "RoomService",
+          "eligible": 893,
+          "missed": 107,
+          "oracle_fixed": 5,
+          "oracle_harmed": 1,
+          "ranker": "service_assignment/factor_real"
+        },
+        {
+          "service": "ShoppingMall",
+          "eligible": 393,
+          "missed": 117,
+          "oracle_fixed": 10,
+          "oracle_harmed": 4,
+          "ranker": "broad_basket_balance/basket"
+        }
+      ]
+    },
+    "20261115": {
+      "comparison": {
+        "hindsight": {
+          "fixed": 87,
+          "harmed": 51,
+          "accuracy": 0.818521714121369,
+          "repeat_paid_fixed": 42
+        },
+        "held_bookings": {
+          "fixed": 76,
+          "harmed": 87,
+          "accuracy": 0.8117630140926085,
+          "repeat_paid_fixed": 37
+        }
+      },
+      "needed": 255,
+      "frontier": {
+        "all": {
+          "0": 18,
+          "25": 58,
+          "50": 85,
+          "100": 127,
+          "200": 195
+        },
+        "repeat": {
+          "0": 11,
+          "25": 32,
+          "50": 47,
+          "100": 80,
+          "200": 137
+        }
+      },
+      "groups": [
+        {
+          "service": "Spa",
+          "eligible": 761,
+          "missed": 79,
+          "oracle_fixed": 1,
+          "oracle_harmed": 0,
+          "ranker": "broad_basket_balance/weighted"
+        },
+        {
+          "service": "FoodCourt",
+          "eligible": 374,
+          "missed": 107,
+          "oracle_fixed": 14,
+          "oracle_harmed": 5,
+          "ranker": "broad_basket_balance/placebo"
+        },
+        {
+          "service": "VRDeck",
+          "eligible": 702,
+          "missed": 82,
+          "oracle_fixed": 10,
+          "oracle_harmed": 4,
+          "ranker": "base"
+        },
+        {
+          "service": "RoomService",
+          "eligible": 897,
+          "missed": 112,
+          "oracle_fixed": 11,
+          "oracle_harmed": 2,
+          "ranker": "base"
+        },
+        {
+          "service": "ShoppingMall",
+          "eligible": 371,
+          "missed": 119,
+          "oracle_fixed": 51,
+          "oracle_harmed": 40,
+          "ranker": "paid_register_likelihood/bill"
+        }
+      ]
+    },
+    "20261116": {
+      "comparison": {
+        "hindsight": {
+          "fixed": 43,
+          "harmed": 14,
+          "accuracy": 0.817946505608283,
+          "repeat_paid_fixed": 26
+        },
+        "held_bookings": {
+          "fixed": 77,
+          "harmed": 90,
+          "accuracy": 0.8119068162208801,
+          "repeat_paid_fixed": 47
+        }
+      },
+      "needed": 252,
+      "frontier": {
+        "all": {
+          "0": 15,
+          "25": 53,
+          "50": 79,
+          "100": 119,
+          "200": 188
+        },
+        "repeat": {
+          "0": 11,
+          "25": 41,
+          "50": 59,
+          "100": 85,
+          "200": 132
+        }
+      },
+      "groups": [
+        {
+          "service": "Spa",
+          "eligible": 759,
+          "missed": 80,
+          "oracle_fixed": 2,
+          "oracle_harmed": 0,
+          "ranker": "base"
+        },
+        {
+          "service": "FoodCourt",
+          "eligible": 363,
+          "missed": 112,
+          "oracle_fixed": 15,
+          "oracle_harmed": 6,
+          "ranker": "paid_register_likelihood/bill"
+        },
+        {
+          "service": "VRDeck",
+          "eligible": 704,
+          "missed": 81,
+          "oracle_fixed": 10,
+          "oracle_harmed": 4,
+          "ranker": "broad_service_transfer/update_native"
+        },
+        {
+          "service": "RoomService",
+          "eligible": 892,
+          "missed": 107,
+          "oracle_fixed": 5,
+          "oracle_harmed": 1,
+          "ranker": "service_assignment/factor_real"
+        },
+        {
+          "service": "ShoppingMall",
+          "eligible": 384,
+          "missed": 117,
+          "oracle_fixed": 11,
+          "oracle_harmed": 3,
+          "ranker": "broad_service_transfer/update_other"
+        }
+      ]
+    },
+    "v131": {
+      "comparison": {
+        "hindsight": {
+          "fixed": 66,
+          "harmed": 34,
+          "accuracy": 0.818809318377912,
+          "repeat_paid_fixed": 39
+        },
+        "held_bookings": {
+          "fixed": 65,
+          "harmed": 81,
+          "accuracy": 0.8119068162208801,
+          "repeat_paid_fixed": 30
+        }
+      },
+      "needed": 249,
+      "frontier": {
+        "all": {
+          "0": 19,
+          "25": 56,
+          "50": 81,
+          "100": 118,
+          "200": 177
+        },
+        "repeat": {
+          "0": 12,
+          "25": 35,
+          "50": 51,
+          "100": 75,
+          "200": 118
+        }
+      },
+      "groups": [
+        {
+          "service": "Spa",
+          "eligible": 757,
+          "missed": 78,
+          "oracle_fixed": 4,
+          "oracle_harmed": 2,
+          "ranker": "service_assignment/factor_real"
+        },
+        {
+          "service": "FoodCourt",
+          "eligible": 373,
+          "missed": 112,
+          "oracle_fixed": 21,
+          "oracle_harmed": 13,
+          "ranker": "broad_service_transfer/update_other"
+        },
+        {
+          "service": "VRDeck",
+          "eligible": 698,
+          "missed": 79,
+          "oracle_fixed": 6,
+          "oracle_harmed": 2,
+          "ranker": "broad_service_transfer/update_native"
+        },
+        {
+          "service": "RoomService",
+          "eligible": 889,
+          "missed": 109,
+          "oracle_fixed": 9,
+          "oracle_harmed": 3,
+          "ranker": "broad_basket_balance/weighted"
+        },
+        {
+          "service": "ShoppingMall",
+          "eligible": 378,
+          "missed": 118,
+          "oracle_fixed": 26,
+          "oracle_harmed": 14,
+          "ranker": "broad_basket_balance/basket"
+        }
+      ]
+    }
+  },
+  "stable_learned_paid": 0
+}
