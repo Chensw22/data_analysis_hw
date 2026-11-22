@@ -1,0 +1,853 @@
+{
+  "20261112": {
+    "scores": {
+      "score_only": {
+        "accuracy": 0.8178027034800115,
+        "fixed": 4,
+        "harmed": 3,
+        "earth_fixed_missed": 4,
+        "earth_fixed_false_alarm": 0,
+        "earth_new_missed": 0,
+        "earth_new_false_alarm": 3,
+        "repeat": 0,
+        "earth_repeat": 0,
+        "brier_change": -0.0001074878591359577
+      },
+      "broad_fields": {
+        "accuracy": 0.8175150992234685,
+        "fixed": 14,
+        "harmed": 15,
+        "earth_fixed_missed": 4,
+        "earth_fixed_false_alarm": 2,
+        "earth_new_missed": 5,
+        "earth_new_false_alarm": 6,
+        "repeat": 5,
+        "earth_repeat": 3,
+        "brier_change": -1.711794576040952e-05
+      }
+    },
+    "rules": {
+      "score_only": [
+        [],
+        [
+          {
+            "rule": "score_ge_0.15",
+            "discovery_rows": 563,
+            "confirmation_rows": 532,
+            "query_rows": 565,
+            "logit_change": 0.04327427347034798
+          }
+        ],
+        [],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 201,
+            "confirmation_rows": 186,
+            "query_rows": 212,
+            "logit_change": 0.20567614042387028
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 193,
+            "confirmation_rows": 202,
+            "query_rows": 204,
+            "logit_change": 0.23676487461080437
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 193,
+            "confirmation_rows": 202,
+            "query_rows": 204,
+            "logit_change": 0.19656572851517928
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 200,
+            "confirmation_rows": 216,
+            "query_rows": 183,
+            "logit_change": 0.16859994962614042
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 200,
+            "confirmation_rows": 216,
+            "query_rows": 183,
+            "logit_change": 0.13398078662118507
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 197,
+            "confirmation_rows": 195,
+            "query_rows": 231,
+            "logit_change": 0.26711192636912356
+          },
+          {
+            "rule": "score_ge_0.15&score_lt_0.5",
+            "discovery_rows": 179,
+            "confirmation_rows": 167,
+            "query_rows": 168,
+            "logit_change": -0.11539302617044847
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 197,
+            "confirmation_rows": 195,
+            "query_rows": 231,
+            "logit_change": 0.22222544316351198
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.7",
+            "discovery_rows": 299,
+            "confirmation_rows": 260,
+            "query_rows": 236,
+            "logit_change": 0.12321262815215552
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 233,
+            "confirmation_rows": 200,
+            "query_rows": 190,
+            "logit_change": 0.1620957064592894
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 208,
+            "confirmation_rows": 213,
+            "query_rows": 202,
+            "logit_change": 0.19949302645629682
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 208,
+            "confirmation_rows": 213,
+            "query_rows": 202,
+            "logit_change": 0.15726300755625613
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 208,
+            "confirmation_rows": 213,
+            "query_rows": 202,
+            "logit_change": 0.12327473912167472
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 208,
+            "confirmation_rows": 213,
+            "query_rows": 202,
+            "logit_change": 0.09634625226915058
+          }
+        ]
+      ],
+      "broad_fields": [
+        [],
+        [
+          {
+            "rule": "score_ge_0.5&age_lt_25",
+            "discovery_rows": 180,
+            "confirmation_rows": 171,
+            "query_rows": 171,
+            "logit_change": 0.11354073935388416
+          }
+        ],
+        [
+          {
+            "rule": "Side_P&Spa_ge_1",
+            "discovery_rows": 143,
+            "confirmation_rows": 146,
+            "query_rows": 135,
+            "logit_change": 0.2719572085674657
+          }
+        ],
+        [
+          {
+            "rule": "HomePlanet_Mars&Destination_TRAPPIST-1e",
+            "discovery_rows": 120,
+            "confirmation_rows": 140,
+            "query_rows": 130,
+            "logit_change": 0.18588744302192745
+          }
+        ],
+        [],
+        [
+          {
+            "rule": "score_ge_0.3&age_ge_25",
+            "discovery_rows": 237,
+            "confirmation_rows": 270,
+            "query_rows": 224,
+            "logit_change": 0.16184981808624235
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.5&age_lt_25",
+            "discovery_rows": 167,
+            "confirmation_rows": 173,
+            "query_rows": 202,
+            "logit_change": 0.1396979884362898
+          },
+          {
+            "rule": "score_ge_0.85&ShoppingMall_lt_200",
+            "discovery_rows": 176,
+            "confirmation_rows": 173,
+            "query_rows": 209,
+            "logit_change": 0.2765505646382847
+          },
+          {
+            "rule": "Destination_55 Cancri e&VRDeck_lt_200",
+            "discovery_rows": 116,
+            "confirmation_rows": 114,
+            "query_rows": 124,
+            "logit_change": 0.19103604287126366
+          },
+          {
+            "rule": "total_bill_ge_1600&VRDeck_ge_1",
+            "discovery_rows": 129,
+            "confirmation_rows": 144,
+            "query_rows": 142,
+            "logit_change": -0.12995975924105846
+          },
+          {
+            "rule": "score_ge_0.85&ShoppingMall_lt_200",
+            "discovery_rows": 176,
+            "confirmation_rows": 173,
+            "query_rows": 209,
+            "logit_change": 0.23407651199970506
+          },
+          {
+            "rule": "active_bills_ge_3&FoodCourt_lt_200",
+            "discovery_rows": 153,
+            "confirmation_rows": 187,
+            "query_rows": 191,
+            "logit_change": 0.14527971573061307
+          },
+          {
+            "rule": "score_lt_0.3&Spa_lt_200",
+            "discovery_rows": 180,
+            "confirmation_rows": 161,
+            "query_rows": 154,
+            "logit_change": -0.1123542648865481
+          },
+          {
+            "rule": "age_ge_25&ShoppingMall_lt_200",
+            "discovery_rows": 360,
+            "confirmation_rows": 319,
+            "query_rows": 354,
+            "logit_change": -0.12701337889359532
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.7&age_ge_15",
+            "discovery_rows": 232,
+            "confirmation_rows": 211,
+            "query_rows": 193,
+            "logit_change": 0.17779931361429763
+          },
+          {
+            "rule": "score_ge_0.7&age_ge_15",
+            "discovery_rows": 232,
+            "confirmation_rows": 211,
+            "query_rows": 193,
+            "logit_change": 0.125308388848332
+          },
+          {
+            "rule": "Deck_F&ShoppingMall_lt_1",
+            "discovery_rows": 127,
+            "confirmation_rows": 118,
+            "query_rows": 117,
+            "logit_change": 0.21326903363263722
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85&RoomService_lt_1",
+            "discovery_rows": 190,
+            "confirmation_rows": 193,
+            "query_rows": 187,
+            "logit_change": 0.20793244240387274
+          },
+          {
+            "rule": "score_lt_0.7&age_ge_25",
+            "discovery_rows": 270,
+            "confirmation_rows": 298,
+            "query_rows": 276,
+            "logit_change": -0.10456086051741814
+          },
+          {
+            "rule": "HomePlanet_Earth&FoodCourt_ge_1",
+            "discovery_rows": 130,
+            "confirmation_rows": 147,
+            "query_rows": 152,
+            "logit_change": 0.11195428616736117
+          },
+          {
+            "rule": "score_ge_0.85&FoodCourt_lt_200",
+            "discovery_rows": 181,
+            "confirmation_rows": 170,
+            "query_rows": 168,
+            "logit_change": 0.18070055638905871
+          },
+          {
+            "rule": "score_ge_0.85&RoomService_lt_1",
+            "discovery_rows": 190,
+            "confirmation_rows": 193,
+            "query_rows": 187,
+            "logit_change": 0.13657288690688277
+          }
+        ]
+      ]
+    }
+  },
+  "20261115": {
+    "scores": {
+      "score_only": {
+        "accuracy": 0.8163646821972965,
+        "fixed": 45,
+        "harmed": 24,
+        "earth_fixed_missed": 24,
+        "earth_fixed_false_alarm": 17,
+        "earth_new_missed": 10,
+        "earth_new_false_alarm": 12,
+        "repeat": 15,
+        "earth_repeat": 13,
+        "brier_change": -0.00010866900330554311
+      },
+      "broad_fields": {
+        "accuracy": 0.8134886396318666,
+        "fixed": 16,
+        "harmed": 15,
+        "earth_fixed_missed": 7,
+        "earth_fixed_false_alarm": 5,
+        "earth_new_missed": 3,
+        "earth_new_false_alarm": 8,
+        "repeat": 2,
+        "earth_repeat": 1,
+        "brier_change": -0.00022531092836656266
+      }
+    },
+    "rules": {
+      "score_only": [
+        [
+          {
+            "rule": "score_ge_0.7",
+            "discovery_rows": 243,
+            "confirmation_rows": 230,
+            "query_rows": 240,
+            "logit_change": 0.1756903427589863
+          },
+          {
+            "rule": "score_ge_0.3",
+            "discovery_rows": 465,
+            "confirmation_rows": 484,
+            "query_rows": 443,
+            "logit_change": 0.08616378148479766
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.7",
+            "discovery_rows": 221,
+            "confirmation_rows": 233,
+            "query_rows": 259,
+            "logit_change": 0.12926841453458074
+          },
+          {
+            "rule": "score_ge_0.15&score_lt_0.5",
+            "discovery_rows": 170,
+            "confirmation_rows": 167,
+            "query_rows": 177,
+            "logit_change": 0.12379512717470025
+          },
+          {
+            "rule": "score_ge_0.7",
+            "discovery_rows": 221,
+            "confirmation_rows": 233,
+            "query_rows": 259,
+            "logit_change": 0.08863791249892468
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 198,
+            "confirmation_rows": 209,
+            "query_rows": 170,
+            "logit_change": 0.22121085901845905
+          },
+          {
+            "rule": "score_ge_0.15&score_lt_0.5",
+            "discovery_rows": 187,
+            "confirmation_rows": 161,
+            "query_rows": 166,
+            "logit_change": 0.13664619615413992
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 198,
+            "confirmation_rows": 209,
+            "query_rows": 170,
+            "logit_change": 0.18110104903608018
+          },
+          {
+            "rule": "score_ge_0.7",
+            "discovery_rows": 244,
+            "confirmation_rows": 255,
+            "query_rows": 214,
+            "logit_change": 0.15803704071757624
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "rule": "score_ge_0.15&score_lt_0.85",
+            "discovery_rows": 328,
+            "confirmation_rows": 393,
+            "query_rows": 364,
+            "logit_change": -0.1166134603981858
+          },
+          {
+            "rule": "score_lt_0.15",
+            "discovery_rows": 194,
+            "confirmation_rows": 192,
+            "query_rows": 211,
+            "logit_change": 0.23427144612101686
+          },
+          {
+            "rule": "score_ge_0.15&score_lt_0.85",
+            "discovery_rows": 328,
+            "confirmation_rows": 393,
+            "query_rows": 364,
+            "logit_change": -0.061707856424354855
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 233,
+            "confirmation_rows": 198,
+            "query_rows": 205,
+            "logit_change": 0.1496746373153878
+          },
+          {
+            "rule": "score_lt_0.15",
+            "discovery_rows": 194,
+            "confirmation_rows": 192,
+            "query_rows": 211,
+            "logit_change": 0.12182821405353521
+          }
+        ],
+        [],
+        [],
+        []
+      ],
+      "broad_fields": [
+        [
+          {
+            "rule": "score_ge_0.7&VRDeck_lt_1",
+            "discovery_rows": 200,
+            "confirmation_rows": 196,
+            "query_rows": 206,
+            "logit_change": 0.2400298904512288
+          }
+        ],
+        [
+          {
+            "rule": "Destination_55 Cancri e&ShoppingMall_lt_200",
+            "discovery_rows": 117,
+            "confirmation_rows": 137,
+            "query_rows": 128,
+            "logit_change": 0.24043019208425173
+          }
+        ],
+        [
+          {
+            "rule": "Destination_55 Cancri e",
+            "discovery_rows": 166,
+            "confirmation_rows": 149,
+            "query_rows": 145,
+            "logit_change": 0.27386780081851014
+          },
+          {
+            "rule": "RoomService_lt_200&ShoppingMall_ge_1",
+            "discovery_rows": 158,
+            "confirmation_rows": 149,
+            "query_rows": 156,
+            "logit_change": 0.19393200173993003
+          }
+        ],
+        [],
+        [
+          {
+            "rule": "CryoSleep_False&total_bill_lt_800",
+            "discovery_rows": 163,
+            "confirmation_rows": 164,
+            "query_rows": 143,
+            "logit_change": -0.1144635269785109
+          }
+        ],
+        [],
+        [
+          {
+            "rule": "score_ge_0.7&age_lt_25",
+            "discovery_rows": 121,
+            "confirmation_rows": 116,
+            "query_rows": 105,
+            "logit_change": 0.178620536538001
+          },
+          {
+            "rule": "score_lt_0.85&FoodCourt_ge_200",
+            "discovery_rows": 143,
+            "confirmation_rows": 139,
+            "query_rows": 113,
+            "logit_change": -0.1680112450013791
+          }
+        ],
+        [],
+        []
+      ]
+    }
+  },
+  "20261116": {
+    "scores": {
+      "score_only": {
+        "accuracy": 0.8127696289905091,
+        "fixed": 50,
+        "harmed": 57,
+        "earth_fixed_missed": 10,
+        "earth_fixed_false_alarm": 33,
+        "earth_new_missed": 38,
+        "earth_new_false_alarm": 8,
+        "repeat": 28,
+        "earth_repeat": 25,
+        "brier_change": -2.0042658784633245e-05
+      },
+      "broad_fields": {
+        "accuracy": 0.8123382226056945,
+        "fixed": 28,
+        "harmed": 38,
+        "earth_fixed_missed": 12,
+        "earth_fixed_false_alarm": 11,
+        "earth_new_missed": 19,
+        "earth_new_false_alarm": 9,
+        "repeat": 12,
+        "earth_repeat": 11,
+        "brier_change": 0.00020679325095493946
+      }
+    },
+    "rules": {
+      "score_only": [
+        [],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 201,
+            "confirmation_rows": 195,
+            "query_rows": 218,
+            "logit_change": 0.22078743302891338
+          },
+          {
+            "rule": "score_lt_0.85",
+            "discovery_rows": 537,
+            "confirmation_rows": 604,
+            "query_rows": 564,
+            "logit_change": -0.06038603977896328
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 201,
+            "confirmation_rows": 195,
+            "query_rows": 218,
+            "logit_change": 0.18070521523234415
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 201,
+            "confirmation_rows": 195,
+            "query_rows": 218,
+            "logit_change": 0.14785732024855597
+          }
+        ],
+        [
+          {
+            "rule": "score_lt_0.3",
+            "discovery_rows": 261,
+            "confirmation_rows": 277,
+            "query_rows": 301,
+            "logit_change": -0.0915797541101018
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 209,
+            "confirmation_rows": 207,
+            "query_rows": 198,
+            "logit_change": 0.13890102004862354
+          },
+          {
+            "rule": "score_lt_0.3",
+            "discovery_rows": 261,
+            "confirmation_rows": 277,
+            "query_rows": 301,
+            "logit_change": -0.056744301917472706
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 209,
+            "confirmation_rows": 207,
+            "query_rows": 198,
+            "logit_change": 0.10869260420983429
+          }
+        ],
+        [
+          {
+            "rule": "score_lt_0.3",
+            "discovery_rows": 304,
+            "confirmation_rows": 313,
+            "query_rows": 276,
+            "logit_change": -0.06334898218778406
+          },
+          {
+            "rule": "score_lt_0.3",
+            "discovery_rows": 304,
+            "confirmation_rows": 313,
+            "query_rows": 276,
+            "logit_change": -0.037702737549236136
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "rule": "score_ge_0.5&score_lt_0.7",
+            "discovery_rows": 138,
+            "confirmation_rows": 125,
+            "query_rows": 166,
+            "logit_change": -0.1594252785660698
+          },
+          {
+            "rule": "score_ge_0.5&score_lt_0.85",
+            "discovery_rows": 184,
+            "confirmation_rows": 180,
+            "query_rows": 229,
+            "logit_change": -0.07128798881926536
+          },
+          {
+            "rule": "score_ge_0.5&score_lt_0.7",
+            "discovery_rows": 138,
+            "confirmation_rows": 125,
+            "query_rows": 166,
+            "logit_change": -0.055279247550438323
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 213,
+            "confirmation_rows": 214,
+            "query_rows": 188,
+            "logit_change": 0.14328786959461023
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 185,
+            "confirmation_rows": 202,
+            "query_rows": 228,
+            "logit_change": 0.14798720747085403
+          },
+          {
+            "rule": "score_lt_0.5",
+            "discovery_rows": 389,
+            "confirmation_rows": 367,
+            "query_rows": 354,
+            "logit_change": 0.10612586073361142
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 185,
+            "confirmation_rows": 202,
+            "query_rows": 228,
+            "logit_change": 0.11588050168778635
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 185,
+            "confirmation_rows": 202,
+            "query_rows": 228,
+            "logit_change": 0.09055974976438975
+          },
+          {
+            "rule": "score_ge_0.3",
+            "discovery_rows": 452,
+            "confirmation_rows": 463,
+            "query_rows": 482,
+            "logit_change": 0.019752790555523182
+          },
+          {
+            "rule": "score_ge_0.85",
+            "discovery_rows": 185,
+            "confirmation_rows": 202,
+            "query_rows": 228,
+            "logit_change": 0.06640714531188169
+          },
+          {
+            "rule": "score_lt_0.5",
+            "discovery_rows": 389,
+            "confirmation_rows": 367,
+            "query_rows": 354,
+            "logit_change": 0.05094126844154498
+          }
+        ],
+        [
+          {
+            "rule": "score_lt_0.5",
+            "discovery_rows": 363,
+            "confirmation_rows": 368,
+            "query_rows": 379,
+            "logit_change": 0.11331847312680232
+          }
+        ]
+      ],
+      "broad_fields": [
+        [
+          {
+            "rule": "age_ge_25&FoodCourt_ge_1",
+            "discovery_rows": 181,
+            "confirmation_rows": 172,
+            "query_rows": 169,
+            "logit_change": -0.2547123255330948
+          },
+          {
+            "rule": "Destination_TRAPPIST-1e&Deck_F",
+            "discovery_rows": 187,
+            "confirmation_rows": 200,
+            "query_rows": 195,
+            "logit_change": 0.1389396806928167
+          }
+        ],
+        [
+          {
+            "rule": "RoomService_lt_200&Spa_ge_1",
+            "discovery_rows": 156,
+            "confirmation_rows": 223,
+            "query_rows": 200,
+            "logit_change": -0.1778624320859074
+          }
+        ],
+        [
+          {
+            "rule": "Deck_G&missing_bill_lt_1",
+            "discovery_rows": 201,
+            "confirmation_rows": 208,
+            "query_rows": 205,
+            "logit_change": 0.11885111675619062
+          },
+          {
+            "rule": "age_ge_25&Spa_ge_1",
+            "discovery_rows": 174,
+            "confirmation_rows": 176,
+            "query_rows": 198,
+            "logit_change": -0.14603691210147174
+          }
+        ],
+        [],
+        [
+          {
+            "rule": "age_ge_15&ShoppingMall_ge_200",
+            "discovery_rows": 131,
+            "confirmation_rows": 118,
+            "query_rows": 121,
+            "logit_change": -0.15559467020904055
+          },
+          {
+            "rule": "Deck_F&ShoppingMall_ge_1",
+            "discovery_rows": 132,
+            "confirmation_rows": 115,
+            "query_rows": 128,
+            "logit_change": -0.11504725141408036
+          }
+        ],
+        [
+          {
+            "rule": "score_lt_0.3&ShoppingMall_lt_1",
+            "discovery_rows": 127,
+            "confirmation_rows": 117,
+            "query_rows": 127,
+            "logit_change": -0.220034734793442
+          }
+        ],
+        [
+          {
+            "rule": "score_ge_0.5&VRDeck_lt_1",
+            "discovery_rows": 343,
+            "confirmation_rows": 340,
+            "query_rows": 349,
+            "logit_change": -0.11041482182065943
+          }
+        ],
+        [
+          {
+            "rule": "age_ge_25&total_bill_ge_800",
+            "discovery_rows": 238,
+            "confirmation_rows": 251,
+            "query_rows": 220,
+            "logit_change": 0.15079936090484458
+          }
+        ],
+        [
+          {
+            "rule": "score_lt_0.5&FoodCourt_ge_1",
+            "discovery_rows": 185,
+            "confirmation_rows": 206,
+            "query_rows": 210,
+            "logit_change": 0.2482003535001448
+          },
+          {
+            "rule": "total_bill_ge_800&VRDeck_ge_200",
+            "discovery_rows": 118,
+            "confirmation_rows": 130,
+            "query_rows": 122,
+            "logit_change": 0.16165074200427582
+          },
+          {
+            "rule": "score_ge_0.7&age_ge_15",
+            "discovery_rows": 200,
+            "confirmation_rows": 245,
+            "query_rows": 208,
+            "logit_change": 0.1891771116096163
+          },
+          {
+            "rule": "score_ge_0.5&ShoppingMall_lt_200",
+            "discovery_rows": 332,
+            "confirmation_rows": 374,
+            "query_rows": 315,
+            "logit_change": -0.1416826912313707
+          },
+          {
+            "rule": "score_ge_0.7&age_ge_15",
+            "discovery_rows": 200,
+            "confirmation_rows": 245,
+            "query_rows": 208,
+            "logit_change": 0.1675362930671241
+          },
+          {
+            "rule": "active_bills_ge_2&VRDeck_lt_1",
+            "discovery_rows": 166,
+            "confirmation_rows": 148,
+            "query_rows": 154,
+            "logit_change": 0.1556034650004413
+          }
+        ]
+      ]
+    }
+  }
+}
