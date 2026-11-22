@@ -60,8 +60,18 @@ def run():
         stats["matched_pairs_reference_95"] = np.quantile(null, [.025, .975]).tolist()
         stats["shuffleable_passengers_in_error_set"] = int(sum(mask[idx].sum() for idx in movable))
         report[name] = stats
+    by_direction = {}
+    repeatable = challengers.all(axis=0).any(axis=0)
+    unresolved = populations["eight_families_also_wrong"]
+    for group_name, membership in [("solo", size == 1), ("multiple", size > 1)]:
+        for direction, truth in [("false_negative", True), ("false_positive", False)]:
+            mask = membership & persistent & (y == truth)
+            by_direction[f"{group_name}_{direction}"] = dict(
+                persistent=int(mask.sum()), same_family_correct_all_splits=int((mask & repeatable).sum()),
+                all_families_wrong_all_splits=int((mask & unresolved).sum()))
+    assert sum(v["persistent"] for v in by_direction.values()) == int(persistent.sum())
     write(ROOT / "reports/nov23_booking_error_burden/result.json",
-          dict(evaluated_passengers=len(y), evaluated_bookings=len(known), data=report,
+          dict(evaluated_passengers=len(y), evaluated_bookings=len(known), data=report, by_direction=by_direction,
                permutation_repeats=1200, permutation_seed=5091))
     print(report)
 
