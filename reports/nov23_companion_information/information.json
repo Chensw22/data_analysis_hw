@@ -1,0 +1,874 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "update_base": {
+          "accuracy": 0.81765890135174,
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 0,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.3790543007633912
+        },
+        "update_peer_proxy": {
+          "accuracy": 0.817371297095197,
+          "fixed": 2,
+          "harmed": 4,
+          "net_by_fold": [
+            -2,
+            1,
+            -1
+          ],
+          "corrected": {
+            "ever": 2,
+            "repeat": 1,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 1
+          },
+          "native_log_loss_before_overrides": 0.3790057039618049
+        },
+        "update_peer_shuffle": {
+          "accuracy": 0.8172274949669255,
+          "fixed": 8,
+          "harmed": 11,
+          "net_by_fold": [
+            0,
+            -2,
+            -1
+          ],
+          "corrected": {
+            "ever": 8,
+            "repeat": 4,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 1
+          },
+          "native_log_loss_before_overrides": 0.3793253801884994
+        },
+        "update_agreement_proxy": {
+          "accuracy": 0.8157894736842105,
+          "fixed": 46,
+          "harmed": 59,
+          "net_by_fold": [
+            -4,
+            -4,
+            -5
+          ],
+          "corrected": {
+            "ever": 46,
+            "repeat": 30,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_zero": 17
+          },
+          "native_log_loss_before_overrides": 0.3852108667097343
+        },
+        "update_agreement_shuffle": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 58,
+          "harmed": 74,
+          "net_by_fold": [
+            -12,
+            4,
+            -8
+          ],
+          "corrected": {
+            "ever": 58,
+            "repeat": 33,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 10,
+            "repeat_zero": 12
+          },
+          "native_log_loss_before_overrides": 0.3849132902292932
+        },
+        "update_revealed_peer": {
+          "accuracy": 0.816508484325568,
+          "fixed": 54,
+          "harmed": 62,
+          "net_by_fold": [
+            6,
+            -7,
+            -7
+          ],
+          "corrected": {
+            "ever": 54,
+            "repeat": 34,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_zero": 23
+          },
+          "native_log_loss_before_overrides": 0.38080195318918997
+        },
+        "update_revealed_agreement": {
+          "accuracy": 0.8376473971814783,
+          "fixed": 238,
+          "harmed": 99,
+          "net_by_fold": [
+            47,
+            57,
+            35
+          ],
+          "corrected": {
+            "ever": 238,
+            "repeat": 192,
+            "unresolved": 71,
+            "never": 15,
+            "repeat_paid": 64,
+            "repeat_zero": 76
+          },
+          "native_log_loss_before_overrides": 0.3375567480921978
+        }
+      },
+      "noise": {
+        "peer": {
+          "0.5": {
+            "accuracy": 0.81765890135174,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.817320966350302,
+            "fixes": 13.9,
+            "harms": 16.25
+          },
+          "0.8": {
+            "accuracy": 0.8170549324129998,
+            "fixes": 28.4,
+            "harms": 32.6
+          },
+          "0.95": {
+            "accuracy": 0.8166666666666667,
+            "fixes": 48.3,
+            "harms": 55.199999999999996
+          },
+          "1.0": {
+            "accuracy": 0.816508484325568,
+            "fixes": 54.0,
+            "harms": 62.0
+          }
+        },
+        "agreement": {
+          "0.5": {
+            "accuracy": 0.81765890135174,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8204702329594478,
+            "fixes": 69.65,
+            "harms": 50.099999999999994
+          },
+          "0.8": {
+            "accuracy": 0.8249352890422779,
+            "fixes": 132.8,
+            "harms": 82.19999999999999
+          },
+          "0.95": {
+            "accuracy": 0.8332973828012654,
+            "fixes": 204.95,
+            "harms": 96.20000000000002
+          },
+          "1.0": {
+            "accuracy": 0.8376473971814783,
+            "fixes": 238.0,
+            "harms": 99.0
+          }
+        }
+      },
+      "eligible": 2829,
+      "agreement": 0.5881937080240368,
+      "eligible_scopes": {
+        "ever": 559,
+        "repeat": 405,
+        "unresolved": 175,
+        "never": 57,
+        "repeat_paid": 120,
+        "repeat_zero": 174
+      }
+    },
+    "20261115": {
+      "models": {
+        "update_base": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 0,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.37788048451438294
+        },
+        "update_peer_proxy": {
+          "accuracy": 0.813632441760138,
+          "fixed": 2,
+          "harmed": 0,
+          "net_by_fold": [
+            1,
+            0,
+            1
+          ],
+          "corrected": {
+            "ever": 2,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.37792178883531585
+        },
+        "update_peer_shuffle": {
+          "accuracy": 0.814495254529767,
+          "fixed": 11,
+          "harmed": 3,
+          "net_by_fold": [
+            -1,
+            2,
+            7
+          ],
+          "corrected": {
+            "ever": 11,
+            "repeat": 6,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 1,
+            "repeat_zero": 1
+          },
+          "native_log_loss_before_overrides": 0.3777511233540724
+        },
+        "update_agreement_proxy": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 63,
+          "harmed": 63,
+          "net_by_fold": [
+            -10,
+            3,
+            7
+          ],
+          "corrected": {
+            "ever": 63,
+            "repeat": 46,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 9,
+            "repeat_zero": 17
+          },
+          "native_log_loss_before_overrides": 0.3809728764023557
+        },
+        "update_agreement_shuffle": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 68,
+          "harmed": 75,
+          "net_by_fold": [
+            -7,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 68,
+            "repeat": 47,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 12,
+            "repeat_zero": 19
+          },
+          "native_log_loss_before_overrides": 0.3824083727564787
+        },
+        "update_revealed_peer": {
+          "accuracy": 0.8152142651711245,
+          "fixed": 54,
+          "harmed": 41,
+          "net_by_fold": [
+            0,
+            -1,
+            14
+          ],
+          "corrected": {
+            "ever": 54,
+            "repeat": 36,
+            "unresolved": 3,
+            "never": 0,
+            "repeat_paid": 2,
+            "repeat_zero": 21
+          },
+          "native_log_loss_before_overrides": 0.3771475215084915
+        },
+        "update_revealed_agreement": {
+          "accuracy": 0.8343399482312338,
+          "fixed": 236,
+          "harmed": 90,
+          "net_by_fold": [
+            54,
+            41,
+            51
+          ],
+          "corrected": {
+            "ever": 236,
+            "repeat": 197,
+            "unresolved": 73,
+            "never": 18,
+            "repeat_paid": 59,
+            "repeat_zero": 79
+          },
+          "native_log_loss_before_overrides": 0.3346548550911591
+        }
+      },
+      "noise": {
+        "peer": {
+          "0.5": {
+            "accuracy": 0.8133448375035951,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8139775668679897,
+            "fixes": 12.200000000000001,
+            "harms": 7.800000000000001
+          },
+          "0.8": {
+            "accuracy": 0.8141788898475698,
+            "fixes": 29.800000000000004,
+            "harms": 24.0
+          },
+          "0.95": {
+            "accuracy": 0.8151351740005752,
+            "fixes": 48.75,
+            "harms": 36.3
+          },
+          "1.0": {
+            "accuracy": 0.8152142651711246,
+            "fixes": 54.0,
+            "harms": 41.0
+          }
+        },
+        "agreement": {
+          "0.5": {
+            "accuracy": 0.8133448375035951,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8163790624101237,
+            "fixes": 74.0,
+            "harms": 52.900000000000006
+          },
+          "0.8": {
+            "accuracy": 0.8193557664653437,
+            "fixes": 128.6,
+            "harms": 86.79999999999998
+          },
+          "0.95": {
+            "accuracy": 0.827926373310325,
+            "fixes": 203.5,
+            "harms": 102.10000000000002
+          },
+          "1.0": {
+            "accuracy": 0.8343399482312339,
+            "fixes": 236.0,
+            "harms": 90.0
+          }
+        }
+      },
+      "eligible": 2829,
+      "agreement": 0.5966772711205373,
+      "eligible_scopes": {
+        "ever": 559,
+        "repeat": 405,
+        "unresolved": 175,
+        "never": 57,
+        "repeat_paid": 120,
+        "repeat_zero": 174
+      }
+    },
+    "20261116": {
+      "models": {
+        "update_base": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 0,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.37955197320400197
+        },
+        "update_peer_proxy": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 2,
+          "harmed": 4,
+          "net_by_fold": [
+            -3,
+            1,
+            0
+          ],
+          "corrected": {
+            "ever": 2,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.37948876621127386
+        },
+        "update_peer_shuffle": {
+          "accuracy": 0.813632441760138,
+          "fixed": 7,
+          "harmed": 8,
+          "net_by_fold": [
+            -3,
+            1,
+            1
+          ],
+          "corrected": {
+            "ever": 7,
+            "repeat": 5,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 2
+          },
+          "native_log_loss_before_overrides": 0.3794746534523445
+        },
+        "update_agreement_proxy": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 51,
+          "harmed": 61,
+          "net_by_fold": [
+            -6,
+            -10,
+            6
+          ],
+          "corrected": {
+            "ever": 51,
+            "repeat": 29,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 6,
+            "repeat_zero": 13
+          },
+          "native_log_loss_before_overrides": 0.38689098922705545
+        },
+        "update_agreement_shuffle": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 62,
+          "harmed": 70,
+          "net_by_fold": [
+            -7,
+            -9,
+            8
+          ],
+          "corrected": {
+            "ever": 62,
+            "repeat": 41,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 9,
+            "repeat_zero": 19
+          },
+          "native_log_loss_before_overrides": 0.38688450865390617
+        },
+        "update_revealed_peer": {
+          "accuracy": 0.8103249928098936,
+          "fixed": 29,
+          "harmed": 53,
+          "net_by_fold": [
+            -8,
+            -9,
+            -7
+          ],
+          "corrected": {
+            "ever": 29,
+            "repeat": 21,
+            "unresolved": 7,
+            "never": 0,
+            "repeat_paid": 4,
+            "repeat_zero": 9
+          },
+          "native_log_loss_before_overrides": 0.3800416861053281
+        },
+        "update_revealed_agreement": {
+          "accuracy": 0.8375035950532068,
+          "fixed": 256,
+          "harmed": 91,
+          "net_by_fold": [
+            50,
+            51,
+            64
+          ],
+          "corrected": {
+            "ever": 256,
+            "repeat": 209,
+            "unresolved": 84,
+            "never": 20,
+            "repeat_paid": 66,
+            "repeat_zero": 81
+          },
+          "native_log_loss_before_overrides": 0.3351193397540396
+        }
+      },
+      "noise": {
+        "peer": {
+          "0.5": {
+            "accuracy": 0.8137762438884095,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8126689675007189,
+            "fixes": 9.5,
+            "harms": 17.2
+          },
+          "0.8": {
+            "accuracy": 0.8119643370721886,
+            "fixes": 19.0,
+            "harms": 31.6
+          },
+          "0.95": {
+            "accuracy": 0.8104616048317514,
+            "fixes": 25.700000000000003,
+            "harms": 48.75
+          },
+          "1.0": {
+            "accuracy": 0.8103249928098936,
+            "fixes": 29.0,
+            "harms": 53.0
+          }
+        },
+        "agreement": {
+          "0.5": {
+            "accuracy": 0.8137762438884095,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8152717860224331,
+            "fixes": 66.7,
+            "harms": 56.3
+          },
+          "0.8": {
+            "accuracy": 0.8198734541271211,
+            "fixes": 133.8,
+            "harms": 91.39999999999999
+          },
+          "0.95": {
+            "accuracy": 0.8304644808743169,
+            "fixes": 213.64999999999998,
+            "harms": 97.60000000000001
+          },
+          "1.0": {
+            "accuracy": 0.8375035950532068,
+            "fixes": 256.0,
+            "harms": 91.0
+          }
+        }
+      },
+      "eligible": 2829,
+      "agreement": 0.5828914810887239,
+      "eligible_scopes": {
+        "ever": 559,
+        "repeat": 405,
+        "unresolved": 175,
+        "never": 57,
+        "repeat_paid": 120,
+        "repeat_zero": 174
+      }
+    },
+    "v131": {
+      "models": {
+        "update_base": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 0,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.3780276608786294
+        },
+        "update_peer_proxy": {
+          "accuracy": 0.814495254529767,
+          "fixed": 4,
+          "harmed": 2,
+          "net_by_fold": [
+            2,
+            1,
+            -1
+          ],
+          "corrected": {
+            "ever": 3,
+            "repeat": 1,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 1
+          },
+          "native_log_loss_before_overrides": 0.37795518527724514
+        },
+        "update_peer_shuffle": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 4,
+          "harmed": 4,
+          "net_by_fold": [
+            -2,
+            1,
+            1
+          ],
+          "corrected": {
+            "ever": 2,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 0
+          },
+          "native_log_loss_before_overrides": 0.3780806300607102
+        },
+        "update_agreement_proxy": {
+          "accuracy": 0.8114754098360656,
+          "fixed": 28,
+          "harmed": 47,
+          "net_by_fold": [
+            -14,
+            -2,
+            -3
+          ],
+          "corrected": {
+            "ever": 22,
+            "repeat": 17,
+            "unresolved": 4,
+            "never": 0,
+            "repeat_paid": 1,
+            "repeat_zero": 8
+          },
+          "native_log_loss_before_overrides": 0.38214001337271336
+        },
+        "update_agreement_shuffle": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 32,
+          "harmed": 35,
+          "net_by_fold": [
+            2,
+            -3,
+            -2
+          ],
+          "corrected": {
+            "ever": 28,
+            "repeat": 17,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 2,
+            "repeat_zero": 9
+          },
+          "native_log_loss_before_overrides": 0.3806236653384623
+        },
+        "update_revealed_peer": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 24,
+          "harmed": 35,
+          "net_by_fold": [
+            4,
+            -5,
+            -10
+          ],
+          "corrected": {
+            "ever": 17,
+            "repeat": 12,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_zero": 7
+          },
+          "native_log_loss_before_overrides": 0.37956476831562336
+        },
+        "update_revealed_agreement": {
+          "accuracy": 0.8267184354328444,
+          "fixed": 138,
+          "harmed": 51,
+          "net_by_fold": [
+            28,
+            26,
+            33
+          ],
+          "corrected": {
+            "ever": 118,
+            "repeat": 98,
+            "unresolved": 38,
+            "never": 15,
+            "repeat_paid": 26,
+            "repeat_zero": 44
+          },
+          "native_log_loss_before_overrides": 0.35516763385594086
+        }
+      },
+      "noise": {
+        "peer": {
+          "0.5": {
+            "accuracy": 0.8142076502732241,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8135461604831752,
+            "fixes": 7.6499999999999995,
+            "harms": 12.25
+          },
+          "0.8": {
+            "accuracy": 0.813431118780558,
+            "fixes": 14.599999999999998,
+            "harms": 20.0
+          },
+          "0.95": {
+            "accuracy": 0.8128199597354041,
+            "fixes": 19.6,
+            "harms": 29.25
+          },
+          "1.0": {
+            "accuracy": 0.8126258268622376,
+            "fixes": 24.0,
+            "harms": 35.0
+          }
+        },
+        "agreement": {
+          "0.5": {
+            "accuracy": 0.8142076502732241,
+            "fixes": 0.0,
+            "harms": -0.0
+          },
+          "0.65": {
+            "accuracy": 0.8148116192119643,
+            "fixes": 35.1,
+            "harms": 30.9
+          },
+          "0.8": {
+            "accuracy": 0.8172274949669255,
+            "fixes": 71.6,
+            "harms": 50.599999999999994
+          },
+          "0.95": {
+            "accuracy": 0.8230155306298533,
+            "fixes": 116.8,
+            "harms": 55.55000000000001
+          },
+          "1.0": {
+            "accuracy": 0.8267184354328444,
+            "fixes": 138.0,
+            "harms": 51.0
+          }
+        }
+      },
+      "eligible": 1456,
+      "agreement": 0.5769230769230769,
+      "eligible_scopes": {
+        "ever": 318,
+        "repeat": 229,
+        "unresolved": 89,
+        "never": 33,
+        "repeat_paid": 59,
+        "repeat_zero": 107
+      }
+    }
+  },
+  "stable": {
+    "update_base": {
+      "ever": 0,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 0
+    },
+    "update_peer_proxy": {
+      "ever": 3,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 0
+    },
+    "update_peer_shuffle": {
+      "ever": 3,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 0
+    },
+    "update_agreement_proxy": {
+      "ever": 24,
+      "repeat": 4,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 1,
+      "repeat_zero": 1
+    },
+    "update_agreement_shuffle": {
+      "ever": 24,
+      "repeat": 4,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 2,
+      "repeat_zero": 1
+    },
+    "update_revealed_peer": {
+      "ever": 16,
+      "repeat": 3,
+      "unresolved": 1,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 2
+    },
+    "update_revealed_agreement": {
+      "ever": 224,
+      "repeat": 144,
+      "unresolved": 56,
+      "never": 11,
+      "repeat_paid": 51,
+      "repeat_zero": 51
+    }
+  }
+}
