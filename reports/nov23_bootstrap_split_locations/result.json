@@ -1,0 +1,590 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "hard": {
+          "accuracy": 0.7922059246476848,
+          "fixed": 235,
+          "harmed": 412,
+          "net_by_fold": [
+            -48,
+            -56,
+            -73
+          ],
+          "corrected": {
+            "ever": 235,
+            "repeat": 147,
+            "unresolved": 22,
+            "never": 0,
+            "repeat_paid": 62,
+            "repeat_solo": 87
+          },
+          "native_log_loss_before_overrides": 0.4388876363831906
+        },
+        "bootstrap": {
+          "accuracy": 0.7936439459303998,
+          "fixed": 207,
+          "harmed": 374,
+          "net_by_fold": [
+            -45,
+            -59,
+            -63
+          ],
+          "corrected": {
+            "ever": 207,
+            "repeat": 118,
+            "unresolved": 7,
+            "never": 0,
+            "repeat_paid": 33,
+            "repeat_solo": 60
+          },
+          "native_log_loss_before_overrides": 0.44188100770690175
+        },
+        "jitter": {
+          "accuracy": 0.7916307161345988,
+          "fixed": 202,
+          "harmed": 383,
+          "net_by_fold": [
+            -43,
+            -61,
+            -77
+          ],
+          "corrected": {
+            "ever": 202,
+            "repeat": 114,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 32,
+            "repeat_solo": 56
+          },
+          "native_log_loss_before_overrides": 0.44183873194050344
+        },
+        "update_hard": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 58,
+          "harmed": 57,
+          "net_by_fold": [
+            -1,
+            9,
+            -7
+          ],
+          "corrected": {
+            "ever": 58,
+            "repeat": 15,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_solo": 4
+          },
+          "native_log_loss_before_overrides": 0.3820708045008505
+        },
+        "update_bootstrap": {
+          "accuracy": 0.8163646821972965,
+          "fixed": 29,
+          "harmed": 38,
+          "net_by_fold": [
+            -4,
+            4,
+            -9
+          ],
+          "corrected": {
+            "ever": 29,
+            "repeat": 8,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 2,
+            "repeat_solo": 4
+          },
+          "native_log_loss_before_overrides": 0.38382054062914944
+        },
+        "update_jitter": {
+          "accuracy": 0.8160770779407536,
+          "fixed": 25,
+          "harmed": 36,
+          "net_by_fold": [
+            -5,
+            5,
+            -11
+          ],
+          "corrected": {
+            "ever": 25,
+            "repeat": 7,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 2,
+            "repeat_solo": 4
+          },
+          "native_log_loss_before_overrides": 0.383790774479897
+        }
+      },
+      "mean_rank_displacement": [
+        0.07505366437677977,
+        0.07177962800573252,
+        0.07911444070410226
+      ],
+      "error_risk": {
+        "passengers": 1739,
+        "errors": 406,
+        "expected": 407.42125,
+        "reference95": [
+          382.0,
+          432.0
+        ]
+      }
+    },
+    "20261115": {
+      "models": {
+        "hard": {
+          "accuracy": 0.7916307161345988,
+          "fixed": 215,
+          "harmed": 366,
+          "net_by_fold": [
+            -26,
+            -59,
+            -66
+          ],
+          "corrected": {
+            "ever": 215,
+            "repeat": 136,
+            "unresolved": 14,
+            "never": 0,
+            "repeat_paid": 43,
+            "repeat_solo": 75
+          },
+          "native_log_loss_before_overrides": 0.44060801439952985
+        },
+        "bootstrap": {
+          "accuracy": 0.7907679033649698,
+          "fixed": 184,
+          "harmed": 341,
+          "net_by_fold": [
+            -45,
+            -60,
+            -52
+          ],
+          "corrected": {
+            "ever": 184,
+            "repeat": 111,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 22,
+            "repeat_solo": 55
+          },
+          "native_log_loss_before_overrides": 0.4426051192877132
+        },
+        "jitter": {
+          "accuracy": 0.7917745182628703,
+          "fixed": 189,
+          "harmed": 339,
+          "net_by_fold": [
+            -38,
+            -59,
+            -53
+          ],
+          "corrected": {
+            "ever": 189,
+            "repeat": 114,
+            "unresolved": 5,
+            "never": 0,
+            "repeat_paid": 22,
+            "repeat_solo": 59
+          },
+          "native_log_loss_before_overrides": 0.44289046194590537
+        },
+        "update_hard": {
+          "accuracy": 0.8121944204774231,
+          "fixed": 71,
+          "harmed": 79,
+          "net_by_fold": [
+            4,
+            0,
+            -12
+          ],
+          "corrected": {
+            "ever": 71,
+            "repeat": 21,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 1,
+            "repeat_solo": 9
+          },
+          "native_log_loss_before_overrides": 0.3817919314044466
+        },
+        "update_bootstrap": {
+          "accuracy": 0.8121944204774231,
+          "fixed": 49,
+          "harmed": 57,
+          "net_by_fold": [
+            -2,
+            -1,
+            -5
+          ],
+          "corrected": {
+            "ever": 49,
+            "repeat": 15,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_solo": 7
+          },
+          "native_log_loss_before_overrides": 0.3832482157615503
+        },
+        "update_jitter": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 52,
+          "harmed": 57,
+          "net_by_fold": [
+            1,
+            -1,
+            -5
+          ],
+          "corrected": {
+            "ever": 52,
+            "repeat": 16,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_solo": 8
+          },
+          "native_log_loss_before_overrides": 0.3833852207312017
+        }
+      },
+      "mean_rank_displacement": [
+        0.07420067677547137,
+        0.0747609538679066,
+        0.07313477102273754
+      ],
+      "error_risk": {
+        "passengers": 1739,
+        "errors": 401,
+        "expected": 406.89575,
+        "reference95": [
+          382.0,
+          432.0250000000001
+        ]
+      }
+    },
+    "20261116": {
+      "models": {
+        "hard": {
+          "accuracy": 0.7884670693126258,
+          "fixed": 248,
+          "harmed": 424,
+          "net_by_fold": [
+            -73,
+            -65,
+            -38
+          ],
+          "corrected": {
+            "ever": 248,
+            "repeat": 148,
+            "unresolved": 13,
+            "never": 0,
+            "repeat_paid": 46,
+            "repeat_solo": 80
+          },
+          "native_log_loss_before_overrides": 0.4398342135355361
+        },
+        "bootstrap": {
+          "accuracy": 0.7903364969801553,
+          "fixed": 219,
+          "harmed": 382,
+          "net_by_fold": [
+            -66,
+            -58,
+            -39
+          ],
+          "corrected": {
+            "ever": 219,
+            "repeat": 113,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 27,
+            "repeat_solo": 53
+          },
+          "native_log_loss_before_overrides": 0.44261864359938413
+        },
+        "jitter": {
+          "accuracy": 0.7903364969801553,
+          "fixed": 221,
+          "harmed": 384,
+          "net_by_fold": [
+            -62,
+            -56,
+            -45
+          ],
+          "corrected": {
+            "ever": 221,
+            "repeat": 117,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 23,
+            "repeat_solo": 51
+          },
+          "native_log_loss_before_overrides": 0.44245198412493664
+        },
+        "update_hard": {
+          "accuracy": 0.8114754098360656,
+          "fixed": 64,
+          "harmed": 80,
+          "net_by_fold": [
+            -11,
+            -4,
+            -1
+          ],
+          "corrected": {
+            "ever": 64,
+            "repeat": 27,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 5,
+            "repeat_solo": 14
+          },
+          "native_log_loss_before_overrides": 0.3833802522783923
+        },
+        "update_bootstrap": {
+          "accuracy": 0.8117630140926085,
+          "fixed": 62,
+          "harmed": 76,
+          "net_by_fold": [
+            -4,
+            -8,
+            -2
+          ],
+          "corrected": {
+            "ever": 62,
+            "repeat": 20,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 5,
+            "repeat_solo": 10
+          },
+          "native_log_loss_before_overrides": 0.38410079253998614
+        },
+        "update_jitter": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 48,
+          "harmed": 58,
+          "net_by_fold": [
+            -4,
+            -7,
+            1
+          ],
+          "corrected": {
+            "ever": 48,
+            "repeat": 18,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 3,
+            "repeat_solo": 8
+          },
+          "native_log_loss_before_overrides": 0.3843217665643498
+        }
+      },
+      "mean_rank_displacement": [
+        0.07480004541835478,
+        0.07857845202695689,
+        0.07966095473534264
+      ],
+      "error_risk": {
+        "passengers": 1739,
+        "errors": 436,
+        "expected": 425.605,
+        "reference95": [
+          400.0,
+          451.0
+        ]
+      }
+    },
+    "v131": {
+      "models": {
+        "hard": {
+          "accuracy": 0.7972389991371872,
+          "fixed": 305,
+          "harmed": 423,
+          "net_by_fold": [
+            -42,
+            -20,
+            -56
+          ],
+          "corrected": {
+            "ever": 196,
+            "repeat": 111,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 24,
+            "repeat_solo": 54
+          },
+          "native_log_loss_before_overrides": 0.4436256010847343
+        },
+        "bootstrap": {
+          "accuracy": 0.7968075927523728,
+          "fixed": 289,
+          "harmed": 410,
+          "net_by_fold": [
+            -45,
+            -17,
+            -59
+          ],
+          "corrected": {
+            "ever": 174,
+            "repeat": 91,
+            "unresolved": 3,
+            "never": 1,
+            "repeat_paid": 13,
+            "repeat_solo": 46
+          },
+          "native_log_loss_before_overrides": 0.4466440478733183
+        },
+        "jitter": {
+          "accuracy": 0.7963761863675582,
+          "fixed": 285,
+          "harmed": 409,
+          "net_by_fold": [
+            -45,
+            -24,
+            -55
+          ],
+          "corrected": {
+            "ever": 169,
+            "repeat": 88,
+            "unresolved": 2,
+            "never": 1,
+            "repeat_paid": 9,
+            "repeat_solo": 41
+          },
+          "native_log_loss_before_overrides": 0.4463830480350498
+        },
+        "update_hard": {
+          "accuracy": 0.8121944204774231,
+          "fixed": 80,
+          "harmed": 94,
+          "net_by_fold": [
+            -1,
+            0,
+            -13
+          ],
+          "corrected": {
+            "ever": 53,
+            "repeat": 26,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 1,
+            "repeat_solo": 15
+          },
+          "native_log_loss_before_overrides": 0.38125305019744693
+        },
+        "update_bootstrap": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 30,
+          "harmed": 36,
+          "net_by_fold": [
+            -2,
+            3,
+            -7
+          ],
+          "corrected": {
+            "ever": 15,
+            "repeat": 5,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_solo": 1
+          },
+          "native_log_loss_before_overrides": 0.38245502085002075
+        },
+        "update_jitter": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 28,
+          "harmed": 34,
+          "net_by_fold": [
+            -3,
+            2,
+            -5
+          ],
+          "corrected": {
+            "ever": 15,
+            "repeat": 5,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 0,
+            "repeat_solo": 1
+          },
+          "native_log_loss_before_overrides": 0.38245603650300347
+        }
+      },
+      "mean_rank_displacement": [
+        0.07185927163139039,
+        0.06890468440033805,
+        0.07620112905112536
+      ],
+      "error_risk": {
+        "passengers": 1739,
+        "errors": 421,
+        "expected": 424.5945,
+        "reference95": [
+          400.0,
+          450.0
+        ]
+      }
+    }
+  },
+  "stable": {
+    "hard": {
+      "ever": 233,
+      "repeat": 74,
+      "unresolved": 4,
+      "never": 0,
+      "repeat_paid": 15,
+      "repeat_solo": 34
+    },
+    "bootstrap": {
+      "ever": 235,
+      "repeat": 71,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 8,
+      "repeat_solo": 29
+    },
+    "jitter": {
+      "ever": 235,
+      "repeat": 72,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 7,
+      "repeat_solo": 28
+    },
+    "update_hard": {
+      "ever": 80,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_solo": 0
+    },
+    "update_bootstrap": {
+      "ever": 61,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_solo": 0
+    },
+    "update_jitter": {
+      "ever": 51,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_solo": 0
+    }
+  },
+  "exclusive": {
+    "ever": 2,
+    "repeat": 1,
+    "unresolved": 0,
+    "never": 0,
+    "repeat_paid": 0,
+    "repeat_solo": 1
+  }
+}
