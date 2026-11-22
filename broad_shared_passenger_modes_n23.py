@@ -70,7 +70,7 @@ def run():
         with np.load(ART/f"nov23_group_kernel/{seed}.npz") as ref:
             row,y,base,fold=[ref[n] for n in ("row","y","base","fold")]
         bases.append((base>=.5)==y)
-        preds={n:np.full(len(y),np.nan) for n in ("own","real_modes","fake_modes","real_only","transfer")}
+        preds={n:np.full(len(y),np.nan) for n in ("own","real_modes","fake_modes","real_only","fake_only","pca_only","transfer")}
         correlations=[]
         for k in np.unique(fold):
             t,q=np.flatnonzero(fold!=k),np.flatnonzero(fold==k)
@@ -94,9 +94,11 @@ def run():
             correlations.append({"learned_real":agreement(z,real,valid_pairs),
                                  "learned_fake":agreement(z,fake,valid_pairs)})
             own_x=np.column_stack([phi[row],np.log(size[row])])
+            _,pca=eigh(np.cov(z[unsup].T),subset_by_index=[z.shape[1]-real.shape[1],z.shape[1]-1])
             embeddings=z[row]@real
             inputs={"own":own_x,"real_modes":np.column_stack([own_x,embeddings]),
-                    "fake_modes":np.column_stack([own_x,z[row]@fake]),"real_only":embeddings}
+                    "fake_modes":np.column_stack([own_x,z[row]@fake]),"real_only":embeddings,
+                    "fake_only":z[row]@fake,"pca_only":z[row]@pca}
             for n,x in inputs.items():
                 preds[n][q]=fit(x[t],y[t]).predict_proba(x[q])[:,1]
             delta=logit(preds["real_modes"][q].clip(.002,.998))-logit(preds["own"][q].clip(.002,.998))

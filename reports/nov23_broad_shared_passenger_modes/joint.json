@@ -45,6 +45,50 @@
       "shared212_once": 6,
       "shared212_stable": 0
     },
+    "fake_features_only": {
+      "accuracy": [
+        0.7587000287604256,
+        0.7479148691400632,
+        0.7562553925798102
+      ],
+      "fixed": [
+        338,
+        370,
+        331
+      ],
+      "harmed": [
+        748,
+        825,
+        731
+      ],
+      "ever_stable": 141,
+      "repeat_stable": 55,
+      "new_stable": 5,
+      "shared212_once": 24,
+      "shared212_stable": 0
+    },
+    "pca_features_only": {
+      "accuracy": [
+        0.7924935289042278,
+        0.7936439459303998,
+        0.7901926948518838
+      ],
+      "fixed": [
+        280,
+        284,
+        277
+      ],
+      "harmed": [
+        455,
+        421,
+        441
+      ],
+      "ever_stable": 203,
+      "repeat_stable": 79,
+      "new_stable": 7,
+      "shared212_once": 1,
+      "shared212_stable": 0
+    },
     "both_dissent": {
       "accuracy": [
         0.8090307736554501,
@@ -146,6 +190,62 @@
       "only_bills": 11,
       "both": 2,
       "union": 50
+    }
+  },
+  "compression_controls": {
+    "repeat": {
+      "real_and_neither_control": 89,
+      "either_control_and_not_real": 70
+    },
+    "no_stable": {
+      "real_and_neither_control": 35,
+      "either_control_and_not_real": 8
+    },
+    "never": {
+      "real_and_neither_control": 5,
+      "either_control_and_not_real": 0
+    }
+  },
+  "profiles": {
+    "new_stable_union": {
+      "people": 50,
+      "solo": 26,
+      "transported": 18,
+      "earth": 34,
+      "observed_positive_bill": 16,
+      "median_baseline_probability_assigned_to_true_label": 0.34661947614508287
+    },
+    "new_shared_only": {
+      "people": 37,
+      "solo": 18,
+      "transported": 7,
+      "earth": 29,
+      "observed_positive_bill": 7,
+      "median_baseline_probability_assigned_to_true_label": 0.34793813747992774
+    },
+    "new_bills_only": {
+      "people": 11,
+      "solo": 7,
+      "transported": 10,
+      "earth": 4,
+      "observed_positive_bill": 8,
+      "median_baseline_probability_assigned_to_true_label": 0.2895485140508878
+    },
+    "new_both": {
+      "people": 2,
+      "solo": 1,
+      "transported": 1,
+      "earth": 1,
+      "observed_positive_bill": 1,
+      "median_baseline_probability_assigned_to_true_label": 0.42449715696185286
+    },
+    "remaining_without_stable": {
+      "people": 517,
+      "solo": 318,
+      "transported": 285,
+      "earth": 398,
+      "observed_positive_bill": 284,
+      "median_baseline_probability_assigned_to_true_label": 0.2376113146302798
     }
   }
 }
