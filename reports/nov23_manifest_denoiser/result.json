@@ -1,0 +1,31 @@
+{
+  "rows": 6954,
+  "results": {
+    "supervised": {
+      "accuracy": 0.8027034800115042,
+      "fixed": 336,
+      "harmed": 416,
+      "hard_fixed": 34,
+      "hard_harmed": 5,
+      "fold_net": [
+        -19,
+        -24,
+        -37
+      ]
+    },
+    "masked": {
+      "accuracy": 0.7985332182916307,
+      "fixed": 335,
+      "harmed": 444,
+      "hard_fixed": 33,
+      "hard_harmed": 4,
+      "fold_net": [
+        -32,
+        -28,
+        -49
+      ]
+    }
+  },
+  "scope": "Full passenger cohort, original OOF rows; all held-out booking groups removed during fitting. Dummies and peer summaries use unlabeled roster. Three fixed epoch snapshots per fold. No name or withheld outcome labels used.",
+  "oof": "artifacts/nov23_manifest_denoiser/oof.npz"
+}
