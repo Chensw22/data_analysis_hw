@@ -5,8 +5,9 @@ from scipy.special import logit
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GroupKFold
 
-from archive_error_recovery_n23 import ART, ROOT, SEEDS
+from archive_error_recovery_n23 import ART, ROOT, SEEDS, panel, predictions
 from earth_bill_order_n23 import BILLS
+from fresh_family_rescue_n23 import NEW
 from relational_error_corrector import write
 
 
@@ -62,7 +63,18 @@ def run():
         np.savez_compressed(out/f"{seed}.npz",row=row,y=y,fold=fold,base=base,**estimates)
     stable={name:dict(previous804=int((repeat&np.logical_and.reduce(h)).sum()),
                       previous179=int((stubborn&np.logical_and.reduce(h)).sum())) for name,h in all_hit.items()}
-    write(ROOT/"reports/nov23_tabpfn_exception_evidence/result.json",dict(results=result,stable=stable))
+    aligned,labels,_,archived,_,_,_=panel()
+    np.testing.assert_array_equal(aligned,row)
+    np.testing.assert_array_equal(labels,y)
+    recent=np.stack([predictions(row,y,seed,NEW)[1] for seed in SEEDS])
+    previous=(np.concatenate([archived,recent],axis=2)>=.5)==y[None,:,None]
+    rescued=repeat&np.logical_and.reduce(all_hit["exceptions"])
+    had_stable=previous.all(0).any(1)
+    had_any=previous.any(axis=(0,2))
+    overlap=dict(previous_candidates=previous.shape[2],previously_stable=int((rescued&had_stable).sum()),
+                 previously_intermittent=int((rescued&~had_stable&had_any).sum()),
+                 never_previously_right=int((rescued&~had_any).sum()))
+    write(ROOT/"reports/nov23_tabpfn_exception_evidence/result.json",dict(results=result,stable=stable,overlap=overlap))
 
 
 if __name__=="__main__":
