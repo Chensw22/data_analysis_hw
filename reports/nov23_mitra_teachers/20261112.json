@@ -1,0 +1,50 @@
+{
+  "results": {
+    "plain": {
+      "accuracy": 0.8169398907103825,
+      "fixed": 89,
+      "harmed": 94,
+      "hard447_correct": 1,
+      "fold_accuracy": [
+        0.814495254529767,
+        0.8123382226056945,
+        0.8239861949956859
+      ]
+    },
+    "plain_with_v44": {
+      "accuracy": 0.81765890135174,
+      "fixed": 0,
+      "harmed": 0,
+      "hard447_correct": 0,
+      "fold_accuracy": [
+        0.8132010353753235,
+        0.8123382226056945,
+        0.8274374460742019
+      ]
+    },
+    "teachers": {
+      "accuracy": 0.8119068162208801,
+      "fixed": 134,
+      "harmed": 174,
+      "hard447_correct": 6,
+      "fold_accuracy": [
+        0.8119068162208801,
+        0.8024158757549612,
+        0.8213977566867989
+      ]
+    },
+    "teachers_with_v44": {
+      "accuracy": 0.8146390566580385,
+      "fixed": 65,
+      "harmed": 86,
+      "hard447_correct": 2,
+      "fold_accuracy": [
+        0.8123382226056945,
+        0.8080241587575496,
+        0.8235547886108714
+      ]
+    }
+  },
+  "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+  "note": "Inner teacher folds exclude entire bookings. The two additional fields are trained only inside the outer training partition."
+}
