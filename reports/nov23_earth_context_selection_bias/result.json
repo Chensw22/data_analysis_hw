@@ -1,0 +1,391 @@
+{
+  "stable": {
+    "balanced_prior": {
+      "earth804": 18,
+      "retained115": 9
+    },
+    "exception_prior": {
+      "earth804": 281,
+      "retained115": 111
+    },
+    "selection_corrected": {
+      "earth804": 34,
+      "retained115": 32
+    },
+    "balanced_prior_quarter": {
+      "earth804": 1,
+      "retained115": 0
+    },
+    "exception_prior_quarter": {
+      "earth804": 25,
+      "retained115": 19
+    },
+    "selection_corrected_quarter": {
+      "earth804": 0,
+      "retained115": 0
+    },
+    "uncorrected": {
+      "earth804": 115,
+      "retained115": 115
+    }
+  },
+  "results": {
+    "20261112": {
+      "scores": {
+        "balanced_prior": {
+          "accuracy": 0.811044003451251,
+          "earth_logloss": 0.5413188912819619,
+          "fixed": 182,
+          "harmed": 228,
+          "earth_repeat": 112,
+          "retained_of_115": 46
+        },
+        "exception_prior": {
+          "accuracy": 0.7868852459016393,
+          "earth_logloss": 0.5802398523223727,
+          "fixed": 433,
+          "harmed": 647,
+          "earth_repeat": 361,
+          "retained_of_115": 112
+        },
+        "selection_corrected": {
+          "accuracy": 0.8103249928098936,
+          "earth_logloss": 0.5262921661495292,
+          "fixed": 197,
+          "harmed": 248,
+          "earth_repeat": 127,
+          "retained_of_115": 65
+        },
+        "balanced_prior_quarter": {
+          "accuracy": 0.8147828587863101,
+          "earth_logloss": 0.5112776904286465,
+          "fixed": 37,
+          "harmed": 57,
+          "earth_repeat": 10,
+          "retained_of_115": 7
+        },
+        "exception_prior_quarter": {
+          "accuracy": 0.81765890135174,
+          "earth_logloss": 0.512675962959696,
+          "fixed": 128,
+          "harmed": 128,
+          "earth_repeat": 82,
+          "retained_of_115": 44
+        },
+        "selection_corrected_quarter": {
+          "accuracy": 0.8166522864538395,
+          "earth_logloss": 0.5086325551085586,
+          "fixed": 42,
+          "harmed": 49,
+          "earth_repeat": 14,
+          "retained_of_115": 9
+        },
+        "uncorrected": {
+          "accuracy": 0.7922059246476848,
+          "earth_logloss": 0.5826155934647417,
+          "fixed": 351,
+          "harmed": 528,
+          "earth_repeat": 278,
+          "retained_of_115": 115
+        }
+      },
+      "folds": [
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.125,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.525,
+              0.7
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.303497271012557,
+            0.05250727950022638,
+            0.27703345286947345
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.3,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.5,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2443096301349548,
+            0.1342884266418417,
+            0.37623154856588187
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.125,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.5,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2553633104155746,
+            0.03969557707208127,
+            0.3403328833642061
+          ]
+        }
+      ]
+    },
+    "20261115": {
+      "scores": {
+        "balanced_prior": {
+          "accuracy": 0.8071613459879207,
+          "earth_logloss": 0.5399143068485245,
+          "fixed": 188,
+          "harmed": 231,
+          "earth_repeat": 122,
+          "retained_of_115": 42
+        },
+        "exception_prior": {
+          "accuracy": 0.7855910267471958,
+          "earth_logloss": 0.5848964478698102,
+          "fixed": 473,
+          "harmed": 666,
+          "earth_repeat": 383,
+          "retained_of_115": 113
+        },
+        "selection_corrected": {
+          "accuracy": 0.8061547310900201,
+          "earth_logloss": 0.5305117233436385,
+          "fixed": 182,
+          "harmed": 232,
+          "earth_repeat": 120,
+          "retained_of_115": 60
+        },
+        "balanced_prior_quarter": {
+          "accuracy": 0.8127696289905091,
+          "earth_logloss": 0.5108751954866554,
+          "fixed": 55,
+          "harmed": 59,
+          "earth_repeat": 26,
+          "retained_of_115": 12
+        },
+        "exception_prior_quarter": {
+          "accuracy": 0.813920046016681,
+          "earth_logloss": 0.513103762129547,
+          "fixed": 127,
+          "harmed": 123,
+          "earth_repeat": 71,
+          "retained_of_115": 41
+        },
+        "selection_corrected_quarter": {
+          "accuracy": 0.8114754098360656,
+          "earth_logloss": 0.5092775535808232,
+          "fixed": 34,
+          "harmed": 47,
+          "earth_repeat": 14,
+          "retained_of_115": 7
+        },
+        "uncorrected": {
+          "accuracy": 0.7947943629565718,
+          "earth_logloss": 0.5870390526143096,
+          "fixed": 340,
+          "harmed": 469,
+          "earth_repeat": 260,
+          "retained_of_115": 115
+        }
+      },
+      "folds": [
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.125,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.525,
+              0.7
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.26591397889189,
+            0.0234665552776242,
+            0.25028344144576076
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.2875,
+              0.675
+            ],
+            "True": [
+              0.25,
+              0.5,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.290578431930619,
+            0.0776390872391581,
+            0.3930761875742261
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.275,
+              0.65
+            ],
+            "True": [
+              0.275,
+              0.525,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2336527106929223,
+            0.12357781224945896,
+            0.39118491850142445
+          ]
+        }
+      ]
+    },
+    "20261116": {
+      "scores": {
+        "balanced_prior": {
+          "accuracy": 0.8057233247052057,
+          "earth_logloss": 0.5370846448641364,
+          "fixed": 164,
+          "harmed": 220,
+          "earth_repeat": 104,
+          "retained_of_115": 43
+        },
+        "exception_prior": {
+          "accuracy": 0.7910555076215128,
+          "earth_logloss": 0.5742615631484258,
+          "fixed": 444,
+          "harmed": 602,
+          "earth_repeat": 364,
+          "retained_of_115": 114
+        },
+        "selection_corrected": {
+          "accuracy": 0.8113316077077941,
+          "earth_logloss": 0.5254762181130135,
+          "fixed": 174,
+          "harmed": 191,
+          "earth_repeat": 98,
+          "retained_of_115": 60
+        },
+        "balanced_prior_quarter": {
+          "accuracy": 0.8107563991947081,
+          "earth_logloss": 0.5126287732744969,
+          "fixed": 45,
+          "harmed": 66,
+          "earth_repeat": 18,
+          "retained_of_115": 11
+        },
+        "exception_prior_quarter": {
+          "accuracy": 0.813920046016681,
+          "earth_logloss": 0.5141137900527436,
+          "fixed": 120,
+          "harmed": 119,
+          "earth_repeat": 68,
+          "retained_of_115": 47
+        },
+        "selection_corrected_quarter": {
+          "accuracy": 0.8147828587863101,
+          "earth_logloss": 0.5108693766889194,
+          "fixed": 42,
+          "harmed": 35,
+          "earth_repeat": 17,
+          "retained_of_115": 9
+        },
+        "uncorrected": {
+          "accuracy": 0.7906241012366984,
+          "earth_logloss": 0.576116688262506,
+          "fixed": 306,
+          "harmed": 467,
+          "earth_repeat": 220,
+          "retained_of_115": 115
+        }
+      },
+      "folds": [
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.525,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2428809691153209,
+            0.08936767092688347,
+            0.39928002732043705
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.3,
+              0.5,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2573527468825683,
+            0.07706155668866554,
+            0.2800876968174025
+          ]
+        },
+        {
+          "context_exposures_q10_q50_q90": {
+            "False": [
+              0.15,
+              0.275,
+              0.675
+            ],
+            "True": [
+              0.275,
+              0.5,
+              0.675
+            ]
+          },
+          "held_log_odds_adjustment": [
+            -1.2923938627784102,
+            0.04811346851260012,
+            0.3228357655280257
+          ]
+        }
+      ]
+    }
+  }
+}
