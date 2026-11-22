@@ -1,0 +1,81 @@
+{
+  "results": {
+    "20261112": {
+      "teacher_only": {
+        "accuracy": 0.8175150992234685,
+        "fixed": 39,
+        "harmed": 40,
+        "persistent1070": 12,
+        "unresolved466": 0
+      },
+      "named_cohorts": {
+        "accuracy": 0.8157894736842105,
+        "fixed": 40,
+        "harmed": 53,
+        "persistent1070": 12,
+        "unresolved466": 0
+      },
+      "random_cohorts": {
+        "accuracy": 0.8180903077365546,
+        "fixed": 54,
+        "harmed": 51,
+        "persistent1070": 20,
+        "unresolved466": 1
+      }
+    },
+    "20261115": {
+      "teacher_only": {
+        "accuracy": 0.8178027034800115,
+        "fixed": 87,
+        "harmed": 56,
+        "persistent1070": 24,
+        "unresolved466": 1
+      },
+      "named_cohorts": {
+        "accuracy": 0.819096922634455,
+        "fixed": 99,
+        "harmed": 59,
+        "persistent1070": 36,
+        "unresolved466": 1
+      },
+      "random_cohorts": {
+        "accuracy": 0.817946505608283,
+        "fixed": 95,
+        "harmed": 63,
+        "persistent1070": 40,
+        "unresolved466": 1
+      }
+    },
+    "20261116": {
+      "teacher_only": {
+        "accuracy": 0.813057233247052,
+        "fixed": 41,
+        "harmed": 46,
+        "persistent1070": 22,
+        "unresolved466": 1
+      },
+      "named_cohorts": {
+        "accuracy": 0.8129134311187806,
+        "fixed": 61,
+        "harmed": 67,
+        "persistent1070": 26,
+        "unresolved466": 0
+      },
+      "random_cohorts": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 79,
+        "harmed": 77,
+        "persistent1070": 44,
+        "unresolved466": 2
+      }
+    }
+  },
+  "cohorts": [
+    "any_cryo",
+    "earth",
+    "positive_personal",
+    "positive_retail",
+    "incomplete"
+  ],
+  "definition": "All interventions confined to outer training; the correction policy is calibrated on separate whole bookings within each outer evaluation fold."
+}
