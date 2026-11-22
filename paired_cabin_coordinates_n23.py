@@ -50,8 +50,10 @@ def coordinate_maps(raw):
     observed=track.ne("?").to_numpy()
     order=raw.PassengerId.str.split("_").str[0].astype(int).to_numpy()
     order=(order-order.min())/(order.max()-order.min())
+    groups_per_cabin=pd.Series(group).groupby(raw.Cabin).nunique()
     stats=dict(pairs=len(a),bookings=len(np.unique(group[a])),raw_mae=float(np.mean(abs(frac[a]-frac[b]))),
                heldout_learned_mae=float(np.mean(hold_errors)),
+               distinct_named_cabins=len(groups_per_cabin),cabins_reused_across_bookings=int((groups_per_cabin>1).sum()),
                correlation_with_booking_number=float(np.corrcoef(order[observed],learned[observed])[0,1]))
     return dict(fraction=frac,learned=learned,booking=order),stats
 
