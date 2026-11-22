@@ -55,6 +55,17 @@ def agreement(z,axis,pairs):
     return dict(actual=corr(b).tolist(),shuffled=corr(c).tolist())
 
 
+def expanded_design(frame,training_rows,unsup):
+    own,phi=design(frame,training_rows)
+    center=own[unsup].mean(0)
+    scale=own[unsup].std(0).clip(.25)
+    standardized=((own-center)/scale).clip(-5,5)
+    rng=np.random.default_rng(589)
+    omega=rng.normal(size=(own.shape[1],96))/np.sqrt(own.shape[1])
+    z=np.column_stack([standardized,np.sqrt(2)*np.cos(standardized@omega+rng.uniform(0,2*np.pi,96))])
+    return phi,z
+
+
 def run():
     raw=pd.concat([pd.read_csv(ROOT/f"data/raw/{s}.csv",usecols=lambda c:c not in ("Name","Transported"))
                    for s in ("train","test")],ignore_index=True)
@@ -81,13 +92,7 @@ def run():
             unsup=np.flatnonzero(~held)
             pairs=peer_pairs(groups,unsup)
             valid_pairs=peer_pairs(groups,np.flatnonzero(held))
-            own,phi=design(frame,row[t])
-            center=own[unsup].mean(0)
-            scale=own[unsup].std(0).clip(.25)
-            standardized=((own-center)/scale).clip(-5,5)
-            rng=np.random.default_rng(589)
-            omega=rng.normal(size=(own.shape[1],96))/np.sqrt(own.shape[1])
-            z=np.column_stack([standardized,np.sqrt(2)*np.cos(standardized@omega+rng.uniform(0,2*np.pi,96))])
+            phi,z=expanded_design(frame,row[t],unsup)
             a,b,c,w=pairs
             real=axes(z,a,b,w)
             fake=axes(z,a,c,w)
