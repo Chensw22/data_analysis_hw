@@ -1,0 +1,64 @@
+{
+  "metrics": {
+    "opposite": {
+      "accuracy": 0.814495254529767,
+      "fixed": 13,
+      "harmed": 11,
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "covered": 2145,
+      "fold_net": [
+        1,
+        -1,
+        2
+      ],
+      "fold_slope": [
+        0.021243685275021792,
+        -0.11205239312771527,
+        0.19171436279026013
+      ],
+      "residual_correlation": 0.004609506085797641
+    },
+    "minus_seven": {
+      "accuracy": 0.8134886396318666,
+      "fixed": 8,
+      "harmed": 13,
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "covered": 2105,
+      "fold_net": [
+        -3,
+        -2,
+        0
+      ],
+      "fold_slope": [
+        -0.19196293233188183,
+        -0.07522560133208482,
+        -0.011990871404485093
+      ],
+      "residual_correlation": -0.03606538063464882
+    },
+    "plus_seven": {
+      "accuracy": 0.8152142651711245,
+      "fixed": 18,
+      "harmed": 11,
+      "hard_fixed": 0,
+      "hard_harmed": 0,
+      "covered": 2142,
+      "fold_net": [
+        -1,
+        3,
+        5
+      ],
+      "fold_slope": [
+        -0.2733292139635233,
+        -0.10894547151266994,
+        0.07892418240047896
+      ],
+      "residual_correlation": -0.033549727035013834
+    }
+  },
+  "test_layout_coverage": 2619,
+  "test_rows": 4277,
+  "scope": "Training and calibration each exclude query bookings. Donor residual outcomes minus grouped cross-fitted CatBoost predictions. Signed transfers fit only on inner calibration rows from different bookings. Incumbent v131 hard overrides use reflected v108 score, not calibrated v131 probabilities. Each fit uses only its training subset of labels. Query labels are used only to score the final predictions."
+}
