@@ -1,0 +1,64 @@
+{
+  "seed": 20261112,
+  "checkpoint_sha256": "bdc7dbd5e4ff21f8f0456fcf90c6b7cdf72dbea960f2d05b19bec19f9b3d4ed0",
+  "metrics": {
+    "native": {
+      "accuracy": 0.8117630140926085,
+      "fixed": 123,
+      "harmed": 164
+    },
+    "adapted": {
+      "accuracy": 0.8117630140926085,
+      "fixed": 123,
+      "harmed": 164
+    },
+    "native_blend": {
+      "accuracy": 0.8183779119930975,
+      "fixed": 67,
+      "harmed": 62
+    },
+    "adapted_blend": {
+      "accuracy": 0.8183779119930975,
+      "fixed": 67,
+      "harmed": 62
+    }
+  },
+  "folds": [
+    {
+      "fold": 0,
+      "inner_fit": 3937,
+      "inner_validation": 699,
+      "inference_support": 4636,
+      "inner_log_loss": [
+        0.3926543891429901,
+        0.39419010281562805,
+        0.39441394805908203,
+        0.39469850063323975
+      ]
+    },
+    {
+      "fold": 1,
+      "inner_fit": 3918,
+      "inner_validation": 718,
+      "inference_support": 4636,
+      "inner_log_loss": [
+        0.363922119140625,
+        0.364183634519577,
+        0.3639633357524872,
+        0.3640114963054657
+      ]
+    },
+    {
+      "fold": 2,
+      "inner_fit": 3936,
+      "inner_validation": 700,
+      "inference_support": 4636,
+      "inner_log_loss": [
+        0.39044973254203796,
+        0.3906034529209137,
+        0.3923031985759735,
+        0.393310010433197
+      ]
+    }
+  ]
+}
