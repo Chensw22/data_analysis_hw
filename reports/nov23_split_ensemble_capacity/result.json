@@ -1,0 +1,45 @@
+{
+  "rows": 6954,
+  "target_correct": 5911,
+  "results": {
+    "base": {
+      "equal_average_correct": 5691,
+      "accuracy": 0.8183779119930975,
+      "actual_more_correct_needed_for_85": 220,
+      "number_correct_if_always_selecting_a_correct_member": 5884,
+      "optimistic_upper_accuracy": 0.8461317227494967,
+      "wrong_under_every_member": 1070,
+      "wrong_under_every_member_true_positive_class": 480,
+      "original_1070_correct": 0,
+      "original_480_persistent_false_negatives_correct": 0,
+      "original_590_persistent_false_positives_correct": 0
+    },
+    "fixed_quarter": {
+      "equal_average_correct": 5709,
+      "accuracy": 0.8209663503019845,
+      "actual_more_correct_needed_for_85": 202,
+      "number_correct_if_always_selecting_a_correct_member": 5910,
+      "optimistic_upper_accuracy": 0.8498705780845557,
+      "wrong_under_every_member": 1044,
+      "wrong_under_every_member_true_positive_class": 518,
+      "original_1070_correct": 27,
+      "original_480_persistent_false_negatives_correct": 2,
+      "original_590_persistent_false_positives_correct": 25
+    },
+    "joint": {
+      "equal_average_correct": 5689,
+      "accuracy": 0.8180903077365546,
+      "actual_more_correct_needed_for_85": 222,
+      "number_correct_if_always_selecting_a_correct_member": 5952,
+      "optimistic_upper_accuracy": 0.8559102674719585,
+      "wrong_under_every_member": 1002,
+      "wrong_under_every_member_true_positive_class": 490,
+      "original_1070_correct": 22,
+      "original_480_persistent_false_negatives_correct": 4,
+      "original_590_persistent_false_positives_correct": 18
+    }
+  },
+  "minimum_repairs_outside_baseline_members_at_85": 27,
+  "oracle_all_eight_families": 6488,
+  "caveat": "Only fixed, known out-of-fold predictions on these same people are compared. The best-member bound permits looking at the label for diagnosis and is not a bound on new models or on Kaggle."
+}
