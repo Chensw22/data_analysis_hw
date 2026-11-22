@@ -1,0 +1,641 @@
+{
+  "bills": [
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck"
+  ],
+  "results": {
+    "20261112": {
+      "without_individual_amounts": {
+        "accuracy": 0.768909979867702,
+        "fixed": 306,
+        "harmed": 645,
+        "fixed_false_negatives": 84,
+        "new_false_positives": 145,
+        "fixed_false_positives": 222,
+        "new_false_negatives": 500,
+        "persistent_false_negatives": 52,
+        "eight_family_false_negatives": 20,
+        "solo_persistent_false_negatives": 28
+      },
+      "without_individual_amounts_blend": {
+        "accuracy": 0.8186655162496405,
+        "fixed": 98,
+        "harmed": 91,
+        "fixed_false_negatives": 24,
+        "new_false_positives": 20,
+        "fixed_false_positives": 74,
+        "new_false_negatives": 71,
+        "persistent_false_negatives": 6,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 2
+      },
+      "all_amounts": {
+        "accuracy": 0.8152142651711245,
+        "fixed": 170,
+        "harmed": 187,
+        "fixed_false_negatives": 77,
+        "new_false_positives": 80,
+        "fixed_false_positives": 93,
+        "new_false_negatives": 107,
+        "persistent_false_negatives": 33,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 19
+      },
+      "all_amounts_blend": {
+        "accuracy": 0.8180903077365546,
+        "fixed": 48,
+        "harmed": 45,
+        "fixed_false_negatives": 26,
+        "new_false_positives": 27,
+        "fixed_false_positives": 22,
+        "new_false_negatives": 18,
+        "persistent_false_negatives": 8,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 3
+      },
+      "average_all_subsets": {
+        "accuracy": 0.8091745757837217,
+        "fixed": 200,
+        "harmed": 259,
+        "fixed_false_negatives": 50,
+        "new_false_positives": 54,
+        "fixed_false_positives": 150,
+        "new_false_negatives": 205,
+        "persistent_false_negatives": 22,
+        "eight_family_false_negatives": 2,
+        "solo_persistent_false_negatives": 10
+      },
+      "average_all_subsets_blend": {
+        "accuracy": 0.81765890135174,
+        "fixed": 50,
+        "harmed": 50,
+        "fixed_false_negatives": 18,
+        "new_false_positives": 14,
+        "fixed_false_positives": 32,
+        "new_false_negatives": 36,
+        "persistent_false_negatives": 3,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 0
+      },
+      "contribution_on_false_negatives": {
+        "all_in_split": {
+          "targets": 588,
+          "matched": 553,
+          "mean_log_odds_contribution": [
+            -0.06237992478604186,
+            -0.043723492110588714,
+            -0.009525799288521698,
+            -0.040923322615998244,
+            -0.04190145614264627
+          ],
+          "matched_true_negative_contribution": [
+            -0.060427578401326565,
+            -0.029586507362097916,
+            -0.025962646197986307,
+            -0.07666414914949146,
+            -0.008204063089704321
+          ]
+        },
+        "persistent": {
+          "targets": 480,
+          "matched": 453,
+          "mean_log_odds_contribution": [
+            -0.08563383967445354,
+            -0.06446874030129801,
+            -0.03813187269369492,
+            -0.06111750088673171,
+            -0.06079134358398004
+          ],
+          "matched_true_negative_contribution": [
+            -0.079702722621431,
+            -0.049641706694650824,
+            -0.051241726140340095,
+            -0.09479380606391516,
+            -0.0201342947755085
+          ]
+        },
+        "eight_families": {
+          "targets": 267,
+          "matched": 260,
+          "mean_log_odds_contribution": [
+            -0.15583200358650656,
+            -0.12102349314654676,
+            -0.14008091842770864,
+            -0.11137034708915414,
+            -0.1088066986154083
+          ],
+          "matched_true_negative_contribution": [
+            -0.12367993780281067,
+            -0.11733609015078703,
+            -0.12024647864686543,
+            -0.12351027701776222,
+            -0.06906968222417918
+          ]
+        }
+      },
+      "amount_information": {
+        "all": {
+          "all": {
+            "rows": 6954,
+            "fixed_by_adding_amounts": 589,
+            "harmed_by_adding_amounts": 267,
+            "predicted_probability_decreases": 4008
+          },
+          "persistent_fn": {
+            "rows": 480,
+            "fixed_by_adding_amounts": 20,
+            "harmed_by_adding_amounts": 39,
+            "predicted_probability_decreases": 293
+          },
+          "persistent_fp": {
+            "rows": 590,
+            "fixed_by_adding_amounts": 8,
+            "harmed_by_adding_amounts": 113,
+            "predicted_probability_decreases": 230
+          },
+          "eight_family_fn": {
+            "rows": 267,
+            "fixed_by_adding_amounts": 1,
+            "harmed_by_adding_amounts": 20,
+            "predicted_probability_decreases": 212
+          }
+        },
+        "up_to_one_positive": {
+          "all": {
+            "rows": 3161,
+            "fixed_by_adding_amounts": 65,
+            "harmed_by_adding_amounts": 63,
+            "predicted_probability_decreases": 1688
+          },
+          "persistent_fn": {
+            "rows": 69,
+            "fixed_by_adding_amounts": 5,
+            "harmed_by_adding_amounts": 2,
+            "predicted_probability_decreases": 29
+          },
+          "persistent_fp": {
+            "rows": 459,
+            "fixed_by_adding_amounts": 6,
+            "harmed_by_adding_amounts": 27,
+            "predicted_probability_decreases": 218
+          },
+          "eight_family_fn": {
+            "rows": 17,
+            "fixed_by_adding_amounts": 0,
+            "harmed_by_adding_amounts": 2,
+            "predicted_probability_decreases": 8
+          }
+        },
+        "multiple_positive": {
+          "all": {
+            "rows": 3793,
+            "fixed_by_adding_amounts": 524,
+            "harmed_by_adding_amounts": 204,
+            "predicted_probability_decreases": 2320
+          },
+          "persistent_fn": {
+            "rows": 411,
+            "fixed_by_adding_amounts": 15,
+            "harmed_by_adding_amounts": 37,
+            "predicted_probability_decreases": 264
+          },
+          "persistent_fp": {
+            "rows": 131,
+            "fixed_by_adding_amounts": 2,
+            "harmed_by_adding_amounts": 86,
+            "predicted_probability_decreases": 12
+          },
+          "eight_family_fn": {
+            "rows": 250,
+            "fixed_by_adding_amounts": 1,
+            "harmed_by_adding_amounts": 18,
+            "predicted_probability_decreases": 204
+          }
+        }
+      }
+    },
+    "20261115": {
+      "without_individual_amounts": {
+        "accuracy": 0.7656025309174576,
+        "fixed": 299,
+        "harmed": 631,
+        "fixed_false_negatives": 74,
+        "new_false_positives": 147,
+        "fixed_false_positives": 225,
+        "new_false_negatives": 484,
+        "persistent_false_negatives": 47,
+        "eight_family_false_negatives": 18,
+        "solo_persistent_false_negatives": 26
+      },
+      "without_individual_amounts_blend": {
+        "accuracy": 0.8180903077365546,
+        "fixed": 98,
+        "harmed": 65,
+        "fixed_false_negatives": 18,
+        "new_false_positives": 13,
+        "fixed_false_positives": 80,
+        "new_false_negatives": 52,
+        "persistent_false_negatives": 7,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 3
+      },
+      "all_amounts": {
+        "accuracy": 0.8098935864250791,
+        "fixed": 149,
+        "harmed": 173,
+        "fixed_false_negatives": 59,
+        "new_false_positives": 69,
+        "fixed_false_positives": 90,
+        "new_false_negatives": 104,
+        "persistent_false_negatives": 26,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 16
+      },
+      "all_amounts_blend": {
+        "accuracy": 0.8152142651711245,
+        "fixed": 52,
+        "harmed": 39,
+        "fixed_false_negatives": 23,
+        "new_false_positives": 18,
+        "fixed_false_positives": 29,
+        "new_false_negatives": 21,
+        "persistent_false_negatives": 9,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 4
+      },
+      "average_all_subsets": {
+        "accuracy": 0.8052919183203912,
+        "fixed": 179,
+        "harmed": 235,
+        "fixed_false_negatives": 39,
+        "new_false_positives": 50,
+        "fixed_false_positives": 140,
+        "new_false_negatives": 185,
+        "persistent_false_negatives": 15,
+        "eight_family_false_negatives": 3,
+        "solo_persistent_false_negatives": 8
+      },
+      "average_all_subsets_blend": {
+        "accuracy": 0.815645671555939,
+        "fixed": 49,
+        "harmed": 33,
+        "fixed_false_negatives": 17,
+        "new_false_positives": 11,
+        "fixed_false_positives": 32,
+        "new_false_negatives": 22,
+        "persistent_false_negatives": 6,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 3
+      },
+      "contribution_on_false_negatives": {
+        "all_in_split": {
+          "targets": 587,
+          "matched": 558,
+          "mean_log_odds_contribution": [
+            -0.06610214106800752,
+            -0.02872044836178159,
+            -0.019370771757331835,
+            -0.04621646791451366,
+            -0.02551777061809934
+          ],
+          "matched_true_negative_contribution": [
+            -0.045930688900773016,
+            -0.02633172891253158,
+            -0.030191981898292714,
+            -0.08826366515972259,
+            -0.04261911927202671
+          ]
+        },
+        "persistent": {
+          "targets": 480,
+          "matched": 461,
+          "mean_log_odds_contribution": [
+            -0.0847781185290672,
+            -0.06510668030517104,
+            -0.035135918111467976,
+            -0.07288626693748845,
+            -0.04161917509281406
+          ],
+          "matched_true_negative_contribution": [
+            -0.06881619979146247,
+            -0.04337206282610881,
+            -0.06086582495020303,
+            -0.11244785659019273,
+            -0.05510815137099527
+          ]
+        },
+        "eight_families": {
+          "targets": 267,
+          "matched": 263,
+          "mean_log_odds_contribution": [
+            -0.15759337483176009,
+            -0.13388279710602718,
+            -0.1525186805639601,
+            -0.1121460298102039,
+            -0.09345768448785324
+          ],
+          "matched_true_negative_contribution": [
+            -0.1142718226165077,
+            -0.10877880159436375,
+            -0.14282083187314135,
+            -0.13080123361158533,
+            -0.0959473408258988
+          ]
+        }
+      },
+      "amount_information": {
+        "all": {
+          "all": {
+            "rows": 6954,
+            "fixed_by_adding_amounts": 589,
+            "harmed_by_adding_amounts": 281,
+            "predicted_probability_decreases": 3981
+          },
+          "persistent_fn": {
+            "rows": 480,
+            "fixed_by_adding_amounts": 15,
+            "harmed_by_adding_amounts": 36,
+            "predicted_probability_decreases": 284
+          },
+          "persistent_fp": {
+            "rows": 590,
+            "fixed_by_adding_amounts": 14,
+            "harmed_by_adding_amounts": 110,
+            "predicted_probability_decreases": 242
+          },
+          "eight_family_fn": {
+            "rows": 267,
+            "fixed_by_adding_amounts": 0,
+            "harmed_by_adding_amounts": 17,
+            "predicted_probability_decreases": 215
+          }
+        },
+        "up_to_one_positive": {
+          "all": {
+            "rows": 3161,
+            "fixed_by_adding_amounts": 64,
+            "harmed_by_adding_amounts": 66,
+            "predicted_probability_decreases": 1605
+          },
+          "persistent_fn": {
+            "rows": 69,
+            "fixed_by_adding_amounts": 2,
+            "harmed_by_adding_amounts": 2,
+            "predicted_probability_decreases": 25
+          },
+          "persistent_fp": {
+            "rows": 459,
+            "fixed_by_adding_amounts": 11,
+            "harmed_by_adding_amounts": 19,
+            "predicted_probability_decreases": 228
+          },
+          "eight_family_fn": {
+            "rows": 17,
+            "fixed_by_adding_amounts": 0,
+            "harmed_by_adding_amounts": 1,
+            "predicted_probability_decreases": 11
+          }
+        },
+        "multiple_positive": {
+          "all": {
+            "rows": 3793,
+            "fixed_by_adding_amounts": 525,
+            "harmed_by_adding_amounts": 215,
+            "predicted_probability_decreases": 2376
+          },
+          "persistent_fn": {
+            "rows": 411,
+            "fixed_by_adding_amounts": 13,
+            "harmed_by_adding_amounts": 34,
+            "predicted_probability_decreases": 259
+          },
+          "persistent_fp": {
+            "rows": 131,
+            "fixed_by_adding_amounts": 3,
+            "harmed_by_adding_amounts": 91,
+            "predicted_probability_decreases": 14
+          },
+          "eight_family_fn": {
+            "rows": 250,
+            "fixed_by_adding_amounts": 0,
+            "harmed_by_adding_amounts": 16,
+            "predicted_probability_decreases": 204
+          }
+        }
+      }
+    },
+    "20261116": {
+      "without_individual_amounts": {
+        "accuracy": 0.7661777394305436,
+        "fixed": 326,
+        "harmed": 657,
+        "fixed_false_negatives": 82,
+        "new_false_positives": 157,
+        "fixed_false_positives": 244,
+        "new_false_negatives": 500,
+        "persistent_false_negatives": 47,
+        "eight_family_false_negatives": 17,
+        "solo_persistent_false_negatives": 24
+      },
+      "without_individual_amounts_blend": {
+        "accuracy": 0.8147828587863101,
+        "fixed": 91,
+        "harmed": 84,
+        "fixed_false_negatives": 19,
+        "new_false_positives": 12,
+        "fixed_false_positives": 72,
+        "new_false_negatives": 72,
+        "persistent_false_negatives": 5,
+        "eight_family_false_negatives": 2,
+        "solo_persistent_false_negatives": 3
+      },
+      "all_amounts": {
+        "accuracy": 0.8111878055795225,
+        "fixed": 169,
+        "harmed": 187,
+        "fixed_false_negatives": 71,
+        "new_false_positives": 79,
+        "fixed_false_positives": 98,
+        "new_false_negatives": 108,
+        "persistent_false_negatives": 28,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 14
+      },
+      "all_amounts_blend": {
+        "accuracy": 0.8133448375035951,
+        "fixed": 43,
+        "harmed": 46,
+        "fixed_false_negatives": 24,
+        "new_false_positives": 22,
+        "fixed_false_positives": 19,
+        "new_false_negatives": 24,
+        "persistent_false_negatives": 8,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 4
+      },
+      "average_all_subsets": {
+        "accuracy": 0.8129134311187806,
+        "fixed": 222,
+        "harmed": 228,
+        "fixed_false_negatives": 49,
+        "new_false_positives": 55,
+        "fixed_false_positives": 173,
+        "new_false_negatives": 173,
+        "persistent_false_negatives": 19,
+        "eight_family_false_negatives": 1,
+        "solo_persistent_false_negatives": 7
+      },
+      "average_all_subsets_blend": {
+        "accuracy": 0.813632441760138,
+        "fixed": 46,
+        "harmed": 47,
+        "fixed_false_negatives": 13,
+        "new_false_positives": 12,
+        "fixed_false_positives": 33,
+        "new_false_negatives": 35,
+        "persistent_false_negatives": 3,
+        "eight_family_false_negatives": 0,
+        "solo_persistent_false_negatives": 1
+      },
+      "contribution_on_false_negatives": {
+        "all_in_split": {
+          "targets": 596,
+          "matched": 557,
+          "mean_log_odds_contribution": [
+            -0.04474800649657519,
+            -0.04864403398542636,
+            0.00684510801410449,
+            -0.026069380528338175,
+            -0.02345241086193055
+          ],
+          "matched_true_negative_contribution": [
+            -0.04087456854212477,
+            -0.031339712602856167,
+            -0.013912030195488404,
+            -0.07442259669220742,
+            -0.030383873659727303
+          ]
+        },
+        "persistent": {
+          "targets": 480,
+          "matched": 449,
+          "mean_log_odds_contribution": [
+            -0.06698767888280037,
+            -0.07474004901971505,
+            -0.012555434753615594,
+            -0.05363568986566288,
+            -0.04594986146412198
+          ],
+          "matched_true_negative_contribution": [
+            -0.06427254402927317,
+            -0.049667593806294284,
+            -0.04271476607106317,
+            -0.09628902983524572,
+            -0.05271184420458466
+          ]
+        },
+        "eight_families": {
+          "targets": 267,
+          "matched": 256,
+          "mean_log_odds_contribution": [
+            -0.1400555226700723,
+            -0.14337465707695543,
+            -0.13409714216819302,
+            -0.10369375519804294,
+            -0.08351971712313676
+          ],
+          "matched_true_negative_contribution": [
+            -0.12368000578072005,
+            -0.11532625840391554,
+            -0.12936851529261012,
+            -0.13602297823789897,
+            -0.09110997321625743
+          ]
+        }
+      },
+      "amount_information": {
+        "all": {
+          "all": {
+            "rows": 6954,
+            "fixed_by_adding_amounts": 595,
+            "harmed_by_adding_amounts": 282,
+            "predicted_probability_decreases": 3932
+          },
+          "persistent_fn": {
+            "rows": 480,
+            "fixed_by_adding_amounts": 20,
+            "harmed_by_adding_amounts": 39,
+            "predicted_probability_decreases": 286
+          },
+          "persistent_fp": {
+            "rows": 590,
+            "fixed_by_adding_amounts": 8,
+            "harmed_by_adding_amounts": 108,
+            "predicted_probability_decreases": 245
+          },
+          "eight_family_fn": {
+            "rows": 267,
+            "fixed_by_adding_amounts": 1,
+            "harmed_by_adding_amounts": 17,
+            "predicted_probability_decreases": 213
+          }
+        },
+        "up_to_one_positive": {
+          "all": {
+            "rows": 3161,
+            "fixed_by_adding_amounts": 57,
+            "harmed_by_adding_amounts": 69,
+            "predicted_probability_decreases": 1554
+          },
+          "persistent_fn": {
+            "rows": 69,
+            "fixed_by_adding_amounts": 1,
+            "harmed_by_adding_amounts": 8,
+            "predicted_probability_decreases": 27
+          },
+          "persistent_fp": {
+            "rows": 459,
+            "fixed_by_adding_amounts": 6,
+            "harmed_by_adding_amounts": 19,
+            "predicted_probability_decreases": 235
+          },
+          "eight_family_fn": {
+            "rows": 17,
+            "fixed_by_adding_amounts": 0,
+            "harmed_by_adding_amounts": 2,
+            "predicted_probability_decreases": 11
+          }
+        },
+        "multiple_positive": {
+          "all": {
+            "rows": 3793,
+            "fixed_by_adding_amounts": 538,
+            "harmed_by_adding_amounts": 213,
+            "predicted_probability_decreases": 2378
+          },
+          "persistent_fn": {
+            "rows": 411,
+            "fixed_by_adding_amounts": 19,
+            "harmed_by_adding_amounts": 31,
+            "predicted_probability_decreases": 259
+          },
+          "persistent_fp": {
+            "rows": 131,
+            "fixed_by_adding_amounts": 2,
+            "harmed_by_adding_amounts": 89,
+            "predicted_probability_decreases": 10
+          },
+          "eight_family_fn": {
+            "rows": 250,
+            "fixed_by_adding_amounts": 1,
+            "harmed_by_adding_amounts": 15,
+            "predicted_probability_decreases": 202
+          }
+        }
+      }
+    }
+  }
+}
