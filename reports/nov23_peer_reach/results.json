@@ -1,0 +1,697 @@
+{
+  "coverage": {
+    "official_train": {
+      "solo": 4805,
+      "party_same_cabin": 3067,
+      "party_no_observed_cabin_mate": 821
+    },
+    "official_test": {
+      "solo": 2340,
+      "party_same_cabin": 1463,
+      "party_no_observed_cabin_mate": 474
+    },
+    "all": {
+      "solo": 3817,
+      "party_same_cabin": 2466,
+      "party_no_observed_cabin_mate": 671
+    },
+    "941": {
+      "solo": 577,
+      "party_same_cabin": 250,
+      "party_no_observed_cabin_mate": 114
+    },
+    "696": {
+      "solo": 435,
+      "party_same_cabin": 178,
+      "party_no_observed_cabin_mate": 83
+    },
+    "415": {
+      "solo": 288,
+      "party_same_cabin": 73,
+      "party_no_observed_cabin_mate": 54
+    },
+    "281": {
+      "solo": 147,
+      "party_same_cabin": 105,
+      "party_no_observed_cabin_mate": 29
+    },
+    "repeated_base_errors": {
+      "solo": 630,
+      "party_same_cabin": 323,
+      "party_no_observed_cabin_mate": 117
+    },
+    "20261112": {
+      "core_collision": {
+        "solo": 270,
+        "party_same_cabin": 102,
+        "party_no_observed_cabin_mate": 51
+      },
+      "baseline_error": {
+        "solo": 744,
+        "party_same_cabin": 381,
+        "party_no_observed_cabin_mate": 143
+      }
+    },
+    "20261115": {
+      "core_collision": {
+        "solo": 269,
+        "party_same_cabin": 106,
+        "party_no_observed_cabin_mate": 50
+      },
+      "baseline_error": {
+        "solo": 781,
+        "party_same_cabin": 377,
+        "party_no_observed_cabin_mate": 140
+      }
+    },
+    "20261116": {
+      "core_collision": {
+        "solo": 260,
+        "party_same_cabin": 105,
+        "party_no_observed_cabin_mate": 45
+      },
+      "baseline_error": {
+        "solo": 768,
+        "party_same_cabin": 388,
+        "party_no_observed_cabin_mate": 139
+      }
+    }
+  },
+  "plans": {
+    "20261112": {
+      "real_vs_matched": {
+        "all": {
+          "fixed": 64,
+          "harmed": 70,
+          "correct": 5630
+        },
+        "941": {
+          "fixed": 12,
+          "harmed": 12,
+          "correct": 99
+        },
+        "696": {
+          "fixed": 8,
+          "harmed": 6,
+          "correct": 48
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 1,
+          "correct": 26
+        },
+        "281": {
+          "fixed": 8,
+          "harmed": 5,
+          "correct": 22
+        },
+        "core_collision": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 2
+        },
+        "baseline_error": {
+          "fixed": 38,
+          "harmed": 25,
+          "correct": 179
+        }
+      },
+      "fixed_transfer": {
+        "all": {
+          "fixed": 72,
+          "harmed": 83,
+          "correct": 5675
+        },
+        "941": {
+          "fixed": 29,
+          "harmed": 9,
+          "correct": 82
+        },
+        "696": {
+          "fixed": 15,
+          "harmed": 5,
+          "correct": 36
+        },
+        "415": {
+          "fixed": 3,
+          "harmed": 2,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 12,
+          "harmed": 3,
+          "correct": 15
+        },
+        "core_collision": {
+          "fixed": 3,
+          "harmed": 0,
+          "correct": 3
+        },
+        "baseline_error": {
+          "fixed": 72,
+          "harmed": 0,
+          "correct": 72
+        }
+      },
+      "learned_transfer": {
+        "all": {
+          "fixed": 11,
+          "harmed": 12,
+          "correct": 5685
+        },
+        "941": {
+          "fixed": 3,
+          "harmed": 1,
+          "correct": 64
+        },
+        "696": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 28
+        },
+        "415": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 7
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 11,
+          "harmed": 0,
+          "correct": 11
+        }
+      },
+      "shuffled_transfer": {
+        "all": {
+          "fixed": 19,
+          "harmed": 11,
+          "correct": 5694
+        },
+        "941": {
+          "fixed": 6,
+          "harmed": 1,
+          "correct": 67
+        },
+        "696": {
+          "fixed": 3,
+          "harmed": 0,
+          "correct": 29
+        },
+        "415": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 8
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 19,
+          "harmed": 0,
+          "correct": 19
+        }
+      },
+      "base": {
+        "all": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 5686
+        },
+        "941": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 62
+        },
+        "696": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 26
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 20
+        },
+        "281": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 6
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        }
+      }
+    },
+    "20261115": {
+      "real_vs_matched": {
+        "all": {
+          "fixed": 60,
+          "harmed": 81,
+          "correct": 5645
+        },
+        "941": {
+          "fixed": 14,
+          "harmed": 17,
+          "correct": 114
+        },
+        "696": {
+          "fixed": 11,
+          "harmed": 9,
+          "correct": 57
+        },
+        "415": {
+          "fixed": 2,
+          "harmed": 3,
+          "correct": 28
+        },
+        "281": {
+          "fixed": 9,
+          "harmed": 6,
+          "correct": 29
+        },
+        "core_collision": {
+          "fixed": 2,
+          "harmed": 1,
+          "correct": 2
+        },
+        "baseline_error": {
+          "fixed": 31,
+          "harmed": 31,
+          "correct": 191
+        }
+      },
+      "fixed_transfer": {
+        "all": {
+          "fixed": 73,
+          "harmed": 84,
+          "correct": 5645
+        },
+        "941": {
+          "fixed": 24,
+          "harmed": 5,
+          "correct": 76
+        },
+        "696": {
+          "fixed": 15,
+          "harmed": 2,
+          "correct": 36
+        },
+        "415": {
+          "fixed": 2,
+          "harmed": 1,
+          "correct": 17
+        },
+        "281": {
+          "fixed": 13,
+          "harmed": 1,
+          "correct": 19
+        },
+        "core_collision": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 2
+        },
+        "baseline_error": {
+          "fixed": 73,
+          "harmed": 0,
+          "correct": 73
+        }
+      },
+      "learned_transfer": {
+        "all": {
+          "fixed": 15,
+          "harmed": 11,
+          "correct": 5660
+        },
+        "941": {
+          "fixed": 5,
+          "harmed": 0,
+          "correct": 62
+        },
+        "696": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 25
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 16
+        },
+        "281": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 9
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 15,
+          "harmed": 0,
+          "correct": 15
+        }
+      },
+      "shuffled_transfer": {
+        "all": {
+          "fixed": 9,
+          "harmed": 5,
+          "correct": 5660
+        },
+        "941": {
+          "fixed": 3,
+          "harmed": 0,
+          "correct": 60
+        },
+        "696": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 24
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 16
+        },
+        "281": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 8
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 9,
+          "harmed": 0,
+          "correct": 9
+        }
+      },
+      "base": {
+        "all": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 5656
+        },
+        "941": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 57
+        },
+        "696": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 23
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 16
+        },
+        "281": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 7
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        }
+      }
+    },
+    "20261116": {
+      "real_vs_matched": {
+        "all": {
+          "fixed": 58,
+          "harmed": 70,
+          "correct": 5631
+        },
+        "941": {
+          "fixed": 11,
+          "harmed": 12,
+          "correct": 103
+        },
+        "696": {
+          "fixed": 4,
+          "harmed": 6,
+          "correct": 51
+        },
+        "415": {
+          "fixed": 1,
+          "harmed": 2,
+          "correct": 30
+        },
+        "281": {
+          "fixed": 3,
+          "harmed": 4,
+          "correct": 21
+        },
+        "core_collision": {
+          "fixed": 1,
+          "harmed": 1,
+          "correct": 1
+        },
+        "baseline_error": {
+          "fixed": 30,
+          "harmed": 30,
+          "correct": 177
+        }
+      },
+      "fixed_transfer": {
+        "all": {
+          "fixed": 51,
+          "harmed": 74,
+          "correct": 5636
+        },
+        "941": {
+          "fixed": 17,
+          "harmed": 10,
+          "correct": 73
+        },
+        "696": {
+          "fixed": 8,
+          "harmed": 3,
+          "correct": 37
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 1,
+          "correct": 20
+        },
+        "281": {
+          "fixed": 8,
+          "harmed": 2,
+          "correct": 17
+        },
+        "core_collision": {
+          "fixed": 1,
+          "harmed": 0,
+          "correct": 1
+        },
+        "baseline_error": {
+          "fixed": 51,
+          "harmed": 0,
+          "correct": 51
+        }
+      },
+      "learned_transfer": {
+        "all": {
+          "fixed": 15,
+          "harmed": 20,
+          "correct": 5654
+        },
+        "941": {
+          "fixed": 6,
+          "harmed": 4,
+          "correct": 68
+        },
+        "696": {
+          "fixed": 3,
+          "harmed": 2,
+          "correct": 33
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 3,
+          "harmed": 2,
+          "correct": 12
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 15,
+          "harmed": 0,
+          "correct": 15
+        }
+      },
+      "shuffled_transfer": {
+        "all": {
+          "fixed": 13,
+          "harmed": 16,
+          "correct": 5656
+        },
+        "941": {
+          "fixed": 3,
+          "harmed": 2,
+          "correct": 67
+        },
+        "696": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 34
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 2,
+          "harmed": 0,
+          "correct": 13
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 13,
+          "harmed": 0,
+          "correct": 13
+        }
+      },
+      "base": {
+        "all": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 5659
+        },
+        "941": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 66
+        },
+        "696": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 32
+        },
+        "415": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 21
+        },
+        "281": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 11
+        },
+        "core_collision": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        },
+        "baseline_error": {
+          "fixed": 0,
+          "harmed": 0,
+          "correct": 0
+        }
+      }
+    }
+  },
+  "stable": {
+    "real_vs_matched": {
+      "all": 5296,
+      "941": 29,
+      "696": 12,
+      "415": 6,
+      "281": 6
+    },
+    "fixed_transfer": {
+      "all": 5349,
+      "941": 22,
+      "696": 7,
+      "415": 4,
+      "281": 3
+    },
+    "learned_transfer": {
+      "all": 5433,
+      "941": 18,
+      "696": 6,
+      "415": 5,
+      "281": 1
+    },
+    "shuffled_transfer": {
+      "all": 5433,
+      "941": 20,
+      "696": 6,
+      "415": 5,
+      "281": 1
+    },
+    "base": {
+      "all": 5436,
+      "941": 18,
+      "696": 6,
+      "415": 5,
+      "281": 1
+    }
+  },
+  "local_85_requirement": {
+    "20261112": {
+      "required_net": 225,
+      "accompanied_errors": 524,
+      "minimum_fraction": 0.42938931297709926
+    },
+    "20261115": {
+      "required_net": 255,
+      "accompanied_errors": 517,
+      "minimum_fraction": 0.4932301740812379
+    },
+    "20261116": {
+      "required_net": 252,
+      "accompanied_errors": 527,
+      "minimum_fraction": 0.4781783681214421
+    }
+  }
+}
