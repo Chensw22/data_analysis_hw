@@ -1,0 +1,75 @@
+{
+  "rows": 6954,
+  "outcomes": {
+    "prior": {
+      "accuracy": 0.7933563416738568,
+      "logloss": 0.4754144940050833,
+      "fixed": 269,
+      "harmed": 414,
+      "hard_fixed": 22,
+      "hard_harmed": 5,
+      "missed_by_forward_and_direct": 68,
+      "fold_net": [
+        -62,
+        -35,
+        -48
+      ]
+    },
+    "reverse": {
+      "accuracy": 0.8028472821397756,
+      "logloss": 0.40604496583360533,
+      "fixed": 238,
+      "harmed": 317,
+      "hard_fixed": 8,
+      "hard_harmed": 4,
+      "missed_by_forward_and_direct": 43,
+      "fold_net": [
+        -31,
+        -16,
+        -32
+      ]
+    },
+    "direct": {
+      "accuracy": 0.8039976991659477,
+      "logloss": 0.40798196258995806,
+      "fixed": 229,
+      "harmed": 300,
+      "hard_fixed": 3,
+      "hard_harmed": 6,
+      "missed_by_forward_and_direct": 0,
+      "fold_net": [
+        -22,
+        -22,
+        -27
+      ]
+    },
+    "bidirectional": {
+      "accuracy": 0.8067299396031061,
+      "logloss": 0.40140241182555136,
+      "fixed": 230,
+      "harmed": 282,
+      "hard_fixed": 4,
+      "hard_harmed": 5,
+      "missed_by_forward_and_direct": 12,
+      "fold_net": [
+        -24,
+        -12,
+        -16
+      ]
+    }
+  },
+  "prior": "Five bills and roster party size",
+  "manifest_chain": [
+    "CryoSleep",
+    "HomePlanet",
+    "Deck",
+    "Side",
+    "CabinNumber",
+    "Age",
+    "Destination",
+    "VIP"
+  ],
+  "missing": "Explicit observed missing category",
+  "control": "Direct discrimination using same fold-specific discretized manifest, bills, and roster party size.",
+  "bidirectional": "Equal log-odds pool with existing bill_posterior from conditional_bill_likelihood.py"
+}
