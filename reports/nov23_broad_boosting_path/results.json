@@ -1,0 +1,924 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "trees_8": {
+          "accuracy": 0.777538107563992,
+          "fixed": 208,
+          "harmed": 487,
+          "net_by_fold": [
+            -93,
+            -61,
+            -125
+          ],
+          "corrected": {
+            "ever": 208,
+            "repeat": 128,
+            "unresolved": 10,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.5520314123119486
+        },
+        "trees_24": {
+          "accuracy": 0.7937877480586712,
+          "fixed": 182,
+          "harmed": 348,
+          "net_by_fold": [
+            -48,
+            -37,
+            -81
+          ],
+          "corrected": {
+            "ever": 182,
+            "repeat": 97,
+            "unresolved": 4,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.46968025214952636
+        },
+        "trees_64": {
+          "accuracy": 0.8060109289617486,
+          "fixed": 155,
+          "harmed": 236,
+          "net_by_fold": [
+            -29,
+            -10,
+            -42
+          ],
+          "corrected": {
+            "ever": 155,
+            "repeat": 69,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.41996751771901486
+        },
+        "trees_160": {
+          "accuracy": 0.8114754098360656,
+          "fixed": 137,
+          "harmed": 180,
+          "net_by_fold": [
+            -15,
+            2,
+            -30
+          ],
+          "corrected": {
+            "ever": 137,
+            "repeat": 60,
+            "unresolved": 1,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3969476838493881
+        },
+        "trees_384": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 143,
+          "harmed": 197,
+          "net_by_fold": [
+            -6,
+            -17,
+            -31
+          ],
+          "corrected": {
+            "ever": 143,
+            "repeat": 84,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3896274835681752
+        },
+        "trees_800": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 213,
+          "harmed": 240,
+          "net_by_fold": [
+            -6,
+            8,
+            -29
+          ],
+          "corrected": {
+            "ever": 213,
+            "repeat": 142,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39446507304104217
+        },
+        "update_base": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 21,
+          "harmed": 26,
+          "net_by_fold": [
+            1,
+            2,
+            -8
+          ],
+          "corrected": {
+            "ever": 21,
+            "repeat": 5,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3814891170583919
+        },
+        "update_end": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 88,
+          "harmed": 87,
+          "net_by_fold": [
+            3,
+            12,
+            -14
+          ],
+          "corrected": {
+            "ever": 88,
+            "repeat": 48,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3826077619009157
+        },
+        "update_path": {
+          "accuracy": 0.8116192119643371,
+          "fixed": 182,
+          "harmed": 224,
+          "net_by_fold": [
+            -10,
+            10,
+            -42
+          ],
+          "corrected": {
+            "ever": 182,
+            "repeat": 112,
+            "unresolved": 13,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.3850565226534762
+        },
+        "update_shuffled": {
+          "accuracy": 0.815070463042853,
+          "fixed": 123,
+          "harmed": 141,
+          "net_by_fold": [
+            -10,
+            8,
+            -16
+          ],
+          "corrected": {
+            "ever": 123,
+            "repeat": 77,
+            "unresolved": 8,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38515268491260446
+        }
+      },
+      "movement": {
+        "ever": {
+          "early_right_late_wrong": 216,
+          "early_wrong_late_right": 257,
+          "at_least_one_right": 654
+        },
+        "repeat": {
+          "early_right_late_wrong": 110,
+          "early_wrong_late_right": 124,
+          "at_least_one_right": 279
+        },
+        "unresolved": {
+          "early_right_late_wrong": 9,
+          "early_wrong_late_right": 9,
+          "at_least_one_right": 21
+        },
+        "never": {
+          "early_right_late_wrong": 1,
+          "early_wrong_late_right": 0,
+          "at_least_one_right": 1
+        },
+        "all": {
+          "early_right_late_wrong": 352,
+          "early_wrong_late_right": 604,
+          "at_least_one_right": 6072
+        }
+      }
+    },
+    "20261115": {
+      "models": {
+        "trees_8": {
+          "accuracy": 0.7748058671268335,
+          "fixed": 234,
+          "harmed": 502,
+          "net_by_fold": [
+            -54,
+            -107,
+            -107
+          ],
+          "corrected": {
+            "ever": 234,
+            "repeat": 139,
+            "unresolved": 8,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.5507042269725655
+        },
+        "trees_24": {
+          "accuracy": 0.7900488927236123,
+          "fixed": 183,
+          "harmed": 345,
+          "net_by_fold": [
+            -53,
+            -51,
+            -58
+          ],
+          "corrected": {
+            "ever": 183,
+            "repeat": 94,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4688576024090076
+        },
+        "trees_64": {
+          "accuracy": 0.8037100949094047,
+          "fixed": 149,
+          "harmed": 216,
+          "net_by_fold": [
+            -27,
+            -12,
+            -28
+          ],
+          "corrected": {
+            "ever": 149,
+            "repeat": 72,
+            "unresolved": 1,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.42095217792025214
+        },
+        "trees_160": {
+          "accuracy": 0.8048605119355766,
+          "fixed": 114,
+          "harmed": 173,
+          "net_by_fold": [
+            -18,
+            -9,
+            -32
+          ],
+          "corrected": {
+            "ever": 114,
+            "repeat": 44,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3976615437070979
+        },
+        "trees_384": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 145,
+          "harmed": 174,
+          "net_by_fold": [
+            5,
+            -8,
+            -26
+          ],
+          "corrected": {
+            "ever": 145,
+            "repeat": 80,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39037488280106714
+        },
+        "trees_800": {
+          "accuracy": 0.8093183779119931,
+          "fixed": 201,
+          "harmed": 229,
+          "net_by_fold": [
+            21,
+            -19,
+            -30
+          ],
+          "corrected": {
+            "ever": 201,
+            "repeat": 126,
+            "unresolved": 17,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39477271045347495
+        },
+        "update_base": {
+          "accuracy": 0.8175150992234685,
+          "fixed": 86,
+          "harmed": 57,
+          "net_by_fold": [
+            13,
+            16,
+            0
+          ],
+          "corrected": {
+            "ever": 86,
+            "repeat": 29,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38002498160062215
+        },
+        "update_end": {
+          "accuracy": 0.8143514524014955,
+          "fixed": 104,
+          "harmed": 97,
+          "net_by_fold": [
+            11,
+            2,
+            -6
+          ],
+          "corrected": {
+            "ever": 104,
+            "repeat": 47,
+            "unresolved": 4,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38111610657721573
+        },
+        "update_path": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 211,
+          "harmed": 208,
+          "net_by_fold": [
+            19,
+            -3,
+            -13
+          ],
+          "corrected": {
+            "ever": 211,
+            "repeat": 118,
+            "unresolved": 18,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38291124634103035
+        },
+        "update_shuffled": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 149,
+          "harmed": 154,
+          "net_by_fold": [
+            7,
+            -6,
+            -6
+          ],
+          "corrected": {
+            "ever": 149,
+            "repeat": 79,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38455752846735114
+        }
+      },
+      "movement": {
+        "ever": {
+          "early_right_late_wrong": 241,
+          "early_wrong_late_right": 234,
+          "at_least_one_right": 638
+        },
+        "repeat": {
+          "early_right_late_wrong": 121,
+          "early_wrong_late_right": 108,
+          "at_least_one_right": 269
+        },
+        "unresolved": {
+          "early_right_late_wrong": 7,
+          "early_wrong_late_right": 16,
+          "at_least_one_right": 24
+        },
+        "never": {
+          "early_right_late_wrong": 1,
+          "early_wrong_late_right": 0,
+          "at_least_one_right": 1
+        },
+        "all": {
+          "early_right_late_wrong": 383,
+          "early_wrong_late_right": 623,
+          "at_least_one_right": 6064
+        }
+      }
+    },
+    "20261116": {
+      "models": {
+        "trees_8": {
+          "accuracy": 0.778976128846707,
+          "fixed": 239,
+          "harmed": 481,
+          "net_by_fold": [
+            -79,
+            -72,
+            -91
+          ],
+          "corrected": {
+            "ever": 239,
+            "repeat": 127,
+            "unresolved": 7,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.5469177894414021
+        },
+        "trees_24": {
+          "accuracy": 0.7901926948518838,
+          "fixed": 199,
+          "harmed": 363,
+          "net_by_fold": [
+            -59,
+            -57,
+            -48
+          ],
+          "corrected": {
+            "ever": 199,
+            "repeat": 97,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.46941304006169937
+        },
+        "trees_64": {
+          "accuracy": 0.8035662927811331,
+          "fixed": 167,
+          "harmed": 238,
+          "net_by_fold": [
+            -29,
+            -28,
+            -14
+          ],
+          "corrected": {
+            "ever": 167,
+            "repeat": 75,
+            "unresolved": 1,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.41983010643742147
+        },
+        "trees_160": {
+          "accuracy": 0.8074489502444636,
+          "fixed": 132,
+          "harmed": 176,
+          "net_by_fold": [
+            -19,
+            -30,
+            5
+          ],
+          "corrected": {
+            "ever": 132,
+            "repeat": 56,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39800145131159703
+        },
+        "trees_384": {
+          "accuracy": 0.8080241587575496,
+          "fixed": 143,
+          "harmed": 183,
+          "net_by_fold": [
+            -18,
+            -20,
+            -2
+          ],
+          "corrected": {
+            "ever": 143,
+            "repeat": 75,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39127999924694823
+        },
+        "trees_800": {
+          "accuracy": 0.8058671268334772,
+          "fixed": 203,
+          "harmed": 258,
+          "net_by_fold": [
+            -40,
+            -17,
+            2
+          ],
+          "corrected": {
+            "ever": 203,
+            "repeat": 126,
+            "unresolved": 15,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39743346530053864
+        },
+        "update_base": {
+          "accuracy": 0.8114754098360656,
+          "fixed": 23,
+          "harmed": 39,
+          "net_by_fold": [
+            -13,
+            -1,
+            -2
+          ],
+          "corrected": {
+            "ever": 23,
+            "repeat": 15,
+            "unresolved": 1,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38099323908407146
+        },
+        "update_end": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 80,
+          "harmed": 107,
+          "net_by_fold": [
+            -24,
+            1,
+            -4
+          ],
+          "corrected": {
+            "ever": 80,
+            "repeat": 53,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38265373875808084
+        },
+        "update_path": {
+          "accuracy": 0.8116192119643371,
+          "fixed": 173,
+          "harmed": 188,
+          "net_by_fold": [
+            -14,
+            -15,
+            14
+          ],
+          "corrected": {
+            "ever": 173,
+            "repeat": 96,
+            "unresolved": 11,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38630920338012714
+        },
+        "update_shuffled": {
+          "accuracy": 0.8073051481161921,
+          "fixed": 136,
+          "harmed": 181,
+          "net_by_fold": [
+            -33,
+            -8,
+            -4
+          ],
+          "corrected": {
+            "ever": 136,
+            "repeat": 82,
+            "unresolved": 6,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3853905604688111
+        }
+      },
+      "movement": {
+        "ever": {
+          "early_right_late_wrong": 225,
+          "early_wrong_late_right": 244,
+          "at_least_one_right": 637
+        },
+        "repeat": {
+          "early_right_late_wrong": 115,
+          "early_wrong_late_right": 114,
+          "at_least_one_right": 262
+        },
+        "unresolved": {
+          "early_right_late_wrong": 7,
+          "early_wrong_late_right": 15,
+          "at_least_one_right": 24
+        },
+        "never": {
+          "early_right_late_wrong": 0,
+          "early_wrong_late_right": 0,
+          "at_least_one_right": 0
+        },
+        "all": {
+          "early_right_late_wrong": 396,
+          "early_wrong_late_right": 583,
+          "at_least_one_right": 6059
+        }
+      }
+    },
+    "v131": {
+      "models": {
+        "trees_8": {
+          "accuracy": 0.7765314926660914,
+          "fixed": 304,
+          "harmed": 566,
+          "net_by_fold": [
+            -100,
+            -79,
+            -83
+          ],
+          "corrected": {
+            "ever": 204,
+            "repeat": 117,
+            "unresolved": 15,
+            "never": 4
+          },
+          "native_log_loss_before_overrides": 0.5561999129915495
+        },
+        "trees_24": {
+          "accuracy": 0.7927811331607708,
+          "fixed": 283,
+          "harmed": 432,
+          "net_by_fold": [
+            -48,
+            -47,
+            -54
+          ],
+          "corrected": {
+            "ever": 180,
+            "repeat": 95,
+            "unresolved": 11,
+            "never": 2
+          },
+          "native_log_loss_before_overrides": 0.475274356004108
+        },
+        "trees_64": {
+          "accuracy": 0.8065861374748347,
+          "fixed": 270,
+          "harmed": 323,
+          "net_by_fold": [
+            -9,
+            -16,
+            -28
+          ],
+          "corrected": {
+            "ever": 159,
+            "repeat": 66,
+            "unresolved": 7,
+            "never": 1
+          },
+          "native_log_loss_before_overrides": 0.4230864688028671
+        },
+        "trees_160": {
+          "accuracy": 0.8096059821685361,
+          "fixed": 237,
+          "harmed": 269,
+          "net_by_fold": [
+            0,
+            -19,
+            -13
+          ],
+          "corrected": {
+            "ever": 127,
+            "repeat": 52,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3987176231091299
+        },
+        "trees_384": {
+          "accuracy": 0.8103249928098936,
+          "fixed": 237,
+          "harmed": 264,
+          "net_by_fold": [
+            -8,
+            -8,
+            -11
+          ],
+          "corrected": {
+            "ever": 145,
+            "repeat": 77,
+            "unresolved": 11,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3889436918235345
+        },
+        "trees_800": {
+          "accuracy": 0.810468794938165,
+          "fixed": 275,
+          "harmed": 301,
+          "net_by_fold": [
+            -23,
+            5,
+            -8
+          ],
+          "corrected": {
+            "ever": 201,
+            "repeat": 122,
+            "unresolved": 22,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3939641772000255
+        },
+        "update_base": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 70,
+          "harmed": 83,
+          "net_by_fold": [
+            -7,
+            -6,
+            0
+          ],
+          "corrected": {
+            "ever": 60,
+            "repeat": 39,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38081820564932506
+        },
+        "update_end": {
+          "accuracy": 0.812482024733966,
+          "fixed": 141,
+          "harmed": 153,
+          "net_by_fold": [
+            -3,
+            -11,
+            2
+          ],
+          "corrected": {
+            "ever": 103,
+            "repeat": 53,
+            "unresolved": 9,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.37938269714188977
+        },
+        "update_path": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 191,
+          "harmed": 226,
+          "net_by_fold": [
+            -13,
+            -10,
+            -12
+          ],
+          "corrected": {
+            "ever": 143,
+            "repeat": 79,
+            "unresolved": 14,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38115735037765014
+        },
+        "update_shuffled": {
+          "accuracy": 0.8109002013229796,
+          "fixed": 162,
+          "harmed": 185,
+          "net_by_fold": [
+            -15,
+            -1,
+            -7
+          ],
+          "corrected": {
+            "ever": 126,
+            "repeat": 73,
+            "unresolved": 11,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38252174893804164
+        }
+      },
+      "movement": {
+        "ever": {
+          "early_right_late_wrong": 208,
+          "early_wrong_late_right": 238,
+          "at_least_one_right": 665
+        },
+        "repeat": {
+          "early_right_late_wrong": 94,
+          "early_wrong_late_right": 124,
+          "at_least_one_right": 293
+        },
+        "unresolved": {
+          "early_right_late_wrong": 11,
+          "early_wrong_late_right": 21,
+          "at_least_one_right": 39
+        },
+        "never": {
+          "early_right_late_wrong": 4,
+          "early_wrong_late_right": 0,
+          "at_least_one_right": 4
+        },
+        "all": {
+          "early_right_late_wrong": 372,
+          "early_wrong_late_right": 608,
+          "at_least_one_right": 6083
+        }
+      }
+    }
+  },
+  "stages": [
+    8,
+    24,
+    64,
+    160,
+    384,
+    800
+  ],
+  "stable": {
+    "trees_8": {
+      "ever": 229,
+      "repeat": 74,
+      "unresolved": 1,
+      "never": 0,
+      "gain_ci95_pp": [
+        -4.425463281464722,
+        -3.146733725415492
+      ]
+    },
+    "trees_24": {
+      "ever": 224,
+      "repeat": 58,
+      "unresolved": 1,
+      "never": 0,
+      "gain_ci95_pp": [
+        -2.9137016103975846,
+        -1.8111625633950923
+      ]
+    },
+    "trees_64": {
+      "ever": 195,
+      "repeat": 39,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -1.4862642344985242,
+        -0.5936523739464296
+      ]
+    },
+    "trees_160": {
+      "ever": 136,
+      "repeat": 15,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -1.0495289023019627,
+        -0.3241283507357879
+      ]
+    },
+    "trees_384": {
+      "ever": 102,
+      "repeat": 18,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.9325892033713165,
+        -0.2262636776511539
+      ]
+    },
+    "trees_800": {
+      "ever": 141,
+      "repeat": 39,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.961121574252936,
+        -0.09212643615247879
+      ]
+    },
+    "update_base": {
+      "ever": 43,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.11402589835803227,
+        0.1914505972982796
+      ]
+    },
+    "update_end": {
+      "ever": 60,
+      "repeat": 5,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.3405386165063051,
+        0.15952286018075504
+      ]
+    },
+    "update_path": {
+      "ever": 114,
+      "repeat": 20,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.627518660808582,
+        0.11542387620875576
+      ]
+    },
+    "update_shuffled": {
+      "ever": 80,
+      "repeat": 8,
+      "unresolved": 0,
+      "never": 0,
+      "gain_ci95_pp": [
+        -0.6471604081640087,
+        1.2008469403978895e-19
+      ]
+    }
+  },
+  "stable_at_one_stage": {
+    "ever": 400,
+    "repeat": 129,
+    "unresolved": 1,
+    "never": 0
+  }
+}
