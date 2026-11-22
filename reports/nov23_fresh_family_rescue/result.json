@@ -1,0 +1,383 @@
+{
+  "members": {
+    "orion": [
+      "pretrained_recheck",
+      "orion"
+    ],
+    "iltm_concat": [
+      "iltm_concat_grouped",
+      "p"
+    ],
+    "variational_gp": [
+      "variational_gp",
+      "p"
+    ],
+    "berth_activity": [
+      "berth_activity",
+      "anchored"
+    ],
+    "manifest_reconstruction": [
+      "unlabelled_matrix_views",
+      "manifest"
+    ]
+  },
+  "coverage": {
+    "ever_wrong": {
+      "rows": 1518,
+      "at_least_once": 1010,
+      "one_stable": 482,
+      "two_stable": 276,
+      "stable_actual_positive": 271,
+      "stable_actual_negative": 211,
+      "total_actual_positive": 716,
+      "same_correct_majority_each_split": 191,
+      "stable_by_family": {
+        "orion": 191,
+        "iltm_concat": 185,
+        "variational_gp": 249,
+        "berth_activity": 202,
+        "manifest_reconstruction": 153
+      }
+    },
+    "repeat_wrong": {
+      "rows": 1070,
+      "at_least_once": 592,
+      "one_stable": 183,
+      "two_stable": 64,
+      "stable_actual_positive": 85,
+      "stable_actual_negative": 98,
+      "total_actual_positive": 480,
+      "same_correct_majority_each_split": 30,
+      "stable_by_family": {
+        "orion": 51,
+        "iltm_concat": 59,
+        "variational_gp": 68,
+        "berth_activity": 65,
+        "manifest_reconstruction": 34
+      }
+    },
+    "weak335": {
+      "rows": 335,
+      "at_least_once": 260,
+      "one_stable": 84,
+      "two_stable": 24,
+      "stable_actual_positive": 42,
+      "stable_actual_negative": 42,
+      "total_actual_positive": 114,
+      "same_correct_majority_each_split": 10,
+      "stable_by_family": {
+        "orion": 28,
+        "iltm_concat": 28,
+        "variational_gp": 34,
+        "berth_activity": 18,
+        "manifest_reconstruction": 8
+      }
+    },
+    "intermittent340": {
+      "rows": 340,
+      "at_least_once": 163,
+      "one_stable": 19,
+      "two_stable": 1,
+      "stable_actual_positive": 13,
+      "stable_actual_negative": 6,
+      "total_actual_positive": 158,
+      "same_correct_majority_each_split": 1,
+      "stable_by_family": {
+        "orion": 3,
+        "iltm_concat": 4,
+        "variational_gp": 3,
+        "berth_activity": 9,
+        "manifest_reconstruction": 1
+      }
+    },
+    "deep252": {
+      "rows": 252,
+      "at_least_once": 32,
+      "one_stable": 1,
+      "two_stable": 0,
+      "stable_actual_positive": 1,
+      "stable_actual_negative": 0,
+      "total_actual_positive": 163,
+      "same_correct_majority_each_split": 0,
+      "stable_by_family": {
+        "orion": 0,
+        "iltm_concat": 1,
+        "variational_gp": 0,
+        "berth_activity": 0,
+        "manifest_reconstruction": 0
+      }
+    }
+  },
+  "results": {
+    "20261112": {
+      "vote_distribution": [
+        {
+          "dissent": 0,
+          "rows": 5497,
+          "base_wrong": 738,
+          "weak335": 157,
+          "deep252": 246
+        },
+        {
+          "dissent": 1,
+          "rows": 703,
+          "base_wrong": 230,
+          "weak335": 96,
+          "deep252": 4
+        },
+        {
+          "dissent": 2,
+          "rows": 376,
+          "base_wrong": 145,
+          "weak335": 50,
+          "deep252": 1
+        },
+        {
+          "dissent": 3,
+          "rows": 180,
+          "base_wrong": 72,
+          "weak335": 18,
+          "deep252": 0
+        },
+        {
+          "dissent": 4,
+          "rows": 141,
+          "base_wrong": 62,
+          "weak335": 12,
+          "deep252": 1
+        },
+        {
+          "dissent": 5,
+          "rows": 57,
+          "base_wrong": 21,
+          "weak335": 2,
+          "deep252": 0
+        }
+      ],
+      "policies": {
+        "mean_probabilities": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 146,
+          "harmed": 205,
+          "weak335": 28,
+          "deep252": 1
+        },
+        "quarter_mean": {
+          "accuracy": 0.817371297095197,
+          "fixed": 41,
+          "harmed": 43,
+          "weak335": 2,
+          "deep252": 0
+        },
+        "majority_vote": {
+          "accuracy": 0.8078803566292782,
+          "fixed": 155,
+          "harmed": 223,
+          "weak335": 32,
+          "deep252": 1
+        },
+        "unanimous_reversal": {
+          "accuracy": 0.8155018694276676,
+          "fixed": 21,
+          "harmed": 36,
+          "weak335": 2,
+          "deep252": 0
+        },
+        "base_readout": {
+          "accuracy": 0.818809318377912,
+          "fixed": 24,
+          "harmed": 16,
+          "weak335": 3,
+          "deep252": 0
+        },
+        "five_family_readout": {
+          "accuracy": 0.816508484325568,
+          "fixed": 93,
+          "harmed": 101,
+          "weak335": 19,
+          "deep252": 0
+        }
+      }
+    },
+    "20261115": {
+      "vote_distribution": [
+        {
+          "dissent": 0,
+          "rows": 5219,
+          "base_wrong": 707,
+          "weak335": 154,
+          "deep252": 232
+        },
+        {
+          "dissent": 1,
+          "rows": 1015,
+          "base_wrong": 284,
+          "weak335": 95,
+          "deep252": 19
+        },
+        {
+          "dissent": 2,
+          "rows": 373,
+          "base_wrong": 153,
+          "weak335": 54,
+          "deep252": 1
+        },
+        {
+          "dissent": 3,
+          "rows": 183,
+          "base_wrong": 81,
+          "weak335": 22,
+          "deep252": 0
+        },
+        {
+          "dissent": 4,
+          "rows": 114,
+          "base_wrong": 51,
+          "weak335": 9,
+          "deep252": 0
+        },
+        {
+          "dissent": 5,
+          "rows": 50,
+          "base_wrong": 22,
+          "weak335": 1,
+          "deep252": 0
+        }
+      ],
+      "policies": {
+        "mean_probabilities": {
+          "accuracy": 0.8083117630140926,
+          "fixed": 165,
+          "harmed": 200,
+          "weak335": 37,
+          "deep252": 0
+        },
+        "quarter_mean": {
+          "accuracy": 0.8146390566580385,
+          "fixed": 51,
+          "harmed": 42,
+          "weak335": 2,
+          "deep252": 0
+        },
+        "majority_vote": {
+          "accuracy": 0.8077365545010066,
+          "fixed": 154,
+          "harmed": 193,
+          "weak335": 32,
+          "deep252": 0
+        },
+        "unanimous_reversal": {
+          "accuracy": 0.812482024733966,
+          "fixed": 22,
+          "harmed": 28,
+          "weak335": 1,
+          "deep252": 0
+        },
+        "base_readout": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 77,
+          "harmed": 52,
+          "weak335": 4,
+          "deep252": 0
+        },
+        "five_family_readout": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 110,
+          "harmed": 96,
+          "weak335": 14,
+          "deep252": 0
+        }
+      }
+    },
+    "20261116": {
+      "vote_distribution": [
+        {
+          "dissent": 0,
+          "rows": 5400,
+          "base_wrong": 692,
+          "weak335": 145,
+          "deep252": 240
+        },
+        {
+          "dissent": 1,
+          "rows": 818,
+          "base_wrong": 278,
+          "weak335": 119,
+          "deep252": 12
+        },
+        {
+          "dissent": 2,
+          "rows": 377,
+          "base_wrong": 167,
+          "weak335": 44,
+          "deep252": 0
+        },
+        {
+          "dissent": 3,
+          "rows": 203,
+          "base_wrong": 90,
+          "weak335": 21,
+          "deep252": 0
+        },
+        {
+          "dissent": 4,
+          "rows": 105,
+          "base_wrong": 52,
+          "weak335": 6,
+          "deep252": 0
+        },
+        {
+          "dissent": 5,
+          "rows": 51,
+          "base_wrong": 16,
+          "weak335": 0,
+          "deep252": 0
+        }
+      ],
+      "policies": {
+        "mean_probabilities": {
+          "accuracy": 0.8094621800402646,
+          "fixed": 169,
+          "harmed": 199,
+          "weak335": 28,
+          "deep252": 0
+        },
+        "quarter_mean": {
+          "accuracy": 0.813920046016681,
+          "fixed": 44,
+          "harmed": 43,
+          "weak335": 4,
+          "deep252": 0
+        },
+        "majority_vote": {
+          "accuracy": 0.8075927523727351,
+          "fixed": 158,
+          "harmed": 201,
+          "weak335": 27,
+          "deep252": 0
+        },
+        "unanimous_reversal": {
+          "accuracy": 0.811044003451251,
+          "fixed": 16,
+          "harmed": 35,
+          "weak335": 0,
+          "deep252": 0
+        },
+        "base_readout": {
+          "accuracy": 0.8117630140926085,
+          "fixed": 32,
+          "harmed": 46,
+          "weak335": 7,
+          "deep252": 0
+        },
+        "five_family_readout": {
+          "accuracy": 0.8117630140926085,
+          "fixed": 71,
+          "harmed": 85,
+          "weak335": 8,
+          "deep252": 0
+        }
+      }
+    }
+  }
+}
