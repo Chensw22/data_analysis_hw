@@ -1,0 +1,170 @@
+{
+  "rows": 6954,
+  "split_seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "baseline_errors": [
+    1268,
+    1298,
+    1295
+  ],
+  "grouped_by_number_of_baseline_errors": {
+    "0": {
+      "passengers": 5436,
+      "transported": 2786,
+      "ever_repaired": 0,
+      "same_model_right_all_splits": 5432
+    },
+    "1": {
+      "passengers": 245,
+      "transported": 141,
+      "ever_repaired": 234,
+      "same_model_right_all_splits": 221
+    },
+    "2": {
+      "passengers": 203,
+      "transported": 95,
+      "ever_repaired": 189,
+      "same_model_right_all_splits": 150
+    },
+    "3": {
+      "passengers": 1070,
+      "transported": 480,
+      "ever_repaired": 604,
+      "same_model_right_all_splits": 285
+    }
+  },
+  "families": {
+    "sparse_rules": {
+      "repairs_each_split": [
+        229,
+        249,
+        232
+      ],
+      "harms_each_split": [
+        311,
+        291,
+        294
+      ],
+      "correct_every_split_on_ever_wrong": 157,
+      "sole_stable_rescuer": 34,
+      "repairs_all_splits_on_always_wrong": 44,
+      "harms_all_splits_on_always_right": 57
+    },
+    "tabular_in_context": {
+      "repairs_each_split": [
+        123,
+        127,
+        120
+      ],
+      "harms_each_split": [
+        164,
+        136,
+        154
+      ],
+      "correct_every_split_on_ever_wrong": 112,
+      "sole_stable_rescuer": 14,
+      "repairs_all_splits_on_always_wrong": 7,
+      "harms_all_splits_on_always_right": 17
+    },
+    "constructed_features": {
+      "repairs_each_split": [
+        139,
+        154,
+        149
+      ],
+      "harms_each_split": [
+        175,
+        173,
+        169
+      ],
+      "correct_every_split_on_ever_wrong": 109,
+      "sole_stable_rescuer": 3,
+      "repairs_all_splits_on_always_wrong": 9,
+      "harms_all_splits_on_always_right": 13
+    },
+    "feature_projections": {
+      "repairs_each_split": [
+        233,
+        225,
+        230
+      ],
+      "harms_each_split": [
+        340,
+        306,
+        322
+      ],
+      "correct_every_split_on_ever_wrong": 271,
+      "sole_stable_rescuer": 53,
+      "repairs_all_splits_on_always_wrong": 99,
+      "harms_all_splits_on_always_right": 133
+    },
+    "peer_attributes": {
+      "repairs_each_split": [
+        177,
+        187,
+        182
+      ],
+      "harms_each_split": [
+        243,
+        230,
+        238
+      ],
+      "correct_every_split_on_ever_wrong": 123,
+      "sole_stable_rescuer": 2,
+      "repairs_all_splits_on_always_wrong": 21,
+      "harms_all_splits_on_always_right": 34
+    },
+    "manifest_likelihood": {
+      "repairs_each_split": [
+        262,
+        277,
+        288
+      ],
+      "harms_each_split": [
+        675,
+        667,
+        698
+      ],
+      "correct_every_split_on_ever_wrong": 334,
+      "sole_stable_rescuer": 115,
+      "repairs_all_splits_on_always_wrong": 132,
+      "harms_all_splits_on_always_right": 432
+    },
+    "boarding_sequence": {
+      "repairs_each_split": [
+        168,
+        159,
+        176
+      ],
+      "harms_each_split": [
+        221,
+        199,
+        239
+      ],
+      "correct_every_split_on_ever_wrong": 123,
+      "sole_stable_rescuer": 7,
+      "repairs_all_splits_on_always_wrong": 22,
+      "harms_all_splits_on_always_right": 28
+    },
+    "gradient_kernel": {
+      "repairs_each_split": [
+        277,
+        264,
+        270
+      ],
+      "harms_each_split": [
+        393,
+        399,
+        413
+      ],
+      "correct_every_split_on_ever_wrong": 259,
+      "sole_stable_rescuer": 51,
+      "repairs_all_splits_on_always_wrong": 99,
+      "harms_all_splits_on_always_right": 170
+    }
+  },
+  "interpretation": "The same passengers recur across splits. Coverage uses labels after prediction and gives no deployable selection rule."
+}
