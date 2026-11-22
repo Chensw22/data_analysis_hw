@@ -1,0 +1,104 @@
+{
+  "breakdown": {
+    "all": {
+      "all": {
+        "rows": 6954,
+        "base_always_wrong": 1070,
+        "repeatably_rescued": 285,
+        "never_rescued": 466,
+        "never_rescued_rate": 0.06701179177451826,
+        "false_negative": 267,
+        "false_positive": 199
+      }
+    },
+    "spend": {
+      "all_zero": {
+        "rows": 2624,
+        "base_always_wrong": 440,
+        "repeatably_rescued": 124,
+        "never_rescued": 172,
+        "never_rescued_rate": 0.06554878048780488,
+        "false_negative": 5,
+        "false_positive": 167
+      },
+      "no_positive_incomplete": {
+        "rows": 324,
+        "base_always_wrong": 56,
+        "repeatably_rescued": 15,
+        "never_rescued": 21,
+        "never_rescued_rate": 0.06481481481481481,
+        "false_negative": 2,
+        "false_positive": 19
+      },
+      "positive": {
+        "rows": 4006,
+        "base_always_wrong": 574,
+        "repeatably_rescued": 146,
+        "never_rescued": 273,
+        "never_rescued_rate": 0.06814777833250125,
+        "false_negative": 260,
+        "false_positive": 13
+      }
+    },
+    "cryo": {
+      "False": {
+        "rows": 4339,
+        "base_always_wrong": 659,
+        "repeatably_rescued": 187,
+        "never_rescued": 293,
+        "never_rescued_rate": 0.06752707997234386,
+        "false_negative": 264,
+        "false_positive": 29
+      },
+      "True": {
+        "rows": 2442,
+        "base_always_wrong": 391,
+        "repeatably_rescued": 90,
+        "never_rescued": 168,
+        "never_rescued_rate": 0.0687960687960688,
+        "false_negative": 0,
+        "false_positive": 168
+      },
+      "missing": {
+        "rows": 173,
+        "base_always_wrong": 20,
+        "repeatably_rescued": 8,
+        "never_rescued": 5,
+        "never_rescued_rate": 0.028901734104046242,
+        "false_negative": 3,
+        "false_positive": 2
+      }
+    },
+    "confidence": {
+      "close": {
+        "rows": 1901,
+        "base_always_wrong": 605,
+        "repeatably_rescued": 244,
+        "never_rescued": 113,
+        "never_rescued_rate": 0.05944239873750658,
+        "false_negative": 22,
+        "false_positive": 91
+      },
+      "high": {
+        "rows": 3916,
+        "base_always_wrong": 213,
+        "repeatably_rescued": 5,
+        "never_rescued": 194,
+        "never_rescued_rate": 0.04954034729315628,
+        "false_negative": 170,
+        "false_positive": 24
+      },
+      "middle": {
+        "rows": 1137,
+        "base_always_wrong": 252,
+        "repeatably_rescued": 36,
+        "never_rescued": 159,
+        "never_rescued_rate": 0.13984168865435356,
+        "false_negative": 75,
+        "false_positive": 84
+      }
+    }
+  },
+  "confidence": "Minimum predicted-class probability over three booking-disjoint split assignments. Close <0.65, middle [0.65,0.80), high >=0.80.",
+  "interpretation": "Rows are disjoint within one breakdown. False positives and negatives refer to all 3 baseline predictions on never-rescued passengers."
+}
