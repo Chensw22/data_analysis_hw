@@ -1,0 +1,61 @@
+{
+  "results": {
+    "frozen": {
+      "accuracy": 0.8083117630140926,
+      "fixed": 133,
+      "harmed": 198,
+      "persistent1070": 71,
+      "unresolved466": 1
+    },
+    "frozen_blend": {
+      "accuracy": 0.8157894736842105,
+      "fixed": 32,
+      "harmed": 45,
+      "persistent1070": 10,
+      "unresolved466": 0
+    },
+    "score_only": {
+      "accuracy": 0.8081679608858211,
+      "fixed": 132,
+      "harmed": 198,
+      "persistent1070": 71,
+      "unresolved466": 1
+    },
+    "score_only_blend": {
+      "accuracy": 0.8153580672993961,
+      "fixed": 30,
+      "harmed": 46,
+      "persistent1070": 9,
+      "unresolved466": 0
+    },
+    "representation": {
+      "accuracy": 0.8100373885533506,
+      "fixed": 140,
+      "harmed": 193,
+      "persistent1070": 80,
+      "unresolved466": 4
+    },
+    "representation_blend": {
+      "accuracy": 0.815933275812482,
+      "fixed": 32,
+      "harmed": 44,
+      "persistent1070": 8,
+      "unresolved466": 0
+    },
+    "permuted": {
+      "accuracy": 0.8081679608858211,
+      "fixed": 169,
+      "harmed": 235,
+      "persistent1070": 101,
+      "unresolved466": 5
+    },
+    "permuted_blend": {
+      "accuracy": 0.8163646821972965,
+      "fixed": 41,
+      "harmed": 50,
+      "persistent1070": 17,
+      "unresolved466": 0
+    }
+  },
+  "definition": "Outer training bookings split into two disjoint halves: one gives neural network support, the other learns the readout. Swap roles, average predictions. Strong baseline blends are from the original outer fold."
+}

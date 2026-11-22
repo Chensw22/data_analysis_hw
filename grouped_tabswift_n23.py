@@ -23,6 +23,18 @@ from grouped_five_way_coverage_n23 import verify
 from relational_error_corrector import write
 
 
+def prepare(feat,t):
+    # Match upstream's numeric input convention: fit category codes and fill
+    # continuous missing cells using only the current training bookings.
+    cat=OrdinalEncoder(handle_unknown="use_encoded_value",unknown_value=-1)
+    cat.fit(feat.iloc[t][CATEGORICAL])
+    numeric=feat.drop(columns=CATEGORICAL)
+    num=numeric.fillna(numeric.iloc[t].mean()).to_numpy()
+    x=np.column_stack([num,cat.transform(feat[CATEGORICAL])])
+    assert np.isfinite(x).all()
+    return x
+
+
 def run(seed, estimators):
     from tabswift.classifier import TabSwiftClassifier
     checkpoint=OUT/"swift.ckpt"
@@ -44,14 +56,7 @@ def run(seed, estimators):
         model=TabSwiftClassifier(n_estimators=estimators,device="cpu",batch_size=1,model_path=checkpoint,
                 allow_auto_download=False,use_amp=False,random_state=43+int(k))
         print("training support",seed,int(k),len(t),"queries",len(q),flush=True)
-        # Match upstream's numeric input convention: fit category codes and fill
-        # continuous missing cells using only the current training bookings.
-        cat=OrdinalEncoder(handle_unknown="use_encoded_value",unknown_value=-1)
-        cat.fit(feat.iloc[t][CATEGORICAL])
-        numeric=feat.drop(columns=CATEGORICAL)
-        num=numeric.fillna(numeric.iloc[t].mean()).to_numpy()
-        x=np.column_stack([num,cat.transform(feat[CATEGORICAL])])
-        assert np.isfinite(x).all()
+        x=prepare(feat,t)
         model.fit(x[t],y[t])
         probability[q]=model.predict_proba(x[q])[:,1]
         print("completed fold",int(k),float(np.mean((probability[q]>=.5)==y[q])),flush=True)
