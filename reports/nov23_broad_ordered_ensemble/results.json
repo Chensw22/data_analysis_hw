@@ -1,0 +1,834 @@
+{
+  "plans": {
+    "20261112": {
+      "native": {
+        "monotone_oracle_accuracy": 0.8316077077940753,
+        "minimum_monotone_errors": 1171,
+        "convex_certificate": {
+          "upper_accuracy": 0.8497267759562841,
+          "certified_below_target": true,
+          "minimum_errors": 1045,
+          "leaves": 25,
+          "maximum_depth": 6,
+          "certificates": [
+            [
+              "0000",
+              1093
+            ],
+            [
+              "00010",
+              1124
+            ],
+            [
+              "00011",
+              1055
+            ],
+            [
+              "0010",
+              1150
+            ],
+            [
+              "00110",
+              1169
+            ],
+            [
+              "00111",
+              1077
+            ],
+            [
+              "0100",
+              1111
+            ],
+            [
+              "0101",
+              1045
+            ],
+            [
+              "0110",
+              1063
+            ],
+            [
+              "01110",
+              1083
+            ],
+            [
+              "01111",
+              1091
+            ],
+            [
+              "10000",
+              1162
+            ],
+            [
+              "100010",
+              1172
+            ],
+            [
+              "100011",
+              1089
+            ],
+            [
+              "10010",
+              1144
+            ],
+            [
+              "10011",
+              1063
+            ],
+            [
+              "1010",
+              1119
+            ],
+            [
+              "10110",
+              1147
+            ],
+            [
+              "10111",
+              1084
+            ],
+            [
+              "1100",
+              1066
+            ],
+            [
+              "1101",
+              1057
+            ],
+            [
+              "11100",
+              1051
+            ],
+            [
+              "11101",
+              1081
+            ],
+            [
+              "11110",
+              1053
+            ],
+            [
+              "11111",
+              1073
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.819672131147541,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8129134311187806,
+            "fixed": 126,
+            "harmed": 159,
+            "net_by_fold": [
+              -12,
+              -1,
+              -20
+            ]
+          },
+          "convex": {
+            "accuracy": 0.815645671555939,
+            "fixed": 73,
+            "harmed": 87,
+            "net_by_fold": [
+              -5,
+              -4,
+              -5
+            ]
+          }
+        }
+      },
+      "adjusted": {
+        "monotone_oracle_accuracy": 0.8308886971527178,
+        "minimum_monotone_errors": 1176,
+        "convex_certificate": {
+          "upper_accuracy": 0.8498705780845557,
+          "certified_below_target": true,
+          "minimum_errors": 1044,
+          "leaves": 9,
+          "maximum_depth": 4,
+          "certificates": [
+            [
+              "000",
+              1044
+            ],
+            [
+              "0010",
+              1133
+            ],
+            [
+              "0011",
+              1083
+            ],
+            [
+              "01",
+              1046
+            ],
+            [
+              "100",
+              1047
+            ],
+            [
+              "1010",
+              1139
+            ],
+            [
+              "1011",
+              1086
+            ],
+            [
+              "110",
+              1057
+            ],
+            [
+              "111",
+              1066
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.8206787460454414,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.815933275812482,
+            "fixed": 123,
+            "harmed": 135,
+            "net_by_fold": [
+              -4,
+              1,
+              -9
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8163646821972965,
+            "fixed": 108,
+            "harmed": 117,
+            "net_by_fold": [
+              -1,
+              9,
+              -17
+            ]
+          }
+        }
+      }
+    },
+    "20261115": {
+      "native": {
+        "monotone_oracle_accuracy": 0.8308886971527178,
+        "minimum_monotone_errors": 1176,
+        "convex_certificate": {
+          "upper_accuracy": 0.8492953695714697,
+          "certified_below_target": true,
+          "minimum_errors": 1048,
+          "leaves": 26,
+          "maximum_depth": 6,
+          "certificates": [
+            [
+              "0000",
+              1111
+            ],
+            [
+              "00010",
+              1141
+            ],
+            [
+              "00011",
+              1055
+            ],
+            [
+              "0010",
+              1166
+            ],
+            [
+              "00110",
+              1173
+            ],
+            [
+              "00111",
+              1071
+            ],
+            [
+              "0100",
+              1126
+            ],
+            [
+              "01010",
+              1084
+            ],
+            [
+              "01011",
+              1048
+            ],
+            [
+              "0110",
+              1087
+            ],
+            [
+              "01110",
+              1097
+            ],
+            [
+              "01111",
+              1092
+            ],
+            [
+              "10000",
+              1175
+            ],
+            [
+              "100010",
+              1190
+            ],
+            [
+              "100011",
+              1090
+            ],
+            [
+              "10010",
+              1159
+            ],
+            [
+              "10011",
+              1060
+            ],
+            [
+              "1010",
+              1139
+            ],
+            [
+              "10110",
+              1160
+            ],
+            [
+              "10111",
+              1081
+            ],
+            [
+              "1100",
+              1095
+            ],
+            [
+              "1101",
+              1054
+            ],
+            [
+              "11100",
+              1057
+            ],
+            [
+              "11101",
+              1085
+            ],
+            [
+              "11110",
+              1055
+            ],
+            [
+              "11111",
+              1051
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.820822548173713,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8080241587575496,
+            "fixed": 203,
+            "harmed": 240,
+            "net_by_fold": [
+              -6,
+              10,
+              -41
+            ]
+          },
+          "convex": {
+            "accuracy": 0.819959735404084,
+            "fixed": 224,
+            "harmed": 178,
+            "net_by_fold": [
+              4,
+              35,
+              7
+            ]
+          }
+        }
+      },
+      "adjusted": {
+        "monotone_oracle_accuracy": 0.8298820822548174,
+        "minimum_monotone_errors": 1183,
+        "convex_certificate": {
+          "upper_accuracy": 0.8491515674431982,
+          "certified_below_target": true,
+          "minimum_errors": 1049,
+          "leaves": 8,
+          "maximum_depth": 4,
+          "certificates": [
+            [
+              "000",
+              1062
+            ],
+            [
+              "0010",
+              1138
+            ],
+            [
+              "0011",
+              1094
+            ],
+            [
+              "01",
+              1064
+            ],
+            [
+              "100",
+              1064
+            ],
+            [
+              "1010",
+              1145
+            ],
+            [
+              "1011",
+              1094
+            ],
+            [
+              "11",
+              1049
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.821685360943342,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8119068162208801,
+            "fixed": 194,
+            "harmed": 204,
+            "net_by_fold": [
+              8,
+              -9,
+              -9
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8149266609145815,
+            "fixed": 197,
+            "harmed": 186,
+            "net_by_fold": [
+              10,
+              10,
+              -9
+            ]
+          }
+        }
+      }
+    },
+    "20261116": {
+      "native": {
+        "monotone_oracle_accuracy": 0.8264308311763015,
+        "minimum_monotone_errors": 1207,
+        "convex_certificate": {
+          "upper_accuracy": 0.8491515674431982,
+          "certified_below_target": true,
+          "minimum_errors": 1049,
+          "leaves": 17,
+          "maximum_depth": 5,
+          "certificates": [
+            [
+              "0000",
+              1130
+            ],
+            [
+              "00010",
+              1159
+            ],
+            [
+              "00011",
+              1083
+            ],
+            [
+              "0010",
+              1184
+            ],
+            [
+              "0011",
+              1052
+            ],
+            [
+              "0100",
+              1134
+            ],
+            [
+              "0101",
+              1070
+            ],
+            [
+              "011",
+              1055
+            ],
+            [
+              "10000",
+              1212
+            ],
+            [
+              "10001",
+              1067
+            ],
+            [
+              "1001",
+              1056
+            ],
+            [
+              "1010",
+              1147
+            ],
+            [
+              "1011",
+              1053
+            ],
+            [
+              "1100",
+              1121
+            ],
+            [
+              "1101",
+              1092
+            ],
+            [
+              "1110",
+              1075
+            ],
+            [
+              "1111",
+              1049
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.8157894736842105,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8041415012942191,
+            "fixed": 155,
+            "harmed": 222,
+            "net_by_fold": [
+              -42,
+              -19,
+              -6
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8123382226056945,
+            "fixed": 156,
+            "harmed": 166,
+            "net_by_fold": [
+              -4,
+              -7,
+              1
+            ]
+          }
+        }
+      },
+      "adjusted": {
+        "monotone_oracle_accuracy": 0.8241299971239574,
+        "minimum_monotone_errors": 1223,
+        "convex_certificate": {
+          "upper_accuracy": 0.8480011504170262,
+          "certified_below_target": true,
+          "minimum_errors": 1057,
+          "leaves": 4,
+          "maximum_depth": 2,
+          "certificates": [
+            [
+              "00",
+              1060
+            ],
+            [
+              "01",
+              1091
+            ],
+            [
+              "10",
+              1057
+            ],
+            [
+              "11",
+              1089
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.8157894736842105,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8098935864250791,
+            "fixed": 156,
+            "harmed": 183,
+            "net_by_fold": [
+              -18,
+              -10,
+              1
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8120506183491516,
+            "fixed": 167,
+            "harmed": 179,
+            "net_by_fold": [
+              -13,
+              -3,
+              4
+            ]
+          }
+        }
+      }
+    },
+    "v131": {
+      "native": {
+        "monotone_oracle_accuracy": 0.8310324992809893,
+        "minimum_monotone_errors": 1175,
+        "convex_certificate": {
+          "upper_accuracy": 0.8494391716997411,
+          "certified_below_target": true,
+          "minimum_errors": 1047,
+          "leaves": 28,
+          "maximum_depth": 6,
+          "certificates": [
+            [
+              "0000",
+              1114
+            ],
+            [
+              "00010",
+              1133
+            ],
+            [
+              "000110",
+              1085
+            ],
+            [
+              "000111",
+              1058
+            ],
+            [
+              "0010",
+              1153
+            ],
+            [
+              "00110",
+              1169
+            ],
+            [
+              "00111",
+              1052
+            ],
+            [
+              "0100",
+              1117
+            ],
+            [
+              "01010",
+              1068
+            ],
+            [
+              "010110",
+              1144
+            ],
+            [
+              "010111",
+              1059
+            ],
+            [
+              "0110",
+              1084
+            ],
+            [
+              "01110",
+              1091
+            ],
+            [
+              "01111",
+              1069
+            ],
+            [
+              "10000",
+              1183
+            ],
+            [
+              "100010",
+              1184
+            ],
+            [
+              "100011",
+              1073
+            ],
+            [
+              "10010",
+              1152
+            ],
+            [
+              "10011",
+              1052
+            ],
+            [
+              "1010",
+              1128
+            ],
+            [
+              "10110",
+              1147
+            ],
+            [
+              "10111",
+              1067
+            ],
+            [
+              "1100",
+              1079
+            ],
+            [
+              "1101",
+              1047
+            ],
+            [
+              "11100",
+              1048
+            ],
+            [
+              "11101",
+              1083
+            ],
+            [
+              "11110",
+              1047
+            ],
+            [
+              "11111",
+              1050
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.8172274949669255,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.8100373885533506,
+            "fixed": 140,
+            "harmed": 169,
+            "net_by_fold": [
+              -10,
+              -9,
+              -10
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8126258268622376,
+            "fixed": 105,
+            "harmed": 116,
+            "net_by_fold": [
+              0,
+              -1,
+              -10
+            ]
+          }
+        }
+      },
+      "adjusted": {
+        "monotone_oracle_accuracy": 0.82628702904803,
+        "minimum_monotone_errors": 1208,
+        "convex_certificate": {
+          "upper_accuracy": 0.8455565142364108,
+          "certified_below_target": true,
+          "minimum_errors": 1074,
+          "leaves": 6,
+          "maximum_depth": 3,
+          "certificates": [
+            [
+              "000",
+              1083
+            ],
+            [
+              "001",
+              1074
+            ],
+            [
+              "01",
+              1077
+            ],
+            [
+              "100",
+              1086
+            ],
+            [
+              "101",
+              1076
+            ],
+            [
+              "11",
+              1080
+            ]
+          ]
+        },
+        "attainable_convex_oracle_accuracy": 0.8178027034800115,
+        "heldout": {
+          "monotone": {
+            "accuracy": 0.813632441760138,
+            "fixed": 79,
+            "harmed": 83,
+            "net_by_fold": [
+              -13,
+              3,
+              6
+            ]
+          },
+          "convex": {
+            "accuracy": 0.8087431693989071,
+            "fixed": 136,
+            "harmed": 174,
+            "net_by_fold": [
+              -18,
+              -11,
+              -9
+            ]
+          }
+        }
+      }
+    }
+  },
+  "stable": {
+    "native_monotone": {
+      "ever": 138,
+      "repeat": 35,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -1.0660965027261546,
+        -0.2249036810771658
+      ]
+    },
+    "native_convex": {
+      "ever": 81,
+      "repeat": 3,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.18178534820513367,
+        0.40302069674406726
+      ]
+    },
+    "adjusted_monotone": {
+      "ever": 94,
+      "repeat": 18,
+      "unresolved": 3,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.5976132202275989,
+        0.15341598419523383
+      ]
+    },
+    "adjusted_convex": {
+      "ever": 88,
+      "repeat": 5,
+      "unresolved": 1,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.3638301429645835,
+        0.2844171916005046
+      ]
+    }
+  }
+}
