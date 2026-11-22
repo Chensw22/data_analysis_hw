@@ -1,0 +1,80 @@
+{
+  "n": 6954,
+  "seeds": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "scores": {
+    "honest_policy": {
+      "accuracy": [
+        0.817083692838654,
+        0.8129134311187806,
+        0.8143514524014955
+      ],
+      "fixed": [
+        4,
+        13,
+        9
+      ],
+      "harmed": [
+        8,
+        16,
+        5
+      ],
+      "stable_ever": 8,
+      "stable_persistent": 0
+    },
+    "pooled_policy": {
+      "accuracy": [
+        0.8146390566580385,
+        0.8152142651711245,
+        0.8132010353753235
+      ],
+      "fixed": [
+        82,
+        212,
+        133
+      ],
+      "harmed": [
+        103,
+        199,
+        137
+      ],
+      "stable_ever": 91,
+      "stable_persistent": 1
+    },
+    "linear_scores": {
+      "accuracy": [
+        0.819959735404084,
+        0.816508484325568,
+        0.8166522864538395
+      ],
+      "fixed": [
+        122,
+        144,
+        101
+      ],
+      "harmed": [
+        106,
+        122,
+        81
+      ],
+      "stable_ever": 91,
+      "stable_persistent": 3
+    }
+  },
+  "honest_branch_passengers": {
+    "baseline": 33177,
+    "variational_gp": 1810,
+    "bayesian_forest": 2497,
+    "manifest_likelihood": 96,
+    "class_analogues": 1057,
+    "budget_prior": 534,
+    "registration_only": 320,
+    "orion": 834,
+    "field_factors": 204,
+    "feature_projections": 865,
+    "native_carte": 330
+  }
+}

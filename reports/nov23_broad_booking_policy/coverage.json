@@ -1,0 +1,153 @@
+{
+  "scope": {
+    "ever_wrong": {
+      "people": 1518,
+      "pools": {
+        "all": {
+          "1": {
+            "models": [
+              "registration_only"
+            ],
+            "people": 391
+          },
+          "2": {
+            "models": [
+              "feature_projections",
+              "registration_only"
+            ],
+            "people": 574
+          },
+          "3": {
+            "models": [
+              "feature_projections",
+              "registration_only",
+              "field_factors"
+            ],
+            "people": 665
+          },
+          "any": 938
+        },
+        "within_one_point": {
+          "1": {
+            "models": [
+              "bayesian_forest"
+            ],
+            "people": 183
+          },
+          "2": {
+            "models": [
+              "bayesian_forest",
+              "manifest_reconstruction"
+            ],
+            "people": 275
+          },
+          "3": {
+            "models": [
+              "bayesian_forest",
+              "masked_views",
+              "manifest_reconstruction"
+            ],
+            "people": 324
+          },
+          "any": 504
+        }
+      }
+    },
+    "persistent": {
+      "people": 1070,
+      "pools": {
+        "all": {
+          "1": {
+            "models": [
+              "registration_only"
+            ],
+            "people": 186
+          },
+          "2": {
+            "models": [
+              "feature_projections",
+              "registration_only"
+            ],
+            "people": 263
+          },
+          "3": {
+            "models": [
+              "feature_projections",
+              "registration_only",
+              "field_factors"
+            ],
+            "people": 314
+          },
+          "any": 503
+        },
+        "within_one_point": {
+          "1": {
+            "models": [
+              "residual_discovery"
+            ],
+            "people": 37
+          },
+          "2": {
+            "models": [
+              "bayesian_forest",
+              "residual_discovery"
+            ],
+            "people": 66
+          },
+          "3": {
+            "models": [
+              "bayesian_forest",
+              "residual_discovery",
+              "manifest_reconstruction"
+            ],
+            "people": 86
+          },
+          "any": 152
+        }
+      }
+    }
+  },
+  "dissent_opportunity": {
+    "models": [
+      "feature_projections",
+      "registration_only",
+      "field_factors"
+    ],
+    "recoverable": [
+      650,
+      670,
+      669
+    ],
+    "at_risk": [
+      1401,
+      1349,
+      1362
+    ]
+  },
+  "within_one_point": [
+    "tabular_in_context",
+    "constructed_features",
+    "peer_attributes",
+    "boarding_sequence",
+    "bayesian_forest",
+    "conditional_router",
+    "across_deck_field",
+    "apple_semantics",
+    "booking_mixup",
+    "booking_scoring",
+    "exact_booking_field",
+    "group_disputes",
+    "masked_views",
+    "ordered_states",
+    "pair_pretext",
+    "party_hotdeck",
+    "passenger_sampler",
+    "residual_discovery",
+    "rule_context_pool",
+    "selective_fields",
+    "spend_exceptions",
+    "symbolic_residuals",
+    "training_cohort_sensitivity",
+    "manifest_reconstruction"
+  ]
+}
