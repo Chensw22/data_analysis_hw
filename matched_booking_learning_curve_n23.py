@@ -79,10 +79,20 @@ def summarize():
                 np.testing.assert_array_equal(z[key],ref)
             base[family]=np.array([z["small"],z["large"]])
     base["equal_ensemble"]=(base["v44"]+base["tabicl"])/2
+    groups = pd.read_csv(ROOT/"data/raw/train.csv",usecols=["PassengerId"]).PassengerId.iloc[rows].str.split("_").str[0]
+    _, group_ids = np.unique(groups,return_inverse=True)
+    party_sizes = np.bincount(group_ids)
     result={}
     for name,probs in base.items():
         small,large=(probs>=.5)==y
-        result[name]=dict(accuracy_small=float(small.mean()),accuracy_large=float(large.mean()),
+        changes = np.bincount(group_ids,weights=large.astype(float)-small)
+        rng = np.random.default_rng(1057)
+        draws = []
+        for _ in range(80):
+            freq = rng.multinomial(len(party_sizes),np.full(len(party_sizes),1/len(party_sizes)),size=50)
+            draws.extend(100*(freq@changes)/(freq@party_sizes))
+        result[name]=dict(gain_pp=float(100*(large.mean()-small.mean())),
+                          paired_booking_ci95_pp=np.quantile(draws,[.025,.975]).tolist(),accuracy_small=float(small.mean()),accuracy_large=float(large.mean()),
                           fixed=int((large&~small).sum()),harmed=int((~large&small).sum()),
                           unresolved466_small=int(small[hard].sum()),unresolved466_large=int(large[hard].sum()),
                           persistent1070_small=int(small[~existing.any(0)].sum()),persistent1070_large=int(large[~existing.any(0)].sum()),
