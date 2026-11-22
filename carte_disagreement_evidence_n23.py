@@ -6,7 +6,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GroupKFold
 from threadpoolctl import threadpool_limits
 
-from archive_error_recovery_n23 import ART,ROOT,SEEDS,predictions
+from archive_error_recovery_n23 import ART,ROOT,SEEDS,panel,predictions
+from fresh_family_rescue_n23 import NEW
 from relational_error_corrector import write
 
 
@@ -67,7 +68,18 @@ def run():
         np.savez_compressed(out/f"{seed}.npz",row=row,y=y,fold=fold,base=base,**decisions)
         report[seed]=scores
     stable={k:int((repeat&np.logical_and.reduce(v)).sum()) for k,v in all_hits.items()}
-    write(ROOT/"reports/nov23_carte_disagreement_evidence/result.json",dict(results=report,stable1070=stable))
+    prior_rows,prior_y,_,older,_,_,_=panel()
+    np.testing.assert_array_equal(prior_rows,row)
+    np.testing.assert_array_equal(prior_y,y)
+    prior_scores=np.concatenate([older,np.stack([predictions(row,y,s,NEW)[1] for s in SEEDS])],axis=2)
+    old_hits=(prior_scores>=.5)==y[None,:,None]
+    no_stable=repeat&~old_hits.all(0).any(1)
+    never=repeat&~old_hits.any(axis=(0,2))
+    hit=np.stack(all_hits["all_carte"])
+    novel=dict(prior_models=prior_scores.shape[2],prior_never=int(never.sum()),
+               newly_stable=int((no_stable&hit.all(0)).sum()),never_to_stable=int((never&hit.all(0)).sum()),
+               never_to_any=int((never&hit.any(0)).sum()))
+    write(ROOT/"reports/nov23_carte_disagreement_evidence/result.json",dict(results=report,stable1070=stable,novel=novel))
 
 
 if __name__=="__main__":
