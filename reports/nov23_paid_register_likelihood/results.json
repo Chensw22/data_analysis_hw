@@ -1,0 +1,700 @@
+{
+  "plans": {
+    "20261112": {
+      "metrics": {
+        "update_native": {
+          "accuracy": 0.773224043715847,
+          "fixed": 173,
+          "harmed": 482,
+          "net_by_fold": [
+            -77,
+            -112,
+            -120
+          ],
+          "corrected": {
+            "ever": 173,
+            "repeat": 120,
+            "unresolved": 26,
+            "never": 4,
+            "paid_missed": 55
+          },
+          "native_log_loss_before_overrides": 0.46738114974482026
+        },
+        "update_base": {
+          "accuracy": 0.8175150992234685,
+          "fixed": 3,
+          "harmed": 4,
+          "net_by_fold": [
+            -1,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 3,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "paid_missed": 0
+          },
+          "native_log_loss_before_overrides": 0.3800167069153664
+        },
+        "update_top_base": {
+          "accuracy": 0.8114754098360656,
+          "fixed": 133,
+          "harmed": 176,
+          "net_by_fold": [
+            -7,
+            -17,
+            -19
+          ],
+          "corrected": {
+            "ever": 133,
+            "repeat": 77,
+            "unresolved": 15,
+            "never": 0,
+            "paid_missed": 77
+          },
+          "native_log_loss_before_overrides": 0.3891630183996355
+        },
+        "update_bill": {
+          "accuracy": 0.8172274949669255,
+          "fixed": 10,
+          "harmed": 13,
+          "net_by_fold": [
+            -3,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 10,
+            "repeat": 3,
+            "unresolved": 0,
+            "never": 0,
+            "paid_missed": 3
+          },
+          "native_log_loss_before_overrides": 0.38014283573000984
+        },
+        "update_top_bill": {
+          "accuracy": 0.8123382226056945,
+          "fixed": 136,
+          "harmed": 173,
+          "net_by_fold": [
+            -9,
+            -11,
+            -17
+          ],
+          "corrected": {
+            "ever": 136,
+            "repeat": 81,
+            "unresolved": 15,
+            "never": 0,
+            "paid_missed": 81
+          },
+          "native_log_loss_before_overrides": 0.3885258025929046
+        },
+        "update_register": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 14,
+          "harmed": 19,
+          "net_by_fold": [
+            -4,
+            -1,
+            0
+          ],
+          "corrected": {
+            "ever": 14,
+            "repeat": 4,
+            "unresolved": 0,
+            "never": 0,
+            "paid_missed": 4
+          },
+          "native_log_loss_before_overrides": 0.38037555229534004
+        },
+        "update_top_register": {
+          "accuracy": 0.8103249928098936,
+          "fixed": 129,
+          "harmed": 180,
+          "net_by_fold": [
+            -15,
+            -11,
+            -25
+          ],
+          "corrected": {
+            "ever": 129,
+            "repeat": 77,
+            "unresolved": 14,
+            "never": 0,
+            "paid_missed": 77
+          },
+          "native_log_loss_before_overrides": 0.390148876043617
+        }
+      },
+      "ranking": {
+        "base": {
+          "eligible": 3121,
+          "top_n": 309,
+          "auc": 0.7316673507159285
+        },
+        "bill": {
+          "eligible": 3121,
+          "top_n": 309,
+          "auc": 0.7309262543269343
+        },
+        "register": {
+          "eligible": 3121,
+          "top_n": 309,
+          "auc": 0.730177413984032
+        }
+      }
+    },
+    "20261115": {
+      "metrics": {
+        "update_native": {
+          "accuracy": 0.7745182628702905,
+          "fixed": 193,
+          "harmed": 463,
+          "net_by_fold": [
+            -69,
+            -94,
+            -107
+          ],
+          "corrected": {
+            "ever": 193,
+            "repeat": 126,
+            "unresolved": 29,
+            "never": 7,
+            "paid_missed": 56
+          },
+          "native_log_loss_before_overrides": 0.46482611659544565
+        },
+        "update_base": {
+          "accuracy": 0.8172274949669255,
+          "fixed": 57,
+          "harmed": 30,
+          "net_by_fold": [
+            27,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 57,
+            "repeat": 16,
+            "unresolved": 2,
+            "never": 0,
+            "paid_missed": 16
+          },
+          "native_log_loss_before_overrides": 0.37680595688975
+        },
+        "update_top_base": {
+          "accuracy": 0.811044003451251,
+          "fixed": 145,
+          "harmed": 161,
+          "net_by_fold": [
+            25,
+            -10,
+            -31
+          ],
+          "corrected": {
+            "ever": 145,
+            "repeat": 78,
+            "unresolved": 13,
+            "never": 0,
+            "paid_missed": 78
+          },
+          "native_log_loss_before_overrides": 0.38569470179153265
+        },
+        "update_bill": {
+          "accuracy": 0.817083692838654,
+          "fixed": 58,
+          "harmed": 32,
+          "net_by_fold": [
+            26,
+            0,
+            0
+          ],
+          "corrected": {
+            "ever": 58,
+            "repeat": 19,
+            "unresolved": 3,
+            "never": 0,
+            "paid_missed": 19
+          },
+          "native_log_loss_before_overrides": 0.37688152505354094
+        },
+        "update_top_bill": {
+          "accuracy": 0.8116192119643371,
+          "fixed": 147,
+          "harmed": 159,
+          "net_by_fold": [
+            27,
+            -4,
+            -35
+          ],
+          "corrected": {
+            "ever": 147,
+            "repeat": 81,
+            "unresolved": 14,
+            "never": 0,
+            "paid_missed": 81
+          },
+          "native_log_loss_before_overrides": 0.385227322023069
+        },
+        "update_register": {
+          "accuracy": 0.816220880069025,
+          "fixed": 56,
+          "harmed": 36,
+          "net_by_fold": [
+            19,
+            1,
+            0
+          ],
+          "corrected": {
+            "ever": 56,
+            "repeat": 18,
+            "unresolved": 3,
+            "never": 0,
+            "paid_missed": 18
+          },
+          "native_log_loss_before_overrides": 0.37801218962482336
+        },
+        "update_top_register": {
+          "accuracy": 0.8107563991947081,
+          "fixed": 144,
+          "harmed": 162,
+          "net_by_fold": [
+            23,
+            -6,
+            -35
+          ],
+          "corrected": {
+            "ever": 144,
+            "repeat": 78,
+            "unresolved": 14,
+            "never": 0,
+            "paid_missed": 78
+          },
+          "native_log_loss_before_overrides": 0.38601708681970337
+        }
+      },
+      "ranking": {
+        "base": {
+          "eligible": 3105,
+          "top_n": 306,
+          "auc": 0.7492513807353771
+        },
+        "bill": {
+          "eligible": 3105,
+          "top_n": 306,
+          "auc": 0.749353657429979
+        },
+        "register": {
+          "eligible": 3105,
+          "top_n": 306,
+          "auc": 0.7441213970535084
+        }
+      }
+    },
+    "20261116": {
+      "metrics": {
+        "update_native": {
+          "accuracy": 0.7704918032786885,
+          "fixed": 189,
+          "harmed": 490,
+          "net_by_fold": [
+            -104,
+            -130,
+            -67
+          ],
+          "corrected": {
+            "ever": 189,
+            "repeat": 131,
+            "unresolved": 31,
+            "never": 11,
+            "paid_missed": 69
+          },
+          "native_log_loss_before_overrides": 0.47095746033281244
+        },
+        "update_base": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 35,
+          "harmed": 24,
+          "net_by_fold": [
+            0,
+            4,
+            7
+          ],
+          "corrected": {
+            "ever": 35,
+            "repeat": 13,
+            "unresolved": 3,
+            "never": 0,
+            "paid_missed": 13
+          },
+          "native_log_loss_before_overrides": 0.37874632576250983
+        },
+        "update_top_base": {
+          "accuracy": 0.8109002013229796,
+          "fixed": 143,
+          "harmed": 163,
+          "net_by_fold": [
+            -28,
+            1,
+            7
+          ],
+          "corrected": {
+            "ever": 143,
+            "repeat": 79,
+            "unresolved": 17,
+            "never": 0,
+            "paid_missed": 79
+          },
+          "native_log_loss_before_overrides": 0.38750626682899947
+        },
+        "update_bill": {
+          "accuracy": 0.8147828587863101,
+          "fixed": 32,
+          "harmed": 25,
+          "net_by_fold": [
+            0,
+            4,
+            3
+          ],
+          "corrected": {
+            "ever": 32,
+            "repeat": 12,
+            "unresolved": 3,
+            "never": 0,
+            "paid_missed": 12
+          },
+          "native_log_loss_before_overrides": 0.37910652164707437
+        },
+        "update_top_bill": {
+          "accuracy": 0.8111878055795225,
+          "fixed": 144,
+          "harmed": 162,
+          "net_by_fold": [
+            -28,
+            3,
+            7
+          ],
+          "corrected": {
+            "ever": 144,
+            "repeat": 80,
+            "unresolved": 17,
+            "never": 0,
+            "paid_missed": 80
+          },
+          "native_log_loss_before_overrides": 0.38725463586813597
+        },
+        "update_register": {
+          "accuracy": 0.8143514524014955,
+          "fixed": 30,
+          "harmed": 26,
+          "net_by_fold": [
+            0,
+            2,
+            2
+          ],
+          "corrected": {
+            "ever": 30,
+            "repeat": 13,
+            "unresolved": 3,
+            "never": 0,
+            "paid_missed": 13
+          },
+          "native_log_loss_before_overrides": 0.3796031045222442
+        },
+        "update_top_register": {
+          "accuracy": 0.8120506183491516,
+          "fixed": 147,
+          "harmed": 159,
+          "net_by_fold": [
+            -20,
+            -1,
+            9
+          ],
+          "corrected": {
+            "ever": 147,
+            "repeat": 86,
+            "unresolved": 19,
+            "never": 0,
+            "paid_missed": 86
+          },
+          "native_log_loss_before_overrides": 0.3863658503839918
+        }
+      },
+      "ranking": {
+        "base": {
+          "eligible": 3102,
+          "top_n": 306,
+          "auc": 0.7496518458157776
+        },
+        "bill": {
+          "eligible": 3102,
+          "top_n": 306,
+          "auc": 0.748626886076536
+        },
+        "register": {
+          "eligible": 3102,
+          "top_n": 306,
+          "auc": 0.7458609623190198
+        }
+      }
+    },
+    "v131": {
+      "metrics": {
+        "update_native": {
+          "accuracy": 0.771498418176589,
+          "fixed": 202,
+          "harmed": 499,
+          "net_by_fold": [
+            -95,
+            -98,
+            -104
+          ],
+          "corrected": {
+            "ever": 177,
+            "repeat": 122,
+            "unresolved": 32,
+            "never": 9,
+            "paid_missed": 65
+          },
+          "native_log_loss_before_overrides": 0.47050593898176196
+        },
+        "update_base": {
+          "accuracy": 0.8143514524014955,
+          "fixed": 1,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            1
+          ],
+          "corrected": {
+            "ever": 1,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "paid_missed": 0
+          },
+          "native_log_loss_before_overrides": 0.3787127361037883
+        },
+        "update_top_base": {
+          "accuracy": 0.8094621800402646,
+          "fixed": 137,
+          "harmed": 170,
+          "net_by_fold": [
+            -20,
+            -14,
+            1
+          ],
+          "corrected": {
+            "ever": 115,
+            "repeat": 63,
+            "unresolved": 16,
+            "never": 0,
+            "paid_missed": 63
+          },
+          "native_log_loss_before_overrides": 0.387738711118552
+        },
+        "update_bill": {
+          "accuracy": 0.814495254529767,
+          "fixed": 5,
+          "harmed": 3,
+          "net_by_fold": [
+            1,
+            0,
+            1
+          ],
+          "corrected": {
+            "ever": 2,
+            "repeat": 0,
+            "unresolved": 0,
+            "never": 0,
+            "paid_missed": 0
+          },
+          "native_log_loss_before_overrides": 0.3791479078243167
+        },
+        "update_top_bill": {
+          "accuracy": 0.8097497842968076,
+          "fixed": 138,
+          "harmed": 169,
+          "net_by_fold": [
+            -22,
+            -14,
+            5
+          ],
+          "corrected": {
+            "ever": 116,
+            "repeat": 66,
+            "unresolved": 17,
+            "never": 0,
+            "paid_missed": 66
+          },
+          "native_log_loss_before_overrides": 0.38741047464878475
+        },
+        "update_register": {
+          "accuracy": 0.814495254529767,
+          "fixed": 11,
+          "harmed": 9,
+          "net_by_fold": [
+            -1,
+            3,
+            0
+          ],
+          "corrected": {
+            "ever": 6,
+            "repeat": 4,
+            "unresolved": 2,
+            "never": 0,
+            "paid_missed": 4
+          },
+          "native_log_loss_before_overrides": 0.37950573390073256
+        },
+        "update_top_register": {
+          "accuracy": 0.8109002013229796,
+          "fixed": 142,
+          "harmed": 165,
+          "net_by_fold": [
+            -20,
+            -8,
+            5
+          ],
+          "corrected": {
+            "ever": 120,
+            "repeat": 71,
+            "unresolved": 16,
+            "never": 0,
+            "paid_missed": 71
+          },
+          "native_log_loss_before_overrides": 0.38646934831916285
+        }
+      },
+      "ranking": {
+        "base": {
+          "eligible": 3095,
+          "top_n": 307,
+          "auc": 0.7362540182948777
+        },
+        "bill": {
+          "eligible": 3095,
+          "top_n": 307,
+          "auc": 0.7345008626146533
+        },
+        "register": {
+          "eligible": 3095,
+          "top_n": 307,
+          "auc": 0.7339469895369186
+        }
+      }
+    }
+  },
+  "stable": {
+    "update_native": {
+      "ever": 159,
+      "repeat": 69,
+      "unresolved": 12,
+      "never": 2,
+      "paid_missed": 25
+    },
+    "update_base": {
+      "ever": 32,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "paid_missed": 0
+    },
+    "update_top_base": {
+      "ever": 165,
+      "repeat": 39,
+      "unresolved": 4,
+      "never": 0,
+      "paid_missed": 39
+    },
+    "update_bill": {
+      "ever": 33,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "paid_missed": 0
+    },
+    "update_top_bill": {
+      "ever": 166,
+      "repeat": 42,
+      "unresolved": 4,
+      "never": 0,
+      "paid_missed": 42
+    },
+    "update_register": {
+      "ever": 34,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "paid_missed": 0
+    },
+    "update_top_register": {
+      "ever": 155,
+      "repeat": 38,
+      "unresolved": 3,
+      "never": 0,
+      "paid_missed": 38
+    }
+  },
+  "fields": [
+    "HomePlanet",
+    "Destination",
+    "Deck",
+    "Side",
+    "CryoSleep",
+    "VIP",
+    "age",
+    "cabin_number",
+    "size",
+    "peer_sleep",
+    "deck_count"
+  ],
+  "paid_recovered": {
+    "update_native": {
+      "solo": 16,
+      "earth": 14,
+      "also_bill_balance": 6,
+      "new_to_bill_balance": 19
+    },
+    "update_base": {
+      "solo": 0,
+      "earth": 0,
+      "also_bill_balance": 0,
+      "new_to_bill_balance": 0
+    },
+    "update_top_base": {
+      "solo": 27,
+      "earth": 30,
+      "also_bill_balance": 15,
+      "new_to_bill_balance": 24
+    },
+    "update_bill": {
+      "solo": 0,
+      "earth": 0,
+      "also_bill_balance": 0,
+      "new_to_bill_balance": 0
+    },
+    "update_top_bill": {
+      "solo": 31,
+      "earth": 31,
+      "also_bill_balance": 18,
+      "new_to_bill_balance": 24
+    },
+    "update_register": {
+      "solo": 0,
+      "earth": 0,
+      "also_bill_balance": 0,
+      "new_to_bill_balance": 0
+    },
+    "update_top_register": {
+      "solo": 28,
+      "earth": 28,
+      "also_bill_balance": 18,
+      "new_to_bill_balance": 20
+    }
+  }
+}
