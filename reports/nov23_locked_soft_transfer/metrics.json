@@ -1,0 +1,136 @@
+{
+  "rows": 6954,
+  "unsplit_models": {
+    "v44": {
+      "unseen_correct": 3806,
+      "unseen_total": 4691,
+      "seen_correct": 1895,
+      "seen_total": 2263,
+      "fold_unseen_accuracy": [
+        0.8165490699166132,
+        0.8271446862996159,
+        0.7904458598726115
+      ]
+    },
+    "v93": {
+      "unseen_correct": 3813,
+      "unseen_total": 4691,
+      "seen_correct": 1897,
+      "seen_total": 2263,
+      "fold_unseen_accuracy": [
+        0.8082103912764592,
+        0.825224071702945,
+        0.8050955414012739
+      ]
+    },
+    "half": {
+      "unseen_correct": 3816,
+      "unseen_total": 4691,
+      "seen_correct": 1906,
+      "seen_total": 2263,
+      "fold_unseen_accuracy": [
+        0.8191148171905067,
+        0.8245838668373879,
+        0.7968152866242039
+      ]
+    }
+  },
+  "correct": 5722,
+  "accuracy": 0.8228357779695139,
+  "fold_accuracy": [
+    0.8295944779982743,
+    0.8235547886108714,
+    0.8153580672993961
+  ],
+  "exposure": {
+    "all": {
+      "dev": 6954,
+      "dev_correct": 5722,
+      "dev_accuracy": 0.8228357779695139,
+      "test": 4277
+    },
+    "seen_party": {
+      "dev": 2263,
+      "dev_correct": 1906,
+      "dev_accuracy": 0.8422448077772868,
+      "test": 0
+    },
+    "unseen_party": {
+      "dev": 4691,
+      "dev_correct": 3816,
+      "dev_accuracy": 0.813472607120017,
+      "test": 4277
+    },
+    "known_seen_cabin": {
+      "dev": 1736,
+      "dev_correct": 1480,
+      "dev_accuracy": 0.8525345622119815,
+      "test": 0
+    },
+    "known_unseen_cabin": {
+      "dev": 5060,
+      "dev_correct": 4115,
+      "dev_accuracy": 0.8132411067193676,
+      "test": 4177
+    },
+    "missing_cabin": {
+      "dev": 158,
+      "dev_correct": 127,
+      "dev_accuracy": 0.8037974683544303,
+      "test": 100
+    },
+    "both_seen": {
+      "dev": 1736,
+      "dev_correct": 1480,
+      "dev_accuracy": 0.8525345622119815,
+      "test": 0
+    },
+    "seen_party_only": {
+      "dev": 469,
+      "dev_correct": 377,
+      "dev_accuracy": 0.8038379530916845,
+      "test": 0
+    },
+    "seen_cabin_only": {
+      "dev": 0,
+      "dev_correct": 0,
+      "dev_accuracy": null,
+      "test": 0
+    },
+    "neither_known": {
+      "dev": 4591,
+      "dev_correct": 3738,
+      "dev_accuracy": 0.8142016989762579,
+      "test": 4177
+    },
+    "seen_party_missing": {
+      "dev": 58,
+      "dev_correct": 49,
+      "dev_accuracy": 0.8448275862068966,
+      "test": 0
+    },
+    "unseen_party_missing": {
+      "dev": 100,
+      "dev_correct": 78,
+      "dev_accuracy": 0.78,
+      "test": 100
+    }
+  },
+  "weighted_by_test_exposure": 0.8134020333466985,
+  "probabilities": {
+    "proposal_batch_v44": {
+      "csv_sha256": "7dc29fa1d1f79590d34d75547ea86fcdf423ebc571e67c56627d0b98fabff465",
+      "accepted_submission_sha256": "c25ac96d3c305ac6005fc27afb53589d59bb3de7c1344153279aa6325331fc49",
+      "unique_probabilities": 4263
+    },
+    "proposal_nov17_support3072_lifecycle": {
+      "csv_sha256": "ad32bbb4b9b536eea64ad291ec9439604d235e769e045fd17118d2c1b4717443",
+      "accepted_submission_sha256": "92b11a7f7d05208871dd300e7c4d27de5f70b754c0419601748223dcd5672e30",
+      "unique_probabilities": 1319
+    }
+  },
+  "proposed_sha256": "a2d624e61018d94b374054109a36172cd2dddb2d88dd833b9a48ed2156ca2f2c",
+  "identical_receipts": [],
+  "changed_vs_full_v44": 91,
+  "changed_vs_full_v93": 104
+}
