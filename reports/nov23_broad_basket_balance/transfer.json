@@ -1,0 +1,825 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "update_native": {
+          "accuracy": 0.8018406672418752,
+          "fixed": 132,
+          "harmed": 242,
+          "net_by_fold": [
+            -29,
+            -39,
+            -42
+          ],
+          "corrected": {
+            "ever": 132,
+            "repeat": 89,
+            "unresolved": 23,
+            "never": 2,
+            "repeat_paid": 55,
+            "repeat_three": 22
+          },
+          "native_log_loss_before_overrides": 0.4323528028153558
+        },
+        "update_other": {
+          "accuracy": 0.7063560540696002,
+          "fixed": 256,
+          "harmed": 1030,
+          "net_by_fold": [
+            -239,
+            -239,
+            -296
+          ],
+          "corrected": {
+            "ever": 256,
+            "repeat": 204,
+            "unresolved": 47,
+            "never": 20,
+            "repeat_paid": 65,
+            "repeat_three": 63
+          },
+          "native_log_loss_before_overrides": 0.7180363929229455
+        },
+        "update_aligned": {
+          "accuracy": 0.7371297095197009,
+          "fixed": 211,
+          "harmed": 771,
+          "net_by_fold": [
+            -188,
+            -179,
+            -193
+          ],
+          "corrected": {
+            "ever": 211,
+            "repeat": 161,
+            "unresolved": 20,
+            "never": 5,
+            "repeat_paid": 38,
+            "repeat_three": 18
+          },
+          "native_log_loss_before_overrides": 0.560816490902777
+        },
+        "update_pooled": {
+          "accuracy": 0.8054357204486626,
+          "fixed": 122,
+          "harmed": 207,
+          "net_by_fold": [
+            -24,
+            -28,
+            -33
+          ],
+          "corrected": {
+            "ever": 122,
+            "repeat": 77,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 38,
+            "repeat_three": 16
+          },
+          "native_log_loss_before_overrides": 0.39984911933951117
+        },
+        "update_native_gate": {
+          "accuracy": 0.815070463042853,
+          "fixed": 30,
+          "harmed": 48,
+          "net_by_fold": [
+            -2,
+            -1,
+            -15
+          ],
+          "corrected": {
+            "ever": 30,
+            "repeat": 15,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 9,
+            "repeat_three": 1
+          },
+          "native_log_loss_before_overrides": 0.3828897204105914
+        },
+        "update_transfer_gate": {
+          "accuracy": 0.815645671555939,
+          "fixed": 58,
+          "harmed": 72,
+          "net_by_fold": [
+            1,
+            -9,
+            -6
+          ],
+          "corrected": {
+            "ever": 58,
+            "repeat": 29,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 19,
+            "repeat_three": 5
+          },
+          "native_log_loss_before_overrides": 0.38252102203817384
+        }
+      },
+      "detail": {
+        "update_native": {
+          "three_fn_fixed": 24,
+          "three_fp_added": 41,
+          "within_service_auc": {
+            "Spa": 0.6875376797864095,
+            "FoodCourt": 0.797522622202552,
+            "VRDeck": 0.661016661576572,
+            "RoomService": 0.5926738761662427,
+            "ShoppingMall": 0.7567843312481383
+          }
+        },
+        "update_other": {
+          "three_fn_fixed": 70,
+          "three_fp_added": 380,
+          "within_service_auc": {
+            "Spa": 0.6365170958573767,
+            "FoodCourt": 0.44245668854679343,
+            "VRDeck": 0.6779497098646035,
+            "RoomService": 0.5917726887192536,
+            "ShoppingMall": 0.5588769734882335
+          }
+        },
+        "update_aligned": {
+          "three_fn_fixed": 21,
+          "three_fp_added": 156,
+          "within_service_auc": {
+            "Spa": 0.6367410214451813,
+            "FoodCourt": 0.4423660397681524,
+            "VRDeck": 0.6771013607519766,
+            "RoomService": 0.5923664122137404,
+            "ShoppingMall": 0.5587205838546321
+          }
+        },
+        "update_pooled": {
+          "three_fn_fixed": 24,
+          "three_fp_added": 28,
+          "within_service_auc": {
+            "Spa": 0.7546636809921626,
+            "FoodCourt": 0.8013671968731503,
+            "VRDeck": 0.7290372934269911,
+            "RoomService": 0.6197307039864293,
+            "ShoppingMall": 0.7588471849865952
+          }
+        },
+        "update_native_gate": {
+          "three_fn_fixed": 1,
+          "three_fp_added": 2,
+          "within_service_auc": {
+            "Spa": 0.7650676083024717,
+            "FoodCourt": 0.8427990209931906,
+            "VRDeck": 0.7469713936679222,
+            "RoomService": 0.6544847328244274,
+            "ShoppingMall": 0.7994191242180518
+          }
+        },
+        "update_transfer_gate": {
+          "three_fn_fixed": 9,
+          "three_fp_added": 8,
+          "within_service_auc": {
+            "Spa": 0.7782447678925157,
+            "FoodCourt": 0.8388318038573721,
+            "VRDeck": 0.7526383657402694,
+            "RoomService": 0.6488019508057676,
+            "ShoppingMall": 0.7974754244861484
+          }
+        }
+      }
+    },
+    "20261115": {
+      "models": {
+        "update_native": {
+          "accuracy": 0.8015530629853321,
+          "fixed": 148,
+          "harmed": 230,
+          "net_by_fold": [
+            -22,
+            -28,
+            -32
+          ],
+          "corrected": {
+            "ever": 148,
+            "repeat": 95,
+            "unresolved": 23,
+            "never": 4,
+            "repeat_paid": 54,
+            "repeat_three": 19
+          },
+          "native_log_loss_before_overrides": 0.42756876443424396
+        },
+        "update_other": {
+          "accuracy": 0.6853609433419615,
+          "fixed": 296,
+          "harmed": 1186,
+          "net_by_fold": [
+            -368,
+            -257,
+            -265
+          ],
+          "corrected": {
+            "ever": 296,
+            "repeat": 215,
+            "unresolved": 59,
+            "never": 26,
+            "repeat_paid": 75,
+            "repeat_three": 74
+          },
+          "native_log_loss_before_overrides": 0.7405494588425694
+        },
+        "update_aligned": {
+          "accuracy": 0.7300834052343975,
+          "fixed": 259,
+          "harmed": 838,
+          "net_by_fold": [
+            -231,
+            -155,
+            -193
+          ],
+          "corrected": {
+            "ever": 259,
+            "repeat": 180,
+            "unresolved": 34,
+            "never": 9,
+            "repeat_paid": 55,
+            "repeat_three": 26
+          },
+          "native_log_loss_before_overrides": 0.5642155292528467
+        },
+        "update_pooled": {
+          "accuracy": 0.8071613459879207,
+          "fixed": 141,
+          "harmed": 184,
+          "net_by_fold": [
+            -12,
+            -14,
+            -17
+          ],
+          "corrected": {
+            "ever": 141,
+            "repeat": 84,
+            "unresolved": 10,
+            "never": 1,
+            "repeat_paid": 47,
+            "repeat_three": 14
+          },
+          "native_log_loss_before_overrides": 0.3988858047304422
+        },
+        "update_native_gate": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 83,
+          "harmed": 58,
+          "net_by_fold": [
+            8,
+            17,
+            0
+          ],
+          "corrected": {
+            "ever": 83,
+            "repeat": 26,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 12,
+            "repeat_three": 1
+          },
+          "native_log_loss_before_overrides": 0.38065564460399787
+        },
+        "update_transfer_gate": {
+          "accuracy": 0.818809318377912,
+          "fixed": 99,
+          "harmed": 61,
+          "net_by_fold": [
+            18,
+            19,
+            1
+          ],
+          "corrected": {
+            "ever": 99,
+            "repeat": 33,
+            "unresolved": 3,
+            "never": 0,
+            "repeat_paid": 18,
+            "repeat_three": 3
+          },
+          "native_log_loss_before_overrides": 0.3803218608084887
+        }
+      },
+      "detail": {
+        "update_native": {
+          "three_fn_fixed": 20,
+          "three_fp_added": 46,
+          "within_service_auc": {
+            "Spa": 0.6947205236413746,
+            "FoodCourt": 0.8152897828161909,
+            "VRDeck": 0.6953069327089484,
+            "RoomService": 0.5764418999151824,
+            "ShoppingMall": 0.7478254393803991
+          }
+        },
+        "update_other": {
+          "three_fn_fixed": 87,
+          "three_fp_added": 547,
+          "within_service_auc": {
+            "Spa": 0.6300577039014728,
+            "FoodCourt": 0.45602201165636647,
+            "VRDeck": 0.6471546370762495,
+            "RoomService": 0.5672815945716709,
+            "ShoppingMall": 0.5597482871611558
+          }
+        },
+        "update_aligned": {
+          "three_fn_fixed": 31,
+          "three_fp_added": 230,
+          "within_service_auc": {
+            "Spa": 0.6279217982947205,
+            "FoodCourt": 0.4558247172557949,
+            "VRDeck": 0.6447283586141369,
+            "RoomService": 0.5661047497879559,
+            "ShoppingMall": 0.5558832290735776
+          }
+        },
+        "update_pooled": {
+          "three_fn_fixed": 20,
+          "three_fp_added": 31,
+          "within_service_auc": {
+            "Spa": 0.7451037808974248,
+            "FoodCourt": 0.8171827426054591,
+            "VRDeck": 0.7251518544911602,
+            "RoomService": 0.6367154368108566,
+            "ShoppingMall": 0.7374143580577897
+          }
+        },
+        "update_native_gate": {
+          "three_fn_fixed": 2,
+          "three_fp_added": 2,
+          "within_service_auc": {
+            "Spa": 0.7713891998966497,
+            "FoodCourt": 0.8557298026522766,
+            "VRDeck": 0.7575078896467473,
+            "RoomService": 0.6392281594571672,
+            "ShoppingMall": 0.7963509085493
+          }
+        },
+        "update_transfer_gate": {
+          "three_fn_fixed": 10,
+          "three_fp_added": 6,
+          "within_service_auc": {
+            "Spa": 0.7794505210576177,
+            "FoodCourt": 0.8547646597738046,
+            "VRDeck": 0.7544707998235434,
+            "RoomService": 0.6417514843087363,
+            "ShoppingMall": 0.7935805778969318
+          }
+        }
+      }
+    },
+    "20261116": {
+      "models": {
+        "update_native": {
+          "accuracy": 0.8004026459591602,
+          "fixed": 128,
+          "harmed": 221,
+          "net_by_fold": [
+            -58,
+            -36,
+            1
+          ],
+          "corrected": {
+            "ever": 128,
+            "repeat": 82,
+            "unresolved": 23,
+            "never": 3,
+            "repeat_paid": 55,
+            "repeat_three": 22
+          },
+          "native_log_loss_before_overrides": 0.432002814923926
+        },
+        "update_other": {
+          "accuracy": 0.6945642795513374,
+          "fixed": 288,
+          "harmed": 1117,
+          "net_by_fold": [
+            -401,
+            -274,
+            -154
+          ],
+          "corrected": {
+            "ever": 288,
+            "repeat": 209,
+            "unresolved": 51,
+            "never": 19,
+            "repeat_paid": 71,
+            "repeat_three": 69
+          },
+          "native_log_loss_before_overrides": 0.7331338720741287
+        },
+        "update_aligned": {
+          "accuracy": 0.7338222605694564,
+          "fixed": 255,
+          "harmed": 811,
+          "net_by_fold": [
+            -233,
+            -196,
+            -127
+          ],
+          "corrected": {
+            "ever": 255,
+            "repeat": 175,
+            "unresolved": 33,
+            "never": 7,
+            "repeat_paid": 53,
+            "repeat_three": 21
+          },
+          "native_log_loss_before_overrides": 0.5690862014464143
+        },
+        "update_pooled": {
+          "accuracy": 0.8067299396031061,
+          "fixed": 147,
+          "harmed": 196,
+          "net_by_fold": [
+            -18,
+            -16,
+            -15
+          ],
+          "corrected": {
+            "ever": 147,
+            "repeat": 84,
+            "unresolved": 14,
+            "never": 0,
+            "repeat_paid": 52,
+            "repeat_three": 19
+          },
+          "native_log_loss_before_overrides": 0.3992428347207398
+        },
+        "update_native_gate": {
+          "accuracy": 0.8132010353753235,
+          "fixed": 61,
+          "harmed": 65,
+          "net_by_fold": [
+            -10,
+            -2,
+            8
+          ],
+          "corrected": {
+            "ever": 61,
+            "repeat": 19,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 11,
+            "repeat_three": 2
+          },
+          "native_log_loss_before_overrides": 0.38146942750752477
+        },
+        "update_transfer_gate": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 77,
+          "harmed": 77,
+          "net_by_fold": [
+            -9,
+            -1,
+            10
+          ],
+          "corrected": {
+            "ever": 77,
+            "repeat": 29,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 17,
+            "repeat_three": 5
+          },
+          "native_log_loss_before_overrides": 0.380890164026635
+        }
+      },
+      "detail": {
+        "update_native": {
+          "three_fn_fixed": 22,
+          "three_fp_added": 45,
+          "within_service_auc": {
+            "Spa": 0.7127034708466109,
+            "FoodCourt": 0.801313874062185,
+            "VRDeck": 0.7015338151956292,
+            "RoomService": 0.581923240033927,
+            "ShoppingMall": 0.7441540065534703
+          }
+        },
+        "update_other": {
+          "three_fn_fixed": 77,
+          "three_fp_added": 479,
+          "within_service_auc": {
+            "Spa": 0.6177934717078633,
+            "FoodCourt": 0.4467331779862107,
+            "VRDeck": 0.604669313515898,
+            "RoomService": 0.5704516539440203,
+            "ShoppingMall": 0.5428060768543342
+          }
+        },
+        "update_aligned": {
+          "three_fn_fixed": 24,
+          "three_fp_added": 196,
+          "within_service_auc": {
+            "Spa": 0.610283351993799,
+            "FoodCourt": 0.4459599972272138,
+            "VRDeck": 0.6054837286640198,
+            "RoomService": 0.5706849024597117,
+            "ShoppingMall": 0.5367664581471552
+          }
+        },
+        "update_pooled": {
+          "three_fn_fixed": 25,
+          "three_fp_added": 28,
+          "within_service_auc": {
+            "Spa": 0.7432607010593403,
+            "FoodCourt": 0.8030255362941713,
+            "VRDeck": 0.7412026197020598,
+            "RoomService": 0.6554707379134861,
+            "ShoppingMall": 0.7442433720583855
+          }
+        },
+        "update_native_gate": {
+          "three_fn_fixed": 4,
+          "three_fp_added": 1,
+          "within_service_auc": {
+            "Spa": 0.7801911980018947,
+            "FoodCourt": 0.8423724385054682,
+            "VRDeck": 0.7544368658590384,
+            "RoomService": 0.6718511450381679,
+            "ShoppingMall": 0.7970360440869824
+          }
+        },
+        "update_transfer_gate": {
+          "three_fn_fixed": 6,
+          "three_fp_added": 6,
+          "within_service_auc": {
+            "Spa": 0.788838170700198,
+            "FoodCourt": 0.8418018844281394,
+            "VRDeck": 0.7533000780481184,
+            "RoomService": 0.6717981340118745,
+            "ShoppingMall": 0.7954274649985105
+          }
+        }
+      }
+    },
+    "v131": {
+      "models": {
+        "update_native": {
+          "accuracy": 0.8037100949094047,
+          "fixed": 194,
+          "harmed": 267,
+          "net_by_fold": [
+            -26,
+            -18,
+            -29
+          ],
+          "corrected": {
+            "ever": 162,
+            "repeat": 102,
+            "unresolved": 29,
+            "never": 5,
+            "repeat_paid": 63,
+            "repeat_three": 20
+          },
+          "native_log_loss_before_overrides": 0.42425929769700904
+        },
+        "update_other": {
+          "accuracy": 0.6691113028472822,
+          "fixed": 301,
+          "harmed": 1310,
+          "net_by_fold": [
+            -250,
+            -399,
+            -360
+          ],
+          "corrected": {
+            "ever": 281,
+            "repeat": 210,
+            "unresolved": 67,
+            "never": 26,
+            "repeat_paid": 85,
+            "repeat_three": 82
+          },
+          "native_log_loss_before_overrides": 0.7804701938672127
+        },
+        "update_aligned": {
+          "accuracy": 0.725913143514524,
+          "fixed": 266,
+          "harmed": 880,
+          "net_by_fold": [
+            -168,
+            -216,
+            -230
+          ],
+          "corrected": {
+            "ever": 244,
+            "repeat": 177,
+            "unresolved": 42,
+            "never": 13,
+            "repeat_paid": 67,
+            "repeat_three": 36
+          },
+          "native_log_loss_before_overrides": 0.5815609948541042
+        },
+        "update_pooled": {
+          "accuracy": 0.8055795225769341,
+          "fixed": 165,
+          "harmed": 225,
+          "net_by_fold": [
+            -25,
+            -20,
+            -15
+          ],
+          "corrected": {
+            "ever": 135,
+            "repeat": 81,
+            "unresolved": 14,
+            "never": 1,
+            "repeat_paid": 47,
+            "repeat_three": 14
+          },
+          "native_log_loss_before_overrides": 0.4006680309418544
+        },
+        "update_native_gate": {
+          "accuracy": 0.813920046016681,
+          "fixed": 86,
+          "harmed": 88,
+          "net_by_fold": [
+            -2,
+            -6,
+            6
+          ],
+          "corrected": {
+            "ever": 61,
+            "repeat": 23,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 14,
+            "repeat_three": 2
+          },
+          "native_log_loss_before_overrides": 0.37773599581523104
+        },
+        "update_transfer_gate": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 95,
+          "harmed": 98,
+          "net_by_fold": [
+            -4,
+            -8,
+            9
+          ],
+          "corrected": {
+            "ever": 68,
+            "repeat": 30,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 19,
+            "repeat_three": 6
+          },
+          "native_log_loss_before_overrides": 0.37773124578857553
+        }
+      },
+      "detail": {
+        "update_native": {
+          "three_fn_fixed": 23,
+          "three_fp_added": 39,
+          "within_service_auc": {
+            "Spa": 0.7244165015933167,
+            "FoodCourt": 0.7979012141604056,
+            "VRDeck": 0.7330754352030948,
+            "RoomService": 0.5943384223918575,
+            "ShoppingMall": 0.7458742925230861
+          }
+        },
+        "update_other": {
+          "three_fn_fixed": 96,
+          "three_fp_added": 680,
+          "within_service_auc": {
+            "Spa": 0.5418482473516493,
+            "FoodCourt": 0.43622858422604605,
+            "VRDeck": 0.5457938850995961,
+            "RoomService": 0.6151717557251908,
+            "ShoppingMall": 0.5680890676198987
+          }
+        },
+        "update_aligned": {
+          "three_fn_fixed": 43,
+          "three_fp_added": 286,
+          "within_service_auc": {
+            "Spa": 0.5401946430109379,
+            "FoodCourt": 0.43601529298218483,
+            "VRDeck": 0.5462180596559096,
+            "RoomService": 0.6104961832061069,
+            "ShoppingMall": 0.5682454572535001
+          }
+        },
+        "update_pooled": {
+          "three_fn_fixed": 19,
+          "three_fp_added": 26,
+          "within_service_auc": {
+            "Spa": 0.7370080096460253,
+            "FoodCourt": 0.7984717682377345,
+            "VRDeck": 0.7073704570905018,
+            "RoomService": 0.6559902459711621,
+            "ShoppingMall": 0.7488978254393804
+          }
+        },
+        "update_native_gate": {
+          "three_fn_fixed": 7,
+          "three_fp_added": 3,
+          "within_service_auc": {
+            "Spa": 0.7716648006201017,
+            "FoodCourt": 0.8472621402709865,
+            "VRDeck": 0.7715226169873427,
+            "RoomService": 0.6983142493638678,
+            "ShoppingMall": 0.792024128686327
+          }
+        },
+        "update_transfer_gate": {
+          "three_fn_fixed": 13,
+          "three_fp_added": 4,
+          "within_service_auc": {
+            "Spa": 0.7763327878735682,
+            "FoodCourt": 0.8457850984072476,
+            "VRDeck": 0.7546065356815637,
+            "RoomService": 0.7008375742154369,
+            "ShoppingMall": 0.7912347333929104
+          }
+        }
+      }
+    }
+  },
+  "stable": {
+    "update_native": {
+      "ever": 92,
+      "repeat": 26,
+      "unresolved": 4,
+      "never": 0,
+      "repeat_paid": 13,
+      "repeat_three": 3
+    },
+    "update_other": {
+      "ever": 295,
+      "repeat": 163,
+      "unresolved": 20,
+      "never": 8,
+      "repeat_paid": 27,
+      "repeat_three": 27
+    },
+    "update_aligned": {
+      "ever": 242,
+      "repeat": 124,
+      "unresolved": 8,
+      "never": 2,
+      "repeat_paid": 13,
+      "repeat_three": 5
+    },
+    "update_pooled": {
+      "ever": 98,
+      "repeat": 25,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 8,
+      "repeat_three": 4
+    },
+    "update_native_gate": {
+      "ever": 54,
+      "repeat": 2,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 2,
+      "repeat_three": 0
+    },
+    "update_transfer_gate": {
+      "ever": 60,
+      "repeat": 3,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 2,
+      "repeat_three": 1
+    }
+  },
+  "dominant_service": {
+    "Spa": {
+      "n": 768,
+      "positives": 85,
+      "repeat_missed": 75
+    },
+    "FoodCourt": {
+      "n": 878,
+      "positives": 511,
+      "repeat_missed": 83
+    },
+    "VRDeck": {
+      "n": 721,
+      "positives": 94,
+      "repeat_missed": 77
+    },
+    "RoomService": {
+      "n": 906,
+      "positives": 120,
+      "repeat_missed": 103
+    },
+    "ShoppingMall": {
+      "n": 733,
+      "positives": 373,
+      "repeat_missed": 90
+    }
+  }
+}
