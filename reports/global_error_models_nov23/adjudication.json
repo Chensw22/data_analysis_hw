@@ -1,0 +1,64 @@
+{
+  "rows": 6954,
+  "eligible": 1699,
+  "scores": {
+    "strong_pair": {
+      "accuracy": 0.8228357779695139,
+      "fixed": 205,
+      "harmed": 145,
+      "fold_net": [
+        27,
+        18,
+        15
+      ],
+      "hard_fixed": 0,
+      "hard_harmed": 6,
+      "persistent_fixed": 0,
+      "persistent_harmed": 5
+    },
+    "error_referee": {
+      "accuracy": 0.821685360943342,
+      "fixed": 228,
+      "harmed": 176,
+      "fold_net": [
+        22,
+        16,
+        14
+      ],
+      "hard_fixed": 2,
+      "hard_harmed": 6,
+      "persistent_fixed": 2,
+      "persistent_harmed": 5
+    },
+    "boundary_weighted": {
+      "accuracy": 0.8209663503019845,
+      "fixed": 234,
+      "harmed": 187,
+      "fold_net": [
+        22,
+        17,
+        8
+      ],
+      "hard_fixed": 4,
+      "hard_harmed": 6,
+      "persistent_fixed": 3,
+      "persistent_harmed": 5
+    }
+  },
+  "new_experts": [
+    "joint",
+    "honest_forest",
+    "denoiser",
+    "mlp",
+    "tensor",
+    "qboost",
+    "reverse",
+    "forward_reverse"
+  ],
+  "realizable_gain_needed_for_83": 110,
+  "original_errors_covered": 690,
+  "original_errors_uncovered": 602,
+  "historical_common_new_coverage": 111,
+  "remaining_missed_positive": 325,
+  "remaining_false_alarm": 277
+}
