@@ -1,0 +1,800 @@
+{
+  "20261112": {
+    "folds": [
+      {
+        "train_pairs": 1701,
+        "distinct_training_people": 1493,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 282,
+              "accuracy": 0.549645390070922
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.688622754491018
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.34782608695652173
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 282,
+              "accuracy": 0.7553191489361702
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6407185628742516
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.9217391304347826
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 282,
+              "accuracy": 0.723404255319149
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6287425149700598
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.8608695652173913
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 282,
+              "accuracy": 0.4716312056737589
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6407185628742516
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.22608695652173913
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 282,
+              "accuracy": 0.7039007092198581
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1725,
+        "distinct_training_people": 1530,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.60431654676259
+            },
+            "same_bills": {
+              "rows": 170,
+              "accuracy": 0.7294117647058823
+            },
+            "ordered_bills": {
+              "rows": 108,
+              "accuracy": 0.4074074074074074
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.7913669064748201
+            },
+            "same_bills": {
+              "rows": 170,
+              "accuracy": 0.6647058823529411
+            },
+            "ordered_bills": {
+              "rows": 108,
+              "accuracy": 0.9907407407407407
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.762589928057554
+            },
+            "same_bills": {
+              "rows": 170,
+              "accuracy": 0.6647058823529411
+            },
+            "ordered_bills": {
+              "rows": 108,
+              "accuracy": 0.9166666666666666
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.5035971223021583
+            },
+            "same_bills": {
+              "rows": 170,
+              "accuracy": 0.6352941176470588
+            },
+            "ordered_bills": {
+              "rows": 108,
+              "accuracy": 0.2962962962962963
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.6942446043165468
+            },
+            "same_bills": {
+              "rows": 170,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 108,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1758,
+        "distinct_training_people": 1523,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 271,
+              "accuracy": 0.5129151291512916
+            },
+            "same_bills": {
+              "rows": 165,
+              "accuracy": 0.6
+            },
+            "ordered_bills": {
+              "rows": 106,
+              "accuracy": 0.37735849056603776
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 271,
+              "accuracy": 0.7896678966789668
+            },
+            "same_bills": {
+              "rows": 165,
+              "accuracy": 0.6666666666666666
+            },
+            "ordered_bills": {
+              "rows": 106,
+              "accuracy": 0.9811320754716981
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 271,
+              "accuracy": 0.7896678966789668
+            },
+            "same_bills": {
+              "rows": 165,
+              "accuracy": 0.6909090909090909
+            },
+            "ordered_bills": {
+              "rows": 106,
+              "accuracy": 0.9433962264150944
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 271,
+              "accuracy": 0.5129151291512916
+            },
+            "same_bills": {
+              "rows": 165,
+              "accuracy": 0.6606060606060606
+            },
+            "ordered_bills": {
+              "rows": 106,
+              "accuracy": 0.2830188679245283
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 271,
+              "accuracy": 0.6955719557195572
+            },
+            "same_bills": {
+              "rows": 165,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 106,
+              "accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "scores": {
+      "base": {
+        "accuracy": 0.818234109864826,
+        "fixed": 23,
+        "harmed": 19,
+        "repeat": 6,
+        "fixed_misses": 14,
+        "fixed_false_alarms": 9
+      },
+      "conflicts": {
+        "accuracy": 0.819096922634455,
+        "fixed": 57,
+        "harmed": 47,
+        "repeat": 18,
+        "fixed_misses": 26,
+        "fixed_false_alarms": 31
+      },
+      "same_people": {
+        "accuracy": 0.8186655162496405,
+        "fixed": 53,
+        "harmed": 46,
+        "repeat": 20,
+        "fixed_misses": 20,
+        "fixed_false_alarms": 33
+      },
+      "random_pairs": {
+        "accuracy": 0.818521714121369,
+        "fixed": 40,
+        "harmed": 34,
+        "repeat": 7,
+        "fixed_misses": 24,
+        "fixed_false_alarms": 16
+      }
+    }
+  },
+  "20261115": {
+    "folds": [
+      {
+        "train_pairs": 1755,
+        "distinct_training_people": 1530,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.6007194244604317
+            },
+            "same_bills": {
+              "rows": 166,
+              "accuracy": 0.7108433734939759
+            },
+            "ordered_bills": {
+              "rows": 112,
+              "accuracy": 0.4375
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.7482014388489209
+            },
+            "same_bills": {
+              "rows": 166,
+              "accuracy": 0.608433734939759
+            },
+            "ordered_bills": {
+              "rows": 112,
+              "accuracy": 0.9553571428571429
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.7266187050359713
+            },
+            "same_bills": {
+              "rows": 166,
+              "accuracy": 0.5963855421686747
+            },
+            "ordered_bills": {
+              "rows": 112,
+              "accuracy": 0.9196428571428571
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.4784172661870504
+            },
+            "same_bills": {
+              "rows": 166,
+              "accuracy": 0.5963855421686747
+            },
+            "ordered_bills": {
+              "rows": 112,
+              "accuracy": 0.30357142857142855
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 278,
+              "accuracy": 0.7014388489208633
+            },
+            "same_bills": {
+              "rows": 166,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 112,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1692,
+        "distinct_training_people": 1498,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 292,
+              "accuracy": 0.523972602739726
+            },
+            "same_bills": {
+              "rows": 173,
+              "accuracy": 0.6763005780346821
+            },
+            "ordered_bills": {
+              "rows": 119,
+              "accuracy": 0.3025210084033613
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 292,
+              "accuracy": 0.7636986301369864
+            },
+            "same_bills": {
+              "rows": 173,
+              "accuracy": 0.6358381502890174
+            },
+            "ordered_bills": {
+              "rows": 119,
+              "accuracy": 0.9495798319327731
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 292,
+              "accuracy": 0.7328767123287672
+            },
+            "same_bills": {
+              "rows": 173,
+              "accuracy": 0.6358381502890174
+            },
+            "ordered_bills": {
+              "rows": 119,
+              "accuracy": 0.8739495798319328
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 292,
+              "accuracy": 0.4657534246575342
+            },
+            "same_bills": {
+              "rows": 173,
+              "accuracy": 0.6473988439306358
+            },
+            "ordered_bills": {
+              "rows": 119,
+              "accuracy": 0.20168067226890757
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 292,
+              "accuracy": 0.7037671232876712
+            },
+            "same_bills": {
+              "rows": 173,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 119,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1761,
+        "distinct_training_people": 1537,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 266,
+              "accuracy": 0.5338345864661654
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6107784431137725
+            },
+            "ordered_bills": {
+              "rows": 99,
+              "accuracy": 0.40404040404040403
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 266,
+              "accuracy": 0.7406015037593985
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6107784431137725
+            },
+            "ordered_bills": {
+              "rows": 99,
+              "accuracy": 0.9595959595959596
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 266,
+              "accuracy": 0.706766917293233
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6047904191616766
+            },
+            "ordered_bills": {
+              "rows": 99,
+              "accuracy": 0.8787878787878788
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 266,
+              "accuracy": 0.45864661654135336
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.6047904191616766
+            },
+            "ordered_bills": {
+              "rows": 99,
+              "accuracy": 0.21212121212121213
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 266,
+              "accuracy": 0.6860902255639098
+            },
+            "same_bills": {
+              "rows": 167,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 99,
+              "accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "scores": {
+      "base": {
+        "accuracy": 0.817946505608283,
+        "fixed": 94,
+        "harmed": 62,
+        "repeat": 36,
+        "fixed_misses": 36,
+        "fixed_false_alarms": 58
+      },
+      "conflicts": {
+        "accuracy": 0.8169398907103825,
+        "fixed": 101,
+        "harmed": 76,
+        "repeat": 39,
+        "fixed_misses": 38,
+        "fixed_false_alarms": 63
+      },
+      "same_people": {
+        "accuracy": 0.8186655162496405,
+        "fixed": 105,
+        "harmed": 68,
+        "repeat": 44,
+        "fixed_misses": 38,
+        "fixed_false_alarms": 67
+      },
+      "random_pairs": {
+        "accuracy": 0.8186655162496405,
+        "fixed": 113,
+        "harmed": 76,
+        "repeat": 50,
+        "fixed_misses": 41,
+        "fixed_false_alarms": 72
+      }
+    }
+  },
+  "20261116": {
+    "folds": [
+      {
+        "train_pairs": 1737,
+        "distinct_training_people": 1504,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 273,
+              "accuracy": 0.5238095238095238
+            },
+            "same_bills": {
+              "rows": 158,
+              "accuracy": 0.6708860759493671
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.3217391304347826
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 273,
+              "accuracy": 0.7802197802197802
+            },
+            "same_bills": {
+              "rows": 158,
+              "accuracy": 0.6455696202531646
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.9652173913043478
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 273,
+              "accuracy": 0.7728937728937729
+            },
+            "same_bills": {
+              "rows": 158,
+              "accuracy": 0.6645569620253164
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.9217391304347826
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 273,
+              "accuracy": 0.47619047619047616
+            },
+            "same_bills": {
+              "rows": 158,
+              "accuracy": 0.6392405063291139
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 0.25217391304347825
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 273,
+              "accuracy": 0.7106227106227107
+            },
+            "same_bills": {
+              "rows": 158,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 115,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1779,
+        "distinct_training_people": 1555,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 268,
+              "accuracy": 0.5708955223880597
+            },
+            "same_bills": {
+              "rows": 172,
+              "accuracy": 0.6511627906976745
+            },
+            "ordered_bills": {
+              "rows": 96,
+              "accuracy": 0.4270833333333333
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 268,
+              "accuracy": 0.753731343283582
+            },
+            "same_bills": {
+              "rows": 172,
+              "accuracy": 0.6569767441860465
+            },
+            "ordered_bills": {
+              "rows": 96,
+              "accuracy": 0.9270833333333334
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 268,
+              "accuracy": 0.7201492537313433
+            },
+            "same_bills": {
+              "rows": 172,
+              "accuracy": 0.6395348837209303
+            },
+            "ordered_bills": {
+              "rows": 96,
+              "accuracy": 0.8645833333333334
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 268,
+              "accuracy": 0.5335820895522388
+            },
+            "same_bills": {
+              "rows": 172,
+              "accuracy": 0.622093023255814
+            },
+            "ordered_bills": {
+              "rows": 96,
+              "accuracy": 0.375
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 268,
+              "accuracy": 0.6791044776119403
+            },
+            "same_bills": {
+              "rows": 172,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 96,
+              "accuracy": 1.0
+            }
+          }
+        }
+      },
+      {
+        "train_pairs": 1695,
+        "distinct_training_people": 1505,
+        "held": {
+          "base": {
+            "all": {
+              "rows": 294,
+              "accuracy": 0.564625850340136
+            },
+            "same_bills": {
+              "rows": 176,
+              "accuracy": 0.7045454545454546
+            },
+            "ordered_bills": {
+              "rows": 118,
+              "accuracy": 0.3559322033898305
+            }
+          },
+          "conflicts": {
+            "all": {
+              "rows": 294,
+              "accuracy": 0.7993197278911565
+            },
+            "same_bills": {
+              "rows": 176,
+              "accuracy": 0.6931818181818182
+            },
+            "ordered_bills": {
+              "rows": 118,
+              "accuracy": 0.9576271186440678
+            }
+          },
+          "same_people": {
+            "all": {
+              "rows": 294,
+              "accuracy": 0.7482993197278912
+            },
+            "same_bills": {
+              "rows": 176,
+              "accuracy": 0.6704545454545454
+            },
+            "ordered_bills": {
+              "rows": 118,
+              "accuracy": 0.864406779661017
+            }
+          },
+          "random_pairs": {
+            "all": {
+              "rows": 294,
+              "accuracy": 0.5272108843537415
+            },
+            "same_bills": {
+              "rows": 176,
+              "accuracy": 0.7045454545454546
+            },
+            "ordered_bills": {
+              "rows": 118,
+              "accuracy": 0.2627118644067797
+            }
+          },
+          "reverse_bills": {
+            "all": {
+              "rows": 294,
+              "accuracy": 0.7006802721088435
+            },
+            "same_bills": {
+              "rows": 176,
+              "accuracy": 0.5
+            },
+            "ordered_bills": {
+              "rows": 118,
+              "accuracy": 1.0
+            }
+          }
+        }
+      }
+    ],
+    "scores": {
+      "base": {
+        "accuracy": 0.813632441760138,
+        "fixed": 25,
+        "harmed": 26,
+        "repeat": 12,
+        "fixed_misses": 16,
+        "fixed_false_alarms": 9
+      },
+      "conflicts": {
+        "accuracy": 0.813632441760138,
+        "fixed": 39,
+        "harmed": 40,
+        "repeat": 18,
+        "fixed_misses": 21,
+        "fixed_false_alarms": 18
+      },
+      "same_people": {
+        "accuracy": 0.8119068162208801,
+        "fixed": 34,
+        "harmed": 47,
+        "repeat": 18,
+        "fixed_misses": 15,
+        "fixed_false_alarms": 19
+      },
+      "random_pairs": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 52,
+        "harmed": 50,
+        "repeat": 23,
+        "fixed_misses": 27,
+        "fixed_false_alarms": 25
+      }
+    }
+  }
+}
