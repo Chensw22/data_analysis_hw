@@ -1,0 +1,101 @@
+{
+  "results": {
+    "20261112": {
+      "multi_member_passengers": 3137,
+      "metrics": {
+        "independent": {
+          "accuracy": 0.81765890135174,
+          "fixed": 0,
+          "harmed": 0,
+          "persistent1070": 0,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.34148531965642553,
+          "marginal_nll_per_known_member": 0.34148531965642553
+        },
+        "fit_joint": {
+          "accuracy": 0.818809318377912,
+          "fixed": 22,
+          "harmed": 14,
+          "persistent1070": 13,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.34332491048319724,
+          "marginal_nll_per_known_member": 0.342971829959523
+        },
+        "fit_marginal": {
+          "accuracy": 0.81765890135174,
+          "fixed": 15,
+          "harmed": 15,
+          "persistent1070": 9,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.34335158792743187,
+          "marginal_nll_per_known_member": 0.3433960168658404
+        }
+      }
+    },
+    "20261115": {
+      "multi_member_passengers": 3137,
+      "metrics": {
+        "independent": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 0,
+          "harmed": 0,
+          "persistent1070": 0,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.3359524328059833,
+          "marginal_nll_per_known_member": 0.3359524328059833
+        },
+        "fit_joint": {
+          "accuracy": 0.8146390566580385,
+          "fixed": 38,
+          "harmed": 29,
+          "persistent1070": 20,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.33544615905921027,
+          "marginal_nll_per_known_member": 0.3360347948123835
+        },
+        "fit_marginal": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 42,
+          "harmed": 36,
+          "persistent1070": 22,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.3366295006497361,
+          "marginal_nll_per_known_member": 0.33743781925343397
+        }
+      }
+    },
+    "20261116": {
+      "multi_member_passengers": 3137,
+      "metrics": {
+        "independent": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 0,
+          "harmed": 0,
+          "persistent1070": 0,
+          "unresolved466": 0,
+          "joint_nll_per_known_member": 0.34303622966336966,
+          "marginal_nll_per_known_member": 0.34303622966336966
+        },
+        "fit_joint": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 20,
+          "harmed": 22,
+          "persistent1070": 8,
+          "unresolved466": 1,
+          "joint_nll_per_known_member": 0.3442485759297929,
+          "marginal_nll_per_known_member": 0.3432019481739908
+        },
+        "fit_marginal": {
+          "accuracy": 0.813632441760138,
+          "fixed": 21,
+          "harmed": 22,
+          "persistent1070": 8,
+          "unresolved466": 1,
+          "joint_nll_per_known_member": 0.34335398367654657,
+          "marginal_nll_per_known_member": 0.3430925347768532
+        }
+      }
+    }
+  },
+  "interpretation": "Held-out joint and marginal log losses are per observed member of non-singleton bookings; accuracy includes every development passenger."
+}
