@@ -1,0 +1,119 @@
+{
+  "results": {
+    "20261112": {
+      "base": {
+        "accuracy": 0.81765890135174,
+        "logloss": 0.3790543007633912,
+        "brier": 0.1222412702692344,
+        "fixed": 0,
+        "harmed": 0,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 0
+      },
+      "score_only": {
+        "accuracy": 0.818234109864826,
+        "logloss": 0.3791605019839336,
+        "brier": 0.12243634671563583,
+        "fixed": 24,
+        "harmed": 20,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 3
+      },
+      "context": {
+        "accuracy": 0.817946505608283,
+        "logloss": 0.38281957521297266,
+        "brier": 0.12337891697229335,
+        "fixed": 80,
+        "harmed": 78,
+        "missed_by_all466_correct": 4,
+        "always_wrong1070_correct": 47
+      },
+      "placebo": {
+        "accuracy": 0.816508484325568,
+        "logloss": 0.3823359339174892,
+        "brier": 0.12317256656397291,
+        "fixed": 66,
+        "harmed": 74,
+        "missed_by_all466_correct": 3,
+        "always_wrong1070_correct": 31
+      }
+    },
+    "20261115": {
+      "base": {
+        "accuracy": 0.8133448375035951,
+        "logloss": 0.37788048451438294,
+        "brier": 0.12199438211360338,
+        "fixed": 0,
+        "harmed": 0,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 0
+      },
+      "score_only": {
+        "accuracy": 0.8157894736842105,
+        "logloss": 0.37867383337156535,
+        "brier": 0.12205346101395671,
+        "fixed": 68,
+        "harmed": 51,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 12
+      },
+      "context": {
+        "accuracy": 0.81765890135174,
+        "logloss": 0.3803086410015475,
+        "brier": 0.12271824503442987,
+        "fixed": 126,
+        "harmed": 96,
+        "missed_by_all466_correct": 5,
+        "always_wrong1070_correct": 50
+      },
+      "placebo": {
+        "accuracy": 0.816220880069025,
+        "logloss": 0.38210233837720053,
+        "brier": 0.12287983363218638,
+        "fixed": 117,
+        "harmed": 97,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 54
+      }
+    },
+    "20261116": {
+      "base": {
+        "accuracy": 0.8137762438884095,
+        "logloss": 0.37955197320400197,
+        "brier": 0.12310130526574928,
+        "fixed": 0,
+        "harmed": 0,
+        "missed_by_all466_correct": 0,
+        "always_wrong1070_correct": 0
+      },
+      "score_only": {
+        "accuracy": 0.8127696289905091,
+        "logloss": 0.3799826893153867,
+        "brier": 0.12332286215566088,
+        "fixed": 34,
+        "harmed": 41,
+        "missed_by_all466_correct": 1,
+        "always_wrong1070_correct": 18
+      },
+      "context": {
+        "accuracy": 0.816220880069025,
+        "logloss": 0.37780980347702653,
+        "brier": 0.12243327895426176,
+        "fixed": 132,
+        "harmed": 115,
+        "missed_by_all466_correct": 2,
+        "always_wrong1070_correct": 65
+      },
+      "placebo": {
+        "accuracy": 0.8119068162208801,
+        "logloss": 0.38444117460505184,
+        "brier": 0.1245250915637551,
+        "fixed": 72,
+        "harmed": 85,
+        "missed_by_all466_correct": 3,
+        "always_wrong1070_correct": 43
+      }
+    }
+  },
+  "validation": "For each base fold, calibrate using two thirds of its held-out bookings, evaluate on the other third; rotate. All corrections share a probability offset and fixed ridge penalties."
+}
