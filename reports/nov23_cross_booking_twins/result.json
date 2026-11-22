@@ -1,0 +1,192 @@
+{
+  "exact_compact13": {
+    "features": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "cross_booking": {
+      "hard356": {
+        "rows": 356,
+        "matched_rows": 1,
+        "any_opposite_rows": 1,
+        "only_opposite_rows": 1,
+        "mean_opposite_share": 1.0
+      },
+      "other_consistent_errors": {
+        "rows": 714,
+        "matched_rows": 0,
+        "any_opposite_rows": 0,
+        "only_opposite_rows": 0,
+        "mean_opposite_share": null
+      },
+      "consistent_correct": {
+        "rows": 5436,
+        "matched_rows": 7,
+        "any_opposite_rows": 2,
+        "only_opposite_rows": 0,
+        "mean_opposite_share": 0.14285714285714285
+      },
+      "all": {
+        "rows": 6954,
+        "matched_rows": 9,
+        "any_opposite_rows": 3,
+        "only_opposite_rows": 1,
+        "mean_opposite_share": 0.2222222222222222
+      }
+    },
+    "empirical_representation_bounds": {
+      "hard356": {
+        "rows": 356,
+        "mixed_patterns": 0,
+        "mixed_rows": 0,
+        "min_errors": 0,
+        "max_correct": 356
+      },
+      "other_consistent_errors": {
+        "rows": 714,
+        "mixed_patterns": 0,
+        "mixed_rows": 0,
+        "min_errors": 0,
+        "max_correct": 714
+      },
+      "consistent_correct": {
+        "rows": 5436,
+        "mixed_patterns": 0,
+        "mixed_rows": 0,
+        "min_errors": 0,
+        "max_correct": 5436
+      },
+      "all": {
+        "rows": 6954,
+        "mixed_patterns": 2,
+        "mixed_rows": 5,
+        "min_errors": 2,
+        "max_correct": 6952
+      }
+    }
+  },
+  "exact_without_berth_number": {
+    "features": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "Side"
+    ],
+    "cross_booking": {
+      "hard356": {
+        "rows": 356,
+        "matched_rows": 82,
+        "any_opposite_rows": 77,
+        "only_opposite_rows": 36,
+        "mean_opposite_share": 0.7417654977733886
+      },
+      "other_consistent_errors": {
+        "rows": 714,
+        "matched_rows": 253,
+        "any_opposite_rows": 225,
+        "only_opposite_rows": 55,
+        "mean_opposite_share": 0.6087277263282843
+      },
+      "consistent_correct": {
+        "rows": 5436,
+        "matched_rows": 1307,
+        "any_opposite_rows": 484,
+        "only_opposite_rows": 43,
+        "mean_opposite_share": 0.1564437233009176
+      },
+      "all": {
+        "rows": 6954,
+        "matched_rows": 1753,
+        "any_opposite_rows": 875,
+        "only_opposite_rows": 155,
+        "mean_opposite_share": 0.2692325930354856
+      }
+    },
+    "empirical_representation_bounds": {
+      "hard356": {
+        "rows": 356,
+        "mixed_patterns": 0,
+        "mixed_rows": 0,
+        "min_errors": 0,
+        "max_correct": 356
+      },
+      "other_consistent_errors": {
+        "rows": 714,
+        "mixed_patterns": 9,
+        "mixed_rows": 25,
+        "min_errors": 10,
+        "max_correct": 704
+      },
+      "consistent_correct": {
+        "rows": 5436,
+        "mixed_patterns": 7,
+        "mixed_rows": 25,
+        "min_errors": 7,
+        "max_correct": 5429
+      },
+      "all": {
+        "rows": 6954,
+        "mixed_patterns": 180,
+        "mixed_rows": 875,
+        "min_errors": 283,
+        "max_correct": 6671
+      }
+    }
+  },
+  "tolerance_cross_booking": {
+    "hard356": {
+      "rows": 356,
+      "matched_rows": 14,
+      "any_opposite_rows": 12,
+      "only_opposite_rows": 12,
+      "mean_opposite_share": 0.8571428571428571
+    },
+    "other_consistent_errors": {
+      "rows": 714,
+      "matched_rows": 54,
+      "any_opposite_rows": 40,
+      "only_opposite_rows": 37,
+      "mean_opposite_share": 0.7129629629629629
+    },
+    "consistent_correct": {
+      "rows": 5436,
+      "matched_rows": 390,
+      "any_opposite_rows": 54,
+      "only_opposite_rows": 36,
+      "mean_opposite_share": 0.11346153846153846
+    },
+    "all": {
+      "rows": 6954,
+      "matched_rows": 488,
+      "any_opposite_rows": 122,
+      "only_opposite_rows": 96,
+      "mean_opposite_share": 0.22114071038251368
+    }
+  },
+  "protocol": {
+    "age_years": 2,
+    "cabin_numbers": 10,
+    "positive_bill_max_ratio": 1.1,
+    "matched": "All categorical values, missing patterns and zero/positive states must match individually. Different bookings only.",
+    "scope": "Retrospective diagnostic on 6954 development labels. Exact maxima apply only to the named feature list and observed sample; close matches impose no upper bound."
+  }
+}
