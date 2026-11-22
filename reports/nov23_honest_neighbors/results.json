@@ -1,0 +1,59 @@
+{
+  "assessed": 6954,
+  "folds": [
+    {
+      "query": 2318,
+      "reference": 3674
+    },
+    {
+      "query": 2318,
+      "reference": 3716
+    },
+    {
+      "query": 2318,
+      "reference": 3726
+    }
+  ],
+  "results": {
+    "ordinary_forest": {
+      "accuracy": 0.8004026459591602,
+      "fixed": 253,
+      "harmed": 349,
+      "fold_net": [
+        -50,
+        -12,
+        -34
+      ],
+      "hard_fixed": 13,
+      "hard_harmed": 4,
+      "persistent_fixed": 9,
+      "persistent_harmed": 4,
+      "fold_accuracy": [
+        0.7963761863675582,
+        0.8106125970664366,
+        0.7942191544434858
+      ]
+    },
+    "honest_forest_metric": {
+      "accuracy": 0.7969513948806443,
+      "fixed": 325,
+      "harmed": 445,
+      "fold_net": [
+        -51,
+        -25,
+        -44
+      ],
+      "hard_fixed": 50,
+      "hard_harmed": 4,
+      "persistent_fixed": 39,
+      "persistent_harmed": 4,
+      "fold_accuracy": [
+        0.7959447799827437,
+        0.8050043140638481,
+        0.7899050905953409
+      ]
+    }
+  },
+  "exclusive_vs_ordinary": 131,
+  "notes": "Original evaluation folds; whole evaluation bookings excluded from both reference partitions. Group size is computed from the unlabeled development subset. All decisions use threshold 0.5."
+}
