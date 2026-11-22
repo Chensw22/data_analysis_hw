@@ -1,0 +1,53 @@
+{
+  "rows": 6954,
+  "protocol": "Original three folds, shared unlabeled roster features, fixed 0.5 cutoff.",
+  "historical_models": [
+    "v44",
+    "rawMitra",
+    "v81",
+    "TabDPT",
+    "Kumo",
+    "EXAONE",
+    "v93"
+  ],
+  "scores": {
+    "raw": {
+      "accuracy": 0.8123382226056945,
+      "logloss": 0.3866672368307367,
+      "fixed": 233,
+      "harmed": 246,
+      "hard_fixed": 3,
+      "hard_harmed": 6,
+      "fold_net": [
+        1,
+        -13,
+        -1
+      ]
+    },
+    "quantile": {
+      "accuracy": 0.8090307736554501,
+      "logloss": 0.3904024085612088,
+      "fixed": 230,
+      "harmed": 266,
+      "hard_fixed": 4,
+      "hard_harmed": 5,
+      "fold_net": [
+        -21,
+        -5,
+        -10
+      ]
+    }
+  },
+  "exclusive": {
+    "quantile": {
+      "repairs_not_found_by_other": 79,
+      "hard_repairs_not_found_by_other": 3,
+      "repairs_missed_by_other_and_authenticated_models": 24
+    },
+    "raw": {
+      "repairs_not_found_by_other": 82,
+      "hard_repairs_not_found_by_other": 2,
+      "repairs_missed_by_other_and_authenticated_models": 15
+    }
+  }
+}
