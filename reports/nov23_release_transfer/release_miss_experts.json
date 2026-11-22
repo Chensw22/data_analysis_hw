@@ -1,0 +1,1272 @@
+{
+  "families": 50,
+  "cohorts": {
+    "all_release_errors": {
+      "rows": 941,
+      "any_stable": 465,
+      "none_ever": 171,
+      "best_pair": [
+        "archive/registration_only",
+        "additional/shared"
+      ],
+      "best_pair_union": 261,
+      "largest_single": 194
+    },
+    "paid_transported": {
+      "rows": 415,
+      "any_stable": 136,
+      "none_ever": 113,
+      "best_pair": [
+        "archive/feature_projections",
+        "archive/registration_rank"
+      ],
+      "best_pair_union": 56,
+      "largest_single": 33
+    },
+    "zero_stayed": {
+      "rows": 281,
+      "any_stable": 100,
+      "none_ever": 57,
+      "best_pair": [
+        "archive/registration_only",
+        "additional/shared"
+      ],
+      "best_pair_union": 54,
+      "largest_single": 42
+    },
+    "rest": {
+      "rows": 245,
+      "any_stable": 229,
+      "none_ever": 1,
+      "best_pair": [
+        "archive/registration_only",
+        "additional/bills"
+      ],
+      "best_pair_union": 201,
+      "largest_single": 165
+    }
+  },
+  "members": {
+    "archive/sparse_rules": {
+      "accuracy": [
+        0.8058671268334772,
+        0.8073051481161921,
+        0.8048605119355766
+      ],
+      "fixed": [
+        229,
+        249,
+        232
+      ],
+      "harmed": [
+        311,
+        291,
+        294
+      ],
+      "stable": {
+        "all_release_errors": 33,
+        "paid_transported": 7,
+        "zero_stayed": 8,
+        "rest": 18
+      }
+    },
+    "archive/tabular_in_context": {
+      "accuracy": [
+        0.8117630140926085,
+        0.8120506183491516,
+        0.8088869715271786
+      ],
+      "fixed": [
+        123,
+        127,
+        120
+      ],
+      "harmed": [
+        164,
+        136,
+        154
+      ],
+      "stable": {
+        "all_release_errors": 20,
+        "paid_transported": 7,
+        "zero_stayed": 3,
+        "rest": 10
+      }
+    },
+    "archive/constructed_features": {
+      "accuracy": [
+        0.812482024733966,
+        0.8106125970664366,
+        0.8109002013229796
+      ],
+      "fixed": [
+        139,
+        154,
+        149
+      ],
+      "harmed": [
+        175,
+        173,
+        169
+      ],
+      "stable": {
+        "all_release_errors": 27,
+        "paid_transported": 6,
+        "zero_stayed": 1,
+        "rest": 20
+      }
+    },
+    "archive/feature_projections": {
+      "accuracy": [
+        0.8022720736266897,
+        0.8016968651136037,
+        0.8005464480874317
+      ],
+      "fixed": [
+        233,
+        225,
+        230
+      ],
+      "harmed": [
+        340,
+        306,
+        322
+      ],
+      "stable": {
+        "all_release_errors": 88,
+        "paid_transported": 33,
+        "zero_stayed": 18,
+        "rest": 37
+      }
+    },
+    "archive/peer_attributes": {
+      "accuracy": [
+        0.8081679608858211,
+        0.8071613459879207,
+        0.8057233247052057
+      ],
+      "fixed": [
+        177,
+        187,
+        182
+      ],
+      "harmed": [
+        243,
+        230,
+        238
+      ],
+      "stable": {
+        "all_release_errors": 31,
+        "paid_transported": 9,
+        "zero_stayed": 4,
+        "rest": 18
+      }
+    },
+    "archive/manifest_likelihood": {
+      "accuracy": [
+        0.7582686223756112,
+        0.7572620074777107,
+        0.7548173712970953
+      ],
+      "fixed": [
+        262,
+        277,
+        288
+      ],
+      "harmed": [
+        675,
+        667,
+        698
+      ],
+      "stable": {
+        "all_release_errors": 132,
+        "paid_transported": 12,
+        "zero_stayed": 1,
+        "rest": 119
+      }
+    },
+    "archive/boarding_sequence": {
+      "accuracy": [
+        0.8100373885533506,
+        0.8075927523727351,
+        0.8047167098073051
+      ],
+      "fixed": [
+        168,
+        159,
+        176
+      ],
+      "harmed": [
+        221,
+        199,
+        239
+      ],
+      "stable": {
+        "all_release_errors": 24,
+        "paid_transported": 4,
+        "zero_stayed": 4,
+        "rest": 16
+      }
+    },
+    "archive/gradient_kernel": {
+      "accuracy": [
+        0.8009778544722462,
+        0.7939315501869427,
+        0.7932125395455852
+      ],
+      "fixed": [
+        277,
+        264,
+        270
+      ],
+      "harmed": [
+        393,
+        399,
+        413
+      ],
+      "stable": {
+        "all_release_errors": 81,
+        "paid_transported": 19,
+        "zero_stayed": 19,
+        "rest": 43
+      }
+    },
+    "archive/budget_prior": {
+      "accuracy": [
+        0.7673281564567156,
+        0.7621512798389416,
+        0.7638769053781996
+      ],
+      "fixed": [
+        292,
+        306,
+        312
+      ],
+      "harmed": [
+        642,
+        662,
+        659
+      ],
+      "stable": {
+        "all_release_errors": 141,
+        "paid_transported": 18,
+        "zero_stayed": 4,
+        "rest": 119
+      }
+    },
+    "archive/bayesian_forest": {
+      "accuracy": [
+        0.8085993672706356,
+        0.808455565142364,
+        0.8083117630140926
+      ],
+      "fixed": [
+        154,
+        172,
+        187
+      ],
+      "harmed": [
+        217,
+        206,
+        225
+      ],
+      "stable": {
+        "all_release_errors": 49,
+        "paid_transported": 20,
+        "zero_stayed": 7,
+        "rest": 22
+      }
+    },
+    "archive/tensor_train": {
+      "accuracy": [
+        0.7992522289329882,
+        0.7965199884958297,
+        0.7998274374460742
+      ],
+      "fixed": [
+        235,
+        226,
+        268
+      ],
+      "harmed": [
+        363,
+        343,
+        365
+      ],
+      "stable": {
+        "all_release_errors": 65,
+        "paid_transported": 14,
+        "zero_stayed": 19,
+        "rest": 32
+      }
+    },
+    "archive/passenger_relation": {
+      "accuracy": [
+        0.7979580097785447,
+        0.7917745182628703,
+        0.7920621225194133
+      ],
+      "fixed": [
+        286,
+        241,
+        293
+      ],
+      "harmed": [
+        423,
+        391,
+        444
+      ],
+      "stable": {
+        "all_release_errors": 66,
+        "paid_transported": 11,
+        "zero_stayed": 16,
+        "rest": 39
+      }
+    },
+    "archive/registration_only": {
+      "accuracy": [
+        0.7448950244463618,
+        0.7417313776243888,
+        0.7438884095484614
+      ],
+      "fixed": [
+        347,
+        360,
+        356
+      ],
+      "harmed": [
+        853,
+        858,
+        842
+      ],
+      "stable": {
+        "all_release_errors": 194,
+        "paid_transported": 16,
+        "zero_stayed": 13,
+        "rest": 165
+      }
+    },
+    "archive/conditional_router": {
+      "accuracy": [
+        0.815070463042853,
+        0.8149266609145815,
+        0.8114754098360656
+      ],
+      "fixed": [
+        96,
+        114,
+        111
+      ],
+      "harmed": [
+        114,
+        103,
+        127
+      ],
+      "stable": {
+        "all_release_errors": 18,
+        "paid_transported": 1,
+        "zero_stayed": 1,
+        "rest": 16
+      }
+    },
+    "archive/across_deck_field": {
+      "accuracy": [
+        0.811044003451251,
+        0.8091745757837217,
+        0.8094621800402646
+      ],
+      "fixed": [
+        154,
+        138,
+        155
+      ],
+      "harmed": [
+        200,
+        167,
+        185
+      ],
+      "stable": {
+        "all_release_errors": 25,
+        "paid_transported": 7,
+        "zero_stayed": 1,
+        "rest": 17
+      }
+    },
+    "archive/apple_semantics": {
+      "accuracy": [
+        0.8119068162208801,
+        0.8054357204486626,
+        0.8039976991659477
+      ],
+      "fixed": [
+        171,
+        170,
+        158
+      ],
+      "harmed": [
+        211,
+        225,
+        226
+      ],
+      "stable": {
+        "all_release_errors": 28,
+        "paid_transported": 8,
+        "zero_stayed": 5,
+        "rest": 15
+      }
+    },
+    "archive/booking_mixup": {
+      "accuracy": [
+        0.8133448375035951,
+        0.8083117630140926,
+        0.8090307736554501
+      ],
+      "fixed": [
+        141,
+        141,
+        150
+      ],
+      "harmed": [
+        171,
+        176,
+        183
+      ],
+      "stable": {
+        "all_release_errors": 24,
+        "paid_transported": 4,
+        "zero_stayed": 3,
+        "rest": 17
+      }
+    },
+    "archive/booking_scoring": {
+      "accuracy": [
+        0.81765890135174,
+        0.8142076502732241,
+        0.813632441760138
+      ],
+      "fixed": [
+        15,
+        42,
+        21
+      ],
+      "harmed": [
+        15,
+        36,
+        22
+      ],
+      "stable": {
+        "all_release_errors": 15,
+        "paid_transported": 4,
+        "zero_stayed": 0,
+        "rest": 11
+      }
+    },
+    "archive/class_analogues": {
+      "accuracy": [
+        0.7981018119068162,
+        0.7996836353178027,
+        0.7996836353178027
+      ],
+      "fixed": [
+        229,
+        230,
+        231
+      ],
+      "harmed": [
+        365,
+        325,
+        329
+      ],
+      "stable": {
+        "all_release_errors": 92,
+        "paid_transported": 17,
+        "zero_stayed": 9,
+        "rest": 66
+      }
+    },
+    "archive/conditional_view_density": {
+      "accuracy": [
+        0.8022720736266897,
+        0.8037100949094047,
+        0.8019844693701467
+      ],
+      "fixed": [
+        201,
+        198,
+        202
+      ],
+      "harmed": [
+        308,
+        265,
+        284
+      ],
+      "stable": {
+        "all_release_errors": 53,
+        "paid_transported": 6,
+        "zero_stayed": 0,
+        "rest": 47
+      }
+    },
+    "archive/exact_booking_field": {
+      "accuracy": [
+        0.818809318377912,
+        0.8146390566580385,
+        0.8134886396318666
+      ],
+      "fixed": [
+        22,
+        38,
+        20
+      ],
+      "harmed": [
+        14,
+        29,
+        22
+      ],
+      "stable": {
+        "all_release_errors": 17,
+        "paid_transported": 5,
+        "zero_stayed": 1,
+        "rest": 11
+      }
+    },
+    "archive/field_factors": {
+      "accuracy": [
+        0.7817083692838654,
+        0.7868852459016393,
+        0.7818521714121369
+      ],
+      "fixed": [
+        322,
+        355,
+        343
+      ],
+      "harmed": [
+        572,
+        539,
+        565
+      ],
+      "stable": {
+        "all_release_errors": 51,
+        "paid_transported": 19,
+        "zero_stayed": 12,
+        "rest": 20
+      }
+    },
+    "archive/gibbs_manifest": {
+      "accuracy": [
+        0.778400920333621,
+        0.7750934713833765,
+        0.7739430543572045
+      ],
+      "fixed": [
+        288,
+        295,
+        311
+      ],
+      "harmed": [
+        561,
+        561,
+        588
+      ],
+      "stable": {
+        "all_release_errors": 91,
+        "paid_transported": 14,
+        "zero_stayed": 13,
+        "rest": 64
+      }
+    },
+    "archive/group_disputes": {
+      "accuracy": [
+        0.8146390566580385,
+        0.813057233247052,
+        0.811044003451251
+      ],
+      "fixed": [
+        117,
+        237,
+        149
+      ],
+      "harmed": [
+        138,
+        239,
+        168
+      ],
+      "stable": {
+        "all_release_errors": 16,
+        "paid_transported": 5,
+        "zero_stayed": 1,
+        "rest": 10
+      }
+    },
+    "archive/masked_views": {
+      "accuracy": [
+        0.8103249928098936,
+        0.811044003451251,
+        0.8123382226056945
+      ],
+      "fixed": [
+        169,
+        167,
+        183
+      ],
+      "harmed": [
+        220,
+        183,
+        193
+      ],
+      "stable": {
+        "all_release_errors": 25,
+        "paid_transported": 6,
+        "zero_stayed": 2,
+        "rest": 17
+      }
+    },
+    "archive/ordered_states": {
+      "accuracy": [
+        0.8180903077365546,
+        0.815933275812482,
+        0.8121944204774231
+      ],
+      "fixed": [
+        56,
+        63,
+        59
+      ],
+      "harmed": [
+        53,
+        45,
+        70
+      ],
+      "stable": {
+        "all_release_errors": 17,
+        "paid_transported": 6,
+        "zero_stayed": 2,
+        "rest": 9
+      }
+    },
+    "archive/pair_pretext": {
+      "accuracy": [
+        0.8146390566580385,
+        0.8067299396031061,
+        0.808455565142364
+      ],
+      "fixed": [
+        175,
+        156,
+        169
+      ],
+      "harmed": [
+        196,
+        202,
+        206
+      ],
+      "stable": {
+        "all_release_errors": 25,
+        "paid_transported": 6,
+        "zero_stayed": 3,
+        "rest": 16
+      }
+    },
+    "archive/party_hotdeck": {
+      "accuracy": [
+        0.815645671555939,
+        0.8078803566292782,
+        0.8068737417313776
+      ],
+      "fixed": [
+        155,
+        139,
+        148
+      ],
+      "harmed": [
+        169,
+        177,
+        196
+      ],
+      "stable": {
+        "all_release_errors": 27,
+        "paid_transported": 3,
+        "zero_stayed": 1,
+        "rest": 23
+      }
+    },
+    "archive/passenger_sampler": {
+      "accuracy": [
+        0.8114754098360656,
+        0.8098935864250791,
+        0.8061547310900201
+      ],
+      "fixed": [
+        159,
+        151,
+        155
+      ],
+      "harmed": [
+        202,
+        175,
+        208
+      ],
+      "stable": {
+        "all_release_errors": 25,
+        "paid_transported": 4,
+        "zero_stayed": 2,
+        "rest": 19
+      }
+    },
+    "archive/registration_rank": {
+      "accuracy": [
+        0.7811331607707794,
+        0.7834339948231234,
+        0.7844406097210239
+      ],
+      "fixed": [
+        307,
+        310,
+        335
+      ],
+      "harmed": [
+        561,
+        518,
+        539
+      ],
+      "stable": {
+        "all_release_errors": 93,
+        "paid_transported": 31,
+        "zero_stayed": 6,
+        "rest": 56
+      }
+    },
+    "archive/residual_discovery": {
+      "accuracy": [
+        0.8077365545010066,
+        0.8088869715271786,
+        0.8090307736554501
+      ],
+      "fixed": [
+        201,
+        204,
+        227
+      ],
+      "harmed": [
+        270,
+        235,
+        260
+      ],
+      "stable": {
+        "all_release_errors": 31,
+        "paid_transported": 10,
+        "zero_stayed": 6,
+        "rest": 15
+      }
+    },
+    "archive/residual_registration": {
+      "accuracy": [
+        0.7995398331895313,
+        0.7989646246764452,
+        0.8027034800115042
+      ],
+      "fixed": [
+        267,
+        261,
+        283
+      ],
+      "harmed": [
+        393,
+        361,
+        360
+      ],
+      "stable": {
+        "all_release_errors": 65,
+        "paid_transported": 24,
+        "zero_stayed": 18,
+        "rest": 23
+      }
+    },
+    "archive/rule_context_pool": {
+      "accuracy": [
+        0.818521714121369,
+        0.815070463042853,
+        0.8152142651711245
+      ],
+      "fixed": [
+        87,
+        87,
+        92
+      ],
+      "harmed": [
+        81,
+        75,
+        82
+      ],
+      "stable": {
+        "all_release_errors": 19,
+        "paid_transported": 3,
+        "zero_stayed": 3,
+        "rest": 13
+      }
+    },
+    "archive/selective_fields": {
+      "accuracy": [
+        0.8163646821972965,
+        0.8160770779407536,
+        0.8107563991947081
+      ],
+      "fixed": [
+        103,
+        147,
+        80
+      ],
+      "harmed": [
+        112,
+        128,
+        101
+      ],
+      "stable": {
+        "all_release_errors": 23,
+        "paid_transported": 10,
+        "zero_stayed": 2,
+        "rest": 11
+      }
+    },
+    "archive/spend_copula": {
+      "accuracy": [
+        0.8050043140638481,
+        0.7989646246764452,
+        0.8042853034224906
+      ],
+      "fixed": [
+        190,
+        175,
+        221
+      ],
+      "harmed": [
+        278,
+        275,
+        287
+      ],
+      "stable": {
+        "all_release_errors": 49,
+        "paid_transported": 13,
+        "zero_stayed": 3,
+        "rest": 33
+      }
+    },
+    "archive/spend_exceptions": {
+      "accuracy": [
+        0.8123382226056945,
+        0.8074489502444636,
+        0.8087431693989071
+      ],
+      "fixed": [
+        179,
+        180,
+        187
+      ],
+      "harmed": [
+        216,
+        221,
+        222
+      ],
+      "stable": {
+        "all_release_errors": 32,
+        "paid_transported": 6,
+        "zero_stayed": 7,
+        "rest": 19
+      }
+    },
+    "archive/symbolic_residuals": {
+      "accuracy": [
+        0.8178027034800115,
+        0.814495254529767,
+        0.813920046016681
+      ],
+      "fixed": [
+        29,
+        44,
+        39
+      ],
+      "harmed": [
+        28,
+        36,
+        38
+      ],
+      "stable": {
+        "all_release_errors": 18,
+        "paid_transported": 7,
+        "zero_stayed": 1,
+        "rest": 10
+      }
+    },
+    "archive/teacher_field_offsets": {
+      "accuracy": [
+        0.7903364969801553,
+        0.8016968651136037,
+        0.7973828012654587
+      ],
+      "fixed": [
+        210,
+        233,
+        244
+      ],
+      "harmed": [
+        400,
+        314,
+        358
+      ],
+      "stable": {
+        "all_release_errors": 36,
+        "paid_transported": 12,
+        "zero_stayed": 6,
+        "rest": 18
+      }
+    },
+    "archive/training_cohort_sensitivity": {
+      "accuracy": [
+        0.8157894736842105,
+        0.819096922634455,
+        0.8129134311187806
+      ],
+      "fixed": [
+        40,
+        99,
+        61
+      ],
+      "harmed": [
+        53,
+        59,
+        67
+      ],
+      "stable": {
+        "all_release_errors": 17,
+        "paid_transported": 8,
+        "zero_stayed": 0,
+        "rest": 9
+      }
+    },
+    "archive/transported_subclasses": {
+      "accuracy": [
+        0.8061547310900201,
+        0.8029910842680472,
+        0.8057233247052057
+      ],
+      "fixed": [
+        121,
+        113,
+        152
+      ],
+      "harmed": [
+        201,
+        185,
+        208
+      ],
+      "stable": {
+        "all_release_errors": 42,
+        "paid_transported": 8,
+        "zero_stayed": 2,
+        "rest": 32
+      }
+    },
+    "additional/orion": {
+      "accuracy": [
+        0.8002588438308887,
+        0.7993960310612597,
+        0.7986770204199022
+      ],
+      "fixed": [
+        211,
+        225,
+        193
+      ],
+      "harmed": [
+        332,
+        322,
+        298
+      ],
+      "stable": {
+        "all_release_errors": 55,
+        "paid_transported": 17,
+        "zero_stayed": 1,
+        "rest": 37
+      }
+    },
+    "additional/iltm_concat": {
+      "accuracy": [
+        0.7746620649985619,
+        0.7545297670405522,
+        0.7825711820534944
+      ],
+      "fixed": [
+        241,
+        305,
+        312
+      ],
+      "harmed": [
+        540,
+        714,
+        529
+      ],
+      "stable": {
+        "all_release_errors": 53,
+        "paid_transported": 5,
+        "zero_stayed": 0,
+        "rest": 48
+      }
+    },
+    "additional/variational_gp": {
+      "accuracy": [
+        0.8021282714984181,
+        0.8014092608570607,
+        0.8022720736266897
+      ],
+      "fixed": [
+        195,
+        180,
+        197
+      ],
+      "harmed": [
+        303,
+        263,
+        277
+      ],
+      "stable": {
+        "all_release_errors": 78,
+        "paid_transported": 31,
+        "zero_stayed": 8,
+        "rest": 39
+      }
+    },
+    "additional/berth_activity": {
+      "accuracy": [
+        0.8064423353465632,
+        0.8032786885245902,
+        0.8041415012942191
+      ],
+      "fixed": [
+        225,
+        227,
+        245
+      ],
+      "harmed": [
+        303,
+        297,
+        312
+      ],
+      "stable": {
+        "all_release_errors": 59,
+        "paid_transported": 16,
+        "zero_stayed": 12,
+        "rest": 31
+      }
+    },
+    "additional/manifest_reconstruction": {
+      "accuracy": [
+        0.8090307736554501,
+        0.8042853034224906,
+        0.8070175438596491
+      ],
+      "fixed": [
+        217,
+        210,
+        223
+      ],
+      "harmed": [
+        277,
+        273,
+        270
+      ],
+      "stable": {
+        "all_release_errors": 37,
+        "paid_transported": 8,
+        "zero_stayed": 6,
+        "rest": 23
+      }
+    },
+    "additional/native_carte": {
+      "accuracy": [
+        0.7681909692263446,
+        0.7653149266609146,
+        0.7710670117917745
+      ],
+      "fixed": [
+        290,
+        270,
+        285
+      ],
+      "harmed": [
+        634,
+        604,
+        582
+      ],
+      "stable": {
+        "all_release_errors": 76,
+        "paid_transported": 16,
+        "zero_stayed": 1,
+        "rest": 59
+      }
+    },
+    "additional/shared": {
+      "accuracy": [
+        0.7474834627552488,
+        0.7448950244463618,
+        0.7389991371872304
+      ],
+      "fixed": [
+        374,
+        399,
+        408
+      ],
+      "harmed": [
+        862,
+        875,
+        928
+      ],
+      "stable": {
+        "all_release_errors": 117,
+        "paid_transported": 18,
+        "zero_stayed": 42,
+        "rest": 57
+      }
+    },
+    "additional/bills": {
+      "accuracy": [
+        0.7844406097210239,
+        0.7808455565142364,
+        0.7821397756686799
+      ],
+      "fixed": [
+        255,
+        269,
+        249
+      ],
+      "harmed": [
+        486,
+        495,
+        469
+      ],
+      "stable": {
+        "all_release_errors": 85,
+        "paid_transported": 22,
+        "zero_stayed": 0,
+        "rest": 63
+      }
+    },
+    "additional/rotation": {
+      "accuracy": [
+        0.8065861374748347,
+        0.8064423353465632,
+        0.8051481161921197
+      ],
+      "fixed": [
+        244,
+        277,
+        266
+      ],
+      "harmed": [
+        321,
+        325,
+        326
+      ],
+      "stable": {
+        "all_release_errors": 58,
+        "paid_transported": 16,
+        "zero_stayed": 20,
+        "rest": 22
+      }
+    },
+    "additional/mondrian": {
+      "accuracy": [
+        0.7840092033362094,
+        0.780989358642508,
+        0.7840092033362094
+      ],
+      "fixed": [
+        277,
+        278,
+        302
+      ],
+      "harmed": [
+        511,
+        503,
+        509
+      ],
+      "stable": {
+        "all_release_errors": 124,
+        "paid_transported": 3,
+        "zero_stayed": 20,
+        "rest": 101
+      }
+    }
+  },
+  "baseline": {
+    "accuracy": [
+      0.81765890135174,
+      0.8133448375035951,
+      0.8137762438884095
+    ],
+    "fixed": [
+      0,
+      0,
+      0
+    ],
+    "harmed": [
+      0,
+      0,
+      0
+    ],
+    "stable": {
+      "all_release_errors": 18,
+      "paid_transported": 5,
+      "zero_stayed": 1,
+      "rest": 12
+    }
+  },
+  "blends": {
+    "global": {
+      "accuracy": [
+        0.81765890135174,
+        0.816220880069025,
+        0.8101811906816221
+      ],
+      "fixed": [
+        134,
+        162,
+        122
+      ],
+      "harmed": [
+        134,
+        142,
+        147
+      ],
+      "stable": {
+        "all_release_errors": 18,
+        "paid_transported": 8,
+        "zero_stayed": 2,
+        "rest": 8
+      }
+    },
+    "bill_interactions": {
+      "accuracy": [
+        0.8143514524014955,
+        0.8183779119930975,
+        0.8147828587863101
+      ],
+      "fixed": [
+        146,
+        199,
+        182
+      ],
+      "harmed": [
+        169,
+        164,
+        175
+      ],
+      "stable": {
+        "all_release_errors": 23,
+        "paid_transported": 9,
+        "zero_stayed": 5,
+        "rest": 9
+      }
+    }
+  }
+}
