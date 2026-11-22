@@ -1,0 +1,363 @@
+{
+  "rows": 6954,
+  "original_methods": [
+    "sparse_rules",
+    "tabular_in_context",
+    "constructed_features",
+    "feature_projections",
+    "peer_attributes",
+    "manifest_likelihood",
+    "boarding_sequence",
+    "gradient_kernel",
+    "budget_prior",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "registration_only",
+    "conditional_router"
+  ],
+  "additional_experiments": {
+    "across_deck_field": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 26,
+      "full_accuracy": [
+        0.811044003451251,
+        0.8091745757837217,
+        0.8094621800402646
+      ]
+    },
+    "apple_semantics": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 30,
+      "full_accuracy": [
+        0.8119068162208801,
+        0.8054357204486626,
+        0.8039976991659477
+      ]
+    },
+    "booking_mixup": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 27,
+      "full_accuracy": [
+        0.8133448375035951,
+        0.8083117630140926,
+        0.8090307736554501
+      ]
+    },
+    "booking_scoring": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 0,
+      "full_accuracy": [
+        0.81765890135174,
+        0.8142076502732241,
+        0.813632441760138
+      ]
+    },
+    "class_analogues": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 143,
+      "full_accuracy": [
+        0.7981018119068162,
+        0.7996836353178027,
+        0.7996836353178027
+      ]
+    },
+    "conditional_view_density": {
+      "stable_recoveries": 1,
+      "positive": 1,
+      "negative": 0,
+      "exclusive": 1,
+      "newly_wrong_on_all_three": 80,
+      "full_accuracy": [
+        0.8022720736266897,
+        0.8037100949094047,
+        0.8019844693701467
+      ]
+    },
+    "exact_booking_field": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 0,
+      "full_accuracy": [
+        0.818809318377912,
+        0.8146390566580385,
+        0.8134886396318666
+      ]
+    },
+    "field_factors": {
+      "stable_recoveries": 4,
+      "positive": 3,
+      "negative": 1,
+      "exclusive": 4,
+      "newly_wrong_on_all_three": 116,
+      "full_accuracy": [
+        0.7817083692838654,
+        0.7868852459016393,
+        0.7818521714121369
+      ]
+    },
+    "gibbs_manifest": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 257,
+      "full_accuracy": [
+        0.778400920333621,
+        0.7750934713833765,
+        0.7739430543572045
+      ]
+    },
+    "group_disputes": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 5,
+      "full_accuracy": [
+        0.8146390566580385,
+        0.813057233247052,
+        0.811044003451251
+      ]
+    },
+    "masked_views": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 22,
+      "full_accuracy": [
+        0.8103249928098936,
+        0.811044003451251,
+        0.8123382226056945
+      ]
+    },
+    "ordered_states": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 2,
+      "full_accuracy": [
+        0.8180903077365546,
+        0.815933275812482,
+        0.8121944204774231
+      ]
+    },
+    "pair_pretext": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 21,
+      "full_accuracy": [
+        0.8146390566580385,
+        0.8067299396031061,
+        0.808455565142364
+      ]
+    },
+    "party_hotdeck": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 32,
+      "full_accuracy": [
+        0.815645671555939,
+        0.8078803566292782,
+        0.8068737417313776
+      ]
+    },
+    "passenger_sampler": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 26,
+      "full_accuracy": [
+        0.8114754098360656,
+        0.8098935864250791,
+        0.8061547310900201
+      ]
+    },
+    "registration_rank": {
+      "stable_recoveries": 1,
+      "positive": 0,
+      "negative": 1,
+      "exclusive": 1,
+      "newly_wrong_on_all_three": 218,
+      "full_accuracy": [
+        0.7811331607707794,
+        0.7834339948231234,
+        0.7844406097210239
+      ]
+    },
+    "residual_discovery": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 32,
+      "full_accuracy": [
+        0.8077365545010066,
+        0.8088869715271786,
+        0.8090307736554501
+      ]
+    },
+    "residual_registration": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 113,
+      "full_accuracy": [
+        0.7995398331895313,
+        0.7989646246764452,
+        0.8027034800115042
+      ]
+    },
+    "rule_context_pool": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 3,
+      "full_accuracy": [
+        0.818521714121369,
+        0.815070463042853,
+        0.8152142651711245
+      ]
+    },
+    "selective_fields": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 2,
+      "full_accuracy": [
+        0.8163646821972965,
+        0.8160770779407536,
+        0.8107563991947081
+      ]
+    },
+    "spend_copula": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 79,
+      "full_accuracy": [
+        0.8050043140638481,
+        0.7989646246764452,
+        0.8042853034224906
+      ]
+    },
+    "spend_exceptions": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 34,
+      "full_accuracy": [
+        0.8123382226056945,
+        0.8074489502444636,
+        0.8087431693989071
+      ]
+    },
+    "symbolic_residuals": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 0,
+      "full_accuracy": [
+        0.8178027034800115,
+        0.814495254529767,
+        0.813920046016681
+      ]
+    },
+    "teacher_field_offsets": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 54,
+      "full_accuracy": [
+        0.7903364969801553,
+        0.8016968651136037,
+        0.7973828012654587
+      ]
+    },
+    "training_cohort_sensitivity": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 1,
+      "full_accuracy": [
+        0.8157894736842105,
+        0.819096922634455,
+        0.8129134311187806
+      ]
+    },
+    "transported_subclasses": {
+      "stable_recoveries": 0,
+      "positive": 0,
+      "negative": 0,
+      "exclusive": 0,
+      "newly_wrong_on_all_three": 47,
+      "full_accuracy": [
+        0.8061547310900201,
+        0.8029910842680472,
+        0.8057233247052057
+      ]
+    }
+  },
+  "cohorts": {
+    "originally_unresolved": {
+      "rows": 365,
+      "transported": 232,
+      "not_transported": 133,
+      "bookings": 354,
+      "earth": 263
+    },
+    "still_unresolved": {
+      "rows": 252,
+      "transported": 163,
+      "not_transported": 89,
+      "bookings": 246,
+      "earth": 179
+    },
+    "at_least_one_stable": {
+      "rows": 6,
+      "transported": 4,
+      "not_transported": 2,
+      "bookings": 6,
+      "earth": 5
+    },
+    "at_least_one_hit": {
+      "rows": 113,
+      "transported": 69,
+      "not_transported": 44,
+      "bookings": 111,
+      "earth": 84
+    }
+  }
+}
