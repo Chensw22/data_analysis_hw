@@ -1,0 +1,38 @@
+{
+  "seed": 20261112,
+  "rows": "617a0c9b92c1cc61f803ae60719c48e840fb3985c370a4ba7207a4e6c97aa071",
+  "target": "938538edbeb4b7a7e8390a1d288341b687c6142fc2aaedd6c3e830ce918e429b",
+  "model": {
+    "max_steps": 50,
+    "episode_support": 3072,
+    "episode_query": 256,
+    "validation_fraction": 0.2,
+    "query_chunk": 2318,
+    "trainable_parameters": 75670026,
+    "selection": "minimum full-context inner binary logloss; earliest exact tie including step0",
+    "sampler": "support=concat(perm[:1024],perm[1280:3328]);query=perm[1024:1280]",
+    "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+    "learning_rate": 3e-06,
+    "weight_decay": 0.3,
+    "warmup": "literal official schedule",
+    "fresh_full_refit": true
+  },
+  "source_hashes": {
+    "mitra_support3072.py": "3d7759b2e359db474ebe8f6b933da5c668e278fcd2c80c013123f3ce70a38501",
+    "mitra_long_context_probe.py": "77a30b8fdd9e080b90f2c12ba333e41144230ef03d7fa5b8bc237cc8e93b5f0c",
+    "mitra_full_episode.py": "b21aec2786cb1b577bcb0214c82738e85ae90b87b6e6699d5df14bb060733506",
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394"
+  },
+  "checkpoint_sha256": "5ffab0e2cf52f61c5b7c7eb1e8542996736d1023a0212190cc09abc2119a1e09",
+  "references": {
+    "artifacts/top5_group_phase/refs/v44/group_20261112.npz": "6f5f64b60ff5d383451d990f6c41d68c0250c60aa2c87405c4aecfac77e83ebe",
+    "artifacts/nov23_group_kernel/20261112.npz": "c0a8ba9adf4b1428e5bab6ccb5162ff50dc7831f2b70d55936d7ff9b28ffb1b1",
+    "artifacts/nov23_sparse_rules/20261112.npz": "127c7c49d9d37bbcf42bfcfc5ce2dad46707917610332872f7c9e0d0c7233892"
+  },
+  "assessments": [
+    "v93",
+    "equal_v93_v44",
+    "three_quarters_equal_pair_one_quarter_rules"
+  ],
+  "partitions": "Whole bookings separate in outer folds. The unchanged v93 inner validation selects steps on a random split within outer training."
+}
