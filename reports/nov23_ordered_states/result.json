@@ -1,0 +1,155 @@
+{
+  "results": {
+    "20261112": {
+      "booking": {
+        "accuracy": 0.81765890135174,
+        "fixed": 4,
+        "harmed": 4,
+        "persistent1070": 1,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.7612727248239628,
+          0.8485209531549117,
+          0.8598303227730447
+        ]
+      },
+      "booking_permuted": {
+        "accuracy": 0.818234109864826,
+        "fixed": 11,
+        "harmed": 7,
+        "persistent1070": 4,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.8526446791715645,
+          0.6205418399350711,
+          0.7199269724783791
+        ]
+      },
+      "cabin": {
+        "accuracy": 0.8180903077365546,
+        "fixed": 56,
+        "harmed": 53,
+        "persistent1070": 23,
+        "unresolved466": 1,
+        "posterior_no_state": [
+          0.15087041147239866,
+          0.2528367738124575,
+          0.14958876121649925
+        ]
+      },
+      "cabin_permuted": {
+        "accuracy": 0.8175150992234685,
+        "fixed": 7,
+        "harmed": 8,
+        "persistent1070": 1,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.5656952762848265,
+          0.9061868665387569,
+          0.5338658689710776
+        ]
+      }
+    },
+    "20261115": {
+      "booking": {
+        "accuracy": 0.8132010353753235,
+        "fixed": 6,
+        "harmed": 7,
+        "persistent1070": 0,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.8527173377018348,
+          0.6069646296121266,
+          0.9160888916897835
+        ]
+      },
+      "booking_permuted": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 8,
+        "harmed": 3,
+        "persistent1070": 4,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.7935074332522863,
+          0.5974214099049922,
+          0.8117843264568607
+        ]
+      },
+      "cabin": {
+        "accuracy": 0.815933275812482,
+        "fixed": 63,
+        "harmed": 45,
+        "persistent1070": 31,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.21544677328342787,
+          0.08494432814536032,
+          0.4604868481837009
+        ]
+      },
+      "cabin_permuted": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 10,
+        "harmed": 5,
+        "persistent1070": 3,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.6694461325923179,
+          0.8216467861088683,
+          0.6276672041126851
+        ]
+      }
+    },
+    "20261116": {
+      "booking": {
+        "accuracy": 0.813057233247052,
+        "fixed": 4,
+        "harmed": 9,
+        "persistent1070": 3,
+        "unresolved466": 1,
+        "posterior_no_state": [
+          0.6861631675851414,
+          0.8331847158875523,
+          0.8422586052990312
+        ]
+      },
+      "booking_permuted": {
+        "accuracy": 0.8137762438884095,
+        "fixed": 5,
+        "harmed": 5,
+        "persistent1070": 4,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.8858404241292894,
+          0.7861510239562964,
+          0.7893590425713891
+        ]
+      },
+      "cabin": {
+        "accuracy": 0.8121944204774231,
+        "fixed": 59,
+        "harmed": 70,
+        "persistent1070": 41,
+        "unresolved466": 2,
+        "posterior_no_state": [
+          0.09966790006356299,
+          0.4356975243821978,
+          0.0992151611166172
+        ]
+      },
+      "cabin_permuted": {
+        "accuracy": 0.813920046016681,
+        "fixed": 8,
+        "harmed": 7,
+        "persistent1070": 5,
+        "unresolved466": 0,
+        "posterior_no_state": [
+          0.730078735958833,
+          0.7244288677094205,
+          0.7984841741538695
+        ]
+      }
+    }
+  },
+  "definition": "Two latent risk regimes with exchangeable signs; amplitudes 0.25/0.6/1 times p(1-p), correlation lengths 4/20/100, integrated likelihood with 50% prior mass on independence. No outcomes from query bookings enter either filter."
+}
