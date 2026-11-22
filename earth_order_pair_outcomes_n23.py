@@ -89,10 +89,15 @@ def run():
             possible=strict&np.where(query_below,~y[j],y[j])
             is_reversal=np.where(query_below,y[i],~y[i])
             risk=np.where(query_below,given_no,1-given_yes)
+            base_risk=np.where(query_below,base[i],1-base[i])
             details.append(dict(query_people=len(q),scored_people=int(active.sum()),unique_pairs=len(i),
                 eligible_strict_pairs=int(possible.sum()),observed_reversals=int(is_reversal[possible].sum()),
                 reversal_auc=float(roc_auc_score(is_reversal[possible],risk[possible])),
+                baseline_reversal_auc=float(roc_auc_score(is_reversal[possible],base_risk[possible])),
                 reversal_ap=float(average_precision_score(is_reversal[possible],risk[possible]))))
+            np.savez_compressed(out/f"{seed}_{f}_comparisons.npz",query=row[i[possible]],
+                                anchor=row[j[possible]],reversal=is_reversal[possible],
+                                risk=risk[possible],base_risk=base_risk[possible])
         for name,p in list(predictions.items()):
             predictions[name+"_quarter"]=.75*base+.25*p
         scores={}
