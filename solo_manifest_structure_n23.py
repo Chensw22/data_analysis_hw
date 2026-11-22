@@ -148,6 +148,10 @@ def run():
             record[seed][k]=dict(accuracy=float(hit.mean()),by_scope={s:dict(correct=int((hit&m).sum()),
                 fixed=int((hit&~good&m).sum()),harmed=int((~hit&good&m).sum())) for s,m in masks.items()})
             history.setdefault(k,[]).append(hit)
+        cache = ART / "nov23_solo_structure"
+        cache.mkdir(exist_ok=True)
+        np.savez_compressed(cache / f"{seed}.npz", row=row, y=y, fold=fold, base=base,
+                            **{k: p for k, p in scores.items() if k != "baseline"})
         print(seed,{k:round(v["accuracy"],4) for k,v in record[seed].items()},flush=True)
     stable={k:{s:int((np.logical_and.reduce(v)&m).sum()) for s,m in masks.items()} for k,v in history.items()}
     write(REPORT/"results.json",dict(scopes={s:int(m.sum()) for s,m in masks.items()},representation=diagnostic,
