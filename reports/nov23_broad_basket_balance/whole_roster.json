@@ -1,0 +1,227 @@
+{
+  "plans": {
+    "20261112": {
+      "hindsight": {
+        "fixed": 157,
+        "harmed": 64,
+        "accuracy": 0.8310324992809893,
+        "net_by_fold": [
+          22,
+          46,
+          25
+        ]
+      },
+      "empirical": {
+        "fixed": 207,
+        "harmed": 241,
+        "accuracy": 0.8127696289905091,
+        "net_by_fold": [
+          -15,
+          -8,
+          -11
+        ]
+      },
+      "average": {
+        "fixed": 50,
+        "harmed": 54,
+        "accuracy": 0.817083692838654,
+        "net_by_fold": [
+          -7,
+          9,
+          -6
+        ]
+      },
+      "base_average": {
+        "fixed": 74,
+        "harmed": 63,
+        "accuracy": 0.8192407247627265,
+        "net_by_fold": [
+          -3,
+          17,
+          -3
+        ]
+      }
+    },
+    "20261115": {
+      "hindsight": {
+        "fixed": 311,
+        "harmed": 190,
+        "accuracy": 0.8307448950244464,
+        "net_by_fold": [
+          57,
+          35,
+          29
+        ]
+      },
+      "empirical": {
+        "fixed": 277,
+        "harmed": 295,
+        "accuracy": 0.8107563991947081,
+        "net_by_fold": [
+          3,
+          0,
+          -21
+        ]
+      },
+      "average": {
+        "fixed": 106,
+        "harmed": 77,
+        "accuracy": 0.8175150992234685,
+        "net_by_fold": [
+          23,
+          11,
+          -5
+        ]
+      },
+      "base_average": {
+        "fixed": 119,
+        "harmed": 82,
+        "accuracy": 0.8186655162496405,
+        "net_by_fold": [
+          22,
+          12,
+          3
+        ]
+      }
+    },
+    "20261116": {
+      "hindsight": {
+        "fixed": 153,
+        "harmed": 66,
+        "accuracy": 0.8262870290480299,
+        "net_by_fold": [
+          18,
+          26,
+          43
+        ]
+      },
+      "empirical": {
+        "fixed": 252,
+        "harmed": 293,
+        "accuracy": 0.8078803566292782,
+        "net_by_fold": [
+          -29,
+          -21,
+          9
+        ]
+      },
+      "average": {
+        "fixed": 125,
+        "harmed": 121,
+        "accuracy": 0.8143514524014955,
+        "net_by_fold": [
+          -10,
+          -7,
+          21
+        ]
+      },
+      "base_average": {
+        "fixed": 137,
+        "harmed": 129,
+        "accuracy": 0.8149266609145815,
+        "net_by_fold": [
+          -7,
+          -11,
+          26
+        ]
+      }
+    },
+    "v131": {
+      "hindsight": {
+        "fixed": 199,
+        "harmed": 109,
+        "accuracy": 0.8271498418176589,
+        "net_by_fold": [
+          33,
+          26,
+          31
+        ]
+      },
+      "empirical": {
+        "fixed": 223,
+        "harmed": 273,
+        "accuracy": 0.8070175438596491,
+        "net_by_fold": [
+          -32,
+          -16,
+          -2
+        ]
+      },
+      "average": {
+        "fixed": 131,
+        "harmed": 134,
+        "accuracy": 0.8137762438884095,
+        "net_by_fold": [
+          4,
+          2,
+          -9
+        ]
+      },
+      "base_average": {
+        "fixed": 124,
+        "harmed": 121,
+        "accuracy": 0.8146390566580385,
+        "net_by_fold": [
+          1,
+          9,
+          -7
+        ]
+      }
+    }
+  },
+  "stable": {
+    "hindsight": {
+      "ever": 138,
+      "repeat": 7,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 1,
+      "repeat_zero": 0
+    },
+    "empirical": {
+      "ever": 108,
+      "repeat": 19,
+      "unresolved": 2,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 17
+    },
+    "average": {
+      "ever": 83,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 0
+    },
+    "base_average": {
+      "ever": 97,
+      "repeat": 0,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "repeat_zero": 0
+    }
+  },
+  "rankers": [
+    "base",
+    "broad_basket_balance/basket",
+    "broad_basket_balance/weighted",
+    "broad_basket_balance/placebo",
+    "broad_basket_balance/coarse_native",
+    "broad_basket_balance/restored",
+    "service_assignment/unordered",
+    "service_assignment/factor_real",
+    "service_assignment/real",
+    "paid_register_likelihood/bill",
+    "paid_register_likelihood/forward",
+    "paid_register_likelihood/reverse",
+    "broad_service_transfer/update_native",
+    "broad_service_transfer/update_other",
+    "broad_service_transfer/update_aligned",
+    "broad_service_transfer/update_pooled",
+    "broad_neural_path/epoch_80",
+    "broad_boosting_path/trees_800",
+    "broad_training_membership/ordinary"
+  ]
+}
