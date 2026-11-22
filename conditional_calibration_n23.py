@@ -37,6 +37,29 @@ def offsets(x, z, y, t, q, penalty):
     return expit(z[q] + x[q] @ result.x)
 
 
+def corrected(base, fold, groups, context, y):
+    z = logit(base.clip(1e-6, 1-1e-6))
+    # One logit unit is shared by every slope, avoiding extreme passenger
+    # probabilities amplifying a correction fitted on a small calibration set.
+    basis = np.column_stack([np.ones(len(y)), np.clip(z, -4, 4)])
+    p = {key:np.full(len(y), np.nan) for key in ["score_only","context","placebo"]}
+    rng = np.random.default_rng(113)
+    for k in np.unique(fold):
+        pool = np.flatnonzero(fold == k)
+        assert not np.intersect1d(groups[pool], groups[fold != k]).size
+        # Shuffle covariates together within the base fold, preserving context counts.
+        placebo = context.copy()
+        placebo[pool] = context[rng.permutation(pool)]
+        for a, b in GroupKFold(3, shuffle=True, random_state=117).split(pool, groups=groups[pool]):
+            t, q = pool[a], pool[b]
+            assert not np.intersect1d(groups[t], groups[q]).size
+            for key, c in [("score_only", None), ("context", context), ("placebo", placebo)]:
+                x = basis if c is None else np.column_stack([basis, c, c*basis[:, 1:2]])
+                penalties = np.r_[np.repeat(2., 2), np.repeat(15., x.shape[1]-2)]
+                p[key][q] = offsets(x, z, y, t, q, penalties)
+    return p
+
+
 def run():
     frame = pd.read_csv(ART / "nov23_global_error_inventory.csv")
     rows = frame.row.to_numpy()
@@ -52,25 +75,7 @@ def run():
         with np.load(ART / f"nov23_group_kernel/{seed}.npz") as cache:
             fold, base = cache["fold"], cache["base"]
             verify(cache, rows, y, fold)
-        z = logit(base.clip(1e-6, 1-1e-6))
-        # One logit unit is shared by every slope, avoiding extreme passenger
-        # probabilities amplifying a correction fitted on a small calibration set.
-        basis = np.column_stack([np.ones(len(y)), np.clip(z, -4, 4)])
-        p = {key:np.full(len(y), np.nan) for key in ["score_only","context","placebo"]}
-        rng = np.random.default_rng(113)
-        for k in np.unique(fold):
-            pool = np.flatnonzero(fold == k)
-            assert not np.intersect1d(groups[pool], groups[fold != k]).size
-            # Shuffle covariates together within the base fold, preserving context counts.
-            placebo = context.copy()
-            placebo[pool] = context[rng.permutation(pool)]
-            for a, b in GroupKFold(3, shuffle=True, random_state=117).split(pool, groups=groups[pool]):
-                t, q = pool[a], pool[b]
-                assert not np.intersect1d(groups[t], groups[q]).size
-                for key, c in [("score_only", None), ("context", context), ("placebo", placebo)]:
-                    x = basis if c is None else np.column_stack([basis, c, c*basis[:, 1:2]])
-                    penalties = np.r_[np.repeat(2., 2), np.repeat(15., x.shape[1]-2)]
-                    p[key][q] = offsets(x, z, y, t, q, penalties)
+        p = corrected(base, fold, groups, context, y)
         before = (base >= .5) == y
         metrics = {}
         for name, score in {"base":base, **p}.items():

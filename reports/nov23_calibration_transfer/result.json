@@ -1,0 +1,98 @@
+{
+  "results": {
+    "20261112": {
+      "score_only": {
+        "accuracy": 0.8178027034800115,
+        "fixed": 72,
+        "harmed": 71,
+        "versus_rules": -8,
+        "unresolved466": 0
+      },
+      "context": {
+        "accuracy": 0.8143514524014955,
+        "fixed": 110,
+        "harmed": 133,
+        "versus_rules": -32,
+        "unresolved466": 1
+      },
+      "placebo": {
+        "accuracy": 0.8143514524014955,
+        "fixed": 98,
+        "harmed": 121,
+        "versus_rules": -32,
+        "unresolved466": 2
+      }
+    },
+    "20261115": {
+      "score_only": {
+        "accuracy": 0.8147828587863101,
+        "fixed": 97,
+        "harmed": 87,
+        "versus_rules": -1,
+        "unresolved466": 0
+      },
+      "context": {
+        "accuracy": 0.820247339660627,
+        "fixed": 177,
+        "harmed": 129,
+        "versus_rules": 37,
+        "unresolved466": 5
+      },
+      "placebo": {
+        "accuracy": 0.8163646821972965,
+        "fixed": 133,
+        "harmed": 112,
+        "versus_rules": 10,
+        "unresolved466": 1
+      }
+    },
+    "20261116": {
+      "score_only": {
+        "accuracy": 0.814495254529767,
+        "fixed": 72,
+        "harmed": 67,
+        "versus_rules": -15,
+        "unresolved466": 0
+      },
+      "context": {
+        "accuracy": 0.8169398907103825,
+        "fixed": 165,
+        "harmed": 143,
+        "versus_rules": 2,
+        "unresolved466": 3
+      },
+      "placebo": {
+        "accuracy": 0.814495254529767,
+        "fixed": 116,
+        "harmed": 111,
+        "versus_rules": -15,
+        "unresolved466": 1
+      }
+    }
+  },
+  "comparisons": {
+    "baseline": {
+      "mean_gain_pp": 0.2252900009586809,
+      "ci95_pp": [
+        -0.08050587138227353,
+        0.5288716319073599
+      ]
+    },
+    "rule_ensemble": {
+      "mean_gain_pp": 0.03355382993001623,
+      "ci95_pp": [
+        -0.22255011638752453,
+        0.29165743168131
+      ]
+    },
+    "shuffled_context": {
+      "mean_gain_pp": 0.21090978813153127,
+      "ci95_pp": [
+        -0.07245246556477078,
+        0.49364439185638914
+      ]
+    }
+  },
+  "bookings": 5201,
+  "interpretation": "Descriptive paired uncertainty conditional on the fixed fitted development predictions."
+}
