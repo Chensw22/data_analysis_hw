@@ -1,0 +1,227 @@
+{
+  "members": [
+    "base",
+    "sparse_rules",
+    "tabular_in_context",
+    "constructed_features",
+    "feature_projections",
+    "peer_attributes",
+    "manifest_likelihood",
+    "boarding_sequence",
+    "gradient_kernel",
+    "budget_prior",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "registration_only",
+    "conditional_router",
+    "across_deck_field",
+    "apple_semantics",
+    "booking_mixup",
+    "booking_scoring",
+    "class_analogues",
+    "conditional_view_density",
+    "exact_booking_field",
+    "field_factors",
+    "gibbs_manifest",
+    "group_disputes",
+    "masked_views",
+    "ordered_states",
+    "pair_pretext",
+    "party_hotdeck",
+    "passenger_sampler",
+    "registration_rank",
+    "residual_discovery",
+    "residual_registration",
+    "rule_context_pool",
+    "selective_fields",
+    "spend_copula",
+    "spend_exceptions",
+    "symbolic_residuals",
+    "teacher_field_offsets",
+    "training_cohort_sensitivity",
+    "transported_subclasses"
+  ],
+  "safe": [
+    "base",
+    "registration_only",
+    "budget_prior",
+    "feature_projections",
+    "field_factors",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "manifest_likelihood",
+    "boarding_sequence"
+  ],
+  "results": {
+    "20261112": {
+      "cohorts": {
+        "sleep_zero": {
+          "rows": 1106,
+          "actual_positive": 722,
+          "reference_expected": 724.0858497939712,
+          "reference_correct": 719,
+          "majority_correct": 722,
+          "reference_auc": 0.6674475559787627,
+          "best_member": "spend_exceptions",
+          "oracle_threshold": 0.511150557897716,
+          "best_correct": 746,
+          "base_only_best_correct": 730,
+          "heldout_correct": {
+            "threshold_only": 701,
+            "selection": 694
+          }
+        },
+        "awake_multiple": {
+          "rows": 2030,
+          "actual_positive": 590,
+          "reference_expected": 573.0296259217959,
+          "reference_correct": 1620,
+          "majority_correct": 1440,
+          "reference_auc": 0.8045068267419963,
+          "best_member": "base",
+          "oracle_threshold": 0.4994414797426264,
+          "best_correct": 1621,
+          "base_only_best_correct": 1621,
+          "heldout_correct": {
+            "threshold_only": 1606,
+            "selection": 1597
+          }
+        }
+      },
+      "whole_roster": {
+        "posthoc_upper": {
+          "correct": 5714,
+          "accuracy": 0.821685360943342,
+          "fixes": 92,
+          "harms": 64
+        },
+        "threshold_only": {
+          "correct": 5654,
+          "accuracy": 0.813057233247052,
+          "fixes": 69,
+          "harms": 101
+        },
+        "selection": {
+          "correct": 5638,
+          "accuracy": 0.8107563991947081,
+          "fixes": 105,
+          "harms": 153
+        }
+      }
+    },
+    "20261115": {
+      "cohorts": {
+        "sleep_zero": {
+          "rows": 1106,
+          "actual_positive": 722,
+          "reference_expected": 724.2906927663867,
+          "reference_correct": 725,
+          "majority_correct": 722,
+          "reference_auc": 0.6793105811403509,
+          "best_member": "sparse_rules",
+          "oracle_threshold": 0.538840108561967,
+          "best_correct": 739,
+          "base_only_best_correct": 733,
+          "heldout_correct": {
+            "threshold_only": 715,
+            "selection": 718
+          }
+        },
+        "awake_multiple": {
+          "rows": 2030,
+          "actual_positive": 590,
+          "reference_expected": 579.7674803510081,
+          "reference_correct": 1599,
+          "majority_correct": 1440,
+          "reference_auc": 0.8060463747645951,
+          "best_member": "selective_fields",
+          "oracle_threshold": 0.48444929272985404,
+          "best_correct": 1624,
+          "base_only_best_correct": 1616,
+          "heldout_correct": {
+            "threshold_only": 1633,
+            "selection": 1633
+          }
+        }
+      },
+      "whole_roster": {
+        "posthoc_upper": {
+          "correct": 5695,
+          "accuracy": 0.8189531205061835,
+          "fixes": 194,
+          "harms": 155
+        },
+        "threshold_only": {
+          "correct": 5680,
+          "accuracy": 0.8167960885821111,
+          "fixes": 124,
+          "harms": 100
+        },
+        "selection": {
+          "correct": 5683,
+          "accuracy": 0.8172274949669255,
+          "fixes": 164,
+          "harms": 137
+        }
+      }
+    },
+    "20261116": {
+      "cohorts": {
+        "sleep_zero": {
+          "rows": 1106,
+          "actual_positive": 722,
+          "reference_expected": 724.1745940752326,
+          "reference_correct": 727,
+          "majority_correct": 722,
+          "reference_auc": 0.6748434614496768,
+          "best_member": "constructed_features",
+          "oracle_threshold": 0.46520041450879024,
+          "best_correct": 740,
+          "base_only_best_correct": 731,
+          "heldout_correct": {
+            "threshold_only": 720,
+            "selection": 707
+          }
+        },
+        "awake_multiple": {
+          "rows": 2030,
+          "actual_positive": 590,
+          "reference_expected": 579.5730287246038,
+          "reference_correct": 1591,
+          "majority_correct": 1440,
+          "reference_auc": 0.7994220809792844,
+          "best_member": "group_disputes",
+          "oracle_threshold": 0.5215340190277362,
+          "best_correct": 1608,
+          "base_only_best_correct": 1602,
+          "heldout_correct": {
+            "threshold_only": 1593,
+            "selection": 1604
+          }
+        }
+      },
+      "whole_roster": {
+        "posthoc_upper": {
+          "correct": 5689,
+          "accuracy": 0.8180903077365546,
+          "fixes": 92,
+          "harms": 62
+        },
+        "threshold_only": {
+          "correct": 5654,
+          "accuracy": 0.813057233247052,
+          "fixes": 120,
+          "harms": 125
+        },
+        "selection": {
+          "correct": 5652,
+          "accuracy": 0.8127696289905091,
+          "fixes": 154,
+          "harms": 161
+        }
+      }
+    }
+  }
+}
