@@ -1,0 +1,518 @@
+{
+  "results": {
+    "20261112": {
+      "metrics": {
+        "evolved": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 29,
+          "harmed": 28,
+          "persistent1070": 7,
+          "unresolved466": 1
+        },
+        "random": {
+          "accuracy": 0.817946505608283,
+          "fixed": 37,
+          "harmed": 35,
+          "persistent1070": 13,
+          "unresolved466": 0
+        },
+        "linear": {
+          "accuracy": 0.817371297095197,
+          "fixed": 59,
+          "harmed": 61,
+          "persistent1070": 20,
+          "unresolved466": 0
+        }
+      },
+      "formulas": [
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "product(max(Deck=C,CabinNumber),VRDeck_positive)",
+            "max(min(max(HomePlanet=Earth,RoomService_missing),ShoppingMall_positive),Deck=C)",
+            "min(difference(max(HomePlanet=Earth,VIP=__MISSING__),Destination=TRAPPIST-1e),Deck=E)",
+            "product(product(Deck=G,VIP=False),Destination=PSO J318.5-22)",
+            "max(max(max(VRDeck_positive,Deck=G),Destination=TRAPPIST-1e),CabinNumber_missing)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(Deck=C,CabinNumber)",
+            "max(plus(difference(VIP=False,RoomService_positive),Deck=B),RoomService)",
+            "plus(Deck=E,Destination=55 Cancri e)",
+            "max(max(VRDeck,Spa_positive),FoodCourt_positive)",
+            "max(max(distance(HomePlanet=Europa,Age),Destination=__MISSING__),HomePlanet=Earth)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "difference(product(min(Deck=F,FoodCourt_positive),Side=S),Deck=C)",
+            "product(difference(difference(Side=P,RoomService),Destination=PSO J318.5-22),Side=P)",
+            "max(plus(min(RoomService,Destination=TRAPPIST-1e),Spa_missing),Deck=C)",
+            "min(max(min(Deck=E,HomePlanet=Earth),Age),VRDeck_positive)",
+            "max(distance(RoomService_positive,Deck=E),VRDeck_positive)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(product(max(BookingSize,HomePlanet=__MISSING__),Side=__MISSING__),Deck=C)",
+            "difference(Side=P,RoomService)",
+            "product(difference(min(ShoppingMall,VRDeck_positive),Deck=D),RoomService_positive)",
+            "max(CabinNumber,Destination=55 Cancri e)",
+            "min(VRDeck,ShoppingMall)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "difference(max(Deck=__MISSING__,Deck=E),HomePlanet=Mars)",
+            "max(plus(max(RoomService,Side=P),CryoSleep=__MISSING__),VIP=True)",
+            "product(max(max(FoodCourt,Deck=C),Destination=55 Cancri e),Side=S)",
+            "min(min(Age,Deck=C),Deck=T)",
+            "max(product(product(Destination=TRAPPIST-1e,Side=S),Deck=C),CabinNumber_missing)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(min(Age,Destination=__MISSING__),BookingSize)",
+            "plus(product(Destination=TRAPPIST-1e,CryoSleep=__MISSING__),HomePlanet=Mars)",
+            "max(max(difference(Age_missing,Side=__MISSING__),Age_missing),VRDeck_missing)",
+            "max(plus(Destination=PSO J318.5-22,Spa_missing),CryoSleep=__MISSING__)",
+            "max(distance(HomePlanet=Europa,Age),Side=__MISSING__)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "distance(product(min(Deck=F,VRDeck),FoodCourt_positive),Deck=C)",
+            "difference(min(plus(VRDeck,FoodCourt_missing),VRDeck),Deck=D)",
+            "difference(product(max(Destination=PSO J318.5-22,Spa),ShoppingMall),Age)",
+            "max(max(Deck=T,Deck=C),Deck=D)",
+            "product(RoomService,Spa_positive)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "distance(max(max(VIP=True,BookingSize),HomePlanet=Mars),BookingSize)",
+            "min(min(plus(VRDeck_positive,CryoSleep=__MISSING__),Age_missing),VRDeck)",
+            "max(product(Destination=PSO J318.5-22,Age),Deck=D)",
+            "max(Deck=C,Deck=D)",
+            "product(difference(FoodCourt_positive,HomePlanet=Mars),Deck=E)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "min(VRDeck,CryoSleep=__MISSING__)",
+            "max(max(distance(Deck=C,CabinNumber_missing),RoomService_missing),Deck=C)",
+            "plus(max(product(RoomService_positive,RoomService_positive),Deck=C),BookingSize)",
+            "max(distance(max(FoodCourt_positive,Destination=TRAPPIST-1e),FoodCourt_missing),FoodCourt)",
+            "max(min(difference(VRDeck_positive,Deck=F),Deck=D),Spa)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "distance(max(Destination=TRAPPIST-1e,VIP=__MISSING__),Deck=F)",
+            "plus(plus(difference(VIP=False,RoomService_positive),Deck=B),VRDeck)",
+            "min(FoodCourt_missing,Destination=TRAPPIST-1e)",
+            "product(max(Deck=F,Deck=A),Spa_positive)",
+            "distance(Side=S,Deck=C)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "plus(plus(max(Side=P,ShoppingMall),Side=P),Deck=G)",
+            "max(max(distance(HomePlanet=__MISSING__,RoomService_positive),CabinNumber_missing),CabinNumber)",
+            "difference(product(plus(Age,Deck=G),ShoppingMall),BookingSize)",
+            "product(max(Deck=D,Spa_positive),Destination=PSO J318.5-22)",
+            "max(product(distance(RoomService_positive,Deck=E),HomePlanet=Mars),VRDeck_missing)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(plus(max(BookingSize,HomePlanet=__MISSING__),CabinNumber),RoomService_missing)",
+            "distance(ShoppingMall,Deck=G)",
+            "min(Side=__MISSING__,RoomService)",
+            "product(FoodCourt,VRDeck_positive)",
+            "min(product(Side=S,RoomService),Destination=__MISSING__)"
+          ]
+        }
+      ]
+    },
+    "20261115": {
+      "metrics": {
+        "evolved": {
+          "accuracy": 0.814495254529767,
+          "fixed": 44,
+          "harmed": 36,
+          "persistent1070": 17,
+          "unresolved466": 0
+        },
+        "random": {
+          "accuracy": 0.8149266609145815,
+          "fixed": 42,
+          "harmed": 31,
+          "persistent1070": 16,
+          "unresolved466": 0
+        },
+        "linear": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 56,
+          "harmed": 53,
+          "persistent1070": 23,
+          "unresolved466": 0
+        }
+      },
+      "formulas": [
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "max(distance(ShoppingMall_missing,Destination=TRAPPIST-1e),Destination=PSO J318.5-22)",
+            "min(product(distance(Side=S,Destination=55 Cancri e),Destination=TRAPPIST-1e),VIP=False)",
+            "max(difference(FoodCourt_missing,VRDeck),Deck=C)",
+            "distance(Spa_positive,VRDeck_positive)",
+            "difference(difference(Destination=55 Cancri e,CryoSleep=False),RoomService_positive)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "min(max(Destination=TRAPPIST-1e,VIP=__MISSING__),Side=S)",
+            "difference(max(min(Deck=G,Side=S),Destination=55 Cancri e),Destination=PSO J318.5-22)",
+            "max(max(difference(Age_missing,Side=__MISSING__),Age_missing),VRDeck_missing)",
+            "difference(distance(min(Age_missing,ShoppingMall_positive),Destination=55 Cancri e),VRDeck)",
+            "max(Destination=55 Cancri e,CabinNumber_missing)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "max(product(plus(CabinNumber,FoodCourt),VRDeck),Deck=A)",
+            "product(max(Deck=B,Destination=TRAPPIST-1e),Deck=C)",
+            "max(distance(max(ShoppingMall,Destination=55 Cancri e),Deck=B),Deck=T)",
+            "min(Deck=E,HomePlanet=Earth)",
+            "max(product(max(Side=P,ShoppingMall),VRDeck_positive),Deck=E)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "product(max(max(VIP=True,BookingSize),HomePlanet=Mars),FoodCourt)",
+            "min(max(VIP=False,Destination=55 Cancri e),Destination=55 Cancri e)",
+            "distance(min(Spa_missing,VRDeck_missing),Deck=C)",
+            "max(product(RoomService_positive,Destination=TRAPPIST-1e),Side=S)",
+            "product(ShoppingMall_positive,HomePlanet=Mars)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "plus(max(product(CryoSleep=False,BookingSize),BookingSize),ShoppingMall_positive)",
+            "difference(product(max(VRDeck,Spa),BookingSize),Deck=G)",
+            "min(Side=P,HomePlanet=Mars)",
+            "max(max(max(FoodCourt_positive,Destination=TRAPPIST-1e),Deck=A),Destination=__MISSING__)",
+            "min(product(Destination=TRAPPIST-1e,Side=S),Deck=C)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(min(Age,Destination=__MISSING__),BookingSize)",
+            "max(plus(difference(VIP=False,RoomService_positive),Deck=B),Deck=A)",
+            "min(min(Age_missing,CabinNumber_missing),ShoppingMall)",
+            "difference(plus(plus(Deck=B,Deck=G),VRDeck_missing),Age)",
+            "max(distance(Side=S,Deck=C),Destination=55 Cancri e)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "max(CabinNumber,ShoppingMall)",
+            "max(difference(ShoppingMall_missing,Age),Deck=C)",
+            "max(distance(max(ShoppingMall,Destination=55 Cancri e),VIP=__MISSING__),FoodCourt_missing)",
+            "product(max(min(ShoppingMall_positive,Side=S),VIP=True),Destination=TRAPPIST-1e)",
+            "max(min(product(HomePlanet=Europa,Deck=B),VRDeck_positive),RoomService_missing)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(CabinNumber,ShoppingMall)",
+            "difference(difference(plus(VRDeck_positive,CryoSleep=__MISSING__),BookingSize),Destination=55 Cancri e)",
+            "min(product(Destination=__MISSING__,ShoppingMall),Age)",
+            "max(product(RoomService_positive,Destination=TRAPPIST-1e),Deck=B)",
+            "product(Deck=E,CryoSleep=True)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "product(difference(product(Deck=G,FoodCourt),Deck=G),Side=P)",
+            "difference(plus(max(HomePlanet=Earth,RoomService_missing),ShoppingMall),VRDeck)",
+            "max(min(Side=P,HomePlanet=Mars),Spa_missing)",
+            "plus(difference(product(Destination=PSO J318.5-22,Deck=F),ShoppingMall),Deck=G)",
+            "difference(difference(min(Deck=F,VRDeck_positive),HomePlanet=Earth),Deck=C)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(Deck=A,Side=P)",
+            "plus(VRDeck,Deck=G)",
+            "difference(max(Spa_missing,Side=__MISSING__),ShoppingMall)",
+            "distance(Deck=D,HomePlanet=Mars)",
+            "max(plus(VIP=False,CryoSleep=False),BookingSize)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "max(product(product(Spa,VIP=False),CabinNumber),CabinNumber)",
+            "max(Deck=E,ShoppingMall)",
+            "max(max(max(Age,Destination=__MISSING__),HomePlanet=Europa),Destination=PSO J318.5-22)",
+            "distance(product(max(Deck=D,Deck=G),Destination=TRAPPIST-1e),CryoSleep=True)",
+            "max(product(max(VRDeck_missing,Deck=E),CryoSleep=True),VRDeck_missing)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "difference(Deck=E,Spa_positive)",
+            "distance(HomePlanet=Mars,CabinNumber)",
+            "max(product(Destination=PSO J318.5-22,Age),HomePlanet=Earth)",
+            "product(FoodCourt,VRDeck)",
+            "product(Deck=E,CryoSleep=True)"
+          ]
+        }
+      ]
+    },
+    "20261116": {
+      "metrics": {
+        "evolved": {
+          "accuracy": 0.813920046016681,
+          "fixed": 39,
+          "harmed": 38,
+          "persistent1070": 17,
+          "unresolved466": 0
+        },
+        "random": {
+          "accuracy": 0.8117630140926085,
+          "fixed": 33,
+          "harmed": 47,
+          "persistent1070": 19,
+          "unresolved466": 1
+        },
+        "linear": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 65,
+          "harmed": 65,
+          "persistent1070": 42,
+          "unresolved466": 1
+        }
+      },
+      "formulas": [
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "difference(min(Age,Destination=__MISSING__),Deck=E)",
+            "max(distance(max(HomePlanet=Earth,RoomService_missing),Deck=F),Deck=C)",
+            "min(max(HomePlanet=Earth,VIP=__MISSING__),Deck=E)",
+            "min(product(min(Side=S,VRDeck_positive),ShoppingMall),HomePlanet=Europa)",
+            "max(max(plus(Side=__MISSING__,Deck=G),VRDeck_missing),Spa)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "distance(max(min(Age,Destination=__MISSING__),BookingSize),Deck=E)",
+            "product(plus(difference(VIP=False,RoomService_positive),Deck=B),Spa)",
+            "distance(product(VIP=False,VRDeck_missing),CryoSleep=True)",
+            "max(VRDeck_missing,Spa)",
+            "product(Deck=F,RoomService_positive)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "max(CryoSleep=__MISSING__,Deck=A)",
+            "difference(max(max(Deck=G,CabinNumber),VIP=True),Deck=D)",
+            "difference(max(min(CryoSleep=True,ShoppingMall_missing),HomePlanet=Europa),Deck=A)",
+            "difference(max(distance(Deck=D,VIP=__MISSING__),ShoppingMall_missing),VRDeck)",
+            "min(max(VRDeck_missing,Deck=E),HomePlanet=Mars)"
+          ]
+        },
+        {
+          "fold": 0,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(CryoSleep=__MISSING__,Deck=A)",
+            "max(plus(Deck=F,RoomService_missing),Deck=D)",
+            "distance(min(Spa_missing,VRDeck_missing),Deck=C)",
+            "max(Deck=C,Deck=D)",
+            "product(ShoppingMall_positive,HomePlanet=Mars)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "difference(plus(max(Deck=A,Side=P),Side=P),Destination=55 Cancri e)",
+            "max(plus(max(Deck=F,Age),CryoSleep=__MISSING__),Deck=C)",
+            "product(max(min(FoodCourt_missing,Destination=TRAPPIST-1e),Deck=C),Side=S)",
+            "max(distance(min(Age,Deck=C),Spa),Destination=__MISSING__)",
+            "max(product(min(Deck=F,VRDeck_positive),VIP=False),Spa)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(Deck=A,Side=P)",
+            "max(min(HomePlanet=__MISSING__,Side=__MISSING__),Deck=C)",
+            "distance(difference(Age_missing,Side=__MISSING__),Age)",
+            "max(difference(max(Deck=F,Deck=A),Side=P),FoodCourt)",
+            "max(Destination=55 Cancri e,CabinNumber_missing)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "distance(min(distance(HomePlanet=__MISSING__,Deck=B),CabinNumber),ShoppingMall)",
+            "distance(max(Spa_missing,Deck=A),CabinNumber)",
+            "product(max(ShoppingMall,Destination=55 Cancri e),RoomService)",
+            "max(max(product(FoodCourt_positive,Deck=G),ShoppingMall_missing),Deck=D)",
+            "max(max(product(HomePlanet=Europa,Deck=B),Deck=G),VRDeck_missing)"
+          ]
+        },
+        {
+          "fold": 1,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(max(BookingSize,HomePlanet=__MISSING__),Spa_positive)",
+            "max(min(difference(Deck=A,Spa),Destination=55 Cancri e),CabinNumber_missing)",
+            "min(distance(min(Side=__MISSING__,FoodCourt_missing),Deck=T),CabinNumber)",
+            "max(Deck=C,Deck=D)",
+            "product(Deck=E,CryoSleep=True)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "evolved",
+          "terms": [
+            "max(Deck=C,CabinNumber)",
+            "max(distance(plus(VRDeck,Deck=G),FoodCourt_positive),Deck=C)",
+            "min(product(distance(HomePlanet=__MISSING__,Spa_positive),CryoSleep=False),Spa)",
+            "product(min(Side=S,VRDeck_positive),FoodCourt_positive)",
+            "product(ShoppingMall_positive,Age)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 0,
+          "mode": "random",
+          "terms": [
+            "max(Deck=C,CabinNumber)",
+            "product(Destination=TRAPPIST-1e,BookingSize)",
+            "distance(min(min(Deck=A,Spa),CryoSleep=__MISSING__),FoodCourt_positive)",
+            "product(plus(Deck=B,Deck=G),CabinNumber)",
+            "product(distance(HomePlanet=Europa,Age),VIP=False)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "evolved",
+          "terms": [
+            "difference(min(min(Side=S,Destination=55 Cancri e),HomePlanet=Earth),Deck=E)",
+            "max(difference(distance(Side=S,Deck=A),HomePlanet=Mars),Deck=C)",
+            "distance(max(max(Deck=A,HomePlanet=Mars),VRDeck_missing),Age_missing)",
+            "max(plus(HomePlanet=__MISSING__,HomePlanet=__MISSING__),VRDeck)",
+            "min(product(RoomService_positive,FoodCourt_positive),VRDeck_positive)"
+          ]
+        },
+        {
+          "fold": 2,
+          "split": 1,
+          "mode": "random",
+          "terms": [
+            "max(HomePlanet=__MISSING__,Destination=TRAPPIST-1e)",
+            "max(Deck=E,CabinNumber_missing)",
+            "max(Deck=A,HomePlanet=Mars)",
+            "max(min(VIP=True,Age_missing),Deck=C)",
+            "max(plus(min(Side=S,Spa_missing),CryoSleep=True),Side=P)"
+          ]
+        }
+      ]
+    }
+  },
+  "protocol": "Use group-cross-fitted teachers inside outer training. Discover 5 expressions with 3 rounds of 72 proposals on half the training bookings; fit their weights on the other half, swap and average. Teacher predictions inside discovery are cross-fitted on outer training; outer query bookings never participate."
+}
