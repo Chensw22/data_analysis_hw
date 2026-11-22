@@ -48,7 +48,8 @@ def run():
     repeated=~before.any(0)
     weak=repeated&hits.all(0).any(1)&~hits.all(0)[:,strong].any(1)
     deep=repeated&~hits.any(axis=(0,2))
-    assert (weak.sum(),deep.sum())==(335,252)
+    intermittent=repeated&hits.any(axis=(0,2))&~hits.all(0).any(1)
+    assert (weak.sum(),deep.sum(),intermittent.sum())==(335,252,340)
     new_bank=[]
     scores={}
     directory=ART/"nov23_fresh_family_rescue"
@@ -77,11 +78,17 @@ def run():
         scores[seed]=dict(vote_distribution=rows_by_dissent,policies=performance)
     all_hits=(np.array(new_bank)>=.5)==y[None,:,None]
     coverage={}
-    for name,cohort in [("ever_wrong",~before.all(0)),("repeat_wrong",repeated),("weak335",weak),("deep252",deep)]:
+    for name,cohort in [("ever_wrong",~before.all(0)),("repeat_wrong",repeated),("weak335",weak),
+                        ("intermittent340",intermittent),("deep252",deep)]:
         bank=all_hits[:,cohort]
         reliable=bank.all(axis=0)
+        recovered=reliable.any(axis=1)
+        actual=y[cohort]
         coverage[name]=dict(rows=int(cohort.sum()),at_least_once=int(bank.any(axis=(0,2)).sum()),
-                            one_stable=int(reliable.any(axis=1).sum()),two_stable=int((reliable.sum(1)>=2).sum()),
+                            one_stable=int(recovered.sum()),two_stable=int((reliable.sum(1)>=2).sum()),
+                            stable_actual_positive=int((recovered&actual).sum()),
+                            stable_actual_negative=int((recovered&~actual).sum()),
+                            total_actual_positive=int(actual.sum()),
                             same_correct_majority_each_split=int((bank.sum(2)>=3).all(axis=0).sum()),
                             stable_by_family={k:int(reliable[:,j].sum()) for j,k in enumerate(NEW)})
     print(coverage,scores,flush=True)
