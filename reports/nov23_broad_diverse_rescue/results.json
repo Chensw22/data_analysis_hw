@@ -1,0 +1,437 @@
+{
+  "candidates": {
+    "feature_projections": [
+      "projection_shapes",
+      "projection_shapes"
+    ],
+    "orion": [
+      "pretrained_recheck",
+      "orion"
+    ],
+    "variational_gp": [
+      "variational_gp",
+      "p"
+    ],
+    "native_carte": [
+      "carte",
+      "p"
+    ],
+    "manifest_likelihood": [
+      "manifest_tree",
+      "manifest_tree"
+    ],
+    "class_analogues": [
+      "class_analogues",
+      "class_linear"
+    ],
+    "field_factors": [
+      "field_factors",
+      "order3"
+    ],
+    "registration_only": [
+      "bill_matched_register",
+      "register"
+    ],
+    "budget_prior": [
+      "simplex_likelihood",
+      "budget_prior"
+    ],
+    "bayesian_forest": [
+      "bart_long",
+      "bart"
+    ],
+    "flow": [
+      "conditional_bill_flow",
+      "flow"
+    ],
+    "pathways": [
+      "multiple_pathways",
+      "symmetric"
+    ],
+    "learned_training_weights": [
+      "booking_meta_weights",
+      "aligned"
+    ],
+    "label_transition": [
+      "broad_noise_transition",
+      "adjusted"
+    ],
+    "within_booking": [
+      "broad_conditional_counts",
+      "conditional"
+    ],
+    "hypothetical_outcome": [
+      "broad_hypothetical_labels",
+      "direct_error_audits"
+    ],
+    "gradient_projection": [
+      "competing_gradients",
+      "projection"
+    ],
+    "companion_distillation": [
+      "training_companion_outcomes",
+      "companion_distilled"
+    ],
+    "booking_layout": [
+      "shared_booking_layout",
+      "teacher_with_links"
+    ],
+    "shortcut_alignment": [
+      "shortcut_alignment",
+      "aligned"
+    ],
+    "high_loss_training": [
+      "broad_train_error_margins",
+      "robust"
+    ],
+    "denoising": [
+      "broad_passenger_diffusion",
+      "direct"
+    ],
+    "service_transport": [
+      "broad_service_transport",
+      "learned"
+    ],
+    "partition_tree": [
+      "broad_partition_evidence",
+      "native"
+    ],
+    "covariate_weighting": [
+      "broad_target_shift",
+      "natural_domain"
+    ]
+  },
+  "new_members": [
+    "flow",
+    "pathways",
+    "learned_training_weights",
+    "label_transition",
+    "within_booking",
+    "hypothetical_outcome",
+    "gradient_projection",
+    "companion_distillation",
+    "booking_layout",
+    "shortcut_alignment",
+    "high_loss_training",
+    "denoising",
+    "service_transport",
+    "partition_tree",
+    "covariate_weighting"
+  ],
+  "comparable_new": [
+    "label_transition",
+    "gradient_projection",
+    "companion_distillation",
+    "booking_layout",
+    "covariate_weighting"
+  ],
+  "coverage": {
+    "ever": {
+      "rows": 1518,
+      "stable_any": 1376,
+      "stable_comparable": 334,
+      "only_occasional": 137,
+      "still_never": 5,
+      "per_model": {
+        "flow": 282,
+        "pathways": 220,
+        "learned_training_weights": 276,
+        "label_transition": 133,
+        "within_booking": 263,
+        "hypothetical_outcome": 949,
+        "gradient_projection": 159,
+        "companion_distillation": 168,
+        "booking_layout": 165,
+        "shortcut_alignment": 286,
+        "high_loss_training": 389,
+        "denoising": 177,
+        "service_transport": 277,
+        "partition_tree": 207,
+        "covariate_weighting": 109
+      }
+    },
+    "repeat": {
+      "rows": 1070,
+      "stable_any": 942,
+      "stable_comparable": 88,
+      "only_occasional": 123,
+      "still_never": 5,
+      "per_model": {
+        "flow": 103,
+        "pathways": 70,
+        "learned_training_weights": 94,
+        "label_transition": 33,
+        "within_booking": 82,
+        "hypothetical_outcome": 773,
+        "gradient_projection": 22,
+        "companion_distillation": 40,
+        "booking_layout": 47,
+        "shortcut_alignment": 127,
+        "high_loss_training": 215,
+        "denoising": 58,
+        "service_transport": 105,
+        "partition_tree": 57,
+        "covariate_weighting": 23
+      }
+    },
+    "unresolved": {
+      "rows": 509,
+      "stable_any": 445,
+      "stable_comparable": 1,
+      "only_occasional": 60,
+      "still_never": 4,
+      "per_model": {
+        "flow": 14,
+        "pathways": 2,
+        "learned_training_weights": 3,
+        "label_transition": 0,
+        "within_booking": 2,
+        "hypothetical_outcome": 433,
+        "gradient_projection": 0,
+        "companion_distillation": 1,
+        "booking_layout": 1,
+        "shortcut_alignment": 9,
+        "high_loss_training": 48,
+        "denoising": 2,
+        "service_transport": 2,
+        "partition_tree": 1,
+        "covariate_weighting": 0
+      }
+    },
+    "never": {
+      "rows": 172,
+      "stable_any": 150,
+      "stable_comparable": 0,
+      "only_occasional": 21,
+      "still_never": 1,
+      "per_model": {
+        "flow": 0,
+        "pathways": 0,
+        "learned_training_weights": 0,
+        "label_transition": 0,
+        "within_booking": 0,
+        "hypothetical_outcome": 150,
+        "gradient_projection": 0,
+        "companion_distillation": 0,
+        "booking_layout": 0,
+        "shortcut_alignment": 0,
+        "high_loss_training": 0,
+        "denoising": 0,
+        "service_transport": 0,
+        "partition_tree": 0,
+        "covariate_weighting": 0
+      }
+    }
+  },
+  "policies": {
+    "accuracy": {
+      "accuracy": [
+        0.8163646821972965,
+        0.8180903077365546,
+        0.8160770779407536
+      ],
+      "fixed": [
+        57,
+        92,
+        63
+      ],
+      "harmed": [
+        66,
+        59,
+        47
+      ],
+      "stable": {
+        "ever": 65,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0
+      },
+      "oracle_any_member_per_split": [
+        462,
+        506,
+        513
+      ],
+      "paired_ci_pp": [
+        0.004854097960876031,
+        0.3791662373292903
+      ]
+    },
+    "coverage": {
+      "accuracy": [
+        0.8152142651711245,
+        0.8169398907103825,
+        0.813632441760138
+      ],
+      "fixed": [
+        75,
+        129,
+        93
+      ],
+      "harmed": [
+        92,
+        104,
+        94
+      ],
+      "stable": {
+        "ever": 63,
+        "repeat": 1,
+        "unresolved": 0,
+        "never": 0
+      },
+      "oracle_any_member_per_split": [
+        1216,
+        1252,
+        1252
+      ],
+      "paired_ci_pp": [
+        -0.22006544653404914,
+        0.2823763850861081
+      ]
+    },
+    "diversity": {
+      "accuracy": [
+        0.8195283290192695,
+        0.814495254529767,
+        0.813632441760138
+      ],
+      "fixed": [
+        104,
+        123,
+        100
+      ],
+      "harmed": [
+        91,
+        115,
+        101
+      ],
+      "stable": {
+        "ever": 72,
+        "repeat": 2,
+        "unresolved": 0,
+        "never": 0
+      },
+      "oracle_any_member_per_split": [
+        1219,
+        1246,
+        1247
+      ],
+      "paired_ci_pp": [
+        -0.16660003196152257,
+        0.3633817079402701
+      ]
+    },
+    "all": {
+      "accuracy": [
+        0.818234109864826,
+        0.8180903077365546,
+        0.8117630140926085
+      ],
+      "fixed": [
+        155,
+        171,
+        141
+      ],
+      "harmed": [
+        151,
+        138,
+        155
+      ],
+      "stable": {
+        "ever": 98,
+        "repeat": 10,
+        "unresolved": 0,
+        "never": 0
+      },
+      "oracle_any_member_per_split": [
+        1242,
+        1274,
+        1267
+      ],
+      "paired_ci_pp": [
+        -0.20507619705865845,
+        0.4272487137806957
+      ]
+    },
+    "reference": {
+      "accuracy": [
+        0.8172274949669255,
+        0.815645671555939,
+        0.8132010353753235
+      ],
+      "fixed": [
+        29,
+        67,
+        35
+      ],
+      "harmed": [
+        32,
+        51,
+        39
+      ],
+      "stable": {
+        "ever": 48,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0
+      },
+      "oracle_any_member_per_split": [
+        0,
+        0,
+        0
+      ],
+      "paired_ci_pp": [
+        -0.106297262230182,
+        0.19216522822409687
+      ]
+    }
+  },
+  "calibration_selections": {
+    "accuracy": {
+      "pathways": 13,
+      "label_transition": 20,
+      "bayesian_forest": 17,
+      "booking_layout": 21,
+      "companion_distillation": 26,
+      "gradient_projection": 21,
+      "feature_projections": 4,
+      "orion": 5,
+      "covariate_weighting": 14,
+      "service_transport": 10,
+      "learned_training_weights": 1,
+      "shortcut_alignment": 4,
+      "class_analogues": 2,
+      "variational_gp": 3,
+      "high_loss_training": 1
+    },
+    "coverage": {
+      "hypothetical_outcome": 27,
+      "learned_training_weights": 8,
+      "service_transport": 7,
+      "registration_only": 18,
+      "flow": 11,
+      "feature_projections": 11,
+      "orion": 6,
+      "variational_gp": 16,
+      "native_carte": 11,
+      "field_factors": 13,
+      "pathways": 2,
+      "manifest_likelihood": 16,
+      "shortcut_alignment": 5,
+      "label_transition": 1,
+      "budget_prior": 1,
+      "high_loss_training": 3,
+      "bayesian_forest": 2,
+      "partition_tree": 1,
+      "denoising": 3
+    },
+    "diversity": {
+      "hypothetical_outcome": 27,
+      "manifest_likelihood": 27,
+      "field_factors": 27,
+      "flow": 27,
+      "registration_only": 27,
+      "shortcut_alignment": 17,
+      "denoising": 10
+    }
+  }
+}
