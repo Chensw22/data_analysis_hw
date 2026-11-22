@@ -1,0 +1,33 @@
+{
+  "metrics": {
+    "independent": {
+      "accuracy": 0.8074489502444636,
+      "fixed": 226,
+      "harmed": 273,
+      "hard_fixed": 8,
+      "hard_harmed": 6,
+      "fold_net": [
+        -25,
+        -10,
+        -12
+      ]
+    },
+    "joint": {
+      "accuracy": 0.8057233247052057,
+      "fixed": 241,
+      "harmed": 300,
+      "hard_fixed": 7,
+      "hard_harmed": 6,
+      "fold_net": [
+        -32,
+        -8,
+        -19
+      ]
+    }
+  },
+  "labels_used": 6954,
+  "hard_joint_exclusive": 4,
+  "joint_only": 63,
+  "hard_total": 546,
+  "protocol": "Original three folds, excluding all validation bookings from training. Every eligible training pair is represented; synthetic missing-companion labels split weight evenly. Predictions integrate over all manifest companions, no peer outcome used at inference. Independent outputs use MultiLogloss; joint uses 4-class cross entropy. Each passenger gets total fitting weight one."
+}
