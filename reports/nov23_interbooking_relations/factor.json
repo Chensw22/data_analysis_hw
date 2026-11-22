@@ -1,0 +1,666 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "product_direct": {
+          "accuracy": 0.8035662927811331,
+          "fixed": 231,
+          "harmed": 329,
+          "net_by_fold": [
+            -21,
+            -26,
+            -51
+          ],
+          "corrected": {
+            "ever": 231,
+            "repeat": 159,
+            "unresolved": 27,
+            "never": 0,
+            "repeat_paid": 27,
+            "solo_repeat": 99
+          },
+          "native_log_loss_before_overrides": 0.40673618573103215
+        },
+        "decoded": {
+          "accuracy": 0.7979580097785447,
+          "fixed": 200,
+          "harmed": 337,
+          "net_by_fold": [
+            -30,
+            -53,
+            -54
+          ],
+          "corrected": {
+            "ever": 200,
+            "repeat": 110,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 45,
+            "solo_repeat": 61
+          },
+          "native_log_loss_before_overrides": 0.4509511328181769
+        },
+        "observed": {
+          "accuracy": 0.7981018119068162,
+          "fixed": 196,
+          "harmed": 332,
+          "net_by_fold": [
+            -31,
+            -52,
+            -53
+          ],
+          "corrected": {
+            "ever": 196,
+            "repeat": 110,
+            "unresolved": 6,
+            "never": 0,
+            "repeat_paid": 47,
+            "solo_repeat": 61
+          },
+          "native_log_loss_before_overrides": 0.5284173263214008
+        },
+        "shuffled": {
+          "accuracy": 0.7118205349439172,
+          "fixed": 409,
+          "harmed": 1145,
+          "net_by_fold": [
+            -211,
+            -275,
+            -250
+          ],
+          "corrected": {
+            "ever": 409,
+            "repeat": 326,
+            "unresolved": 109,
+            "never": 20,
+            "repeat_paid": 100,
+            "solo_repeat": 199
+          },
+          "native_log_loss_before_overrides": 0.6258591592205381
+        },
+        "update_direct": {
+          "accuracy": 0.813920046016681,
+          "fixed": 81,
+          "harmed": 107,
+          "net_by_fold": [
+            -16,
+            8,
+            -18
+          ],
+          "corrected": {
+            "ever": 81,
+            "repeat": 44,
+            "unresolved": 3,
+            "never": 0,
+            "repeat_paid": 10,
+            "solo_repeat": 25
+          },
+          "native_log_loss_before_overrides": 0.382670514073636
+        },
+        "update_relational": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 73,
+          "harmed": 97,
+          "net_by_fold": [
+            -12,
+            6,
+            -18
+          ],
+          "corrected": {
+            "ever": 73,
+            "repeat": 20,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 8,
+            "solo_repeat": 11
+          },
+          "native_log_loss_before_overrides": 0.383666743903937
+        },
+        "update_placebo": {
+          "accuracy": 0.815070463042853,
+          "fixed": 84,
+          "harmed": 102,
+          "net_by_fold": [
+            -12,
+            12,
+            -18
+          ],
+          "corrected": {
+            "ever": 84,
+            "repeat": 29,
+            "unresolved": 1,
+            "never": 0,
+            "repeat_paid": 8,
+            "solo_repeat": 16
+          },
+          "native_log_loss_before_overrides": 0.38329040423739336
+        }
+      },
+      "pair_losses": [
+        {
+          "learned": 0.569793297200951,
+          "product": 0.5408879465965207
+        },
+        {
+          "learned": 0.5778317782708551,
+          "product": 0.5502752699104662
+        },
+        {
+          "learned": 0.5786464588072144,
+          "product": 0.5664065324519895
+        }
+      ]
+    },
+    "20261115": {
+      "models": {
+        "product_direct": {
+          "accuracy": 0.8060109289617486,
+          "fixed": 250,
+          "harmed": 301,
+          "net_by_fold": [
+            17,
+            -29,
+            -39
+          ],
+          "corrected": {
+            "ever": 250,
+            "repeat": 161,
+            "unresolved": 23,
+            "never": 0,
+            "repeat_paid": 32,
+            "solo_repeat": 88
+          },
+          "native_log_loss_before_overrides": 0.40324915841470005
+        },
+        "decoded": {
+          "accuracy": 0.7998274374460742,
+          "fixed": 204,
+          "harmed": 298,
+          "net_by_fold": [
+            -21,
+            -36,
+            -37
+          ],
+          "corrected": {
+            "ever": 204,
+            "repeat": 113,
+            "unresolved": 4,
+            "never": 0,
+            "repeat_paid": 44,
+            "solo_repeat": 61
+          },
+          "native_log_loss_before_overrides": 0.4510257632214779
+        },
+        "observed": {
+          "accuracy": 0.7999712395743457,
+          "fixed": 203,
+          "harmed": 296,
+          "net_by_fold": [
+            -19,
+            -36,
+            -38
+          ],
+          "corrected": {
+            "ever": 203,
+            "repeat": 114,
+            "unresolved": 4,
+            "never": 0,
+            "repeat_paid": 45,
+            "solo_repeat": 60
+          },
+          "native_log_loss_before_overrides": 0.5303007460003151
+        },
+        "shuffled": {
+          "accuracy": 0.7131147540983607,
+          "fixed": 424,
+          "harmed": 1121,
+          "net_by_fold": [
+            -222,
+            -216,
+            -259
+          ],
+          "corrected": {
+            "ever": 424,
+            "repeat": 317,
+            "unresolved": 96,
+            "never": 18,
+            "repeat_paid": 86,
+            "solo_repeat": 196
+          },
+          "native_log_loss_before_overrides": 0.6254218800122289
+        },
+        "update_direct": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 116,
+          "harmed": 102,
+          "net_by_fold": [
+            20,
+            3,
+            -9
+          ],
+          "corrected": {
+            "ever": 116,
+            "repeat": 51,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 6,
+            "solo_repeat": 29
+          },
+          "native_log_loss_before_overrides": 0.380806837164583
+        },
+        "update_relational": {
+          "accuracy": 0.8147828587863101,
+          "fixed": 100,
+          "harmed": 90,
+          "net_by_fold": [
+            16,
+            3,
+            -9
+          ],
+          "corrected": {
+            "ever": 100,
+            "repeat": 38,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 5,
+            "solo_repeat": 18
+          },
+          "native_log_loss_before_overrides": 0.381701850233251
+        },
+        "update_placebo": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 101,
+          "harmed": 87,
+          "net_by_fold": [
+            20,
+            2,
+            -8
+          ],
+          "corrected": {
+            "ever": 101,
+            "repeat": 40,
+            "unresolved": 0,
+            "never": 0,
+            "repeat_paid": 7,
+            "solo_repeat": 21
+          },
+          "native_log_loss_before_overrides": 0.3819358494349109
+        }
+      },
+      "pair_losses": [
+        {
+          "learned": 0.5747828466446311,
+          "product": 0.5522959827702858
+        },
+        {
+          "learned": 0.5755106897859058,
+          "product": 0.5554223465940193
+        },
+        {
+          "learned": 0.5743068756469452,
+          "product": 0.5473487053041142
+        }
+      ]
+    },
+    "20261116": {
+      "models": {
+        "product_direct": {
+          "accuracy": 0.8075927523727351,
+          "fixed": 245,
+          "harmed": 288,
+          "net_by_fold": [
+            -20,
+            -17,
+            -6
+          ],
+          "corrected": {
+            "ever": 245,
+            "repeat": 152,
+            "unresolved": 23,
+            "never": 0,
+            "repeat_paid": 43,
+            "solo_repeat": 92
+          },
+          "native_log_loss_before_overrides": 0.39889340962994035
+        },
+        "decoded": {
+          "accuracy": 0.7978142076502732,
+          "fixed": 222,
+          "harmed": 333,
+          "net_by_fold": [
+            -48,
+            -34,
+            -29
+          ],
+          "corrected": {
+            "ever": 222,
+            "repeat": 115,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 46,
+            "solo_repeat": 66
+          },
+          "native_log_loss_before_overrides": 0.45278585058532966
+        },
+        "observed": {
+          "accuracy": 0.7973828012654587,
+          "fixed": 220,
+          "harmed": 334,
+          "net_by_fold": [
+            -50,
+            -33,
+            -31
+          ],
+          "corrected": {
+            "ever": 220,
+            "repeat": 114,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 46,
+            "solo_repeat": 67
+          },
+          "native_log_loss_before_overrides": 0.5302694340052799
+        },
+        "shuffled": {
+          "accuracy": 0.7069312625826862,
+          "fixed": 431,
+          "harmed": 1174,
+          "net_by_fold": [
+            -271,
+            -236,
+            -236
+          ],
+          "corrected": {
+            "ever": 431,
+            "repeat": 344,
+            "unresolved": 113,
+            "never": 18,
+            "repeat_paid": 102,
+            "solo_repeat": 192
+          },
+          "native_log_loss_before_overrides": 0.6260662022960196
+        },
+        "update_direct": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 110,
+          "harmed": 118,
+          "net_by_fold": [
+            -7,
+            -3,
+            2
+          ],
+          "corrected": {
+            "ever": 110,
+            "repeat": 67,
+            "unresolved": 4,
+            "never": 0,
+            "repeat_paid": 17,
+            "solo_repeat": 41
+          },
+          "native_log_loss_before_overrides": 0.3813282041825191
+        },
+        "update_relational": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 105,
+          "harmed": 107,
+          "net_by_fold": [
+            -10,
+            4,
+            4
+          ],
+          "corrected": {
+            "ever": 105,
+            "repeat": 50,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 16,
+            "solo_repeat": 27
+          },
+          "native_log_loss_before_overrides": 0.3820765403751928
+        },
+        "update_placebo": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 111,
+          "harmed": 113,
+          "net_by_fold": [
+            -10,
+            -1,
+            9
+          ],
+          "corrected": {
+            "ever": 111,
+            "repeat": 54,
+            "unresolved": 2,
+            "never": 0,
+            "repeat_paid": 16,
+            "solo_repeat": 30
+          },
+          "native_log_loss_before_overrides": 0.3822623681207775
+        }
+      },
+      "pair_losses": [
+        {
+          "learned": 0.5718707267580441,
+          "product": 0.5427970077128083
+        },
+        {
+          "learned": 0.5702683754840102,
+          "product": 0.5386506178166286
+        },
+        {
+          "learned": 0.577357103096362,
+          "product": 0.5590686858464874
+        }
+      ]
+    },
+    "v131": {
+      "models": {
+        "product_direct": {
+          "accuracy": 0.8009778544722462,
+          "fixed": 284,
+          "harmed": 376,
+          "net_by_fold": [
+            -25,
+            -31,
+            -36
+          ],
+          "corrected": {
+            "ever": 203,
+            "repeat": 130,
+            "unresolved": 29,
+            "never": 1,
+            "repeat_paid": 30,
+            "solo_repeat": 74
+          },
+          "native_log_loss_before_overrides": 0.4099471835720373
+        },
+        "decoded": {
+          "accuracy": 0.7973828012654587,
+          "fixed": 288,
+          "harmed": 405,
+          "net_by_fold": [
+            -50,
+            -24,
+            -43
+          ],
+          "corrected": {
+            "ever": 175,
+            "repeat": 90,
+            "unresolved": 9,
+            "never": 0,
+            "repeat_paid": 38,
+            "solo_repeat": 51
+          },
+          "native_log_loss_before_overrides": 0.4541475859927256
+        },
+        "observed": {
+          "accuracy": 0.7979580097785447,
+          "fixed": 289,
+          "harmed": 402,
+          "net_by_fold": [
+            -51,
+            -21,
+            -41
+          ],
+          "corrected": {
+            "ever": 177,
+            "repeat": 92,
+            "unresolved": 11,
+            "never": 0,
+            "repeat_paid": 41,
+            "solo_repeat": 54
+          },
+          "native_log_loss_before_overrides": 0.5331155319578059
+        },
+        "shuffled": {
+          "accuracy": 0.7155593902789761,
+          "fixed": 487,
+          "harmed": 1173,
+          "net_by_fold": [
+            -240,
+            -220,
+            -226
+          ],
+          "corrected": {
+            "ever": 404,
+            "repeat": 319,
+            "unresolved": 127,
+            "never": 27,
+            "repeat_paid": 115,
+            "solo_repeat": 194
+          },
+          "native_log_loss_before_overrides": 0.625451936983026
+        },
+        "update_direct": {
+          "accuracy": 0.8101811906816221,
+          "fixed": 116,
+          "harmed": 144,
+          "net_by_fold": [
+            -8,
+            -13,
+            -7
+          ],
+          "corrected": {
+            "ever": 79,
+            "repeat": 43,
+            "unresolved": 7,
+            "never": 0,
+            "repeat_paid": 6,
+            "solo_repeat": 32
+          },
+          "native_log_loss_before_overrides": 0.381104655039428
+        },
+        "update_relational": {
+          "accuracy": 0.8116192119643371,
+          "fixed": 111,
+          "harmed": 129,
+          "net_by_fold": [
+            -11,
+            3,
+            -10
+          ],
+          "corrected": {
+            "ever": 59,
+            "repeat": 27,
+            "unresolved": 3,
+            "never": 0,
+            "repeat_paid": 6,
+            "solo_repeat": 20
+          },
+          "native_log_loss_before_overrides": 0.38142604416019193
+        },
+        "update_placebo": {
+          "accuracy": 0.8113316077077941,
+          "fixed": 107,
+          "harmed": 127,
+          "net_by_fold": [
+            -9,
+            1,
+            -12
+          ],
+          "corrected": {
+            "ever": 60,
+            "repeat": 27,
+            "unresolved": 3,
+            "never": 0,
+            "repeat_paid": 6,
+            "solo_repeat": 21
+          },
+          "native_log_loss_before_overrides": 0.38133626682549715
+        }
+      },
+      "pair_losses": [
+        {
+          "learned": 0.5748639457147351,
+          "product": 0.5576543746199258
+        },
+        {
+          "learned": 0.5778659210693673,
+          "product": 0.5544485253238346
+        },
+        {
+          "learned": 0.583983110506095,
+          "product": 0.5663425944328635
+        }
+      ]
+    }
+  },
+  "stable": {
+    "product_direct": {
+      "ever": 121,
+      "repeat": 26,
+      "unresolved": 1,
+      "never": 0,
+      "repeat_paid": 8,
+      "solo_repeat": 14
+    },
+    "decoded": {
+      "ever": 281,
+      "repeat": 86,
+      "unresolved": 2,
+      "never": 0,
+      "repeat_paid": 25,
+      "solo_repeat": 44
+    },
+    "observed": {
+      "ever": 279,
+      "repeat": 89,
+      "unresolved": 2,
+      "never": 0,
+      "repeat_paid": 28,
+      "solo_repeat": 45
+    },
+    "shuffled": {
+      "ever": 100,
+      "repeat": 54,
+      "unresolved": 11,
+      "never": 1,
+      "repeat_paid": 13,
+      "solo_repeat": 35
+    },
+    "update_direct": {
+      "ever": 74,
+      "repeat": 8,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 1,
+      "solo_repeat": 4
+    },
+    "update_relational": {
+      "ever": 83,
+      "repeat": 2,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 1,
+      "solo_repeat": 1
+    },
+    "update_placebo": {
+      "ever": 86,
+      "repeat": 3,
+      "unresolved": 0,
+      "never": 0,
+      "repeat_paid": 0,
+      "solo_repeat": 2
+    }
+  }
+}
