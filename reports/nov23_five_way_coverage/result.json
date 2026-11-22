@@ -1,0 +1,149 @@
+{
+  "assignments": [
+    20261112,
+    20261115,
+    20261116
+  ],
+  "candidates": [
+    "sequence",
+    "sequence_blend",
+    "projection_shapes",
+    "projection_shapes_blend",
+    "self_peer_surprise",
+    "self_peer_surprise_blend",
+    "manifest_tree",
+    "manifest_tree_blend",
+    "two_level_table",
+    "shallow_tree"
+  ],
+  "exclusions": [
+    "raw_peers",
+    "single_shapes",
+    "basic",
+    "placebo",
+    "independent",
+    "permuted_tree",
+    "soft_mean",
+    "their associated blends"
+  ],
+  "interpretation": "A rowwise best across multiple methods is a diagnostic ceiling. The same passenger and true label recur in all three assignments.",
+  "results": {
+    "stubborn447": {
+      "size": 447,
+      "any_method_any_seed": 91,
+      "every_seed_some_method": 18,
+      "one_method_all_seeds": 16,
+      "never_correct": 356
+    },
+    "all_three_baselines_wrong": {
+      "size": 1070,
+      "any_method_any_seed": 573,
+      "every_seed_some_method": 282,
+      "one_method_all_seeds": 229,
+      "never_correct": 497
+    },
+    "always_baseline_correct": 5436,
+    "fixed_methods": {
+      "sequence": {
+        "all3_rescue_stubborn": 1,
+        "all3_rescue_baseline": 22,
+        "all3_harm_baseline": 28,
+        "accuracies": [
+          0.8100373885533506,
+          0.8075927523727351,
+          0.8047167098073051
+        ]
+      },
+      "sequence_blend": {
+        "all3_rescue_stubborn": 0,
+        "all3_rescue_baseline": 0,
+        "all3_harm_baseline": 0,
+        "accuracies": [
+          0.81765890135174,
+          0.813057233247052,
+          0.8114754098360656
+        ]
+      },
+      "projection_shapes": {
+        "all3_rescue_stubborn": 1,
+        "all3_rescue_baseline": 99,
+        "all3_harm_baseline": 133,
+        "accuracies": [
+          0.8022720736266897,
+          0.8016968651136037,
+          0.8005464480874317
+        ]
+      },
+      "projection_shapes_blend": {
+        "all3_rescue_stubborn": 0,
+        "all3_rescue_baseline": 3,
+        "all3_harm_baseline": 3,
+        "accuracies": [
+          0.8149266609145815,
+          0.813632441760138,
+          0.8113316077077941
+        ]
+      },
+      "self_peer_surprise": {
+        "all3_rescue_stubborn": 1,
+        "all3_rescue_baseline": 21,
+        "all3_harm_baseline": 34,
+        "accuracies": [
+          0.8081679608858211,
+          0.8071613459879207,
+          0.8057233247052057
+        ]
+      },
+      "self_peer_surprise_blend": {
+        "all3_rescue_stubborn": 0,
+        "all3_rescue_baseline": 2,
+        "all3_harm_baseline": 1,
+        "accuracies": [
+          0.8186655162496405,
+          0.8129134311187806,
+          0.8137762438884095
+        ]
+      },
+      "manifest_tree": {
+        "all3_rescue_stubborn": 12,
+        "all3_rescue_baseline": 132,
+        "all3_harm_baseline": 432,
+        "accuracies": [
+          0.7582686223756112,
+          0.7572620074777107,
+          0.7548173712970953
+        ]
+      },
+      "manifest_tree_blend": {
+        "all3_rescue_stubborn": 0,
+        "all3_rescue_baseline": 37,
+        "all3_harm_baseline": 49,
+        "accuracies": [
+          0.813057233247052,
+          0.811044003451251,
+          0.8098935864250791
+        ]
+      },
+      "two_level_table": {
+        "all3_rescue_stubborn": 0,
+        "all3_rescue_baseline": 3,
+        "all3_harm_baseline": 5,
+        "accuracies": [
+          0.8146390566580385,
+          0.813057233247052,
+          0.811044003451251
+        ]
+      },
+      "shallow_tree": {
+        "all3_rescue_stubborn": 1,
+        "all3_rescue_baseline": 16,
+        "all3_harm_baseline": 10,
+        "accuracies": [
+          0.8137762438884095,
+          0.8172274949669255,
+          0.8062985332182916
+        ]
+      }
+    }
+  }
+}
