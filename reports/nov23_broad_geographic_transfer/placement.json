@@ -1,0 +1,239 @@
+{
+  "archive_size": 50,
+  "comparable": 24,
+  "methods": [
+    "sparse_rules",
+    "tabular_in_context",
+    "constructed_features",
+    "feature_projections",
+    "peer_attributes",
+    "manifest_likelihood",
+    "boarding_sequence",
+    "gradient_kernel",
+    "budget_prior",
+    "bayesian_forest",
+    "tensor_train",
+    "passenger_relation",
+    "registration_only",
+    "conditional_router",
+    "across_deck_field",
+    "apple_semantics",
+    "booking_mixup",
+    "booking_scoring",
+    "class_analogues",
+    "conditional_view_density",
+    "exact_booking_field",
+    "field_factors",
+    "gibbs_manifest",
+    "group_disputes",
+    "masked_views",
+    "ordered_states",
+    "pair_pretext",
+    "party_hotdeck",
+    "passenger_sampler",
+    "registration_rank",
+    "residual_discovery",
+    "residual_registration",
+    "rule_context_pool",
+    "selective_fields",
+    "spend_copula",
+    "spend_exceptions",
+    "symbolic_residuals",
+    "teacher_field_offsets",
+    "training_cohort_sensitivity",
+    "transported_subclasses",
+    "orion",
+    "iltm_concat",
+    "variational_gp",
+    "berth_activity",
+    "manifest_reconstruction",
+    "native_carte",
+    "shared",
+    "bills",
+    "rotation",
+    "mondrian"
+  ],
+  "bands": [
+    "comparable_stable",
+    "only_other_stable",
+    "only_occasional",
+    "never"
+  ],
+  "coverage": {
+    "ever": [
+      {
+        "total": 504,
+        "transported": 243
+      },
+      {
+        "total": 495,
+        "transported": 187
+      },
+      {
+        "total": 347,
+        "transported": 173
+      },
+      {
+        "total": 172,
+        "transported": 113
+      }
+    ],
+    "repeat": [
+      {
+        "total": 152,
+        "transported": 47
+      },
+      {
+        "total": 409,
+        "transported": 149
+      },
+      {
+        "total": 337,
+        "transported": 171
+      },
+      {
+        "total": 172,
+        "transported": 113
+      }
+    ]
+  },
+  "spatial": {
+    "fold_calibration": {
+      "accuracy": [
+        0.8198159332758125,
+        0.8157894736842105,
+        0.8153580672993961
+      ],
+      "fixed": [
+        72,
+        89,
+        58
+      ],
+      "harmed": [
+        57,
+        72,
+        47
+      ],
+      "paired_ci_pp": [
+        0.004789874266157324,
+        0.4125796896459833
+      ],
+      "mean_net_people": {
+        "observed": 14.333333333333334,
+        "shuffled_mean": -6.815833333333333,
+        "shuffled_95": [
+          -19.666666666666668,
+          6.333333333333333
+        ]
+      },
+      "stable_repeat": {
+        "observed": 2.0,
+        "shuffled_mean": 0.8925,
+        "shuffled_95": [
+          0.0,
+          2.0
+        ]
+      },
+      "stable_never46": {
+        "observed": 0.0,
+        "shuffled_mean": 0.0,
+        "shuffled_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "all_training": {
+      "accuracy": [
+        0.8195283290192695,
+        0.817083692838654,
+        0.8134886396318666
+      ],
+      "fixed": [
+        40,
+        62,
+        48
+      ],
+      "harmed": [
+        27,
+        36,
+        50
+      ],
+      "paired_ci_pp": [
+        0.004782574457524027,
+        0.35935417031752925
+      ],
+      "mean_net_people": {
+        "observed": 12.333333333333334,
+        "shuffled_mean": -5.706666666666667,
+        "shuffled_95": [
+          -17.0,
+          5.666666666666667
+        ]
+      },
+      "stable_repeat": {
+        "observed": 0.0,
+        "shuffled_mean": 0.0,
+        "shuffled_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "stable_never46": {
+        "observed": 0.0,
+        "shuffled_mean": 0.0,
+        "shuffled_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "dense": {
+      "accuracy": [
+        0.8201035375323554,
+        0.8167960885821111,
+        0.813057233247052
+      ],
+      "fixed": [
+        45,
+        53,
+        47
+      ],
+      "harmed": [
+        28,
+        29,
+        52
+      ],
+      "paired_ci_pp": [
+        0.0,
+        0.3494926551931718
+      ],
+      "mean_net_people": {
+        "observed": 12.0,
+        "shuffled_mean": -5.450833333333333,
+        "shuffled_95": [
+          -16.666666666666668,
+          6.0
+        ]
+      },
+      "stable_repeat": {
+        "observed": 2.0,
+        "shuffled_mean": 1.3575,
+        "shuffled_95": [
+          0.0,
+          3.0
+        ]
+      },
+      "stable_never46": {
+        "observed": 0.0,
+        "shuffled_mean": 0.0,
+        "shuffled_95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "permutations": 800,
+  "cells": 48
+}
