@@ -1,0 +1,59 @@
+{
+  "models": [
+    "raw_tree",
+    "quantile_tree",
+    "forest",
+    "honest_leaves",
+    "network",
+    "denoiser",
+    "marginal",
+    "tensor",
+    "independent_pair",
+    "joint_pair",
+    "prior",
+    "reverse",
+    "direct",
+    "bidirectional",
+    "shared_booking",
+    "individual_booking"
+  ],
+  "rows": 6954,
+  "counts": {
+    "all": {
+      "v131_wrong": 1292,
+      "new_can_repair": 774,
+      "still_all_new_wrong": 518,
+      "all_seven_historical_also_wrong_but_new_can_repair": 349,
+      "still_wrong_with_all_new_and_historical": 500
+    },
+    "false_negatives": {
+      "v131_wrong": 632,
+      "new_can_repair": 363,
+      "still_all_new_wrong": 269,
+      "all_seven_historical_also_wrong_but_new_can_repair": 141,
+      "still_wrong_with_all_new_and_historical": 257
+    },
+    "false_positives": {
+      "v131_wrong": 660,
+      "new_can_repair": 411,
+      "still_all_new_wrong": 249,
+      "all_seven_historical_also_wrong_but_new_can_repair": 208,
+      "still_wrong_with_all_new_and_historical": 243
+    },
+    "historical_546": {
+      "v131_wrong": 540,
+      "new_can_repair": 135,
+      "still_all_new_wrong": 405,
+      "all_seven_historical_also_wrong_but_new_can_repair": 135,
+      "still_wrong_with_all_new_and_historical": 405
+    },
+    "persistent_510": {
+      "v131_wrong": 505,
+      "new_can_repair": 115,
+      "still_all_new_wrong": 390,
+      "all_seven_historical_also_wrong_but_new_can_repair": 115,
+      "still_wrong_with_all_new_and_historical": 390
+    }
+  },
+  "definition": "Sixteen predictions from the broad model experiments and their controls. Diagnostic coverage uses observed labels for evaluation only."
+}
