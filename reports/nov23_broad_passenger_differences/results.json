@@ -1,0 +1,798 @@
+{
+  "plans": {
+    "20261112": {
+      "comparison": {
+        "native_flat": {
+          "accuracy": 0.767184354328444,
+          "fixed": 272,
+          "harmed": 623,
+          "net_by_fold": [
+            -125,
+            -94,
+            -132
+          ],
+          "corrected": {
+            "ever": 272,
+            "repeat": 182,
+            "unresolved": 1,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4862665565905834
+        },
+        "native_direct": {
+          "accuracy": 0.811044003451251,
+          "fixed": 186,
+          "harmed": 232,
+          "net_by_fold": [
+            -13,
+            -10,
+            -23
+          ],
+          "corrected": {
+            "ever": 186,
+            "repeat": 129,
+            "unresolved": 17,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3948907764282389
+        },
+        "native_pair": {
+          "accuracy": 0.8037100949094047,
+          "fixed": 195,
+          "harmed": 292,
+          "net_by_fold": [
+            -18,
+            -35,
+            -44
+          ],
+          "corrected": {
+            "ever": 195,
+            "repeat": 114,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4168976278145682
+        },
+        "native_no_graph": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 150,
+          "harmed": 209,
+          "net_by_fold": [
+            -20,
+            -14,
+            -25
+          ],
+          "corrected": {
+            "ever": 150,
+            "repeat": 87,
+            "unresolved": 7,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3940804640281507
+        },
+        "update_flat": {
+          "accuracy": 0.8183779119930975,
+          "fixed": 143,
+          "harmed": 138,
+          "net_by_fold": [
+            5,
+            5,
+            -5
+          ],
+          "corrected": {
+            "ever": 143,
+            "repeat": 96,
+            "unresolved": 18,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38654536944615614
+        },
+        "update_direct": {
+          "accuracy": 0.8147828587863101,
+          "fixed": 176,
+          "harmed": 196,
+          "net_by_fold": [
+            0,
+            -14,
+            -6
+          ],
+          "corrected": {
+            "ever": 176,
+            "repeat": 125,
+            "unresolved": 23,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3968284379716768
+        },
+        "update_pair": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 158,
+          "harmed": 163,
+          "net_by_fold": [
+            8,
+            -8,
+            -5
+          ],
+          "corrected": {
+            "ever": 158,
+            "repeat": 105,
+            "unresolved": 23,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3891861614829504
+        },
+        "update_no_graph": {
+          "accuracy": 0.8163646821972965,
+          "fixed": 120,
+          "harmed": 129,
+          "net_by_fold": [
+            6,
+            -10,
+            -5
+          ],
+          "corrected": {
+            "ever": 120,
+            "repeat": 75,
+            "unresolved": 11,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3903563088867066
+        }
+      },
+      "edge_checks": [
+        {
+          "mse": {
+            "native_flat": 0.350155690029963,
+            "native_direct": 0.2750966848972509,
+            "native_pair": 0.29104549346722147,
+            "update_flat": 0.2697262445447675,
+            "update_direct": 0.2755167737497523,
+            "update_pair": 0.2694969625396781
+          },
+          "query_edges": 17021,
+          "edges": 124312
+        },
+        {
+          "mse": {
+            "native_flat": 0.3830970079330377,
+            "native_direct": 0.31879118069846246,
+            "native_pair": 0.3262588459095196,
+            "update_flat": 0.30704990313087,
+            "update_direct": 0.3137148094519446,
+            "update_pair": 0.30179486296829666
+          },
+          "query_edges": 16009,
+          "edges": 124265
+        },
+        {
+          "mse": {
+            "native_flat": 0.3425430603727,
+            "native_direct": 0.27115246863461234,
+            "native_pair": 0.28873468610840103,
+            "update_flat": 0.25659413248212387,
+            "update_direct": 0.2603159162648182,
+            "update_pair": 0.25969772626825693
+          },
+          "query_edges": 17011,
+          "edges": 124320
+        }
+      ]
+    },
+    "20261115": {
+      "comparison": {
+        "native_flat": {
+          "accuracy": 0.766321541558815,
+          "fixed": 283,
+          "harmed": 610,
+          "net_by_fold": [
+            -99,
+            -107,
+            -121
+          ],
+          "corrected": {
+            "ever": 283,
+            "repeat": 183,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4873905432935372
+        },
+        "native_direct": {
+          "accuracy": 0.8106125970664366,
+          "fixed": 195,
+          "harmed": 214,
+          "net_by_fold": [
+            4,
+            -2,
+            -21
+          ],
+          "corrected": {
+            "ever": 195,
+            "repeat": 114,
+            "unresolved": 14,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3911273291753831
+        },
+        "native_pair": {
+          "accuracy": 0.8065861374748347,
+          "fixed": 202,
+          "harmed": 249,
+          "net_by_fold": [
+            0,
+            -26,
+            -21
+          ],
+          "corrected": {
+            "ever": 202,
+            "repeat": 119,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4174171603147055
+        },
+        "native_no_graph": {
+          "accuracy": 0.8080241587575496,
+          "fixed": 147,
+          "harmed": 184,
+          "net_by_fold": [
+            -2,
+            -11,
+            -24
+          ],
+          "corrected": {
+            "ever": 147,
+            "repeat": 75,
+            "unresolved": 4,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39266878400084776
+        },
+        "update_flat": {
+          "accuracy": 0.8149266609145815,
+          "fixed": 142,
+          "harmed": 131,
+          "net_by_fold": [
+            14,
+            0,
+            -3
+          ],
+          "corrected": {
+            "ever": 142,
+            "repeat": 84,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38208371993032914
+        },
+        "update_direct": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 184,
+          "harmed": 153,
+          "net_by_fold": [
+            23,
+            13,
+            -5
+          ],
+          "corrected": {
+            "ever": 184,
+            "repeat": 121,
+            "unresolved": 16,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.396835208218576
+        },
+        "update_pair": {
+          "accuracy": 0.816220880069025,
+          "fixed": 164,
+          "harmed": 144,
+          "net_by_fold": [
+            15,
+            2,
+            3
+          ],
+          "corrected": {
+            "ever": 164,
+            "repeat": 101,
+            "unresolved": 17,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3850392724557345
+        },
+        "update_no_graph": {
+          "accuracy": 0.8183779119930975,
+          "fixed": 122,
+          "harmed": 87,
+          "net_by_fold": [
+            28,
+            14,
+            -7
+          ],
+          "corrected": {
+            "ever": 122,
+            "repeat": 69,
+            "unresolved": 3,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39063979680921795
+        }
+      },
+      "edge_checks": [
+        {
+          "mse": {
+            "native_flat": 0.2966474561566586,
+            "native_direct": 0.23146953840193268,
+            "native_pair": 0.25407441647137763,
+            "update_flat": 0.2329341562412907,
+            "update_direct": 0.23392606336789923,
+            "update_pair": 0.23619707954962751
+          },
+          "query_edges": 16137,
+          "edges": 124284
+        },
+        {
+          "mse": {
+            "native_flat": 0.3782519731072786,
+            "native_direct": 0.28874968383074867,
+            "native_pair": 0.3246190248415792,
+            "update_flat": 0.27905742549841656,
+            "update_direct": 0.28568756898286957,
+            "update_pair": 0.28527589660133584
+          },
+          "query_edges": 13684,
+          "edges": 124304
+        },
+        {
+          "mse": {
+            "native_flat": 0.28526899819213264,
+            "native_direct": 0.2335890465198444,
+            "native_pair": 0.24252773728138144,
+            "update_flat": 0.21794962955750552,
+            "update_direct": 0.22466376868858837,
+            "update_pair": 0.21802585036041558
+          },
+          "query_edges": 16041,
+          "edges": 124252
+        }
+      ]
+    },
+    "20261116": {
+      "comparison": {
+        "native_flat": {
+          "accuracy": 0.7638769053781996,
+          "fixed": 294,
+          "harmed": 641,
+          "net_by_fold": [
+            -98,
+            -117,
+            -132
+          ],
+          "corrected": {
+            "ever": 294,
+            "repeat": 182,
+            "unresolved": 0,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4882562363552312
+        },
+        "native_direct": {
+          "accuracy": 0.8090307736554501,
+          "fixed": 202,
+          "harmed": 235,
+          "net_by_fold": [
+            -23,
+            -17,
+            7
+          ],
+          "corrected": {
+            "ever": 202,
+            "repeat": 129,
+            "unresolved": 12,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39488533381296614
+        },
+        "native_pair": {
+          "accuracy": 0.8018406672418752,
+          "fixed": 198,
+          "harmed": 281,
+          "net_by_fold": [
+            -37,
+            -45,
+            -1
+          ],
+          "corrected": {
+            "ever": 198,
+            "repeat": 116,
+            "unresolved": 5,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4203145208718963
+        },
+        "native_no_graph": {
+          "accuracy": 0.8097497842968076,
+          "fixed": 176,
+          "harmed": 204,
+          "net_by_fold": [
+            -14,
+            -22,
+            8
+          ],
+          "corrected": {
+            "ever": 176,
+            "repeat": 103,
+            "unresolved": 7,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39364999063310097
+        },
+        "update_flat": {
+          "accuracy": 0.8119068162208801,
+          "fixed": 148,
+          "harmed": 161,
+          "net_by_fold": [
+            -21,
+            0,
+            8
+          ],
+          "corrected": {
+            "ever": 148,
+            "repeat": 93,
+            "unresolved": 10,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38814021783265196
+        },
+        "update_direct": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 173,
+          "harmed": 181,
+          "net_by_fold": [
+            -24,
+            2,
+            14
+          ],
+          "corrected": {
+            "ever": 173,
+            "repeat": 113,
+            "unresolved": 16,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39636341320899504
+        },
+        "update_pair": {
+          "accuracy": 0.811044003451251,
+          "fixed": 165,
+          "harmed": 184,
+          "net_by_fold": [
+            -22,
+            -4,
+            7
+          ],
+          "corrected": {
+            "ever": 165,
+            "repeat": 112,
+            "unresolved": 18,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39470012040803065
+        },
+        "update_no_graph": {
+          "accuracy": 0.8146390566580385,
+          "fixed": 112,
+          "harmed": 106,
+          "net_by_fold": [
+            -9,
+            5,
+            10
+          ],
+          "corrected": {
+            "ever": 112,
+            "repeat": 60,
+            "unresolved": 8,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3881317581574008
+        }
+      },
+      "edge_checks": [
+        {
+          "mse": {
+            "native_flat": 0.3826853806980499,
+            "native_direct": 0.2737534642396888,
+            "native_pair": 0.3297587660830593,
+            "update_flat": 0.2766880618148879,
+            "update_direct": 0.27820294928703476,
+            "update_pair": 0.29212246420770366
+          },
+          "query_edges": 16102,
+          "edges": 124254
+        },
+        {
+          "mse": {
+            "native_flat": 0.2936792519159108,
+            "native_direct": 0.2529612906245651,
+            "native_pair": 0.29374055960463363,
+            "update_flat": 0.2359097805986189,
+            "update_direct": 0.23872859853472533,
+            "update_pair": 0.24514840029492435
+          },
+          "query_edges": 14223,
+          "edges": 124280
+        },
+        {
+          "mse": {
+            "native_flat": 0.35498925391464536,
+            "native_direct": 0.2865856196017882,
+            "native_pair": 0.2959603178405598,
+            "update_flat": 0.29227215156440683,
+            "update_direct": 0.29750774099590116,
+            "update_pair": 0.2903653602765632
+          },
+          "query_edges": 16285,
+          "edges": 124309
+        }
+      ]
+    },
+    "v131": {
+      "comparison": {
+        "native_flat": {
+          "accuracy": 0.7656025309174576,
+          "fixed": 352,
+          "harmed": 690,
+          "net_by_fold": [
+            -122,
+            -87,
+            -129
+          ],
+          "corrected": {
+            "ever": 250,
+            "repeat": 157,
+            "unresolved": 4,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4963622868290228
+        },
+        "native_direct": {
+          "accuracy": 0.8034224906528616,
+          "fixed": 241,
+          "harmed": 316,
+          "net_by_fold": [
+            -35,
+            -14,
+            -26
+          ],
+          "corrected": {
+            "ever": 160,
+            "repeat": 89,
+            "unresolved": 17,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3976716282063699
+        },
+        "native_pair": {
+          "accuracy": 0.8025596778832327,
+          "fixed": 264,
+          "harmed": 345,
+          "net_by_fold": [
+            -46,
+            -17,
+            -18
+          ],
+          "corrected": {
+            "ever": 158,
+            "repeat": 79,
+            "unresolved": 8,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.4229177819344719
+        },
+        "native_no_graph": {
+          "accuracy": 0.8045729076790337,
+          "fixed": 238,
+          "harmed": 305,
+          "net_by_fold": [
+            -28,
+            -5,
+            -34
+          ],
+          "corrected": {
+            "ever": 141,
+            "repeat": 69,
+            "unresolved": 9,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39575502251080796
+        },
+        "update_flat": {
+          "accuracy": 0.8113316077077941,
+          "fixed": 129,
+          "harmed": 149,
+          "net_by_fold": [
+            -10,
+            -1,
+            -9
+          ],
+          "corrected": {
+            "ever": 110,
+            "repeat": 80,
+            "unresolved": 21,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38720730210034815
+        },
+        "update_direct": {
+          "accuracy": 0.8080241587575496,
+          "fixed": 172,
+          "harmed": 215,
+          "net_by_fold": [
+            -26,
+            -14,
+            -3
+          ],
+          "corrected": {
+            "ever": 145,
+            "repeat": 93,
+            "unresolved": 30,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.39569902813326585
+        },
+        "update_pair": {
+          "accuracy": 0.8090307736554501,
+          "fixed": 131,
+          "harmed": 167,
+          "net_by_fold": [
+            -17,
+            0,
+            -19
+          ],
+          "corrected": {
+            "ever": 115,
+            "repeat": 83,
+            "unresolved": 22,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.3927865278683914
+        },
+        "update_no_graph": {
+          "accuracy": 0.8096059821685361,
+          "fixed": 136,
+          "harmed": 168,
+          "net_by_fold": [
+            -20,
+            -9,
+            -3
+          ],
+          "corrected": {
+            "ever": 115,
+            "repeat": 62,
+            "unresolved": 17,
+            "never": 0
+          },
+          "native_log_loss_before_overrides": 0.38679214495208475
+        }
+      },
+      "edge_checks": [
+        {
+          "mse": {
+            "native_flat": 0.3444771329232415,
+            "native_direct": 0.24712112096244185,
+            "native_pair": 0.280345867161395,
+            "update_flat": 0.24149182417904402,
+            "update_direct": 0.2396185885368245,
+            "update_pair": 0.24110756232784356
+          },
+          "query_edges": 18695,
+          "edges": 106101
+        },
+        {
+          "mse": {
+            "native_flat": 0.3379691778982978,
+            "native_direct": 0.24930400555163187,
+            "native_pair": 0.2985433564559067,
+            "update_flat": 0.2428597562362969,
+            "update_direct": 0.24688275612289448,
+            "update_pair": 0.2570367176227836
+          },
+          "query_edges": 18623,
+          "edges": 107203
+        },
+        {
+          "mse": {
+            "native_flat": 0.32736270238287346,
+            "native_direct": 0.25919301844811327,
+            "native_pair": 0.277024964391104,
+            "update_flat": 0.2542357826836709,
+            "update_direct": 0.25939125248592587,
+            "update_pair": 0.2604181915644164
+          },
+          "query_edges": 18591,
+          "edges": 107321
+        }
+      ]
+    }
+  },
+  "stable": {
+    "native_flat": {
+      "ever": 362,
+      "repeat": 161,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -5.674324032678877,
+        -4.1588230995840405
+      ]
+    },
+    "native_direct": {
+      "ever": 154,
+      "repeat": 42,
+      "unresolved": 5,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.911179413091543,
+        -0.03345065495603131
+      ]
+    },
+    "native_pair": {
+      "ever": 212,
+      "repeat": 64,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -1.5877700672286927,
+        -0.5847056027524175
+      ]
+    },
+    "native_no_graph": {
+      "ever": 147,
+      "repeat": 30,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.9898802354047573,
+        -0.20011292126101202
+      ]
+    },
+    "update_flat": {
+      "ever": 110,
+      "repeat": 22,
+      "unresolved": 2,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.3361068173673378,
+        0.3829855874881685
+      ]
+    },
+    "update_direct": {
+      "ever": 122,
+      "repeat": 36,
+      "unresolved": 4,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.37609647080239256,
+        0.4160106730342367
+      ]
+    },
+    "update_pair": {
+      "ever": 116,
+      "repeat": 24,
+      "unresolved": 4,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.38778126978187993,
+        0.3611738194951766
+      ]
+    },
+    "update_no_graph": {
+      "ever": 85,
+      "repeat": 11,
+      "unresolved": 0,
+      "never": 0,
+      "paired_gain_ci95_pp": [
+        -0.13096068547883002,
+        0.4406161930532291
+      ]
+    }
+  }
+}
