@@ -59,6 +59,10 @@ def run():
                     err=[expected_error(x[q],m,c,a)@weights for m,c in zip(means,mat)]
                     score+=err[0]-err[1]
                 decisions[name][q]=score/4
+        cache=ART/"nov23_broad_diffusion_moments"
+        cache.mkdir(exist_ok=True)
+        np.savez_compressed(cache/f"{s}.npz",row=row,y=y,fold=fold,
+                            **{k:v>=0 for k,v in decisions.items()})
         records[s]={}
         for k,v in decisions.items():
             assert np.isfinite(v).all()
