@@ -30,11 +30,6 @@ def export():
     frame['BookingSize']=size
     x,g,prior=design(frame)
     alt,params=fit(x,g,prior,train.Transported.to_numpy(bool),t,q,'fixed',return_parameters=True)
-    base,_,anchor=source('proposal_v108_party_bills',test)
-    _,ref,incumbent=source('proposal_v131_party_consensus',test)
-    locked=ref!=(base>=.5)
-    def blend(v):
-        return np.where(locked,ref,.75*base+.25*v)
     out=ART/NAME
     out.mkdir(exist_ok=True)
     path=out/'service_bag.npz'
@@ -42,13 +37,24 @@ def export():
     with np.load(path) as saved:
         logits=np.einsum('nsd,sd->ns',x[q],saved['weights'])
         replay=(softmax(prior[q],axis=1)*expit(logits)).sum(1)
+    publish_blend(VERSION,path,test,alt,replay,len(train),(PERSONAL,THREE),'three_candidate_union')
+
+
+def publish_blend(version,path,test,alt,replay,training_rows,comparators,union_key):
+    out=path.parent
+    base,_,anchor=source('proposal_v108_party_bills',test)
+    _,ref,incumbent=source('proposal_v131_party_consensus',test)
+    locked=ref!=(base>=.5)
+    def blend(v):
+        return np.where(locked,ref,.75*base+.25*v)
     np.testing.assert_array_equal(alt,replay)
+    assert np.isfinite(alt).all() and ((alt>=0)&(alt<=1)).all()
     p,r=blend(alt),blend(replay)
     vote=p>=.5
     np.testing.assert_array_equal(vote[locked],ref[locked])
     pd.DataFrame(dict(PassengerId=test.PassengerId,probability=p,reload_probability=r)).to_csv(out/'test_probabilities.csv',index=False)
     pd.DataFrame(dict(PassengerId=test.PassengerId,Transported=vote)).to_csv(out/'submission.csv',index=False)
-    check=validate_submission(out/'submission.csv',test_path)
+    check=validate_submission(out/'submission.csv',ROOT/'data/raw/test.csv')
     previous={}
     for receipt in (ROOT/'reports').glob('*/online_attempts/*.json'):
         data=json.loads(receipt.read_text())
@@ -62,7 +68,7 @@ def export():
     assert min(previous.values())>0
     union=vote!=ref
     others={}
-    for name in (PERSONAL,THREE):
+    for name in comparators:
         path_csv=ART/name/'submission.csv'
         metadata=json.loads((ROOT/'reports'/name/'manifest.json').read_text())
         assert sha256(path_csv)==metadata['sha256']
@@ -71,14 +77,15 @@ def export():
         others[name]=int((old.Transported!=vote).sum())
         union|=old.Transported.to_numpy()!=ref
     assert min(others.values())>0
-    manifest=dict(**check,version=VERSION,training_rows=len(train),v108=anchor,v131=incumbent,locked=int(locked.sum()),
+    manifest=dict(**check,version=version,training_rows=training_rows,v108=anchor,v131=incumbent,locked=int(locked.sum()),
                   model_sha256=sha256(path),reload_difference=0,v131_changes=int((vote!=ref).sum()),
                   unchecked_ceiling_correct=3494+int((vote!=ref).sum()),previous_files=len(previous),
                   closest_previous=min(previous.values()),closest_names=[k for k,v in previous.items() if v==min(previous.values())],
-                  earlier_candidate_distances=others,three_candidate_union=int(union.sum()))
-    for folder in (out,ROOT/'reports'/NAME):
+                  earlier_candidate_distances=others)
+    manifest[union_key]=int(union.sum())
+    for folder in (out,ROOT/'reports'/out.name):
         write(folder/'manifest.json',manifest)
-        write(folder/'selection.json',dict(version=VERSION,threshold=.5))
+        write(folder/'selection.json',dict(version=version,threshold=.5))
     print(manifest)
 
 
