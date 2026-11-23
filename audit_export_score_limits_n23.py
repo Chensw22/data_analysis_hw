@@ -12,29 +12,34 @@ from kaggle_workflow import validate_submission
 from pending_family_coverage_n23 import PAIRS, SEEDS, development_votes, rules
 
 
+def all_candidate_votes(frame, groups, row, y, seed, weight):
+    ref, votes = development_votes(frame, groups, row, y, seed, weight)
+    decisions, _ = rules(ref, votes)
+    votes['proposal_n23_pending_family_support'] = ref ^ decisions['queued_or_two']
+    if seed == 'v131':
+        path = ART / 'nov23_budget_quarter_replay/original.npz'
+    else:
+        path = ART / f'nov23_joint_risk_surface/{seed}.npz'
+    with np.load(path) as cache:
+        np.testing.assert_array_equal(row, cache['row'])
+        np.testing.assert_array_equal(y, cache['y'])
+        if seed == 'v131':
+            np.testing.assert_array_equal(ref, cache['ref'])
+            budget_vote = cache['vote']
+        else:
+            np.testing.assert_array_equal(ref, cache['base'] >= .5)
+            budget_vote = cache['fixed_quarter'] >= .5
+    votes['proposal_n23_budget_quarter_incumbent'] = budget_vote
+    return ref, votes
+
+
 def local_coverage(names):
     row, y, frame, groups, _ = load()
     _, _, hard = cohorts(row, y)
     weight = json.loads((PAIRS / 'test_budget.json').read_text())['test']['change_150']['weight']
     plans = {}
     for seed in [*map(str, SEEDS), 'v131']:
-        ref, votes = development_votes(frame, groups, row, y, seed, weight)
-        decisions, _ = rules(ref, votes)
-        votes['proposal_n23_pending_family_support'] = ref ^ decisions['queued_or_two']
-        if seed == 'v131':
-            path = ART / 'nov23_budget_quarter_replay/original.npz'
-        else:
-            path = ART / f'nov23_joint_risk_surface/{seed}.npz'
-        with np.load(path) as cache:
-            np.testing.assert_array_equal(row, cache['row'])
-            np.testing.assert_array_equal(y, cache['y'])
-            if seed == 'v131':
-                np.testing.assert_array_equal(ref, cache['ref'])
-                budget_vote = cache['vote']
-            else:
-                np.testing.assert_array_equal(ref, cache['base'] >= .5)
-                budget_vote = cache['fixed_quarter'] >= .5
-        votes['proposal_n23_budget_quarter_incumbent'] = budget_vote
+        ref, votes = all_candidate_votes(frame, groups, row, y, seed, weight)
         assert len(votes) == 13 and set(votes).issubset(names)
         reachable = np.any([v != ref for v in votes.values()], axis=0) & (ref != y)
         best_possible = int((ref == y).sum() + reachable.sum())
