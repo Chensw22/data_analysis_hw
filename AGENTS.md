@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 23 日 16:29 北京时间，改判 160 人的固定文件（`proposal_n23_service_pair_zero_donor`，SHA-256 以 `b93762ae` 开头）已在当前 Mac 登录会话排队。一次性任务为 `com.chensw22.spaceship.servicepair160.once`，首次核验主账号当天 10 次已用、可用 0 次。后续上传这份文件前先查 `launchctl list com.chensw22.spaceship.servicepair160.once`、`artifacts/proposal_n23_service_pair_zero_donor/queue_status.json` 和其 `reports/` 下的线上回执，避免重复提交。
+
 - 11 月 23 日用户明确，本地有明显提升即可自主提交，83% 不作为提交下限。以相对当前强基线的实际改判收益判断，继续记录探索性线上分数和排名。
 
 - 用户要求后续从全开发集看错例，优先研究能解释或纠正大批乘客错误的机制。比较新方法时同时报告全体错例、跨划分反复出错者的覆盖人数，以及组合后在全体乘客上纠正和新增的错误数。小群体可以提供线索，优先验证同一现象能否推广到其他乘客。
