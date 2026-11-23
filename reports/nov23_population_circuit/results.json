@@ -1,0 +1,282 @@
+{
+  "results": {
+    "one_subtype": {
+      "accuracy": [
+        0.7568306010928961,
+        0.7546735691688237,
+        0.7562553925798102
+      ],
+      "fixed": [
+        485,
+        528,
+        516
+      ],
+      "harmed": [
+        908,
+        936,
+        916
+      ],
+      "stable": {
+        "ever": 463,
+        "repeat": 291
+      }
+    },
+    "combined_one_subtype": {
+      "accuracy": [
+        0.816508484325568,
+        0.8149266609145815,
+        0.8123382226056945
+      ],
+      "fixed": [
+        35,
+        68,
+        43
+      ],
+      "harmed": [
+        43,
+        57,
+        53
+      ],
+      "stable": {
+        "ever": 46,
+        "repeat": 0
+      }
+    },
+    "flat_twelve": {
+      "accuracy": [
+        0.7840092033362094,
+        0.7863100373885533,
+        0.7824273799252229
+      ],
+      "fixed": [
+        265,
+        260,
+        286
+      ],
+      "harmed": [
+        499,
+        448,
+        504
+      ],
+      "stable": {
+        "ever": 175,
+        "repeat": 57
+      }
+    },
+    "combined_flat_twelve": {
+      "accuracy": [
+        0.817946505608283,
+        0.8155018694276676,
+        0.8120506183491516
+      ],
+      "fixed": [
+        37,
+        71,
+        42
+      ],
+      "harmed": [
+        35,
+        56,
+        54
+      ],
+      "stable": {
+        "ever": 46,
+        "repeat": 0
+      }
+    },
+    "hierarchy": {
+      "accuracy": [
+        0.7851596203623814,
+        0.7838654012079379,
+        0.7835777969513948
+      ],
+      "fixed": [
+        275,
+        312,
+        300
+      ],
+      "harmed": [
+        501,
+        517,
+        510
+      ],
+      "stable": {
+        "ever": 233,
+        "repeat": 94
+      }
+    },
+    "combined_hierarchy": {
+      "accuracy": [
+        0.815645671555939,
+        0.8157894736842105,
+        0.8120506183491516
+      ],
+      "fixed": [
+        40,
+        66,
+        39
+      ],
+      "harmed": [
+        54,
+        49,
+        51
+      ],
+      "stable": {
+        "ever": 50,
+        "repeat": 0
+      }
+    },
+    "random_blocks": {
+      "accuracy": [
+        0.7745182628702905,
+        0.7615760713258556,
+        0.770348001150417
+      ],
+      "fixed": [
+        282,
+        279,
+        307
+      ],
+      "harmed": [
+        582,
+        639,
+        609
+      ],
+      "stable": {
+        "ever": 227,
+        "repeat": 88
+      }
+    },
+    "combined_random_blocks": {
+      "accuracy": [
+        0.8183779119930975,
+        0.815933275812482,
+        0.8123382226056945
+      ],
+      "fixed": [
+        36,
+        78,
+        44
+      ],
+      "harmed": [
+        31,
+        60,
+        54
+      ],
+      "stable": {
+        "ever": 50,
+        "repeat": 0
+      }
+    },
+    "subtype_arbiter": {
+      "accuracy": [
+        0.8172274949669255,
+        0.8149266609145815,
+        0.813632441760138
+      ],
+      "fixed": [
+        92,
+        133,
+        123
+      ],
+      "harmed": [
+        95,
+        122,
+        124
+      ],
+      "stable": {
+        "ever": 95,
+        "repeat": 8
+      }
+    },
+    "subtype_shuffled": {
+      "accuracy": [
+        0.813632441760138,
+        0.8103249928098936,
+        0.8134886396318666
+      ],
+      "fixed": [
+        66,
+        97,
+        126
+      ],
+      "harmed": [
+        94,
+        118,
+        128
+      ],
+      "stable": {
+        "ever": 69,
+        "repeat": 0
+      }
+    }
+  },
+  "new_beyond_67_on_repeat": {
+    "one_subtype": 91,
+    "combined_one_subtype": 0,
+    "flat_twelve": 5,
+    "combined_flat_twelve": 0,
+    "hierarchy": 7,
+    "combined_hierarchy": 0,
+    "random_blocks": 1,
+    "combined_random_blocks": 0,
+    "subtype_arbiter": 0,
+    "subtype_shuffled": 0
+  },
+  "audit": {
+    "novel": 91,
+    "never_old": 11,
+    "novel_transported": 3,
+    "always_disagree": 822,
+    "incumbent_always_right": 514,
+    "intermittent": 17
+  },
+  "semantic_fields": [
+    [
+      "HomePlanet",
+      "Destination",
+      "VIP"
+    ],
+    [
+      "Deck",
+      "Side",
+      "CabinNumber",
+      "BookingSize"
+    ],
+    [
+      "Age",
+      "CryoSleep"
+    ],
+    [
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "RoomService"
+    ]
+  ],
+  "random_fields": [
+    [
+      "VRDeck",
+      "BookingSize",
+      "RoomService"
+    ],
+    [
+      "Side",
+      "FoodCourt",
+      "VIP",
+      "CryoSleep"
+    ],
+    [
+      "Age",
+      "Deck"
+    ],
+    [
+      "CabinNumber",
+      "ShoppingMall",
+      "HomePlanet",
+      "Destination",
+      "Spa"
+    ]
+  ]
+}
