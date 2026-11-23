@@ -1,0 +1,620 @@
+{
+  "observed": {
+    "old": {
+      "fixed": 87,
+      "harmed": 604
+    },
+    "real": {
+      "fixed": 97,
+      "harmed": 210
+    },
+    "union": {
+      "fixed": 135,
+      "harmed": 733
+    },
+    "overlap": {
+      "fixed": 49,
+      "harmed": 81
+    },
+    "novel": {
+      "fixed": 48,
+      "harmed": 129
+    },
+    "sham": {
+      "fixed": 0,
+      "harmed": 0
+    },
+    "equal_budget_sham": {
+      "fixed": 94,
+      "harmed": 213
+    },
+    "sham_novel": {
+      "fixed": 42,
+      "harmed": 121
+    },
+    "missing_to_positive": {
+      "fixed": 1,
+      "harmed": 1
+    },
+    "missing_to_negative": {
+      "fixed": 8,
+      "harmed": 13
+    },
+    "zero_to_positive": {
+      "fixed": 0,
+      "harmed": 0
+    },
+    "zero_to_negative": {
+      "fixed": 81,
+      "harmed": 175
+    },
+    "one_to_positive": {
+      "fixed": 0,
+      "harmed": 0
+    },
+    "one_to_negative": {
+      "fixed": 0,
+      "harmed": 0
+    },
+    "multiple_to_positive": {
+      "fixed": 7,
+      "harmed": 21
+    },
+    "multiple_to_negative": {
+      "fixed": 0,
+      "harmed": 0
+    }
+  },
+  "scopes": {
+    "missing_to_positive": {
+      "old_errors": 22,
+      "old_correct": 184,
+      "novel": 0,
+      "novel_harms": 0
+    },
+    "missing_to_negative": {
+      "old_errors": 17,
+      "old_correct": 191,
+      "novel": 1,
+      "novel_harms": 3
+    },
+    "zero_to_positive": {
+      "old_errors": 6,
+      "old_correct": 12,
+      "novel": 0,
+      "novel_harms": 0
+    },
+    "zero_to_negative": {
+      "old_errors": 138,
+      "old_correct": 1611,
+      "novel": 42,
+      "novel_harms": 110
+    },
+    "one_to_positive": {
+      "old_errors": 6,
+      "old_correct": 74,
+      "novel": 0,
+      "novel_harms": 0
+    },
+    "one_to_negative": {
+      "old_errors": 0,
+      "old_correct": 18,
+      "novel": 0,
+      "novel_harms": 0
+    },
+    "multiple_to_positive": {
+      "old_errors": 181,
+      "old_correct": 1715,
+      "novel": 5,
+      "novel_harms": 16
+    },
+    "multiple_to_negative": {
+      "old_errors": 2,
+      "old_correct": 62,
+      "novel": 0,
+      "novel_harms": 0
+    }
+  },
+  "zero_details": [
+    {
+      "origin": "Earth",
+      "sleep": "True",
+      "fixed": 81,
+      "harmed": 173,
+      "novel_fixed": 42,
+      "equal_sham_fixed": 74,
+      "equal_sham_harmed": 159
+    },
+    {
+      "origin": "__MISSING__",
+      "sleep": "True",
+      "fixed": 0,
+      "harmed": 2,
+      "novel_fixed": 0,
+      "equal_sham_fixed": 0,
+      "equal_sham_harmed": 3
+    }
+  ],
+  "tests": {
+    "risk_spending": {
+      "movable_people": 3509,
+      "movable_hard": 313,
+      "movable_real_rescues": 87,
+      "rules": {
+        "old": {
+          "expected": 82.12176977846235,
+          "excess": 4.878230221537649,
+          "null95": [
+            72.0,
+            93.0
+          ],
+          "upper_tail": 0.21026324558480505
+        },
+        "real": {
+          "expected": 92.77367162407462,
+          "excess": 4.226328375925377,
+          "null95": [
+            85.0,
+            100.0
+          ],
+          "upper_tail": 0.15428190603132289
+        },
+        "union": {
+          "expected": 132.54021866828197,
+          "excess": 2.459781331718034,
+          "null95": [
+            123.0,
+            142.0
+          ],
+          "upper_tail": 0.3465511496167944
+        },
+        "overlap": {
+          "expected": 42.35522273425501,
+          "excess": 6.644777265744992,
+          "null95": [
+            35.0,
+            50.0
+          ],
+          "upper_tail": 0.05898033988670443
+        },
+        "novel": {
+          "expected": 50.41844888981988,
+          "excess": -2.418448889819878,
+          "null95": [
+            42.0,
+            59.0
+          ],
+          "upper_tail": 0.7614128623792069
+        },
+        "sham": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "equal_budget_sham": {
+          "expected": 92.01068461108761,
+          "excess": 1.989315388912388,
+          "null95": [
+            84.0,
+            99.0
+          ],
+          "upper_tail": 0.3385538153948684
+        },
+        "sham_novel": {
+          "expected": 46.255797025555125,
+          "excess": -4.255797025555125,
+          "null95": [
+            38.0,
+            54.02500000000009
+          ],
+          "upper_tail": 0.8620459846717761
+        },
+        "missing_to_positive": {
+          "expected": 0.2857142857142857,
+          "excess": 0.7142857142857143,
+          "null95": [
+            0.0,
+            1.0
+          ],
+          "upper_tail": 0.26857714095301566
+        },
+        "missing_to_negative": {
+          "expected": 8.041666666666664,
+          "excess": -0.0416666666666643,
+          "null95": [
+            7.0,
+            9.0
+          ],
+          "upper_tail": 0.7834055314895035
+        },
+        "zero_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "zero_to_negative": {
+          "expected": 78.69702380952359,
+          "excess": 2.3029761904764143,
+          "null95": [
+            72.0,
+            85.0
+          ],
+          "upper_tail": 0.291569476841053
+        },
+        "one_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "one_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "multiple_to_positive": {
+          "expected": 5.749266862170087,
+          "excess": 1.2507331378299131,
+          "null95": [
+            3.0,
+            9.0
+          ],
+          "upper_tail": 0.327890703098967
+        },
+        "multiple_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        }
+      },
+      "real_minus_equal_sham": {
+        "observed": 3,
+        "expected": 0.7629870129870113,
+        "null95": [
+          -8.0,
+          10.0
+        ],
+        "upper_tail": 0.3635454848383872
+      }
+    },
+    "prior_dissent": {
+      "movable_people": 3362,
+      "movable_hard": 306,
+      "movable_real_rescues": 86,
+      "rules": {
+        "old": {
+          "expected": 87.00000000000003,
+          "excess": -2.842170943040401e-14,
+          "null95": [
+            87.0,
+            87.0
+          ],
+          "upper_tail": 1.0
+        },
+        "real": {
+          "expected": 92.90344243523191,
+          "excess": 4.096557564768091,
+          "null95": [
+            86.0,
+            100.0
+          ],
+          "upper_tail": 0.15128290569810063
+        },
+        "union": {
+          "expected": 131.2921095973232,
+          "excess": 3.70789040267681,
+          "null95": [
+            125.0,
+            137.0
+          ],
+          "upper_tail": 0.14261912695768078
+        },
+        "overlap": {
+          "expected": 48.61133283790877,
+          "excess": 0.388667162091231,
+          "null95": [
+            45.0,
+            52.0
+          ],
+          "upper_tail": 0.52649116961013
+        },
+        "novel": {
+          "expected": 44.292109597323154,
+          "excess": 3.7078904026768456,
+          "null95": [
+            38.0,
+            50.0
+          ],
+          "upper_tail": 0.14261912695768078
+        },
+        "sham": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "equal_budget_sham": {
+          "expected": 92.06070353598678,
+          "excess": 1.9392964640132249,
+          "null95": [
+            85.0,
+            99.0
+          ],
+          "upper_tail": 0.3445518160613129
+        },
+        "sham_novel": {
+          "expected": 40.336474414435095,
+          "excess": 1.663525585564905,
+          "null95": [
+            34.0,
+            46.0
+          ],
+          "upper_tail": 0.35421526157947353
+        },
+        "missing_to_positive": {
+          "expected": 0.4,
+          "excess": 0.6,
+          "null95": [
+            0.0,
+            1.0
+          ],
+          "upper_tail": 0.4085304898367211
+        },
+        "missing_to_negative": {
+          "expected": 8.1875,
+          "excess": -0.1875,
+          "null95": [
+            7.0,
+            9.0
+          ],
+          "upper_tail": 0.838053982005998
+        },
+        "zero_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "zero_to_negative": {
+          "expected": 78.5491188790987,
+          "excess": 2.4508811209013004,
+          "null95": [
+            73.0,
+            84.0
+          ],
+          "upper_tail": 0.25091636121292904
+        },
+        "one_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "one_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "multiple_to_positive": {
+          "expected": 5.766823556133201,
+          "excess": 1.2331764438667987,
+          "null95": [
+            3.0,
+            9.0
+          ],
+          "upper_tail": 0.3315561479506831
+        },
+        "multiple_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        }
+      },
+      "real_minus_equal_sham": {
+        "observed": 3,
+        "expected": 0.8427388992451341,
+        "null95": [
+          -8.0,
+          9.0
+        ],
+        "upper_tail": 0.34755081639453517
+      }
+    },
+    "sleep_origin": {
+      "movable_people": 3095,
+      "movable_hard": 285,
+      "movable_real_rescues": 85,
+      "rules": {
+        "old": {
+          "expected": 86.99999999999996,
+          "excess": 4.263256414560601e-14,
+          "null95": [
+            87.0,
+            87.0
+          ],
+          "upper_tail": 1.0
+        },
+        "real": {
+          "expected": 92.11673536261094,
+          "excess": 4.883264637389061,
+          "null95": [
+            86.0,
+            98.0
+          ],
+          "upper_tail": 0.06597800733088971
+        },
+        "union": {
+          "expected": 130.93399726737283,
+          "excess": 4.066002732627169,
+          "null95": [
+            126.0,
+            136.0
+          ],
+          "upper_tail": 0.08297234255248251
+        },
+        "overlap": {
+          "expected": 48.18273809523806,
+          "excess": 0.817261904761942,
+          "null95": [
+            46.0,
+            51.0
+          ],
+          "upper_tail": 0.40353215594801733
+        },
+        "novel": {
+          "expected": 43.933997267372895,
+          "excess": 4.066002732627105,
+          "null95": [
+            39.0,
+            49.0
+          ],
+          "upper_tail": 0.08297234255248251
+        },
+        "sham": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "equal_budget_sham": {
+          "expected": 94.83753293624626,
+          "excess": -0.8375329362462622,
+          "null95": [
+            88.0,
+            101.0
+          ],
+          "upper_tail": 0.6637787404198601
+        },
+        "sham_novel": {
+          "expected": 41.63689249019446,
+          "excess": 0.36310750980553763,
+          "null95": [
+            36.0,
+            47.0
+          ],
+          "upper_tail": 0.5078307230923026
+        },
+        "missing_to_positive": {
+          "expected": 0.4,
+          "excess": 0.6,
+          "null95": [
+            0.0,
+            1.0
+          ],
+          "upper_tail": 0.4205264911696101
+        },
+        "missing_to_negative": {
+          "expected": 8.1875,
+          "excess": -0.1875,
+          "null95": [
+            7.0,
+            9.0
+          ],
+          "upper_tail": 0.8363878707097634
+        },
+        "zero_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "zero_to_negative": {
+          "expected": 77.86149808197042,
+          "excess": 3.1385019180295757,
+          "null95": [
+            73.0,
+            82.0
+          ],
+          "upper_tail": 0.10196601132955681
+        },
+        "one_to_positive": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "one_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        },
+        "multiple_to_positive": {
+          "expected": 5.667737280640506,
+          "excess": 1.3322627193594938,
+          "null95": [
+            3.0,
+            9.0
+          ],
+          "upper_tail": 0.28957014328557146
+        },
+        "multiple_to_negative": {
+          "expected": 0.0,
+          "excess": 0.0,
+          "null95": [
+            0.0,
+            0.0
+          ],
+          "upper_tail": 1.0
+        }
+      },
+      "real_minus_equal_sham": {
+        "observed": 3,
+        "expected": -2.7207975736353234,
+        "null95": [
+          -10.0,
+          5.0
+        ],
+        "upper_tail": 0.09196934355214928
+      }
+    }
+  }
+}
