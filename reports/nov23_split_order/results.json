@@ -1,0 +1,145 @@
+{
+  "groups": 9280,
+  "test": 3063,
+  "train": 6217,
+  "windows": {
+    "32": {
+      "minimum": [
+        4873,
+        4904,
+        2
+      ],
+      "maximum": [
+        1466,
+        1497,
+        20
+      ],
+      "standardized": 3.5539599657572514
+    },
+    "128": {
+      "minimum": [
+        2080,
+        2207,
+        28
+      ],
+      "maximum": [
+        1464,
+        1591,
+        57
+      ],
+      "standardized": 2.791993631170163
+    },
+    "512": {
+      "minimum": [
+        5671,
+        6182,
+        142
+      ],
+      "maximum": [
+        6375,
+        6886,
+        189
+      ],
+      "standardized": 2.60976978986488
+    }
+  },
+  "permutation_tests": {
+    "max_standardized_scan": {
+      "value": 3.5539599657572514,
+      "randomization_p": 0.7727424191936021,
+      "null_95": [
+        3.177398624847641,
+        4.683643988486081
+      ]
+    },
+    "longest_test_run": {
+      "value": 8.0,
+      "randomization_p": 0.5884705098300567,
+      "null_95": [
+        6.0,
+        11.0
+      ]
+    },
+    "adjacent_pair_deviation": {
+      "value": 9.342025862069022,
+      "randomization_p": 0.6771076307897368,
+      "null_95": [
+        0.657974137930978,
+        49.34202586206902
+      ]
+    }
+  },
+  "poststratified": {
+    "32": {
+      "weight_range": [
+        0.25404781388823944,
+        3.484084304752998
+      ],
+      "effective_rows": 5641.344895579397,
+      "reference_accuracy": 0.820069051180345,
+      "unweighted_reference_accuracy": 0.8149266609145815,
+      "cohort_prevalence_pp_shift": {
+        "historical941": -0.5992389833641587,
+        "core696": -0.6772364200137284
+      },
+      "rank_correlation": 0.9955820218932327,
+      "highest_original": "rule_context_pool",
+      "highest_adjusted": "rule_context_pool",
+      "best_adjusted": 0.8212789812893321,
+      "max_abs_accuracy_shift_pp": 0.7997906280943656,
+      "max_abs_pair_gap_shift_pp": 0.5409712722196591
+    },
+    "128": {
+      "weight_range": [
+        0.6005598771556218,
+        1.7193488829585677
+      ],
+      "effective_rows": 6642.021814253097,
+      "reference_accuracy": 0.8155105552352202,
+      "unweighted_reference_accuracy": 0.8149266609145815,
+      "cohort_prevalence_pp_shift": {
+        "historical941": -0.05784171010874417,
+        "core696": -0.0930806767362305
+      },
+      "rank_correlation": 0.9975509039546655,
+      "highest_original": "rule_context_pool",
+      "highest_adjusted": "rule_context_pool",
+      "best_adjusted": 0.8167863837420336,
+      "max_abs_accuracy_shift_pp": 0.19400026218305833,
+      "max_abs_pair_gap_shift_pp": 0.28826208991495905
+    },
+    "512": {
+      "weight_range": [
+        0.7973940952664357,
+        1.379397678505434
+      ],
+      "effective_rows": 6865.501961816095,
+      "reference_accuracy": 0.8146904571636145,
+      "unweighted_reference_accuracy": 0.8149266609145815,
+      "cohort_prevalence_pp_shift": {
+        "historical941": -0.021450850920270992,
+        "core696": -0.038821725770882276
+      },
+      "rank_correlation": 0.9994237429887112,
+      "highest_original": "rule_context_pool",
+      "highest_adjusted": "rule_context_pool",
+      "best_adjusted": 0.8161139847156001,
+      "max_abs_accuracy_shift_pp": 0.09088329141806462,
+      "max_abs_pair_gap_shift_pp": 0.1632887477379552
+    }
+  },
+  "local_error": {
+    "reference_error": {
+      "within_size_density_covariance_scaled": 0.0025175073984440434,
+      "permutation_p": 0.8595702148925537
+    },
+    "historic941": {
+      "within_size_density_covariance_scaled": -0.0036783381654591964,
+      "permutation_p": 0.7821089455272364
+    },
+    "core696": {
+      "within_size_density_covariance_scaled": -0.012190938464475375,
+      "permutation_p": 0.3933033483258371
+    }
+  }
+}
