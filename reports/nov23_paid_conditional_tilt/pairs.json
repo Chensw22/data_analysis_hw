@@ -1,0 +1,273 @@
+{
+  "plans": {
+    "20261112": {
+      "models": {
+        "ordinary": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 2,
+          "harmed": 1,
+          "equal_count_base_fixed": 1,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.49823918094684866
+          }
+        },
+        "matched": {
+          "accuracy": 0.8180903077365546,
+          "fixed": 5,
+          "harmed": 2,
+          "equal_count_base_fixed": 3,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.5305874237583503
+          }
+        },
+        "random": {
+          "accuracy": 0.817946505608283,
+          "fixed": 4,
+          "harmed": 2,
+          "equal_count_base_fixed": 4,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.5333103398199245
+          }
+        }
+      },
+      "training_risk_gaps": [
+        {
+          "matched": 0.052325122041161104,
+          "random": 0.4144524622178286
+        },
+        {
+          "matched": 0.04651026153378966,
+          "random": 0.41020882720911117
+        },
+        {
+          "matched": 0.04280681245353694,
+          "random": 0.41317259737501194
+        }
+      ]
+    },
+    "20261115": {
+      "models": {
+        "ordinary": {
+          "accuracy": 0.8155018694276676,
+          "fixed": 49,
+          "harmed": 34,
+          "equal_count_base_fixed": 53,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.5103321310489931
+          }
+        },
+        "matched": {
+          "accuracy": 0.815933275812482,
+          "fixed": 52,
+          "harmed": 34,
+          "equal_count_base_fixed": 56,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.5465509467989179
+          }
+        },
+        "random": {
+          "accuracy": 0.815645671555939,
+          "fixed": 49,
+          "harmed": 33,
+          "equal_count_base_fixed": 53,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.5322550345656748
+          }
+        }
+      },
+      "training_risk_gaps": [
+        {
+          "matched": 0.044629315732639105,
+          "random": 0.4078364407663822
+        },
+        {
+          "matched": 0.0489634664458062,
+          "random": 0.4247358625056865
+        },
+        {
+          "matched": 0.049416277484433176,
+          "random": 0.40222850967154844
+        }
+      ]
+    },
+    "20261116": {
+      "models": {
+        "ordinary": {
+          "accuracy": 0.813057233247052,
+          "fixed": 23,
+          "harmed": 28,
+          "equal_count_base_fixed": 32,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5389137943705445
+          }
+        },
+        "matched": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 23,
+          "harmed": 23,
+          "equal_count_base_fixed": 28,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5393914896744323
+          }
+        },
+        "random": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 23,
+          "harmed": 25,
+          "equal_count_base_fixed": 30,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5393547438818256
+          }
+        }
+      },
+      "training_risk_gaps": [
+        {
+          "matched": 0.04573785317083997,
+          "random": 0.42123543605786484
+        },
+        {
+          "matched": 0.05019335149271035,
+          "random": 0.4093562245373617
+        },
+        {
+          "matched": 0.052223329636732936,
+          "random": 0.4154034878707285
+        }
+      ]
+    },
+    "v131": {
+      "models": {
+        "ordinary": {
+          "accuracy": 0.8143514524014955,
+          "fixed": 14,
+          "harmed": 13,
+          "equal_count_base_fixed": 16,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.524544800487022
+          }
+        },
+        "matched": {
+          "accuracy": 0.813920046016681,
+          "fixed": 14,
+          "harmed": 16,
+          "equal_count_base_fixed": 17,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.5090855424576162
+          }
+        },
+        "random": {
+          "accuracy": 0.813920046016681,
+          "fixed": 15,
+          "harmed": 17,
+          "equal_count_base_fixed": 18,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.5211319571273083
+          }
+        }
+      },
+      "training_risk_gaps": [
+        {
+          "matched": 0.04814886573282071,
+          "random": 0.40845908520769053
+        },
+        {
+          "matched": 0.05346133502550895,
+          "random": 0.3928847476268983
+        },
+        {
+          "matched": 0.041426343610329035,
+          "random": 0.4087325446842715
+        }
+      ]
+    }
+  },
+  "grouped": {
+    "ordinary": {
+      "accuracy": [
+        0.8178027034800115,
+        0.8155018694276676,
+        0.813057233247052
+      ],
+      "fixed": [
+        2,
+        49,
+        23
+      ],
+      "harmed": [
+        1,
+        34,
+        28
+      ],
+      "stable": {
+        "ever": 29,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "never_paid": 0
+      }
+    },
+    "matched": {
+      "accuracy": [
+        0.8180903077365546,
+        0.815933275812482,
+        0.8137762438884095
+      ],
+      "fixed": [
+        5,
+        52,
+        23
+      ],
+      "harmed": [
+        2,
+        34,
+        23
+      ],
+      "stable": {
+        "ever": 31,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "never_paid": 0
+      }
+    },
+    "random": {
+      "accuracy": [
+        0.817946505608283,
+        0.815645671555939,
+        0.8134886396318666
+      ],
+      "fixed": [
+        4,
+        49,
+        23
+      ],
+      "harmed": [
+        2,
+        33,
+        25
+      ],
+      "stable": {
+        "ever": 29,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "never_paid": 0
+      }
+    }
+  }
+}
