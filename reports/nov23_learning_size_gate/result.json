@@ -1,0 +1,218 @@
+{
+  "models": {
+    "endpoint": {
+      "accuracy": 0.8192407247627265,
+      "brier": 0.12155659800050161,
+      "coverage": {
+        "all": {
+          "n": 6954,
+          "corrected": 55,
+          "harmed": 47,
+          "right": 5697
+        },
+        "historically_always_correct": {
+          "n": 5436,
+          "corrected": 8,
+          "harmed": 13,
+          "right": 5400
+        },
+        "historically_mixed": {
+          "n": 448,
+          "corrected": 35,
+          "harmed": 25,
+          "right": 253
+        },
+        "historically_wrong": {
+          "n": 1070,
+          "corrected": 12,
+          "harmed": 9,
+          "right": 44
+        }
+      }
+    },
+    "trajectory": {
+      "accuracy": 0.8175150992234685,
+      "brier": 0.12233131216064604,
+      "coverage": {
+        "all": {
+          "n": 6954,
+          "corrected": 75,
+          "harmed": 79,
+          "right": 5685
+        },
+        "historically_always_correct": {
+          "n": 5436,
+          "corrected": 3,
+          "harmed": 29,
+          "right": 5379
+        },
+        "historically_mixed": {
+          "n": 448,
+          "corrected": 45,
+          "harmed": 36,
+          "right": 252
+        },
+        "historically_wrong": {
+          "n": 1070,
+          "corrected": 27,
+          "harmed": 14,
+          "right": 54
+        }
+      }
+    },
+    "reference": {
+      "accuracy": 0.8180903077365546,
+      "brier": 0.12150610603750935,
+      "coverage": {
+        "all": {
+          "n": 6954,
+          "corrected": 0,
+          "harmed": 0,
+          "right": 5689
+        },
+        "historically_always_correct": {
+          "n": 5436,
+          "corrected": 0,
+          "harmed": 0,
+          "right": 5405
+        },
+        "historically_mixed": {
+          "n": 448,
+          "corrected": 0,
+          "harmed": 0,
+          "right": 243
+        },
+        "historically_wrong": {
+          "n": 1070,
+          "corrected": 0,
+          "harmed": 0,
+          "right": 41
+        }
+      }
+    },
+    "midpoint": {
+      "accuracy": 0.8163646821972965,
+      "brier": 0.12211553233095494,
+      "coverage": {
+        "all": {
+          "n": 6954,
+          "corrected": 41,
+          "harmed": 53,
+          "right": 5677
+        },
+        "historically_always_correct": {
+          "n": 5436,
+          "corrected": 4,
+          "harmed": 9,
+          "right": 5400
+        },
+        "historically_mixed": {
+          "n": 448,
+          "corrected": 32,
+          "harmed": 33,
+          "right": 242
+        },
+        "historically_wrong": {
+          "n": 1070,
+          "corrected": 5,
+          "harmed": 11,
+          "right": 35
+        }
+      }
+    },
+    "extrapolate": {
+      "accuracy": 0.818234109864826,
+      "brier": 0.12219950818250327,
+      "coverage": {
+        "all": {
+          "n": 6954,
+          "corrected": 112,
+          "harmed": 111,
+          "right": 5690
+        },
+        "historically_always_correct": {
+          "n": 5436,
+          "corrected": 11,
+          "harmed": 62,
+          "right": 5354
+        },
+        "historically_mixed": {
+          "n": 448,
+          "corrected": 44,
+          "harmed": 39,
+          "right": 248
+        },
+        "historically_wrong": {
+          "n": 1070,
+          "corrected": 57,
+          "harmed": 10,
+          "right": 88
+        }
+      }
+    }
+  },
+  "trajectory_effect": {
+    "history_over_endpoint": {
+      "all": {
+        "net": -12.0,
+        "change_pp": -0.1725625539257981,
+        "interval95_pp": [
+          -0.4712654359756584,
+          0.10208366431845141
+        ]
+      },
+      "historically_always_correct": {
+        "net": -21.0,
+        "change_pp": -0.38631346578366443,
+        "interval95_pp": [
+          -0.5721986030041679,
+          -0.20172012514290327
+        ]
+      },
+      "historically_mixed": {
+        "net": -1.0,
+        "change_pp": -0.22321428571428573,
+        "interval95_pp": [
+          -3.4236152095101593,
+          2.8991558500499197
+        ]
+      },
+      "historically_wrong": {
+        "net": 10.0,
+        "change_pp": 0.9345794392523364,
+        "interval95_pp": [
+          0.0,
+          1.9005818298281192
+        ]
+      }
+    }
+  },
+  "trajectory_changes": {
+    "all": {
+      "fixed": 47,
+      "harmed": 59
+    },
+    "historically_always_correct": {
+      "fixed": 3,
+      "harmed": 24
+    },
+    "historically_mixed": {
+      "fixed": 25,
+      "harmed": 26
+    },
+    "historically_wrong": {
+      "fixed": 19,
+      "harmed": 9
+    }
+  },
+  "fold_nets": [
+    -5,
+    -2,
+    1,
+    0,
+    2,
+    -4,
+    -4,
+    0
+  ]
+}
