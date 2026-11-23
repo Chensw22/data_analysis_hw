@@ -1,0 +1,325 @@
+{
+  "rows": 8693,
+  "bookings": 6217,
+  "fold_count": 8,
+  "service_order": [
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck"
+  ],
+  "shared_models": [
+    "tabicl",
+    "cat",
+    "v44_without_name",
+    "budget",
+    "mitra96"
+  ],
+  "common_wrong": 1015,
+  "common_correct": 6035,
+  "coverage": {
+    "two_positive": {
+      "rows": 4769,
+      "common_wrong": 477,
+      "common_correct": 3125
+    },
+    "gcd_at_least_2": {
+      "rows": 3136,
+      "common_wrong": 297,
+      "common_correct": 2087
+    },
+    "gcd_at_least_10": {
+      "rows": 677,
+      "common_wrong": 57,
+      "common_correct": 462
+    },
+    "gcd_at_least_100": {
+      "rows": 39,
+      "common_wrong": 2,
+      "common_correct": 27
+    }
+  },
+  "results": {
+    "raw_cat": {
+      "single": {
+        "correct": 7066,
+        "accuracy": 0.8128379155642471,
+        "vs_matched_control": {
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 236,
+          "harmed": 264,
+          "net_by_fold": [
+            -7,
+            -6,
+            8,
+            -3,
+            -10,
+            -7,
+            3,
+            -6
+          ]
+        },
+        "common_repaired": 0,
+        "common_harmed": 0
+      },
+      "half_mitra": {
+        "correct": 7100,
+        "accuracy": 0.8167491084780858,
+        "vs_matched_control": {
+          "fixed": 0,
+          "harmed": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 135,
+          "harmed": 129,
+          "net_by_fold": [
+            -1,
+            7,
+            1,
+            0,
+            -1,
+            0,
+            6,
+            -6
+          ]
+        },
+        "common_repaired": 0,
+        "common_harmed": 0
+      }
+    },
+    "divisors": {
+      "single": {
+        "correct": 7023,
+        "accuracy": 0.8078914068790981,
+        "vs_matched_control": {
+          "fixed": 147,
+          "harmed": 190,
+          "net_by_fold": [
+            -9,
+            -4,
+            -14,
+            2,
+            0,
+            6,
+            -11,
+            -13
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 206,
+          "harmed": 277,
+          "net_by_fold": [
+            -16,
+            -10,
+            -6,
+            -1,
+            -10,
+            -1,
+            -8,
+            -19
+          ]
+        },
+        "common_repaired": 15,
+        "common_harmed": 41
+      },
+      "half_mitra": {
+        "correct": 7090,
+        "accuracy": 0.8155987576210745,
+        "vs_matched_control": {
+          "fixed": 82,
+          "harmed": 92,
+          "net_by_fold": [
+            -7,
+            1,
+            -4,
+            7,
+            0,
+            6,
+            -7,
+            -6
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 131,
+          "harmed": 135,
+          "net_by_fold": [
+            -8,
+            8,
+            -3,
+            7,
+            -1,
+            6,
+            -1,
+            -12
+          ]
+        },
+        "common_repaired": 5,
+        "common_harmed": 13
+      }
+    },
+    "frequency": {
+      "single": {
+        "correct": 7047,
+        "accuracy": 0.8106522489359255,
+        "vs_matched_control": {
+          "fixed": 140,
+          "harmed": 159,
+          "net_by_fold": [
+            -3,
+            -4,
+            -5,
+            -1,
+            -5,
+            4,
+            -5,
+            0
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 226,
+          "harmed": 273,
+          "net_by_fold": [
+            -10,
+            -10,
+            3,
+            -4,
+            -15,
+            -3,
+            -2,
+            -6
+          ]
+        },
+        "common_repaired": 21,
+        "common_harmed": 35
+      },
+      "half_mitra": {
+        "correct": 7092,
+        "accuracy": 0.8158288277924767,
+        "vs_matched_control": {
+          "fixed": 66,
+          "harmed": 74,
+          "net_by_fold": [
+            -9,
+            1,
+            1,
+            4,
+            -5,
+            2,
+            -1,
+            -1
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 129,
+          "harmed": 131,
+          "net_by_fold": [
+            -10,
+            8,
+            2,
+            4,
+            -6,
+            2,
+            5,
+            -7
+          ]
+        },
+        "common_repaired": 5,
+        "common_harmed": 4
+      }
+    },
+    "combined": {
+      "single": {
+        "correct": 7019,
+        "accuracy": 0.8074312665362936,
+        "vs_matched_control": {
+          "fixed": 164,
+          "harmed": 211,
+          "net_by_fold": [
+            -5,
+            -7,
+            -12,
+            8,
+            -8,
+            -3,
+            -14,
+            -6
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 210,
+          "harmed": 285,
+          "net_by_fold": [
+            -12,
+            -13,
+            -4,
+            5,
+            -18,
+            -10,
+            -11,
+            -12
+          ]
+        },
+        "common_repaired": 21,
+        "common_harmed": 41
+      },
+      "half_mitra": {
+        "correct": 7066,
+        "accuracy": 0.8128379155642471,
+        "vs_matched_control": {
+          "fixed": 74,
+          "harmed": 108,
+          "net_by_fold": [
+            -12,
+            -1,
+            -5,
+            3,
+            0,
+            1,
+            -15,
+            -5
+          ]
+        },
+        "vs_mitra": {
+          "fixed": 125,
+          "harmed": 153,
+          "net_by_fold": [
+            -13,
+            6,
+            -4,
+            3,
+            -1,
+            1,
+            -9,
+            -11
+          ]
+        },
+        "common_repaired": 5,
+        "common_harmed": 11
+      }
+    }
+  }
+}
