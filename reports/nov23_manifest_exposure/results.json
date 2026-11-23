@@ -1,0 +1,234 @@
+{
+  "streams": 16,
+  "results": {
+    "basic": {
+      "accuracy": [
+        0.8097497842968076,
+        0.8113316077077941,
+        0.8052919183203912
+      ],
+      "fixed": [
+        195,
+        192,
+        196
+      ],
+      "harmed": [
+        250,
+        206,
+        255
+      ],
+      "stable": {
+        "ever": 135,
+        "repeat": 31,
+        "common": 28,
+        "core": 17,
+        "repeat_outside": 22
+      }
+    },
+    "combined_basic": {
+      "accuracy": [
+        0.819096922634455,
+        0.815070463042853,
+        0.8126258268622376
+      ],
+      "fixed": [
+        43,
+        62,
+        41
+      ],
+      "harmed": [
+        33,
+        50,
+        49
+      ],
+      "stable": {
+        "ever": 46,
+        "repeat": 0,
+        "common": 18,
+        "core": 8,
+        "repeat_outside": 0
+      }
+    },
+    "own": {
+      "accuracy": [
+        0.8077365545010066,
+        0.8065861374748347,
+        0.8055795225769341
+      ],
+      "fixed": [
+        206,
+        208,
+        212
+      ],
+      "harmed": [
+        275,
+        255,
+        269
+      ],
+      "stable": {
+        "ever": 158,
+        "repeat": 39,
+        "common": 35,
+        "core": 18,
+        "repeat_outside": 28
+      }
+    },
+    "combined_own": {
+      "accuracy": [
+        0.816508484325568,
+        0.8149266609145815,
+        0.812482024733966
+      ],
+      "fixed": [
+        32,
+        72,
+        50
+      ],
+      "harmed": [
+        40,
+        61,
+        59
+      ],
+      "stable": {
+        "ever": 46,
+        "repeat": 0,
+        "common": 18,
+        "core": 6,
+        "repeat_outside": 0
+      }
+    },
+    "other": {
+      "accuracy": [
+        0.8042853034224906,
+        0.7983894161633592,
+        0.8014092608570607
+      ],
+      "fixed": [
+        242,
+        255,
+        272
+      ],
+      "harmed": [
+        335,
+        359,
+        358
+      ],
+      "stable": {
+        "ever": 189,
+        "repeat": 57,
+        "common": 56,
+        "core": 19,
+        "repeat_outside": 46
+      }
+    },
+    "combined_other": {
+      "accuracy": [
+        0.817371297095197,
+        0.815070463042853,
+        0.812482024733966
+      ],
+      "fixed": [
+        31,
+        78,
+        48
+      ],
+      "harmed": [
+        33,
+        66,
+        57
+      ],
+      "stable": {
+        "ever": 48,
+        "repeat": 0,
+        "common": 19,
+        "core": 8,
+        "repeat_outside": 0
+      }
+    },
+    "shuffled": {
+      "accuracy": [
+        0.8054357204486626,
+        0.8018406672418752,
+        0.7966637906241012
+      ],
+      "fixed": [
+        273,
+        246,
+        249
+      ],
+      "harmed": [
+        358,
+        326,
+        368
+      ],
+      "stable": {
+        "ever": 179,
+        "repeat": 50,
+        "common": 53,
+        "core": 23,
+        "repeat_outside": 34
+      }
+    },
+    "combined_shuffled": {
+      "accuracy": [
+        0.817371297095197,
+        0.813632441760138,
+        0.8119068162208801
+      ],
+      "fixed": [
+        29,
+        67,
+        47
+      ],
+      "harmed": [
+        31,
+        65,
+        60
+      ],
+      "stable": {
+        "ever": 47,
+        "repeat": 0,
+        "common": 19,
+        "core": 8,
+        "repeat_outside": 0
+      }
+    }
+  },
+  "channel_diagnostic": {
+    "actual": {
+      "mean_log_loss": 2.421521310504393,
+      "top_one": 0.159261305342909
+    },
+    "shuffled": {
+      "mean_log_loss": 2.36120232519051,
+      "top_one": 0.17820219398626785
+    },
+    "global": {
+      "mean_log_loss": 2.364779921505191,
+      "top_one": 0.17188856443848158
+    }
+  },
+  "paired": {
+    "other_vs_shuffled": {
+      "gain_pp": 0.004793404275716597,
+      "interval_pp": [
+        -0.4413445259933534,
+        0.44727721117650504
+      ]
+    },
+    "combined_other_vs_combined_shuffled": {
+      "gain_pp": 0.06710765986003259,
+      "interval_pp": [
+        -0.052747565889432704,
+        0.1837480129504187
+      ]
+    },
+    "other_vs_basic": {
+      "gain_pp": -0.7429776627360751,
+      "interval_pp": [
+        -1.2108122724700676,
+        -0.2658277244309334
+      ]
+    }
+  }
+}
