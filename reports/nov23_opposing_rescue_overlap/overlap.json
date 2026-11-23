@@ -1,0 +1,317 @@
+{
+  "counts": {
+    "old41": {
+      "rescues": 41,
+      "harms": 140
+    },
+    "old44": {
+      "rescues": 44,
+      "harms": 178
+    },
+    "matched_conditional": {
+      "rescues": 34,
+      "harms": 205
+    },
+    "shuffled_conditional": {
+      "rescues": 0,
+      "harms": 0
+    },
+    "matched": {
+      "rescues": 0,
+      "harms": 0
+    },
+    "binary": {
+      "rescues": 0,
+      "harms": 0
+    },
+    "matched_and_prior": {
+      "rescues": 3,
+      "harms": 13
+    },
+    "matched_only": {
+      "rescues": 31,
+      "harms": 192
+    },
+    "prior_only": {
+      "rescues": 41,
+      "harms": 165
+    },
+    "union": {
+      "rescues": 75,
+      "harms": 370
+    },
+    "matched_and_shuffled": {
+      "rescues": 0,
+      "harms": 0
+    },
+    "prior_new_matched_and_shuffled": {
+      "rescues": 0,
+      "harms": 0
+    },
+    "prior_new_matched_only_real": {
+      "rescues": 31,
+      "harms": 192
+    }
+  },
+  "novel_groups": {
+    "newly_rescued": {
+      "passengers": 31,
+      "bookings": 31,
+      "solo": 23,
+      "predicted_transported": 28,
+      "paid_spa_room_vr": 3,
+      "paid_only_store_food": 0,
+      "no_positive_spending": 28,
+      "any_missing_bill": 4,
+      "sleep_recorded_true": 28,
+      "home_planet": {
+        "Europa": 0,
+        "Earth": 28,
+        "Mars": 2,
+        "__MISSING__": 1
+      },
+      "age_quartiles": [
+        19.5,
+        24.0,
+        29.0
+      ],
+      "observed_spending_quartiles": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "confidence_quartiles": [
+        0.6121755214157871,
+        0.6939386853938933,
+        0.7193277688258084
+      ],
+      "again_on_original_split": 26,
+      "by_spending_and_prior_vote": {
+        "0_0": 0,
+        "0_1": 28,
+        "1_0": 0,
+        "1_1": 0,
+        "2_0": 3,
+        "2_1": 0
+      }
+    },
+    "newly_harmed": {
+      "passengers": 192,
+      "bookings": 186,
+      "solo": 100,
+      "predicted_transported": 180,
+      "paid_spa_room_vr": 12,
+      "paid_only_store_food": 0,
+      "no_positive_spending": 180,
+      "any_missing_bill": 28,
+      "sleep_recorded_true": 178,
+      "home_planet": {
+        "Europa": 11,
+        "Earth": 58,
+        "Mars": 114,
+        "__MISSING__": 9
+      },
+      "age_quartiles": [
+        18.0,
+        25.0,
+        34.0
+      ],
+      "observed_spending_quartiles": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "confidence_quartiles": [
+        0.7298016137348857,
+        0.970554414721857,
+        0.9840470023685015
+      ],
+      "again_on_original_split": 139,
+      "by_spending_and_prior_vote": {
+        "0_0": 0,
+        "0_1": 180,
+        "1_0": 0,
+        "1_1": 0,
+        "2_0": 12,
+        "2_1": 0
+      }
+    }
+  },
+  "matched_outside_prior": {
+    "n": 310,
+    "max_gap": 0.024794251554964397,
+    "mean_gap": 0.005262613730864372,
+    "matched_conditional": {
+      "concordance": 0.5537634408602151,
+      "ci": [
+        0.5106150899317611,
+        0.5968285091814504
+      ]
+    },
+    "shuffled_conditional": {
+      "concordance": 0.46827956989247316,
+      "ci": [
+        0.42675055499076747,
+        0.5091998833142969
+      ]
+    },
+    "matched": {
+      "concordance": 0.5021505376344086,
+      "ci": [
+        0.4596941218100828,
+        0.5453552777201355
+      ]
+    },
+    "binary": {
+      "concordance": 0.4973118279569892,
+      "ci": [
+        0.45640076496681775,
+        0.5398109620270788
+      ]
+    },
+    "gain_over_shuffled_conditional": {
+      "difference": 0.08548387096774193,
+      "ci": [
+        0.028236685794825325,
+        0.1455745383749169
+      ]
+    },
+    "gain_over_matched": {
+      "difference": 0.05161290322580644,
+      "ci": [
+        -0.010788362123313588,
+        0.11554954909651682
+      ]
+    },
+    "gain_over_binary": {
+      "difference": 0.056451612903225805,
+      "ci": [
+        -0.0010894139076395581,
+        0.11525974025974026
+      ]
+    },
+    "paired_stable_disagreement": {
+      "case_only": 24,
+      "control_only": 17,
+      "both": 6
+    }
+  },
+  "matched_same_planet_outside_prior": {
+    "n": 291,
+    "max_gap": 0.024794251554964397,
+    "mean_gap": 0.005831599881062298,
+    "matched_conditional": {
+      "concordance": 0.54524627720504,
+      "ci": [
+        0.5017421602787456,
+        0.5873577284784182
+      ]
+    },
+    "shuffled_conditional": {
+      "concordance": 0.49312714776632305,
+      "ci": [
+        0.448579405535855,
+        0.5369734611371936
+      ]
+    },
+    "matched": {
+      "concordance": 0.5017182130584192,
+      "ci": [
+        0.45547389752076245,
+        0.5493674229623327
+      ]
+    },
+    "binary": {
+      "concordance": 0.4919816723940436,
+      "ci": [
+        0.4488044055041667,
+        0.5354239256678281
+      ]
+    },
+    "gain_over_shuffled_conditional": {
+      "difference": 0.05211912943871706,
+      "ci": [
+        -0.00856237937202844,
+        0.11130141923812233
+      ]
+    },
+    "gain_over_matched": {
+      "difference": 0.043528064146620846,
+      "ci": [
+        -0.02147259019301595,
+        0.10768627383374135
+      ]
+    },
+    "gain_over_binary": {
+      "difference": 0.05326460481099656,
+      "ci": [
+        -0.001742312565483297,
+        0.10734558070754181
+      ]
+    },
+    "paired_stable_disagreement": {
+      "case_only": 22,
+      "control_only": 16,
+      "both": 7
+    }
+  },
+  "matched_same_planet_and_spending_outside_prior": {
+    "n": 290,
+    "max_gap": 0.02482519621509116,
+    "mean_gap": 0.0058283249372461255,
+    "matched_conditional": {
+      "concordance": 0.5459770114942528,
+      "ci": [
+        0.5029655990510082,
+        0.5881082757398546
+      ]
+    },
+    "shuffled_conditional": {
+      "concordance": 0.49482758620689654,
+      "ci": [
+        0.4501704600454964,
+        0.5380655877547098
+      ]
+    },
+    "matched": {
+      "concordance": 0.503448275862069,
+      "ci": [
+        0.4577621551225159,
+        0.5496152696847452
+      ]
+    },
+    "binary": {
+      "concordance": 0.4971264367816093,
+      "ci": [
+        0.45449241431163906,
+        0.5409364108925513
+      ]
+    },
+    "gain_over_shuffled_conditional": {
+      "difference": 0.05114942528735633,
+      "ci": [
+        -0.00817006269592477,
+        0.1118923880442652
+      ]
+    },
+    "gain_over_matched": {
+      "difference": 0.04252873563218391,
+      "ci": [
+        -0.021689497716894976,
+        0.10621889650198342
+      ]
+    },
+    "gain_over_binary": {
+      "difference": 0.04885057471264368,
+      "ci": [
+        -0.005319622170061327,
+        0.10204169903255421
+      ]
+    },
+    "paired_stable_disagreement": {
+      "case_only": 22,
+      "control_only": 17,
+      "both": 7
+    }
+  }
+}
