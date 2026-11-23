@@ -1,0 +1,240 @@
+{
+  "plans": {
+    "20261112": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.81765890135174
+        },
+        "shared": {
+          "fixed": 226,
+          "harmed": 328,
+          "accuracy": 0.8029910842680472
+        },
+        "quarter_shared": {
+          "fixed": 77,
+          "harmed": 78,
+          "accuracy": 0.8175150992234685
+        },
+        "partner_specific": {
+          "fixed": 297,
+          "harmed": 467,
+          "accuracy": 0.7932125395455852
+        },
+        "quarter_partner_specific": {
+          "fixed": 115,
+          "harmed": 111,
+          "accuracy": 0.818234109864826
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "train": 4636,
+          "query": 2318,
+          "fields": 14
+        },
+        {
+          "train": 4636,
+          "query": 2318,
+          "fields": 14
+        },
+        {
+          "train": 4636,
+          "query": 2318,
+          "fields": 14
+        }
+      ]
+    },
+    "20261115": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8133448375035951
+        },
+        "shared": {
+          "fixed": 223,
+          "harmed": 314,
+          "accuracy": 0.8002588438308887
+        },
+        "quarter_shared": {
+          "fixed": 66,
+          "harmed": 63,
+          "accuracy": 0.8137762438884095
+        },
+        "partner_specific": {
+          "fixed": 364,
+          "harmed": 471,
+          "accuracy": 0.7979580097785447
+        },
+        "quarter_partner_specific": {
+          "fixed": 127,
+          "harmed": 119,
+          "accuracy": 0.814495254529767
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "train": 4635,
+          "query": 2319,
+          "fields": 14
+        },
+        {
+          "train": 4636,
+          "query": 2318,
+          "fields": 14
+        },
+        {
+          "train": 4637,
+          "query": 2317,
+          "fields": 14
+        }
+      ]
+    },
+    "20261116": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8137762438884095
+        },
+        "shared": {
+          "fixed": 237,
+          "harmed": 334,
+          "accuracy": 0.7998274374460742
+        },
+        "quarter_shared": {
+          "fixed": 78,
+          "harmed": 89,
+          "accuracy": 0.8121944204774231
+        },
+        "partner_specific": {
+          "fixed": 306,
+          "harmed": 518,
+          "accuracy": 0.7832901926948519
+        },
+        "quarter_partner_specific": {
+          "fixed": 122,
+          "harmed": 148,
+          "accuracy": 0.8100373885533506
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "train": 4635,
+          "query": 2319,
+          "fields": 14
+        },
+        {
+          "train": 4637,
+          "query": 2317,
+          "fields": 14
+        },
+        {
+          "train": 4636,
+          "query": 2318,
+          "fields": 14
+        }
+      ]
+    },
+    "v131": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8142076502732241
+        },
+        "shared": {
+          "fixed": 258,
+          "harmed": 350,
+          "accuracy": 0.8009778544722462
+        },
+        "quarter_shared": {
+          "fixed": 73,
+          "harmed": 82,
+          "accuracy": 0.8129134311187806
+        },
+        "partner_specific": {
+          "fixed": 339,
+          "harmed": 516,
+          "accuracy": 0.7887546735691688
+        },
+        "quarter_partner_specific": {
+          "fixed": 126,
+          "harmed": 148,
+          "accuracy": 0.811044003451251
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "train": 3674,
+          "query": 2318,
+          "fields": 14
+        },
+        {
+          "train": 3716,
+          "query": 2318,
+          "fields": 14
+        },
+        {
+          "train": 3726,
+          "query": 2318,
+          "fields": 14
+        }
+      ]
+    }
+  },
+  "stable": {
+    "reference": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 11,
+      "stable_harms": 21,
+      "gain95_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    "shared": {
+      "hard_stable": 1,
+      "hard_ever": 6,
+      "common_stable": 58,
+      "stable_harms": 114,
+      "gain95_pp": [
+        -1.9289359685404526,
+        -0.8593194604931259
+      ]
+    },
+    "quarter_shared": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 15,
+      "stable_harms": 30,
+      "gain95_pp": [
+        -0.27449111016832417,
+        0.19226494352665946
+      ]
+    },
+    "partner_specific": {
+      "hard_stable": 4,
+      "hard_ever": 42,
+      "common_stable": 77,
+      "stable_harms": 127,
+      "gain95_pp": [
+        -2.9704379609244227,
+        -1.7149046700721942
+      ]
+    },
+    "quarter_partner_specific": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 19,
+      "stable_harms": 21,
+      "gain95_pp": [
+        -0.3776505451737298,
+        0.2380986414005282
+      ]
+    }
+  }
+}
