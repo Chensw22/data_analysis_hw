@@ -69,16 +69,12 @@ def weights_train(xtrain, p, y):
     return solution.x.reshape(params.shape)
 
 
-def run():
-    raw,y,g,fold = data()
-    names, h, p = banks(raw,y,fold)
+def latest_reference(y,g,fold,names,h,p):
     idx = [names.index(k) for k in EVIDENCE]
     hdiff, hx = proposal_design(h[:,:5],h[:,idx])
     fdiff, fx = proposal_design(p[:,:5],p[:,idx])
     base = p[:,4] >= .5
     gate = base.copy()
-    a, b = context(raw,g,h), context(raw,g,p)
-    policies = {k:np.empty(len(y)) for k in ['fixed_pool','context_pool','unconstrained','context_one_expert']}
     for f in np.unique(fold):
         t = np.flatnonzero((fold%2 == f%2) & (fold != f))
         q = np.flatnonzero(fold == f)
@@ -88,6 +84,21 @@ def run():
         learner.fit(hx[tt],y[tt] != (h[tt,4] >= .5))
         flips = qq[learner.predict_proba(fx[qq])[:,1] >= .5]
         gate[flips] = ~base[flips]
+    assert (gate == y).sum() == 7118
+    return gate
+
+
+def run():
+    raw,y,g,fold = data()
+    names, h, p = banks(raw,y,fold)
+    gate = latest_reference(y,g,fold,names,h,p)
+    base = p[:,4] >= .5
+    a, b = context(raw,g,h), context(raw,g,p)
+    policies = {k:np.empty(len(y)) for k in ['fixed_pool','context_pool','unconstrained','context_one_expert']}
+    for f in np.unique(fold):
+        t = np.flatnonzero((fold%2 == f%2) & (fold != f))
+        q = np.flatnonzero(fold == f)
+        assert not np.isin(g[q],g[t]).any()
         scaler = StandardScaler().fit(a[t])
         train = np.column_stack([np.ones(len(t)),scaler.transform(a[t]).clip(-4,4)])
         query = np.column_stack([np.ones(len(q)),scaler.transform(b[q]).clip(-4,4)])
@@ -97,6 +108,7 @@ def run():
             policies[key][q] = (weights*p[q]).sum(1)
             if key == 'context_pool':
                 policies['context_one_expert'][q] = p[q,np.argmax(weights,axis=1)]
+        learner = make_pipeline(StandardScaler(),LogisticRegression(C=.1,max_iter=500))
         learner.fit(logit(h[t].clip(.001,.999)),y[t])
         policies['unconstrained'][q] = learner.predict_proba(logit(p[q].clip(.001,.999)))[:,1]
     assert (gate == y).sum() == 7118
