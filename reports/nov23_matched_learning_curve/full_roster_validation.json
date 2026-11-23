@@ -1,0 +1,201 @@
+{
+  "development": {
+    "rows": 6954,
+    "base_acc": 0.8180903077365546,
+    "both_strong_wrong": 1100,
+    "four_wrong": 848,
+    "oracle_acc": 0.8780557952257694,
+    "paid_transported": 377,
+    "no_positive_stayed": 379,
+    "accuracies": {
+      "tabicl": 0.8134886396318666,
+      "cat": 0.8133448375035951,
+      "v44_without_name": 0.817946505608283,
+      "budget": 0.7681909692263446
+    }
+  },
+  "additional": {
+    "rows": 1739,
+    "base_acc": 0.8073605520414031,
+    "both_strong_wrong": 287,
+    "four_wrong": 219,
+    "oracle_acc": 0.8740655549166187,
+    "paid_transported": 105,
+    "no_positive_stayed": 97,
+    "accuracies": {
+      "tabicl": 0.80448533640023,
+      "cat": 0.8108108108108109,
+      "v44_without_name": 0.8050603795284647,
+      "budget": 0.7584818861414606
+    }
+  },
+  "all": {
+    "rows": 8693,
+    "base_acc": 0.8159438628781779,
+    "both_strong_wrong": 1387,
+    "four_wrong": 1067,
+    "oracle_acc": 0.8772575635568849,
+    "paid_transported": 482,
+    "no_positive_stayed": 476,
+    "accuracies": {
+      "tabicl": 0.8116875647072357,
+      "cat": 0.8128379155642471,
+      "v44_without_name": 0.8153686874496722,
+      "budget": 0.7662487058552858
+    }
+  },
+  "original_errors": {
+    "shared_in_both": 734,
+    "now_at_least_one_correct": 79,
+    "new_shared_errors": 114,
+    "hard_still_unanimous_wrong": 369,
+    "hard_reached_by_family": {
+      "tabicl": 1,
+      "cat": 0,
+      "v44_without_name": 0,
+      "budget": 2
+    }
+  },
+  "additional_calibration": {
+    "fixed": 3,
+    "harmed": 2,
+    "accuracy": 0.8079355951696378,
+    "training_counts": [
+      744,
+      721,
+      715,
+      733,
+      733,
+      724,
+      737,
+      728
+    ],
+    "delta_interval_pp": [
+      -0.17411744364521003,
+      0.3413017845730681
+    ],
+    "net_by_fold": [
+      -1,
+      1,
+      0,
+      -1,
+      0,
+      2,
+      0,
+      0
+    ]
+  },
+  "additional_consensus": {
+    "rows": 1319,
+    "methods": {
+      "intercept": {
+        "vs_consensus": {
+          "fixed": 0,
+          "harmed": 1,
+          "accuracy": 0.8067855089131685
+        },
+        "vs_reference": {
+          "fixed": 0,
+          "harmed": 1,
+          "accuracy": 0.8067855089131685
+        },
+        "delta_interval_pp": [
+          -0.17472335468841002,
+          0.0
+        ],
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0
+        ],
+        "by_paid": {
+          "False": [
+            0,
+            1
+          ],
+          "True": [
+            0,
+            0
+          ]
+        }
+      },
+      "matched": {
+        "vs_consensus": {
+          "fixed": 31,
+          "harmed": 25,
+          "accuracy": 0.8108108108108109
+        },
+        "vs_reference": {
+          "fixed": 31,
+          "harmed": 25,
+          "accuracy": 0.8108108108108109
+        },
+        "delta_interval_pp": [
+          -0.5140140580015081,
+          1.2027491408934707
+        ],
+        "net_by_fold": [
+          2,
+          -1,
+          -1,
+          3,
+          1,
+          1,
+          2,
+          -1
+        ],
+        "by_paid": {
+          "False": [
+            23,
+            18
+          ],
+          "True": [
+            8,
+            7
+          ]
+        }
+      },
+      "tree": {
+        "vs_consensus": {
+          "fixed": 12,
+          "harmed": 18,
+          "accuracy": 0.8039102932719954
+        },
+        "vs_reference": {
+          "fixed": 12,
+          "harmed": 18,
+          "accuracy": 0.8039102932719954
+        },
+        "delta_interval_pp": [
+          -0.9809720358374123,
+          0.23189415745089131
+        ],
+        "net_by_fold": [
+          -1,
+          -2,
+          0,
+          -1,
+          -2,
+          -1,
+          2,
+          -1
+        ],
+        "by_paid": {
+          "False": [
+            12,
+            14
+          ],
+          "True": [
+            0,
+            4
+          ]
+        }
+      }
+    }
+  }
+}
