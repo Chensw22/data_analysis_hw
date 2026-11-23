@@ -1,0 +1,77 @@
+{
+  "folds": {
+    "20261112": {
+      "random": {
+        "fixed": 88,
+        "harmed": 79,
+        "accuracy": 0.8189531205061835
+      },
+      "booking_order": {
+        "fixed": 89,
+        "harmed": 93,
+        "accuracy": 0.817083692838654
+      }
+    },
+    "20261115": {
+      "random": {
+        "fixed": 145,
+        "harmed": 121,
+        "accuracy": 0.8167960885821111
+      },
+      "booking_order": {
+        "fixed": 136,
+        "harmed": 106,
+        "accuracy": 0.81765890135174
+      }
+    },
+    "20261116": {
+      "random": {
+        "fixed": 115,
+        "harmed": 77,
+        "accuracy": 0.8192407247627265
+      },
+      "booking_order": {
+        "fixed": 110,
+        "harmed": 78,
+        "accuracy": 0.8183779119930975
+      }
+    }
+  },
+  "combined": {
+    "random": {
+      "three_plan_mean": {
+        "fixed": 78,
+        "harmed": 67,
+        "accuracy": 0.819959735404084
+      },
+      "by_booking_gain_ci_pp": [
+        0.09557739671273638,
+        0.5842198322712715
+      ]
+    },
+    "booking_order": {
+      "three_plan_mean": {
+        "fixed": 84,
+        "harmed": 68,
+        "accuracy": 0.8206787460454414
+      },
+      "by_booking_gain_ci_pp": [
+        0.02883870190259906,
+        0.5324941722412576
+      ]
+    }
+  },
+  "mean_weights": {
+    "reference": 0.33320160320007164,
+    "feature_projections": 0.08220288655680648,
+    "orion": 0.06719717895341716,
+    "variational_gp": 0.07173457709999687,
+    "native_carte": 0.04040690927552997,
+    "manifest_likelihood": 0.03184086984117303,
+    "class_analogues": 0.07452271733214537,
+    "field_factors": 0.05268445783360307,
+    "registration_only": 0.06990069289289835,
+    "budget_prior": 0.043489708308517484,
+    "bayesian_forest": 0.13281839870583964
+  }
+}

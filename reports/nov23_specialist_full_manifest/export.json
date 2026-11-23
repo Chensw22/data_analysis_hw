@@ -1,0 +1,83 @@
+{
+  "rows": 4277,
+  "schema": [
+    "PassengerId",
+    "Transported"
+  ],
+  "positives": 2256,
+  "changed_from_reference": 53,
+  "mean_weights": {
+    "reference": 0.32838638076102195,
+    "feature_projections": 0.07800647200004196,
+    "orion": 0.07051615024263128,
+    "variational_gp": 0.07294393278551338,
+    "native_carte": 0.040932628407734435,
+    "manifest_likelihood": 0.03280915346715527,
+    "class_analogues": 0.07603654696923652,
+    "field_factors": 0.05184618258454648,
+    "registration_only": 0.072797778990808,
+    "budget_prior": 0.04504476381328974,
+    "bayesian_forest": 0.13068000997802082
+  },
+  "max_weights": {
+    "reference": 0.7756954463345761,
+    "feature_projections": 0.1547615122570956,
+    "orion": 0.1340706743374631,
+    "variational_gp": 0.1544278837981693,
+    "native_carte": 0.15143133908695364,
+    "manifest_likelihood": 0.08201171455868318,
+    "class_analogues": 0.15441943697824645,
+    "field_factors": 0.19072466005971941,
+    "registration_only": 0.29791917946555435,
+    "budget_prior": 0.17446130081434127,
+    "bayesian_forest": 0.21037313086660012
+  },
+  "sha256": "93b7733430520f49af56852f832066f7cafb47c7c3804527fcbccdbdf3c6ca98",
+  "path": "artifacts/nov23_specialist_full_manifest/submission.csv",
+  "experts": {
+    "feature_projections": {
+      "sha256": "c23bace390ff902a68eb57bf2bf96b1cfc58b32d5d408469e1c5af741697d254",
+      "seconds": 0.7544568750017788
+    },
+    "orion": {
+      "sha256": "ccf99f79be33ea115eda7e4ce67bcbb1a9f3051e61e5e90102a65cca0174f124",
+      "seconds": 9.472395332995802,
+      "weight_sha256": "c53afd272e05e9bd6740698b6fa6f3d8789fc4f6da263415d3287b9ed51cd979"
+    },
+    "variational_gp": {
+      "sha256": "ce7681cc159fe6a65007299a50e625b6ada2e89eef8cb398630f57dad419af25",
+      "seconds": 4.548248292005155
+    },
+    "native_carte": {
+      "sha256": "a962292c947fd6b30d08091e799a36d18d2f5445f3c4e5246911496c1e77b5ef",
+      "seconds": 24.86502987499989,
+      "weight_sha256": "21a08bf7d4dd29ff895ad2bf91abe24a4ddbcd0770c73f9b6ced1e016ab0c597",
+      "vectors_sha256": "81894b1c50480a3533da96f2bcea597e7717f0621a502e626fb0ecce8abc5dc8",
+      "epochs": 14
+    },
+    "manifest_likelihood": {
+      "sha256": "cc2d89e0c42afaccba1bd407cd296774e2ad86f5a78840fc6ca5b3fbece2032e",
+      "seconds": 0.9152491669956362
+    },
+    "class_analogues": {
+      "sha256": "c70f00fe4f3dbb20ac630c9e780281e78dc6ffc705f04a0a9caf0eae4586c9d6",
+      "seconds": 0.7615018749929732
+    },
+    "field_factors": {
+      "sha256": "492e34963e7992696f6f555bc66c77ac762e31fc7e7a555e57af73ef6906abe9",
+      "seconds": 2.8320060830010334
+    },
+    "registration_only": {
+      "sha256": "7524914a8f7d260d48f9ade3ca59b3dfb920650657bd2fe533b5ee164a6c4e17",
+      "seconds": 1.461045792006189
+    },
+    "budget_prior": {
+      "sha256": "7d5faf8a843ede42220f24006485dda76b3c838fc2e7b48d3e973101ce3536ac",
+      "seconds": 4.228788000007626
+    },
+    "bayesian_forest": {
+      "sha256": "8679456acedd8c52c3c84f6d8f41b5afb5e614d5fa41eb5d2e064af6e8bd3528",
+      "seconds": 18.152483832993312
+    }
+  }
+}
