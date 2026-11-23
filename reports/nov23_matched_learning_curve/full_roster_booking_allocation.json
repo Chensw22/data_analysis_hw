@@ -1,0 +1,71 @@
+{
+  "n": 8693,
+  "baseline_correct": 7094,
+  "baseline_accuracy": 0.816058897963879,
+  "shared_errors": 1015,
+  "clustering": {
+    "solo_passengers": 4805,
+    "solo_misses": 619,
+    "multi_passengers": 3888,
+    "multi_misses": 396,
+    "multi_orders_with_misses": 315,
+    "multi_orders_with_multiple_misses": 59,
+    "multi_misses_in_these_orders": 140,
+    "paired_misses": 110,
+    "shuffled_mean": 93.315,
+    "shuffled_interval": [
+      78.0,
+      109.02499999999998
+    ],
+    "one_sided_p": 0.025974025974025976
+  },
+  "training_directed_pairs": [
+    3610,
+    3570,
+    3444,
+    3558,
+    3392,
+    3538,
+    3430,
+    3528
+  ],
+  "rank_model": {
+    "accuracy": 0.8107672840216266,
+    "repaired": 56,
+    "newly_wrong": 102,
+    "shared_errors_repaired": 14,
+    "historic_errors_repaired": 0,
+    "historic_newly_wrong": 0,
+    "fold_net": [
+      -12,
+      -4,
+      -6,
+      -12,
+      -10,
+      2,
+      2,
+      -6
+    ]
+  },
+  "diagnostic_known_totals_mitra_rank": {
+    "accuracy": 0.9657195444610607,
+    "repaired": 1390,
+    "newly_wrong": 89,
+    "shared_errors_repaired": 870,
+    "historic_errors_repaired": 317,
+    "historic_newly_wrong": 0,
+    "fold_net": [
+      151,
+      162,
+      167,
+      165,
+      162,
+      172,
+      165,
+      157
+    ]
+  },
+  "diagnostic_best_fixed_total_errors": 1479,
+  "diagnostic_best_fixed_total_gain": 120,
+  "diagnostic_max_shared_errors_repaired_without_harm_at_fixed_total": 74
+}
