@@ -1,0 +1,278 @@
+{
+  "coverage": {
+    "miss": {
+      "previous": 489,
+      "new": {
+        "additive_tree": {
+          "stable": 32,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_tree": {
+          "stable": 37,
+          "additional": 1,
+          "previously_never": 0
+        },
+        "additive_surface": {
+          "stable": 75,
+          "additional": 3,
+          "previously_never": 0
+        },
+        "interaction_surface": {
+          "stable": 77,
+          "additional": 3,
+          "previously_never": 0
+        },
+        "adaptive_subsets": {
+          "stable": 23,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "mean_half": {
+          "stable": 28,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "any": {
+          "stable": 146,
+          "additional": 5,
+          "previously_never": 0
+        }
+      }
+    },
+    "core": {
+      "previous": 259,
+      "new": {
+        "additive_tree": {
+          "stable": 11,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_tree": {
+          "stable": 15,
+          "additional": 1,
+          "previously_never": 0
+        },
+        "additive_surface": {
+          "stable": 37,
+          "additional": 2,
+          "previously_never": 0
+        },
+        "interaction_surface": {
+          "stable": 47,
+          "additional": 3,
+          "previously_never": 0
+        },
+        "adaptive_subsets": {
+          "stable": 9,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "mean_half": {
+          "stable": 12,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "any": {
+          "stable": 81,
+          "additional": 4,
+          "previously_never": 0
+        }
+      }
+    },
+    "paid": {
+      "previous": 148,
+      "new": {
+        "additive_tree": {
+          "stable": 8,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_tree": {
+          "stable": 9,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "additive_surface": {
+          "stable": 28,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_surface": {
+          "stable": 24,
+          "additional": 1,
+          "previously_never": 0
+        },
+        "adaptive_subsets": {
+          "stable": 7,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "mean_half": {
+          "stable": 9,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "any": {
+          "stable": 52,
+          "additional": 1,
+          "previously_never": 0
+        }
+      }
+    },
+    "zero": {
+      "previous": 111,
+      "new": {
+        "additive_tree": {
+          "stable": 3,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_tree": {
+          "stable": 6,
+          "additional": 1,
+          "previously_never": 0
+        },
+        "additive_surface": {
+          "stable": 9,
+          "additional": 2,
+          "previously_never": 0
+        },
+        "interaction_surface": {
+          "stable": 23,
+          "additional": 2,
+          "previously_never": 0
+        },
+        "adaptive_subsets": {
+          "stable": 2,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "mean_half": {
+          "stable": 3,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "any": {
+          "stable": 29,
+          "additional": 3,
+          "previously_never": 0
+        }
+      }
+    },
+    "repeat": {
+      "previous": 589,
+      "new": {
+        "additive_tree": {
+          "stable": 33,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "interaction_tree": {
+          "stable": 40,
+          "additional": 1,
+          "previously_never": 0
+        },
+        "additive_surface": {
+          "stable": 74,
+          "additional": 3,
+          "previously_never": 0
+        },
+        "interaction_surface": {
+          "stable": 79,
+          "additional": 3,
+          "previously_never": 0
+        },
+        "adaptive_subsets": {
+          "stable": 8,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "mean_half": {
+          "stable": 15,
+          "additional": 0,
+          "previously_never": 0
+        },
+        "any": {
+          "stable": 158,
+          "additional": 5,
+          "previously_never": 0
+        }
+      }
+    }
+  },
+  "combined": {
+    "main": {
+      "accuracy": [
+        0.8167960885821111,
+        0.818234109864826,
+        0.8152142651711245
+      ],
+      "fixed": [
+        68,
+        98,
+        96
+      ],
+      "harmed": [
+        74,
+        64,
+        86
+      ],
+      "stable": {
+        "miss": 23,
+        "core": 9,
+        "paid": 7,
+        "zero": 2,
+        "repeat": 0
+      }
+    },
+    "separate": {
+      "accuracy": [
+        0.8155018694276676,
+        0.818809318377912,
+        0.8134886396318666
+      ],
+      "fixed": [
+        81,
+        110,
+        97
+      ],
+      "harmed": [
+        96,
+        72,
+        99
+      ],
+      "stable": {
+        "miss": 24,
+        "core": 11,
+        "paid": 9,
+        "zero": 2,
+        "repeat": 3
+      }
+    },
+    "confirmed": {
+      "accuracy": [
+        0.8163646821972965,
+        0.819096922634455,
+        0.8140638481449526
+      ],
+      "fixed": [
+        85,
+        115,
+        98
+      ],
+      "harmed": [
+        94,
+        75,
+        96
+      ],
+      "stable": {
+        "miss": 23,
+        "core": 10,
+        "paid": 8,
+        "zero": 2,
+        "repeat": 3
+      }
+    }
+  }
+}
