@@ -42,21 +42,27 @@ def segmented(scores, outcome, groups, fold, regime, ref, base, hard):
                  ('stratified_logistic', varying_logistic)]})
 
 
-def run():
-    row, y, frame, groups, _ = load()
-    _, _, hard, right = hard_cohorts(row, y)
-    fold, base, ref = eight_fold(row, y)
+def source_scores(row, y, fold):
     sources = [('TabICL', 'nov23_expanded_training_roster/eight_tabicl', 'expanded'),
                ('CatBoost', 'nov23_expanded_training_roster/eight', 'expanded'),
                ('v44', 'nov23_matched_learning_curve/v44', 'large'),
                ('budget', 'nov23_budget_quarter_replay/matched', 'alt')]
-    fields, plans = [], {}
-    previous_unanimous_error = np.zeros(len(y), bool)
     for name, path, key in sources:
         with np.load(ART / (path + '.npz')) as z:
             for k, v in [('row', row), ('y', y), ('fold', fold)]:
                 np.testing.assert_array_equal(z[k], v)
-            fields.append(z[key][1] if name == 'budget' else z[key])
+            yield name, z[key][1] if name == 'budget' else z[key]
+
+
+def run():
+    row, y, frame, groups, _ = load()
+    _, _, hard, right = hard_cohorts(row, y)
+    fold, base, ref = eight_fold(row, y)
+    fields, names, plans = [], [], {}
+    previous_unanimous_error = np.zeros(len(y), bool)
+    for name, field in source_scores(row, y, fold):
+        fields.append(field)
+        names.append(name)
         if len(fields) < 2:
             continue
         x = np.column_stack(fields)
@@ -81,7 +87,7 @@ def run():
         assert (seen == 1).all()
         new = previous_unanimous_error & ~unanimous_error
         left = frame.loc[unanimous_error]
-        plans[name] = dict(models=[s[0] for s in sources[:len(fields)]], all_wrong=int(unanimous_error.sum()),
+        plans[name] = dict(models=names.copy(), all_wrong=int(unanimous_error.sum()),
                            all_wrong_transported=int(y[unanimous_error].sum()),
                            all_wrong_known_positive_bill=int(left[BILLS].gt(0).any(axis=1).sum()),
                            all_wrong_solo=int(left.BookingSize.eq(1).sum()),

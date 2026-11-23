@@ -1,0 +1,231 @@
+{
+  "scopes": {
+    "False": {
+      "size": 2792,
+      "errors": 365,
+      "matched_cases": 360,
+      "unique_controls": 919,
+      "pairs": 1294,
+      "methods": {
+        "risk": {
+          "rank_fraction": 0.5259259259259259,
+          "fixed": 0,
+          "harmed": 0,
+          "hard_fixed": 0,
+          "rank_by_fold": [
+            0.5416666666666666,
+            0.5784313725490196,
+            0.5770833333333334,
+            0.4795597484276729,
+            0.548611111111111,
+            0.4766666666666666,
+            0.49007936507936506,
+            0.5424528301886793
+          ]
+        },
+        "personal": {
+          "rank_fraction": 0.5210648148148148,
+          "fixed": 8,
+          "harmed": 18,
+          "hard_fixed": 0,
+          "rank_by_fold": [
+            0.4979166666666666,
+            0.41911764705882354,
+            0.6229166666666666,
+            0.5220125786163522,
+            0.5972222222222222,
+            0.39833333333333326,
+            0.5337301587301587,
+            0.5628930817610063
+          ]
+        },
+        "personal_and_peers": {
+          "rank_fraction": 0.48587962962962966,
+          "fixed": 9,
+          "harmed": 25,
+          "hard_fixed": 0,
+          "rank_by_fold": [
+            0.5333333333333334,
+            0.3382352941176471,
+            0.5479166666666666,
+            0.5141509433962265,
+            0.5607638888888888,
+            0.335,
+            0.5099206349206349,
+            0.5251572327044025
+          ]
+        },
+        "tree_and_peers": {
+          "rank_fraction": 0.4967592592592593,
+          "fixed": 2,
+          "harmed": 9,
+          "hard_fixed": 0,
+          "rank_by_fold": [
+            0.54375,
+            0.4362745098039215,
+            0.4354166666666666,
+            0.6572327044025157,
+            0.5173611111111112,
+            0.39833333333333326,
+            0.4583333333333333,
+            0.49056603773584906
+          ]
+        }
+      }
+    },
+    "True": {
+      "size": 2466,
+      "errors": 367,
+      "matched_cases": 355,
+      "unique_controls": 528,
+      "pairs": 1201,
+      "methods": {
+        "risk": {
+          "rank_fraction": 0.5211267605633803,
+          "fixed": 21,
+          "harmed": 29,
+          "hard_fixed": 3,
+          "rank_by_fold": [
+            0.47297297297297297,
+            0.47348484848484845,
+            0.595679012345679,
+            0.5,
+            0.4978070175438596,
+            0.524822695035461,
+            0.5096153846153846,
+            0.5607638888888888
+          ]
+        },
+        "personal": {
+          "rank_fraction": 0.5147887323943662,
+          "fixed": 52,
+          "harmed": 72,
+          "hard_fixed": 10,
+          "rank_by_fold": [
+            0.48198198198198194,
+            0.5113636363636364,
+            0.5154320987654322,
+            0.4857142857142857,
+            0.36622807017543857,
+            0.5939716312056738,
+            0.5112179487179487,
+            0.6076388888888888
+          ]
+        },
+        "personal_and_peers": {
+          "rank_fraction": 0.48755868544600933,
+          "fixed": 54,
+          "harmed": 85,
+          "hard_fixed": 12,
+          "rank_by_fold": [
+            0.3671171171171171,
+            0.5454545454545454,
+            0.5092592592592593,
+            0.4261904761904762,
+            0.4100877192982456,
+            0.5531914893617021,
+            0.49839743589743585,
+            0.532986111111111
+          ]
+        },
+        "tree_and_peers": {
+          "rank_fraction": 0.5223004694835681,
+          "fixed": 44,
+          "harmed": 73,
+          "hard_fixed": 5,
+          "rank_by_fold": [
+            0.4639639639639639,
+            0.5284090909090909,
+            0.5725308641975309,
+            0.4619047619047618,
+            0.375,
+            0.648936170212766,
+            0.5464743589743589,
+            0.515625
+          ]
+        }
+      }
+    }
+  },
+  "vs_reference": {
+    "risk": {
+      "fixed": 25,
+      "harmed": 29,
+      "accuracy": 0.8175150992234685
+    },
+    "personal": {
+      "fixed": 63,
+      "harmed": 89,
+      "accuracy": 0.8143514524014955
+    },
+    "personal_and_peers": {
+      "fixed": 66,
+      "harmed": 109,
+      "accuracy": 0.8119068162208801
+    },
+    "tree_and_peers": {
+      "fixed": 48,
+      "harmed": 80,
+      "accuracy": 0.8134886396318666
+    }
+  },
+  "overlap": {
+    "risk": {
+      "fixed": 21,
+      "harmed": 29,
+      "hard_fixed": 3,
+      "hard_fixed_without_previous_stable_fix": 0,
+      "historically_correct_harmed": 2
+    },
+    "personal": {
+      "fixed": 60,
+      "harmed": 90,
+      "hard_fixed": 10,
+      "hard_fixed_without_previous_stable_fix": 4,
+      "historically_correct_harmed": 11
+    },
+    "personal_and_peers": {
+      "fixed": 63,
+      "harmed": 110,
+      "hard_fixed": 12,
+      "hard_fixed_without_previous_stable_fix": 4,
+      "historically_correct_harmed": 24
+    },
+    "tree_and_peers": {
+      "fixed": 46,
+      "harmed": 82,
+      "hard_fixed": 5,
+      "hard_fixed_without_previous_stable_fix": 1,
+      "historically_correct_harmed": 23
+    },
+    "both_peer_models": {
+      "fixed": 27,
+      "harmed": 45,
+      "hard_fixed": 4,
+      "hard_fixed_without_previous_stable_fix": 0,
+      "historically_correct_harmed": 12
+    }
+  },
+  "reproduction": {
+    "previously_uncovered": {
+      "first": 4,
+      "all_three": 1
+    },
+    "shared_wrong": {
+      "first": 12,
+      "all_three": 5
+    },
+    "historically_correct": {
+      "first": 24,
+      "all_three": 8
+    },
+    "current_correct": {
+      "first": 110,
+      "all_three": 43
+    },
+    "current_wrong": {
+      "first": 63,
+      "all_three": 18
+    }
+  }
+}
