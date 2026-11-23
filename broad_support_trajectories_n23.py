@@ -20,8 +20,8 @@ SUBSETS = [c for k in range(1, 5) for c in combinations(range(4), k)]
 LEVEL = np.array(list(map(len, SUBSETS)))
 
 
-def fit_bank(frame, groups, y, folds, seed):
-    bank = np.full((len(SUBSETS), len(y)), np.nan)
+def fit_bank(frame, groups, y, folds, seed, subsets=SUBSETS):
+    bank = np.full((len(subsets), len(y)), np.nan)
     sizes = []
     for k in np.unique(folds):
         query = np.flatnonzero(folds == k)
@@ -31,7 +31,7 @@ def fit_bank(frame, groups, y, folds, seed):
         for _, block in GroupKFold(4, shuffle=True, random_state=seed + int(k)).split(train, groups=groups[train]):
             blocks.append(train[block])
         np.testing.assert_array_equal(np.sort(np.concatenate(blocks)), train)
-        for i, subset in enumerate(SUBSETS):
+        for i, subset in enumerate(subsets):
             selected = np.sort(np.concatenate([blocks[j] for j in subset]))
             model = CatBoostClassifier(iterations=350, depth=6, learning_rate=.065, verbose=False,
                                        random_seed=1923, thread_count=3, allow_writing_files=False)
