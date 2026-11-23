@@ -14,7 +14,7 @@ from broad_partition_evidence_n23 import ART, ROOT, SEEDS, write
 REPORT = ROOT/'reports/nov23_dependence_anchors'
 
 
-def likelihoods(x, query, widths, smooth=12.):
+def likelihoods(x, query, widths, smooth=12., field_conditionals=False):
     """One normalized joint density per anchor or unordered anchor pair for one outcome."""
     n,d = x.shape
     assert len(x) and (x>=0).all() and (query>=0).all()
@@ -34,20 +34,37 @@ def likelihoods(x, query, widths, smooth=12.):
             conditional[parent,child] = probs
             anchored[:,parent] += np.log(probs[query[:,parent],query[:,child]])
     double = []
+    if field_conditionals:
+        complete = np.full_like(unary, -np.inf)
+        withheld = np.full_like(unary, -np.inf)
     for (i,j),counts in pairs.items():
         # Both orders define proper parent-pair probabilities. Average before scoring.
         root = .5*(marginal[i][:,None]*conditional[i,j]+(marginal[j][:,None]*conditional[j,i]).T)
         log_density = np.log(root[query[:,i],query[:,j]])
         code = x[:,i]*widths[j]+x[:,j]
-        for k in cols[(cols!=i)&(cols!=j)]:
+        children = cols[(cols!=i)&(cols!=j)]
+        factors = {}
+        for k in children:
             w = widths[k]
             triples = np.bincount(code*w+x[:,k],minlength=counts.size*w).reshape(*counts.shape,w)
             observed = triples[query[:,i],query[:,j],query[:,k]]
             prior = .5*(conditional[i,k][query[:,i],query[:,k]]+conditional[j,k][query[:,j],query[:,k]])
             prob = (observed+smooth*prior)/(counts[query[:,i],query[:,j]]+smooth)
-            log_density += np.log(prob)
+            factor = np.log(prob)
+            log_density += factor
+            if field_conditionals:
+                factors[k] = factor
+        if field_conditionals:
+            for k,factor in factors.items():
+                # The field is a child in every included model; summing out its
+                # possible values removes exactly this normalized likelihood factor.
+                complete[:,k] = np.logaddexp(complete[:,k],log_density)
+                withheld[:,k] = np.logaddexp(withheld[:,k],log_density-factor)
         double.append(log_density)
-    return {'independent':unary.sum(1)[:,None],'single':anchored,'double':np.column_stack(double)}
+    result = {'independent':unary.sum(1)[:,None],'single':anchored,'double':np.column_stack(double)}
+    if field_conditionals:
+        result.update(marginal_fields=unary,conditional_fields=complete-withheld)
+    return result
 
 
 def predictions(x, y, t, q, shuffle=False):
