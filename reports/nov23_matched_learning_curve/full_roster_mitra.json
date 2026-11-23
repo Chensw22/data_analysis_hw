@@ -1,0 +1,206 @@
+{
+  "all": {
+    "rows": 8693,
+    "four_all_wrong": 1067,
+    "new_reachable": 52,
+    "four_all_correct": 6079,
+    "mitra_opposes_correct": 44,
+    "new_paid_transported": 15,
+    "new_no_positive_stayed": 18,
+    "higher_confidence_fixed": 9,
+    "higher_confidence_harmed": 6,
+    "vs_mitra": {
+      "fixed": 120,
+      "harmed": 123,
+      "accuracy": 0.8157137927067756
+    },
+    "net_vs_mitra_by_fold": [
+      -10,
+      5,
+      -2,
+      0,
+      -3,
+      7,
+      4,
+      -4
+    ],
+    "delta_vs_mitra_interval_pp": [
+      -0.3923073366353876,
+      0.3219556543468245
+    ],
+    "models": {
+      "mitra": {
+        "fixed": 178,
+        "harmed": 177,
+        "accuracy": 0.816058897963879
+      },
+      "three_family_mean": {
+        "fixed": 55,
+        "harmed": 57,
+        "accuracy": 0.8157137927067756
+      }
+    }
+  },
+  "development": {
+    "rows": 6954,
+    "four_all_wrong": 848,
+    "new_reachable": 40,
+    "four_all_correct": 4877,
+    "mitra_opposes_correct": 39,
+    "new_paid_transported": 10,
+    "new_no_positive_stayed": 12,
+    "higher_confidence_fixed": 9,
+    "higher_confidence_harmed": 4,
+    "vs_mitra": {
+      "fixed": 103,
+      "harmed": 97,
+      "accuracy": 0.81765890135174
+    },
+    "net_vs_mitra_by_fold": [
+      -10,
+      7,
+      -2,
+      0,
+      0,
+      7,
+      6,
+      -2
+    ],
+    "delta_vs_mitra_interval_pp": [
+      -0.32407738840963596,
+      0.485242922325771
+    ],
+    "models": {
+      "mitra": {
+        "fixed": 140,
+        "harmed": 149,
+        "accuracy": 0.8167960885821111
+      },
+      "three_family_mean": {
+        "fixed": 43,
+        "harmed": 46,
+        "accuracy": 0.81765890135174
+      }
+    }
+  },
+  "additional": {
+    "rows": 1739,
+    "four_all_wrong": 219,
+    "new_reachable": 12,
+    "four_all_correct": 1202,
+    "mitra_opposes_correct": 5,
+    "new_paid_transported": 5,
+    "new_no_positive_stayed": 6,
+    "higher_confidence_fixed": 0,
+    "higher_confidence_harmed": 2,
+    "vs_mitra": {
+      "fixed": 17,
+      "harmed": 26,
+      "accuracy": 0.8079355951696378
+    },
+    "net_vs_mitra_by_fold": [
+      0,
+      -2,
+      0,
+      0,
+      -3,
+      0,
+      -2,
+      -2
+    ],
+    "delta_vs_mitra_interval_pp": [
+      -1.2928783930336725,
+      0.23028209556706966
+    ],
+    "models": {
+      "mitra": {
+        "fixed": 38,
+        "harmed": 28,
+        "accuracy": 0.8131109833237493
+      },
+      "three_family_mean": {
+        "fixed": 12,
+        "harmed": 11,
+        "accuracy": 0.8079355951696378
+      }
+    }
+  },
+  "hard": {
+    "rows": 372,
+    "four_all_wrong": 369,
+    "new_reachable": 0,
+    "four_all_correct": 0,
+    "mitra_opposes_correct": 0,
+    "new_paid_transported": 0,
+    "new_no_positive_stayed": 0,
+    "higher_confidence_fixed": 0,
+    "higher_confidence_harmed": 0,
+    "vs_mitra": {
+      "fixed": 0,
+      "harmed": 1,
+      "accuracy": 0.0
+    },
+    "net_vs_mitra_by_fold": [
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      0,
+      0
+    ],
+    "delta_vs_mitra_interval_pp": [
+      -0.8152729238241914,
+      0.0
+    ],
+    "models": {
+      "mitra": {
+        "fixed": 1,
+        "harmed": 0,
+        "accuracy": 0.002688172043010753
+      },
+      "three_family_mean": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.0
+      }
+    }
+  },
+  "original_replay": {
+    "three_family_mean": {
+      "fixed": 106,
+      "harmed": 79,
+      "accuracy": 0.8180903077365546,
+      "hard_correct": 0,
+      "by_fold": [
+        26,
+        4,
+        -3
+      ],
+      "locked_test_rows": 61,
+      "changed_vs_v131": 99,
+      "changed_minimum_vs_submitted": 89,
+      "public_correct_upper_bound": 3567,
+      "bounding_file": "nov23_robust_release_center",
+      "distance_to_bounding_file": 90
+    },
+    "two_family_mean": {
+      "fixed": 143,
+      "harmed": 130,
+      "accuracy": 0.8160770779407536,
+      "hard_correct": 0,
+      "by_fold": [
+        14,
+        12,
+        -13
+      ],
+      "locked_test_rows": 61,
+      "changed_vs_v131": 151,
+      "changed_minimum_vs_submitted": 126,
+      "public_correct_upper_bound": 3601,
+      "bounding_file": "proposal_crossfamily_v80",
+      "distance_to_bounding_file": 145
+    }
+  }
+}

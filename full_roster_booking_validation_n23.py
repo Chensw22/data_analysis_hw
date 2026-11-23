@@ -24,9 +24,7 @@ def data():
     return raw, y, g, fold
 
 
-def train(name):
-    OUT.mkdir(exist_ok=True)
-    raw, y, _, fold = data()
+def predictor(name, raw, y):
     if name == 'v44_without_name':
         import audit_top5_references as audit
         framework, _, fit, _, version = audit.initialize_reference('v44', OUT)
@@ -55,6 +53,13 @@ def train(name):
             x = design(x)[0]
         def predict(t, q, f):
             return fitting(x, y[t], t, q) if name == 'cat' else learn(x, y, t, q)
+    return predict
+
+
+def train(name):
+    OUT.mkdir(exist_ok=True)
+    raw, y, _, fold = data()
+    predict = predictor(name, raw, y)
     p = np.full(len(y), np.nan)
     for f in np.unique(fold):
         t, q = np.flatnonzero(fold != f), np.flatnonzero(fold == f)
