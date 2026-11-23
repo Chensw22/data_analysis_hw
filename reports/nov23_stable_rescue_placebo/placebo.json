@@ -1,0 +1,712 @@
+{
+  "passengers": 6954,
+  "eligible": 4239,
+  "hard": 372,
+  "right": 3867,
+  "experts": 48,
+  "families": 13,
+  "draws": 3000,
+  "observed": {
+    "any": {
+      "fixed": 87,
+      "harmed": 604
+    },
+    "prior": {
+      "fixed": 78,
+      "harmed": 434
+    },
+    "latest_only": {
+      "fixed": 9,
+      "harmed": 170
+    },
+    "one_family": {
+      "fixed": 68,
+      "harmed": 477
+    },
+    "two_families": {
+      "fixed": 10,
+      "harmed": 70
+    },
+    "three_or_more": {
+      "fixed": 9,
+      "harmed": 57
+    },
+    "booking_bills": {
+      "fixed": 19,
+      "harmed": 70
+    },
+    "neighbors": {
+      "fixed": 15,
+      "harmed": 46
+    },
+    "abstaining_fields": {
+      "fixed": 10,
+      "harmed": 33
+    },
+    "dependence_anchors": {
+      "fixed": 11,
+      "harmed": 66
+    },
+    "opposing_passengers": {
+      "fixed": 34,
+      "harmed": 205
+    },
+    "service_bag": {
+      "fixed": 1,
+      "harmed": 10
+    },
+    "service_bag_trees": {
+      "fixed": 1,
+      "harmed": 9
+    },
+    "subspace_discriminants": {
+      "fixed": 9,
+      "harmed": 57
+    },
+    "known_manifest_codes": {
+      "fixed": 4,
+      "harmed": 13
+    },
+    "service_distribution_distance": {
+      "fixed": 4,
+      "harmed": 87
+    },
+    "bill_completion_states": {
+      "fixed": 6,
+      "harmed": 97
+    },
+    "conditional_bill_completion": {
+      "fixed": 7,
+      "harmed": 121
+    },
+    "partner_specific_fields": {
+      "fixed": 5,
+      "harmed": 17
+    }
+  },
+  "tests": {
+    "risk": {
+      "exchangeable_people": 3733,
+      "exchangeable_errors": 329,
+      "exchangeable_rescues": 79,
+      "rules": {
+        "any": {
+          "expected": 79.63665658299487,
+          "observed_minus_expected": 7.363343417005126,
+          "null95": [
+            68.0,
+            92.0
+          ],
+          "upper_tail": 0.11896034655114962
+        },
+        "prior": {
+          "expected": 67.49852715688695,
+          "observed_minus_expected": 10.50147284311305,
+          "null95": [
+            57.0,
+            79.0
+          ],
+          "upper_tail": 0.04465178273908697
+        },
+        "latest_only": {
+          "expected": 12.138129426107943,
+          "observed_minus_expected": -3.138129426107943,
+          "null95": [
+            7.0,
+            18.0
+          ],
+          "upper_tail": 0.8993668777074308
+        },
+        "one_family": {
+          "expected": 60.3492744394384,
+          "observed_minus_expected": 7.650725560561597,
+          "null95": [
+            49.0,
+            71.0
+          ],
+          "upper_tail": 0.08863712095968011
+        },
+        "two_families": {
+          "expected": 11.664129924621452,
+          "observed_minus_expected": -1.6641299246214523,
+          "null95": [
+            7.0,
+            17.0
+          ],
+          "upper_tail": 0.7880706431189604
+        },
+        "three_or_more": {
+          "expected": 7.623252218935048,
+          "observed_minus_expected": 1.3767477810649522,
+          "null95": [
+            4.0,
+            12.0
+          ],
+          "upper_tail": 0.3478840386537821
+        },
+        "booking_bills": {
+          "expected": 15.31883897526961,
+          "observed_minus_expected": 3.6811610247303896,
+          "null95": [
+            10.0,
+            20.0
+          ],
+          "upper_tail": 0.10529823392202599
+        },
+        "neighbors": {
+          "expected": 11.366189371459392,
+          "observed_minus_expected": 3.6338106285406084,
+          "null95": [
+            6.0,
+            17.0
+          ],
+          "upper_tail": 0.1166277907364212
+        },
+        "abstaining_fields": {
+          "expected": 7.489668761855763,
+          "observed_minus_expected": 2.5103312381442366,
+          "null95": [
+            3.0,
+            12.0
+          ],
+          "upper_tail": 0.19060313228923692
+        },
+        "dependence_anchors": {
+          "expected": 8.240073517991139,
+          "observed_minus_expected": 2.7599264820088614,
+          "null95": [
+            4.0,
+            13.0
+          ],
+          "upper_tail": 0.1656114628457181
+        },
+        "opposing_passengers": {
+          "expected": 30.418945397713205,
+          "observed_minus_expected": 3.5810546022867946,
+          "null95": [
+            23.0,
+            38.0
+          ],
+          "upper_tail": 0.2299233588803732
+        },
+        "service_bag": {
+          "expected": 2.073218692685295,
+          "observed_minus_expected": -1.0732186926852951,
+          "null95": [
+            0.0,
+            5.0
+          ],
+          "upper_tail": 0.9156947684105298
+        },
+        "service_bag_trees": {
+          "expected": 2.3838001476250326,
+          "observed_minus_expected": -1.3838001476250326,
+          "null95": [
+            1.0,
+            5.0
+          ],
+          "upper_tail": 1.0
+        },
+        "subspace_discriminants": {
+          "expected": 8.457395896128244,
+          "observed_minus_expected": 0.5426041038717564,
+          "null95": [
+            4.0,
+            13.0
+          ],
+          "upper_tail": 0.47517494168610463
+        },
+        "known_manifest_codes": {
+          "expected": 1.6398520329954724,
+          "observed_minus_expected": 2.3601479670045276,
+          "null95": [
+            0.0,
+            4.0
+          ],
+          "upper_tail": 0.05198267244251916
+        },
+        "service_distribution_distance": {
+          "expected": 6.698651038726215,
+          "observed_minus_expected": -2.698651038726215,
+          "null95": [
+            3.0,
+            11.0
+          ],
+          "upper_tail": 0.9460179940019994
+        },
+        "bill_completion_states": {
+          "expected": 6.177398090623211,
+          "observed_minus_expected": -0.17739809062321132,
+          "null95": [
+            2.0,
+            11.0
+          ],
+          "upper_tail": 0.6057980673108964
+        },
+        "conditional_bill_completion": {
+          "expected": 11.726343587293528,
+          "observed_minus_expected": -4.7263435872935275,
+          "null95": [
+            7.0,
+            17.0
+          ],
+          "upper_tail": 0.987670776407864
+        },
+        "partner_specific_fields": {
+          "expected": 5.167340327577662,
+          "observed_minus_expected": -0.16734032757766215,
+          "null95": [
+            2.0,
+            9.0
+          ],
+          "upper_tail": 0.6337887370876375
+        }
+      }
+    },
+    "risk_spending": {
+      "exchangeable_people": 3509,
+      "exchangeable_errors": 313,
+      "exchangeable_rescues": 72,
+      "rules": {
+        "any": {
+          "expected": 82.12176977846235,
+          "observed_minus_expected": 4.878230221537649,
+          "null95": [
+            72.0,
+            93.0
+          ],
+          "upper_tail": 0.21026324558480505
+        },
+        "prior": {
+          "expected": 69.98803208040667,
+          "observed_minus_expected": 8.011967919593332,
+          "null95": [
+            61.0,
+            80.0
+          ],
+          "upper_tail": 0.07797400866377874
+        },
+        "latest_only": {
+          "expected": 12.133737698055686,
+          "observed_minus_expected": -3.133737698055686,
+          "null95": [
+            7.0,
+            17.0
+          ],
+          "upper_tail": 0.9356881039653449
+        },
+        "one_family": {
+          "expected": 61.01419702585343,
+          "observed_minus_expected": 6.985802974146573,
+          "null95": [
+            51.0,
+            71.0
+          ],
+          "upper_tail": 0.10196601132955681
+        },
+        "two_families": {
+          "expected": 13.086242071795464,
+          "observed_minus_expected": -3.086242071795464,
+          "null95": [
+            9.0,
+            18.0
+          ],
+          "upper_tail": 0.9530156614461847
+        },
+        "three_or_more": {
+          "expected": 8.02133068081344,
+          "observed_minus_expected": 0.9786693191865599,
+          "null95": [
+            7.0,
+            10.0
+          ],
+          "upper_tail": 0.27090969676774407
+        },
+        "booking_bills": {
+          "expected": 16.075099296007473,
+          "observed_minus_expected": 2.9249007039925274,
+          "null95": [
+            12.0,
+            21.0
+          ],
+          "upper_tail": 0.14195268243918693
+        },
+        "neighbors": {
+          "expected": 11.361543236559369,
+          "observed_minus_expected": 3.6384567634406313,
+          "null95": [
+            7.0,
+            16.0
+          ],
+          "upper_tail": 0.10196601132955681
+        },
+        "abstaining_fields": {
+          "expected": 9.154660468789507,
+          "observed_minus_expected": 0.8453395312104934,
+          "null95": [
+            6.0,
+            13.0
+          ],
+          "upper_tail": 0.4255248250583139
+        },
+        "dependence_anchors": {
+          "expected": 9.695532915360502,
+          "observed_minus_expected": 1.304467084639498,
+          "null95": [
+            9.0,
+            11.0
+          ],
+          "upper_tail": 0.12195934688437188
+        },
+        "opposing_passengers": {
+          "expected": 32.41452394342684,
+          "observed_minus_expected": 1.5854760565731567,
+          "null95": [
+            25.0,
+            40.0
+          ],
+          "upper_tail": 0.39786737754081974
+        },
+        "service_bag": {
+          "expected": 2.486661767042746,
+          "observed_minus_expected": -1.486661767042746,
+          "null95": [
+            0.0,
+            5.0
+          ],
+          "upper_tail": 0.9523492169276908
+        },
+        "service_bag_trees": {
+          "expected": 1.0,
+          "observed_minus_expected": 0.0,
+          "null95": [
+            1.0,
+            1.0
+          ],
+          "upper_tail": 1.0
+        },
+        "subspace_discriminants": {
+          "expected": 10.360884655656626,
+          "observed_minus_expected": -1.3608846556566263,
+          "null95": [
+            8.0,
+            13.0
+          ],
+          "upper_tail": 0.9086971009663446
+        },
+        "known_manifest_codes": {
+          "expected": 2.3294545492821355,
+          "observed_minus_expected": 1.6705454507178645,
+          "null95": [
+            1.0,
+            4.0
+          ],
+          "upper_tail": 0.12862379206931024
+        },
+        "service_distribution_distance": {
+          "expected": 3.883374635180065,
+          "observed_minus_expected": 0.11662536481993513,
+          "null95": [
+            2.0,
+            7.0
+          ],
+          "upper_tail": 0.5918027324225258
+        },
+        "bill_completion_states": {
+          "expected": 7.85,
+          "observed_minus_expected": -1.8499999999999996,
+          "null95": [
+            5.0,
+            10.0
+          ],
+          "upper_tail": 0.9580139953348884
+        },
+        "conditional_bill_completion": {
+          "expected": 9.29631217923548,
+          "observed_minus_expected": -2.29631217923548,
+          "null95": [
+            6.0,
+            13.0
+          ],
+          "upper_tail": 0.9526824391869377
+        },
+        "partner_specific_fields": {
+          "expected": 4.7118784389071635,
+          "observed_minus_expected": 0.2881215610928365,
+          "null95": [
+            2.0,
+            8.0
+          ],
+          "upper_tail": 0.5311562812395868
+        }
+      }
+    },
+    "risk_spending_dissent": {
+      "exchangeable_people": 3159,
+      "exchangeable_errors": 288,
+      "exchangeable_rescues": 62,
+      "rules": {
+        "any": {
+          "expected": 86.11957226260756,
+          "observed_minus_expected": 0.8804277373924378,
+          "null95": [
+            78.0,
+            94.0
+          ],
+          "upper_tail": 0.4665111629456848
+        },
+        "prior": {
+          "expected": 75.05475401644816,
+          "observed_minus_expected": 2.9452459835518425,
+          "null95": [
+            67.0,
+            83.0
+          ],
+          "upper_tail": 0.28023992002665776
+        },
+        "latest_only": {
+          "expected": 11.064818246159387,
+          "observed_minus_expected": -2.064818246159387,
+          "null95": [
+            7.0,
+            16.0
+          ],
+          "upper_tail": 0.8727090969676774
+        },
+        "one_family": {
+          "expected": 62.98722979886974,
+          "observed_minus_expected": 5.012770201130259,
+          "null95": [
+            55.0,
+            71.0
+          ],
+          "upper_tail": 0.14561812729090304
+        },
+        "two_families": {
+          "expected": 13.965675797071146,
+          "observed_minus_expected": -3.965675797071146,
+          "null95": [
+            11.0,
+            18.0
+          ],
+          "upper_tail": 0.9970009996667777
+        },
+        "three_or_more": {
+          "expected": 9.166666666666666,
+          "observed_minus_expected": -0.16666666666666607,
+          "null95": [
+            9.0,
+            10.0
+          ],
+          "upper_tail": 1.0
+        },
+        "booking_bills": {
+          "expected": 17.647138713999176,
+          "observed_minus_expected": 1.3528612860008238,
+          "null95": [
+            14.0,
+            21.02500000000009
+          ],
+          "upper_tail": 0.3112295901366211
+        },
+        "neighbors": {
+          "expected": 12.414625304489281,
+          "observed_minus_expected": 2.585374695510719,
+          "null95": [
+            9.0,
+            16.0
+          ],
+          "upper_tail": 0.13995334888370542
+        },
+        "abstaining_fields": {
+          "expected": 10.690969882830347,
+          "observed_minus_expected": -0.6909698828303465,
+          "null95": [
+            8.0,
+            14.0
+          ],
+          "upper_tail": 0.7757414195268244
+        },
+        "dependence_anchors": {
+          "expected": 11.121212121212121,
+          "observed_minus_expected": -0.1212121212121211,
+          "null95": [
+            11.0,
+            12.0
+          ],
+          "upper_tail": 1.0
+        },
+        "opposing_passengers": {
+          "expected": 34.13712507403078,
+          "observed_minus_expected": -0.13712507403077723,
+          "null95": [
+            27.0,
+            41.0
+          ],
+          "upper_tail": 0.5771409530156615
+        },
+        "service_bag": {
+          "expected": 2.57926267281106,
+          "observed_minus_expected": -1.5792626728110601,
+          "null95": [
+            1.0,
+            5.0
+          ],
+          "upper_tail": 1.0
+        },
+        "service_bag_trees": {
+          "expected": 1.0,
+          "observed_minus_expected": 0.0,
+          "null95": [
+            1.0,
+            1.0
+          ],
+          "upper_tail": 1.0
+        },
+        "subspace_discriminants": {
+          "expected": 10.11008739687985,
+          "observed_minus_expected": -1.11008739687985,
+          "null95": [
+            8.0,
+            13.0
+          ],
+          "upper_tail": 0.9376874375208264
+        },
+        "known_manifest_codes": {
+          "expected": 3.0238095238095237,
+          "observed_minus_expected": 0.9761904761904763,
+          "null95": [
+            2.0,
+            4.0
+          ],
+          "upper_tail": 0.23758747084305232
+        },
+        "service_distribution_distance": {
+          "expected": 4.141104218362283,
+          "observed_minus_expected": -0.14110421836228326,
+          "null95": [
+            3.0,
+            6.0
+          ],
+          "upper_tail": 0.7647450849716761
+        },
+        "bill_completion_states": {
+          "expected": 8.179487179487179,
+          "observed_minus_expected": -2.179487179487179,
+          "null95": [
+            6.0,
+            10.0
+          ],
+          "upper_tail": 0.9926691102965678
+        },
+        "conditional_bill_completion": {
+          "expected": 8.879986877244447,
+          "observed_minus_expected": -1.8799868772444466,
+          "null95": [
+            6.0,
+            12.0
+          ],
+          "upper_tail": 0.9696767744085305
+        },
+        "partner_specific_fields": {
+          "expected": 4.350915284998857,
+          "observed_minus_expected": 0.649084715001143,
+          "null95": [
+            2.0,
+            8.0
+          ],
+          "upper_tail": 0.44551816061312893
+        }
+      }
+    }
+  },
+  "single_replay_rules": {
+    "plans": {
+      "20261112": {
+        "majority": {
+          "fixed": 95,
+          "harmed": 134,
+          "accuracy": 0.8120506183491516,
+          "hard_hits": 0
+        },
+        "three_quarters": {
+          "fixed": 14,
+          "harmed": 19,
+          "accuracy": 0.8169398907103825,
+          "hard_hits": 0
+        },
+        "unanimous": {
+          "fixed": 1,
+          "harmed": 0,
+          "accuracy": 0.8178027034800115,
+          "hard_hits": 0
+        }
+      },
+      "20261115": {
+        "majority": {
+          "fixed": 96,
+          "harmed": 133,
+          "accuracy": 0.8080241587575496,
+          "hard_hits": 0
+        },
+        "three_quarters": {
+          "fixed": 14,
+          "harmed": 20,
+          "accuracy": 0.812482024733966,
+          "hard_hits": 0
+        },
+        "unanimous": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8133448375035951,
+          "hard_hits": 0
+        }
+      },
+      "20261116": {
+        "majority": {
+          "fixed": 112,
+          "harmed": 145,
+          "accuracy": 0.8090307736554501,
+          "hard_hits": 0
+        },
+        "three_quarters": {
+          "fixed": 16,
+          "harmed": 19,
+          "accuracy": 0.8133448375035951,
+          "hard_hits": 0
+        },
+        "unanimous": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8137762438884095,
+          "hard_hits": 0
+        }
+      },
+      "v131": {
+        "majority": {
+          "fixed": 157,
+          "harmed": 179,
+          "accuracy": 0.811044003451251,
+          "hard_hits": 1
+        },
+        "three_quarters": {
+          "fixed": 45,
+          "harmed": 47,
+          "accuracy": 0.813920046016681,
+          "hard_hits": 0
+        },
+        "unanimous": {
+          "fixed": 1,
+          "harmed": 3,
+          "accuracy": 0.813920046016681,
+          "hard_hits": 0
+        }
+      }
+    },
+    "stable_hard": {
+      "majority": 0,
+      "three_quarters": 0,
+      "unanimous": 0
+    }
+  }
+}
