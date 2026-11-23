@@ -1,0 +1,139 @@
+{
+  "rows": 6954,
+  "reference_correct": 5689,
+  "plans": {
+    "CatBoost": {
+      "models": [
+        "TabICL",
+        "CatBoost"
+      ],
+      "all_wrong": 1106,
+      "all_wrong_transported": 541,
+      "all_wrong_known_positive_bill": 607,
+      "all_wrong_solo": 655,
+      "new_reachable": 0,
+      "new_reachable_hard": 0,
+      "hard_all_wrong": 372,
+      "unconstrained_vote_oracle": 5848,
+      "monotone_oracle": 5738,
+      "mean": {
+        "fixed": 121,
+        "harmed": 125,
+        "accuracy": 0.8175150992234685
+      },
+      "crossfit": {
+        "fixed": 240,
+        "harmed": 255,
+        "accuracy": 0.815933275812482
+      },
+      "crossfit_hard": 8,
+      "crossfit_historical_harms": 12
+    },
+    "v44": {
+      "models": [
+        "TabICL",
+        "CatBoost",
+        "v44"
+      ],
+      "all_wrong": 996,
+      "all_wrong_transported": 462,
+      "all_wrong_known_positive_bill": 540,
+      "all_wrong_solo": 591,
+      "new_reachable": 110,
+      "new_reachable_hard": 1,
+      "hard_all_wrong": 371,
+      "unconstrained_vote_oracle": 5958,
+      "monotone_oracle": 5793,
+      "mean": {
+        "fixed": 71,
+        "harmed": 73,
+        "accuracy": 0.8178027034800115
+      },
+      "crossfit": {
+        "fixed": 168,
+        "harmed": 168,
+        "accuracy": 0.8180903077365546
+      },
+      "crossfit_hard": 3,
+      "crossfit_historical_harms": 4
+    },
+    "budget": {
+      "models": [
+        "TabICL",
+        "CatBoost",
+        "v44",
+        "budget"
+      ],
+      "all_wrong": 813,
+      "all_wrong_transported": 416,
+      "all_wrong_known_positive_bill": 395,
+      "all_wrong_solo": 476,
+      "new_reachable": 183,
+      "new_reachable_hard": 4,
+      "hard_all_wrong": 367,
+      "unconstrained_vote_oracle": 6141,
+      "monotone_oracle": 5857,
+      "mean": {
+        "fixed": 93,
+        "harmed": 104,
+        "accuracy": 0.816508484325568
+      },
+      "crossfit": {
+        "fixed": 173,
+        "harmed": 188,
+        "accuracy": 0.815933275812482
+      },
+      "crossfit_hard": 2,
+      "crossfit_historical_harms": 2,
+      "segmented": {
+        "oracle": 5904,
+        "scores": {
+          "stratified_monotone": {
+            "fixed": 228,
+            "harmed": 238,
+            "accuracy": 0.8166522864538395,
+            "hard_correct": 8
+          },
+          "pooled_logistic": {
+            "fixed": 51,
+            "harmed": 44,
+            "accuracy": 0.819096922634455,
+            "hard_correct": 0
+          },
+          "stratified_logistic": {
+            "fixed": 116,
+            "harmed": 126,
+            "accuracy": 0.8166522864538395,
+            "hard_correct": 2
+          }
+        }
+      },
+      "unanimous_breakdown": [
+        {
+          "known_positive_bill": false,
+          "predicted_transported": false,
+          "passengers": 149,
+          "wrong": 51
+        },
+        {
+          "known_positive_bill": false,
+          "predicted_transported": true,
+          "passengers": 2466,
+          "wrong": 367
+        },
+        {
+          "known_positive_bill": true,
+          "predicted_transported": false,
+          "passengers": 2792,
+          "wrong": 365
+        },
+        {
+          "known_positive_bill": true,
+          "predicted_transported": true,
+          "passengers": 257,
+          "wrong": 30
+        }
+      ]
+    }
+  }
+}
