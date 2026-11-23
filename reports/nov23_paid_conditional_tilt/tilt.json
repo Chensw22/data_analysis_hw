@@ -1,0 +1,290 @@
+{
+  "plans": {
+    "20261112": {
+      "eligible": 3121,
+      "misses": 491,
+      "models": {
+        "base": {
+          "accuracy": 0.81765890135174,
+          "fixed": 0,
+          "harmed": 0,
+          "equal_count_base_fixed": 0,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.5061719430729016
+          }
+        },
+        "calibrated": {
+          "accuracy": 0.8175150992234685,
+          "fixed": 10,
+          "harmed": 11,
+          "equal_count_base_fixed": 9,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.5033219575951206
+          }
+        },
+        "conditional": {
+          "accuracy": 0.8098935864250791,
+          "fixed": 103,
+          "harmed": 157,
+          "equal_count_base_fixed": 111,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.5221645367412141
+          }
+        },
+        "shuffled": {
+          "accuracy": 0.8054357204486626,
+          "fixed": 76,
+          "harmed": 161,
+          "equal_count_base_fixed": 104,
+          "matched_pairs": {
+            "pairs": 55088,
+            "concordance": 0.47180874237583503
+          }
+        }
+      }
+    },
+    "20261115": {
+      "eligible": 3105,
+      "misses": 499,
+      "models": {
+        "base": {
+          "accuracy": 0.8133448375035951,
+          "fixed": 0,
+          "harmed": 0,
+          "equal_count_base_fixed": 0,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.5090547039374812
+          }
+        },
+        "calibrated": {
+          "accuracy": 0.8169398907103825,
+          "fixed": 63,
+          "harmed": 38,
+          "equal_count_base_fixed": 62,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.5075330628193567
+          }
+        },
+        "conditional": {
+          "accuracy": 0.8081679608858211,
+          "fixed": 127,
+          "harmed": 163,
+          "equal_count_base_fixed": 144,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.4939134355275023
+          }
+        },
+        "shuffled": {
+          "accuracy": 0.8064423353465632,
+          "fixed": 114,
+          "harmed": 162,
+          "equal_count_base_fixed": 140,
+          "matched_pairs": {
+            "pairs": 53232,
+            "concordance": 0.4563796212804328
+          }
+        }
+      }
+    },
+    "20261116": {
+      "eligible": 3102,
+      "misses": 497,
+      "models": {
+        "base": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 0,
+          "harmed": 0,
+          "equal_count_base_fixed": 0,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5085066509884618
+          }
+        },
+        "calibrated": {
+          "accuracy": 0.8137762438884095,
+          "fixed": 40,
+          "harmed": 40,
+          "equal_count_base_fixed": 45,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5411552877195561
+          }
+        },
+        "conditional": {
+          "accuracy": 0.8051481161921197,
+          "fixed": 127,
+          "harmed": 187,
+          "equal_count_base_fixed": 146,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.5307378555155434
+          }
+        },
+        "shuffled": {
+          "accuracy": 0.8058671268334772,
+          "fixed": 126,
+          "harmed": 181,
+          "equal_count_base_fixed": 145,
+          "matched_pairs": {
+            "pairs": 54428,
+            "concordance": 0.4944330124200779
+          }
+        }
+      }
+    },
+    "v131": {
+      "eligible": 3095,
+      "misses": 496,
+      "models": {
+        "base": {
+          "accuracy": 0.8142076502732241,
+          "fixed": 0,
+          "harmed": 0,
+          "equal_count_base_fixed": 0,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.5001660302174996
+          }
+        },
+        "calibrated": {
+          "accuracy": 0.8147828587863101,
+          "fixed": 12,
+          "harmed": 8,
+          "equal_count_base_fixed": 12,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.4715258176988212
+          }
+        },
+        "conditional": {
+          "accuracy": 0.8080241587575496,
+          "fixed": 106,
+          "harmed": 149,
+          "equal_count_base_fixed": 123,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.5005626579593041
+          }
+        },
+        "shuffled": {
+          "accuracy": 0.8061547310900201,
+          "fixed": 93,
+          "harmed": 149,
+          "equal_count_base_fixed": 119,
+          "matched_pairs": {
+            "pairs": 54207,
+            "concordance": 0.4769494714704743
+          }
+        }
+      }
+    }
+  },
+  "grouped": {
+    "base": {
+      "accuracy": [
+        0.81765890135174,
+        0.8133448375035951,
+        0.8137762438884095
+      ],
+      "fixed": [
+        0,
+        0,
+        0
+      ],
+      "harmed": [
+        0,
+        0,
+        0
+      ],
+      "stable": {
+        "ever": 0,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "never_paid": 0
+      }
+    },
+    "calibrated": {
+      "accuracy": [
+        0.8175150992234685,
+        0.8169398907103825,
+        0.8137762438884095
+      ],
+      "fixed": [
+        10,
+        63,
+        40
+      ],
+      "harmed": [
+        11,
+        38,
+        40
+      ],
+      "stable": {
+        "ever": 40,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "never_paid": 0
+      }
+    },
+    "conditional": {
+      "accuracy": [
+        0.8098935864250791,
+        0.8081679608858211,
+        0.8051481161921197
+      ],
+      "fixed": [
+        103,
+        127,
+        127
+      ],
+      "harmed": [
+        157,
+        163,
+        187
+      ],
+      "stable": {
+        "ever": 97,
+        "repeat": 16,
+        "unresolved": 4,
+        "never": 0,
+        "paid_transported": 16,
+        "never_paid": 0
+      }
+    },
+    "shuffled": {
+      "accuracy": [
+        0.8054357204486626,
+        0.8064423353465632,
+        0.8058671268334772
+      ],
+      "fixed": [
+        76,
+        114,
+        126
+      ],
+      "harmed": [
+        161,
+        162,
+        181
+      ],
+      "stable": {
+        "ever": 73,
+        "repeat": 8,
+        "unresolved": 1,
+        "never": 0,
+        "paid_transported": 8,
+        "never_paid": 0
+      }
+    }
+  }
+}
