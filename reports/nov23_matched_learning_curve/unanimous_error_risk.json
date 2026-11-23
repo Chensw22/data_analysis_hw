@@ -1,0 +1,74 @@
+{
+  "unanimous_groups": [
+    {
+      "predicted_transported": false,
+      "recorded_spending": false,
+      "total": 4,
+      "wrong": 1
+    },
+    {
+      "predicted_transported": false,
+      "recorded_spending": true,
+      "total": 1881,
+      "wrong": 208
+    },
+    {
+      "predicted_transported": true,
+      "recorded_spending": false,
+      "total": 1677,
+      "wrong": 47
+    },
+    {
+      "predicted_transported": true,
+      "recorded_spending": true,
+      "total": 70,
+      "wrong": 1
+    }
+  ],
+  "crossfit_risk": {
+    "19": {
+      "accuracy": 0.8187047049350051,
+      "selected": 23,
+      "fixed": 11,
+      "harmed": 12,
+      "additional_fixed": 1,
+      "additional_harmed": 1,
+      "folds": [
+        -1,
+        0,
+        -1,
+        1,
+        -2,
+        4,
+        0,
+        -2
+      ],
+      "ranked_decile_size": 365,
+      "ranked_decile_errors": 81,
+      "ranked_decile_paid_predicted_stayed_errors": 68,
+      "ranked_decile_paid_predicted_stayed_total": 317
+    },
+    "16": {
+      "accuracy": 0.8192798803635108,
+      "selected": 12,
+      "fixed": 8,
+      "harmed": 4,
+      "additional_fixed": 2,
+      "additional_harmed": 1,
+      "folds": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        2,
+        1,
+        0
+      ],
+      "ranked_decile_size": 365,
+      "ranked_decile_errors": 73,
+      "ranked_decile_paid_predicted_stayed_errors": 58,
+      "ranked_decile_paid_predicted_stayed_total": 312
+    }
+  }
+}
