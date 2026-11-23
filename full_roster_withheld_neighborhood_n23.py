@@ -34,17 +34,9 @@ def matched_removal(books, nearby, rng):
     return control
 
 
-def run():
-    raw, y, groups, fold = data()
-    frame = compact_features(raw)
-    cached = {k: load_scores(raw, y, fold, OUT/f'{k}.npz', ['p'])[:, 0] for k in (*FAMILIES, 'mitra96')}
-    scores = np.column_stack(list(cached.values()))
-    common = ((scores >= .5) != y[:, None]).all(1)
-    with np.load(ROOT/'artifacts/run_002/split_indices.npz') as z:
-        dev = np.sort(z['development'])
-    hard = np.zeros(len(y), bool)
-    hard[dev] = hard_cohorts(dev, y[dev])[2]
+def fit_neighborhoods(frame, y, groups, fold, include_local=False):
     held, random = np.full(len(y), np.nan), np.full(len(y), np.nan)
+    local = np.full(len(y), np.nan) if include_local else None
     coverage = []
     for f in np.unique(fold):
         t, q = np.flatnonzero(fold != f), np.flatnonzero(fold == f)
@@ -61,10 +53,27 @@ def run():
             assert len(a) == len(b) and y[a].sum() == y[b].sum()
             held[rows] = fitting(frame, y[a], a, rows)
             random[rows] = fitting(frame, y[b], b, rows)
+            if include_local:
+                near_rows = t[np.isin(groups[t], nearby)]
+                local[rows] = fitting(frame, y[near_rows], near_rows, rows)
             coverage.append(dict(fold=int(f), cluster=int(k), query=len(rows), orders_removed=len(nearby),
                                  rows_removed=len(t)-len(a), mandatory_overlap=len(np.intersect1d(nearby, other))))
         print('completed outer fold', f, flush=True)
     assert np.isfinite(held).all() and np.isfinite(random).all()
+    return held, random, local, coverage
+
+
+def run():
+    raw, y, groups, fold = data()
+    frame = compact_features(raw)
+    cached = {k: load_scores(raw, y, fold, OUT/f'{k}.npz', ['p'])[:, 0] for k in (*FAMILIES, 'mitra96')}
+    scores = np.column_stack(list(cached.values()))
+    common = ((scores >= .5) != y[:, None]).all(1)
+    with np.load(ROOT/'artifacts/run_002/split_indices.npz') as z:
+        dev = np.sort(z['development'])
+    hard = np.zeros(len(y), bool)
+    hard[dev] = hard_cohorts(dev, y[dev])[2]
+    held, random, _, coverage = fit_neighborhoods(frame, y, groups, fold)
     def compare(candidate, ref):
         fixed, harm = (candidate == y) & (ref != y), (candidate != y) & (ref == y)
         delta = fixed.astype(int)-harm

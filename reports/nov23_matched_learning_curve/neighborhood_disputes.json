@@ -1,0 +1,203 @@
+{
+  "profiles": {
+    "all": {
+      "rescued": 116,
+      "harmed": 420
+    },
+    "vote_false": {
+      "rescued": 77,
+      "harmed": 176
+    },
+    "vote_true": {
+      "rescued": 39,
+      "harmed": 244
+    },
+    "positive_bill": {
+      "rescued": 58,
+      "harmed": 173
+    },
+    "no_positive_bill": {
+      "rescued": 58,
+      "harmed": 247
+    },
+    "solo": {
+      "rescued": 66,
+      "harmed": 212
+    },
+    "multi": {
+      "rescued": 50,
+      "harmed": 208
+    },
+    "historical_hard": {
+      "rescued": 13,
+      "harmed": 0
+    },
+    "local_also_contrary": {
+      "rescued": 11,
+      "harmed": 15
+    },
+    "control_also_contrary": {
+      "rescued": 14,
+      "harmed": 18
+    }
+  },
+  "gates": {
+    "prior": {
+      "accuracy": 0.8164040032209824,
+      "fixed": 67,
+      "harmed": 64,
+      "common_fixed": 2,
+      "common_harmed": 7,
+      "recovered_of_116": 2,
+      "historical_fixed": 0,
+      "historical_harmed": 0,
+      "additional_net": 0,
+      "fold_net": [
+        -8,
+        -2,
+        3,
+        -4,
+        8,
+        5,
+        2,
+        -1
+      ],
+      "ci_pp": [
+        -0.22775024969646118,
+        0.2863376841235235
+      ]
+    },
+    "dispute": {
+      "accuracy": 0.8164040032209824,
+      "fixed": 78,
+      "harmed": 75,
+      "common_fixed": 5,
+      "common_harmed": 8,
+      "recovered_of_116": 5,
+      "historical_fixed": 0,
+      "historical_harmed": 1,
+      "additional_net": -1,
+      "fold_net": [
+        -12,
+        5,
+        6,
+        -3,
+        9,
+        4,
+        2,
+        -8
+      ],
+      "ci_pp": [
+        -0.24289321148453746,
+        0.3204440464483369
+      ]
+    },
+    "context": {
+      "accuracy": 0.8154837225353733,
+      "fixed": 100,
+      "harmed": 105,
+      "common_fixed": 13,
+      "common_harmed": 23,
+      "recovered_of_116": 13,
+      "historical_fixed": 1,
+      "historical_harmed": 1,
+      "additional_net": 0,
+      "fold_net": [
+        -5,
+        0,
+        6,
+        -8,
+        6,
+        3,
+        -5,
+        -2
+      ],
+      "ci_pp": [
+        -0.37209380998835634,
+        0.26435494734693
+      ]
+    },
+    "all_sources": {
+      "accuracy": 0.8166340733923847,
+      "fixed": 161,
+      "harmed": 156,
+      "common_fixed": 11,
+      "common_harmed": 22,
+      "recovered_of_116": 0,
+      "historical_fixed": 1,
+      "historical_harmed": 1,
+      "additional_net": -11,
+      "fold_net": [
+        -6,
+        1,
+        5,
+        3,
+        -6,
+        9,
+        6,
+        -7
+      ],
+      "ci_pp": [
+        -0.35917667860543134,
+        0.4700276442017084
+      ]
+    },
+    "only_near": {
+      "accuracy": 0.8065109858506845,
+      "fixed": 318,
+      "harmed": 401,
+      "common_fixed": 91,
+      "common_harmed": 155,
+      "recovered_of_116": 11,
+      "historical_fixed": 9,
+      "historical_harmed": 1,
+      "additional_net": -34,
+      "fold_net": [
+        -1,
+        -11,
+        -6,
+        -9,
+        -18,
+        -7,
+        -5,
+        -26
+      ],
+      "ci_pp": [
+        -1.547581689962706,
+        -0.3487582956291244
+      ]
+    },
+    "only_near_mean_mitra": {
+      "accuracy": 0.8137581962498562,
+      "fixed": 209,
+      "harmed": 229,
+      "common_fixed": 36,
+      "common_harmed": 64,
+      "recovered_of_116": 3,
+      "historical_fixed": 4,
+      "historical_harmed": 1,
+      "additional_net": -14,
+      "fold_net": [
+        -1,
+        -4,
+        -2,
+        2,
+        -6,
+        0,
+        3,
+        -12
+      ],
+      "ci_pp": [
+        -0.7061543639591835,
+        0.2416717120021197
+      ]
+    }
+  },
+  "oracle_coverage": {
+    "all_base_errors_covered": 573,
+    "common_covered": 196,
+    "common_covered_by_both": 11,
+    "historical_covered": 22,
+    "best_if_rescuing_common_only": 0.8386057747613022
+  }
+}
