@@ -1,0 +1,96 @@
+{
+  "families": [
+    "tabicl",
+    "cat",
+    "v44_without_name",
+    "budget",
+    "mitra96"
+  ],
+  "rows": 8693,
+  "occupied_cells": 260,
+  "no_matching_order": 78,
+  "unanimous": 7050,
+  "common_wrong": 1015,
+  "median_orders_common_wrong": 176.0,
+  "median_orders_common_correct": 149.0,
+  "levels": {
+    "0_to_9": {
+      "passengers": 689,
+      "unanimous": 575,
+      "common_wrong": 79,
+      "error_rate_among_unanimous": 0.1373913043478261,
+      "by_direction": {
+        "not_transported": {
+          "unanimous": 232,
+          "wrong": 31
+        },
+        "transported": {
+          "unanimous": 343,
+          "wrong": 48
+        }
+      },
+      "median_matching_orders": 4.0,
+      "median_matching_passengers": 4.0,
+      "majority_by_training_passenger": {
+        "non_tied": 465,
+        "same": 429,
+        "same_wrong": 51,
+        "opposite": 36,
+        "opposite_wrong": 7
+      },
+      "expected_errors_at_same_direction_and_confidence": 73.08530598452322
+    },
+    "10_to_49": {
+      "passengers": 1059,
+      "unanimous": 864,
+      "common_wrong": 102,
+      "error_rate_among_unanimous": 0.11805555555555555,
+      "by_direction": {
+        "not_transported": {
+          "unanimous": 421,
+          "wrong": 63
+        },
+        "transported": {
+          "unanimous": 443,
+          "wrong": 39
+        }
+      },
+      "median_matching_orders": 26.0,
+      "median_matching_passengers": 29.0,
+      "majority_by_training_passenger": {
+        "non_tied": 858,
+        "same": 803,
+        "same_wrong": 90,
+        "opposite": 55,
+        "opposite_wrong": 10
+      },
+      "expected_errors_at_same_direction_and_confidence": 105.84047601661993
+    },
+    "50_or_more": {
+      "passengers": 6945,
+      "unanimous": 5611,
+      "common_wrong": 834,
+      "error_rate_among_unanimous": 0.14863660666547854,
+      "by_direction": {
+        "not_transported": {
+          "unanimous": 2997,
+          "wrong": 432
+        },
+        "transported": {
+          "unanimous": 2614,
+          "wrong": 402
+        }
+      },
+      "median_matching_orders": 183.0,
+      "median_matching_passengers": 227.0,
+      "majority_by_training_passenger": {
+        "non_tied": 5611,
+        "same": 5240,
+        "same_wrong": 770,
+        "opposite": 371,
+        "opposite_wrong": 64
+      },
+      "expected_errors_at_same_direction_and_confidence": 836.0742179988567
+    }
+  }
+}
