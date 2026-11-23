@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 23 日新增第 4 份候选 `proposal_n23_adaptive_bill_prior`，导出版本 `85ee5affdc4da3628bae78bc76167a5431334cd1`，相对 v131 改判 124 人。它将在 109 人版取得主账号官方成绩后等待额度并提醒提交。手动操作前检查 `com.chensw22.spaceship.adaptivebill124.once`、该候选 artifacts 目录中的 `queue_status.json` 及线上回执。本文件用于测试增量，历史文件给出的公榜准确率上限为 83.423%。
+
 - 11 月 23 日新增等待前两次线上评测结束再提交的 109 人版。候选为 `proposal_n23_half_roster_disagreement`，导出固定在 `9c266a25fca5c9988d7075a6f95644f4a943accd`。手动提交前先检查 `com.chensw22.spaceship.halfroster109.once`、候选 artifacts 目录中的 `queue_status.json` 及对应线上回执。该版只用于检验局部增益，基于 v131 总分和 109 项改判计算的公开分上限为 84.241%。
 
 - 11 月 23 日为 160 人版设置了一个后续提交任务 `com.chensw22.spaceship.servicepair.followup.once`，状态位于 `artifacts/nov23_forward_release_transfer/followup_status.json`。待首份回执确认后，如果 160 人版追平或超过 v131 则测试 216 人版，否则测试 111 人版。先检查两个 launchd 任务、状态和回执，避免重复上传。具体选模回放见 `reports/nov23_forward_release_transfer/RESULTS.md`。
