@@ -1,0 +1,2450 @@
+{
+  "paired_to_true": {
+    "0.05": {
+      "reference": {
+        "net_mean": 6.0,
+        "accuracy_difference_pp": 0.08628127696289906,
+        "interval95_pp": [
+          0.028437366699843595,
+          0.14800014807416126
+        ]
+      },
+      "quarter_random": {
+        "net_mean": 4.0,
+        "accuracy_difference_pp": 0.057520851308599366,
+        "interval95_pp": [
+          0.0,
+          0.11381460318108094
+        ]
+      },
+      "baseline": {
+        "net_mean": 3.9999999999999996,
+        "accuracy_difference_pp": 0.057520851308599366,
+        "interval95_pp": [
+          -0.004854133294500266,
+          0.11940840516126103
+        ]
+      }
+    },
+    "0.1": {
+      "reference": {
+        "net_mean": 7.0,
+        "accuracy_difference_pp": 0.10066148979004888,
+        "interval95_pp": [
+          0.01912891790303374,
+          0.1867594763660655
+        ]
+      },
+      "quarter_random": {
+        "net_mean": 3.9999999999999996,
+        "accuracy_difference_pp": 0.057520851308599366,
+        "interval95_pp": [
+          -0.019171274111472594,
+          0.13388945334350286
+        ]
+      },
+      "baseline": {
+        "net_mean": 2.666666666666666,
+        "accuracy_difference_pp": 0.038347234205732904,
+        "interval95_pp": [
+          -0.042351259999738995,
+          0.1190505982172649
+        ]
+      }
+    },
+    "0.25": {
+      "reference": {
+        "net_mean": 1.6666666666666656,
+        "accuracy_difference_pp": 0.023967021378583055,
+        "interval95_pp": [
+          -0.1252422057520454,
+          0.17541252245139105
+        ]
+      },
+      "quarter_random": {
+        "net_mean": 0.6666666666666671,
+        "accuracy_difference_pp": 0.009586808551433233,
+        "interval95_pp": [
+          -0.07636584524219148,
+          0.09102363334312406
+        ]
+      },
+      "baseline": {
+        "net_mean": -2.0,
+        "accuracy_difference_pp": -0.028760425654299683,
+        "interval95_pp": [
+          -0.12802549357293994,
+          0.06705149600519746
+        ]
+      }
+    },
+    "0.5": {
+      "reference": {
+        "net_mean": -7.666666666666667,
+        "accuracy_difference_pp": -0.11024829834148213,
+        "interval95_pp": [
+          -0.33268225046621974,
+          0.11069560243483144
+        ]
+      },
+      "quarter_random": {
+        "net_mean": -1.3333333333333335,
+        "accuracy_difference_pp": -0.01917361710286646,
+        "interval95_pp": [
+          -0.10167066697555129,
+          0.05822437493682458
+        ]
+      },
+      "baseline": {
+        "net_mean": 4.440892098500626e-16,
+        "accuracy_difference_pp": 6.386097351884708e-18,
+        "interval95_pp": [
+          -0.06182615485674294,
+          0.06183453566219171
+        ]
+      }
+    },
+    "1.0": {
+      "reference": {
+        "net_mean": -47.0,
+        "accuracy_difference_pp": -0.6758700028760426,
+        "interval95_pp": [
+          -1.0835714062977466,
+          -0.2644554353578553
+        ]
+      },
+      "quarter_random": {
+        "net_mean": 0.0,
+        "accuracy_difference_pp": 0.0,
+        "interval95_pp": [
+          0.0,
+          0.0
+        ]
+      },
+      "baseline": {
+        "net_mean": 0.0,
+        "accuracy_difference_pp": 0.0,
+        "interval95_pp": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "zero": 2948,
+  "hard_zero": 159,
+  "methods": [
+    "always_negative",
+    "random",
+    "matched"
+  ],
+  "stable_signatures": {
+    "000": {
+      "count": 7,
+      "transported": 7,
+      "uncommon_ids": [
+        "0507_01",
+        "0614_01",
+        "1133_01",
+        "3104_01",
+        "4005_01",
+        "5048_01",
+        "8923_01"
+      ]
+    },
+    "001": {
+      "count": 0,
+      "transported": 0,
+      "uncommon_ids": []
+    },
+    "010": {
+      "count": 0,
+      "transported": 0,
+      "uncommon_ids": []
+    },
+    "011": {
+      "count": 0,
+      "transported": 0,
+      "uncommon_ids": []
+    },
+    "100": {
+      "count": 3,
+      "transported": 0,
+      "uncommon_ids": [
+        "0020_02",
+        "0020_03",
+        "4620_01"
+      ]
+    },
+    "101": {
+      "count": 2,
+      "transported": 0,
+      "uncommon_ids": [
+        "4656_02",
+        "6662_01"
+      ]
+    },
+    "110": {
+      "count": 1,
+      "transported": 0,
+      "uncommon_ids": [
+        "0020_05"
+      ]
+    },
+    "111": {
+      "count": 146,
+      "transported": 0,
+      "uncommon_ids": null
+    }
+  },
+  "replays": {
+    "20261112": {
+      "eligible": 2948,
+      "direct": {
+        "always_negative": {
+          "fixed": 487,
+          "harmed": 2222,
+          "net": -1735
+        },
+        "random": {
+          "fixed": 486,
+          "harmed": 1999,
+          "net": -1513
+        },
+        "matched": {
+          "fixed": 487,
+          "harmed": 2016,
+          "net": -1529
+        }
+      },
+      "direction": {
+        "to_false": {
+          "eligible": 2709,
+          "reference_errors": 487,
+          "budgets": {
+            "0.05": {
+              "budget": 135,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 72,
+                  "harmed": 63,
+                  "net": 9
+                },
+                "random": {
+                  "fixed": 22,
+                  "harmed": 113,
+                  "net": -91
+                },
+                "matched": {
+                  "fixed": 26,
+                  "harmed": 109,
+                  "net": -83
+                },
+                "increment": {
+                  "fixed": 13,
+                  "harmed": 122,
+                  "net": -109
+                },
+                "quarter_random": {
+                  "fixed": 68,
+                  "harmed": 67,
+                  "net": 1
+                },
+                "quarter_matched": {
+                  "fixed": 65,
+                  "harmed": 70,
+                  "net": -5
+                },
+                "base_plus_increment": {
+                  "fixed": 68,
+                  "harmed": 67,
+                  "net": 1
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 14,
+                "harmed": 24,
+                "net": -10
+              },
+              "quarter_random_only": {
+                "fixed": 17,
+                "harmed": 21,
+                "net": -4
+              }
+            },
+            "0.1": {
+              "budget": 270,
+              "hard_fixed_quarter_matched": 1,
+              "methods": {
+                "baseline": {
+                  "fixed": 135,
+                  "harmed": 135,
+                  "net": 0
+                },
+                "random": {
+                  "fixed": 49,
+                  "harmed": 221,
+                  "net": -172
+                },
+                "matched": {
+                  "fixed": 57,
+                  "harmed": 213,
+                  "net": -156
+                },
+                "increment": {
+                  "fixed": 38,
+                  "harmed": 232,
+                  "net": -194
+                },
+                "quarter_random": {
+                  "fixed": 119,
+                  "harmed": 151,
+                  "net": -32
+                },
+                "quarter_matched": {
+                  "fixed": 131,
+                  "harmed": 139,
+                  "net": -8
+                },
+                "base_plus_increment": {
+                  "fixed": 140,
+                  "harmed": 130,
+                  "net": 10
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 25,
+                "harmed": 27,
+                "net": -2
+              },
+              "quarter_random_only": {
+                "fixed": 13,
+                "harmed": 39,
+                "net": -26
+              }
+            },
+            "0.25": {
+              "budget": 677,
+              "hard_fixed_quarter_matched": 29,
+              "methods": {
+                "baseline": {
+                  "fixed": 310,
+                  "harmed": 367,
+                  "net": -57
+                },
+                "random": {
+                  "fixed": 157,
+                  "harmed": 520,
+                  "net": -363
+                },
+                "matched": {
+                  "fixed": 159,
+                  "harmed": 518,
+                  "net": -359
+                },
+                "increment": {
+                  "fixed": 103,
+                  "harmed": 574,
+                  "net": -471
+                },
+                "quarter_random": {
+                  "fixed": 312,
+                  "harmed": 365,
+                  "net": -53
+                },
+                "quarter_matched": {
+                  "fixed": 301,
+                  "harmed": 376,
+                  "net": -75
+                },
+                "base_plus_increment": {
+                  "fixed": 304,
+                  "harmed": 373,
+                  "net": -69
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 9,
+                "harmed": 28,
+                "net": -19
+              },
+              "quarter_random_only": {
+                "fixed": 20,
+                "harmed": 17,
+                "net": 3
+              }
+            },
+            "0.5": {
+              "budget": 1354,
+              "hard_fixed_quarter_matched": 136,
+              "methods": {
+                "baseline": {
+                  "fixed": 470,
+                  "harmed": 884,
+                  "net": -414
+                },
+                "random": {
+                  "fixed": 322,
+                  "harmed": 1032,
+                  "net": -710
+                },
+                "matched": {
+                  "fixed": 335,
+                  "harmed": 1019,
+                  "net": -684
+                },
+                "increment": {
+                  "fixed": 253,
+                  "harmed": 1101,
+                  "net": -848
+                },
+                "quarter_random": {
+                  "fixed": 471,
+                  "harmed": 883,
+                  "net": -412
+                },
+                "quarter_matched": {
+                  "fixed": 471,
+                  "harmed": 883,
+                  "net": -412
+                },
+                "base_plus_increment": {
+                  "fixed": 470,
+                  "harmed": 884,
+                  "net": -414
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 50,
+                "net": -50
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 50,
+                "net": -50
+              }
+            },
+            "1.0": {
+              "budget": 2709,
+              "hard_fixed_quarter_matched": 152,
+              "methods": {
+                "baseline": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "random": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "matched": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "increment": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "quarter_random": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "quarter_matched": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                },
+                "base_plus_increment": {
+                  "fixed": 487,
+                  "harmed": 2222,
+                  "net": -1735
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.8500181126942263,
+            "random": 0.6355069798560965,
+            "matched": 0.6405383351476831,
+            "increment": 0.5070778125040429,
+            "quarter_random": 0.8479596419600891,
+            "quarter_matched": 0.8494678009895447,
+            "base_plus_increment": 0.8477332332822604
+          }
+        },
+        "to_true": {
+          "eligible": 239,
+          "reference_errors": 97,
+          "budgets": {
+            "0.05": {
+              "budget": 11,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 7,
+                  "harmed": 4,
+                  "net": 3
+                },
+                "random": {
+                  "fixed": 6,
+                  "harmed": 5,
+                  "net": 1
+                },
+                "matched": {
+                  "fixed": 7,
+                  "harmed": 4,
+                  "net": 3
+                },
+                "increment": {
+                  "fixed": 6,
+                  "harmed": 5,
+                  "net": 1
+                },
+                "quarter_random": {
+                  "fixed": 6,
+                  "harmed": 5,
+                  "net": 1
+                },
+                "quarter_matched": {
+                  "fixed": 8,
+                  "harmed": 3,
+                  "net": 5
+                },
+                "base_plus_increment": {
+                  "fixed": 9,
+                  "harmed": 2,
+                  "net": 7
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 4,
+                "harmed": 1,
+                "net": 3
+              },
+              "quarter_random_only": {
+                "fixed": 2,
+                "harmed": 3,
+                "net": -1
+              }
+            },
+            "0.1": {
+              "budget": 23,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 17,
+                  "harmed": 6,
+                  "net": 11
+                },
+                "random": {
+                  "fixed": 11,
+                  "harmed": 12,
+                  "net": -1
+                },
+                "matched": {
+                  "fixed": 13,
+                  "harmed": 10,
+                  "net": 3
+                },
+                "increment": {
+                  "fixed": 13,
+                  "harmed": 10,
+                  "net": 3
+                },
+                "quarter_random": {
+                  "fixed": 15,
+                  "harmed": 8,
+                  "net": 7
+                },
+                "quarter_matched": {
+                  "fixed": 16,
+                  "harmed": 7,
+                  "net": 9
+                },
+                "base_plus_increment": {
+                  "fixed": 17,
+                  "harmed": 6,
+                  "net": 11
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 7,
+                "harmed": 2,
+                "net": 5
+              },
+              "quarter_random_only": {
+                "fixed": 6,
+                "harmed": 3,
+                "net": 3
+              }
+            },
+            "0.25": {
+              "budget": 59,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 36,
+                  "harmed": 23,
+                  "net": 13
+                },
+                "random": {
+                  "fixed": 22,
+                  "harmed": 37,
+                  "net": -15
+                },
+                "matched": {
+                  "fixed": 29,
+                  "harmed": 30,
+                  "net": -1
+                },
+                "increment": {
+                  "fixed": 33,
+                  "harmed": 26,
+                  "net": 7
+                },
+                "quarter_random": {
+                  "fixed": 32,
+                  "harmed": 27,
+                  "net": 5
+                },
+                "quarter_matched": {
+                  "fixed": 32,
+                  "harmed": 27,
+                  "net": 5
+                },
+                "base_plus_increment": {
+                  "fixed": 33,
+                  "harmed": 26,
+                  "net": 7
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 6,
+                "harmed": 6,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 6,
+                "harmed": 6,
+                "net": 0
+              }
+            },
+            "0.5": {
+              "budget": 119,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 59,
+                  "harmed": 60,
+                  "net": -1
+                },
+                "random": {
+                  "fixed": 46,
+                  "harmed": 73,
+                  "net": -27
+                },
+                "matched": {
+                  "fixed": 51,
+                  "harmed": 68,
+                  "net": -17
+                },
+                "increment": {
+                  "fixed": 57,
+                  "harmed": 62,
+                  "net": -5
+                },
+                "quarter_random": {
+                  "fixed": 58,
+                  "harmed": 61,
+                  "net": -3
+                },
+                "quarter_matched": {
+                  "fixed": 61,
+                  "harmed": 58,
+                  "net": 3
+                },
+                "base_plus_increment": {
+                  "fixed": 61,
+                  "harmed": 58,
+                  "net": 3
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 7,
+                "harmed": 6,
+                "net": 1
+              },
+              "quarter_random_only": {
+                "fixed": 4,
+                "harmed": 9,
+                "net": -5
+              }
+            },
+            "1.0": {
+              "budget": 239,
+              "hard_fixed_quarter_matched": 7,
+              "methods": {
+                "baseline": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "random": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "matched": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "increment": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "quarter_random": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "quarter_matched": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                },
+                "base_plus_increment": {
+                  "fixed": 97,
+                  "harmed": 142,
+                  "net": -45
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.6485407289095397,
+            "random": 0.47154058370843616,
+            "matched": 0.5490416727167127,
+            "increment": 0.5977203426746043,
+            "quarter_random": 0.6217511253085524,
+            "quarter_matched": 0.6386670538696094,
+            "base_plus_increment": 0.6537679686365616
+          }
+        }
+      }
+    },
+    "20261115": {
+      "eligible": 2948,
+      "direct": {
+        "always_negative": {
+          "fixed": 494,
+          "harmed": 2231,
+          "net": -1737
+        },
+        "random": {
+          "fixed": 492,
+          "harmed": 2034,
+          "net": -1542
+        },
+        "matched": {
+          "fixed": 491,
+          "harmed": 2047,
+          "net": -1556
+        }
+      },
+      "direction": {
+        "to_false": {
+          "eligible": 2725,
+          "reference_errors": 494,
+          "budgets": {
+            "0.05": {
+              "budget": 136,
+              "hard_fixed_quarter_matched": 1,
+              "methods": {
+                "baseline": {
+                  "fixed": 70,
+                  "harmed": 66,
+                  "net": 4
+                },
+                "random": {
+                  "fixed": 35,
+                  "harmed": 101,
+                  "net": -66
+                },
+                "matched": {
+                  "fixed": 36,
+                  "harmed": 100,
+                  "net": -64
+                },
+                "increment": {
+                  "fixed": 15,
+                  "harmed": 121,
+                  "net": -106
+                },
+                "quarter_random": {
+                  "fixed": 71,
+                  "harmed": 65,
+                  "net": 6
+                },
+                "quarter_matched": {
+                  "fixed": 75,
+                  "harmed": 61,
+                  "net": 14
+                },
+                "base_plus_increment": {
+                  "fixed": 77,
+                  "harmed": 59,
+                  "net": 18
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 23,
+                "harmed": 12,
+                "net": 11
+              },
+              "quarter_random_only": {
+                "fixed": 19,
+                "harmed": 16,
+                "net": 3
+              }
+            },
+            "0.1": {
+              "budget": 272,
+              "hard_fixed_quarter_matched": 3,
+              "methods": {
+                "baseline": {
+                  "fixed": 146,
+                  "harmed": 126,
+                  "net": 20
+                },
+                "random": {
+                  "fixed": 67,
+                  "harmed": 205,
+                  "net": -138
+                },
+                "matched": {
+                  "fixed": 71,
+                  "harmed": 201,
+                  "net": -130
+                },
+                "increment": {
+                  "fixed": 34,
+                  "harmed": 238,
+                  "net": -204
+                },
+                "quarter_random": {
+                  "fixed": 142,
+                  "harmed": 130,
+                  "net": 12
+                },
+                "quarter_matched": {
+                  "fixed": 145,
+                  "harmed": 127,
+                  "net": 18
+                },
+                "base_plus_increment": {
+                  "fixed": 146,
+                  "harmed": 126,
+                  "net": 20
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 26,
+                "harmed": 27,
+                "net": -1
+              },
+              "quarter_random_only": {
+                "fixed": 23,
+                "harmed": 30,
+                "net": -7
+              }
+            },
+            "0.25": {
+              "budget": 681,
+              "hard_fixed_quarter_matched": 32,
+              "methods": {
+                "baseline": {
+                  "fixed": 321,
+                  "harmed": 360,
+                  "net": -39
+                },
+                "random": {
+                  "fixed": 175,
+                  "harmed": 506,
+                  "net": -331
+                },
+                "matched": {
+                  "fixed": 178,
+                  "harmed": 503,
+                  "net": -325
+                },
+                "increment": {
+                  "fixed": 116,
+                  "harmed": 565,
+                  "net": -449
+                },
+                "quarter_random": {
+                  "fixed": 322,
+                  "harmed": 359,
+                  "net": -37
+                },
+                "quarter_matched": {
+                  "fixed": 319,
+                  "harmed": 362,
+                  "net": -43
+                },
+                "base_plus_increment": {
+                  "fixed": 320,
+                  "harmed": 361,
+                  "net": -41
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 16,
+                "harmed": 24,
+                "net": -8
+              },
+              "quarter_random_only": {
+                "fixed": 19,
+                "harmed": 21,
+                "net": -2
+              }
+            },
+            "0.5": {
+              "budget": 1362,
+              "hard_fixed_quarter_matched": 135,
+              "methods": {
+                "baseline": {
+                  "fixed": 477,
+                  "harmed": 885,
+                  "net": -408
+                },
+                "random": {
+                  "fixed": 342,
+                  "harmed": 1020,
+                  "net": -678
+                },
+                "matched": {
+                  "fixed": 337,
+                  "harmed": 1025,
+                  "net": -688
+                },
+                "increment": {
+                  "fixed": 247,
+                  "harmed": 1115,
+                  "net": -868
+                },
+                "quarter_random": {
+                  "fixed": 477,
+                  "harmed": 885,
+                  "net": -408
+                },
+                "quarter_matched": {
+                  "fixed": 477,
+                  "harmed": 885,
+                  "net": -408
+                },
+                "base_plus_increment": {
+                  "fixed": 477,
+                  "harmed": 885,
+                  "net": -408
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 1,
+                "harmed": 44,
+                "net": -43
+              },
+              "quarter_random_only": {
+                "fixed": 1,
+                "harmed": 44,
+                "net": -43
+              }
+            },
+            "1.0": {
+              "budget": 2725,
+              "hard_fixed_quarter_matched": 152,
+              "methods": {
+                "baseline": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "random": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "matched": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "increment": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "quarter_random": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "quarter_matched": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                },
+                "base_plus_increment": {
+                  "fixed": 494,
+                  "harmed": 2231,
+                  "net": -1737
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.8586625340028347,
+            "random": 0.6568776006837768,
+            "matched": 0.6478794389691085,
+            "increment": 0.4946657060884808,
+            "quarter_random": 0.857734317865484,
+            "quarter_matched": 0.8581008861152294,
+            "base_plus_increment": 0.8564640318515145
+          }
+        },
+        "to_true": {
+          "eligible": 223,
+          "reference_errors": 88,
+          "budgets": {
+            "0.05": {
+              "budget": 11,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 5,
+                  "harmed": 6,
+                  "net": -1
+                },
+                "random": {
+                  "fixed": 3,
+                  "harmed": 8,
+                  "net": -5
+                },
+                "matched": {
+                  "fixed": 4,
+                  "harmed": 7,
+                  "net": -3
+                },
+                "increment": {
+                  "fixed": 6,
+                  "harmed": 5,
+                  "net": 1
+                },
+                "quarter_random": {
+                  "fixed": 7,
+                  "harmed": 4,
+                  "net": 3
+                },
+                "quarter_matched": {
+                  "fixed": 9,
+                  "harmed": 2,
+                  "net": 7
+                },
+                "base_plus_increment": {
+                  "fixed": 5,
+                  "harmed": 6,
+                  "net": -1
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 5,
+                "harmed": 2,
+                "net": 3
+              },
+              "quarter_random_only": {
+                "fixed": 3,
+                "harmed": 4,
+                "net": -1
+              }
+            },
+            "0.1": {
+              "budget": 22,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 11,
+                  "harmed": 11,
+                  "net": 0
+                },
+                "random": {
+                  "fixed": 6,
+                  "harmed": 16,
+                  "net": -10
+                },
+                "matched": {
+                  "fixed": 9,
+                  "harmed": 13,
+                  "net": -4
+                },
+                "increment": {
+                  "fixed": 7,
+                  "harmed": 15,
+                  "net": -8
+                },
+                "quarter_random": {
+                  "fixed": 13,
+                  "harmed": 9,
+                  "net": 4
+                },
+                "quarter_matched": {
+                  "fixed": 14,
+                  "harmed": 8,
+                  "net": 6
+                },
+                "base_plus_increment": {
+                  "fixed": 11,
+                  "harmed": 11,
+                  "net": 0
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 5,
+                "harmed": 4,
+                "net": 1
+              },
+              "quarter_random_only": {
+                "fixed": 4,
+                "harmed": 5,
+                "net": -1
+              }
+            },
+            "0.25": {
+              "budget": 55,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 25,
+                  "harmed": 30,
+                  "net": -5
+                },
+                "random": {
+                  "fixed": 21,
+                  "harmed": 34,
+                  "net": -13
+                },
+                "matched": {
+                  "fixed": 23,
+                  "harmed": 32,
+                  "net": -9
+                },
+                "increment": {
+                  "fixed": 27,
+                  "harmed": 28,
+                  "net": -1
+                },
+                "quarter_random": {
+                  "fixed": 28,
+                  "harmed": 27,
+                  "net": 1
+                },
+                "quarter_matched": {
+                  "fixed": 29,
+                  "harmed": 26,
+                  "net": 3
+                },
+                "base_plus_increment": {
+                  "fixed": 26,
+                  "harmed": 29,
+                  "net": -3
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 4,
+                "harmed": 8,
+                "net": -4
+              },
+              "quarter_random_only": {
+                "fixed": 3,
+                "harmed": 9,
+                "net": -6
+              }
+            },
+            "0.5": {
+              "budget": 111,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 50,
+                  "harmed": 61,
+                  "net": -11
+                },
+                "random": {
+                  "fixed": 41,
+                  "harmed": 70,
+                  "net": -29
+                },
+                "matched": {
+                  "fixed": 53,
+                  "harmed": 58,
+                  "net": -5
+                },
+                "increment": {
+                  "fixed": 49,
+                  "harmed": 62,
+                  "net": -13
+                },
+                "quarter_random": {
+                  "fixed": 50,
+                  "harmed": 61,
+                  "net": -11
+                },
+                "quarter_matched": {
+                  "fixed": 48,
+                  "harmed": 63,
+                  "net": -15
+                },
+                "base_plus_increment": {
+                  "fixed": 50,
+                  "harmed": 61,
+                  "net": -11
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 3,
+                "harmed": 6,
+                "net": -3
+              },
+              "quarter_random_only": {
+                "fixed": 5,
+                "harmed": 4,
+                "net": 1
+              }
+            },
+            "1.0": {
+              "budget": 223,
+              "hard_fixed_quarter_matched": 7,
+              "methods": {
+                "baseline": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "random": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "matched": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "increment": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "quarter_random": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "quarter_matched": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                },
+                "base_plus_increment": {
+                  "fixed": 88,
+                  "harmed": 135,
+                  "net": -47
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.5773148148148148,
+            "random": 0.4864478114478114,
+            "matched": 0.5680555555555555,
+            "increment": 0.5772727272727273,
+            "quarter_random": 0.5786195286195287,
+            "quarter_matched": 0.5909090909090909,
+            "base_plus_increment": 0.5839225589225591
+          }
+        }
+      }
+    },
+    "20261116": {
+      "eligible": 2948,
+      "direct": {
+        "always_negative": {
+          "fixed": 481,
+          "harmed": 2220,
+          "net": -1739
+        },
+        "random": {
+          "fixed": 478,
+          "harmed": 2028,
+          "net": -1550
+        },
+        "matched": {
+          "fixed": 479,
+          "harmed": 2035,
+          "net": -1556
+        }
+      },
+      "direction": {
+        "to_false": {
+          "eligible": 2701,
+          "reference_errors": 481,
+          "budgets": {
+            "0.05": {
+              "budget": 135,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 60,
+                  "harmed": 75,
+                  "net": -15
+                },
+                "random": {
+                  "fixed": 25,
+                  "harmed": 110,
+                  "net": -85
+                },
+                "matched": {
+                  "fixed": 26,
+                  "harmed": 109,
+                  "net": -83
+                },
+                "increment": {
+                  "fixed": 10,
+                  "harmed": 125,
+                  "net": -115
+                },
+                "quarter_random": {
+                  "fixed": 67,
+                  "harmed": 68,
+                  "net": -1
+                },
+                "quarter_matched": {
+                  "fixed": 64,
+                  "harmed": 71,
+                  "net": -7
+                },
+                "base_plus_increment": {
+                  "fixed": 66,
+                  "harmed": 69,
+                  "net": -3
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 18,
+                "harmed": 22,
+                "net": -4
+              },
+              "quarter_random_only": {
+                "fixed": 21,
+                "harmed": 19,
+                "net": 2
+              }
+            },
+            "0.1": {
+              "budget": 270,
+              "hard_fixed_quarter_matched": 1,
+              "methods": {
+                "baseline": {
+                  "fixed": 130,
+                  "harmed": 140,
+                  "net": -10
+                },
+                "random": {
+                  "fixed": 60,
+                  "harmed": 210,
+                  "net": -150
+                },
+                "matched": {
+                  "fixed": 59,
+                  "harmed": 211,
+                  "net": -152
+                },
+                "increment": {
+                  "fixed": 41,
+                  "harmed": 229,
+                  "net": -188
+                },
+                "quarter_random": {
+                  "fixed": 122,
+                  "harmed": 148,
+                  "net": -26
+                },
+                "quarter_matched": {
+                  "fixed": 128,
+                  "harmed": 142,
+                  "net": -14
+                },
+                "base_plus_increment": {
+                  "fixed": 126,
+                  "harmed": 144,
+                  "net": -18
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 23,
+                "harmed": 28,
+                "net": -5
+              },
+              "quarter_random_only": {
+                "fixed": 17,
+                "harmed": 34,
+                "net": -17
+              }
+            },
+            "0.25": {
+              "budget": 675,
+              "hard_fixed_quarter_matched": 35,
+              "methods": {
+                "baseline": {
+                  "fixed": 304,
+                  "harmed": 371,
+                  "net": -67
+                },
+                "random": {
+                  "fixed": 172,
+                  "harmed": 503,
+                  "net": -331
+                },
+                "matched": {
+                  "fixed": 179,
+                  "harmed": 496,
+                  "net": -317
+                },
+                "increment": {
+                  "fixed": 114,
+                  "harmed": 561,
+                  "net": -447
+                },
+                "quarter_random": {
+                  "fixed": 292,
+                  "harmed": 383,
+                  "net": -91
+                },
+                "quarter_matched": {
+                  "fixed": 301,
+                  "harmed": 374,
+                  "net": -73
+                },
+                "base_plus_increment": {
+                  "fixed": 304,
+                  "harmed": 371,
+                  "net": -67
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 22,
+                "harmed": 22,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 13,
+                "harmed": 31,
+                "net": -18
+              }
+            },
+            "0.5": {
+              "budget": 1350,
+              "hard_fixed_quarter_matched": 138,
+              "methods": {
+                "baseline": {
+                  "fixed": 466,
+                  "harmed": 884,
+                  "net": -418
+                },
+                "random": {
+                  "fixed": 326,
+                  "harmed": 1024,
+                  "net": -698
+                },
+                "matched": {
+                  "fixed": 323,
+                  "harmed": 1027,
+                  "net": -704
+                },
+                "increment": {
+                  "fixed": 247,
+                  "harmed": 1103,
+                  "net": -856
+                },
+                "quarter_random": {
+                  "fixed": 470,
+                  "harmed": 880,
+                  "net": -410
+                },
+                "quarter_matched": {
+                  "fixed": 467,
+                  "harmed": 883,
+                  "net": -416
+                },
+                "base_plus_increment": {
+                  "fixed": 466,
+                  "harmed": 884,
+                  "net": -418
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 45,
+                "net": -45
+              },
+              "quarter_random_only": {
+                "fixed": 3,
+                "harmed": 42,
+                "net": -39
+              }
+            },
+            "1.0": {
+              "budget": 2701,
+              "hard_fixed_quarter_matched": 152,
+              "methods": {
+                "baseline": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "random": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "matched": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "increment": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "quarter_random": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "quarter_matched": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                },
+                "base_plus_increment": {
+                  "fixed": 481,
+                  "harmed": 2220,
+                  "net": -1739
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.8490719409638329,
+            "random": 0.6490934801745614,
+            "matched": 0.6452946189432676,
+            "increment": 0.5040868311138581,
+            "quarter_random": 0.8490710044764099,
+            "quarter_matched": 0.8486242999756514,
+            "base_plus_increment": 0.8465153302991142
+          }
+        },
+        "to_true": {
+          "eligible": 247,
+          "reference_errors": 99,
+          "budgets": {
+            "0.05": {
+              "budget": 12,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 8,
+                  "harmed": 4,
+                  "net": 4
+                },
+                "random": {
+                  "fixed": 4,
+                  "harmed": 8,
+                  "net": -4
+                },
+                "matched": {
+                  "fixed": 6,
+                  "harmed": 6,
+                  "net": 0
+                },
+                "increment": {
+                  "fixed": 5,
+                  "harmed": 7,
+                  "net": -2
+                },
+                "quarter_random": {
+                  "fixed": 7,
+                  "harmed": 5,
+                  "net": 2
+                },
+                "quarter_matched": {
+                  "fixed": 9,
+                  "harmed": 3,
+                  "net": 6
+                },
+                "base_plus_increment": {
+                  "fixed": 8,
+                  "harmed": 4,
+                  "net": 4
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 4,
+                "harmed": 2,
+                "net": 2
+              },
+              "quarter_random_only": {
+                "fixed": 2,
+                "harmed": 4,
+                "net": -2
+              }
+            },
+            "0.1": {
+              "budget": 24,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 13,
+                  "harmed": 11,
+                  "net": 2
+                },
+                "random": {
+                  "fixed": 8,
+                  "harmed": 16,
+                  "net": -8
+                },
+                "matched": {
+                  "fixed": 11,
+                  "harmed": 13,
+                  "net": -2
+                },
+                "increment": {
+                  "fixed": 11,
+                  "harmed": 13,
+                  "net": -2
+                },
+                "quarter_random": {
+                  "fixed": 11,
+                  "harmed": 13,
+                  "net": -2
+                },
+                "quarter_matched": {
+                  "fixed": 15,
+                  "harmed": 9,
+                  "net": 6
+                },
+                "base_plus_increment": {
+                  "fixed": 13,
+                  "harmed": 11,
+                  "net": 2
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 8,
+                "harmed": 5,
+                "net": 3
+              },
+              "quarter_random_only": {
+                "fixed": 4,
+                "harmed": 9,
+                "net": -5
+              }
+            },
+            "0.25": {
+              "budget": 61,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 32,
+                  "harmed": 29,
+                  "net": 3
+                },
+                "random": {
+                  "fixed": 25,
+                  "harmed": 36,
+                  "net": -11
+                },
+                "matched": {
+                  "fixed": 30,
+                  "harmed": 31,
+                  "net": -1
+                },
+                "increment": {
+                  "fixed": 26,
+                  "harmed": 35,
+                  "net": -9
+                },
+                "quarter_random": {
+                  "fixed": 29,
+                  "harmed": 32,
+                  "net": -3
+                },
+                "quarter_matched": {
+                  "fixed": 29,
+                  "harmed": 32,
+                  "net": -3
+                },
+                "base_plus_increment": {
+                  "fixed": 31,
+                  "harmed": 30,
+                  "net": 1
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 4,
+                "harmed": 10,
+                "net": -6
+              },
+              "quarter_random_only": {
+                "fixed": 4,
+                "harmed": 10,
+                "net": -6
+              }
+            },
+            "0.5": {
+              "budget": 123,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 56,
+                  "harmed": 67,
+                  "net": -11
+                },
+                "random": {
+                  "fixed": 44,
+                  "harmed": 79,
+                  "net": -35
+                },
+                "matched": {
+                  "fixed": 51,
+                  "harmed": 72,
+                  "net": -21
+                },
+                "increment": {
+                  "fixed": 53,
+                  "harmed": 70,
+                  "net": -17
+                },
+                "quarter_random": {
+                  "fixed": 59,
+                  "harmed": 64,
+                  "net": -5
+                },
+                "quarter_matched": {
+                  "fixed": 56,
+                  "harmed": 67,
+                  "net": -11
+                },
+                "base_plus_increment": {
+                  "fixed": 55,
+                  "harmed": 68,
+                  "net": -13
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 2,
+                "harmed": 10,
+                "net": -8
+              },
+              "quarter_random_only": {
+                "fixed": 5,
+                "harmed": 7,
+                "net": -2
+              }
+            },
+            "1.0": {
+              "budget": 247,
+              "hard_fixed_quarter_matched": 7,
+              "methods": {
+                "baseline": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "random": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "matched": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "increment": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "quarter_random": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "quarter_matched": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                },
+                "base_plus_increment": {
+                  "fixed": 99,
+                  "harmed": 148,
+                  "net": -49
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.6054463554463554,
+            "random": 0.47577122577122577,
+            "matched": 0.51999726999727,
+            "increment": 0.5517335517335518,
+            "quarter_random": 0.5943215943215944,
+            "quarter_matched": 0.5892028392028392,
+            "base_plus_increment": 0.5995768495768496
+          }
+        }
+      }
+    },
+    "v131": {
+      "eligible": 2898,
+      "direct": {
+        "always_negative": {
+          "fixed": 429,
+          "harmed": 2178,
+          "net": -1749
+        },
+        "random": {
+          "fixed": 428,
+          "harmed": 1968,
+          "net": -1540
+        },
+        "matched": {
+          "fixed": 430,
+          "harmed": 1969,
+          "net": -1539
+        }
+      },
+      "direction": {
+        "to_false": {
+          "eligible": 2607,
+          "reference_errors": 429,
+          "budgets": {
+            "0.05": {
+              "budget": 130,
+              "hard_fixed_quarter_matched": 3,
+              "methods": {
+                "baseline": {
+                  "fixed": 55,
+                  "harmed": 75,
+                  "net": -20
+                },
+                "random": {
+                  "fixed": 32,
+                  "harmed": 98,
+                  "net": -66
+                },
+                "matched": {
+                  "fixed": 28,
+                  "harmed": 102,
+                  "net": -74
+                },
+                "increment": {
+                  "fixed": 14,
+                  "harmed": 116,
+                  "net": -102
+                },
+                "quarter_random": {
+                  "fixed": 51,
+                  "harmed": 79,
+                  "net": -28
+                },
+                "quarter_matched": {
+                  "fixed": 55,
+                  "harmed": 75,
+                  "net": -20
+                },
+                "base_plus_increment": {
+                  "fixed": 58,
+                  "harmed": 72,
+                  "net": -14
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 16,
+                "harmed": 20,
+                "net": -4
+              },
+              "quarter_random_only": {
+                "fixed": 12,
+                "harmed": 24,
+                "net": -12
+              }
+            },
+            "0.1": {
+              "budget": 260,
+              "hard_fixed_quarter_matched": 7,
+              "methods": {
+                "baseline": {
+                  "fixed": 108,
+                  "harmed": 152,
+                  "net": -44
+                },
+                "random": {
+                  "fixed": 50,
+                  "harmed": 210,
+                  "net": -160
+                },
+                "matched": {
+                  "fixed": 53,
+                  "harmed": 207,
+                  "net": -154
+                },
+                "increment": {
+                  "fixed": 32,
+                  "harmed": 228,
+                  "net": -196
+                },
+                "quarter_random": {
+                  "fixed": 106,
+                  "harmed": 154,
+                  "net": -48
+                },
+                "quarter_matched": {
+                  "fixed": 105,
+                  "harmed": 155,
+                  "net": -50
+                },
+                "base_plus_increment": {
+                  "fixed": 111,
+                  "harmed": 149,
+                  "net": -38
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 16,
+                "harmed": 19,
+                "net": -3
+              },
+              "quarter_random_only": {
+                "fixed": 17,
+                "harmed": 18,
+                "net": -1
+              }
+            },
+            "0.25": {
+              "budget": 651,
+              "hard_fixed_quarter_matched": 49,
+              "methods": {
+                "baseline": {
+                  "fixed": 280,
+                  "harmed": 371,
+                  "net": -91
+                },
+                "random": {
+                  "fixed": 150,
+                  "harmed": 501,
+                  "net": -351
+                },
+                "matched": {
+                  "fixed": 159,
+                  "harmed": 492,
+                  "net": -333
+                },
+                "increment": {
+                  "fixed": 108,
+                  "harmed": 543,
+                  "net": -435
+                },
+                "quarter_random": {
+                  "fixed": 273,
+                  "harmed": 378,
+                  "net": -105
+                },
+                "quarter_matched": {
+                  "fixed": 277,
+                  "harmed": 374,
+                  "net": -97
+                },
+                "base_plus_increment": {
+                  "fixed": 281,
+                  "harmed": 370,
+                  "net": -89
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 16,
+                "harmed": 15,
+                "net": 1
+              },
+              "quarter_random_only": {
+                "fixed": 12,
+                "harmed": 19,
+                "net": -7
+              }
+            },
+            "0.5": {
+              "budget": 1303,
+              "hard_fixed_quarter_matched": 134,
+              "methods": {
+                "baseline": {
+                  "fixed": 416,
+                  "harmed": 887,
+                  "net": -471
+                },
+                "random": {
+                  "fixed": 291,
+                  "harmed": 1012,
+                  "net": -721
+                },
+                "matched": {
+                  "fixed": 296,
+                  "harmed": 1007,
+                  "net": -711
+                },
+                "increment": {
+                  "fixed": 220,
+                  "harmed": 1083,
+                  "net": -863
+                },
+                "quarter_random": {
+                  "fixed": 412,
+                  "harmed": 891,
+                  "net": -479
+                },
+                "quarter_matched": {
+                  "fixed": 411,
+                  "harmed": 892,
+                  "net": -481
+                },
+                "base_plus_increment": {
+                  "fixed": 413,
+                  "harmed": 890,
+                  "net": -477
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 1,
+                "harmed": 89,
+                "net": -88
+              },
+              "quarter_random_only": {
+                "fixed": 2,
+                "harmed": 88,
+                "net": -86
+              }
+            },
+            "1.0": {
+              "budget": 2607,
+              "hard_fixed_quarter_matched": 152,
+              "methods": {
+                "baseline": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "random": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "matched": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "increment": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "quarter_random": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "quarter_matched": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                },
+                "base_plus_increment": {
+                  "fixed": 429,
+                  "harmed": 2178,
+                  "net": -1749
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.8517341244613972,
+            "random": 0.6388145065831016,
+            "matched": 0.652811223059157,
+            "increment": 0.5185078160284773,
+            "quarter_random": 0.8458702301677508,
+            "quarter_matched": 0.8486148837388507,
+            "base_plus_increment": 0.8505557803078465
+          }
+        },
+        "to_true": {
+          "eligible": 291,
+          "reference_errors": 121,
+          "budgets": {
+            "0.05": {
+              "budget": 14,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 6,
+                  "harmed": 8,
+                  "net": -2
+                },
+                "random": {
+                  "fixed": 5,
+                  "harmed": 9,
+                  "net": -4
+                },
+                "matched": {
+                  "fixed": 6,
+                  "harmed": 8,
+                  "net": -2
+                },
+                "increment": {
+                  "fixed": 5,
+                  "harmed": 9,
+                  "net": -4
+                },
+                "quarter_random": {
+                  "fixed": 7,
+                  "harmed": 7,
+                  "net": 0
+                },
+                "quarter_matched": {
+                  "fixed": 8,
+                  "harmed": 6,
+                  "net": 2
+                },
+                "base_plus_increment": {
+                  "fixed": 6,
+                  "harmed": 8,
+                  "net": -2
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 4,
+                "harmed": 2,
+                "net": 2
+              },
+              "quarter_random_only": {
+                "fixed": 3,
+                "harmed": 3,
+                "net": 0
+              }
+            },
+            "0.1": {
+              "budget": 29,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 16,
+                  "harmed": 13,
+                  "net": 3
+                },
+                "random": {
+                  "fixed": 12,
+                  "harmed": 17,
+                  "net": -5
+                },
+                "matched": {
+                  "fixed": 14,
+                  "harmed": 15,
+                  "net": -1
+                },
+                "increment": {
+                  "fixed": 14,
+                  "harmed": 15,
+                  "net": -1
+                },
+                "quarter_random": {
+                  "fixed": 17,
+                  "harmed": 12,
+                  "net": 5
+                },
+                "quarter_matched": {
+                  "fixed": 19,
+                  "harmed": 10,
+                  "net": 9
+                },
+                "base_plus_increment": {
+                  "fixed": 14,
+                  "harmed": 15,
+                  "net": -1
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 7,
+                "harmed": 4,
+                "net": 3
+              },
+              "quarter_random_only": {
+                "fixed": 5,
+                "harmed": 6,
+                "net": -1
+              }
+            },
+            "0.25": {
+              "budget": 72,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 37,
+                  "harmed": 35,
+                  "net": 2
+                },
+                "random": {
+                  "fixed": 30,
+                  "harmed": 42,
+                  "net": -12
+                },
+                "matched": {
+                  "fixed": 37,
+                  "harmed": 35,
+                  "net": 2
+                },
+                "increment": {
+                  "fixed": 37,
+                  "harmed": 35,
+                  "net": 2
+                },
+                "quarter_random": {
+                  "fixed": 37,
+                  "harmed": 35,
+                  "net": 2
+                },
+                "quarter_matched": {
+                  "fixed": 35,
+                  "harmed": 37,
+                  "net": -2
+                },
+                "base_plus_increment": {
+                  "fixed": 38,
+                  "harmed": 34,
+                  "net": 4
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 8,
+                "harmed": 9,
+                "net": -1
+              },
+              "quarter_random_only": {
+                "fixed": 10,
+                "harmed": 7,
+                "net": 3
+              }
+            },
+            "0.5": {
+              "budget": 145,
+              "hard_fixed_quarter_matched": 0,
+              "methods": {
+                "baseline": {
+                  "fixed": 75,
+                  "harmed": 70,
+                  "net": 5
+                },
+                "random": {
+                  "fixed": 60,
+                  "harmed": 85,
+                  "net": -25
+                },
+                "matched": {
+                  "fixed": 72,
+                  "harmed": 73,
+                  "net": -1
+                },
+                "increment": {
+                  "fixed": 71,
+                  "harmed": 74,
+                  "net": -3
+                },
+                "quarter_random": {
+                  "fixed": 72,
+                  "harmed": 73,
+                  "net": -1
+                },
+                "quarter_matched": {
+                  "fixed": 75,
+                  "harmed": 70,
+                  "net": 5
+                },
+                "base_plus_increment": {
+                  "fixed": 77,
+                  "harmed": 68,
+                  "net": 9
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 8,
+                "harmed": 4,
+                "net": 4
+              },
+              "quarter_random_only": {
+                "fixed": 5,
+                "harmed": 7,
+                "net": -2
+              }
+            },
+            "1.0": {
+              "budget": 291,
+              "hard_fixed_quarter_matched": 7,
+              "methods": {
+                "baseline": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "random": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "matched": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "increment": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "quarter_random": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "quarter_matched": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                },
+                "base_plus_increment": {
+                  "fixed": 121,
+                  "harmed": 170,
+                  "net": -49
+                }
+              },
+              "quarter_matched_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              },
+              "quarter_random_only": {
+                "fixed": 0,
+                "harmed": 0,
+                "net": 0
+              }
+            }
+          },
+          "auc": {
+            "baseline": 0.6224842002916869,
+            "random": 0.5175012153621779,
+            "matched": 0.5914681575109382,
+            "increment": 0.5749635391346621,
+            "quarter_random": 0.6145357316480311,
+            "quarter_matched": 0.6282450170150704,
+            "base_plus_increment": 0.6268351968886727
+          }
+        }
+      }
+    }
+  }
+}
