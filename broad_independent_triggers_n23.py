@@ -37,11 +37,16 @@ def linked(z, link):
         return expit(z.sum(1)), np.ones_like(z)
     # Each view can independently trigger one event with probability sigmoid(z + shift).
     # Set the initial total trigger probability to 1/2 for any number of views.
-    shifted = z + np.log(np.expm1(np.log(2) / z.shape[1]))
+    # A uniform weight penalty on a weak derivative implicitly shrinks the
+    # asymmetric link more. The matched versions start at unit log-odds slope.
+    scale = 1.
+    if link.endswith("_matched"):
+        scale = .5 / (-np.expm1(-np.log(2)/z.shape[1]))
+    shifted = scale*z + np.log(np.expm1(np.log(2) / z.shape[1]))
     hazard = np.logaddexp(0, shifted).sum(1)
     event = -np.expm1(-hazard)
-    odds_derivative = expit(shifted) / event[:, None]
-    if link == "transport_trigger":
+    odds_derivative = scale*expit(shifted) / event[:, None]
+    if link.startswith("transport_trigger"):
         return event, odds_derivative
     return np.exp(-hazard), -odds_derivative
 
@@ -58,7 +63,7 @@ def fit(basis_train, basis_query, y, link):
         gradient = np.concatenate([x.T @ r for x, r in zip(basis_train, residual.T)])
         return loss + 5*w@w, gradient + 10*w
     opt = minimize(objective, np.zeros(sum(widths)), method="L-BFGS-B", jac=True,
-                   options=dict(maxiter=240, ftol=1e-8))
+                   options=dict(maxiter=1200, ftol=1e-8))
     if not opt.success:
         raise RuntimeError(opt.message)
     return linked(score(basis_query, opt.x), link)[0]
@@ -71,10 +76,13 @@ def main():
         np.testing.assert_array_equal(y, z["y"])
         wrong = (z["votes"] != y[None, :, None]).all((0, 2))
         right = (z["votes"] == y[None, :, None]).all((0, 2))
-    links = ["logit", "transport_trigger", "remain_trigger"]
+    links = ["logit", "transport_trigger", "remain_trigger",
+             "transport_trigger_matched", "remain_trigger_matched"]
     rng = np.random.default_rng(144)
     z = rng.normal(size=(13, 4))
     for link in links:
+        if link.endswith("_matched"):
+            np.testing.assert_allclose(abs(linked(np.zeros_like(z), link)[1]), 1., atol=1e-12)
         p, derivative = linked(z, link)
         for j in range(4):
             step = np.zeros_like(z)
@@ -95,6 +103,7 @@ def main():
             fit_blocks, query_blocks = [x[t] for x in blocks], [x[q] for x in blocks]
             for key in links:
                 preds[key][q] = fit(fit_blocks, query_blocks, y[t], key)
+        preds["dual_matched"] = (preds["transport_trigger_matched"] + preds["remain_trigger_matched"])/2
         preds["dual_mean"] = (preds["transport_trigger"] + preds["remain_trigger"])/2
         all_votes = {"reference": ref}
         locked = ref != (opinions[:, 0] >= .5)
@@ -117,7 +126,13 @@ def main():
         stable[key] = dict(common_wrong_stable_correct=int((hit.all(0) & wrong).sum()),
                            common_right_stable_wrong=int(((~hit).all(0) & right).sum()),
                            mean_gain95_pp=interval((hit.astype(float)-ref_hit).mean(0), groups))
-    write(REPORT/"results.json", dict(plans=plans, stable=stable, common_wrong=int(wrong.sum()),
+    control = np.stack(bank["logit"])
+    extra = {}
+    for k in ("transport_trigger", "remain_trigger", "transport_trigger_matched", "remain_trigger_matched"):
+        trigger = np.stack(bank[k])
+        extra[k] = dict(new_stable_rescues=int((wrong & (~control).all(0) & trigger.all(0)).sum()),
+                        new_stable_harms=int((right & control.all(0) & (~trigger).all(0)).sum()))
+    write(REPORT/"results.json", dict(plans=plans, stable=stable, fully_reversed_vs_logit=extra, common_wrong=int(wrong.sum()),
                                       common_right=int(right.sum())))
     print(stable, flush=True)
 
