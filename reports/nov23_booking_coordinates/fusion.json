@@ -1,0 +1,222 @@
+{
+  "plans": {
+    "20261112": {
+      "ordinary": {
+        "accuracy": 0.815933275812482,
+        "fixed": 72,
+        "harmed": 84
+      },
+      "real": {
+        "accuracy": 0.8155018694276676,
+        "fixed": 114,
+        "harmed": 129
+      },
+      "sham": {
+        "accuracy": 0.8192407247627265,
+        "fixed": 107,
+        "harmed": 96
+      }
+    },
+    "20261115": {
+      "ordinary": {
+        "accuracy": 0.8126258268622376,
+        "fixed": 83,
+        "harmed": 88
+      },
+      "real": {
+        "accuracy": 0.8166522864538395,
+        "fixed": 181,
+        "harmed": 158
+      },
+      "sham": {
+        "accuracy": 0.8117630140926085,
+        "fixed": 115,
+        "harmed": 126
+      }
+    },
+    "20261116": {
+      "ordinary": {
+        "accuracy": 0.8121944204774231,
+        "fixed": 97,
+        "harmed": 108
+      },
+      "real": {
+        "accuracy": 0.8120506183491516,
+        "fixed": 153,
+        "harmed": 165
+      },
+      "sham": {
+        "accuracy": 0.810468794938165,
+        "fixed": 136,
+        "harmed": 159
+      }
+    },
+    "v131": {
+      "ordinary": {
+        "accuracy": 0.8133448375035951,
+        "fixed": 127,
+        "harmed": 133
+      },
+      "real": {
+        "accuracy": 0.813632441760138,
+        "fixed": 152,
+        "harmed": 156
+      },
+      "sham": {
+        "accuracy": 0.8103249928098936,
+        "fixed": 131,
+        "harmed": 158
+      }
+    }
+  },
+  "grouped": {
+    "ordinary": {
+      "accuracy": [
+        0.815933275812482,
+        0.8126258268622376,
+        0.8121944204774231
+      ],
+      "fixed": [
+        72,
+        83,
+        97
+      ],
+      "harmed": [
+        84,
+        88,
+        108
+      ],
+      "stable": {
+        "ever": 74,
+        "repeat": 1,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 1,
+        "zero_stayed": 0,
+        "solo_repeat": 0,
+        "never_paid_transported": 0
+      }
+    },
+    "real": {
+      "accuracy": [
+        0.8155018694276676,
+        0.8166522864538395,
+        0.8120506183491516
+      ],
+      "fixed": [
+        114,
+        181,
+        153
+      ],
+      "harmed": [
+        129,
+        158,
+        165
+      ],
+      "stable": {
+        "ever": 97,
+        "repeat": 10,
+        "unresolved": 1,
+        "never": 0,
+        "paid_transported": 0,
+        "zero_stayed": 8,
+        "solo_repeat": 7,
+        "never_paid_transported": 0
+      }
+    },
+    "sham": {
+      "accuracy": [
+        0.8192407247627265,
+        0.8117630140926085,
+        0.810468794938165
+      ],
+      "fixed": [
+        107,
+        115,
+        136
+      ],
+      "harmed": [
+        96,
+        126,
+        159
+      ],
+      "stable": {
+        "ever": 86,
+        "repeat": 5,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 0,
+        "zero_stayed": 2,
+        "solo_repeat": 3,
+        "never_paid_transported": 0
+      }
+    }
+  },
+  "coverage": {
+    "ever": {
+      "total": 1518,
+      "real_only": 53,
+      "ordinary_only": 30,
+      "both": 44
+    },
+    "repeat": {
+      "total": 1070,
+      "real_only": 10,
+      "ordinary_only": 1,
+      "both": 0
+    },
+    "unresolved": {
+      "total": 509,
+      "real_only": 1,
+      "ordinary_only": 0,
+      "both": 0
+    },
+    "never": {
+      "total": 172,
+      "real_only": 0,
+      "ordinary_only": 0,
+      "both": 0
+    },
+    "paid_transported": {
+      "total": 428,
+      "real_only": 0,
+      "ordinary_only": 1,
+      "both": 0
+    },
+    "zero_stayed": {
+      "total": 394,
+      "real_only": 8,
+      "ordinary_only": 0,
+      "both": 0
+    },
+    "solo_repeat": {
+      "total": 630,
+      "real_only": 7,
+      "ordinary_only": 0,
+      "both": 0
+    },
+    "never_paid_transported": {
+      "total": 113,
+      "real_only": 0,
+      "ordinary_only": 0,
+      "both": 0
+    }
+  },
+  "paired_gain_pp": {
+    "ordinary": [
+      -0.14077954431192302,
+      0.11947433512455427,
+      0.38331878536500946
+    ],
+    "sham": [
+      -0.15312639553268614,
+      0.09455602202567229,
+      0.3618178668988202
+    ],
+    "incumbent": [
+      -0.33066341090991186,
+      -0.004811740672245357,
+      0.3107391638630259
+    ]
+  }
+}
