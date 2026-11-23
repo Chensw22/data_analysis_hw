@@ -1,0 +1,605 @@
+{
+  "splits": [
+    {
+      "fold": 0,
+      "training_rows": 7706,
+      "rows_and_errors": {
+        "False": [
+          3262,
+          504
+        ],
+        "small_False": [
+          268,
+          277,
+          288
+        ],
+        "True": [
+          2743,
+          445
+        ],
+        "small_True": [
+          234,
+          224,
+          195
+        ]
+      },
+      "eligible": 655,
+      "both_surrogate_models_agree_with_target": 638
+    },
+    {
+      "fold": 1,
+      "training_rows": 7715,
+      "rows_and_errors": {
+        "False": [
+          3261,
+          504
+        ],
+        "small_False": [
+          290,
+          268,
+          276
+        ],
+        "True": [
+          2797,
+          449
+        ],
+        "small_True": [
+          252,
+          246,
+          232
+        ]
+      },
+      "eligible": 661,
+      "both_surrogate_models_agree_with_target": 647
+    },
+    {
+      "fold": 2,
+      "training_rows": 7751,
+      "rows_and_errors": {
+        "False": [
+          3280,
+          497
+        ],
+        "small_False": [
+          253,
+          265,
+          288
+        ],
+        "True": [
+          2828,
+          469
+        ],
+        "small_True": [
+          242,
+          222,
+          228
+        ]
+      },
+      "eligible": 650,
+      "both_surrogate_models_agree_with_target": 638
+    },
+    {
+      "fold": 3,
+      "training_rows": 7745,
+      "rows_and_errors": {
+        "False": [
+          3239,
+          486
+        ],
+        "small_False": [
+          276,
+          259,
+          264
+        ],
+        "True": [
+          2757,
+          450
+        ],
+        "small_True": [
+          253,
+          215,
+          249
+        ]
+      },
+      "eligible": 659,
+      "both_surrogate_models_agree_with_target": 649
+    },
+    {
+      "fold": 4,
+      "training_rows": 7775,
+      "rows_and_errors": {
+        "False": [
+          3230,
+          479
+        ],
+        "small_False": [
+          256,
+          266,
+          266
+        ],
+        "True": [
+          2870,
+          478
+        ],
+        "small_True": [
+          254,
+          240,
+          232
+        ]
+      },
+      "eligible": 633,
+      "both_surrogate_models_agree_with_target": 622
+    },
+    {
+      "fold": 5,
+      "training_rows": 7744,
+      "rows_and_errors": {
+        "False": [
+          3253,
+          492
+        ],
+        "small_False": [
+          274,
+          260,
+          277
+        ],
+        "True": [
+          2776,
+          440
+        ],
+        "small_True": [
+          220,
+          225,
+          215
+        ]
+      },
+      "eligible": 665,
+      "both_surrogate_models_agree_with_target": 656
+    },
+    {
+      "fold": 6,
+      "training_rows": 7726,
+      "rows_and_errors": {
+        "False": [
+          3277,
+          522
+        ],
+        "small_False": [
+          271,
+          253,
+          289
+        ],
+        "True": [
+          2815,
+          469
+        ],
+        "small_True": [
+          285,
+          218,
+          236
+        ]
+      },
+      "eligible": 671,
+      "both_surrogate_models_agree_with_target": 661
+    },
+    {
+      "fold": 7,
+      "training_rows": 7733,
+      "rows_and_errors": {
+        "False": [
+          3254,
+          490
+        ],
+        "small_False": [
+          261,
+          251,
+          262
+        ],
+        "True": [
+          2820,
+          471
+        ],
+        "small_True": [
+          252,
+          214,
+          237
+        ]
+      },
+      "eligible": 664,
+      "both_surrogate_models_agree_with_target": 648
+    }
+  ],
+  "methods": {
+    "prior": {
+      "vs_consensus": {
+        "fixed": 0,
+        "harmed": 2,
+        "accuracy": 0.8183779119930975
+      },
+      "vs_reference": {
+        "fixed": 3,
+        "harmed": 1,
+        "accuracy": 0.8183779119930975
+      },
+      "hard_fixed": 0,
+      "previously_correct_harmed": 0,
+      "net_by_fold": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -2
+      ],
+      "by_paid": {
+        "False": [
+          0,
+          2
+        ],
+        "True": [
+          0,
+          0
+        ]
+      }
+    },
+    "matched_personal": {
+      "vs_consensus": {
+        "fixed": 51,
+        "harmed": 70,
+        "accuracy": 0.815933275812482
+      },
+      "vs_reference": {
+        "fixed": 53,
+        "harmed": 68,
+        "accuracy": 0.815933275812482
+      },
+      "hard_fixed": 1,
+      "previously_correct_harmed": 3,
+      "net_by_fold": [
+        0,
+        0,
+        -2,
+        -8,
+        0,
+        -7,
+        1,
+        -3
+      ],
+      "by_paid": {
+        "False": [
+          49,
+          64
+        ],
+        "True": [
+          2,
+          6
+        ]
+      }
+    },
+    "matched_peers": {
+      "vs_consensus": {
+        "fixed": 66,
+        "harmed": 84,
+        "accuracy": 0.8160770779407536
+      },
+      "vs_reference": {
+        "fixed": 69,
+        "harmed": 83,
+        "accuracy": 0.8160770779407536
+      },
+      "hard_fixed": 3,
+      "previously_correct_harmed": 11,
+      "net_by_fold": [
+        -1,
+        -5,
+        -5,
+        -2,
+        2,
+        -8,
+        0,
+        1
+      ],
+      "by_paid": {
+        "False": [
+          60,
+          77
+        ],
+        "True": [
+          6,
+          7
+        ]
+      }
+    },
+    "tree_peers": {
+      "vs_consensus": {
+        "fixed": 21,
+        "harmed": 36,
+        "accuracy": 0.816508484325568
+      },
+      "vs_reference": {
+        "fixed": 25,
+        "harmed": 36,
+        "accuracy": 0.816508484325568
+      },
+      "hard_fixed": 1,
+      "previously_correct_harmed": 0,
+      "net_by_fold": [
+        -4,
+        0,
+        0,
+        -4,
+        -1,
+        -3,
+        0,
+        -3
+      ],
+      "by_paid": {
+        "False": [
+          21,
+          34
+        ],
+        "True": [
+          0,
+          2
+        ]
+      }
+    },
+    "small_0_matched": {
+      "vs_consensus": {
+        "fixed": 83,
+        "harmed": 101,
+        "accuracy": 0.8160770779407536
+      },
+      "vs_reference": {
+        "fixed": 87,
+        "harmed": 101,
+        "accuracy": 0.8160770779407536
+      },
+      "hard_fixed": 17,
+      "previously_correct_harmed": 33,
+      "net_by_fold": [
+        -9,
+        -3,
+        -4,
+        -2,
+        5,
+        4,
+        -2,
+        -7
+      ],
+      "by_paid": {
+        "False": [
+          74,
+          84
+        ],
+        "True": [
+          9,
+          17
+        ]
+      }
+    },
+    "small_0_tree": {
+      "vs_consensus": {
+        "fixed": 66,
+        "harmed": 77,
+        "accuracy": 0.817083692838654
+      },
+      "vs_reference": {
+        "fixed": 69,
+        "harmed": 76,
+        "accuracy": 0.817083692838654
+      },
+      "hard_fixed": 13,
+      "previously_correct_harmed": 10,
+      "net_by_fold": [
+        -6,
+        -4,
+        -4,
+        1,
+        6,
+        -2,
+        2,
+        -4
+      ],
+      "by_paid": {
+        "False": [
+          61,
+          69
+        ],
+        "True": [
+          5,
+          8
+        ]
+      }
+    },
+    "small_1_matched": {
+      "vs_consensus": {
+        "fixed": 95,
+        "harmed": 126,
+        "accuracy": 0.8142076502732241
+      },
+      "vs_reference": {
+        "fixed": 99,
+        "harmed": 126,
+        "accuracy": 0.8142076502732241
+      },
+      "hard_fixed": 16,
+      "previously_correct_harmed": 44,
+      "net_by_fold": [
+        -9,
+        -12,
+        0,
+        -9,
+        5,
+        -7,
+        -5,
+        6
+      ],
+      "by_paid": {
+        "False": [
+          81,
+          104
+        ],
+        "True": [
+          14,
+          22
+        ]
+      }
+    },
+    "small_1_tree": {
+      "vs_consensus": {
+        "fixed": 68,
+        "harmed": 115,
+        "accuracy": 0.8119068162208801
+      },
+      "vs_reference": {
+        "fixed": 71,
+        "harmed": 114,
+        "accuracy": 0.8119068162208801
+      },
+      "hard_fixed": 6,
+      "previously_correct_harmed": 22,
+      "net_by_fold": [
+        -9,
+        -14,
+        -6,
+        -14,
+        -2,
+        -3,
+        1,
+        0
+      ],
+      "by_paid": {
+        "False": [
+          63,
+          104
+        ],
+        "True": [
+          5,
+          11
+        ]
+      }
+    },
+    "small_2_matched": {
+      "vs_consensus": {
+        "fixed": 55,
+        "harmed": 93,
+        "accuracy": 0.8132010353753235
+      },
+      "vs_reference": {
+        "fixed": 59,
+        "harmed": 93,
+        "accuracy": 0.8132010353753235
+      },
+      "hard_fixed": 7,
+      "previously_correct_harmed": 24,
+      "net_by_fold": [
+        -3,
+        -8,
+        -2,
+        -7,
+        -3,
+        -3,
+        -10,
+        -2
+      ],
+      "by_paid": {
+        "False": [
+          47,
+          76
+        ],
+        "True": [
+          8,
+          17
+        ]
+      }
+    },
+    "small_2_tree": {
+      "vs_consensus": {
+        "fixed": 44,
+        "harmed": 53,
+        "accuracy": 0.817371297095197
+      },
+      "vs_reference": {
+        "fixed": 47,
+        "harmed": 52,
+        "accuracy": 0.817371297095197
+      },
+      "hard_fixed": 3,
+      "previously_correct_harmed": 2,
+      "net_by_fold": [
+        -3,
+        0,
+        -4,
+        -1,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      "by_paid": {
+        "False": [
+          40,
+          47
+        ],
+        "True": [
+          4,
+          6
+        ]
+      }
+    },
+    "both_peers": {
+      "vs_consensus": {
+        "fixed": 13,
+        "harmed": 25,
+        "accuracy": 0.8169398907103825
+      },
+      "vs_reference": {
+        "fixed": 17,
+        "harmed": 25,
+        "accuracy": 0.8169398907103825
+      },
+      "hard_fixed": 0,
+      "previously_correct_harmed": 0,
+      "net_by_fold": [
+        -2,
+        -1,
+        0,
+        -2,
+        -1,
+        -3,
+        -1,
+        -2
+      ],
+      "by_paid": {
+        "False": [
+          13,
+          24
+        ],
+        "True": [
+          0,
+          1
+        ]
+      }
+    }
+  },
+  "reproduction": {
+    "old_twelve": {
+      "size": 12,
+      "matched": 1,
+      "tree": 0
+    },
+    "stable_five": {
+      "size": 5,
+      "matched": 0,
+      "tree": 0
+    },
+    "previously_uncovered_one": {
+      "size": 1,
+      "matched": 0,
+      "tree": 0
+    }
+  }
+}
