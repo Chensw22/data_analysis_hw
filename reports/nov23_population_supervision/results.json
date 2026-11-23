@@ -1,0 +1,232 @@
+{
+  "models": {
+    "binary": {
+      "accuracy": [
+        0.7781133160770779,
+        0.7827149841817659,
+        0.771498418176589
+      ],
+      "fixed": [
+        319,
+        336,
+        332
+      ],
+      "harmed": [
+        594,
+        549,
+        626
+      ],
+      "stable": {
+        "ever": 242,
+        "repeat": 108,
+        "unresolved": 12,
+        "never": 0
+      }
+    },
+    "combined_binary": {
+      "accuracy": [
+        0.8186655162496405,
+        0.815645671555939,
+        0.8117630140926085
+      ],
+      "fixed": [
+        27,
+        73,
+        46
+      ],
+      "harmed": [
+        20,
+        57,
+        60
+      ],
+      "stable": {
+        "ever": 44,
+        "repeat": 2,
+        "unresolved": 0,
+        "never": 0
+      }
+    },
+    "all_pairs": {
+      "accuracy": [
+        0.7900488927236123,
+        0.7900488927236123,
+        0.7796951394880645
+      ],
+      "fixed": [
+        326,
+        332,
+        329
+      ],
+      "harmed": [
+        518,
+        494,
+        566
+      ],
+      "stable": {
+        "ever": 223,
+        "repeat": 104,
+        "unresolved": 9,
+        "never": 0
+      }
+    },
+    "combined_all_pairs": {
+      "accuracy": [
+        0.817946505608283,
+        0.815645671555939,
+        0.8120506183491516
+      ],
+      "fixed": [
+        29,
+        68,
+        46
+      ],
+      "harmed": [
+        27,
+        52,
+        58
+      ],
+      "stable": {
+        "ever": 47,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0
+      }
+    },
+    "matched": {
+      "accuracy": [
+        0.7850158182341098,
+        0.7854472246189244,
+        0.777538107563992
+      ],
+      "fixed": [
+        321,
+        317,
+        331
+      ],
+      "harmed": [
+        548,
+        511,
+        583
+      ],
+      "stable": {
+        "ever": 231,
+        "repeat": 98,
+        "unresolved": 10,
+        "never": 0
+      }
+    },
+    "combined_matched": {
+      "accuracy": [
+        0.8195283290192695,
+        0.8149266609145815,
+        0.8129134311187806
+      ],
+      "fixed": [
+        34,
+        70,
+        46
+      ],
+      "harmed": [
+        21,
+        59,
+        52
+      ],
+      "stable": {
+        "ever": 45,
+        "repeat": 1,
+        "unresolved": 0,
+        "never": 0
+      }
+    },
+    "permuted": {
+      "accuracy": [
+        0.7792637331032499,
+        0.7845844118492954,
+        0.7807017543859649
+      ],
+      "fixed": [
+        328,
+        313,
+        320
+      ],
+      "harmed": [
+        595,
+        513,
+        550
+      ],
+      "stable": {
+        "ever": 220,
+        "repeat": 93,
+        "unresolved": 8,
+        "never": 0
+      }
+    },
+    "combined_permuted": {
+      "accuracy": [
+        0.818809318377912,
+        0.815070463042853,
+        0.8134886396318666
+      ],
+      "fixed": [
+        32,
+        68,
+        50
+      ],
+      "harmed": [
+        24,
+        56,
+        52
+      ],
+      "stable": {
+        "ever": 46,
+        "repeat": 1,
+        "unresolved": 0,
+        "never": 0
+      }
+    }
+  },
+  "comparison": {
+    "matched_vs_binary": {
+      "mean_pp": 0.5224810660531108,
+      "interval_pp": [
+        0.20140335798867937,
+        0.8563478017050413
+      ]
+    },
+    "matched_vs_permuted": {
+      "mean_pp": 0.11504170261719873,
+      "interval_pp": [
+        -0.10612830806622715,
+        0.3267526150261302
+      ]
+    },
+    "matched_vs_all_pairs": {
+      "mean_pp": -0.3930591506087624,
+      "interval_pp": [
+        -0.7362234828048544,
+        -0.06247882797611316
+      ]
+    },
+    "combined_matched_vs_combined_binary": {
+      "mean_pp": 0.04314063848144953,
+      "interval_pp": [
+        -0.0571348990960475,
+        0.14259385412825132
+      ]
+    },
+    "combined_matched_vs_combined_permuted": {
+      "mean_pp": 0.0,
+      "interval_pp": [
+        -0.05795906043064473,
+        0.062073691145263406
+      ]
+    },
+    "combined_matched_vs_combined_all_pairs": {
+      "mean_pp": 0.057520851308599366,
+      "interval_pp": [
+        -0.047662288784028,
+        0.15999191093107099
+      ]
+    }
+  }
+}
