@@ -1,0 +1,374 @@
+{
+  "plans": {
+    "20261112": {
+      "supervised": {
+        "accuracy": 0.8011216566005177,
+        "fixed": 250,
+        "harmed": 365
+      },
+      "train_smooth": {
+        "accuracy": 0.8039976991659477,
+        "fixed": 198,
+        "harmed": 293
+      },
+      "external": {
+        "accuracy": 0.8044291055507622,
+        "fixed": 201,
+        "harmed": 293
+      },
+      "target_mix": {
+        "accuracy": 0.8048605119355766,
+        "fixed": 204,
+        "harmed": 293
+      },
+      "combined_supervised": {
+        "accuracy": 0.8203911417888985,
+        "fixed": 71,
+        "harmed": 52
+      },
+      "combined_train_smooth": {
+        "accuracy": 0.817083692838654,
+        "fixed": 63,
+        "harmed": 67
+      },
+      "combined_external": {
+        "accuracy": 0.8166522864538395,
+        "fixed": 65,
+        "harmed": 72
+      },
+      "combined_target_mix": {
+        "accuracy": 0.816508484325568,
+        "fixed": 64,
+        "harmed": 72
+      }
+    },
+    "20261115": {
+      "supervised": {
+        "accuracy": 0.7992522289329882,
+        "fixed": 248,
+        "harmed": 346
+      },
+      "train_smooth": {
+        "accuracy": 0.8045729076790337,
+        "fixed": 196,
+        "harmed": 257
+      },
+      "external": {
+        "accuracy": 0.8039976991659477,
+        "fixed": 193,
+        "harmed": 258
+      },
+      "target_mix": {
+        "accuracy": 0.8041415012942191,
+        "fixed": 198,
+        "harmed": 262
+      },
+      "combined_supervised": {
+        "accuracy": 0.8153580672993961,
+        "fixed": 112,
+        "harmed": 98
+      },
+      "combined_train_smooth": {
+        "accuracy": 0.815070463042853,
+        "fixed": 91,
+        "harmed": 79
+      },
+      "combined_external": {
+        "accuracy": 0.8147828587863101,
+        "fixed": 91,
+        "harmed": 81
+      },
+      "combined_target_mix": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 89,
+        "harmed": 84
+      }
+    },
+    "20261116": {
+      "supervised": {
+        "accuracy": 0.7998274374460742,
+        "fixed": 299,
+        "harmed": 396
+      },
+      "train_smooth": {
+        "accuracy": 0.8006902502157032,
+        "fixed": 202,
+        "harmed": 293
+      },
+      "external": {
+        "accuracy": 0.8019844693701467,
+        "fixed": 210,
+        "harmed": 292
+      },
+      "target_mix": {
+        "accuracy": 0.8022720736266897,
+        "fixed": 216,
+        "harmed": 296
+      },
+      "combined_supervised": {
+        "accuracy": 0.810468794938165,
+        "fixed": 77,
+        "harmed": 100
+      },
+      "combined_train_smooth": {
+        "accuracy": 0.811044003451251,
+        "fixed": 68,
+        "harmed": 87
+      },
+      "combined_external": {
+        "accuracy": 0.810468794938165,
+        "fixed": 68,
+        "harmed": 91
+      },
+      "combined_target_mix": {
+        "accuracy": 0.8107563991947081,
+        "fixed": 72,
+        "harmed": 93
+      }
+    },
+    "v131": {
+      "supervised": {
+        "accuracy": 0.7973828012654587,
+        "fixed": 284,
+        "harmed": 401
+      },
+      "train_smooth": {
+        "accuracy": 0.8035662927811331,
+        "fixed": 259,
+        "harmed": 333
+      },
+      "external": {
+        "accuracy": 0.8027034800115042,
+        "fixed": 252,
+        "harmed": 332
+      },
+      "target_mix": {
+        "accuracy": 0.8019844693701467,
+        "fixed": 251,
+        "harmed": 336
+      },
+      "combined_supervised": {
+        "accuracy": 0.8123382226056945,
+        "fixed": 110,
+        "harmed": 123
+      },
+      "combined_train_smooth": {
+        "accuracy": 0.814495254529767,
+        "fixed": 106,
+        "harmed": 104
+      },
+      "combined_external": {
+        "accuracy": 0.8140638481449526,
+        "fixed": 104,
+        "harmed": 105
+      },
+      "combined_target_mix": {
+        "accuracy": 0.8137762438884095,
+        "fixed": 103,
+        "harmed": 106
+      }
+    }
+  },
+  "grouped": {
+    "supervised": {
+      "accuracy": [
+        0.8011216566005177,
+        0.7992522289329882,
+        0.7998274374460742
+      ],
+      "fixed": [
+        250,
+        248,
+        299
+      ],
+      "harmed": [
+        365,
+        346,
+        396
+      ],
+      "stable": {
+        "ever": 218,
+        "repeat": 87,
+        "unresolved": 2,
+        "never": 0,
+        "paid_transported": 21,
+        "zero_stayed": 41
+      }
+    },
+    "train_smooth": {
+      "accuracy": [
+        0.8039976991659477,
+        0.8045729076790337,
+        0.8006902502157032
+      ],
+      "fixed": [
+        198,
+        196,
+        202
+      ],
+      "harmed": [
+        293,
+        257,
+        293
+      ],
+      "stable": {
+        "ever": 177,
+        "repeat": 53,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 17,
+        "zero_stayed": 14
+      }
+    },
+    "external": {
+      "accuracy": [
+        0.8044291055507622,
+        0.8039976991659477,
+        0.8019844693701467
+      ],
+      "fixed": [
+        201,
+        193,
+        210
+      ],
+      "harmed": [
+        293,
+        258,
+        292
+      ],
+      "stable": {
+        "ever": 175,
+        "repeat": 51,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 17,
+        "zero_stayed": 13
+      }
+    },
+    "target_mix": {
+      "accuracy": [
+        0.8048605119355766,
+        0.8041415012942191,
+        0.8022720736266897
+      ],
+      "fixed": [
+        204,
+        198,
+        216
+      ],
+      "harmed": [
+        293,
+        262,
+        296
+      ],
+      "stable": {
+        "ever": 184,
+        "repeat": 55,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 18,
+        "zero_stayed": 14
+      }
+    },
+    "combined_supervised": {
+      "accuracy": [
+        0.8203911417888985,
+        0.8153580672993961,
+        0.810468794938165
+      ],
+      "fixed": [
+        71,
+        112,
+        77
+      ],
+      "harmed": [
+        52,
+        98,
+        100
+      ],
+      "stable": {
+        "ever": 85,
+        "repeat": 3,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 3,
+        "zero_stayed": 0
+      }
+    },
+    "combined_train_smooth": {
+      "accuracy": [
+        0.817083692838654,
+        0.815070463042853,
+        0.811044003451251
+      ],
+      "fixed": [
+        63,
+        91,
+        68
+      ],
+      "harmed": [
+        67,
+        79,
+        87
+      ],
+      "stable": {
+        "ever": 85,
+        "repeat": 5,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 3,
+        "zero_stayed": 0
+      }
+    },
+    "combined_external": {
+      "accuracy": [
+        0.8166522864538395,
+        0.8147828587863101,
+        0.810468794938165
+      ],
+      "fixed": [
+        65,
+        91,
+        68
+      ],
+      "harmed": [
+        72,
+        81,
+        91
+      ],
+      "stable": {
+        "ever": 85,
+        "repeat": 5,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 3,
+        "zero_stayed": 0
+      }
+    },
+    "combined_target_mix": {
+      "accuracy": [
+        0.816508484325568,
+        0.8140638481449526,
+        0.8107563991947081
+      ],
+      "fixed": [
+        64,
+        89,
+        72
+      ],
+      "harmed": [
+        72,
+        84,
+        93
+      ],
+      "stable": {
+        "ever": 82,
+        "repeat": 4,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 2,
+        "zero_stayed": 0
+      }
+    }
+  }
+}
