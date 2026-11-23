@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 23 日为 160 人版设置了一个后续提交任务 `com.chensw22.spaceship.servicepair.followup.once`，状态位于 `artifacts/nov23_forward_release_transfer/followup_status.json`。待首份回执确认后，如果 160 人版追平或超过 v131 则测试 216 人版，否则测试 111 人版。先检查两个 launchd 任务、状态和回执，避免重复上传。具体选模回放见 `reports/nov23_forward_release_transfer/RESULTS.md`。
+
 - 11 月 23 日 16:29 北京时间，改判 160 人的固定文件（`proposal_n23_service_pair_zero_donor`，SHA-256 以 `b93762ae` 开头）已在当前 Mac 登录会话排队。一次性任务为 `com.chensw22.spaceship.servicepair160.once`，首次核验主账号当天 10 次已用、可用 0 次。后续上传这份文件前先查 `launchctl list com.chensw22.spaceship.servicepair160.once`、`artifacts/proposal_n23_service_pair_zero_donor/queue_status.json` 和其 `reports/` 下的线上回执，避免重复提交。
 
 - 11 月 23 日用户明确，本地有明显提升即可自主提交，83% 不作为提交下限。以相对当前强基线的实际改判收益判断，继续记录探索性线上分数和排名。
