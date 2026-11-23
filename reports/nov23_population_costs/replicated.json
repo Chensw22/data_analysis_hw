@@ -1,0 +1,312 @@
+{
+  "plans": {
+    "20261112": {
+      "plain": {
+        "accuracy": 0.819096922634455,
+        "fixed": 38,
+        "harmed": 28
+      },
+      "prior": {
+        "accuracy": 0.8160770779407536,
+        "fixed": 51,
+        "harmed": 62
+      },
+      "replication_control": {
+        "accuracy": 0.817946505608283,
+        "fixed": 70,
+        "harmed": 68
+      },
+      "ordinary": {
+        "accuracy": 0.771210813920046,
+        "fixed": 353,
+        "harmed": 676
+      },
+      "prior_average": {
+        "accuracy": 0.7151279838941617,
+        "fixed": 463,
+        "harmed": 1176
+      },
+      "control_average": {
+        "accuracy": 0.7933563416738568,
+        "fixed": 217,
+        "harmed": 386
+      }
+    },
+    "20261115": {
+      "plain": {
+        "accuracy": 0.8143514524014955,
+        "fixed": 73,
+        "harmed": 66
+      },
+      "prior": {
+        "accuracy": 0.8172274949669255,
+        "fixed": 129,
+        "harmed": 102
+      },
+      "replication_control": {
+        "accuracy": 0.817083692838654,
+        "fixed": 129,
+        "harmed": 103
+      },
+      "ordinary": {
+        "accuracy": 0.7807017543859649,
+        "fixed": 352,
+        "harmed": 579
+      },
+      "prior_average": {
+        "accuracy": 0.7054932412999713,
+        "fixed": 454,
+        "harmed": 1204
+      },
+      "control_average": {
+        "accuracy": 0.7996836353178027,
+        "fixed": 240,
+        "harmed": 335
+      }
+    },
+    "20261116": {
+      "plain": {
+        "accuracy": 0.8116192119643371,
+        "fixed": 55,
+        "harmed": 70
+      },
+      "prior": {
+        "accuracy": 0.8142076502732241,
+        "fixed": 116,
+        "harmed": 113
+      },
+      "replication_control": {
+        "accuracy": 0.8106125970664366,
+        "fixed": 68,
+        "harmed": 90
+      },
+      "ordinary": {
+        "accuracy": 0.7794075352315214,
+        "fixed": 336,
+        "harmed": 575
+      },
+      "prior_average": {
+        "accuracy": 0.7181478285878631,
+        "fixed": 454,
+        "harmed": 1119
+      },
+      "control_average": {
+        "accuracy": 0.7930687374173138,
+        "fixed": 238,
+        "harmed": 382
+      }
+    },
+    "v131": {
+      "plain": {
+        "accuracy": 0.8149266609145815,
+        "fixed": 81,
+        "harmed": 76
+      },
+      "prior": {
+        "accuracy": 0.8134886396318666,
+        "fixed": 69,
+        "harmed": 74
+      },
+      "replication_control": {
+        "accuracy": 0.8142076502732241,
+        "fixed": 98,
+        "harmed": 98
+      },
+      "ordinary": {
+        "accuracy": 0.7847282139775669,
+        "fixed": 353,
+        "harmed": 558
+      },
+      "prior_average": {
+        "accuracy": 0.7251941328731665,
+        "fixed": 463,
+        "harmed": 1082
+      },
+      "control_average": {
+        "accuracy": 0.7979580097785447,
+        "fixed": 265,
+        "harmed": 378
+      }
+    }
+  },
+  "sensitivity": {
+    "20261112": {
+      "prior_slope_quantiles": [
+        -5.218242144733293,
+        -4.005287605888618,
+        -1.4473706123653876
+      ],
+      "ranks_reversed": 6778
+    },
+    "20261115": {
+      "prior_slope_quantiles": [
+        -5.1769421761497325,
+        -3.9487273044799416,
+        -2.0199495081809227
+      ],
+      "ranks_reversed": 6893
+    },
+    "20261116": {
+      "prior_slope_quantiles": [
+        -5.374349162569688,
+        -4.001074148269722,
+        -1.6659262930229881
+      ],
+      "ranks_reversed": 6885
+    },
+    "v131": {
+      "prior_slope_quantiles": [
+        -5.273859915513488,
+        -3.9835355176748277,
+        -2.196482048650597
+      ],
+      "ranks_reversed": 6906
+    }
+  },
+  "grouped": {
+    "plain": {
+      "accuracy": [
+        0.819096922634455,
+        0.8143514524014955,
+        0.8116192119643371
+      ],
+      "fixed": [
+        38,
+        73,
+        55
+      ],
+      "harmed": [
+        28,
+        66,
+        70
+      ],
+      "stable": {
+        "ever": 50,
+        "repeat": 0,
+        "common": 17,
+        "core": 7,
+        "repeat_outside": 0
+      }
+    },
+    "prior": {
+      "accuracy": [
+        0.8160770779407536,
+        0.8172274949669255,
+        0.8142076502732241
+      ],
+      "fixed": [
+        51,
+        129,
+        116
+      ],
+      "harmed": [
+        62,
+        102,
+        113
+      ],
+      "stable": {
+        "ever": 60,
+        "repeat": 3,
+        "common": 17,
+        "core": 10,
+        "repeat_outside": 2
+      }
+    },
+    "replication_control": {
+      "accuracy": [
+        0.817946505608283,
+        0.817083692838654,
+        0.8106125970664366
+      ],
+      "fixed": [
+        70,
+        129,
+        68
+      ],
+      "harmed": [
+        68,
+        103,
+        90
+      ],
+      "stable": {
+        "ever": 50,
+        "repeat": 2,
+        "common": 19,
+        "core": 8,
+        "repeat_outside": 2
+      }
+    },
+    "ordinary": {
+      "accuracy": [
+        0.771210813920046,
+        0.7807017543859649,
+        0.7794075352315214
+      ],
+      "fixed": [
+        353,
+        352,
+        336
+      ],
+      "harmed": [
+        676,
+        579,
+        575
+      ],
+      "stable": {
+        "ever": 98,
+        "repeat": 38,
+        "common": 24,
+        "core": 12,
+        "repeat_outside": 29
+      }
+    },
+    "prior_average": {
+      "accuracy": [
+        0.7151279838941617,
+        0.7054932412999713,
+        0.7181478285878631
+      ],
+      "fixed": [
+        463,
+        454,
+        454
+      ],
+      "harmed": [
+        1176,
+        1204,
+        1119
+      ],
+      "stable": {
+        "ever": 194,
+        "repeat": 103,
+        "common": 92,
+        "core": 85,
+        "repeat_outside": 36
+      }
+    },
+    "control_average": {
+      "accuracy": [
+        0.7933563416738568,
+        0.7996836353178027,
+        0.7930687374173138
+      ],
+      "fixed": [
+        217,
+        240,
+        238
+      ],
+      "harmed": [
+        386,
+        335,
+        382
+      ],
+      "stable": {
+        "ever": 133,
+        "repeat": 35,
+        "common": 37,
+        "core": 6,
+        "repeat_outside": 31
+      }
+    }
+  }
+}
