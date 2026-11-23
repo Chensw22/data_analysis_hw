@@ -41,25 +41,35 @@ def vote(z, support, query, y):
                        for rows in np.array_split(query, 5)]).numpy()
 
 
-def train(y, groups, fold):
-    ids = np.arange(len(y))
-    own, peer = roster_fields(ids, groups.astype(int))
-    inputs = torch.tensor(np.column_stack([own, peer]), dtype=torch.float32)
+def predict_neighbors(inputs, groups, y, t, q, f):
+    assert not np.isin(groups[t], groups[q]).any()
     g = torch.tensor(groups.astype(int))
     labels = torch.tensor(y)
+    predictions = {name: np.zeros(len(q)) for name in ['fixed', 'learned', 'focus']}
+    halves = GroupKFold(2, shuffle=True, random_state=SEED+int(f)).split(t, groups=groups[t])
+    for half, (a, b) in enumerate(halves):
+        fit, library = t[a], t[b]
+        assert not np.isin(groups[fit], groups[library]).any()
+        x = (inputs-inputs[fit].mean(0))/inputs[fit].std(0).clamp_min(.5)
+        for name in predictions:
+            z = (F.normalize(x) if name == 'fixed' else
+                 embedding(x, g, labels, fit, name == 'focus', SEED+2*int(f)+half))
+            predictions[name] += .5*vote(z, library, q, labels)
+    return predictions
+
+
+def roster_tensor(groups):
+    own, peer = roster_fields(np.arange(len(groups)), groups.astype(int))
+    return torch.tensor(np.column_stack([own, peer]), dtype=torch.float32)
+
+
+def train(y, groups, fold):
+    inputs = roster_tensor(groups)
     predictions = {name: np.zeros(len(y)) for name in ['fixed', 'learned', 'focus']}
     for f in np.unique(fold):
         t, q = np.flatnonzero(fold != f), np.flatnonzero(fold == f)
-        assert not np.isin(groups[t], groups[q]).any()
-        halves = GroupKFold(2, shuffle=True, random_state=SEED+int(f)).split(t, groups=groups[t])
-        for half, (a, b) in enumerate(halves):
-            fit, library = t[a], t[b]
-            assert not np.isin(groups[fit], groups[library]).any()
-            x = (inputs-inputs[fit].mean(0))/inputs[fit].std(0).clamp_min(.5)
-            for name in predictions:
-                z = (F.normalize(x) if name == 'fixed' else
-                     embedding(x, g, labels, fit, name == 'focus', SEED+2*int(f)+half))
-                predictions[name][q] += .5*vote(z, library, q, labels)
+        for name, p in predict_neighbors(inputs, groups, y, t, q, f).items():
+            predictions[name][q] = p
         print('completed outer fold', int(f), flush=True)
     return predictions
 
