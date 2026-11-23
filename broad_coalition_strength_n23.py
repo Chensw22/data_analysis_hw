@@ -1,4 +1,6 @@
 """Learn the contribution of each set of personal evidence sources at each strength level."""
+import argparse
+
 import numpy as np
 import pandas as pd
 from scipy.special import expit, logit
@@ -20,9 +22,10 @@ FIELDS = [
 REPORT = ROOT/'reports/nov23_coalition_strength'
 
 
-def personal_evidence(frame, y, train, query):
+def personal_evidence(frame, y, train, query, include_full):
     result = []
-    for fields in FIELDS:
+    panels = FIELDS + [[col for panel in FIELDS for col in panel]] if include_full else FIELDS
+    for fields in panels:
         raw = frame[fields].copy()
         for f in fields:
             if f in CATEGORICAL:
@@ -70,24 +73,28 @@ def readouts(evidence, y, train_size):
     return predictions
 
 
-def fold_scores(frame,y,g,t,q):
+def fold_scores(frame,y,g,t,q,include_full):
     assert not np.intersect1d(g[t],g[q]).size
     estimates = {}
     for a,b in GroupKFold(2,shuffle=True,random_state=549).split(t,groups=g[t]):
         source, calibration = t[a],t[b]
         assert not np.intersect1d(g[source],g[calibration]).size
-        evidence = personal_evidence(frame,y,source,np.r_[calibration,q])
-        for key,p in readouts(evidence,y[calibration],len(calibration)).items():
+        evidence = personal_evidence(frame,y,source,np.r_[calibration,q],include_full)
+        probs = readouts(evidence,y[calibration],len(calibration))
+        if include_full:
+            probs['full_only'] = expit(evidence[len(calibration):,-1])
+        for key,p in probs.items():
             estimates.setdefault(key,[]).append(p)
     return {k:np.mean(v,axis=0) for k,v in estimates.items()}
 
 
-def main():
+def main(include_full=False):
     row,y,frame,g,_ = load()
     wrong,right,hard = cohorts(row,y)
     solo = frame.BookingSize.to_numpy()==1
     out = ART/'nov23_coalition_strength'
-    out.mkdir(exist_ok=True)
+    if include_full: out = out/'full_teacher'
+    out.mkdir(parents=True,exist_ok=True)
     plans,history = {},{}
     for seed in [*map(str,SEEDS),'v131']:
         fold,ref,op,_ = read_opinions(seed,row,y)
@@ -95,7 +102,7 @@ def main():
         for f in np.unique(fold):
             q = np.flatnonzero(fold==f)
             t = np.flatnonzero((fold!=f) & ~np.isin(g,g[q]))
-            for k,p in fold_scores(frame,y,g,t,q).items():
+            for k,p in fold_scores(frame,y,g,t,q,include_full).items():
                 predictions.setdefault(k,np.full(len(y),np.nan))[q] = p
         hits = {'reference':ref==y}
         for k,p in predictions.items():
@@ -120,8 +127,10 @@ def main():
                      hard_ever=int((np.any(v,axis=0)&hard).sum()),
                      common_right_harmed=int((~np.any(v,axis=0)&right).sum()),
                      gain95_pp=interval((np.stack(v).astype(float)-baseline).mean(0),g)) for k,v in history.items()}
-    write(REPORT/'results.json',dict(plans=plans,stable=stable,n_solo=int(solo.sum()),n_hard_solo=int((hard&solo).sum())))
+    write(REPORT/('full_teacher.json' if include_full else 'results.json'),dict(plans=plans,stable=stable,n_solo=int(solo.sum()),n_hard_solo=int((hard&solo).sum())))
 
 
 if __name__=='__main__':
-    with threadpool_limits(1):main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--include-full', action='store_true')
+    with threadpool_limits(1):main(parser.parse_args().include_full)
