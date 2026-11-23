@@ -1,0 +1,208 @@
+{
+  "uses_query_peer_outcomes": true,
+  "deployable": false,
+  "plans": {
+    "20261112": {
+      "ticket_independent": {
+        "vs_hidden": {
+          "fixed": 6,
+          "harmed": 13,
+          "accuracy": 0.8093183779119931
+        },
+        "vs_reference": {
+          "fixed": 119,
+          "harmed": 177,
+          "accuracy": 0.8093183779119931
+        },
+        "mean_log_loss_hidden": 0.39254674628061775,
+        "mean_log_loss_revealed": 0.3925019027958672,
+        "mean_prob_move_on_peer": 0.0029881995913311438
+      },
+      "ticket_chain": {
+        "vs_hidden": {
+          "fixed": 28,
+          "harmed": 35,
+          "accuracy": 0.8093183779119931
+        },
+        "vs_reference": {
+          "fixed": 123,
+          "harmed": 181,
+          "accuracy": 0.8093183779119931
+        },
+        "mean_log_loss_hidden": 0.39252852942276706,
+        "mean_log_loss_revealed": 0.3924946825541981,
+        "mean_prob_move_on_peer": 0.011178365510175032
+      }
+    },
+    "20261115": {
+      "ticket_independent": {
+        "vs_hidden": {
+          "fixed": 9,
+          "harmed": 5,
+          "accuracy": 0.8062985332182916
+        },
+        "vs_reference": {
+          "fixed": 110,
+          "harmed": 159,
+          "accuracy": 0.8062985332182916
+        },
+        "mean_log_loss_hidden": 0.3936306843404971,
+        "mean_log_loss_revealed": 0.3937252978279194,
+        "mean_prob_move_on_peer": 0.0031345251935124205
+      },
+      "ticket_chain": {
+        "vs_hidden": {
+          "fixed": 31,
+          "harmed": 29,
+          "accuracy": 0.8061547310900201
+        },
+        "vs_reference": {
+          "fixed": 120,
+          "harmed": 170,
+          "accuracy": 0.8061547310900201
+        },
+        "mean_log_loss_hidden": 0.39364157304860925,
+        "mean_log_loss_revealed": 0.3936028041125805,
+        "mean_prob_move_on_peer": 0.012880445193001553
+      }
+    },
+    "20261116": {
+      "ticket_independent": {
+        "vs_hidden": {
+          "fixed": 8,
+          "harmed": 6,
+          "accuracy": 0.8094621800402646
+        },
+        "vs_reference": {
+          "fixed": 131,
+          "harmed": 161,
+          "accuracy": 0.8094621800402646
+        },
+        "mean_log_loss_hidden": 0.39347023315648216,
+        "mean_log_loss_revealed": 0.3929772402339201,
+        "mean_prob_move_on_peer": 0.0035175497773787152
+      },
+      "ticket_chain": {
+        "vs_hidden": {
+          "fixed": 46,
+          "harmed": 23,
+          "accuracy": 0.8123382226056945
+        },
+        "vs_reference": {
+          "fixed": 150,
+          "harmed": 160,
+          "accuracy": 0.8123382226056945
+        },
+        "mean_log_loss_hidden": 0.3934564386158822,
+        "mean_log_loss_revealed": 0.3928058689081134,
+        "mean_prob_move_on_peer": 0.01298771521232777
+      }
+    }
+  },
+  "groups": {
+    "ticket_independent_revealed": {
+      "no_peer_to_reveal": {
+        "n": 4125,
+        "stable_hit": 3129
+      },
+      "at_least_one_peer": {
+        "n": 2829,
+        "stable_hit": 2245
+      },
+      "always_wrong": {
+        "n": 1070,
+        "stable_hit": 13
+      },
+      "sometimes_wrong": {
+        "n": 448,
+        "stable_hit": 102
+      },
+      "shared_by_eight": {
+        "n": 332,
+        "stable_hit": 0
+      },
+      "always_right": {
+        "n": 5436,
+        "stable_hit": 5259
+      }
+    },
+    "ticket_independent_hidden": {
+      "no_peer_to_reveal": {
+        "n": 4125,
+        "stable_hit": 3129
+      },
+      "at_least_one_peer": {
+        "n": 2829,
+        "stable_hit": 2243
+      },
+      "always_wrong": {
+        "n": 1070,
+        "stable_hit": 13
+      },
+      "sometimes_wrong": {
+        "n": 448,
+        "stable_hit": 101
+      },
+      "shared_by_eight": {
+        "n": 332,
+        "stable_hit": 0
+      },
+      "always_right": {
+        "n": 5436,
+        "stable_hit": 5258
+      }
+    },
+    "ticket_chain_revealed": {
+      "no_peer_to_reveal": {
+        "n": 4125,
+        "stable_hit": 3131
+      },
+      "at_least_one_peer": {
+        "n": 2829,
+        "stable_hit": 2244
+      },
+      "always_wrong": {
+        "n": 1070,
+        "stable_hit": 18
+      },
+      "sometimes_wrong": {
+        "n": 448,
+        "stable_hit": 111
+      },
+      "shared_by_eight": {
+        "n": 332,
+        "stable_hit": 0
+      },
+      "always_right": {
+        "n": 5436,
+        "stable_hit": 5246
+      }
+    },
+    "ticket_chain_hidden": {
+      "no_peer_to_reveal": {
+        "n": 4125,
+        "stable_hit": 3131
+      },
+      "at_least_one_peer": {
+        "n": 2829,
+        "stable_hit": 2242
+      },
+      "always_wrong": {
+        "n": 1070,
+        "stable_hit": 13
+      },
+      "sometimes_wrong": {
+        "n": 448,
+        "stable_hit": 101
+      },
+      "shared_by_eight": {
+        "n": 332,
+        "stable_hit": 0
+      },
+      "always_right": {
+        "n": 5436,
+        "stable_hit": 5259
+      }
+    }
+  }
+}
