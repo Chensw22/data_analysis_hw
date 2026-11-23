@@ -48,9 +48,13 @@ def run():
     shared = ((full>=.5)!=y[:,None]).all(1)
     with np.load(ROOT/'artifacts/run_002/split_indices.npz') as z:
         dev = np.sort(z['development'])
-    profiles, policies = {}, {}
+    profiles, policies, ranges = {}, {}, {}
     for source, p in [('export_score',old),('override_probability',gate)]:
         profiles[source] = {}
+        ranges[source] = {}
+        for key, mask in [('low', p <= .3), ('middle', (p > .3) & (p < .7)), ('high', p >= .7)]:
+            ranges[source][key] = dict(n=int(mask.sum()), errors=int((ref[mask] != y[mask]).sum()),
+                                       common_wrong=int(shared[mask].sum()))
         for label,mask in [('all',np.ones(len(y),bool)),('conflict',conflict),('changed',changed),('focus',focus)]:
             error = (p[mask] - y[mask])**2
             profiles[source][label] = dict(n=int(mask.sum()),transported=int(y[mask].sum()),
@@ -75,7 +79,7 @@ def run():
                     focus_harmed=int((delta[focus]==-1).sum()), fold_net=[int(delta[fold==f].sum()) for f in np.unique(fold)],
                     ci_pp=interval(delta,group))
     report = dict(focus_by_fold=[int(focus[fold==f].sum()) for f in np.unique(fold)],
-                  profiles=profiles,policies=policies)
+                  profiles=profiles,policies=policies,score_ranges=ranges)
     (ROOT/'reports/nov23_matched_learning_curve/gate_probability.json').write_text(json.dumps(report,indent=2)+'\n')
     print(profiles)
     for k,v in policies.items():
