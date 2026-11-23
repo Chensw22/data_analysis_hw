@@ -24,7 +24,8 @@ def fit_bank(frame, groups, y, folds, seed):
     bank = np.full((len(SUBSETS), len(y)), np.nan)
     sizes = []
     for k in np.unique(folds):
-        train, query = np.flatnonzero(folds != k), np.flatnonzero(folds == k)
+        query = np.flatnonzero(folds == k)
+        train = np.flatnonzero((folds != k) & ~np.isin(groups, groups[query]))
         assert not np.intersect1d(groups[train], groups[query]).size
         blocks = []
         for _, block in GroupKFold(4, shuffle=True, random_state=seed + int(k)).split(train, groups=groups[train]):
