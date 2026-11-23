@@ -51,11 +51,11 @@ class FieldPairs(nn.Module):
         return self.bias+linear+.5*(a*b).sum((1,2))
 
 
-def train_pair(x,y,t,q,mode):
-    torch.manual_seed(604)
+def train_pair(x,y,t,q,mode,seed=604):
+    torch.manual_seed(seed)
     learner=FieldPairs(*x.shape[1:],mode)
     optimizer=torch.optim.AdamW(learner.parameters(),lr=.009,weight_decay=.05)
-    rng=np.random.default_rng(604)
+    rng=np.random.default_rng(seed)
     result=[]
     for epoch in range(24):
         for idx in np.array_split(rng.permutation(t),int(np.ceil(len(t)/384))):
