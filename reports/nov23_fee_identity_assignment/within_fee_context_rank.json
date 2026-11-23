@@ -1,0 +1,216 @@
+{
+  "plans": {
+    "20261112": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.81765890135174
+        },
+        "fees_only": {
+          "fixed": 269,
+          "harmed": 791,
+          "accuracy": 0.7425941903940179
+        },
+        "quarter_fees_only": {
+          "fixed": 122,
+          "harmed": 145,
+          "accuracy": 0.8143514524014955
+        },
+        "context_rank": {
+          "fixed": 294,
+          "harmed": 760,
+          "accuracy": 0.7506471095772217
+        },
+        "quarter_context_rank": {
+          "fixed": 103,
+          "harmed": 103,
+          "accuracy": 0.81765890135174
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "training_pairs": 11977
+        },
+        {
+          "training_pairs": 11789
+        },
+        {
+          "training_pairs": 11512
+        }
+      ]
+    },
+    "20261115": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8133448375035951
+        },
+        "fees_only": {
+          "fixed": 283,
+          "harmed": 776,
+          "accuracy": 0.7424503882657464
+        },
+        "quarter_fees_only": {
+          "fixed": 124,
+          "harmed": 127,
+          "accuracy": 0.8129134311187806
+        },
+        "context_rank": {
+          "fixed": 297,
+          "harmed": 746,
+          "accuracy": 0.7487776819096923
+        },
+        "quarter_context_rank": {
+          "fixed": 99,
+          "harmed": 96,
+          "accuracy": 0.8137762438884095
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "training_pairs": 11449
+        },
+        {
+          "training_pairs": 11733
+        },
+        {
+          "training_pairs": 11903
+        }
+      ]
+    },
+    "20261116": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8137762438884095
+        },
+        "fees_only": {
+          "fixed": 287,
+          "harmed": 781,
+          "accuracy": 0.7427379925222893
+        },
+        "quarter_fees_only": {
+          "fixed": 125,
+          "harmed": 142,
+          "accuracy": 0.8113316077077941
+        },
+        "context_rank": {
+          "fixed": 297,
+          "harmed": 723,
+          "accuracy": 0.7525165372447512
+        },
+        "quarter_context_rank": {
+          "fixed": 102,
+          "harmed": 98,
+          "accuracy": 0.8143514524014955
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "training_pairs": 11970
+        },
+        {
+          "training_pairs": 11634
+        },
+        {
+          "training_pairs": 11356
+        }
+      ]
+    },
+    "v131": {
+      "changes": {
+        "reference": {
+          "fixed": 0,
+          "harmed": 0,
+          "accuracy": 0.8142076502732241
+        },
+        "fees_only": {
+          "fixed": 325,
+          "harmed": 865,
+          "accuracy": 0.7365545010066149
+        },
+        "quarter_fees_only": {
+          "fixed": 148,
+          "harmed": 147,
+          "accuracy": 0.8143514524014955
+        },
+        "context_rank": {
+          "fixed": 328,
+          "harmed": 790,
+          "accuracy": 0.7477710670117917
+        },
+        "quarter_context_rank": {
+          "fixed": 110,
+          "harmed": 104,
+          "accuracy": 0.815070463042853
+        }
+      },
+      "fold_diagnostics": [
+        {
+          "training_pairs": 9055
+        },
+        {
+          "training_pairs": 9082
+        },
+        {
+          "training_pairs": 9169
+        }
+      ]
+    }
+  },
+  "stable": {
+    "reference": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 11,
+      "stable_harms": 21,
+      "gain95_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    "fees_only": {
+      "hard_stable": 10,
+      "hard_ever": 19,
+      "common_stable": 135,
+      "stable_harms": 547,
+      "gain95_pp": [
+        -8.090451553866188,
+        -6.361530105754908
+      ]
+    },
+    "quarter_fees_only": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 36,
+      "stable_harms": 42,
+      "gain95_pp": [
+        -0.5650725662386382,
+        0.14566126522707906
+      ]
+    },
+    "context_rank": {
+      "hard_stable": 3,
+      "hard_ever": 21,
+      "common_stable": 111,
+      "stable_harms": 424,
+      "gain95_pp": [
+        -7.249527960413784,
+        -5.6335027329921195
+      ]
+    },
+    "quarter_context_rank": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 21,
+      "stable_harms": 23,
+      "gain95_pp": [
+        -0.25587357006275613,
+        0.3304955731308961
+      ]
+    }
+  }
+}
