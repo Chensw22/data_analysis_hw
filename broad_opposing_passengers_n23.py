@@ -70,7 +70,7 @@ def state_predictions(frame,g,y,t,q):
     return out,dict(pairs=len(pos),training=len(t))
 
 
-def evaluate(label,run):
+def evaluate(label,run,report=REPORT):
     row,y,frame,g,_ = load()
     wrong,right,hard = cohorts(row,y)
     plans,history = {},{}
@@ -109,7 +109,7 @@ def evaluate(label,run):
         stable[k]=dict(hard_stable=int((hard&h.all(0)).sum()),hard_ever=int((hard&h.any(0)).sum()),
                        common_stable=int((wrong&h.all(0)).sum()),stable_harms=int((right&~h.any(0)).sum()),
                        gain95_pp=interval((h.astype(float)-baseline).mean(0),g))
-    write(REPORT/(label+'.json'),dict(plans=plans,stable=stable))
+    write(report/(label+'.json'),dict(plans=plans,stable=stable))
 
 
 if __name__=='__main__':
