@@ -1,0 +1,133 @@
+{
+  "solo": 4805,
+  "profiles": {
+    "positive_unanimous_False": {
+      "rows": 2243,
+      "errors": 331,
+      "historical_errors": 141
+    },
+    "positive_unanimous_True": {
+      "rows": 187,
+      "errors": 19,
+      "historical_errors": 1
+    },
+    "no_known_positive_unanimous_False": {
+      "rows": 74,
+      "errors": 24,
+      "historical_errors": 5
+    },
+    "no_known_positive_unanimous_True": {
+      "rows": 1369,
+      "errors": 245,
+      "historical_errors": 76
+    }
+  },
+  "solo_shared": 619,
+  "confident_solo_shared": 124,
+  "confidence_by_direction": {
+    "0.1": {
+      "False": {
+        "correct": 1744,
+        "wrong": 242
+      },
+      "True": {
+        "correct": 1010,
+        "wrong": 103
+      }
+    },
+    "0.25": {
+      "False": {
+        "correct": 1102,
+        "wrong": 112
+      },
+      "True": {
+        "correct": 757,
+        "wrong": 12
+      }
+    },
+    "0.4": {
+      "False": {
+        "correct": 62,
+        "wrong": 2
+      },
+      "True": {
+        "correct": 597,
+        "wrong": 5
+      }
+    }
+  },
+  "policies": {
+    "full_solo": {
+      "repaired": 132,
+      "newly_wrong": 177,
+      "accuracy": 0.8108823191073278,
+      "shared_repaired": 26,
+      "historical_repaired": 0,
+      "historical_harmed": 1,
+      "fold_net": [
+        -11,
+        -5,
+        -6,
+        -1,
+        -4,
+        -5,
+        -5,
+        -8
+      ]
+    },
+    "average_baseline_full": {
+      "repaired": 67,
+      "newly_wrong": 86,
+      "accuracy": 0.8138732313355573,
+      "shared_repaired": 7,
+      "historical_repaired": 0,
+      "historical_harmed": 1,
+      "fold_net": [
+        -5,
+        -2,
+        2,
+        6,
+        -9,
+        0,
+        -1,
+        -10
+      ]
+    },
+    "two_views_agree": {
+      "repaired": 55,
+      "newly_wrong": 95,
+      "accuracy": 0.8114574945358334,
+      "shared_repaired": 16,
+      "historical_repaired": 1,
+      "historical_harmed": 1,
+      "fold_net": [
+        -11,
+        -5,
+        -4,
+        3,
+        -5,
+        -8,
+        -3,
+        -7
+      ]
+    },
+    "average_three": {
+      "repaired": 140,
+      "newly_wrong": 177,
+      "accuracy": 0.8118025997929369,
+      "shared_repaired": 18,
+      "historical_repaired": 1,
+      "historical_harmed": 1,
+      "fold_net": [
+        -13,
+        -6,
+        2,
+        -3,
+        2,
+        -4,
+        -6,
+        -9
+      ]
+    }
+  }
+}
