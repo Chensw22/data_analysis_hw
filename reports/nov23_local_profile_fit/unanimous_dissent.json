@@ -229,5 +229,103 @@
         "affected_bookings": 5
       }
     }
+  },
+  "matched_examples": {
+    "paid_predicted_stay": {
+      "cases": 208,
+      "matched": 195,
+      "distinct_controls": 181,
+      "representative_distance": 0.4051936175869778,
+      "case": {
+        "passenger_id": "5437_01",
+        "booking": 5437,
+        "home": "Mars",
+        "sleep": "False",
+        "destination": "TRAPPIST-1e",
+        "deck": "F",
+        "side": "P",
+        "age": 44.0,
+        "cabin_number": 1123,
+        "bills": {
+          "Spa": 3.0,
+          "FoodCourt": 18.0,
+          "VRDeck": 0.0,
+          "RoomService": 1267.0,
+          "ShoppingMall": 0.0
+        },
+        "historical_prediction": false,
+        "transported": true,
+        "stable_contrary_models": 0
+      },
+      "correct": {
+        "passenger_id": "3577_01",
+        "booking": 3577,
+        "home": "Mars",
+        "sleep": "False",
+        "destination": "TRAPPIST-1e",
+        "deck": "F",
+        "side": "P",
+        "age": 26.0,
+        "cabin_number": 743,
+        "bills": {
+          "Spa": 7.0,
+          "FoodCourt": 7.0,
+          "VRDeck": 0.0,
+          "RoomService": 1178.0,
+          "ShoppingMall": 0.0
+        },
+        "historical_prediction": false,
+        "transported": false,
+        "stable_contrary_models": 0
+      }
+    },
+    "no_positive_predicted_transport": {
+      "cases": 152,
+      "matched": 142,
+      "distinct_controls": 113,
+      "representative_distance": 0.06188727771925671,
+      "case": {
+        "passenger_id": "3774_02",
+        "booking": 3774,
+        "home": "Earth",
+        "sleep": "True",
+        "destination": "TRAPPIST-1e",
+        "deck": "G",
+        "side": "P",
+        "age": 18.0,
+        "cabin_number": 617,
+        "bills": {
+          "Spa": 0.0,
+          "FoodCourt": 0.0,
+          "VRDeck": 0.0,
+          "RoomService": 0.0,
+          "ShoppingMall": 0.0
+        },
+        "historical_prediction": true,
+        "transported": false,
+        "stable_contrary_models": 0
+      },
+      "correct": {
+        "passenger_id": "3289_01",
+        "booking": 3289,
+        "home": "Earth",
+        "sleep": "True",
+        "destination": "TRAPPIST-1e",
+        "deck": "G",
+        "side": "P",
+        "age": 16.0,
+        "cabin_number": 536,
+        "bills": {
+          "Spa": 0.0,
+          "FoodCourt": 0.0,
+          "VRDeck": 0.0,
+          "RoomService": 0.0,
+          "ShoppingMall": 0.0
+        },
+        "historical_prediction": true,
+        "transported": true,
+        "stable_contrary_models": 1
+      }
+    }
   }
 }

@@ -1,10 +1,11 @@
 """Measure the yield of stable dissent on passengers whose earlier decisions were unanimous."""
 import numpy as np
+import pandas as pd
 from scipy.special import logit
 from sklearn.metrics import roc_auc_score
 from threadpoolctl import threadpool_limits
 
-from broad_geographic_transfer_n23 import load
+from broad_geographic_transfer_n23 import BILLS, ROOT, load
 from broad_local_profile_fit_n23 import REPORT
 from broad_matched_model_changes_n23 import read_bank
 from broad_partition_evidence_n23 import ART,SEEDS,write
@@ -33,6 +34,44 @@ def audit(selected,errors,confidence,decision,cohort,groups):
     return dict(fixed=rescued,harmed=lost,precision=(rescued/(rescued+lost) if rescued+lost else None),
                 expected_errors_at_same_confidence_and_direction=expected,
                 affected_bookings=int(np.unique(groups[ids[flagged]]).size))
+
+
+
+def example_pairs(frame, row, y, group, vote, cohort, dissent_count):
+    # Descriptive comparisons: outcomes identify cases and controls only after the
+    # predictions have been evaluated. No matches from this audit train a model.
+    fares=frame[BILLS]
+    dominant=fares.fillna(-1).idxmax(axis=1).where(fares.gt(0).any(axis=1),'no_positive')
+    cat=frame[['HomePlanet','CryoSleep','Destination','Deck','Side']].copy()
+    cat['dominant']=dominant
+    code=cat.groupby(list(cat.columns),dropna=False).ngroup().to_numpy()
+    continuous=frame[['Age','CabinNumber',*BILLS]].rank(pct=True).fillna(-1).to_numpy()
+    ids=pd.read_csv(ROOT/'data/raw/train.csv',usecols=['PassengerId']).PassengerId.to_numpy()[row]
+    def describe(i):
+        vals=frame.iloc[i]
+        return dict(passenger_id=str(ids[i]), booking=int(group[i]), home=str(vals.HomePlanet),
+                    sleep=str(vals.CryoSleep), destination=str(vals.Destination), deck=str(vals.Deck), side=str(vals.Side),
+                    age=None if pd.isna(vals.Age) else float(vals.Age),
+                    cabin_number=None if pd.isna(vals.CabinNumber) else int(vals.CabinNumber),
+                    bills={k:None if pd.isna(vals[k]) else float(vals[k]) for k in BILLS},
+                    historical_prediction=bool(vote[i]), transported=bool(y[i]), stable_contrary_models=int(dissent_count[i]))
+    result={}
+    for name,eligible in cohort.items():
+        if name=='all':continue
+        wrong=np.flatnonzero(eligible&(vote!=y))
+        correct=np.flatnonzero(eligible&(vote==y))
+        matches=[]
+        for i in wrong:
+            candidates=correct[(code[correct]==code[i])&(group[correct]!=group[i])]
+            if len(candidates):
+                gap=np.linalg.norm(continuous[candidates]-continuous[i],axis=1)
+                j=gap.argmin()
+                matches.append((float(gap[j]),int(i),int(candidates[j])))
+        if matches:
+            distance,i,j=sorted(matches)[len(matches)//2]
+            result[name]=dict(cases=len(wrong),matched=len(matches),distinct_controls=len(set(a[2] for a in matches)),
+                              representative_distance=distance,case=describe(i),correct=describe(j))
+    return result
 
 
 def main():
@@ -72,6 +111,7 @@ def main():
         out[key]=dict(passengers=int(subset.sum()),errors=int((subset&errors).sum()),
                       confidence_auc=float(roc_auc_score(errors[subset],-confidence[subset])),
                       rules={k:audit(flag,errors,confidence,vote,subset,g) for k,flag in dissent.items()})
+    out['matched_examples']=example_pairs(frame,row,y,g,vote,groups,n)
     write(REPORT/'unanimous_dissent.json',out)
     print(out['all'],flush=True)
 
