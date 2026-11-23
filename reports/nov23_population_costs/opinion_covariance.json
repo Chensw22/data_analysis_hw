@@ -1,0 +1,130 @@
+{
+  "experts": 50,
+  "census": [
+    {
+      "state": "zero",
+      "transported": false,
+      "passengers": 564,
+      "repeat": 394,
+      "stable_alternative": 185,
+      "occasional_only": 151,
+      "never_correct": 58
+    },
+    {
+      "state": "zero",
+      "transported": true,
+      "passengers": 2060,
+      "repeat": 46,
+      "stable_alternative": 46,
+      "occasional_only": 0,
+      "never_correct": 0
+    },
+    {
+      "state": "incomplete_no_positive",
+      "transported": false,
+      "passengers": 65,
+      "repeat": 50,
+      "stable_alternative": 34,
+      "occasional_only": 15,
+      "never_correct": 1
+    },
+    {
+      "state": "incomplete_no_positive",
+      "transported": true,
+      "passengers": 259,
+      "repeat": 6,
+      "stable_alternative": 5,
+      "occasional_only": 1,
+      "never_correct": 0
+    },
+    {
+      "state": "positive",
+      "transported": false,
+      "passengers": 2823,
+      "repeat": 146,
+      "stable_alternative": 146,
+      "occasional_only": 0,
+      "never_correct": 0
+    },
+    {
+      "state": "positive",
+      "transported": true,
+      "passengers": 1183,
+      "repeat": 428,
+      "stable_alternative": 145,
+      "occasional_only": 170,
+      "never_correct": 113
+    }
+  ],
+  "models": {
+    "confidence": {
+      "accuracy": [
+        0.8183779119930975,
+        0.8169398907103825,
+        0.8119068162208801
+      ],
+      "fixed": [
+        71,
+        140,
+        140
+      ],
+      "harmed": [
+        66,
+        115,
+        153
+      ],
+      "stable": {
+        "ever": 81,
+        "repeat": 3,
+        "unresolved": 0,
+        "never": 0
+      }
+    },
+    "shared": {
+      "accuracy": [
+        0.8180903077365546,
+        0.8178027034800115,
+        0.8103249928098936
+      ],
+      "fixed": [
+        82,
+        174,
+        148
+      ],
+      "harmed": [
+        79,
+        143,
+        172
+      ],
+      "stable": {
+        "ever": 84,
+        "repeat": 3,
+        "unresolved": 0,
+        "never": 0
+      }
+    },
+    "different": {
+      "accuracy": [
+        0.818809318377912,
+        0.8149266609145815,
+        0.8123382226056945
+      ],
+      "fixed": [
+        64,
+        128,
+        142
+      ],
+      "harmed": [
+        56,
+        117,
+        152
+      ],
+      "stable": {
+        "ever": 67,
+        "repeat": 5,
+        "unresolved": 0,
+        "never": 0
+      }
+    }
+  }
+}
