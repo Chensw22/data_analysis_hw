@@ -10,7 +10,7 @@ from broad_partial_booking_likelihood_n23 import REPORT
 from released_correction_audit_n23 import development
 
 
-def archived_votes(rows, y, bases, archive):
+def archived_probabilities(rows, y, bases, archive):
     panels = []
     for i, seed in enumerate(SEEDS):
         base, extra, fold = predictions(rows, y, seed, {**EXTRA, **dict(list(SOURCES.items())[:4])})
@@ -29,8 +29,12 @@ def archived_votes(rows, y, bases, archive):
             additions.append(z["bank"][z["subsets"] == 2].mean(0))
         p = np.column_stack([archive[i], extra, *recent.values(), *additions])
         assert p.shape == (len(y), 67) and np.isfinite(p).all()
-        panels.append(p >= .5)
+        panels.append(p)
     return np.stack(panels)
+
+
+def archived_votes(rows, y, bases, archive):
+    return archived_probabilities(rows, y, bases, archive) >= .5
 
 
 def main():
