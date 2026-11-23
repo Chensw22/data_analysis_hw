@@ -1,0 +1,225 @@
+{
+  "passengers": 922,
+  "target": 95,
+  "total_fee_quintile_boundaries": [
+    758.2,
+    884.0,
+    1262.0,
+    1895.8000000000002
+  ],
+  "by_positive_services": {
+    "Spa": {
+      "transported": 0,
+      "not_transported": 11
+    },
+    "Spa+FoodCourt": {
+      "transported": 1,
+      "not_transported": 26
+    },
+    "VRDeck": {
+      "transported": 2,
+      "not_transported": 17
+    },
+    "Spa+VRDeck": {
+      "transported": 3,
+      "not_transported": 42
+    },
+    "FoodCourt+VRDeck": {
+      "transported": 2,
+      "not_transported": 9
+    },
+    "Spa+FoodCourt+VRDeck": {
+      "transported": 4,
+      "not_transported": 57
+    },
+    "RoomService": {
+      "transported": 2,
+      "not_transported": 15
+    },
+    "Spa+RoomService": {
+      "transported": 3,
+      "not_transported": 41
+    },
+    "FoodCourt+RoomService": {
+      "transported": 2,
+      "not_transported": 18
+    },
+    "Spa+FoodCourt+RoomService": {
+      "transported": 5,
+      "not_transported": 27
+    },
+    "VRDeck+RoomService": {
+      "transported": 3,
+      "not_transported": 34
+    },
+    "Spa+VRDeck+RoomService": {
+      "transported": 5,
+      "not_transported": 29
+    },
+    "FoodCourt+VRDeck+RoomService": {
+      "transported": 7,
+      "not_transported": 17
+    },
+    "Spa+FoodCourt+VRDeck+RoomService": {
+      "transported": 3,
+      "not_transported": 40
+    },
+    "Spa+ShoppingMall": {
+      "transported": 0,
+      "not_transported": 15
+    },
+    "Spa+FoodCourt+ShoppingMall": {
+      "transported": 2,
+      "not_transported": 11
+    },
+    "VRDeck+ShoppingMall": {
+      "transported": 2,
+      "not_transported": 8
+    },
+    "Spa+VRDeck+ShoppingMall": {
+      "transported": 7,
+      "not_transported": 29
+    },
+    "FoodCourt+VRDeck+ShoppingMall": {
+      "transported": 2,
+      "not_transported": 13
+    },
+    "Spa+FoodCourt+VRDeck+ShoppingMall": {
+      "transported": 1,
+      "not_transported": 27
+    },
+    "RoomService+ShoppingMall": {
+      "transported": 3,
+      "not_transported": 57
+    },
+    "Spa+RoomService+ShoppingMall": {
+      "transported": 11,
+      "not_transported": 79
+    },
+    "FoodCourt+RoomService+ShoppingMall": {
+      "transported": 5,
+      "not_transported": 28
+    },
+    "Spa+FoodCourt+RoomService+ShoppingMall": {
+      "transported": 5,
+      "not_transported": 35
+    },
+    "VRDeck+RoomService+ShoppingMall": {
+      "transported": 4,
+      "not_transported": 43
+    },
+    "Spa+VRDeck+RoomService+ShoppingMall": {
+      "transported": 7,
+      "not_transported": 56
+    },
+    "FoodCourt+VRDeck+RoomService+ShoppingMall": {
+      "transported": 2,
+      "not_transported": 17
+    },
+    "Spa+FoodCourt+VRDeck+RoomService+ShoppingMall": {
+      "transported": 2,
+      "not_transported": 26
+    }
+  },
+  "assignment_maximum_log_error": 1.7763568394002505e-15,
+  "draws": 2000,
+  "seed": 531,
+  "analyses": {
+    "positive_services": {
+      "cells": 28,
+      "strict_majority_cells": 0,
+      "hindsight_fixed": 0,
+      "hindsight_harmed": 0,
+      "hindsight_net": 0,
+      "positives_in_mixed_cells": 95,
+      "matched_pairs": 3541,
+      "conditional_auc": {
+        "reference": {
+          "observed": 0.586839875741316,
+          "null95": [
+            0.42925727195707425,
+            0.5698955097430104
+          ]
+        },
+        "anonymous": {
+          "observed": 0.5151087263484891,
+          "null95": [
+            0.43009036995199096,
+            0.5676433210957357
+          ]
+        },
+        "assigned": {
+          "observed": 0.539960463146004,
+          "null95": [
+            0.42925021180457495,
+            0.5741457215475854
+          ]
+        }
+      }
+    },
+    "services_and_scale": {
+      "cells": 136,
+      "strict_majority_cells": 1,
+      "hindsight_fixed": 1,
+      "hindsight_harmed": 0,
+      "hindsight_net": 1,
+      "positives_in_mixed_cells": 94,
+      "matched_pairs": 756,
+      "conditional_auc": {
+        "reference": {
+          "observed": 0.58994708994709,
+          "null95": [
+            0.42328042328042326,
+            0.5753968253968254
+          ]
+        },
+        "anonymous": {
+          "observed": 0.5105820105820106,
+          "null95": [
+            0.42328042328042326,
+            0.578042328042328
+          ]
+        },
+        "assigned": {
+          "observed": 0.5092592592592593,
+          "null95": [
+            0.4219246031746032,
+            0.5767195767195767
+          ]
+        }
+      }
+    },
+    "services_scale_missing": {
+      "cells": 196,
+      "strict_majority_cells": 8,
+      "hindsight_fixed": 9,
+      "hindsight_harmed": 1,
+      "hindsight_net": 8,
+      "positives_in_mixed_cells": 88,
+      "matched_pairs": 654,
+      "conditional_auc": {
+        "reference": {
+          "observed": 0.5902140672782875,
+          "null95": [
+            0.42201834862385323,
+            0.5795489296636084
+          ]
+        },
+        "anonymous": {
+          "observed": 0.5152905198776758,
+          "null95": [
+            0.4158639143730887,
+            0.5795107033639144
+          ]
+        },
+        "assigned": {
+          "observed": 0.5030581039755352,
+          "null95": [
+            0.41743119266055045,
+            0.5856269113149847
+          ]
+        }
+      }
+    }
+  }
+}
