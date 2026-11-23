@@ -1,4 +1,4 @@
-"""Export the verified queued predictions plus linear-only corrections on parties of three or more."""
+"""Export the verified queued predictions plus linear-only corrections at a fixed minimum booking size."""
 import json
 import numpy as np
 import pandas as pd
@@ -24,15 +24,17 @@ def predict(recipe,ids):
     return donor^extra,ref,extra
 
 
-def export():
+def export(include_all=False):
+    version = 'n23_all_booking_union' if include_all else VERSION
+    name = 'proposal_'+version
     test_path=ROOT/'data/raw/test.csv'
     test=pd.read_csv(test_path,usecols=['PassengerId'])
     _,official,h=source(INCUMBENT,test)
-    recipe=dict(minimum_booking_size=3,members={INCUMBENT:h})
+    recipe=dict(minimum_booking_size=1 if include_all else 3,members={INCUMBENT:h})
     for parent in (DONOR,LINEAR):
         manifest=json.loads((ROOT/'reports'/parent/'manifest.json').read_text())
         recipe['members'][parent]=manifest['sha256']
-    out=ART/NAME
+    out=ART/name
     out.mkdir(exist_ok=True)
     vote,ref,extra=predict(recipe,test.PassengerId)
     np.testing.assert_array_equal(ref,official)
@@ -45,17 +47,25 @@ def export():
                       reload_probability=reload.astype(float))).to_csv(out/'test_probabilities.csv',index=False)
     manifest=validate_submission(out/'submission.csv',test_path)
     earlier=json.loads((ROOT/'reports/nov23_recent_family_transfer/pending_diversity.json').read_text())['files']
+    if include_all:
+        earlier[NAME]=json.loads((ROOT/'reports'/NAME/'manifest.json').read_text())
     receipts=[json.loads(p.read_text())['file_sha256'] for p in (ROOT/'reports').glob('*/online_attempts/*.json')]
     assert manifest['sha256'] not in receipts and manifest['sha256'] not in [m['sha256'] for m in earlier.values()]
-    manifest.update(version=VERSION,model_sha256=sha256(model),reload_difference=0,previous_receipts=len(receipts),
+    manifest.update(version=version,model_sha256=sha256(model),reload_difference=0,previous_receipts=len(receipts),
                     pending_files_checked=len(earlier),added_to_queued=int(extra.sum()),v131_changes=int((vote!=ref).sum()))
     assert manifest['v131_changes']==160+manifest['added_to_queued']
-    for folder in (out,ROOT/'reports'/NAME):
+    if include_all:
+        baseline,queued,linear=load_votes(recipe,test.PassengerId).T
+        np.testing.assert_array_equal(vote,baseline ^ ((queued!=baseline)|(linear!=baseline)))
+    for folder in (out,ROOT/'reports'/name):
         write(folder/'recipe.json',recipe)
         write(folder/'manifest.json',manifest)
-        write(folder/'selection.json',dict(version=VERSION,threshold=.5))
+        write(folder/'selection.json',dict(version=version,threshold=.5))
     print(manifest)
 
 
 if __name__=='__main__':
-    export()
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--all-bookings',action='store_true')
+    export(include_all=parser.parse_args().all_bookings)
