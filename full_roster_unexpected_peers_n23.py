@@ -58,6 +58,11 @@ def correction(x, y, p):
 
 
 def reference_score(scores, ref, alternative):
+    """Replay exported threshold scores, including the prior-balanced expert on overrides.
+
+    For outcome probabilities on conflicts use gate_probabilities from
+    full_roster_gate_probability_n23 instead.
+    """
     baseline = scores[:, 4]
     p = np.where((baseline >= .5) == ref, baseline, scores[:, alternative])
     np.testing.assert_array_equal(p >= .5, ref)

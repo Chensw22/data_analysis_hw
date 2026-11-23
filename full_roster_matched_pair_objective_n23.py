@@ -2,7 +2,6 @@
 import json
 
 import numpy as np
-import pandas as pd
 from catboost import CatBoostClassifier, CatBoostRanker, Pool
 from scipy.special import expit, logit
 from sklearn.metrics import roc_auc_score
@@ -103,7 +102,18 @@ def run():
             common_fixed=int((delta[shared]==1).sum()), earth_net=int(delta[earth].sum()),
             additional_net=int(delta.sum()-delta[dev].sum()), fold_net=[int(delta[fold==f].sum()) for f in np.unique(fold)],
             ci_pp=interval(delta,group))
-    report = dict(results=result, pairs_by_fold=pair_count)
+    raw_auc = {}
+    for k, score in dict(reference=p, **score_bank).items():
+        numerator = 0.
+        comparisons = 0
+        for f in np.unique(fold):
+            mask = focus & (fold == f)
+            pairs = int(y[mask].sum() * (~y[mask]).sum())
+            if pairs:
+                numerator += pairs * roc_auc_score(y[mask], score[mask])
+                comparisons += pairs
+        raw_auc[k] = dict(auc=numerator/comparisons, positive_negative_pairs=comparisons)
+    report = dict(results=result, pairs_by_fold=pair_count, focus_raw_within_fold_auc=raw_auc)
     (ROOT/'reports/nov23_matched_learning_curve/matched_pair_objective.json').write_text(json.dumps(report,indent=2)+'\n')
     print(report)
 
