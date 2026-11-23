@@ -1,0 +1,374 @@
+{
+  "plans": {
+    "20261112": {
+      "folds": [
+        {
+          "initial": 1024,
+          "added": 512,
+          "correct_pseudo": 389,
+          "validation": 2318
+        },
+        {
+          "initial": 1024,
+          "added": 513,
+          "correct_pseudo": 405,
+          "validation": 2318
+        },
+        {
+          "initial": 1025,
+          "added": 511,
+          "correct_pseudo": 406,
+          "validation": 2318
+        }
+      ],
+      "vs_original": {
+        "original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "gold": {
+          "fixed": 199,
+          "harmed": 159
+        },
+        "pseudo": {
+          "fixed": 98,
+          "harmed": 94
+        },
+        "shuffled": {
+          "fixed": 137,
+          "harmed": 220
+        },
+        "combined_original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "combined_gold": {
+          "fixed": 41,
+          "harmed": 40
+        },
+        "combined_pseudo": {
+          "fixed": 24,
+          "harmed": 21
+        },
+        "combined_shuffled": {
+          "fixed": 37,
+          "harmed": 26
+        }
+      }
+    },
+    "20261115": {
+      "folds": [
+        {
+          "initial": 1024,
+          "added": 512,
+          "correct_pseudo": 406,
+          "validation": 2319
+        },
+        {
+          "initial": 1022,
+          "added": 514,
+          "correct_pseudo": 410,
+          "validation": 2318
+        },
+        {
+          "initial": 1024,
+          "added": 512,
+          "correct_pseudo": 397,
+          "validation": 2317
+        }
+      ],
+      "vs_original": {
+        "original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "gold": {
+          "fixed": 160,
+          "harmed": 145
+        },
+        "pseudo": {
+          "fixed": 80,
+          "harmed": 88
+        },
+        "shuffled": {
+          "fixed": 142,
+          "harmed": 214
+        },
+        "combined_original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "combined_gold": {
+          "fixed": 29,
+          "harmed": 39
+        },
+        "combined_pseudo": {
+          "fixed": 23,
+          "harmed": 23
+        },
+        "combined_shuffled": {
+          "fixed": 36,
+          "harmed": 26
+        }
+      }
+    },
+    "20261116": {
+      "folds": [
+        {
+          "initial": 1023,
+          "added": 514,
+          "correct_pseudo": 406,
+          "validation": 2319
+        },
+        {
+          "initial": 1024,
+          "added": 511,
+          "correct_pseudo": 398,
+          "validation": 2317
+        },
+        {
+          "initial": 1024,
+          "added": 512,
+          "correct_pseudo": 401,
+          "validation": 2318
+        }
+      ],
+      "vs_original": {
+        "original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "gold": {
+          "fixed": 156,
+          "harmed": 129
+        },
+        "pseudo": {
+          "fixed": 73,
+          "harmed": 104
+        },
+        "shuffled": {
+          "fixed": 136,
+          "harmed": 206
+        },
+        "combined_original": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "combined_gold": {
+          "fixed": 38,
+          "harmed": 33
+        },
+        "combined_pseudo": {
+          "fixed": 37,
+          "harmed": 39
+        },
+        "combined_shuffled": {
+          "fixed": 48,
+          "harmed": 37
+        }
+      }
+    }
+  },
+  "grouped": {
+    "original": {
+      "accuracy": [
+        0.7976704055220017,
+        0.7995398331895313,
+        0.8018406672418752
+      ],
+      "fixed": [
+        201,
+        206,
+        228
+      ],
+      "harmed": [
+        340,
+        302,
+        311
+      ],
+      "stable": {
+        "ever": 149,
+        "repeat": 28,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 5,
+        "zero": 0
+      }
+    },
+    "gold": {
+      "accuracy": [
+        0.8034224906528616,
+        0.8016968651136037,
+        0.8057233247052057
+      ],
+      "fixed": [
+        197,
+        179,
+        196
+      ],
+      "harmed": [
+        296,
+        260,
+        252
+      ],
+      "stable": {
+        "ever": 140,
+        "repeat": 23,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 6,
+        "zero": 3
+      }
+    },
+    "pseudo": {
+      "accuracy": [
+        0.7982456140350878,
+        0.7983894161633592,
+        0.7973828012654587
+      ],
+      "fixed": [
+        203,
+        215,
+        213
+      ],
+      "harmed": [
+        338,
+        319,
+        327
+      ],
+      "stable": {
+        "ever": 154,
+        "repeat": 30,
+        "unresolved": 1,
+        "never": 0,
+        "paid": 5,
+        "zero": 0
+      }
+    },
+    "shuffled": {
+      "accuracy": [
+        0.7857348288754673,
+        0.7891860799539833,
+        0.7917745182628703
+      ],
+      "fixed": [
+        238,
+        238,
+        253
+      ],
+      "harmed": [
+        460,
+        406,
+        406
+      ],
+      "stable": {
+        "ever": 157,
+        "repeat": 33,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 1,
+        "zero": 0
+      }
+    },
+    "combined_original": {
+      "accuracy": [
+        0.815933275812482,
+        0.8140638481449526,
+        0.8113316077077941
+      ],
+      "fixed": [
+        59,
+        71,
+        72
+      ],
+      "harmed": [
+        71,
+        66,
+        89
+      ],
+      "stable": {
+        "ever": 77,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 0,
+        "zero": 0
+      }
+    },
+    "combined_gold": {
+      "accuracy": [
+        0.8160770779407536,
+        0.8126258268622376,
+        0.8120506183491516
+      ],
+      "fixed": [
+        52,
+        73,
+        76
+      ],
+      "harmed": [
+        63,
+        78,
+        88
+      ],
+      "stable": {
+        "ever": 73,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 0,
+        "zero": 0
+      }
+    },
+    "combined_pseudo": {
+      "accuracy": [
+        0.8163646821972965,
+        0.8140638481449526,
+        0.811044003451251
+      ],
+      "fixed": [
+        63,
+        76,
+        80
+      ],
+      "harmed": [
+        72,
+        71,
+        99
+      ],
+      "stable": {
+        "ever": 82,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 0,
+        "zero": 0
+      }
+    },
+    "combined_shuffled": {
+      "accuracy": [
+        0.8175150992234685,
+        0.8155018694276676,
+        0.8129134311187806
+      ],
+      "fixed": [
+        52,
+        76,
+        75
+      ],
+      "harmed": [
+        53,
+        61,
+        81
+      ],
+      "stable": {
+        "ever": 74,
+        "repeat": 0,
+        "unresolved": 0,
+        "never": 0,
+        "paid": 0,
+        "zero": 0
+      }
+    }
+  }
+}
