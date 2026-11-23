@@ -1,0 +1,1273 @@
+{
+  "rows": 8693,
+  "baseline_correct": 7094,
+  "seven_wrong": 819,
+  "seven_right": 5475,
+  "full_only_overlap": {
+    "none": {
+      "original_wrong": 532,
+      "original_right": 4100
+    },
+    "without_bills": {
+      "original_wrong": 11,
+      "original_right": 63
+    },
+    "without_sleep": {
+      "original_wrong": 12,
+      "original_right": 21
+    },
+    "without_bills+without_sleep": {
+      "original_wrong": 0,
+      "original_right": 0
+    },
+    "without_both": {
+      "original_wrong": 219,
+      "original_right": 1117
+    },
+    "without_bills+without_both": {
+      "original_wrong": 31,
+      "original_right": 156
+    },
+    "without_sleep+without_both": {
+      "original_wrong": 10,
+      "original_right": 12
+    },
+    "without_bills+without_sleep+without_both": {
+      "original_wrong": 4,
+      "original_right": 6
+    }
+  },
+  "rules": {
+    "without_bills": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 439,
+          "harmed": 1013,
+          "net": -574
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 46,
+          "harmed": 225,
+          "net": -179
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 393,
+          "harmed": 788,
+          "net": -395
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 47,
+          "harmed": 213,
+          "net": -166
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 257,
+          "harmed": 600,
+          "net": -343
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 3,
+          "harmed": 26,
+          "net": -23
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 3,
+          "harmed": 14,
+          "net": -11
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 13,
+          "harmed": 17,
+          "net": -4
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 74,
+          "harmed": 82,
+          "net": -8
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 9,
+          "harmed": 11,
+          "net": -2
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 28,
+          "harmed": 32,
+          "net": -4
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 5,
+          "harmed": 17,
+          "net": -12
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 14,
+          "harmed": 97,
+          "net": -83
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 15,
+          "harmed": 79,
+          "net": -64
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 18,
+          "net": -18
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 1,
+          "harmed": 0,
+          "net": 1
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 9,
+          "harmed": 14,
+          "net": -5
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 5,
+          "harmed": 8,
+          "net": -3
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 1,
+          "harmed": 7,
+          "net": -6
+        }
+      },
+      "net_by_fold": [
+        -63,
+        -97,
+        -69,
+        -65,
+        -89,
+        -40,
+        -69,
+        -82
+      ]
+    },
+    "without_sleep": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 269,
+          "harmed": 306,
+          "net": -37
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 26,
+          "harmed": 39,
+          "net": -13
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 243,
+          "harmed": 267,
+          "net": -24
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 60,
+          "harmed": 75,
+          "net": -15
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 63,
+          "harmed": 70,
+          "net": -7
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 4,
+          "harmed": 2,
+          "net": 2
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 1,
+          "harmed": 3,
+          "net": -2
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 9,
+          "harmed": 8,
+          "net": 1
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 96,
+          "harmed": 92,
+          "net": 4
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 23,
+          "harmed": 38,
+          "net": -15
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 6,
+          "harmed": 9,
+          "net": -3
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 7,
+          "harmed": 9,
+          "net": -2
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 3,
+          "harmed": 9,
+          "net": -6
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 15,
+          "harmed": 17,
+          "net": -2
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 3,
+          "harmed": 10,
+          "net": -7
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 5,
+          "harmed": 2,
+          "net": 3
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        }
+      },
+      "net_by_fold": [
+        3,
+        -6,
+        -3,
+        -16,
+        -4,
+        -6,
+        4,
+        -9
+      ]
+    },
+    "without_both": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 697,
+          "harmed": 2067,
+          "net": -1370
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 264,
+          "harmed": 1291,
+          "net": -1027
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 433,
+          "harmed": 776,
+          "net": -343
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 175,
+          "harmed": 1107,
+          "net": -932
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 178,
+          "harmed": 345,
+          "net": -167
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 4,
+          "harmed": 27,
+          "net": -23
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 3,
+          "harmed": 15,
+          "net": -12
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 3,
+          "harmed": 8,
+          "net": -5
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 301,
+          "harmed": 537,
+          "net": -236
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 21,
+          "harmed": 17,
+          "net": 4
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 7,
+          "harmed": 8,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 1,
+          "harmed": 2,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 4,
+          "harmed": 1,
+          "net": 3
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 93,
+          "harmed": 866,
+          "net": -773
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 10,
+          "harmed": 42,
+          "net": -32
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 18,
+          "net": -18
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 2,
+          "net": -2
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 159,
+          "harmed": 361,
+          "net": -202
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 1,
+          "harmed": 0,
+          "net": 1
+        }
+      },
+      "net_by_fold": [
+        -161,
+        -185,
+        -172,
+        -161,
+        -187,
+        -161,
+        -150,
+        -193
+      ]
+    },
+    "full_majority": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 417,
+          "harmed": 764,
+          "net": -347
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 45,
+          "harmed": 174,
+          "net": -129
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 372,
+          "harmed": 590,
+          "net": -218
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 62,
+          "harmed": 234,
+          "net": -172
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 196,
+          "harmed": 344,
+          "net": -148
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 4,
+          "harmed": 18,
+          "net": -14
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 3,
+          "harmed": 14,
+          "net": -11
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 6,
+          "harmed": 11,
+          "net": -5
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 114,
+          "harmed": 112,
+          "net": 2
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 19,
+          "harmed": 16,
+          "net": 3
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 9,
+          "harmed": 11,
+          "net": -2
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 1,
+          "harmed": 3,
+          "net": -2
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 3,
+          "harmed": 1,
+          "net": 2
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 15,
+          "harmed": 99,
+          "net": -84
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 10,
+          "harmed": 38,
+          "net": -28
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 11,
+          "net": -11
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 18,
+          "harmed": 23,
+          "net": -5
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 1,
+          "harmed": 0,
+          "net": 1
+        }
+      },
+      "net_by_fold": [
+        -34,
+        -70,
+        -31,
+        -37,
+        -50,
+        -28,
+        -33,
+        -64
+      ]
+    },
+    "repeated_same_views": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 308,
+          "harmed": 608,
+          "net": -300
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 27,
+          "harmed": 130,
+          "net": -103
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 281,
+          "harmed": 478,
+          "net": -197
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 46,
+          "harmed": 179,
+          "net": -133
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 180,
+          "harmed": 307,
+          "net": -127
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 4,
+          "harmed": 15,
+          "net": -11
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 2,
+          "harmed": 12,
+          "net": -10
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 5,
+          "harmed": 7,
+          "net": -2
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 51,
+          "harmed": 65,
+          "net": -14
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 14,
+          "harmed": 13,
+          "net": 1
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 4,
+          "harmed": 7,
+          "net": -3
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 1,
+          "harmed": 2,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 13,
+          "harmed": 74,
+          "net": -61
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 9,
+          "harmed": 30,
+          "net": -21
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 10,
+          "net": -10
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 4,
+          "harmed": 13,
+          "net": -9
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        }
+      },
+      "net_by_fold": [
+        -27,
+        -61,
+        -30,
+        -33,
+        -37,
+        -27,
+        -33,
+        -52
+      ]
+    },
+    "repeated_any_majorities": {
+      "by_group": {
+        "all": {
+          "rows": 8693,
+          "baseline_wrong": 1599,
+          "repaired": 312,
+          "harmed": 615,
+          "net": -303
+        },
+        "seven_agree": {
+          "rows": 6294,
+          "baseline_wrong": 819,
+          "repaired": 27,
+          "harmed": 131,
+          "net": -104
+        },
+        "seven_divided": {
+          "rows": 2399,
+          "baseline_wrong": 780,
+          "repaired": 285,
+          "harmed": 484,
+          "net": -199
+        },
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3740,
+          "baseline_wrong": 584,
+          "repaired": 46,
+          "harmed": 180,
+          "net": -134
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 1181,
+          "baseline_wrong": 295,
+          "repaired": 181,
+          "harmed": 309,
+          "net": -128
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 87,
+          "baseline_wrong": 9,
+          "repaired": 4,
+          "harmed": 15,
+          "net": -11
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 32,
+          "baseline_wrong": 6,
+          "repaired": 2,
+          "harmed": 12,
+          "net": -10
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 127,
+          "baseline_wrong": 55,
+          "repaired": 5,
+          "harmed": 7,
+          "net": -2
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2910,
+          "baseline_wrong": 482,
+          "repaired": 53,
+          "harmed": 69,
+          "net": -16
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 173,
+          "baseline_wrong": 61,
+          "repaired": 15,
+          "harmed": 13,
+          "net": 2
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 345,
+          "baseline_wrong": 87,
+          "repaired": 4,
+          "harmed": 7,
+          "net": -3
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 25,
+          "baseline_wrong": 9,
+          "repaired": 1,
+          "harmed": 2,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 73,
+          "baseline_wrong": 11,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        }
+      },
+      "seven_by_group": {
+        "positive_sleep_True_vote_False": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_True_vote_True": {
+          "rows": 0,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "positive_sleep_False_vote_False": {
+          "rows": 3148,
+          "baseline_wrong": 389,
+          "repaired": 13,
+          "harmed": 74,
+          "net": -61
+        },
+        "positive_sleep_False_vote_True": {
+          "rows": 250,
+          "baseline_wrong": 21,
+          "repaired": 9,
+          "harmed": 30,
+          "net": -21
+        },
+        "positive_sleep_missing_vote_False": {
+          "rows": 68,
+          "baseline_wrong": 3,
+          "repaired": 0,
+          "harmed": 10,
+          "net": -10
+        },
+        "positive_sleep_missing_vote_True": {
+          "rows": 9,
+          "baseline_wrong": 0,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_True_vote_False": {
+          "rows": 2,
+          "baseline_wrong": 1,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_True_vote_True": {
+          "rows": 2475,
+          "baseline_wrong": 329,
+          "repaired": 4,
+          "harmed": 14,
+          "net": -10
+        },
+        "no_known_positive_sleep_False_vote_False": {
+          "rows": 79,
+          "baseline_wrong": 20,
+          "repaired": 1,
+          "harmed": 1,
+          "net": 0
+        },
+        "no_known_positive_sleep_False_vote_True": {
+          "rows": 209,
+          "baseline_wrong": 47,
+          "repaired": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "no_known_positive_sleep_missing_vote_False": {
+          "rows": 13,
+          "baseline_wrong": 7,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "no_known_positive_sleep_missing_vote_True": {
+          "rows": 41,
+          "baseline_wrong": 2,
+          "repaired": 0,
+          "harmed": 0,
+          "net": 0
+        }
+      },
+      "net_by_fold": [
+        -27,
+        -61,
+        -31,
+        -35,
+        -37,
+        -27,
+        -33,
+        -52
+      ]
+    }
+  },
+  "design": "Half-panel training orders are nested in full-fold training orders before fitting; all six scores exclude the query order. Both votes compare to full-fold Mitra."
+}
