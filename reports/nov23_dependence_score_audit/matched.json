@@ -1,0 +1,268 @@
+{
+  "normalization": {
+    "joint_errors": {
+      "single": 4.440892098500626e-16,
+      "double": 4.440892098500626e-16,
+      "independent": 2.220446049250313e-16
+    },
+    "max_conditional_error": 5.551115123125783e-16,
+    "max_difference_from_all_anchor_pairs": 0.05567014541416687,
+    "states": 72
+  },
+  "unobserved_field_levels_per_training_fold": {
+    "20261112": [
+      0,
+      0,
+      0
+    ],
+    "20261115": [
+      0,
+      0,
+      0
+    ],
+    "20261116": [
+      0,
+      0,
+      0
+    ],
+    "v131": [
+      0,
+      0,
+      0
+    ]
+  },
+  "three_real_models_union": {
+    "stable": 11,
+    "new": 3,
+    "stable_harms": 66,
+    "new_harms": 38
+  },
+  "label_invariance": {
+    "perturbed_passengers": 772,
+    "perturbed_bookings": 585,
+    "prediction_max_diff": {
+      "anchor": 0.0,
+      "marginal": 0.0,
+      "conditional": 0.0,
+      "dependence_only": 0.0,
+      "both": 0.0
+    },
+    "joint_identical": true
+  },
+  "matched": {
+    "n": 354,
+    "max_gap": 0.024794251554964397,
+    "mean_gap": 0.005641954433317072
+  },
+  "population": {
+    "hard": 372,
+    "similar_correct": 3867,
+    "prior": 41
+  },
+  "scores": {
+    "incumbent": {
+      "matched_concordance": 0.5225988700564972,
+      "concordance_by_split": [
+        0.5112994350282486,
+        0.5141242937853108,
+        0.5423728813559322
+      ],
+      "concordance_ci": [
+        0.49295674899253883,
+        0.5523535062439962
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    },
+    "independent": {
+      "matched_concordance": 0.5211864406779662,
+      "concordance_by_split": [
+        0.519774011299435,
+        0.5324858757062146,
+        0.5112994350282486
+      ],
+      "concordance_ci": [
+        0.4721435316336166,
+        0.570225299470703
+      ],
+      "hard_stable": 10,
+      "hard_novel": 2,
+      "similar_correct_reversed": 60,
+      "new_similar_correct_reversed": 34
+    },
+    "single": {
+      "matched_concordance": 0.5315442561205274,
+      "concordance_by_split": [
+        0.5423728813559322,
+        0.5211864406779662,
+        0.5310734463276836
+      ],
+      "concordance_ci": [
+        0.48441926345609065,
+        0.5771437364718615
+      ],
+      "hard_stable": 7,
+      "hard_novel": 1,
+      "similar_correct_reversed": 15,
+      "new_similar_correct_reversed": 7
+    },
+    "double": {
+      "matched_concordance": 0.5277777777777778,
+      "concordance_by_split": [
+        0.5310734463276836,
+        0.5155367231638418,
+        0.536723163841808
+      ],
+      "concordance_ci": [
+        0.48578875679059497,
+        0.5709617180205415
+      ],
+      "hard_stable": 4,
+      "hard_novel": 1,
+      "similar_correct_reversed": 5,
+      "new_similar_correct_reversed": 2
+    },
+    "shuffled_double": {
+      "matched_concordance": 0.5117702448210922,
+      "concordance_by_split": [
+        0.5084745762711864,
+        0.5211864406779662,
+        0.5056497175141242
+      ],
+      "concordance_ci": [
+        0.46552907926706344,
+        0.5570905600270857
+      ],
+      "hard_stable": 9,
+      "hard_novel": 2,
+      "similar_correct_reversed": 47,
+      "new_similar_correct_reversed": 24
+    },
+    "anchor": {
+      "matched_concordance": 0.4896421845574388,
+      "concordance_by_split": [
+        0.4830508474576271,
+        0.4943502824858757,
+        0.4915254237288136
+      ],
+      "concordance_ci": [
+        0.45970526387193056,
+        0.5198910719590867
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    },
+    "marginal": {
+      "matched_concordance": 0.5,
+      "concordance_by_split": [
+        0.4689265536723164,
+        0.536723163841808,
+        0.4943502824858757
+      ],
+      "concordance_ci": [
+        0.4699445723143408,
+        0.530345471521942
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    },
+    "conditional": {
+      "matched_concordance": 0.5009416195856874,
+      "concordance_by_split": [
+        0.5112994350282486,
+        0.5225988700564972,
+        0.4689265536723164
+      ],
+      "concordance_ci": [
+        0.4703052245123897,
+        0.5318352059925093
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    },
+    "dependence_only": {
+      "matched_concordance": 0.5065913370998116,
+      "concordance_by_split": [
+        0.5112994350282486,
+        0.5028248587570622,
+        0.5056497175141242
+      ],
+      "concordance_ci": [
+        0.47535968010392565,
+        0.5373975484245801
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    },
+    "both": {
+      "matched_concordance": 0.504708097928437,
+      "concordance_by_split": [
+        0.4971751412429379,
+        0.519774011299435,
+        0.4971751412429379
+      ],
+      "concordance_ci": [
+        0.47525630252100837,
+        0.5344673037163065
+      ],
+      "hard_stable": 0,
+      "hard_novel": 0,
+      "similar_correct_reversed": 0,
+      "new_similar_correct_reversed": 0
+    }
+  },
+  "paired_comparison": {
+    "double-minus-independent": {
+      "difference": 0.006591337099811657,
+      "paired_ci": [
+        -0.0427148826104258,
+        0.05724838411819019
+      ]
+    },
+    "double-minus-single": {
+      "difference": -0.003766478342749532,
+      "paired_ci": [
+        -0.025280898876404494,
+        0.018522408963585448
+      ]
+    },
+    "double-minus-shuffled_double": {
+      "difference": 0.016007532956685496,
+      "paired_ci": [
+        -0.0308993513542854,
+        0.06349315969481716
+      ]
+    },
+    "conditional-minus-marginal": {
+      "difference": 0.000941619585687379,
+      "paired_ci": [
+        -0.03362367645630283,
+        0.03425925925925925
+      ]
+    },
+    "both-minus-marginal": {
+      "difference": 0.004708097928436912,
+      "paired_ci": [
+        -0.02374509179666773,
+        0.032196969696969696
+      ]
+    },
+    "conditional-minus-incumbent": {
+      "difference": -0.02165725047080979,
+      "paired_ci": [
+        -0.06061037727704395,
+        0.018305758007316188
+      ]
+    }
+  }
+}
