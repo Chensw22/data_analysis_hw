@@ -1,0 +1,134 @@
+{
+  "passengers": 6954,
+  "hard": 372,
+  "comparison_right": 3867,
+  "hard_bookings": 359,
+  "multiple_hard_bookings": 11,
+  "hard_in_multiple": 24,
+  "singleton_hard": 226,
+  "test_rows": 4277,
+  "test_known_cabins": 4177,
+  "shared_booking_rows": 0,
+  "shared_known_cabin_rows": 0,
+  "seed": 4011,
+  "draws_per_mode": 2000,
+  "risk_sextile_cuts": [
+    0.010147917099821093,
+    0.032559572332126904,
+    0.07418556451501998,
+    0.11511471829152234,
+    0.1816660408536601
+  ],
+  "tests": {
+    "passenger": {
+      "swappable": 4237,
+      "edges": {
+        "same_booking": {
+          "pairs": 1097,
+          "both_hard": 15,
+          "distinct_hard": 24,
+          "expected": 8.142,
+          "null95": [
+            3.0,
+            14.0
+          ],
+          "upper_tail": 0.013993003498250875
+        },
+        "same_booking_same_prediction": {
+          "pairs": 668,
+          "both_hard": 13,
+          "distinct_hard": 23,
+          "expected": 4.94,
+          "null95": [
+            1.0,
+            10.0
+          ],
+          "upper_tail": 0.0014992503748125937
+        },
+        "near_cabin_3": {
+          "pairs": 5659,
+          "both_hard": 61,
+          "distinct_hard": 108,
+          "expected": 55.851,
+          "null95": [
+            42.0,
+            72.0
+          ],
+          "upper_tail": 0.26186906546726635
+        },
+        "near_cabin_3_same_prediction": {
+          "pairs": 3553,
+          "both_hard": 45,
+          "distinct_hard": 80,
+          "expected": 40.5375,
+          "null95": [
+            28.0,
+            53.0
+          ],
+          "upper_tail": 0.25237381309345325
+        }
+      }
+    },
+    "intact_booking": {
+      "swappable": 3765,
+      "edges": {
+        "same_booking": {
+          "pairs": 1097,
+          "both_hard": 15,
+          "distinct_hard": 24,
+          "expected": 15.0,
+          "null95": [
+            15.0,
+            15.0
+          ],
+          "upper_tail": 1.0
+        },
+        "same_booking_same_prediction": {
+          "pairs": 668,
+          "both_hard": 13,
+          "distinct_hard": 23,
+          "expected": 13.0,
+          "null95": [
+            13.0,
+            13.0
+          ],
+          "upper_tail": 1.0
+        },
+        "near_cabin_3": {
+          "pairs": 5659,
+          "both_hard": 61,
+          "distinct_hard": 108,
+          "expected": 59.201,
+          "null95": [
+            45.0,
+            74.0
+          ],
+          "upper_tail": 0.41579210394802596
+        },
+        "near_cabin_3_same_prediction": {
+          "pairs": 3553,
+          "both_hard": 45,
+          "distinct_hard": 80,
+          "expected": 46.2885,
+          "null95": [
+            34.0,
+            60.0
+          ],
+          "upper_tail": 0.591704147926037
+        }
+      }
+    }
+  },
+  "diagnostic_with_known_peer_errors": {
+    "1": {
+      "flagged": 74,
+      "fixed": 23,
+      "harmed": 51
+    },
+    "2": {
+      "flagged": 9,
+      "fixed": 3,
+      "harmed": 6
+    }
+  }
+}
