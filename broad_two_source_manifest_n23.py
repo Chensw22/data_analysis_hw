@@ -15,12 +15,16 @@ from broad_within_booking_bill_matching_n23 import encode
 from class_analogue_experts_n23 import design
 
 
-def model(x, target, query, weights=None):
+def fit_model(x, target, weights=None):
     fit=CatBoostClassifier(iterations=310,depth=5,learning_rate=.055,l2_leaf_reg=4,thread_count=2,
                            random_seed=391,verbose=False,allow_writing_files=False)
     fit.fit(x,target,sample_weight=weights)
     np.testing.assert_array_equal(fit.classes_,np.arange(len(np.unique(target))))
-    return fit.predict_proba(query)
+    return fit
+
+
+def model(x, target, query, weights=None):
+    return fit_model(x, target, weights).predict_proba(query)
 
 
 def run_fold(frame,g,size,person,bill,y,t,q,f):
