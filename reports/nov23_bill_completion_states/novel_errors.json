@@ -1,0 +1,191 @@
+{
+  "previous": 78,
+  "metrics": {
+    "bill_completion_states": {
+      "stable_hard": 6,
+      "new_hard": 2,
+      "new_hard_complete_bills": 0,
+      "stable_harms": 97,
+      "new_stable_harms": 78
+    },
+    "conditional_bill_completion": {
+      "stable_hard": 7,
+      "new_hard": 3,
+      "new_hard_complete_bills": 2,
+      "stable_harms": 121,
+      "new_stable_harms": 82
+    },
+    "partner_specific_fields": {
+      "stable_hard": 5,
+      "new_hard": 4,
+      "new_hard_complete_bills": 4,
+      "stable_harms": 17,
+      "new_stable_harms": 13
+    },
+    "union": {
+      "stable_hard": 18,
+      "new_hard": 9,
+      "new_hard_complete_bills": 6,
+      "stable_harms": 232,
+      "new_stable_harms": 170
+    }
+  },
+  "bill_order": [
+    "Spa",
+    "FoodCourt",
+    "VRDeck",
+    "RoomService",
+    "ShoppingMall"
+  ],
+  "cases": [
+    {
+      "row": 2166,
+      "transported": false,
+      "planet": "__MISSING__",
+      "age": 28.0,
+      "bills": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        null
+      ],
+      "experts": [
+        "bill_completion_states/missing_paid"
+      ]
+    },
+    {
+      "row": 2241,
+      "transported": false,
+      "planet": "Earth",
+      "age": 13.0,
+      "bills": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        null
+      ],
+      "experts": [
+        "bill_completion_states/missing_paid"
+      ]
+    },
+    {
+      "row": 2819,
+      "transported": false,
+      "planet": "Europa",
+      "age": 32.0,
+      "bills": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "experts": [
+        "conditional_bill_completion/pooled_without_bills",
+        "conditional_bill_completion/stationary_without_bills",
+        "conditional_bill_completion/shuffled_without_bills"
+      ]
+    },
+    {
+      "row": 2909,
+      "transported": true,
+      "planet": "Earth",
+      "age": 21.0,
+      "bills": [
+        257.0,
+        427.0,
+        0.0,
+        17.0,
+        31.0
+      ],
+      "experts": [
+        "partner_specific_fields/partner_specific"
+      ]
+    },
+    {
+      "row": 3115,
+      "transported": true,
+      "planet": "Europa",
+      "age": 52.0,
+      "bills": [
+        1371.0,
+        1429.0,
+        488.0,
+        0.0,
+        0.0
+      ],
+      "experts": [
+        "partner_specific_fields/partner_specific"
+      ]
+    },
+    {
+      "row": 3961,
+      "transported": true,
+      "planet": "Mars",
+      "age": 19.0,
+      "bills": [
+        0.0,
+        88.0,
+        334.0,
+        1184.0,
+        0.0
+      ],
+      "experts": [
+        "conditional_bill_completion/pooled_without_bills",
+        "conditional_bill_completion/stationary_without_bills"
+      ]
+    },
+    {
+      "row": 4135,
+      "transported": true,
+      "planet": "Earth",
+      "age": 37.0,
+      "bills": [
+        0.0,
+        0.0,
+        0.0,
+        715.0,
+        54.0
+      ],
+      "experts": [
+        "partner_specific_fields/partner_specific"
+      ]
+    },
+    {
+      "row": 6882,
+      "transported": true,
+      "planet": "Europa",
+      "age": 52.0,
+      "bills": [
+        641.0,
+        1314.0,
+        66.0,
+        360.0,
+        8.0
+      ],
+      "experts": [
+        "partner_specific_fields/partner_specific"
+      ]
+    },
+    {
+      "row": 7816,
+      "transported": true,
+      "planet": "Europa",
+      "age": 48.0,
+      "bills": [
+        408.0,
+        null,
+        293.0,
+        0.0,
+        0.0
+      ],
+      "experts": [
+        "conditional_bill_completion/pooled_completion",
+        "conditional_bill_completion/stationary_completion",
+        "conditional_bill_completion/shuffled_completion"
+      ]
+    }
+  ]
+}

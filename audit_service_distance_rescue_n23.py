@@ -7,6 +7,17 @@ from broad_partition_evidence_n23 import ART, SEEDS, write
 from broad_service_distribution_distance_n23 import LABEL, REPORT
 from broad_tree_field_dividends_n23 import hard_cohorts
 
+PRIOR_MODELS = {
+    'abstaining_fields': ['personal_first', 'bill_first', 'averaged_order'],
+    'dependence_anchors': ['independent', 'single', 'double'],
+    'opposing_passengers': ['matched_conditional'],
+    'service_bag': ['pooled_logit', 'fixed', 'learned'],
+    'service_bag_trees': ['initial', 'mixture'],
+    'subspace_discriminants': ['diagonal_average', 'qda_average'],
+    'known_manifest_codes': ['shared_binary', 'code_mean', 'code_conditional', 'code_marginal',
+                             'ordinary_conditional', 'ordinary_marginal'],
+}
+
 
 def cached(seed, name, keys, expected):
     with np.load(ART / ('nov23_' + name) / (seed + '.npz')) as data:
@@ -18,23 +29,13 @@ def cached(seed, name, keys, expected):
 def main():
     row, y, frame, _, _ = load()
     _, _, hard, correct = hard_cohorts(row, y)
-    earlier = {
-        'abstaining_fields': ['personal_first', 'bill_first', 'averaged_order'],
-        'dependence_anchors': ['independent', 'single', 'double'],
-        'opposing_passengers': ['matched_conditional'],
-        'service_bag': ['pooled_logit', 'fixed', 'learned'],
-        'service_bag_trees': ['initial', 'mixture'],
-        'subspace_discriminants': ['diagonal_average', 'qda_average'],
-        'known_manifest_codes': ['shared_binary', 'code_mean', 'code_conditional', 'code_marginal',
-                                 'ordinary_conditional', 'ordinary_marginal'],
-    }
     latest = ['budget', 'unordered_fees', 'sliced_identity', 'aligned_services']
     baseline, candidate = [], []
     for seed in map(str, SEEDS):
         fold, _, ref, bill, near = opinions(seed, row, y, frame.BookingSize.to_numpy() > 1)
         expected = dict(row=row, y=y, fold=fold, ref=ref)
         previous = [bill, near]
-        for source, keys in earlier.items():
+        for source, keys in PRIOR_MODELS.items():
             previous.append(cached(seed, source, keys, expected))
         baseline.append((np.column_stack(previous) >= .5) == y[:, None])
         candidate.append((cached(seed, LABEL, latest, expected) >= .5) == y[:, None])
