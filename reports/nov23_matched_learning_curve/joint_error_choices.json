@@ -1,0 +1,146 @@
+{
+  "patterns": {
+    "000": {
+      "rows": 8133,
+      "baseline_errors": 1315,
+      "common_errors": 948
+    },
+    "001": {
+      "rows": 79,
+      "baseline_errors": 39,
+      "common_errors": 12
+    },
+    "010": {
+      "rows": 117,
+      "baseline_errors": 58,
+      "common_errors": 18
+    },
+    "011": {
+      "rows": 164,
+      "baseline_errors": 80,
+      "common_errors": 16
+    },
+    "100": {
+      "rows": 75,
+      "baseline_errors": 41,
+      "common_errors": 13
+    },
+    "101": {
+      "rows": 26,
+      "baseline_errors": 15,
+      "common_errors": 2
+    },
+    "110": {
+      "rows": 15,
+      "baseline_errors": 7,
+      "common_errors": 1
+    },
+    "111": {
+      "rows": 84,
+      "baseline_errors": 44,
+      "common_errors": 5
+    }
+  },
+  "policies": {
+    "queued_gate": {
+      "accuracy": 0.8176693891636949,
+      "fixed": 107,
+      "harmed": 93,
+      "net": 14,
+      "extra_fixed": 0,
+      "extra_harmed": 0,
+      "extra_common_fixed": 0,
+      "extra_historical_fixed": 0,
+      "net_additional": 0,
+      "vs_gate_by_fold": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vs_gate_ci_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    "add_exception": {
+      "accuracy": 0.8170942137351892,
+      "fixed": 226,
+      "harmed": 217,
+      "net": 9,
+      "extra_fixed": 119,
+      "extra_harmed": 124,
+      "extra_common_fixed": 28,
+      "extra_historical_fixed": 1,
+      "net_additional": -5,
+      "vs_gate_by_fold": [
+        -6,
+        -4,
+        0,
+        2,
+        -4,
+        3,
+        0,
+        4
+      ],
+      "vs_gate_ci_pp": [
+        -0.4209496657032366,
+        0.2876903086246217
+      ]
+    },
+    "add_both_transformers": {
+      "accuracy": 0.8172092488208904,
+      "fixed": 187,
+      "harmed": 177,
+      "net": 10,
+      "extra_fixed": 80,
+      "extra_harmed": 84,
+      "extra_common_fixed": 16,
+      "extra_historical_fixed": 1,
+      "net_additional": 1,
+      "vs_gate_by_fold": [
+        -4,
+        -2,
+        -9,
+        2,
+        1,
+        3,
+        2,
+        3
+      ],
+      "vs_gate_ci_pp": [
+        -0.3383240985624423,
+        0.2389092091138863
+      ]
+    },
+    "majority": {
+      "accuracy": 0.8164040032209824,
+      "fixed": 146,
+      "harmed": 143,
+      "net": 3,
+      "extra_fixed": 114,
+      "extra_harmed": 125,
+      "extra_common_fixed": 16,
+      "extra_historical_fixed": 1,
+      "net_additional": -1,
+      "vs_gate_by_fold": [
+        -6,
+        -2,
+        -7,
+        3,
+        -4,
+        0,
+        -2,
+        7
+      ],
+      "vs_gate_ci_pp": [
+        -0.4612280795239077,
+        0.22055260911997365
+      ]
+    }
+  }
+}
