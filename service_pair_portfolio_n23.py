@@ -41,7 +41,7 @@ def actions(changes):
     }
 
 
-def replay(frame, groups, row, y, seed, weight):
+def replay_votes(frame, groups, row, y, seed, weight):
     three, ref = scores(frame, groups, row, y, seed)
     with np.load(ART / f'nov23_broad_partition_evidence/{seed}.npz') as src:
         base, fold = src['base'], src['fold']
@@ -52,7 +52,12 @@ def replay(frame, groups, row, y, seed, weight):
             for field, expected in [('row', row), ('y', y), ('ref', ref), ('fold', fold), ('base', base)]:
                 np.testing.assert_array_equal(z[field], expected)
             views.append(changed(z[key], base, ref, w))
-    return ref, actions(np.column_stack(views) != ref[:, None])
+    return ref, np.column_stack(views)
+
+
+def replay(frame, groups, row, y, seed, weight):
+    ref, views = replay_votes(frame, groups, row, y, seed, weight)
+    return ref, actions(views != ref[:, None])
 
 
 def test_actions():
