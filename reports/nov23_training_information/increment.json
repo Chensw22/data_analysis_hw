@@ -1,0 +1,335 @@
+{
+  "plans": {
+    "20261112": {
+      "teacher_weights": [
+        0.4788840787899643,
+        0.47993874908342177,
+        0.45630920133864394
+      ],
+      "models": {
+        "student": {
+          "accuracy": 0.8178027034800115,
+          "fixed": 132,
+          "harmed": 131
+        },
+        "mimic": {
+          "accuracy": 0.8134886396318666,
+          "fixed": 109,
+          "harmed": 138
+        },
+        "combined_parents": {
+          "accuracy": 0.817371297095197,
+          "fixed": 65,
+          "harmed": 67
+        },
+        "combined_student": {
+          "accuracy": 0.81765890135174,
+          "fixed": 70,
+          "harmed": 70
+        },
+        "combined_shuffled": {
+          "accuracy": 0.817946505608283,
+          "fixed": 75,
+          "harmed": 73
+        }
+      },
+      "transitions": {
+        "agree": {
+          "rows": 6473,
+          "fixed": 35,
+          "harmed": 35
+        },
+        "disagree": {
+          "rows": 481,
+          "fixed": 140,
+          "harmed": 98
+        }
+      }
+    },
+    "20261115": {
+      "teacher_weights": [
+        0.5050600332123041,
+        0.4892484194260578,
+        0.49898633353283567
+      ],
+      "models": {
+        "student": {
+          "accuracy": 0.8157894736842105,
+          "fixed": 135,
+          "harmed": 118
+        },
+        "mimic": {
+          "accuracy": 0.815070463042853,
+          "fixed": 122,
+          "harmed": 110
+        },
+        "combined_parents": {
+          "accuracy": 0.8147828587863101,
+          "fixed": 94,
+          "harmed": 84
+        },
+        "combined_student": {
+          "accuracy": 0.8143514524014955,
+          "fixed": 101,
+          "harmed": 94
+        },
+        "combined_shuffled": {
+          "accuracy": 0.8153580672993961,
+          "fixed": 108,
+          "harmed": 94
+        }
+      },
+      "transitions": {
+        "agree": {
+          "rows": 6508,
+          "fixed": 32,
+          "harmed": 28
+        },
+        "disagree": {
+          "rows": 446,
+          "fixed": 125,
+          "harmed": 89
+        }
+      }
+    },
+    "20261116": {
+      "teacher_weights": [
+        0.507486120357393,
+        0.4919092401293398,
+        0.5453760021832575
+      ],
+      "models": {
+        "student": {
+          "accuracy": 0.8113316077077941,
+          "fixed": 149,
+          "harmed": 166
+        },
+        "mimic": {
+          "accuracy": 0.813057233247052,
+          "fixed": 133,
+          "harmed": 138
+        },
+        "combined_parents": {
+          "accuracy": 0.8091745757837217,
+          "fixed": 76,
+          "harmed": 108
+        },
+        "combined_student": {
+          "accuracy": 0.8090307736554501,
+          "fixed": 77,
+          "harmed": 110
+        },
+        "combined_shuffled": {
+          "accuracy": 0.8100373885533506,
+          "fixed": 79,
+          "harmed": 105
+        }
+      },
+      "transitions": {
+        "agree": {
+          "rows": 6448,
+          "fixed": 43,
+          "harmed": 32
+        },
+        "disagree": {
+          "rows": 506,
+          "fixed": 134,
+          "harmed": 117
+        }
+      }
+    },
+    "v131": {
+      "teacher_weights": [
+        0.49543886850067825,
+        0.5242338847279671,
+        0.4833363849077131
+      ],
+      "models": {
+        "student": {
+          "accuracy": 0.8087431693989071,
+          "fixed": 234,
+          "harmed": 272
+        },
+        "mimic": {
+          "accuracy": 0.811044003451251,
+          "fixed": 217,
+          "harmed": 239
+        },
+        "combined_parents": {
+          "accuracy": 0.814495254529767,
+          "fixed": 129,
+          "harmed": 127
+        },
+        "combined_student": {
+          "accuracy": 0.8129134311187806,
+          "fixed": 134,
+          "harmed": 143
+        },
+        "combined_shuffled": {
+          "accuracy": 0.8126258268622376,
+          "fixed": 133,
+          "harmed": 144
+        }
+      },
+      "transitions": {
+        "agree": {
+          "rows": 6484,
+          "fixed": 42,
+          "harmed": 53
+        },
+        "disagree": {
+          "rows": 470,
+          "fixed": 129,
+          "harmed": 107
+        }
+      }
+    }
+  },
+  "counts": {
+    "ever": 1518,
+    "repeat": 1070,
+    "unresolved": 509,
+    "never": 172,
+    "paid_transported": 428,
+    "zero_stayed": 394,
+    "both_parents_always_wrong": 818,
+    "both_parents_and_base_always_wrong": 791
+  },
+  "grouped": {
+    "student": {
+      "accuracy": [
+        0.8178027034800115,
+        0.8157894736842105,
+        0.8113316077077941
+      ],
+      "fixed": [
+        132,
+        135,
+        149
+      ],
+      "harmed": [
+        131,
+        118,
+        166
+      ],
+      "stable": {
+        "ever": 106,
+        "repeat": 15,
+        "unresolved": 1,
+        "never": 0,
+        "paid_transported": 3,
+        "zero_stayed": 10,
+        "both_parents_always_wrong": 0,
+        "both_parents_and_base_always_wrong": 0
+      }
+    },
+    "mimic": {
+      "accuracy": [
+        0.8134886396318666,
+        0.815070463042853,
+        0.813057233247052
+      ],
+      "fixed": [
+        109,
+        122,
+        133
+      ],
+      "harmed": [
+        138,
+        110,
+        138
+      ],
+      "stable": {
+        "ever": 104,
+        "repeat": 15,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 2,
+        "zero_stayed": 11,
+        "both_parents_always_wrong": 0,
+        "both_parents_and_base_always_wrong": 0
+      }
+    },
+    "combined_parents": {
+      "accuracy": [
+        0.817371297095197,
+        0.8147828587863101,
+        0.8091745757837217
+      ],
+      "fixed": [
+        65,
+        94,
+        76
+      ],
+      "harmed": [
+        67,
+        84,
+        108
+      ],
+      "stable": {
+        "ever": 77,
+        "repeat": 2,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 1,
+        "zero_stayed": 1,
+        "both_parents_always_wrong": 0,
+        "both_parents_and_base_always_wrong": 0
+      }
+    },
+    "combined_student": {
+      "accuracy": [
+        0.81765890135174,
+        0.8143514524014955,
+        0.8090307736554501
+      ],
+      "fixed": [
+        70,
+        101,
+        77
+      ],
+      "harmed": [
+        70,
+        94,
+        110
+      ],
+      "stable": {
+        "ever": 83,
+        "repeat": 3,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 1,
+        "zero_stayed": 2,
+        "both_parents_always_wrong": 0,
+        "both_parents_and_base_always_wrong": 0
+      }
+    },
+    "combined_shuffled": {
+      "accuracy": [
+        0.817946505608283,
+        0.8153580672993961,
+        0.8100373885533506
+      ],
+      "fixed": [
+        75,
+        108,
+        79
+      ],
+      "harmed": [
+        73,
+        94,
+        105
+      ],
+      "stable": {
+        "ever": 85,
+        "repeat": 6,
+        "unresolved": 0,
+        "never": 0,
+        "paid_transported": 1,
+        "zero_stayed": 4,
+        "both_parents_always_wrong": 0,
+        "both_parents_and_base_always_wrong": 0
+      }
+    }
+  }
+}
