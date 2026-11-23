@@ -1,0 +1,309 @@
+{
+  "middle": 2368,
+  "middle_wrong": 968,
+  "middle_errors_with_a_correct_expert": 940,
+  "middle_right_challenged": 1336,
+  "discovery_rules": [
+    {
+      "fold": 0,
+      "rules": [
+        [
+          [
+            "v44_without_name",
+            "without_sleep"
+          ],
+          "both"
+        ],
+        [
+          [
+            "control",
+            "cue"
+          ],
+          "positive"
+        ]
+      ]
+    },
+    {
+      "fold": 1,
+      "rules": [
+        [
+          [
+            "without_bills"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "balanced_full",
+            "offset_context"
+          ],
+          "positive"
+        ]
+      ]
+    },
+    {
+      "fold": 2,
+      "rules": [
+        [
+          [
+            "focus",
+            "control"
+          ],
+          "both"
+        ],
+        [
+          [
+            "tabicl",
+            "offset_context"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "without_bills",
+            "cue"
+          ],
+          "positive"
+        ]
+      ]
+    },
+    {
+      "fold": 3,
+      "rules": [
+        [
+          [
+            "mitra96"
+          ],
+          "both"
+        ],
+        [
+          [
+            "tabicl",
+            "balanced_full"
+          ],
+          "both"
+        ],
+        [
+          [
+            "tabicl",
+            "without_bills"
+          ],
+          "positive"
+        ]
+      ]
+    },
+    {
+      "fold": 4,
+      "rules": [
+        [
+          [
+            "learned",
+            "only_near"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "v44_without_name",
+            "control"
+          ],
+          "positive"
+        ],
+        [
+          [
+            "fixed",
+            "without_both"
+          ],
+          "negative"
+        ]
+      ]
+    },
+    {
+      "fold": 5,
+      "rules": [
+        [
+          [
+            "without_sleep",
+            "offset_context"
+          ],
+          "both"
+        ],
+        [
+          [
+            "mitra96",
+            "restored_full"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "tabicl",
+            "without_near"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "tabicl",
+            "without_bills"
+          ],
+          "both"
+        ],
+        [
+          [
+            "focus",
+            "offset_context"
+          ],
+          "positive"
+        ]
+      ]
+    },
+    {
+      "fold": 6,
+      "rules": [
+        [
+          [
+            "control",
+            "without_bills"
+          ],
+          "positive"
+        ],
+        [
+          [
+            "budget",
+            "without_sleep"
+          ],
+          "positive"
+        ],
+        [
+          [
+            "tabicl",
+            "mitra96"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "learned",
+            "without_both"
+          ],
+          "negative"
+        ]
+      ]
+    },
+    {
+      "fold": 7,
+      "rules": [
+        [
+          [
+            "mitra96"
+          ],
+          "both"
+        ],
+        [
+          [
+            "budget",
+            "balanced_full"
+          ],
+          "negative"
+        ],
+        [
+          [
+            "without_near",
+            "offset_context"
+          ],
+          "positive"
+        ],
+        [
+          [
+            "focus",
+            "only_near"
+          ],
+          "negative"
+        ]
+      ]
+    }
+  ],
+  "results": {
+    "discovery": {
+      "accuracy": 0.8161739330495801,
+      "fixed": 116,
+      "harmed": 139,
+      "additional_net": -11,
+      "common_fixed": 0,
+      "fold_net": [
+        -7,
+        -13,
+        -7,
+        2,
+        6,
+        -6,
+        8,
+        -6
+      ],
+      "ci_pp": [
+        -0.6060143007890693,
+        0.11337098160454305
+      ]
+    },
+    "replicated": {
+      "accuracy": 0.8187047049350051,
+      "fixed": 50,
+      "harmed": 51,
+      "additional_net": -7,
+      "common_fixed": 0,
+      "fold_net": [
+        0,
+        0,
+        -2,
+        0,
+        -2,
+        1,
+        4,
+        -2
+      ],
+      "ci_pp": [
+        -0.22942492486122992,
+        0.22883491628883607
+      ]
+    },
+    "replicated_strict": {
+      "accuracy": 0.8180144944207983,
+      "fixed": 13,
+      "harmed": 20,
+      "additional_net": -7,
+      "common_fixed": 0,
+      "fold_net": [
+        0,
+        0,
+        0,
+        -1,
+        -2,
+        -6,
+        2,
+        0
+      ],
+      "ci_pp": [
+        -0.19818197191798906,
+        0.04579475693587435
+      ]
+    }
+  },
+  "score_ranges": {
+    "low": {
+      "passengers": 3471,
+      "errors": 434,
+      "all_experts_wrong": 187
+    },
+    "middle": {
+      "passengers": 2368,
+      "errors": 968,
+      "all_experts_wrong": 28
+    },
+    "high": {
+      "passengers": 2854,
+      "errors": 173,
+      "all_experts_wrong": 42
+    }
+  }
+}
