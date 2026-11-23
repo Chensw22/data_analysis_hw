@@ -1,0 +1,188 @@
+{
+  "families": {
+    "adaptive_manifest_splines": [
+      "additive",
+      "replicated_pair"
+    ],
+    "independent_triggers": [
+      "logit",
+      "transport_trigger_matched"
+    ],
+    "multiscale_count_training": [
+      "ordinary",
+      "multiscale"
+    ],
+    "field_robustness": [
+      "clean",
+      "worst"
+    ],
+    "local_manifest_ranks": [
+      "original",
+      "real"
+    ],
+    "residual_kernel_alignment": [
+      "uniform",
+      "replicated"
+    ]
+  },
+  "plans": {
+    "20261112": {
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.81765890135174
+      },
+      "control": {
+        "fixed": 93,
+        "harmed": 80,
+        "accuracy": 0.8195283290192695
+      },
+      "structured": {
+        "fixed": 74,
+        "harmed": 77,
+        "accuracy": 0.8172274949669255
+      },
+      "separate": {
+        "fixed": 110,
+        "harmed": 102,
+        "accuracy": 0.818809318377912
+      },
+      "corroborated": {
+        "fixed": 112,
+        "harmed": 103,
+        "accuracy": 0.8189531205061835
+      }
+    },
+    "20261115": {
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8133448375035951
+      },
+      "control": {
+        "fixed": 97,
+        "harmed": 72,
+        "accuracy": 0.8169398907103825
+      },
+      "structured": {
+        "fixed": 102,
+        "harmed": 67,
+        "accuracy": 0.8183779119930975
+      },
+      "separate": {
+        "fixed": 121,
+        "harmed": 86,
+        "accuracy": 0.8183779119930975
+      },
+      "corroborated": {
+        "fixed": 122,
+        "harmed": 85,
+        "accuracy": 0.8186655162496405
+      }
+    },
+    "20261116": {
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8137762438884095
+      },
+      "control": {
+        "fixed": 63,
+        "harmed": 76,
+        "accuracy": 0.8119068162208801
+      },
+      "structured": {
+        "fixed": 56,
+        "harmed": 72,
+        "accuracy": 0.8114754098360656
+      },
+      "separate": {
+        "fixed": 75,
+        "harmed": 80,
+        "accuracy": 0.813057233247052
+      },
+      "corroborated": {
+        "fixed": 75,
+        "harmed": 83,
+        "accuracy": 0.8126258268622376
+      }
+    },
+    "v131": {
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8142076502732241
+      },
+      "control": {
+        "fixed": 79,
+        "harmed": 90,
+        "accuracy": 0.8126258268622376
+      },
+      "structured": {
+        "fixed": 77,
+        "harmed": 84,
+        "accuracy": 0.8132010353753235
+      },
+      "separate": {
+        "fixed": 104,
+        "harmed": 112,
+        "accuracy": 0.813057233247052
+      },
+      "corroborated": {
+        "fixed": 108,
+        "harmed": 115,
+        "accuracy": 0.8132010353753235
+      }
+    }
+  },
+  "stable": {
+    "reference": {
+      "correct_common_wrong": 11,
+      "missed_common_right": 21,
+      "gain95_pp": [
+        0.0,
+        0.0
+      ]
+    },
+    "control": {
+      "correct_common_wrong": 13,
+      "missed_common_right": 20,
+      "gain95_pp": [
+        -0.10604505928321897,
+        0.35648274509841105
+      ]
+    },
+    "structured": {
+      "correct_common_wrong": 18,
+      "missed_common_right": 23,
+      "gain95_pp": [
+        -0.13394576451502097,
+        0.28319203799567716
+      ]
+    },
+    "separate": {
+      "correct_common_wrong": 14,
+      "missed_common_right": 20,
+      "gain95_pp": [
+        -0.07252530011935966,
+        0.43234973960776435
+      ]
+    },
+    "corroborated": {
+      "correct_common_wrong": 13,
+      "missed_common_right": 20,
+      "gain95_pp": [
+        -0.07203728781270752,
+        0.4309556095359875
+      ]
+    }
+  },
+  "coverage": {
+    "control_stable": 184,
+    "structured_stable": 187,
+    "stable_in_either": 242,
+    "structured_only": 58,
+    "harmed_in_either": 386,
+    "structured_only_harm": 84
+  }
+}
