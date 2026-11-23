@@ -16,9 +16,10 @@ from broad_service_bag_trees_n23 import fit
 from broad_service_pairs_n23 import REPORT
 
 
-def simulate(frame,g,y,t,q,paid):
+def simulate(frame,g,y,t,q,paid,fit_paid=None):
     support=t[paid[t]]
-    fit_paid=fit(frame.iloc[support],y[support],np.ones(len(support)))
+    if fit_paid is None:
+        fit_paid=fit(frame.iloc[support],y[support],np.ones(len(support)))
     personal=frame.drop(columns=BILLS)
     x,_=coordinates(personal,support)
     # The complete query bookings have been excluded from the paid support.
