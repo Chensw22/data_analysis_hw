@@ -58,10 +58,27 @@ def fit_others(raw, y, groups, panel):
     np.savez_compressed(DEST / 'others.npz', passenger=raw.PassengerId.to_numpy(str), panel=panel, y=y, **p)
 
 
+def fit_family(family, raw, y, groups, panel):
+    from full_roster_booking_validation_n23 import predictor
+
+    predict = predictor(family, raw, y)
+    p = np.empty(len(y))
+    for h in (0, 1):
+        train, query = np.flatnonzero(panel != h), np.flatnonzero(panel == h)
+        assert not np.isin(groups[train], groups[query]).any()
+        p[query] = predict(train, query, h)
+        print(family, h, len(query), flush=True)
+    assert np.isfinite(p).all() and ((p >= 0) & (p <= 1)).all()
+    np.savez_compressed(DEST / f'{family}.npz', passenger=raw.PassengerId.to_numpy(str), panel=panel, y=y, p=p)
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('action', choices=['mitra', 'others'])
+    parser.add_argument('action', choices=['mitra', 'others', 'tabicl', 'v44_without_name'])
     action = parser.parse_args().action
     raw, y, groups, fold = data()
     DEST.mkdir(exist_ok=True)
-    (fit_mitra if action == 'mitra' else fit_others)(raw, y, groups, fold % 2)
+    if action in ('mitra', 'others'):
+        (fit_mitra if action == 'mitra' else fit_others)(raw, y, groups, fold % 2)
+    else:
+        fit_family(action, raw, y, groups, fold % 2)
