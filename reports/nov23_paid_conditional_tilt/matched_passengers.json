@@ -1,0 +1,131 @@
+{
+  "rows": 6954,
+  "cases": 428,
+  "controls": 2550,
+  "risk": {
+    "cases": [
+      0.22576265576335006,
+      0.22914412889698868,
+      0.2304589623780312
+    ],
+    "all_controls": [
+      0.13258903615633505,
+      0.13316267830460865,
+      0.1329808424591704
+    ],
+    "matched_controls": [
+      0.22485400203095318,
+      0.22846260597545318,
+      0.22928510119185558
+    ]
+  },
+  "maximum_risk_gap_quantiles": [
+    0.009347450878810504,
+    0.027442850063177135,
+    0.056844652565591125
+  ],
+  "phenotype": {
+    "earth": {
+      "cases": 0.6635514018691588,
+      "all_controls": 0.5568627450980392,
+      "matched_controls": 0.6588785046728972
+    },
+    "deck_g": {
+      "cases": 0.14719626168224298,
+      "all_controls": 0.17215686274509803,
+      "matched_controls": 0.21261682242990654
+    },
+    "solo": {
+      "cases": 0.6822429906542056,
+      "all_controls": 0.6282352941176471,
+      "matched_controls": 0.6915887850467289
+    },
+    "high_known_total": {
+      "cases": 0.4182242990654206,
+      "all_controls": 0.5764705882352941,
+      "matched_controls": 0.441588785046729
+    },
+    "spa_vr_room_ge75": {
+      "cases": 0.4602803738317757,
+      "all_controls": 0.6560784313725491,
+      "matched_controls": 0.4485981308411215
+    },
+    "missing_bill": {
+      "cases": 0.11682242990654206,
+      "all_controls": 0.1007843137254902,
+      "matched_controls": 0.1191588785046729
+    }
+  },
+  "targets": [
+    {
+      "net_fixes": 225,
+      "pair_wins": 327
+    },
+    {
+      "net_fixes": 255,
+      "pair_wins": 342
+    },
+    {
+      "net_fixes": 252,
+      "pair_wins": 340
+    }
+  ],
+  "comparisons": {
+    "base": {
+      "wins": [
+        221.0,
+        221.0,
+        237.0
+      ],
+      "pairs": 428,
+      "expected_net": [
+        14.0,
+        14.0,
+        46.0
+      ],
+      "mean_score_pair_accuracy": 0.5537383177570093
+    },
+    "archive_mean": {
+      "wins": [
+        200.0,
+        214.0,
+        204.0
+      ],
+      "pairs": 428,
+      "expected_net": [
+        -28.0,
+        0.0,
+        -20.0
+      ],
+      "mean_score_pair_accuracy": 0.4929906542056075
+    },
+    "conditional": {
+      "wins": [
+        229.0,
+        221.0,
+        225.0
+      ],
+      "pairs": 428,
+      "expected_net": [
+        30.0,
+        14.0,
+        22.0
+      ],
+      "mean_score_pair_accuracy": 0.5864485981308412
+    },
+    "pairwise": {
+      "wins": [
+        219.0,
+        231.0,
+        231.0
+      ],
+      "pairs": 428,
+      "expected_net": [
+        10.0,
+        34.0,
+        34.0
+      ],
+      "mean_score_pair_accuracy": 0.5257009345794392
+    }
+  }
+}
