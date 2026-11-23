@@ -16,6 +16,16 @@ def agreement_band(count):
     return np.select([count == 19, count >= 16, count >= 13], [3, 2, 1], default=0)
 
 
+def fit_risk(train, query, train_vote, y, t, q):
+    prep = ColumnTransformer([
+        ('category', OneHotEncoder(handle_unknown='ignore'), CATEGORICAL),
+        ('numeric', StandardScaler(), train.columns.difference(CATEGORICAL).tolist()),
+    ])
+    model = make_pipeline(prep, LogisticRegression(C=.1, max_iter=500))
+    model.fit(train.loc[t], y[t] != train_vote[t])
+    return model.predict_proba(query.loc[q])[:, 1]
+
+
 def risk_scores(train, query, train_vote, count, other_count, y, group, fold, mode):
     tr_band, q_band = agreement_band(count), agreement_band(other_count)
     scores = np.full(len(y), np.nan)
@@ -32,13 +42,7 @@ def risk_scores(train, query, train_vote, count, other_count, y, group, fold, mo
                 t = donors & (np.abs(tr_band - band) <= 1)
             else:
                 t = donors & (tr_band == band)
-            prep = ColumnTransformer([
-                ('category', OneHotEncoder(handle_unknown='ignore'), CATEGORICAL),
-                ('numeric', StandardScaler(), train.columns.difference(CATEGORICAL).tolist()),
-            ])
-            model = make_pipeline(prep, LogisticRegression(C=.1, max_iter=500))
-            model.fit(train.loc[t], y[t] != train_vote[t])
-            scores[q] = model.predict_proba(query.loc[q])[:, 1]
+            scores[q] = fit_risk(train, query, train_vote, y, t, q)
             if mode == 'all':
                 break
     assert np.isfinite(scores).all()
