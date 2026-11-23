@@ -9,7 +9,7 @@ from threadpoolctl import threadpool_limits
 from audit_stable_rescue_placebo_n23 import family_scores, panel
 from broad_geographic_transfer_n23 import BILLS, load
 from broad_pairwise_adjudication_n23 import paired
-from broad_partition_evidence_n23 import ROOT, SEEDS, write
+from broad_partition_evidence_n23 import ART, ROOT, SEEDS, write
 from broad_tree_field_dividends_n23 import hard_cohorts
 
 REPORT = ROOT/'reports/nov23_solo_dissent_neighbors'
@@ -59,7 +59,7 @@ def main():
     _, _, hard, right = hard_cohorts(row, y)
     solo = frame.BookingSize.to_numpy() == 1
     assert len(np.unique(groups[solo])) == solo.sum() and int((solo & hard).sum()) == 226
-    plans, history, candidate_masks = {}, {}, []
+    plans, history, candidate_masks, raw_dissents, risks = {}, {}, [], [], []
     for seed in [*map(str, SEEDS), 'v131']:
         fold, base, ref, families = family_scores(seed, row, y, frame)
         risk, dissent, views, paid = inputs(frame, ref, base, families)
@@ -67,6 +67,8 @@ def main():
         eligible = solo & dissent & (ref == (base >= .5))
         if seed != 'v131':
             candidate_masks.append(eligible)
+            raw_dissents.append(dissent)
+            risks.append(risk)
         scores = {'unchanged': risk.copy()}
         for name, coords in views.items():
             prob = risk.copy()
@@ -78,6 +80,10 @@ def main():
                     visited[ids] = True
             np.testing.assert_array_equal(visited, eligible)
             scores[name] = prob
+        cache_path = ART/'nov23_solo_dissent_neighbors'
+        cache_path.mkdir(exist_ok=True)
+        np.savez_compressed(cache_path/f'{seed}.npz', row=row, y=y, fold=fold, ref=ref, base=base,
+                            eligible=eligible, passenger=scores['passenger'])
         metrics = {}
         for name, prob in scores.items():
             flip = eligible & (prob > .5)
@@ -98,6 +104,17 @@ def main():
     _, _, _, _, earlier, _, _ = panel(row, y, frame)
     previous = np.logical_or.reduce(list(earlier.values()))
     assert (previous & hard).sum() == 87
+    frequency = np.stack(candidate_masks).sum(0)
+    profiles = {}
+    for name, scope in [('never', frequency == 0), ('sometimes', (frequency > 0) & (frequency < 3)),
+                        ('always', frequency == 3)]:
+        ids = scope & solo & hard
+        profiles[name] = dict(n=int(ids.sum()), transported=int((ids & y).sum()), positive_bill=int((ids & paid).sum()),
+                              positive_bill_transported=int((ids & paid & y).sum()),
+                              no_positive_bill_not_transported=int((ids & ~paid & ~y).sum()),
+                              positive_sleep_record=int((ids & frame.CryoSleep.eq('True').to_numpy()).sum()),
+                              any_raw_dissent=int((ids & np.any(raw_dissents, axis=0)).sum()),
+                              median_base_confidence=float(np.median(1-np.mean(risks, axis=0)[ids])))
     stable = {}
     for name, sequence in history.items():
         hits = np.stack(sequence)
@@ -106,7 +123,7 @@ def main():
                             stable_harms=int((solo & right & ~hits.any(0)).sum()))
     write(REPORT/'neighbors.json', dict(solo=int(solo.sum()), passengers=len(y), hard_solo=int((solo & hard).sum()),
                                        hard_by_eligible_replays=np.bincount(np.stack(candidate_masks)[:, solo & hard].sum(0), minlength=4).tolist(),
-                                       plans=plans, stable=stable))
+                                       hard_profiles=profiles, plans=plans, stable=stable))
     print(stable)
 
 
