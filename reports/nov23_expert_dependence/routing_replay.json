@@ -1,0 +1,880 @@
+{
+  "policies": {
+    "original/real/481": {
+      "accuracy": [
+        0.8189531205061835,
+        0.8167960885821111,
+        0.8192407247627265
+      ],
+      "fixed": [
+        88,
+        145,
+        115
+      ],
+      "harmed": [
+        79,
+        121,
+        77
+      ],
+      "stable": {
+        "ever": 104,
+        "repeat": 1,
+        "common": 24,
+        "core": 11,
+        "repeat_outside": 1
+      }
+    },
+    "original/real/179": {
+      "accuracy": [
+        0.8208225481737129,
+        0.819096922634455,
+        0.817083692838654
+      ],
+      "fixed": [
+        91,
+        148,
+        112
+      ],
+      "harmed": [
+        69,
+        108,
+        89
+      ],
+      "stable": {
+        "ever": 94,
+        "repeat": 1,
+        "common": 23,
+        "core": 10,
+        "repeat_outside": 1
+      }
+    },
+    "original/sham/481": {
+      "accuracy": [
+        0.8175150992234685,
+        0.8114754098360656,
+        0.815070463042853
+      ],
+      "fixed": [
+        59,
+        120,
+        98
+      ],
+      "harmed": [
+        60,
+        133,
+        89
+      ],
+      "stable": {
+        "ever": 74,
+        "repeat": 1,
+        "common": 16,
+        "core": 5,
+        "repeat_outside": 1
+      }
+    },
+    "original/sham/179": {
+      "accuracy": [
+        0.8186655162496405,
+        0.8137762438884095,
+        0.8163646821972965
+      ],
+      "fixed": [
+        61,
+        113,
+        100
+      ],
+      "harmed": [
+        54,
+        110,
+        82
+      ],
+      "stable": {
+        "ever": 84,
+        "repeat": 1,
+        "common": 19,
+        "core": 6,
+        "repeat_outside": 1
+      }
+    },
+    "augmented/real/481": {
+      "accuracy": [
+        0.8198159332758125,
+        0.816508484325568,
+        0.818809318377912
+      ],
+      "fixed": [
+        90,
+        139,
+        130
+      ],
+      "harmed": [
+        75,
+        117,
+        95
+      ],
+      "stable": {
+        "ever": 114,
+        "repeat": 2,
+        "common": 26,
+        "core": 9,
+        "repeat_outside": 2
+      }
+    },
+    "augmented/real/179": {
+      "accuracy": [
+        0.818809318377912,
+        0.8167960885821111,
+        0.8166522864538395
+      ],
+      "fixed": [
+        76,
+        139,
+        114
+      ],
+      "harmed": [
+        68,
+        115,
+        94
+      ],
+      "stable": {
+        "ever": 94,
+        "repeat": 4,
+        "common": 27,
+        "core": 6,
+        "repeat_outside": 4
+      }
+    },
+    "augmented/sham/481": {
+      "accuracy": [
+        0.8149266609145815,
+        0.8098935864250791,
+        0.814495254529767
+      ],
+      "fixed": [
+        53,
+        111,
+        111
+      ],
+      "harmed": [
+        72,
+        135,
+        106
+      ],
+      "stable": {
+        "ever": 74,
+        "repeat": 1,
+        "common": 21,
+        "core": 6,
+        "repeat_outside": 1
+      }
+    },
+    "augmented/sham/179": {
+      "accuracy": [
+        0.816508484325568,
+        0.815070463042853,
+        0.818521714121369
+      ],
+      "fixed": [
+        58,
+        120,
+        109
+      ],
+      "harmed": [
+        66,
+        108,
+        76
+      ],
+      "stable": {
+        "ever": 76,
+        "repeat": 0,
+        "common": 23,
+        "core": 6,
+        "repeat_outside": 0
+      }
+    }
+  },
+  "paired_comparisons": {
+    "original/real-vs-original/sham/481": {
+      "mean_pp": 0.36429872495446264,
+      "interval_pp": [
+        0.1539307390860295,
+        0.5797185513971553
+      ]
+    },
+    "augmented/real-vs-original/real/481": {
+      "mean_pp": 0.004793404275716614,
+      "interval_pp": [
+        -0.18827414635395792,
+        0.1953792199429298
+      ]
+    },
+    "augmented/real-vs-augmented/sham/481": {
+      "mean_pp": 0.5272744703288275,
+      "interval_pp": [
+        0.31225576871002225,
+        0.7478416526084027
+      ]
+    },
+    "original/real-vs-baseline/481": {
+      "mean_pp": 0.3403317035758796,
+      "interval_pp": [
+        0.09557739671273638,
+        0.5842198322712715
+      ]
+    },
+    "original/real-vs-original/sham/179": {
+      "mean_pp": 0.273224043715847,
+      "interval_pp": [
+        0.05740404658668231,
+        0.4930207542045952
+      ]
+    },
+    "augmented/real-vs-original/real/179": {
+      "mean_pp": -0.15818234109864826,
+      "interval_pp": [
+        -0.35084478754115245,
+        0.03354202077049886
+      ]
+    },
+    "augmented/real-vs-augmented/sham/179": {
+      "mean_pp": 0.07190106413574922,
+      "interval_pp": [
+        -0.13925353476911975,
+        0.2872387077459945
+      ]
+    },
+    "original/real-vs-baseline/179": {
+      "mean_pp": 0.40743936343591214,
+      "interval_pp": [
+        0.16740699143370166,
+        0.6549399628578454
+      ]
+    }
+  },
+  "by_baseline_errors": {
+    "original/real/481": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          36,
+          69,
+          42
+        ],
+        "correct_in_zero_to_three": [
+          0,
+          18,
+          111,
+          5307
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          24,
+          52,
+          35
+        ],
+        "harmed": [
+          30,
+          26,
+          23
+        ],
+        "correct_in_zero_to_three": [
+          5,
+          42,
+          114,
+          84
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          29,
+          32,
+          42
+        ],
+        "harmed": [
+          13,
+          26,
+          12
+        ],
+        "correct_in_zero_to_three": [
+          33,
+          104,
+          47,
+          19
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          35,
+          61,
+          38
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          956,
+          95,
+          18,
+          1
+        ]
+      }
+    },
+    "original/real/179": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          26,
+          61,
+          42
+        ],
+        "correct_in_zero_to_three": [
+          0,
+          17,
+          95,
+          5324
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          22,
+          51,
+          31
+        ],
+        "harmed": [
+          32,
+          21,
+          29
+        ],
+        "correct_in_zero_to_three": [
+          6,
+          44,
+          117,
+          78
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          34,
+          28,
+          39
+        ],
+        "harmed": [
+          11,
+          26,
+          18
+        ],
+        "correct_in_zero_to_three": [
+          42,
+          88,
+          58,
+          15
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          35,
+          69,
+          42
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          946,
+          103,
+          20,
+          1
+        ]
+      }
+    },
+    "original/sham/481": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          28,
+          76,
+          50
+        ],
+        "correct_in_zero_to_three": [
+          1,
+          19,
+          113,
+          5303
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          14,
+          34,
+          32
+        ],
+        "harmed": [
+          18,
+          30,
+          25
+        ],
+        "correct_in_zero_to_three": [
+          6,
+          45,
+          130,
+          64
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          16,
+          31,
+          24
+        ],
+        "harmed": [
+          14,
+          27,
+          14
+        ],
+        "correct_in_zero_to_three": [
+          45,
+          106,
+          43,
+          9
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          29,
+          55,
+          42
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          967,
+          81,
+          21,
+          1
+        ]
+      }
+    },
+    "original/sham/179": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          24,
+          59,
+          46
+        ],
+        "correct_in_zero_to_three": [
+          2,
+          13,
+          97,
+          5324
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          15,
+          33,
+          31
+        ],
+        "harmed": [
+          18,
+          26,
+          21
+        ],
+        "correct_in_zero_to_three": [
+          6,
+          46,
+          121,
+          72
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          18,
+          24,
+          31
+        ],
+        "harmed": [
+          12,
+          25,
+          15
+        ],
+        "correct_in_zero_to_three": [
+          45,
+          103,
+          44,
+          11
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          28,
+          56,
+          38
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          969,
+          81,
+          19,
+          1
+        ]
+      }
+    },
+    "augmented/real/481": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          28,
+          64,
+          47
+        ],
+        "correct_in_zero_to_three": [
+          2,
+          19,
+          95,
+          5320
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          22,
+          53,
+          42
+        ],
+        "harmed": [
+          28,
+          27,
+          33
+        ],
+        "correct_in_zero_to_three": [
+          9,
+          44,
+          101,
+          91
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          30,
+          25,
+          44
+        ],
+        "harmed": [
+          19,
+          26,
+          15
+        ],
+        "correct_in_zero_to_three": [
+          46,
+          93,
+          43,
+          21
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          38,
+          61,
+          44
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          955,
+          89,
+          24,
+          2
+        ]
+      }
+    },
+    "augmented/real/179": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          24,
+          62,
+          44
+        ],
+        "correct_in_zero_to_three": [
+          2,
+          18,
+          88,
+          5328
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          16,
+          49,
+          35
+        ],
+        "harmed": [
+          30,
+          26,
+          30
+        ],
+        "correct_in_zero_to_three": [
+          8,
+          46,
+          115,
+          76
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          32,
+          24,
+          36
+        ],
+        "harmed": [
+          14,
+          27,
+          20
+        ],
+        "correct_in_zero_to_three": [
+          46,
+          94,
+          49,
+          14
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          28,
+          66,
+          43
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          962,
+          83,
+          21,
+          4
+        ]
+      }
+    },
+    "augmented/sham/481": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          30,
+          75,
+          61
+        ],
+        "correct_in_zero_to_three": [
+          1,
+          19,
+          125,
+          5291
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          16,
+          35,
+          33
+        ],
+        "harmed": [
+          24,
+          32,
+          28
+        ],
+        "correct_in_zero_to_three": [
+          9,
+          44,
+          130,
+          62
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          15,
+          19,
+          32
+        ],
+        "harmed": [
+          18,
+          28,
+          17
+        ],
+        "correct_in_zero_to_three": [
+          53,
+          105,
+          34,
+          11
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          22,
+          57,
+          46
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          961,
+          94,
+          14,
+          1
+        ]
+      }
+    },
+    "augmented/sham/179": {
+      "0": {
+        "passengers": 5436,
+        "fixed": [
+          0,
+          0,
+          0
+        ],
+        "harmed": [
+          30,
+          64,
+          32
+        ],
+        "correct_in_zero_to_three": [
+          1,
+          9,
+          105,
+          5321
+        ]
+      },
+      "1": {
+        "passengers": 245,
+        "fixed": [
+          16,
+          36,
+          29
+        ],
+        "harmed": [
+          23,
+          22,
+          26
+        ],
+        "correct_in_zero_to_three": [
+          3,
+          48,
+          130,
+          64
+        ]
+      },
+      "2": {
+        "passengers": 203,
+        "fixed": [
+          16,
+          23,
+          36
+        ],
+        "harmed": [
+          13,
+          22,
+          18
+        ],
+        "correct_in_zero_to_three": [
+          44,
+          105,
+          42,
+          12
+        ]
+      },
+      "3": {
+        "passengers": 1070,
+        "fixed": [
+          26,
+          61,
+          44
+        ],
+        "harmed": [
+          0,
+          0,
+          0
+        ],
+        "correct_in_zero_to_three": [
+          966,
+          77,
+          27,
+          0
+        ]
+      }
+    }
+  }
+}

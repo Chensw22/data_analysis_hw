@@ -39,17 +39,29 @@ def average(levels, prob, train, query, train_y, global_only=False):
     return route
 
 
-def run_fold(scores, g, y):
+def routing_partitions(scores, shuffle=False):
     odds = logit(scores.clip(.001, .999))
     base = rankdata(scores[:, 0]) / (len(scores)+1)
     deltas = rankdata(odds[:, 1:]-odds[:, :1], axis=0) / (len(scores)+1)
     rng = np.random.default_rng(451)
+    if shuffle:
+        band = np.digitize(base, np.quantile(base, np.arange(1, 20)/20))
+        idx = np.arange(len(base))
+        for k in np.unique(band):
+            pos = np.flatnonzero(band == k)
+            idx[pos] = np.random.default_rng(493+k).permutation(pos)
+        deltas = deltas[idx]
     trees = [partition(np.c_[base, deltas/np.sqrt(deltas.shape[1])])]
     for _ in range(15):
         # Random projection preserves the whole roster and changes which
         # combinations of model opinions define nearby passengers.
         proj = rng.normal(size=(deltas.shape[1], 4))/np.sqrt(4*deltas.shape[1])
         trees.append(partition(np.c_[base, deltas@proj]))
+    return trees
+
+
+def run_fold(scores, g, y):
+    trees = routing_partitions(scores)
     probs = {"soft": scores.clip(.001, .999), "vote": .25 + .5*(scores >= .5)}
     output = {}
     for t, q in GroupKFold(5, shuffle=True, random_state=481).split(scores, groups=g):
