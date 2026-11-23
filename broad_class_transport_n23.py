@@ -56,7 +56,7 @@ def log_tree_sum(w):
     return val
 
 
-def scores(x, y, t, q):
+def joint_scores(x, y, t, q):
     widths = x.max(0)+1
     singles, pairs = counts(x, t, widths)
     d = x.shape[1]
@@ -86,6 +86,11 @@ def scores(x, y, t, q):
             edges[:,i,j] = edges[:,j,i] = weights[i,j]*ratio
         mixture = independent + log_tree_sum(edges) - normalizer
         logs.append(np.stack([independent,single_tree,mixture],1)+np.log(len(train)/len(t)))
+    return np.stack(logs)
+
+
+def scores(x, y, t, q):
+    logs = joint_scores(x, y, t, q)
     return logs[1]-logs[0]
 
 
