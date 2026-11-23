@@ -39,26 +39,33 @@ def save_scores(raw, y, split, probabilities, panel):
                         fold=split, **probabilities)
 
 
+def predict_priors(x, cue, context, y, groups, t, q):
+    p = {}
+    assert not np.isin(groups[t], groups[q]).any()
+    prior, query_prior = nested_prior(x[cue], y, t, q, groups)
+    p['cue'] = query_prior
+    w = .5/np.where(y[t], prior, 1-prior)
+    for design, label in [(x,'full'), (context,'context')]:
+        cat = [k for k in CATEGORICAL if k in design]
+        clf = model().fit(design.iloc[t], y[t].astype(int), cat_features=cat, sample_weight=w/w.mean())
+        z = clf.predict(design.iloc[q],prediction_type='RawFormulaVal')
+        p['restored_'+label] = expit(z+logit(query_prior))
+        if label == 'full':
+            p['balanced_full'] = expit(z)
+    cats = [k for k in CATEGORICAL if k in context]
+    train = Pool(context.iloc[t], label=y[t].astype(int), baseline=logit(prior), cat_features=cats)
+    query = Pool(context.iloc[q], baseline=logit(query_prior), cat_features=cats)
+    p['offset_context'] = model().fit(train).predict_proba(query)[:,1]
+    return p
+
+
 def fit_priors(x, cue, context, y, groups, fold):
     methods = ['cue', 'balanced_full', 'restored_full', 'restored_context', 'offset_context']
     p = {name: np.empty(len(y)) for name in methods}
     for f in np.unique(fold):
         t, q = np.flatnonzero(fold != f), np.flatnonzero(fold == f)
-        assert not np.isin(groups[t], groups[q]).any()
-        prior, query_prior = nested_prior(x[cue], y, t, q, groups)
-        p['cue'][q] = query_prior
-        w = .5/np.where(y[t], prior, 1-prior)
-        for design, label in [(x,'full'), (context,'context')]:
-            cat = [k for k in CATEGORICAL if k in design]
-            clf = model().fit(design.iloc[t], y[t].astype(int), cat_features=cat, sample_weight=w/w.mean())
-            z = clf.predict(design.iloc[q],prediction_type='RawFormulaVal')
-            p['restored_'+label][q] = expit(z+logit(query_prior))
-            if label == 'full':
-                p['balanced_full'][q] = expit(z)
-        cats = [k for k in CATEGORICAL if k in context]
-        train = Pool(context.iloc[t], label=y[t].astype(int), baseline=logit(prior), cat_features=cats)
-        query = Pool(context.iloc[q], baseline=logit(query_prior), cat_features=cats)
-        p['offset_context'][q] = model().fit(train).predict_proba(query)[:,1]
+        for name, score in predict_priors(x, cue, context, y, groups, t, q).items():
+            p[name][q] = score
         print('completed fold', f, flush=True)
     return p
 
