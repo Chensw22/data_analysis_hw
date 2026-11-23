@@ -1,0 +1,236 @@
+{
+  "bands": [
+    {
+      "rows": 635,
+      "vote_errors": 307,
+      "reference_errors": 280
+    },
+    {
+      "rows": 1113,
+      "vote_errors": 414,
+      "reference_errors": 393
+    },
+    {
+      "rows": 3313,
+      "vote_errors": 639,
+      "reference_errors": 645
+    },
+    {
+      "rows": 3632,
+      "vote_errors": 257,
+      "reference_errors": 257
+    }
+  ],
+  "policies": {
+    "all_only_correct_vote": {
+      "accuracy": 0.8155987576210745,
+      "fixed": 216,
+      "harmed": 244,
+      "band_fixed": [
+        80,
+        86,
+        48,
+        2
+      ],
+      "band_harmed": [
+        90,
+        106,
+        47,
+        1
+      ],
+      "fold_net": [
+        -8,
+        -14,
+        -4,
+        -6,
+        -1,
+        -11,
+        12,
+        4
+      ],
+      "additional_net": -1,
+      "persistent_correct": 4,
+      "persistent_fixed": 2,
+      "persistent_harmed": 0,
+      "booking_interval_pp": [
+        -0.8088541135826757,
+        0.18653277466584386
+      ]
+    },
+    "all_replace": {
+      "accuracy": 0.8147935120211665,
+      "fixed": 258,
+      "harmed": 293,
+      "band_fixed": [
+        95,
+        99,
+        62,
+        2
+      ],
+      "band_harmed": [
+        103,
+        128,
+        61,
+        1
+      ],
+      "fold_net": [
+        -20,
+        -14,
+        -1,
+        -6,
+        -3,
+        -9,
+        16,
+        2
+      ],
+      "additional_net": -4,
+      "persistent_correct": 2,
+      "persistent_fixed": 2,
+      "persistent_harmed": 2,
+      "booking_interval_pp": [
+        -0.9345794392523364,
+        0.1491710987265553
+      ]
+    },
+    "nearest_only_correct_vote": {
+      "accuracy": 0.8158288277924767,
+      "fixed": 230,
+      "harmed": 256,
+      "band_fixed": [
+        80,
+        75,
+        67,
+        8
+      ],
+      "band_harmed": [
+        93,
+        99,
+        60,
+        4
+      ],
+      "fold_net": [
+        -6,
+        -15,
+        -11,
+        -5,
+        5,
+        -2,
+        -1,
+        9
+      ],
+      "additional_net": -3,
+      "persistent_correct": 6,
+      "persistent_fixed": 4,
+      "persistent_harmed": 0,
+      "booking_interval_pp": [
+        -0.7982160813313457,
+        0.22736578189296763
+      ]
+    },
+    "nearest_replace": {
+      "accuracy": 0.8150235821925688,
+      "fixed": 274,
+      "harmed": 307,
+      "band_fixed": [
+        95,
+        92,
+        79,
+        8
+      ],
+      "band_harmed": [
+        112,
+        119,
+        72,
+        4
+      ],
+      "fold_net": [
+        -15,
+        -17,
+        -11,
+        -7,
+        7,
+        0,
+        4,
+        6
+      ],
+      "additional_net": -4,
+      "persistent_correct": 4,
+      "persistent_fixed": 4,
+      "persistent_harmed": 2,
+      "booking_interval_pp": [
+        -0.909459162094178,
+        0.18592491756109555
+      ]
+    },
+    "same_only_correct_vote": {
+      "accuracy": 0.8109973541930289,
+      "fixed": 254,
+      "harmed": 322,
+      "band_fixed": [
+        78,
+        86,
+        79,
+        11
+      ],
+      "band_harmed": [
+        94,
+        109,
+        107,
+        12
+      ],
+      "fold_net": [
+        -29,
+        -8,
+        -7,
+        -11,
+        5,
+        -1,
+        -13,
+        -4
+      ],
+      "additional_net": -7,
+      "persistent_correct": 11,
+      "persistent_fixed": 9,
+      "persistent_harmed": 0,
+      "booking_interval_pp": [
+        -1.2990751605932174,
+        -0.22589064270489104
+      ]
+    },
+    "same_replace": {
+      "accuracy": 0.8090417577361095,
+      "fixed": 313,
+      "harmed": 398,
+      "band_fixed": [
+        111,
+        104,
+        87,
+        11
+      ],
+      "band_harmed": [
+        140,
+        131,
+        115,
+        12
+      ],
+      "fold_net": [
+        -37,
+        -10,
+        -8,
+        -15,
+        9,
+        -2,
+        -10,
+        -12
+      ],
+      "additional_net": -14,
+      "persistent_correct": 9,
+      "persistent_fixed": 9,
+      "persistent_harmed": 2,
+      "booking_interval_pp": [
+        -1.5613474505089173,
+        -0.3664209576244486
+      ]
+    }
+  }
+}
