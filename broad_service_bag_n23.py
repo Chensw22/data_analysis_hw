@@ -42,7 +42,7 @@ def design(frame):
     return x,gate,prior
 
 
-def fit(x,g,prior,y,t,q,mode):
+def fit(x,g,prior,y,t,q,mode,return_parameters=False):
     risk_shape=x.shape[1:]
     split=np.prod(risk_shape)
     gating=mode=='learned'
@@ -72,7 +72,8 @@ def fit(x,g,prior,y,t,q,mode):
     result=minimize(objective,np.zeros(size),method='L-BFGS-B',jac=True,options={'maxiter':450,'ftol':1e-8})
     if not result.success:
         raise RuntimeError(result.message)
-    return forward(result.x,x[q],g[q],prior[q])[0]
+    predicted=forward(result.x,x[q],g[q],prior[q])[0]
+    return (predicted,result.x) if return_parameters else predicted
 
 
 def run_fold(frame,groups,y,t,q):
