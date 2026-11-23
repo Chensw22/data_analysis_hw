@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 23 日新增等待前两次线上评测结束再提交的 109 人版。候选为 `proposal_n23_half_roster_disagreement`，导出固定在 `9c266a25fca5c9988d7075a6f95644f4a943accd`。手动提交前先检查 `com.chensw22.spaceship.halfroster109.once`、候选 artifacts 目录中的 `queue_status.json` 及对应线上回执。该版只用于检验局部增益，基于 v131 总分和 109 项改判计算的公开分上限为 84.241%。
+
 - 11 月 23 日为 160 人版设置了一个后续提交任务 `com.chensw22.spaceship.servicepair.followup.once`，状态位于 `artifacts/nov23_forward_release_transfer/followup_status.json`。待首份回执确认后，如果 160 人版追平或超过 v131 则测试 216 人版，否则测试 111 人版。先检查两个 launchd 任务、状态和回执，避免重复上传。具体选模回放见 `reports/nov23_forward_release_transfer/RESULTS.md`。
 
 - 11 月 23 日 16:29 北京时间，改判 160 人的固定文件（`proposal_n23_service_pair_zero_donor`，SHA-256 以 `b93762ae` 开头）已在当前 Mac 登录会话排队。一次性任务为 `com.chensw22.spaceship.servicepair160.once`，首次核验主账号当天 10 次已用、可用 0 次。后续上传这份文件前先查 `launchctl list com.chensw22.spaceship.servicepair160.once`、`artifacts/proposal_n23_service_pair_zero_donor/queue_status.json` 和其 `reports/` 下的线上回执，避免重复提交。

@@ -49,20 +49,31 @@ def choice(score, rank):
 
 def record(name, manifest, receipt, first, third):
     model, digest, source, revision = FILES[name]
+    dependencies = (read(ROOT/'artifacts'/name/model)['members'] if name == UNION
+                    else {v:manifest[v] for v in ['v108', 'v131']})
+    score, ref = persist_score(name, manifest, receipt, model, digest, source, revision,
+                               dependencies, third, first)
+    state('completed', proposal=name, ref=ref, score=score)
+
+
+def persist_score(name, manifest, receipt, model, digest, source, revision, dependencies, third, first):
     report = receipt.parent.parent
     attempt = read(receipt)
     assert attempt['file_sha256'] == digest and attempt['evaluation']['Status'] == 'COMPLETE'
     score = float(attempt['evaluation']['Public Score'])
     rank = attempt.get('leaderboard_snapshot', {})
     result = report/'followup_result.json'
-    write(result, dict(ref=attempt['submission_ref'], score=score, rank=rank, third=third,
-                       first_ref=first['ref'], first_score=first['score']))
+    if result.exists():
+        saved = read(result)
+        assert str(saved['ref']) == str(attempt['submission_ref']) and saved['score'] == score
+        assert str(saved['first_ref']) == str(first['ref']) and saved['first_score'] == first['score']
+    else:
+        write(result, dict(ref=attempt['submission_ref'], score=score, rank=rank, third=third,
+                           first_ref=first['ref'], first_score=first['score']))
     paths = [receipt, result]
     best_file = ROOT/'reports/current_best_submission.json'
     best = read(best_file)
     if score > best['public_score']:
-        dependencies = (read(ROOT/'artifacts'/name/model)['members'] if name == UNION
-                        else {v:manifest[v] for v in ['v108', 'v131']})
         write(best_file, dict(version=manifest['version'], proposal=name, submission_ref=attempt['submission_ref'],
                               public_score=score, upload_commit=attempt['commit'], csv_sha256=digest,
                               source_model_sha256=manifest['model_sha256'], source_model_path=f'artifacts/{name}/{model}',
@@ -74,16 +85,20 @@ def record(name, manifest, receipt, first, third):
                               online_record=str(receipt.relative_to(ROOT)), dependencies=dependencies))
     if read(best_file)['csv_sha256'] == digest:
         paths.append(best_file)
+    commit_records(paths, f'Record {name} public score {score:.5f}')
+    return score, attempt['submission_ref']
+
+
+def commit_records(paths, message):
     names = [str(p.relative_to(ROOT)) for p in paths]
     subprocess.run(['git', 'add', '--', *names], cwd=ROOT, check=True)
     diff = subprocess.run(['git', 'diff', '--quiet', 'HEAD', '--', *names], cwd=ROOT)
     if diff.returncode == 1:
-        subprocess.run(['git', 'commit', '--only', '-m', f'Record {name} public score {score:.5f}', '--', *names],
+        subprocess.run(['git', 'commit', '--only', '-m', message, '--', *names],
                        cwd=ROOT, check=True)
     else:
         diff.check_returncode()
     subprocess.run(['git', '-c', f'core.sshCommand={SSH}', 'push', 'origin', 'main'], cwd=ROOT, check=True)
-    state('completed', proposal=name, ref=attempt['submission_ref'], score=score)
 
 
 def run():
