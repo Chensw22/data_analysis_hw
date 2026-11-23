@@ -1,0 +1,257 @@
+{
+  "training": {
+    "model_sha256": "0b7c41134be4b414f96cdde598825350e73cfb4180ad0e05d24093a3ac727687",
+    "anchor": "4397cd6813a5c384a5d708ad8aa072e915b42f48e4cc921d25ed2025aecb6cf1",
+    "incumbent": "ed644344cf5df8d6e5c213b5c42b109d0efbee43404cb8b00e6bafc2fde187d4",
+    "training_rows": 8693
+  },
+  "plans": {
+    "20261112": {
+      "quarter": {
+        "fixed": 77,
+        "harmed": 56,
+        "accuracy": 0.8206787460454414
+      },
+      "change_150": {
+        "fixed": 103,
+        "harmed": 88,
+        "accuracy": 0.8198159332758125
+      },
+      "change_250": {
+        "fixed": 174,
+        "harmed": 183,
+        "accuracy": 0.8163646821972965
+      },
+      "change_350": {
+        "fixed": 246,
+        "harmed": 314,
+        "accuracy": 0.8078803566292782
+      },
+      "full": {
+        "fixed": 264,
+        "harmed": 364,
+        "accuracy": 0.8032786885245902
+      },
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.81765890135174
+      }
+    },
+    "20261115": {
+      "quarter": {
+        "fixed": 70,
+        "harmed": 48,
+        "accuracy": 0.816508484325568
+      },
+      "change_150": {
+        "fixed": 102,
+        "harmed": 74,
+        "accuracy": 0.817371297095197
+      },
+      "change_250": {
+        "fixed": 171,
+        "harmed": 173,
+        "accuracy": 0.813057233247052
+      },
+      "change_350": {
+        "fixed": 253,
+        "harmed": 294,
+        "accuracy": 0.8074489502444636
+      },
+      "full": {
+        "fixed": 273,
+        "harmed": 343,
+        "accuracy": 0.8032786885245902
+      },
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8133448375035951
+      }
+    },
+    "20261116": {
+      "quarter": {
+        "fixed": 78,
+        "harmed": 62,
+        "accuracy": 0.8160770779407536
+      },
+      "change_150": {
+        "fixed": 96,
+        "harmed": 83,
+        "accuracy": 0.815645671555939
+      },
+      "change_250": {
+        "fixed": 186,
+        "harmed": 178,
+        "accuracy": 0.8149266609145815
+      },
+      "change_350": {
+        "fixed": 277,
+        "harmed": 331,
+        "accuracy": 0.8060109289617486
+      },
+      "full": {
+        "fixed": 293,
+        "harmed": 377,
+        "accuracy": 0.8016968651136037
+      },
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8137762438884095
+      }
+    },
+    "v131": {
+      "quarter": {
+        "fixed": 90,
+        "harmed": 86,
+        "accuracy": 0.8147828587863101
+      },
+      "change_150": {
+        "fixed": 120,
+        "harmed": 106,
+        "accuracy": 0.816220880069025
+      },
+      "change_250": {
+        "fixed": 194,
+        "harmed": 218,
+        "accuracy": 0.8107563991947081
+      },
+      "change_350": {
+        "fixed": 269,
+        "harmed": 367,
+        "accuracy": 0.8001150417026172
+      },
+      "full": {
+        "fixed": 287,
+        "harmed": 414,
+        "accuracy": 0.7959447799827437
+      },
+      "reference": {
+        "fixed": 0,
+        "harmed": 0,
+        "accuracy": 0.8142076502732241
+      }
+    }
+  },
+  "stable": {
+    "quarter": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 16,
+      "stable_harms": 16,
+      "gain95_pp": [
+        0.0715689019067965,
+        0.49193552601285373
+      ]
+    },
+    "change_150": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 19,
+      "stable_harms": 20,
+      "gain95_pp": [
+        0.00951068541555739,
+        0.5323013411790557
+      ]
+    },
+    "change_250": {
+      "hard_stable": 0,
+      "hard_ever": 3,
+      "common_stable": 39,
+      "stable_harms": 38,
+      "gain95_pp": [
+        -0.40109553901311246,
+        0.38619401110624185
+      ]
+    },
+    "change_350": {
+      "hard_stable": 1,
+      "hard_ever": 10,
+      "common_stable": 64,
+      "stable_harms": 96,
+      "gain95_pp": [
+        -1.3131349309716072,
+        -0.23556393815660723
+      ]
+    },
+    "full": {
+      "hard_stable": 1,
+      "hard_ever": 11,
+      "common_stable": 71,
+      "stable_harms": 116,
+      "gain95_pp": [
+        -1.7903204116686722,
+        -0.6289078538734769
+      ]
+    },
+    "reference": {
+      "hard_stable": 0,
+      "hard_ever": 0,
+      "common_stable": 11,
+      "stable_harms": 21,
+      "gain95_pp": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "test": {
+    "quarter": {
+      "weight": 0.25,
+      "changes": 114,
+      "new_changes": 6,
+      "distance_from_pending": {
+        "proposal_n23_personal_bill_quarter": 116,
+        "proposal_n23_three_corrections_mean": 102,
+        "proposal_n23_service_bag_quarter": 143,
+        "proposal_n23_service_bag_tree_quarter": 39
+      }
+    },
+    "change_150": {
+      "weight": 0.34604876035761284,
+      "changes": 150,
+      "new_changes": 26,
+      "distance_from_pending": {
+        "proposal_n23_personal_bill_quarter": 144,
+        "proposal_n23_three_corrections_mean": 136,
+        "proposal_n23_service_bag_quarter": 157,
+        "proposal_n23_service_bag_tree_quarter": 63
+      }
+    },
+    "change_250": {
+      "weight": 0.6062927623662444,
+      "changes": 250,
+      "new_changes": 109,
+      "distance_from_pending": {
+        "proposal_n23_personal_bill_quarter": 234,
+        "proposal_n23_three_corrections_mean": 234,
+        "proposal_n23_service_bag_quarter": 239,
+        "proposal_n23_service_bag_tree_quarter": 149
+      }
+    },
+    "change_350": {
+      "weight": 0.913004747932077,
+      "changes": 350,
+      "new_changes": 202,
+      "distance_from_pending": {
+        "proposal_n23_personal_bill_quarter": 330,
+        "proposal_n23_three_corrections_mean": 326,
+        "proposal_n23_service_bag_quarter": 331,
+        "proposal_n23_service_bag_tree_quarter": 247
+      }
+    },
+    "full": {
+      "weight": 1.0,
+      "changes": 387,
+      "new_changes": 236,
+      "distance_from_pending": {
+        "proposal_n23_personal_bill_quarter": 363,
+        "proposal_n23_three_corrections_mean": 361,
+        "proposal_n23_service_bag_quarter": 362,
+        "proposal_n23_service_bag_tree_quarter": 284
+      }
+    }
+  }
+}

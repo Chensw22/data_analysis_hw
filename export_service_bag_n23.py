@@ -40,13 +40,13 @@ def export():
     publish_blend(VERSION,path,test,alt,replay,len(train),(PERSONAL,THREE),'three_candidate_union')
 
 
-def publish_blend(version,path,test,alt,replay,training_rows,comparators,union_key):
+def publish_blend(version,path,test,alt,replay,training_rows,comparators,union_key,weight=.25):
     out=path.parent
     base,_,anchor=source('proposal_v108_party_bills',test)
     _,ref,incumbent=source('proposal_v131_party_consensus',test)
     locked=ref!=(base>=.5)
     def blend(v):
-        return np.where(locked,ref,.75*base+.25*v)
+        return np.where(locked,ref,(1-weight)*base+weight*v)
     np.testing.assert_array_equal(alt,replay)
     assert np.isfinite(alt).all() and ((alt>=0)&(alt<=1)).all()
     p,r=blend(alt),blend(replay)
@@ -85,7 +85,10 @@ def publish_blend(version,path,test,alt,replay,training_rows,comparators,union_k
     manifest[union_key]=int(union.sum())
     for folder in (out,ROOT/'reports'/out.name):
         write(folder/'manifest.json',manifest)
-        write(folder/'selection.json',dict(version=version,threshold=.5))
+        selection=dict(version=version,threshold=.5)
+        if weight!=.25:
+            selection['blend_weight']=weight
+        write(folder/'selection.json',selection)
     print(manifest)
 
 
