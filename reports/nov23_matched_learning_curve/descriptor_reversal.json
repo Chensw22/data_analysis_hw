@@ -1,0 +1,127 @@
+{
+  "candidate_rules": 6704,
+  "results": {
+    "full": {
+      "strict": {
+        "0.02": {
+          "hindsight_choices": {},
+          "hindsight": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          },
+          "held_out": {
+            "fixed": 0,
+            "harmed": 31,
+            "net": -31
+          }
+        },
+        "0.05": {
+          "hindsight_choices": {},
+          "hindsight": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          },
+          "held_out": {
+            "fixed": 0,
+            "harmed": 17,
+            "net": -17
+          }
+        }
+      },
+      "outside": {
+        "0.02": {
+          "hindsight_choices": {
+            "False": "sleep=True & side=S & order_size=1"
+          },
+          "hindsight": {
+            "fixed": 32,
+            "harmed": 24,
+            "net": 8
+          },
+          "held_out": {
+            "fixed": 96,
+            "harmed": 185,
+            "net": -89
+          }
+        },
+        "0.05": {
+          "hindsight_choices": {},
+          "hindsight": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          },
+          "held_out": {
+            "fixed": 139,
+            "harmed": 260,
+            "net": -121
+          }
+        }
+      }
+    },
+    "historical": {
+      "strict": {
+        "0.02": {
+          "hindsight_choices": {},
+          "hindsight": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          },
+          "held_out": {
+            "fixed": 0,
+            "harmed": 4,
+            "net": -4
+          }
+        },
+        "0.05": {
+          "hindsight_choices": {},
+          "hindsight": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          },
+          "held_out": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0
+          }
+        }
+      },
+      "outside": {
+        "0.02": {
+          "hindsight_choices": {
+            "False": "planet=Earth & sleep=True & side=S"
+          },
+          "hindsight": {
+            "fixed": 28,
+            "harmed": 18,
+            "net": 10
+          },
+          "held_out": {
+            "fixed": 86,
+            "harmed": 130,
+            "net": -44
+          }
+        },
+        "0.05": {
+          "hindsight_choices": {
+            "False": "planet=Earth & positive_services=0 & order_size=1"
+          },
+          "hindsight": {
+            "fixed": 54,
+            "harmed": 50,
+            "net": 4
+          },
+          "held_out": {
+            "fixed": 112,
+            "harmed": 178,
+            "net": -66
+          }
+        }
+      }
+    }
+  }
+}
