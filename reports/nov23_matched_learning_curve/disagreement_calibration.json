@@ -1,0 +1,502 @@
+{
+  "coverage": {
+    "engineered_trees": {
+      "correctable_all": 170,
+      "correctable_common": 2,
+      "persistent_both": 0,
+      "at_risk_all": 183
+    },
+    "maxout": {
+      "correctable_all": 282,
+      "correctable_common": 3,
+      "persistent_both": 2,
+      "at_risk_all": 426
+    },
+    "spending_likelihood": {
+      "correctable_all": 293,
+      "correctable_common": 10,
+      "persistent_both": 4,
+      "at_risk_all": 667
+    },
+    "any_family": {
+      "correctable_all": 479,
+      "correctable_common": 12,
+      "persistent_both": 6,
+      "at_risk_all": 898
+    }
+  },
+  "decisions": {
+    "one_family": {
+      "historical": {
+        "corrected": 476,
+        "harmed": 850,
+        "accuracy": 0.7604256542996837,
+        "net": -374,
+        "ci_pp": [
+          -6.39004207709808,
+          -4.338395804756355
+        ],
+        "fold_net": [
+          -124,
+          -127,
+          -123
+        ]
+      },
+      "full": {
+        "corrected": 479,
+        "harmed": 898,
+        "accuracy": 0.7706200391119291,
+        "net": -419,
+        "ci_pp": [
+          -5.645382176538411,
+          -4.018751650769843
+        ],
+        "fold_net": [
+          -60,
+          -57,
+          -41,
+          -61,
+          -76,
+          -16,
+          -60,
+          -48
+        ]
+      },
+      "unseen": {
+        "corrected": 64,
+        "harmed": 110,
+        "accuracy": 0.7557471264367817,
+        "net": -46,
+        "ci_pp": [
+          -6.833493743984601,
+          -1.9267359121431789
+        ],
+        "fold_net": [
+          -7,
+          -13,
+          -4,
+          -5,
+          -7,
+          1,
+          -9,
+          -2
+        ]
+      },
+      "common_repaired": 12,
+      "persistent_repaired_both": 6
+    },
+    "two_families": {
+      "historical": {
+        "corrected": 254,
+        "harmed": 305,
+        "accuracy": 0.8068737417313776,
+        "net": -51,
+        "ci_pp": [
+          -1.3691039706336465,
+          -0.0721459172366169
+        ],
+        "fold_net": [
+          -10,
+          -18,
+          -23
+        ]
+      },
+      "full": {
+        "corrected": 214,
+        "harmed": 309,
+        "accuracy": 0.8078914068790981,
+        "net": -95,
+        "ci_pp": [
+          -1.5884139219808455,
+          -0.573787658585422
+        ],
+        "fold_net": [
+          -20,
+          -9,
+          -10,
+          -24,
+          -20,
+          -5,
+          2,
+          -9
+        ]
+      },
+      "unseen": {
+        "corrected": 27,
+        "harmed": 40,
+        "accuracy": 0.7873563218390804,
+        "net": -13,
+        "ci_pp": [
+          -2.772532866147639,
+          0.38023718131925777
+        ],
+        "fold_net": [
+          -4,
+          -5,
+          -3,
+          -1,
+          -1,
+          -2,
+          0,
+          3
+        ]
+      },
+      "common_repaired": 3,
+      "persistent_repaired_both": 1
+    },
+    "opinions_raw": {
+      "historical": {
+        "corrected": 83,
+        "harmed": 118,
+        "accuracy": 0.8091745757837217,
+        "net": -35,
+        "ci_pp": [
+          -0.8867753486529292,
+          -0.12693343525590875
+        ],
+        "fold_net": [
+          -16,
+          -10,
+          -9
+        ]
+      },
+      "full": {
+        "corrected": 102,
+        "harmed": 126,
+        "accuracy": 0.816058897963879,
+        "net": -24,
+        "ci_pp": [
+          -0.6097017510078022,
+          0.05743264652993972
+        ],
+        "fold_net": [
+          -4,
+          -2,
+          -9,
+          2,
+          -2,
+          -4,
+          4,
+          -9
+        ]
+      },
+      "unseen": {
+        "corrected": 9,
+        "harmed": 12,
+        "accuracy": 0.7969348659003831,
+        "net": -3,
+        "ci_pp": [
+          -1.147227533460803,
+          0.5719733079122974
+        ],
+        "fold_net": [
+          2,
+          -1,
+          -2,
+          0,
+          -2,
+          3,
+          -1,
+          -2
+        ]
+      },
+      "common_repaired": 1,
+      "persistent_repaired_both": 0
+    },
+    "opinions_regularized": {
+      "historical": {
+        "corrected": 117,
+        "harmed": 145,
+        "accuracy": 0.8101811906816221,
+        "net": -28,
+        "ci_pp": [
+          -0.8397765558158639,
+          0.04301722848623385
+        ],
+        "fold_net": [
+          -7,
+          -22,
+          1
+        ]
+      },
+      "full": {
+        "corrected": 143,
+        "harmed": 182,
+        "accuracy": 0.814333371678362,
+        "net": -39,
+        "ci_pp": [
+          -0.8657159595478311,
+          -0.05691067569052056
+        ],
+        "fold_net": [
+          -5,
+          4,
+          -10,
+          -7,
+          -9,
+          -15,
+          5,
+          -2
+        ]
+      },
+      "unseen": {
+        "corrected": 18,
+        "harmed": 18,
+        "accuracy": 0.7998084291187739,
+        "net": 0,
+        "ci_pp": [
+          -1.061801708540839,
+          1.147227533460803
+        ],
+        "fold_net": [
+          3,
+          -2,
+          3,
+          0,
+          -2,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "common_repaired": 1,
+      "persistent_repaired_both": 0
+    },
+    "opinions_both_labels": {
+      "historical": {
+        "corrected": 86,
+        "harmed": 116,
+        "accuracy": 0.8098935864250791,
+        "net": -30,
+        "ci_pp": [
+          -0.8152617938277151,
+          -0.02875980581753989
+        ],
+        "fold_net": [
+          -7,
+          -15,
+          -8
+        ]
+      },
+      "full": {
+        "corrected": 96,
+        "harmed": 129,
+        "accuracy": 0.8150235821925688,
+        "net": -33,
+        "ci_pp": [
+          -0.7158671487759934,
+          -0.04572813765737177
+        ],
+        "fold_net": [
+          -3,
+          -4,
+          -5,
+          -7,
+          -4,
+          -16,
+          4,
+          2
+        ]
+      },
+      "unseen": {
+        "corrected": 14,
+        "harmed": 13,
+        "accuracy": 0.8007662835249042,
+        "net": 1,
+        "ci_pp": [
+          -0.8579599618684461,
+          1.055662188099808
+        ],
+        "fold_net": [
+          2,
+          -2,
+          4,
+          0,
+          -1,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "common_repaired": 1,
+      "persistent_repaired_both": 0
+    },
+    "opinions_and_registration_raw": {
+      "historical": {
+        "corrected": 164,
+        "harmed": 190,
+        "accuracy": 0.810468794938165,
+        "net": -26,
+        "ci_pp": [
+          -0.904154285135409,
+          0.1432059519257719
+        ],
+        "fold_net": [
+          -10,
+          1,
+          -17
+        ]
+      },
+      "full": {
+        "corrected": 136,
+        "harmed": 224,
+        "accuracy": 0.8086966524790061,
+        "net": -88,
+        "ci_pp": [
+          -1.4387263433852064,
+          -0.6058578389658439
+        ],
+        "fold_net": [
+          -4,
+          -12,
+          -16,
+          -16,
+          -17,
+          -16,
+          0,
+          -7
+        ]
+      },
+      "unseen": {
+        "corrected": 14,
+        "harmed": 34,
+        "accuracy": 0.7806513409961686,
+        "net": -20,
+        "ci_pp": [
+          -3.241259396444451,
+          -0.667302192564347
+        ],
+        "fold_net": [
+          -1,
+          -2,
+          -5,
+          -2,
+          -4,
+          -4,
+          -3,
+          1
+        ]
+      },
+      "common_repaired": 2,
+      "persistent_repaired_both": 1
+    },
+    "opinions_and_registration_regularized": {
+      "historical": {
+        "corrected": 150,
+        "harmed": 173,
+        "accuracy": 0.8109002013229796,
+        "net": -23,
+        "ci_pp": [
+          -0.8262609675218557,
+          0.17452133922954238
+        ],
+        "fold_net": [
+          -12,
+          4,
+          -15
+        ]
+      },
+      "full": {
+        "corrected": 125,
+        "harmed": 201,
+        "accuracy": 0.8100770735074198,
+        "net": -76,
+        "ci_pp": [
+          -1.299167910675851,
+          -0.48119888246492276
+        ],
+        "fold_net": [
+          -6,
+          -13,
+          -16,
+          -4,
+          -12,
+          -17,
+          0,
+          -8
+        ]
+      },
+      "unseen": {
+        "corrected": 10,
+        "harmed": 27,
+        "accuracy": 0.7835249042145593,
+        "net": -17,
+        "ci_pp": [
+          -2.77511961722488,
+          -0.4807692307692308
+        ],
+        "fold_net": [
+          -2,
+          -3,
+          -4,
+          -1,
+          -2,
+          -4,
+          -1,
+          0
+        ]
+      },
+      "common_repaired": 3,
+      "persistent_repaired_both": 1
+    },
+    "opinions_and_registration_both_labels": {
+      "historical": {
+        "corrected": 122,
+        "harmed": 127,
+        "accuracy": 0.8134886396318666,
+        "net": -5,
+        "ci_pp": [
+          -0.5132043449262135,
+          0.3602837596713875
+        ],
+        "fold_net": [
+          -12,
+          9,
+          -2
+        ]
+      },
+      "full": {
+        "corrected": 85,
+        "harmed": 123,
+        "accuracy": 0.814448406764063,
+        "net": -38,
+        "ci_pp": [
+          -0.7756385216841652,
+          -0.1271966721139766
+        ],
+        "fold_net": [
+          -4,
+          -4,
+          -8,
+          0,
+          -7,
+          -17,
+          0,
+          2
+        ]
+      },
+      "unseen": {
+        "corrected": 7,
+        "harmed": 22,
+        "accuracy": 0.7854406130268199,
+        "net": -15,
+        "ci_pp": [
+          -2.48565965583174,
+          -0.47619047619047616
+        ],
+        "fold_net": [
+          -2,
+          -3,
+          -3,
+          0,
+          -2,
+          -4,
+          0,
+          -1
+        ]
+      },
+      "common_repaired": 1,
+      "persistent_repaired_both": 0
+    }
+  }
+}
