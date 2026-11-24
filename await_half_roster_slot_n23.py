@@ -24,6 +24,7 @@ class QueuedExport:
     predecessor: Path
     notice: str
     predecessor_digest: str | None = None
+    model: str = MODEL
 
     @property
     def out(self):
@@ -45,7 +46,12 @@ ADAPTIVE = QueuedExport('proposal_n23_adaptive_bill_prior', 'export_adaptive_bil
                         HALF.out/'queue_status.json',
                         '109 人版已取得官方评分。即将提交消费先验模型，检验另一组乘客的改判。',
                         '58b759b4e767969020c0e06bfa975906e03898bba67825ec3fb2df4489bde05f')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE)}
+SELECTED = QueuedExport('proposal_n24_selected_dissent', 'export_selected_dissent_n24.py',
+                        ROOT/'reports/proposal_v131_party_consensus/online_attempts/20261121T061548706760Z.json',
+                        '主账号已有提交额度，即将评测相对 v131 改判 10 人的九票树模型。',
+                        'ed644344cf5df8d6e5c213b5c42b109d0efbee43404cb8b00e6bafc2fde187d4',
+                        model='ensemble.joblib')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED)}
 
 
 def verify(revision, job=HALF):
@@ -60,8 +66,11 @@ def verify(revision, job=HALF):
     manifest = read(job.report/'manifest.json')
     checked = validate_submission(job.out/'submission.csv', ROOT/'data/raw/test.csv')
     assert checked['sha256'] == manifest['sha256'] and checked['rows'] == manifest['rows']
-    assert manifest['model_sha256'] == sha256(job.out/MODEL) and manifest['reload_difference'] == 0
+    assert manifest['model_sha256'] == sha256(job.out/job.model) and manifest['reload_difference'] == 0
     assert read(job.out/'selection.json')['version'] == manifest['version']
+    if job.name == SELECTED.name:
+        assert manifest['source_v131'] == job.predecessor_digest
+        manifest = dict(manifest, parents={'v131': manifest['source_v131']}, training_rows=manifest['train_rows'])
     assert manifest['parents'] and manifest['training_rows'] > 0
     return manifest
 
@@ -169,6 +178,9 @@ def run(revision, job=HALF):
         while True:
             previous_path = job.predecessor
             previous = read(previous_path) if previous_path.exists() else {}
+            if previous.get('evaluation', {}).get('Status') == 'COMPLETE':
+                previous = dict(phase='completed', ref=previous['submission_ref'], sha256=previous['file_sha256'],
+                                score=float(previous['evaluation']['Public Score']))
             if previous.get('phase') == 'goal_reached':
                 state('goal_reached', predecessor=previous)
                 return
@@ -214,7 +226,7 @@ def run(revision, job=HALF):
                     time.sleep(60)
                     continue
                 receipt = reconcile(remote, manifest, rank, job)
-                score, ref = persist_score(job.name, manifest, receipt, MODEL, digest, job.source, revision,
+                score, ref = persist_score(job.name, manifest, receipt, job.model, digest, job.source, revision,
                                            manifest['parents'], third, previous)
                 state('completed', ref=ref, score=score)
                 return
@@ -247,7 +259,7 @@ def run(revision, job=HALF):
             attempted = True
             state('submitting', limits=limits)
             try:
-                submit(job.name, MODEL, job.notice)
+                submit(job.name, job.model, job.notice)
             except (Exception, SystemExit) as error:
                 if not job.stage.exists() and (isinstance(error, BlockingIOError) or
                                            str(error) == 'Official submission allowance exhausted.'):
