@@ -65,7 +65,7 @@ class SpendingModel(nn.Module):
         return F.log_softmax(self.prior(h),dim=1)+mask+(normal*paid[:,None,:]).sum(2)
 
 
-def fit(x,bills,asleep,y,t,q,mode,seed):
+def fit(x,bills,asleep,y,t,q,mode,seed,measure=None):
     torch.manual_seed(seed)
     gen=np.random.default_rng(seed)
     z=np.where(bills>0,np.log1p(np.maximum(bills,0)),np.nan)
@@ -87,8 +87,12 @@ def fit(x,bills,asleep,y,t,q,mode,seed):
             opt.step()
         if epoch in (31,39,47):
             with torch.inference_mode():
-                joint=model(*(a[q] for a in args),mode)
-                snapshots.append(torch.softmax(joint,dim=1)[:,1].numpy())
+                query=[a[q] for a in args]
+                if measure is None:
+                    value=torch.softmax(model(*query,mode),dim=1)[:,1]
+                else:
+                    value=measure(model,query,mode)
+                snapshots.append(value.numpy())
     p=np.mean(snapshots,axis=0)
     assert np.isfinite(p).all()
     return p
