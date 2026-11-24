@@ -1,0 +1,222 @@
+{
+  "overlap": {
+    "all": {
+      "rows": 6954,
+      "both_wrong": 1032,
+      "only_champion_wrong": 260,
+      "only_gate_wrong": 226,
+      "both_correct": 5436
+    },
+    "no_historical_training_partner": {
+      "rows": 4691,
+      "both_wrong": 735,
+      "only_champion_wrong": 179,
+      "only_gate_wrong": 146,
+      "both_correct": 3631
+    },
+    "disagreeing_v96": {
+      "rows": 352,
+      "both_wrong": 43,
+      "only_champion_wrong": 142,
+      "only_gate_wrong": 123,
+      "both_correct": 44
+    },
+    "same_v96": {
+      "rows": 6602,
+      "both_wrong": 989,
+      "only_champion_wrong": 118,
+      "only_gate_wrong": 103,
+      "both_correct": 5392
+    },
+    "neither_overridden": {
+      "rows": 6626,
+      "both_wrong": 981,
+      "only_champion_wrong": 140,
+      "only_gate_wrong": 122,
+      "both_correct": 5383
+    },
+    "any_override": {
+      "rows": 328,
+      "both_wrong": 51,
+      "only_champion_wrong": 120,
+      "only_gate_wrong": 104,
+      "both_correct": 53
+    },
+    "shared_19_errors": {
+      "rows": 204,
+      "both_wrong": 201,
+      "only_champion_wrong": 0,
+      "only_gate_wrong": 3,
+      "both_correct": 0
+    }
+  },
+  "expert": {
+    "tabicl": {
+      "gate_fixes": 174,
+      "champion_already_right": 90,
+      "fixes_both": 84,
+      "gate_harms": 213,
+      "harms_both": 108
+    },
+    "cat": {
+      "gate_fixes": 177,
+      "champion_already_right": 75,
+      "fixes_both": 102,
+      "gate_harms": 217,
+      "harms_both": 133
+    },
+    "v44_without_name": {
+      "gate_fixes": 182,
+      "champion_already_right": 87,
+      "fixes_both": 95,
+      "gate_harms": 190,
+      "harms_both": 105
+    },
+    "budget": {
+      "gate_fixes": 282,
+      "champion_already_right": 89,
+      "fixes_both": 193,
+      "gate_harms": 636,
+      "harms_both": 549
+    },
+    "mitra96": {
+      "gate_fixes": 110,
+      "champion_already_right": 69,
+      "fixes_both": 41,
+      "gate_harms": 126,
+      "harms_both": 40
+    },
+    "fixed": {
+      "gate_fixes": 352,
+      "champion_already_right": 137,
+      "fixes_both": 215,
+      "gate_harms": 746,
+      "harms_both": 601
+    },
+    "learned": {
+      "gate_fixes": 339,
+      "champion_already_right": 133,
+      "fixes_both": 206,
+      "gate_harms": 522,
+      "harms_both": 379
+    },
+    "focus": {
+      "gate_fixes": 339,
+      "champion_already_right": 117,
+      "fixes_both": 222,
+      "gate_harms": 523,
+      "harms_both": 394
+    },
+    "without_near": {
+      "gate_fixes": 339,
+      "champion_already_right": 134,
+      "fixes_both": 205,
+      "gate_harms": 647,
+      "harms_both": 490
+    },
+    "control": {
+      "gate_fixes": 181,
+      "champion_already_right": 86,
+      "fixes_both": 95,
+      "gate_harms": 250,
+      "harms_both": 148
+    },
+    "only_near": {
+      "gate_fixes": 237,
+      "champion_already_right": 82,
+      "fixes_both": 155,
+      "gate_harms": 302,
+      "harms_both": 217
+    },
+    "without_bills": {
+      "gate_fixes": 319,
+      "champion_already_right": 86,
+      "fixes_both": 233,
+      "gate_harms": 787,
+      "harms_both": 703
+    },
+    "without_sleep": {
+      "gate_fixes": 207,
+      "champion_already_right": 83,
+      "fixes_both": 124,
+      "gate_harms": 241,
+      "harms_both": 156
+    },
+    "without_both": {
+      "gate_fixes": 472,
+      "champion_already_right": 81,
+      "fixes_both": 391,
+      "gate_harms": 1588,
+      "harms_both": 1495
+    },
+    "cue": {
+      "gate_fixes": 321,
+      "champion_already_right": 141,
+      "fixes_both": 180,
+      "gate_harms": 508,
+      "harms_both": 350
+    },
+    "balanced_full": {
+      "gate_fixes": 526,
+      "champion_already_right": 64,
+      "fixes_both": 462,
+      "gate_harms": 1018,
+      "harms_both": 949
+    },
+    "restored_context": {
+      "gate_fixes": 227,
+      "champion_already_right": 98,
+      "fixes_both": 129,
+      "gate_harms": 315,
+      "harms_both": 201
+    },
+    "offset_context": {
+      "gate_fixes": 203,
+      "champion_already_right": 94,
+      "fixes_both": 109,
+      "gate_harms": 296,
+      "harms_both": 188
+    },
+    "restored_full": {
+      "gate_fixes": 194,
+      "champion_already_right": 80,
+      "fixes_both": 114,
+      "gate_harms": 242,
+      "harms_both": 145
+    }
+  },
+  "matched_models": {
+    "mitra96": {
+      "fix_old": 54,
+      "fix_new": 110,
+      "fix_both": 8,
+      "harm_old": 58,
+      "harm_new": 126,
+      "harm_both": 9
+    },
+    "v44_without_name": {
+      "fix_old": 236,
+      "fix_new": 182,
+      "fix_both": 63,
+      "harm_old": 226,
+      "harm_new": 190,
+      "harm_both": 58
+    },
+    "tabicl": {
+      "fix_old": 177,
+      "fix_new": 174,
+      "fix_both": 45,
+      "harm_old": 204,
+      "harm_new": 213,
+      "harm_both": 52
+    },
+    "equal_mean": {
+      "fix_old": 154,
+      "fix_new": 135,
+      "fix_both": 29,
+      "harm_old": 125,
+      "harm_new": 145,
+      "harm_both": 25
+    }
+  }
+}
