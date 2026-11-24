@@ -1,0 +1,211 @@
+{
+  "full": {
+    "coverage": {
+      "channel_only": 126,
+      "projection_only": 161,
+      "both": 440,
+      "neither": 848,
+      "eligible_wrong": 592,
+      "among_shared_errors": 2,
+      "shared_error_denominator": 147
+    },
+    "bounds": {
+      "risk": {
+        "nonempty": 10,
+        "oracle_net": 0
+      },
+      "family_counts": {
+        "nonempty": 134,
+        "oracle_net": 36
+      },
+      "six_votes": {
+        "nonempty": 330,
+        "oracle_net": 101
+      }
+    },
+    "baseline_correct": 7118,
+    "decisions": {
+      "majority": {
+        "corrected": 225,
+        "harmed": 332,
+        "accuracy": 0.8065109858506845,
+        "net": -107,
+        "ci_pp": [
+          -1.7712368305264552,
+          -0.7157679644210165
+        ],
+        "fold_net": [
+          -14,
+          -1,
+          -7,
+          -35,
+          -7,
+          -8,
+          -18,
+          -17
+        ],
+        "shared_fixed": 0,
+        "new_orders_net": -12
+      },
+      "risk": {
+        "corrected": 96,
+        "harmed": 97,
+        "accuracy": 0.8187047049350051,
+        "net": -1,
+        "ci_pp": [
+          -0.34309633176381427,
+          0.3333515723994932
+        ],
+        "fold_net": [
+          0,
+          11,
+          -6,
+          0,
+          0,
+          2,
+          -4,
+          -4
+        ],
+        "shared_fixed": 0,
+        "new_orders_net": -7
+      },
+      "family_counts": {
+        "corrected": 101,
+        "harmed": 131,
+        "accuracy": 0.8153686874496722,
+        "net": -30,
+        "ci_pp": [
+          -0.699384250681153,
+          0.011540714200845145
+        ],
+        "fold_net": [
+          -3,
+          8,
+          -7,
+          -4,
+          0,
+          2,
+          -16,
+          -10
+        ],
+        "shared_fixed": 0,
+        "new_orders_net": -6
+      },
+      "six_votes": {
+        "corrected": 115,
+        "harmed": 148,
+        "accuracy": 0.8150235821925688,
+        "net": -33,
+        "ci_pp": [
+          -0.7483290613542715,
+          0.0
+        ],
+        "fold_net": [
+          -3,
+          8,
+          -5,
+          -4,
+          -3,
+          1,
+          -16,
+          -11
+        ],
+        "shared_fixed": 0,
+        "new_orders_net": -8
+      }
+    }
+  },
+  "historical": {
+    "coverage": {
+      "channel_only": 110,
+      "projection_only": 134,
+      "both": 315,
+      "neither": 733,
+      "eligible_wrong": 508,
+      "among_shared_errors": 3,
+      "shared_error_denominator": 122
+    },
+    "bounds": {
+      "risk": {
+        "nonempty": 10,
+        "oracle_net": 0
+      },
+      "family_counts": {
+        "nonempty": 133,
+        "oracle_net": 47
+      },
+      "six_votes": {
+        "nonempty": 330,
+        "oracle_net": 107
+      }
+    },
+    "baseline_correct": 5662,
+    "decisions": {
+      "majority": {
+        "corrected": 204,
+        "harmed": 289,
+        "accuracy": 0.8019844693701467,
+        "net": -85,
+        "ci_pp": [
+          -1.8456631726894543,
+          -0.613008054301638
+        ],
+        "fold_net": [
+          -30,
+          -29,
+          -26
+        ],
+        "shared_fixed": 0
+      },
+      "risk": {
+        "corrected": 92,
+        "harmed": 107,
+        "accuracy": 0.8120506183491516,
+        "net": -15,
+        "ci_pp": [
+          -0.6116274780265606,
+          0.17191679789984032
+        ],
+        "fold_net": [
+          0,
+          -13,
+          -2
+        ],
+        "shared_fixed": 0
+      },
+      "family_counts": {
+        "corrected": 82,
+        "harmed": 111,
+        "accuracy": 0.8100373885533506,
+        "net": -29,
+        "ci_pp": [
+          -0.8103926107662681,
+          -0.029083309838303657
+        ],
+        "fold_net": [
+          -4,
+          -18,
+          -7
+        ],
+        "shared_fixed": 0
+      },
+      "six_votes": {
+        "corrected": 104,
+        "harmed": 124,
+        "accuracy": 0.8113316077077941,
+        "net": -20,
+        "ci_pp": [
+          -0.7108855054090403,
+          0.13167417087952035
+        ],
+        "fold_net": [
+          -5,
+          -15,
+          0
+        ],
+        "shared_fixed": 0
+      }
+    }
+  },
+  "any_correct_both_protocols": 328
+}
