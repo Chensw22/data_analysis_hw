@@ -52,6 +52,9 @@ def run():
     all_scores = np.column_stack([fields,booking,seeds[:,1:],bills])
     hit = (all_scores>=.5)==y[:,None]
     rescued = shared & hit.any(1)
+    np.savez_compressed(art/'nov24_remaining_cases/after_corroboration.npz',
+                        passenger=raw.PassengerId.to_numpy(str), fold=fold, y=y,
+                        shared=shared, remaining=shared & ~rescued)
     old_union = shared & hit[:,:10].any(1)
     bill_union = shared & hit[:,10:].any(1)
     report = dict(shared=int(shared.sum()), six_model_union=int((shared & hit[:,:6].any(1)).sum()),
