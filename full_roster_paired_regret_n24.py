@@ -63,14 +63,17 @@ def run():
     scores=full[:,[names.index(k) for k in ['mitra96','v44_without_name','tabicl']]]
     additional=~np.isin(np.arange(len(all_y)),rows)
     assert additional.sum()==1739
-    left,right=regret_inputs(old,champion,y),regret_inputs(new,gate,y)
+    # The incumbent's historical overrides include a separately cross-fitted witness.
+    # Its donor decisions cannot be used to fit a meta-model on the historical split.
+    native_vote=old[:,0]>=.5
+    left,right=regret_inputs(old,native_vote,y),regret_inputs(new,gate,y)
     def train_weights(t,mode):
         train_right=right[t]
         if mode=='shuffled_worst':
             # Preserve outcomes and the two reference decisions while breaking identity.
             rng=np.random.default_rng(1248)
             partner=np.arange(len(t))
-            strata=4*y[t].astype(int)+2*champion[t].astype(int)+gate[t].astype(int)
+            strata=4*y[t].astype(int)+2*native_vote[t].astype(int)+gate[t].astype(int)
             for key in np.unique(strata):
                 ix=np.flatnonzero(strata==key)
                 partner[ix]=rng.permutation(ix)
@@ -110,6 +113,10 @@ def run():
                 corrected_both=int(((pred_old==y)&(pred_new==y)&(champion!=y)&(gate!=y)).sum()),
                 harmed_both=int(((pred_old!=y)&(pred_new!=y)&(champion==y)&(gate==y)).sum()),
                 all_development_weights=train_weights(np.arange(len(y)),method).tolist())
+        for label, mask in [('additional_new_orders',additional & ~np.isin(groups,g)),
+                            ('additional_shared_orders',additional & np.isin(groups,g))]:
+            report[method][label]=dict(rows=int(mask.sum()),**summarize(
+                extra[mask],ref[mask],all_y[mask],groups[mask],fold[mask]))
         print(method,[(k,report[method][k]['fixed'],report[method][k]['harmed'])
                       for k in ['historical','eightfold_common','additional']],flush=True)
     path=ROOT/'reports/nov23_matched_learning_curve/paired_regret.json'

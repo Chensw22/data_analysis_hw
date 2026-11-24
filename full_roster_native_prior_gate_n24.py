@@ -30,20 +30,21 @@ def native_scores(raw, labels, g, rows, fold, saved):
         q=rows[use]
         t=rows[(fold!=h)&~np.isin(g[rows],g[q])]
         assert not np.isin(g[t],g[q]).any()
-        path=directory/f'fold_{h}.npz'
+        path=directory/f'fold_{h}_with_provenance.npz'
+        archived_train=rows[~use]
         if not path.exists():
             parts=predict_priors(frame,cue,context,labels,g,t,q)
             by_name={k:model(t,q,h) for k,model in models.items()}
             by_name.update(mitra96=saved[use,0],v44_without_name=saved[use,1],tabicl=saved[use,2])
             z=np.column_stack([*(by_name[k] for k in [*FAMILIES,'mitra96']),*(parts[k] for k in EVIDENCE)])
             with path.with_suffix('.tmp').open('wb') as out:
-                np.savez_compressed(out,train=t,query=q,y=labels[t],scores=z)
+                np.savez_compressed(out,new_train=t,historical_train=archived_train,query=q,y=labels[t],scores=z)
             path.with_suffix('.tmp').replace(path)
         with np.load(path) as record:
-            for k,v in [('train',t),('query',q),('y',labels[t])]:
+            for k,v in [('new_train',t),('historical_train',archived_train),('query',q),('y',labels[t])]:
                 np.testing.assert_array_equal(record[k],v)
             scores[use]=record['scores']
-        np.testing.assert_array_equal(scores[use,4],saved[use,0])
+        np.testing.assert_array_equal(scores[use][:,[4,2,0]],saved[use])
         print('historical evidence fold',h,len(t),len(q),flush=True)
     assert np.isfinite(scores).all() and ((scores>=0)&(scores<=1)).all()
     return scores
@@ -107,6 +108,10 @@ def run():
                  additional_vs_gate=describe(new_pred[extra],incumbent[extra],labels[extra],groups[extra],fold[extra]),
                  old_proposals=int((old_proposed&(original==champion)).sum()),
                  full_proposals=int(new_proposed.sum()))
+        for label, mask in [('additional_new_orders',extra & ~np.isin(groups,g)),
+                            ('additional_shared_orders',extra & np.isin(groups,g))]:
+            report[mode][label]=dict(rows=int(mask.sum()),**describe(
+                new_pred[mask],incumbent[mask],labels[mask],groups[mask],fold[mask]))
         print(mode,[(k,report[mode][k]['fixed'],report[mode][k]['harmed']) for k in
                     ['historical_vs_v131','full_vs_mitra','full_vs_gate','additional_vs_gate']],flush=True)
     path=ROOT/'reports/nov23_matched_learning_curve/native_prior_gate.json'

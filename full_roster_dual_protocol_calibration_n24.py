@@ -20,8 +20,10 @@ def design(p, attributes):
                             attributes*(z[:,0:1]/3),contrasts[:,0]*contrasts[:,1]]),z[:,0]
 
 
-def train(left,right,old_ids,new_ids,mode,y,baseline_old,baseline_new):
-    lo=np.flatnonzero(old_ids & ((left[1]>=0)==baseline_old))
+def train(left,right,old_ids,new_ids,mode,y,baseline_new):
+    # Historical incumbent overrides depend on a witness fitted on another split.
+    # Keep these decisions exclusively for query evaluation.
+    lo=np.flatnonzero(old_ids)
     hi=np.flatnonzero(new_ids & ((right[1]>=0)==baseline_new))
     if mode=='intersection':
         common=np.intersect1d(lo,hi)
@@ -68,14 +70,14 @@ def run():
                     # Each donor is used only under a protocol whose base models
                     # excluded the query labels. The other protocol's donor score is ignored.
                     w,nl,nr=train(left,right,(oldfold==h)&allowed,(newfold==f)&allowed,
-                                   mode,y,champion,gate)
+                                   mode,y,gate)
                     training.append([nl,nr])
                     pred_old[q]=predict(champion,left,q,w)
                     pred_new[q]=predict(gate,right,q,w)
             q=np.flatnonzero(additional&(fold==f))
             allowed=~np.isin(g,groups[q])
             # All historic score sources were fitted on the original development roster.
-            w,_,_=train(left,right,allowed,(newfold==f)&allowed,mode,y,champion,gate)
+            w,_,_=train(left,right,allowed,(newfold==f)&allowed,mode,y,gate)
             extra[q]=predict(ref,all_right,q,w)
         def describe(p,base,truth,grp,splits):
             d=(p==truth).astype(int)-(base==truth)
@@ -90,6 +92,10 @@ def run():
                           average_training_records=np.mean(training,axis=0).tolist(),
                           paired_common_fixed_both=int((common_errors&(pred_old==y)&(pred_new==y)).sum()),
                           corrected_both=int(((champion!=y)&(gate!=y)&(pred_old==y)&(pred_new==y)).sum()))
+        for label, mask in [('additional_new_orders',additional & ~np.isin(groups,g)),
+                            ('additional_shared_orders',additional & np.isin(groups,g))]:
+            report[mode][label]=dict(rows=int(mask.sum()),**describe(
+                extra[mask],ref[mask],all_y[mask],groups[mask],fold[mask]))
         print(mode,[(k,report[mode][k]['fixed'],report[mode][k]['harmed'])
                     for k in ['historical','eightfold_common','additional']],flush=True)
     path=ROOT/'reports/nov23_matched_learning_curve/dual_protocol_calibration.json'

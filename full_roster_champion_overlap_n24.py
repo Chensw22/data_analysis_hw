@@ -18,6 +18,11 @@ def aligned():
         for key,v in [('row',rows),('fold',oldfold),('y',y[rows])]:
             np.testing.assert_array_equal(archived[key],v)
         champion,cold = archived['v131'],archived['unseen']
+    expected_cold=np.zeros(len(rows),bool)
+    for h in np.unique(oldfold):
+        q=oldfold==h
+        expected_cold[q]=~np.isin(g[rows[q]],g[rows[~q]])
+    np.testing.assert_array_equal(cold,expected_cold)
     replay = pd.read_csv(ROOT/'artifacts/nov21_case_checks/v136_final_oof.csv')
     for key,v in [('row',rows),('fold',oldfold),('true',y[rows]),('v131',champion)]:
         np.testing.assert_array_equal(replay[key].to_numpy(),v)
