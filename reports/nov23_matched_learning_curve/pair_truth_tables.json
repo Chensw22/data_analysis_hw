@@ -1,0 +1,963 @@
+{
+  "full": {
+    "one_region": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 8693,
+          "experts": [
+            "direct/error_partition_kernel/rand",
+            "direct/permutation_selection/selected"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 29
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 145,
+          "harmed": 116,
+          "accuracy": 0.8221557575060393,
+          "net": 29,
+          "ci_pp": [
+            -0.03455842970967781,
+            0.695815539528656
+          ],
+          "fold_net": [
+            1,
+            -3,
+            4,
+            12,
+            1,
+            4,
+            6,
+            4
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 46
+        },
+        "held_out": {
+          "corrected": 170,
+          "harmed": 229,
+          "accuracy": 0.8120326699643391,
+          "net": -59,
+          "ci_pp": [
+            -1.1101207044462134,
+            -0.24173983621299877
+          ],
+          "fold_net": [
+            2,
+            1,
+            -8,
+            1,
+            -23,
+            -27,
+            -6,
+            1
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 30
+        },
+        "confirmed": {
+          "corrected": 37,
+          "harmed": 45,
+          "accuracy": 0.8178994593350972,
+          "net": -8,
+          "ci_pp": [
+            -0.29217426438976724,
+            0.11446984754052772
+          ],
+          "fold_net": [
+            0,
+            0,
+            -1,
+            -2,
+            0,
+            0,
+            -4,
+            -1
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 6
+        }
+      }
+    },
+    "risk": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 832,
+          "experts": [
+            "direct/spending_shape/free",
+            "quarter/six/4"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 23
+        },
+        {
+          "region": 1,
+          "rows": 762,
+          "experts": [
+            "direct/error_partition_kernel/rand",
+            "direct/permutation_selection/selected"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 24
+        },
+        {
+          "region": 2,
+          "rows": 2768,
+          "experts": [
+            "direct/bill_regime_tree/pooled",
+            "direct/permutation_selection/selected"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 3
+        },
+        {
+          "region": 3,
+          "rows": 1120,
+          "experts": [
+            "direct/fixed_bill_margins/same_fit",
+            "direct/dependency_tree/class"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 17
+        },
+        {
+          "region": 4,
+          "rows": 750,
+          "experts": [
+            "direct/companion_transition/personal",
+            "direct/maxout/relu"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 5
+        },
+        {
+          "region": 5,
+          "rows": 2461,
+          "experts": [
+            "direct/error_partition_kernel/all_grad",
+            "direct/failure_sampling_offset/in_fit_offset"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 3
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 151,
+          "harmed": 76,
+          "accuracy": 0.8274473714482917,
+          "net": 75,
+          "ci_pp": [
+            0.5248550511697438,
+            1.2157051256749503
+          ],
+          "fold_net": [
+            1,
+            15,
+            14,
+            8,
+            6,
+            12,
+            13,
+            6
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 32
+        },
+        "held_out": {
+          "corrected": 328,
+          "harmed": 497,
+          "accuracy": 0.7993788105372138,
+          "net": -169,
+          "ci_pp": [
+            -2.6019211686210224,
+            -1.3165950250597074
+          ],
+          "fold_net": [
+            -28,
+            -22,
+            -32,
+            -37,
+            -14,
+            -22,
+            -3,
+            -11
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 102
+        },
+        "confirmed": {
+          "corrected": 102,
+          "harmed": 134,
+          "accuracy": 0.8151386172782699,
+          "net": -32,
+          "ci_pp": [
+            -0.7270640111824767,
+            -0.011601636041525448
+          ],
+          "fold_net": [
+            -8,
+            -1,
+            -8,
+            -6,
+            -3,
+            -4,
+            1,
+            -3
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 27
+        }
+      }
+    },
+    "risk_and_agreement": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 736,
+          "experts": [
+            "direct/spending_shape/free",
+            "quarter/six/4"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 23
+        },
+        {
+          "region": 1,
+          "rows": 96,
+          "experts": [
+            "direct/permutation_selection/selected",
+            "direct/two_view_reliability/margins"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 9
+        },
+        {
+          "region": 2,
+          "rows": 277,
+          "experts": [
+            "direct/permutation_selection/selected",
+            "direct/spending_shape/free"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 12
+        },
+        {
+          "region": 3,
+          "rows": 485,
+          "experts": [
+            "direct/permutation_selection/selected",
+            "direct/fixed_bill_margins/margins"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            true
+          ],
+          "net": 15
+        },
+        {
+          "region": 4,
+          "rows": 144,
+          "experts": [
+            "direct/bill_regime_tree/pooled",
+            "direct/two_view_reliability/mean"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 2
+        },
+        {
+          "region": 5,
+          "rows": 2624,
+          "experts": [
+            "direct/permutation_selection/selected",
+            "direct/honest_failure_partitions/natural_honest"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 5
+        },
+        {
+          "region": 6,
+          "rows": 486,
+          "experts": [
+            "direct/fixed_bill_margins/margins",
+            "direct/dependency_tree/class"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 20
+        },
+        {
+          "region": 7,
+          "rows": 634,
+          "experts": [
+            "direct/permutation_selection/protected_random",
+            "direct/recursive_metric/isotropic"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 17
+        },
+        {
+          "region": 8,
+          "rows": 199,
+          "experts": [
+            "direct/error_partition_kernel/all_grad",
+            "direct/six/5"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 6
+        },
+        {
+          "region": 9,
+          "rows": 551,
+          "experts": [
+            "direct/predicate_tables/fixed",
+            "direct/honest_failure_partitions/enriched"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 7
+        },
+        {
+          "region": 10,
+          "rows": 157,
+          "experts": [
+            "direct/error_partition_kernel/all_grad",
+            "direct/failure_sampling_offset/in_fit_offset"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 3
+        },
+        {
+          "region": 11,
+          "rows": 2304,
+          "experts": [
+            "direct/error_partition_kernel/rand",
+            "direct/dependency_tree/class"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 2
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 210,
+          "harmed": 89,
+          "accuracy": 0.8327389853905441,
+          "net": 121,
+          "ci_pp": [
+            1.000173438945714,
+            1.7992592482157623
+          ],
+          "fold_net": [
+            9,
+            20,
+            24,
+            14,
+            2,
+            11,
+            25,
+            16
+          ],
+          "hard_fixed": 1,
+          "six_fixed": 80
+        },
+        "held_out": {
+          "corrected": 411,
+          "harmed": 590,
+          "accuracy": 0.7982284596802025,
+          "net": -179,
+          "ci_pp": [
+            -2.7619947995161165,
+            -1.343285226825756
+          ],
+          "fold_net": [
+            -27,
+            -17,
+            -36,
+            -25,
+            -20,
+            -37,
+            -4,
+            -13
+          ],
+          "hard_fixed": 3,
+          "six_fixed": 154
+        },
+        "confirmed": {
+          "corrected": 129,
+          "harmed": 146,
+          "accuracy": 0.816864143563787,
+          "net": -17,
+          "ci_pp": [
+            -0.582297775627487,
+            0.17238459151406274
+          ],
+          "fold_net": [
+            -5,
+            0,
+            -8,
+            -11,
+            1,
+            -1,
+            4,
+            3
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 39
+        }
+      }
+    }
+  },
+  "historical": {
+    "one_region": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 6954,
+          "experts": [
+            "quarter/predicate_tables/learned",
+            "quarter/fixed_bill_margins/reconstructed"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 31
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 93,
+          "harmed": 62,
+          "accuracy": 0.8186655162496405,
+          "net": 31,
+          "ci_pp": [
+            0.10089326578592821,
+            0.795030338039906
+          ],
+          "fold_net": [
+            9,
+            15,
+            7
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 21
+        },
+        "held_out": {
+          "corrected": 138,
+          "harmed": 161,
+          "accuracy": 0.8109002013229796,
+          "net": -23,
+          "ci_pp": [
+            -0.8061236807794213,
+            0.14296437326385605
+          ],
+          "fold_net": [
+            -19,
+            0,
+            -4
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 35
+        },
+        "confirmed": {
+          "corrected": 22,
+          "harmed": 22,
+          "accuracy": 0.8142076502732241,
+          "net": 0,
+          "ci_pp": [
+            -0.18657185448994076,
+            0.1863271691028057
+          ],
+          "fold_net": [
+            -1,
+            1,
+            0
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 6
+        }
+      }
+    },
+    "risk": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 608,
+          "experts": [
+            "quarter/predicate_tables/learned",
+            "quarter/fixed_bill_margins/reconstructed"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 30
+        },
+        {
+          "region": 1,
+          "rows": 675,
+          "experts": [
+            "direct/permutation_selection/random",
+            "direct/broad_error_transport_pair_surprise/raw"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 12
+        },
+        {
+          "region": 2,
+          "rows": 2141,
+          "experts": [
+            "direct/honest_failure_partitions/natural",
+            "direct/latent_profiles/shared"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 4
+        },
+        {
+          "region": 3,
+          "rows": 900,
+          "experts": [
+            "direct/bill_regime_tree/pooled",
+            "direct/zero_truncated/independent"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 27
+        },
+        {
+          "region": 4,
+          "rows": 624,
+          "experts": [
+            "direct/two_view_reliability/registration",
+            "direct/failure_sampling_offset/remove_offset"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 8
+        },
+        {
+          "region": 5,
+          "rows": 2006,
+          "experts": [
+            "direct/companion_transition/personal",
+            "direct/broad_error_transport_pair_surprise/all"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 1
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 217,
+          "harmed": 135,
+          "accuracy": 0.8259994247914869,
+          "net": 82,
+          "ci_pp": [
+            0.6681451995071558,
+            1.713750132931846
+          ],
+          "fold_net": [
+            30,
+            34,
+            18
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 79
+        },
+        "held_out": {
+          "corrected": 238,
+          "harmed": 306,
+          "accuracy": 0.8044291055507622,
+          "net": -68,
+          "ci_pp": [
+            -1.6254403514737519,
+            -0.3450119331892169
+          ],
+          "fold_net": [
+            -24,
+            -22,
+            -22
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 63
+        },
+        "confirmed": {
+          "corrected": 54,
+          "harmed": 65,
+          "accuracy": 0.8126258268622376,
+          "net": -11,
+          "ci_pp": [
+            -0.48135199381667854,
+            0.15669627307558343
+          ],
+          "fold_net": [
+            -3,
+            -5,
+            -3
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 23
+        }
+      }
+    },
+    "risk_and_agreement": {
+      "hindsight_choices": [
+        {
+          "region": 0,
+          "rows": 509,
+          "experts": [
+            "quarter/predicate_tables/learned",
+            "quarter/fixed_bill_margins/reconstructed"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 26
+        },
+        {
+          "region": 1,
+          "rows": 99,
+          "experts": [
+            "direct/honest_failure_partitions/placebo",
+            "direct/fixed_bill_margins/measured"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 14
+        },
+        {
+          "region": 2,
+          "rows": 237,
+          "experts": [
+            "direct/fixed_bill_margins/margins",
+            "direct/dependency_tree/average"
+          ],
+          "flip": [
+            false,
+            false,
+            false,
+            true
+          ],
+          "net": 8
+        },
+        {
+          "region": 3,
+          "rows": 438,
+          "experts": [
+            "direct/permutation_selection/random",
+            "direct/two_view_reliability/margins"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 12
+        },
+        {
+          "region": 4,
+          "rows": 146,
+          "experts": [
+            "direct/recursive_metric/isotropic",
+            "direct/recursive_metric/diag1"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 3
+        },
+        {
+          "region": 5,
+          "rows": 1995,
+          "experts": [
+            "direct/permutation_selection/random",
+            "direct/honest_failure_partitions/natural"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 5
+        },
+        {
+          "region": 6,
+          "rows": 382,
+          "experts": [
+            "direct/error_partition_kernel/matched_random",
+            "direct/latent_profiles/class"
+          ],
+          "flip": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "net": 25
+        },
+        {
+          "region": 7,
+          "rows": 518,
+          "experts": [
+            "direct/two_view_reliability/specialist",
+            "direct/latent_profiles/class"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 16
+        },
+        {
+          "region": 8,
+          "rows": 160,
+          "experts": [
+            "direct/failure_sampling_offset/natural",
+            "direct/failure_sampling_offset/remove_offset"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 6
+        },
+        {
+          "region": 9,
+          "rows": 464,
+          "experts": [
+            "direct/error_partition_kernel/rand",
+            "direct/zero_truncated/independent"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 6
+        },
+        {
+          "region": 10,
+          "rows": 156,
+          "experts": [
+            "direct/service_order_mixture/empty",
+            "direct/broad_error_transport_pair_surprise/all"
+          ],
+          "flip": [
+            false,
+            true,
+            false,
+            false
+          ],
+          "net": 2
+        },
+        {
+          "region": 11,
+          "rows": 1850,
+          "experts": [
+            "direct/class_neighborhood_mass/shuffled",
+            "direct/two_view_reliability/registration"
+          ],
+          "flip": [
+            false,
+            false,
+            true,
+            false
+          ],
+          "net": 1
+        }
+      ],
+      "methods": {
+        "hindsight": {
+          "corrected": 262,
+          "harmed": 138,
+          "accuracy": 0.8320391141788899,
+          "net": 124,
+          "ci_pp": [
+            1.234742756508203,
+            2.3480772844498015
+          ],
+          "fold_net": [
+            31,
+            57,
+            36
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 89
+        },
+        "held_out": {
+          "corrected": 272,
+          "harmed": 346,
+          "accuracy": 0.8035662927811331,
+          "net": -74,
+          "ci_pp": [
+            -1.7570314531639621,
+            -0.3436856751054835
+          ],
+          "fold_net": [
+            -18,
+            -25,
+            -31
+          ],
+          "hard_fixed": 2,
+          "six_fixed": 101
+        },
+        "confirmed": {
+          "corrected": 67,
+          "harmed": 62,
+          "accuracy": 0.8149266609145815,
+          "net": 5,
+          "ci_pp": [
+            -0.2311195270590726,
+            0.37483431768727343
+          ],
+          "fold_net": [
+            -7,
+            7,
+            5
+          ],
+          "hard_fixed": 0,
+          "six_fixed": 32
+        }
+      }
+    }
+  }
+}
