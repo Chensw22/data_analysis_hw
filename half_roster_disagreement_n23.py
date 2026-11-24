@@ -11,7 +11,7 @@ from full_roster_booking_validation_n23 import ROOT, data
 DEST = ROOT / 'artifacts/nov23_half_roster_disagreement'
 
 
-def fit_mitra(raw, y, groups, panel):
+def fit_mitra(raw, y, groups, panel, destination=DEST):
     import torch
     import mitra_counts_fixed15_online_first as counts
     from full_roster_mitra_validation_n23 import fit
@@ -25,7 +25,7 @@ def fit_mitra(raw, y, groups, panel):
     for half in (0, 1):
         t, q = np.flatnonzero(panel != half), np.flatnonzero(panel == half)
         assert not np.isin(groups[t], groups[q]).any()
-        path = DEST / f'mitra_{half}.npz'
+        path = destination / f'mitra_{half}.npz'
         if not path.exists():
             print('fitting Mitra', half, len(t), 'predicting', len(q), flush=True)
             p = fit(roster, t, q, y[t], counts)
@@ -58,7 +58,7 @@ def fit_others(raw, y, groups, panel):
     np.savez_compressed(DEST / 'others.npz', passenger=raw.PassengerId.to_numpy(str), panel=panel, y=y, **p)
 
 
-def fit_family(family, raw, y, groups, panel):
+def fit_family(family, raw, y, groups, panel, destination=DEST):
     from full_roster_booking_validation_n23 import predictor
 
     predict = predictor(family, raw, y)
@@ -69,7 +69,7 @@ def fit_family(family, raw, y, groups, panel):
         p[query] = predict(train, query, h)
         print(family, h, len(query), flush=True)
     assert np.isfinite(p).all() and ((p >= 0) & (p <= 1)).all()
-    np.savez_compressed(DEST / f'{family}.npz', passenger=raw.PassengerId.to_numpy(str), panel=panel, y=y, p=p)
+    np.savez_compressed(destination / f'{family}.npz', passenger=raw.PassengerId.to_numpy(str), panel=panel, y=y, p=p)
 
 
 if __name__ == '__main__':
