@@ -15,7 +15,14 @@ from full_roster_six_failure_archive_n24 import prediction_sets
 MODES = ('shared_profiles','class_profiles','random_groups')
 
 
-def mixtures(x,labels,dims,t,q,k,include_label,learn):
+def component_scores(x,weights,tables):
+    scores = np.broadcast_to(weights,(len(x),len(weights))).copy()
+    for j,table in enumerate(tables):
+        scores += table[x[:,j]]
+    return scores
+
+
+def fit_components(x,labels,dims,t,k,include_label,learn):
     # Initialize all groups with a different training passenger. Each EM responsibility
     # uses only the local outer training roster; probabilities for q never use its label.
     rng = np.random.default_rng(451)
@@ -32,15 +39,10 @@ def mixtures(x,labels,dims,t,q,k,include_label,learn):
             tables.append(np.log((obs+8*prior[j][:,None])/(count+8)))
         label_p = (r.T@labels[t]+1)/(count+2)
         return np.log((count+1)/(len(t)+k)),tables,label_p
-    def likelihood(ids,weights,tables):
-        scores = np.broadcast_to(weights,(len(ids),k)).copy()
-        for j,table in enumerate(tables):
-            scores += table[x[ids,j]]
-        return scores
     if learn:
         for _ in range(40):
             w,tables,prob = parameters()
-            logp = likelihood(t,w,tables)
+            logp = component_scores(x[t],w,tables)
             if include_label:
                 logp += np.log(np.where(labels[t,None],prob,1-prob))
             updated = softmax(logp,axis=1)
@@ -48,8 +50,12 @@ def mixtures(x,labels,dims,t,q,k,include_label,learn):
             r = updated
             if delta<1e-5:
                 break
-    w,tables,prob = parameters()
-    scores = likelihood(q,w,tables)
+    return parameters()
+
+
+def mixtures(x,labels,dims,t,q,k,include_label,learn):
+    w,tables,prob = fit_components(x,labels,dims,t,k,include_label,learn)
+    scores = component_scores(x[q],w,tables)
     return softmax(scores,axis=1)@prob,logsumexp(scores,axis=1)
 
 
