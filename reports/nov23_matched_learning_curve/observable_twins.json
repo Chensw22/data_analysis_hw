@@ -1,0 +1,402 @@
+{
+  "witnesses": {
+    "registration": {
+      "min_errors_for_this_key": 2259,
+      "distinct_keys": 393,
+      "all_rows": {
+        "rows": 8693,
+        "no_other_order": 121,
+        "same_only": 979,
+        "opposite_only": 83,
+        "both": 7510
+      },
+      "common": {
+        "rows": 257,
+        "no_other_order": 7,
+        "same_only": 1,
+        "opposite_only": 14,
+        "both": 235
+      },
+      "common_true": {
+        "rows": 209,
+        "no_other_order": 2,
+        "same_only": 1,
+        "opposite_only": 7,
+        "both": 199
+      },
+      "common_false": {
+        "rows": 48,
+        "no_other_order": 5,
+        "same_only": 0,
+        "opposite_only": 7,
+        "both": 36
+      }
+    },
+    "registration_and_service_states": {
+      "min_errors_for_this_key": 1627,
+      "distinct_keys": 2079,
+      "all_rows": {
+        "rows": 8693,
+        "no_other_order": 1199,
+        "same_only": 1815,
+        "opposite_only": 356,
+        "both": 5323
+      },
+      "common": {
+        "rows": 257,
+        "no_other_order": 49,
+        "same_only": 3,
+        "opposite_only": 50,
+        "both": 155
+      },
+      "common_true": {
+        "rows": 209,
+        "no_other_order": 42,
+        "same_only": 3,
+        "opposite_only": 40,
+        "both": 124
+      },
+      "common_false": {
+        "rows": 48,
+        "no_other_order": 7,
+        "same_only": 0,
+        "opposite_only": 10,
+        "both": 31
+      }
+    },
+    "age_and_amount_bands": {
+      "min_errors_for_this_key": 591,
+      "distinct_keys": 5874,
+      "all_rows": {
+        "rows": 8693,
+        "no_other_order": 5431,
+        "same_only": 1439,
+        "opposite_only": 142,
+        "both": 1681
+      },
+      "common": {
+        "rows": 257,
+        "no_other_order": 217,
+        "same_only": 2,
+        "opposite_only": 14,
+        "both": 24
+      },
+      "common_true": {
+        "rows": 209,
+        "no_other_order": 205,
+        "same_only": 0,
+        "opposite_only": 4,
+        "both": 0
+      },
+      "common_false": {
+        "rows": 48,
+        "no_other_order": 12,
+        "same_only": 2,
+        "opposite_only": 10,
+        "both": 24
+      }
+    },
+    "exact_age_and_bills": {
+      "min_errors_for_this_key": 365,
+      "distinct_keys": 6993,
+      "all_rows": {
+        "rows": 8693,
+        "no_other_order": 6380,
+        "same_only": 1160,
+        "opposite_only": 185,
+        "both": 968
+      },
+      "common": {
+        "rows": 257,
+        "no_other_order": 229,
+        "same_only": 2,
+        "opposite_only": 14,
+        "both": 12
+      },
+      "common_true": {
+        "rows": 209,
+        "no_other_order": 209,
+        "same_only": 0,
+        "opposite_only": 0,
+        "both": 0
+      },
+      "common_false": {
+        "rows": 48,
+        "no_other_order": 20,
+        "same_only": 2,
+        "opposite_only": 14,
+        "both": 12
+      }
+    },
+    "all_personal_fields_without_id_or_name": {
+      "min_errors_for_this_key": 3,
+      "distinct_keys": 8675,
+      "all_rows": {
+        "rows": 8693,
+        "no_other_order": 8678,
+        "same_only": 10,
+        "opposite_only": 3,
+        "both": 2
+      },
+      "common": {
+        "rows": 257,
+        "no_other_order": 257,
+        "same_only": 0,
+        "opposite_only": 0,
+        "both": 0
+      },
+      "common_true": {
+        "rows": 209,
+        "no_other_order": 209,
+        "same_only": 0,
+        "opposite_only": 0,
+        "both": 0
+      },
+      "common_false": {
+        "rows": 48,
+        "no_other_order": 48,
+        "same_only": 0,
+        "opposite_only": 0,
+        "both": 0
+      }
+    }
+  },
+  "models": {
+    "nearest_with_ten_1.0": {
+      "historical": {
+        "corrected": 444,
+        "harmed": 1421,
+        "accuracy": 0.6737129709519701,
+        "net": -977,
+        "ci_pp": [
+          -15.249624017291133,
+          -12.807071408638723
+        ],
+        "fold_net": [
+          -334,
+          -322,
+          -321
+        ]
+      },
+      "full": {
+        "corrected": 507,
+        "harmed": 1459,
+        "accuracy": 0.7093063384332221,
+        "net": -952,
+        "ci_pp": [
+          -11.940643689936868,
+          -9.978027370900755
+        ],
+        "fold_net": [
+          -125,
+          -130,
+          -142,
+          -127,
+          -120,
+          -91,
+          -115,
+          -102
+        ]
+      },
+      "unseen": {
+        "corrected": 68,
+        "harmed": 167,
+        "accuracy": 0.7049808429118773,
+        "net": -99,
+        "ci_pp": [
+          -12.319572489527344,
+          -6.787600829831568
+        ],
+        "fold_net": [
+          -11,
+          -18,
+          -13,
+          -5,
+          -10,
+          -23,
+          -9,
+          -10
+        ]
+      },
+      "common_correct": 26,
+      "persistent_both": 7
+    },
+    "nearest_with_ten_0.25": {
+      "historical": {
+        "corrected": 119,
+        "harmed": 110,
+        "accuracy": 0.8155018694276676,
+        "net": 9,
+        "ci_pp": [
+          -0.3002638085895523,
+          0.5553201130640074
+        ],
+        "fold_net": [
+          -3,
+          9,
+          3
+        ]
+      },
+      "full": {
+        "corrected": 137,
+        "harmed": 160,
+        "accuracy": 0.8161739330495801,
+        "net": -23,
+        "ci_pp": [
+          -0.6461532603406385,
+          0.11522663406485077
+        ],
+        "fold_net": [
+          -4,
+          -6,
+          1,
+          -1,
+          -1,
+          -7,
+          2,
+          -7
+        ]
+      },
+      "unseen": {
+        "corrected": 17,
+        "harmed": 26,
+        "accuracy": 0.7911877394636015,
+        "net": -9,
+        "ci_pp": [
+          -2.1093507028853353,
+          0.28874612650002507
+        ],
+        "fold_net": [
+          0,
+          -4,
+          -2,
+          0,
+          0,
+          -6,
+          3,
+          0
+        ]
+      },
+      "common_correct": 0,
+      "persistent_both": 0
+    },
+    "disjoint_rings_1.0": {
+      "historical": {
+        "corrected": 436,
+        "harmed": 1080,
+        "accuracy": 0.721599079666379,
+        "net": -644,
+        "ci_pp": [
+          -10.350446008364305,
+          -8.15845248434725
+        ],
+        "fold_net": [
+          -211,
+          -201,
+          -232
+        ]
+      },
+      "full": {
+        "corrected": 503,
+        "harmed": 1241,
+        "accuracy": 0.7339238467732658,
+        "net": -738,
+        "ci_pp": [
+          -9.412959156752976,
+          -7.590987868284229
+        ],
+        "fold_net": [
+          -103,
+          -103,
+          -94,
+          -98,
+          -100,
+          -68,
+          -90,
+          -82
+        ]
+      },
+      "unseen": {
+        "corrected": 66,
+        "harmed": 146,
+        "accuracy": 0.7231800766283525,
+        "net": -80,
+        "ci_pp": [
+          -10.305343511450381,
+          -4.990283454452772
+        ],
+        "fold_net": [
+          -9,
+          -13,
+          -9,
+          -3,
+          -10,
+          -18,
+          -8,
+          -10
+        ]
+      },
+      "common_correct": 15,
+      "persistent_both": 7
+    },
+    "disjoint_rings_0.25": {
+      "historical": {
+        "corrected": 118,
+        "harmed": 98,
+        "accuracy": 0.817083692838654,
+        "net": 20,
+        "ci_pp": [
+          -0.11597774825621161,
+          0.69880439839677
+        ],
+        "fold_net": [
+          5,
+          11,
+          4
+        ]
+      },
+      "full": {
+        "corrected": 130,
+        "harmed": 152,
+        "accuracy": 0.8162889681352813,
+        "net": -22,
+        "ci_pp": [
+          -0.6197854528791398,
+          0.11347269888274596
+        ],
+        "fold_net": [
+          -8,
+          -9,
+          4,
+          -2,
+          -3,
+          -5,
+          2,
+          -1
+        ]
+      },
+      "unseen": {
+        "corrected": 16,
+        "harmed": 25,
+        "accuracy": 0.7911877394636015,
+        "net": -9,
+        "ci_pp": [
+          -2.0309969273172914,
+          0.28931002194177746
+        ],
+        "fold_net": [
+          0,
+          -5,
+          -2,
+          -1,
+          1,
+          -6,
+          4,
+          0
+        ]
+      },
+      "common_correct": 0,
+      "persistent_both": 0
+    }
+  }
+}
