@@ -1,0 +1,1004 @@
+{
+  "full": {
+    "eligible": 6694,
+    "errors": 848,
+    "any_correct": 608,
+    "no_correct": 240,
+    "only_one": 148,
+    "models": {
+      "bill_regime_tree/pooled": {
+        "fixed": 12,
+        "harmed": 22,
+        "exclusive": 0
+      },
+      "bill_regime_tree/constant": {
+        "fixed": 8,
+        "harmed": 23,
+        "exclusive": 0
+      },
+      "bill_regime_tree/registration": {
+        "fixed": 34,
+        "harmed": 69,
+        "exclusive": 1
+      },
+      "class_neighborhood_mass/personal": {
+        "fixed": 3,
+        "harmed": 6,
+        "exclusive": 0
+      },
+      "class_neighborhood_mass/density": {
+        "fixed": 76,
+        "harmed": 218,
+        "exclusive": 4
+      },
+      "class_neighborhood_mass/shuffled": {
+        "fixed": 10,
+        "harmed": 16,
+        "exclusive": 0
+      },
+      "companion_transition/personal": {
+        "fixed": 30,
+        "harmed": 62,
+        "exclusive": 0
+      },
+      "companion_transition/real": {
+        "fixed": 42,
+        "harmed": 79,
+        "exclusive": 0
+      },
+      "companion_transition/removed": {
+        "fixed": 35,
+        "harmed": 66,
+        "exclusive": 0
+      },
+      "companion_transition/swapped": {
+        "fixed": 47,
+        "harmed": 92,
+        "exclusive": 1
+      },
+      "error_partition_kernel/rand": {
+        "fixed": 49,
+        "harmed": 96,
+        "exclusive": 0
+      },
+      "error_partition_kernel/all_grad": {
+        "fixed": 60,
+        "harmed": 103,
+        "exclusive": 0
+      },
+      "error_partition_kernel/matched_random": {
+        "fixed": 54,
+        "harmed": 97,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/point": {
+        "fixed": 126,
+        "harmed": 276,
+        "exclusive": 3
+      },
+      "labelled_reference_pairs/joint": {
+        "fixed": 132,
+        "harmed": 304,
+        "exclusive": 1
+      },
+      "labelled_reference_pairs/near_sep": {
+        "fixed": 137,
+        "harmed": 300,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/global_rel": {
+        "fixed": 145,
+        "harmed": 316,
+        "exclusive": 2
+      },
+      "permutation_selection/all": {
+        "fixed": 36,
+        "harmed": 32,
+        "exclusive": 0
+      },
+      "permutation_selection/selected": {
+        "fixed": 51,
+        "harmed": 41,
+        "exclusive": 0
+      },
+      "permutation_selection/random": {
+        "fixed": 38,
+        "harmed": 42,
+        "exclusive": 1
+      },
+      "permutation_selection/protected_select": {
+        "fixed": 45,
+        "harmed": 40,
+        "exclusive": 0
+      },
+      "permutation_selection/protected_random": {
+        "fixed": 37,
+        "harmed": 41,
+        "exclusive": 0
+      },
+      "recursive_metric/isotropic": {
+        "fixed": 16,
+        "harmed": 38,
+        "exclusive": 0
+      },
+      "recursive_metric/diag1": {
+        "fixed": 17,
+        "harmed": 34,
+        "exclusive": 0
+      },
+      "recursive_metric/diag2": {
+        "fixed": 18,
+        "harmed": 34,
+        "exclusive": 0
+      },
+      "recursive_metric/full2": {
+        "fixed": 20,
+        "harmed": 37,
+        "exclusive": 0
+      },
+      "service_order_mixture/empty": {
+        "fixed": 58,
+        "harmed": 136,
+        "exclusive": 2
+      },
+      "maxout/linear": {
+        "fixed": 4,
+        "harmed": 7,
+        "exclusive": 0
+      },
+      "maxout/relu": {
+        "fixed": 34,
+        "harmed": 94,
+        "exclusive": 0
+      },
+      "maxout/maxout": {
+        "fixed": 39,
+        "harmed": 81,
+        "exclusive": 0
+      },
+      "zero_truncated/independent": {
+        "fixed": 61,
+        "harmed": 251,
+        "exclusive": 2
+      },
+      "zero_truncated/truncated": {
+        "fixed": 59,
+        "harmed": 253,
+        "exclusive": 1
+      },
+      "zero_truncated/reported_sleep": {
+        "fixed": 67,
+        "harmed": 286,
+        "exclusive": 1
+      },
+      "predicate_tables/main": {
+        "fixed": 31,
+        "harmed": 55,
+        "exclusive": 0
+      },
+      "predicate_tables/fixed": {
+        "fixed": 46,
+        "harmed": 100,
+        "exclusive": 2
+      },
+      "predicate_tables/learned": {
+        "fixed": 58,
+        "harmed": 93,
+        "exclusive": 0
+      },
+      "two_view_reliability/registration": {
+        "fixed": 340,
+        "harmed": 1544,
+        "exclusive": 83
+      },
+      "two_view_reliability/spending": {
+        "fixed": 15,
+        "harmed": 46,
+        "exclusive": 1
+      },
+      "two_view_reliability/mean": {
+        "fixed": 51,
+        "harmed": 100,
+        "exclusive": 0
+      },
+      "two_view_reliability/pooled": {
+        "fixed": 38,
+        "harmed": 53,
+        "exclusive": 0
+      },
+      "two_view_reliability/specialist": {
+        "fixed": 56,
+        "harmed": 84,
+        "exclusive": 0
+      },
+      "two_view_reliability/margins": {
+        "fixed": 43,
+        "harmed": 98,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/natural": {
+        "fixed": 39,
+        "harmed": 70,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/natural_honest": {
+        "fixed": 21,
+        "harmed": 58,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/enriched": {
+        "fixed": 222,
+        "harmed": 392,
+        "exclusive": 17
+      },
+      "honest_failure_partitions/enriched_honest": {
+        "fixed": 21,
+        "harmed": 64,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/placebo": {
+        "fixed": 41,
+        "harmed": 84,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/placebo_honest": {
+        "fixed": 20,
+        "harmed": 58,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/natural": {
+        "fixed": 30,
+        "harmed": 37,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/enriched": {
+        "fixed": 236,
+        "harmed": 367,
+        "exclusive": 20
+      },
+      "failure_sampling_offset/remove_offset": {
+        "fixed": 71,
+        "harmed": 90,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/in_fit_offset": {
+        "fixed": 29,
+        "harmed": 40,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/placebo": {
+        "fixed": 25,
+        "harmed": 39,
+        "exclusive": 0
+      },
+      "spending_shape/free": {
+        "fixed": 57,
+        "harmed": 86,
+        "exclusive": 0
+      },
+      "spending_shape/pooled_direction": {
+        "fixed": 65,
+        "harmed": 93,
+        "exclusive": 0
+      },
+      "spending_shape/basket_direction": {
+        "fixed": 64,
+        "harmed": 97,
+        "exclusive": 0
+      },
+      "spending_shape/reversed": {
+        "fixed": 131,
+        "harmed": 509,
+        "exclusive": 5
+      },
+      "fixed_bill_margins/personal": {
+        "fixed": 36,
+        "harmed": 42,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/margins": {
+        "fixed": 61,
+        "harmed": 141,
+        "exclusive": 1
+      },
+      "fixed_bill_margins/measured": {
+        "fixed": 40,
+        "harmed": 47,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/reconstructed": {
+        "fixed": 44,
+        "harmed": 99,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/same_fit": {
+        "fixed": 45,
+        "harmed": 102,
+        "exclusive": 0
+      }
+    },
+    "policies": {
+      "pooled": {
+        "fixed": 30,
+        "harmed": 56,
+        "on_shared_errors": 0,
+        "new_orders": {
+          "fixed": 4,
+          "harmed": 8
+        }
+      },
+      "by_risk": {
+        "fixed": 53,
+        "harmed": 64,
+        "on_shared_errors": 0,
+        "new_orders": {
+          "fixed": 6,
+          "harmed": 4
+        }
+      },
+      "confirmed": {
+        "fixed": 26,
+        "harmed": 30,
+        "on_shared_errors": 0,
+        "new_orders": {
+          "fixed": 0,
+          "harmed": 2
+        }
+      }
+    }
+  },
+  "historical": {
+    "eligible": 5364,
+    "errors": 733,
+    "any_correct": 525,
+    "no_correct": 208,
+    "only_one": 131,
+    "models": {
+      "bill_regime_tree/pooled": {
+        "fixed": 11,
+        "harmed": 22,
+        "exclusive": 0
+      },
+      "bill_regime_tree/constant": {
+        "fixed": 12,
+        "harmed": 17,
+        "exclusive": 0
+      },
+      "bill_regime_tree/registration": {
+        "fixed": 41,
+        "harmed": 87,
+        "exclusive": 0
+      },
+      "class_neighborhood_mass/personal": {
+        "fixed": 2,
+        "harmed": 4,
+        "exclusive": 0
+      },
+      "class_neighborhood_mass/density": {
+        "fixed": 64,
+        "harmed": 162,
+        "exclusive": 2
+      },
+      "class_neighborhood_mass/shuffled": {
+        "fixed": 7,
+        "harmed": 14,
+        "exclusive": 0
+      },
+      "companion_transition/personal": {
+        "fixed": 56,
+        "harmed": 110,
+        "exclusive": 0
+      },
+      "companion_transition/real": {
+        "fixed": 56,
+        "harmed": 122,
+        "exclusive": 0
+      },
+      "companion_transition/removed": {
+        "fixed": 60,
+        "harmed": 111,
+        "exclusive": 0
+      },
+      "companion_transition/swapped": {
+        "fixed": 61,
+        "harmed": 145,
+        "exclusive": 1
+      },
+      "error_partition_kernel/rand": {
+        "fixed": 47,
+        "harmed": 93,
+        "exclusive": 0
+      },
+      "error_partition_kernel/all_grad": {
+        "fixed": 49,
+        "harmed": 108,
+        "exclusive": 1
+      },
+      "error_partition_kernel/matched_random": {
+        "fixed": 51,
+        "harmed": 92,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/point": {
+        "fixed": 104,
+        "harmed": 232,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/joint": {
+        "fixed": 129,
+        "harmed": 260,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/near_sep": {
+        "fixed": 121,
+        "harmed": 243,
+        "exclusive": 0
+      },
+      "labelled_reference_pairs/global_rel": {
+        "fixed": 132,
+        "harmed": 274,
+        "exclusive": 0
+      },
+      "permutation_selection/all": {
+        "fixed": 47,
+        "harmed": 63,
+        "exclusive": 0
+      },
+      "permutation_selection/selected": {
+        "fixed": 60,
+        "harmed": 77,
+        "exclusive": 0
+      },
+      "permutation_selection/random": {
+        "fixed": 64,
+        "harmed": 62,
+        "exclusive": 1
+      },
+      "permutation_selection/protected_select": {
+        "fixed": 51,
+        "harmed": 87,
+        "exclusive": 0
+      },
+      "permutation_selection/protected_random": {
+        "fixed": 52,
+        "harmed": 73,
+        "exclusive": 0
+      },
+      "recursive_metric/isotropic": {
+        "fixed": 23,
+        "harmed": 23,
+        "exclusive": 0
+      },
+      "recursive_metric/diag1": {
+        "fixed": 15,
+        "harmed": 14,
+        "exclusive": 0
+      },
+      "recursive_metric/diag2": {
+        "fixed": 14,
+        "harmed": 12,
+        "exclusive": 0
+      },
+      "recursive_metric/full2": {
+        "fixed": 15,
+        "harmed": 22,
+        "exclusive": 0
+      },
+      "service_order_mixture/empty": {
+        "fixed": 67,
+        "harmed": 112,
+        "exclusive": 0
+      },
+      "maxout/linear": {
+        "fixed": 3,
+        "harmed": 5,
+        "exclusive": 0
+      },
+      "maxout/relu": {
+        "fixed": 60,
+        "harmed": 101,
+        "exclusive": 0
+      },
+      "maxout/maxout": {
+        "fixed": 49,
+        "harmed": 72,
+        "exclusive": 1
+      },
+      "zero_truncated/independent": {
+        "fixed": 92,
+        "harmed": 237,
+        "exclusive": 1
+      },
+      "zero_truncated/truncated": {
+        "fixed": 96,
+        "harmed": 246,
+        "exclusive": 1
+      },
+      "zero_truncated/reported_sleep": {
+        "fixed": 96,
+        "harmed": 242,
+        "exclusive": 1
+      },
+      "predicate_tables/main": {
+        "fixed": 27,
+        "harmed": 44,
+        "exclusive": 0
+      },
+      "predicate_tables/fixed": {
+        "fixed": 46,
+        "harmed": 95,
+        "exclusive": 1
+      },
+      "predicate_tables/learned": {
+        "fixed": 35,
+        "harmed": 77,
+        "exclusive": 1
+      },
+      "two_view_reliability/registration": {
+        "fixed": 308,
+        "harmed": 1246,
+        "exclusive": 78
+      },
+      "two_view_reliability/spending": {
+        "fixed": 17,
+        "harmed": 32,
+        "exclusive": 0
+      },
+      "two_view_reliability/mean": {
+        "fixed": 49,
+        "harmed": 76,
+        "exclusive": 0
+      },
+      "two_view_reliability/pooled": {
+        "fixed": 37,
+        "harmed": 75,
+        "exclusive": 0
+      },
+      "two_view_reliability/specialist": {
+        "fixed": 45,
+        "harmed": 91,
+        "exclusive": 0
+      },
+      "two_view_reliability/margins": {
+        "fixed": 37,
+        "harmed": 63,
+        "exclusive": 1
+      },
+      "honest_failure_partitions/natural": {
+        "fixed": 13,
+        "harmed": 47,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/natural_honest": {
+        "fixed": 12,
+        "harmed": 50,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/enriched": {
+        "fixed": 186,
+        "harmed": 340,
+        "exclusive": 28
+      },
+      "honest_failure_partitions/enriched_honest": {
+        "fixed": 13,
+        "harmed": 48,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/placebo": {
+        "fixed": 17,
+        "harmed": 58,
+        "exclusive": 0
+      },
+      "honest_failure_partitions/placebo_honest": {
+        "fixed": 12,
+        "harmed": 58,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/natural": {
+        "fixed": 29,
+        "harmed": 64,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/enriched": {
+        "fixed": 184,
+        "harmed": 266,
+        "exclusive": 6
+      },
+      "failure_sampling_offset/remove_offset": {
+        "fixed": 75,
+        "harmed": 88,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/in_fit_offset": {
+        "fixed": 32,
+        "harmed": 49,
+        "exclusive": 0
+      },
+      "failure_sampling_offset/placebo": {
+        "fixed": 35,
+        "harmed": 62,
+        "exclusive": 0
+      },
+      "spending_shape/free": {
+        "fixed": 89,
+        "harmed": 151,
+        "exclusive": 0
+      },
+      "spending_shape/pooled_direction": {
+        "fixed": 83,
+        "harmed": 159,
+        "exclusive": 0
+      },
+      "spending_shape/basket_direction": {
+        "fixed": 84,
+        "harmed": 159,
+        "exclusive": 0
+      },
+      "spending_shape/reversed": {
+        "fixed": 131,
+        "harmed": 473,
+        "exclusive": 6
+      },
+      "fixed_bill_margins/personal": {
+        "fixed": 58,
+        "harmed": 74,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/margins": {
+        "fixed": 70,
+        "harmed": 139,
+        "exclusive": 1
+      },
+      "fixed_bill_margins/measured": {
+        "fixed": 54,
+        "harmed": 64,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/reconstructed": {
+        "fixed": 60,
+        "harmed": 105,
+        "exclusive": 0
+      },
+      "fixed_bill_margins/same_fit": {
+        "fixed": 57,
+        "harmed": 102,
+        "exclusive": 0
+      }
+    },
+    "policies": {
+      "pooled": {
+        "fixed": 48,
+        "harmed": 63,
+        "on_shared_errors": 0
+      },
+      "by_risk": {
+        "fixed": 61,
+        "harmed": 62,
+        "on_shared_errors": 0
+      },
+      "confirmed": {
+        "fixed": 22,
+        "harmed": 20,
+        "on_shared_errors": 0
+      }
+    }
+  },
+  "both_protocols": {
+    "common_errors": 570,
+    "same_column_correct": 308,
+    "any_column_each": 331,
+    "same_column_only_one": 127,
+    "models": {
+      "bill_regime_tree/pooled": {
+        "repeat_fixed": 2,
+        "repeat_harmed": 4,
+        "exclusive_repeat": 0
+      },
+      "bill_regime_tree/constant": {
+        "repeat_fixed": 2,
+        "repeat_harmed": 3,
+        "exclusive_repeat": 0
+      },
+      "bill_regime_tree/registration": {
+        "repeat_fixed": 3,
+        "repeat_harmed": 15,
+        "exclusive_repeat": 2
+      },
+      "class_neighborhood_mass/personal": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 0,
+        "exclusive_repeat": 0
+      },
+      "class_neighborhood_mass/density": {
+        "repeat_fixed": 13,
+        "repeat_harmed": 49,
+        "exclusive_repeat": 1
+      },
+      "class_neighborhood_mass/shuffled": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 1,
+        "exclusive_repeat": 0
+      },
+      "companion_transition/personal": {
+        "repeat_fixed": 3,
+        "repeat_harmed": 16,
+        "exclusive_repeat": 0
+      },
+      "companion_transition/real": {
+        "repeat_fixed": 8,
+        "repeat_harmed": 15,
+        "exclusive_repeat": 0
+      },
+      "companion_transition/removed": {
+        "repeat_fixed": 7,
+        "repeat_harmed": 14,
+        "exclusive_repeat": 0
+      },
+      "companion_transition/swapped": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 20,
+        "exclusive_repeat": 0
+      },
+      "error_partition_kernel/rand": {
+        "repeat_fixed": 8,
+        "repeat_harmed": 16,
+        "exclusive_repeat": 0
+      },
+      "error_partition_kernel/all_grad": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 12,
+        "exclusive_repeat": 0
+      },
+      "error_partition_kernel/matched_random": {
+        "repeat_fixed": 8,
+        "repeat_harmed": 12,
+        "exclusive_repeat": 0
+      },
+      "labelled_reference_pairs/point": {
+        "repeat_fixed": 25,
+        "repeat_harmed": 46,
+        "exclusive_repeat": 3
+      },
+      "labelled_reference_pairs/joint": {
+        "repeat_fixed": 29,
+        "repeat_harmed": 52,
+        "exclusive_repeat": 0
+      },
+      "labelled_reference_pairs/near_sep": {
+        "repeat_fixed": 28,
+        "repeat_harmed": 48,
+        "exclusive_repeat": 1
+      },
+      "labelled_reference_pairs/global_rel": {
+        "repeat_fixed": 29,
+        "repeat_harmed": 54,
+        "exclusive_repeat": 0
+      },
+      "permutation_selection/all": {
+        "repeat_fixed": 2,
+        "repeat_harmed": 4,
+        "exclusive_repeat": 0
+      },
+      "permutation_selection/selected": {
+        "repeat_fixed": 10,
+        "repeat_harmed": 5,
+        "exclusive_repeat": 0
+      },
+      "permutation_selection/random": {
+        "repeat_fixed": 7,
+        "repeat_harmed": 6,
+        "exclusive_repeat": 2
+      },
+      "permutation_selection/protected_select": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 5,
+        "exclusive_repeat": 0
+      },
+      "permutation_selection/protected_random": {
+        "repeat_fixed": 5,
+        "repeat_harmed": 7,
+        "exclusive_repeat": 0
+      },
+      "recursive_metric/isotropic": {
+        "repeat_fixed": 1,
+        "repeat_harmed": 3,
+        "exclusive_repeat": 0
+      },
+      "recursive_metric/diag1": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 2,
+        "exclusive_repeat": 0
+      },
+      "recursive_metric/diag2": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 1,
+        "exclusive_repeat": 0
+      },
+      "recursive_metric/full2": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 2,
+        "exclusive_repeat": 0
+      },
+      "service_order_mixture/empty": {
+        "repeat_fixed": 7,
+        "repeat_harmed": 29,
+        "exclusive_repeat": 0
+      },
+      "maxout/linear": {
+        "repeat_fixed": 0,
+        "repeat_harmed": 0,
+        "exclusive_repeat": 0
+      },
+      "maxout/relu": {
+        "repeat_fixed": 3,
+        "repeat_harmed": 14,
+        "exclusive_repeat": 0
+      },
+      "maxout/maxout": {
+        "repeat_fixed": 5,
+        "repeat_harmed": 7,
+        "exclusive_repeat": 0
+      },
+      "zero_truncated/independent": {
+        "repeat_fixed": 15,
+        "repeat_harmed": 65,
+        "exclusive_repeat": 1
+      },
+      "zero_truncated/truncated": {
+        "repeat_fixed": 19,
+        "repeat_harmed": 60,
+        "exclusive_repeat": 0
+      },
+      "zero_truncated/reported_sleep": {
+        "repeat_fixed": 17,
+        "repeat_harmed": 65,
+        "exclusive_repeat": 0
+      },
+      "predicate_tables/main": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 9,
+        "exclusive_repeat": 0
+      },
+      "predicate_tables/fixed": {
+        "repeat_fixed": 9,
+        "repeat_harmed": 25,
+        "exclusive_repeat": 1
+      },
+      "predicate_tables/learned": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 17,
+        "exclusive_repeat": 0
+      },
+      "two_view_reliability/registration": {
+        "repeat_fixed": 157,
+        "repeat_harmed": 896,
+        "exclusive_repeat": 72
+      },
+      "two_view_reliability/spending": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 14,
+        "exclusive_repeat": 2
+      },
+      "two_view_reliability/mean": {
+        "repeat_fixed": 19,
+        "repeat_harmed": 27,
+        "exclusive_repeat": 0
+      },
+      "two_view_reliability/pooled": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 14,
+        "exclusive_repeat": 0
+      },
+      "two_view_reliability/specialist": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 19,
+        "exclusive_repeat": 0
+      },
+      "two_view_reliability/margins": {
+        "repeat_fixed": 9,
+        "repeat_harmed": 24,
+        "exclusive_repeat": 0
+      },
+      "honest_failure_partitions/natural": {
+        "repeat_fixed": 3,
+        "repeat_harmed": 16,
+        "exclusive_repeat": 0
+      },
+      "honest_failure_partitions/natural_honest": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 23,
+        "exclusive_repeat": 0
+      },
+      "honest_failure_partitions/enriched": {
+        "repeat_fixed": 92,
+        "repeat_harmed": 160,
+        "exclusive_repeat": 23
+      },
+      "honest_failure_partitions/enriched_honest": {
+        "repeat_fixed": 5,
+        "repeat_harmed": 19,
+        "exclusive_repeat": 0
+      },
+      "honest_failure_partitions/placebo": {
+        "repeat_fixed": 5,
+        "repeat_harmed": 17,
+        "exclusive_repeat": 0
+      },
+      "honest_failure_partitions/placebo_honest": {
+        "repeat_fixed": 6,
+        "repeat_harmed": 24,
+        "exclusive_repeat": 0
+      },
+      "failure_sampling_offset/natural": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 5,
+        "exclusive_repeat": 0
+      },
+      "failure_sampling_offset/enriched": {
+        "repeat_fixed": 93,
+        "repeat_harmed": 137,
+        "exclusive_repeat": 12
+      },
+      "failure_sampling_offset/remove_offset": {
+        "repeat_fixed": 13,
+        "repeat_harmed": 15,
+        "exclusive_repeat": 0
+      },
+      "failure_sampling_offset/in_fit_offset": {
+        "repeat_fixed": 5,
+        "repeat_harmed": 6,
+        "exclusive_repeat": 0
+      },
+      "failure_sampling_offset/placebo": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 6,
+        "exclusive_repeat": 0
+      },
+      "spending_shape/free": {
+        "repeat_fixed": 9,
+        "repeat_harmed": 25,
+        "exclusive_repeat": 0
+      },
+      "spending_shape/pooled_direction": {
+        "repeat_fixed": 14,
+        "repeat_harmed": 25,
+        "exclusive_repeat": 0
+      },
+      "spending_shape/basket_direction": {
+        "repeat_fixed": 14,
+        "repeat_harmed": 27,
+        "exclusive_repeat": 0
+      },
+      "spending_shape/reversed": {
+        "repeat_fixed": 44,
+        "repeat_harmed": 226,
+        "exclusive_repeat": 6
+      },
+      "fixed_bill_margins/personal": {
+        "repeat_fixed": 8,
+        "repeat_harmed": 6,
+        "exclusive_repeat": 0
+      },
+      "fixed_bill_margins/margins": {
+        "repeat_fixed": 16,
+        "repeat_harmed": 41,
+        "exclusive_repeat": 0
+      },
+      "fixed_bill_margins/measured": {
+        "repeat_fixed": 4,
+        "repeat_harmed": 8,
+        "exclusive_repeat": 0
+      },
+      "fixed_bill_margins/reconstructed": {
+        "repeat_fixed": 14,
+        "repeat_harmed": 33,
+        "exclusive_repeat": 1
+      },
+      "fixed_bill_margins/same_fit": {
+        "repeat_fixed": 8,
+        "repeat_harmed": 36,
+        "exclusive_repeat": 0
+      }
+    }
+  }
+}
