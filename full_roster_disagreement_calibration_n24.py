@@ -14,12 +14,13 @@ from deployment_booking_mix_n23 import passenger_vectors
 from full_roster_champion_overlap_n24 import aligned
 from full_roster_conditional_pool_n23 import ROOT, banks, data, latest_reference
 from full_roster_joint_raw_dissent_n24 import load_maxout
-from full_roster_permutation_selection_n24 import OUT
 
 FAMILIES = ('engineered_trees', 'maxout', 'spending_likelihood')
 
 
 def subspace_predictions(rows, folds, groups, y, tag):
+    from full_roster_permutation_selection_n24 import OUT
+
     predictions = np.empty((len(rows), 5))
     for fold in np.unique(folds):
         q = rows[folds == fold]
