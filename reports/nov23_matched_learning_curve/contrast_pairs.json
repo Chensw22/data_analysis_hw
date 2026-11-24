@@ -1,0 +1,806 @@
+{
+  "inputs": "row-local compact fields; no learned expert scores or Name",
+  "audit": {
+    "historical": [
+      {
+        "fold": 0,
+        "train": 3121,
+        "calibration": 553,
+        "query": 2318,
+        "pairs": {
+          "global": {
+            "eligible": 49917,
+            "discordant": 25087
+          },
+          "local": {
+            "eligible": 49841,
+            "discordant": 16475
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 98,
+            "intercept": 0.0704185075091312
+          },
+          "pair": {
+            "nonzero": 115,
+            "intercept": 0.042854837241689196
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "train": 3168,
+        "calibration": 548,
+        "query": 2318,
+        "pairs": {
+          "global": {
+            "eligible": 50673,
+            "discordant": 25369
+          },
+          "local": {
+            "eligible": 50596,
+            "discordant": 17161
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 114,
+            "intercept": 0.021475662910763357
+          },
+          "pair": {
+            "nonzero": 120,
+            "intercept": -0.00565656085191936
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "train": 3156,
+        "calibration": 570,
+        "query": 2318,
+        "pairs": {
+          "global": {
+            "eligible": 50465,
+            "discordant": 25120
+          },
+          "local": {
+            "eligible": 50429,
+            "discordant": 16486
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 111,
+            "intercept": 0.01478370004099286
+          },
+          "pair": {
+            "nonzero": 118,
+            "intercept": -0.01138220678353481
+          }
+        }
+      }
+    ],
+    "full": [
+      {
+        "fold": 0,
+        "train": 6461,
+        "calibration": 1176,
+        "query": 1056,
+        "pairs": {
+          "global": {
+            "eligible": 103347,
+            "discordant": 51564
+          },
+          "local": {
+            "eligible": 103104,
+            "discordant": 33337
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 105,
+            "intercept": 0.18852666735782653
+          },
+          "pair": {
+            "nonzero": 110,
+            "intercept": 0.14118697356159862
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "train": 6514,
+        "calibration": 1126,
+        "query": 1053,
+        "pairs": {
+          "global": {
+            "eligible": 104185,
+            "discordant": 51746
+          },
+          "local": {
+            "eligible": 103927,
+            "discordant": 33772
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 110,
+            "intercept": 0.12550441510102125
+          },
+          "pair": {
+            "nonzero": 116,
+            "intercept": 0.09280728547851812
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "train": 6414,
+        "calibration": 1149,
+        "query": 1130,
+        "pairs": {
+          "global": {
+            "eligible": 102595,
+            "discordant": 51234
+          },
+          "local": {
+            "eligible": 102365,
+            "discordant": 32809
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 109,
+            "intercept": 0.15826275916615204
+          },
+          "pair": {
+            "nonzero": 117,
+            "intercept": 0.11841895827286546
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "train": 6492,
+        "calibration": 1128,
+        "query": 1073,
+        "pairs": {
+          "global": {
+            "eligible": 103836,
+            "discordant": 52168
+          },
+          "local": {
+            "eligible": 103594,
+            "discordant": 33619
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 108,
+            "intercept": 0.02517270159671988
+          },
+          "pair": {
+            "nonzero": 116,
+            "intercept": -0.0005387806320566161
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "train": 6447,
+        "calibration": 1124,
+        "query": 1122,
+        "pairs": {
+          "global": {
+            "eligible": 103111,
+            "discordant": 51276
+          },
+          "local": {
+            "eligible": 102877,
+            "discordant": 33412
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 107,
+            "intercept": 0.1105361460089059
+          },
+          "pair": {
+            "nonzero": 108,
+            "intercept": 0.07750426742320514
+          }
+        }
+      },
+      {
+        "fold": 5,
+        "train": 6433,
+        "calibration": 1188,
+        "query": 1072,
+        "pairs": {
+          "global": {
+            "eligible": 102899,
+            "discordant": 51344
+          },
+          "local": {
+            "eligible": 102651,
+            "discordant": 33007
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 106,
+            "intercept": 0.2074741451661208
+          },
+          "pair": {
+            "nonzero": 113,
+            "intercept": 0.1598362817121654
+          }
+        }
+      },
+      {
+        "fold": 6,
+        "train": 6465,
+        "calibration": 1104,
+        "query": 1124,
+        "pairs": {
+          "global": {
+            "eligible": 103407,
+            "discordant": 51780
+          },
+          "local": {
+            "eligible": 103162,
+            "discordant": 33194
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 109,
+            "intercept": 0.16767936780441245
+          },
+          "pair": {
+            "nonzero": 110,
+            "intercept": 0.13090984631134522
+          }
+        }
+      },
+      {
+        "fold": 7,
+        "train": 6458,
+        "calibration": 1172,
+        "query": 1063,
+        "pairs": {
+          "global": {
+            "eligible": 103289,
+            "discordant": 51492
+          },
+          "local": {
+            "eligible": 103052,
+            "discordant": 33427
+          }
+        },
+        "fits": {
+          "point": {
+            "nonzero": 111,
+            "intercept": 0.09075121691730274
+          },
+          "pair": {
+            "nonzero": 113,
+            "intercept": 0.07227148288166554
+          }
+        }
+      }
+    ]
+  },
+  "results": {
+    "point_direct": {
+      "historical": {
+        "corrected": 296,
+        "harmed": 520,
+        "accuracy": 0.7819959735404084,
+        "net": -224,
+        "ci_pp": [
+          -4.01178203639373,
+          -2.4294793648974506
+        ],
+        "fold_net": [
+          -68,
+          -64,
+          -92
+        ]
+      },
+      "full": {
+        "corrected": 417,
+        "harmed": 706,
+        "accuracy": 0.7855746002530772,
+        "net": -289,
+        "ci_pp": [
+          -4.07253813934036,
+          -2.6031610605783277
+        ],
+        "fold_net": [
+          -37,
+          -36,
+          -44,
+          -53,
+          -29,
+          -20,
+          -30,
+          -40
+        ]
+      },
+      "new_orders": {
+        "corrected": 52,
+        "harmed": 98,
+        "accuracy": 0.7557471264367817,
+        "net": -46,
+        "ci_pp": [
+          -6.724442410915498,
+          -2.017242666784669
+        ],
+        "fold_net": [
+          -3,
+          -10,
+          -6,
+          -6,
+          -1,
+          -5,
+          -4,
+          -11
+        ]
+      },
+      "common_correct": 9,
+      "new_on_243": 4,
+      "new_on_243_by_true_class": [
+        0,
+        4
+      ],
+      "same_method_twice_on_201": 3
+    },
+    "point_quarter_gate": {
+      "historical": {
+        "corrected": 81,
+        "harmed": 74,
+        "accuracy": 0.8152142651711245,
+        "net": 7,
+        "ci_pp": [
+          -0.2415510461492803,
+          0.43340388273628694
+        ],
+        "fold_net": [
+          4,
+          8,
+          -5
+        ]
+      },
+      "full": {
+        "corrected": 145,
+        "harmed": 178,
+        "accuracy": 0.8150235821925688,
+        "net": -33,
+        "ci_pp": [
+          -0.7612544590201376,
+          0.02278189761957845
+        ],
+        "fold_net": [
+          -17,
+          3,
+          -6,
+          -8,
+          -4,
+          -3,
+          0,
+          2
+        ]
+      },
+      "new_orders": {
+        "corrected": 20,
+        "harmed": 28,
+        "accuracy": 0.7921455938697318,
+        "net": -8,
+        "ci_pp": [
+          -2.1052631578947367,
+          0.4793863854266539
+        ],
+        "fold_net": [
+          -1,
+          -3,
+          -2,
+          -2,
+          1,
+          -3,
+          2,
+          0
+        ]
+      },
+      "common_correct": 0,
+      "new_on_243": 0,
+      "new_on_243_by_true_class": [
+        0,
+        0
+      ],
+      "same_method_twice_on_201": 0
+    },
+    "point_quarter_protected_mitra": {
+      "historical": {
+        "corrected": 81,
+        "harmed": 74,
+        "accuracy": 0.8152142651711245,
+        "net": 7,
+        "ci_pp": [
+          -0.2415510461492803,
+          0.43340388273628694
+        ],
+        "fold_net": [
+          4,
+          8,
+          -5
+        ]
+      },
+      "full": {
+        "corrected": 83,
+        "harmed": 114,
+        "accuracy": 0.815253652363971,
+        "net": -31,
+        "ci_pp": [
+          -0.6708556960674037,
+          -0.04500114571013297
+        ],
+        "fold_net": [
+          -7,
+          4,
+          -1,
+          -15,
+          -3,
+          -1,
+          -3,
+          -5
+        ]
+      },
+      "new_orders": {
+        "corrected": 8,
+        "harmed": 13,
+        "accuracy": 0.7950191570881227,
+        "net": -5,
+        "ci_pp": [
+          -1.344860710854947,
+          0.3816793893129771
+        ],
+        "fold_net": [
+          0,
+          -2,
+          0,
+          -2,
+          0,
+          -1,
+          0,
+          0
+        ]
+      },
+      "common_correct": 0,
+      "new_on_243": 0,
+      "new_on_243_by_true_class": [
+        0,
+        0
+      ],
+      "same_method_twice_on_201": 0
+    },
+    "pair_direct": {
+      "historical": {
+        "corrected": 322,
+        "harmed": 555,
+        "accuracy": 0.7807017543859649,
+        "net": -233,
+        "ci_pp": [
+          -4.184667114451426,
+          -2.513994379617318
+        ],
+        "fold_net": [
+          -67,
+          -72,
+          -94
+        ]
+      },
+      "full": {
+        "corrected": 421,
+        "harmed": 728,
+        "accuracy": 0.7835039687104567,
+        "net": -307,
+        "ci_pp": [
+          -4.304569486013739,
+          -2.787158717976336
+        ],
+        "fold_net": [
+          -36,
+          -39,
+          -40,
+          -43,
+          -35,
+          -25,
+          -39,
+          -50
+        ]
+      },
+      "new_orders": {
+        "corrected": 53,
+        "harmed": 95,
+        "accuracy": 0.7595785440613027,
+        "net": -42,
+        "ci_pp": [
+          -6.309902385025661,
+          -1.7274058111567288
+        ],
+        "fold_net": [
+          -2,
+          -7,
+          -3,
+          -4,
+          -2,
+          -7,
+          -5,
+          -12
+        ]
+      },
+      "common_correct": 13,
+      "new_on_243": 9,
+      "new_on_243_by_true_class": [
+        2,
+        7
+      ],
+      "same_method_twice_on_201": 7
+    },
+    "pair_quarter_gate": {
+      "historical": {
+        "corrected": 81,
+        "harmed": 75,
+        "accuracy": 0.815070463042853,
+        "net": 6,
+        "ci_pp": [
+          -0.2472098139013385,
+          0.4166056336117038
+        ],
+        "fold_net": [
+          7,
+          10,
+          -11
+        ]
+      },
+      "full": {
+        "corrected": 144,
+        "harmed": 184,
+        "accuracy": 0.8142183365926607,
+        "net": -40,
+        "ci_pp": [
+          -0.8351035625973556,
+          -0.05842700302102222
+        ],
+        "fold_net": [
+          -16,
+          -3,
+          -7,
+          -7,
+          -6,
+          0,
+          3,
+          -4
+        ]
+      },
+      "new_orders": {
+        "corrected": 22,
+        "harmed": 26,
+        "accuracy": 0.7959770114942529,
+        "net": -4,
+        "ci_pp": [
+          -1.7274887021743819,
+          0.9532888465204957
+        ],
+        "fold_net": [
+          1,
+          -3,
+          -2,
+          -2,
+          1,
+          0,
+          2,
+          -1
+        ]
+      },
+      "common_correct": 0,
+      "new_on_243": 0,
+      "new_on_243_by_true_class": [
+        0,
+        0
+      ],
+      "same_method_twice_on_201": 0
+    },
+    "pair_quarter_protected_mitra": {
+      "historical": {
+        "corrected": 81,
+        "harmed": 75,
+        "accuracy": 0.815070463042853,
+        "net": 6,
+        "ci_pp": [
+          -0.2472098139013385,
+          0.4166056336117038
+        ],
+        "fold_net": [
+          7,
+          10,
+          -11
+        ]
+      },
+      "full": {
+        "corrected": 81,
+        "harmed": 111,
+        "accuracy": 0.8153686874496722,
+        "net": -30,
+        "ci_pp": [
+          -0.6470379342575477,
+          -0.044879839505088344
+        ],
+        "fold_net": [
+          -7,
+          0,
+          -2,
+          -12,
+          -4,
+          3,
+          0,
+          -8
+        ]
+      },
+      "new_orders": {
+        "corrected": 9,
+        "harmed": 11,
+        "accuracy": 0.7978927203065134,
+        "net": -2,
+        "ci_pp": [
+          -1.0506459318347423,
+          0.6685768863419294
+        ],
+        "fold_net": [
+          1,
+          -3,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "common_correct": 0,
+      "new_on_243": 0,
+      "new_on_243_by_true_class": [
+        0,
+        0
+      ],
+      "same_method_twice_on_201": 0
+    }
+  },
+  "cases_new_to_the_four_models": [
+    {
+      "row": 434,
+      "passenger": "0465_02",
+      "transported": true,
+      "full_scores": [
+        0.5600520623599314,
+        0.6226743415631785
+      ],
+      "historical_scores": [
+        0.46647105451820686,
+        0.49257079014259386
+      ]
+    },
+    {
+      "row": 963,
+      "passenger": "1024_04",
+      "transported": false,
+      "full_scores": [
+        0.5246273536795499,
+        0.4987625801249945
+      ],
+      "historical_scores": [
+        0.531288345586483,
+        0.4809994619202485
+      ]
+    },
+    {
+      "row": 2094,
+      "passenger": "2239_01",
+      "transported": true,
+      "full_scores": [
+        0.47052633766314017,
+        0.554463577327475
+      ],
+      "historical_scores": [
+        0.5128602359601988,
+        0.5584760079954383
+      ]
+    },
+    {
+      "row": 4357,
+      "passenger": "4638_01",
+      "transported": true,
+      "full_scores": [
+        0.6202939909356868,
+        0.6511165017677082
+      ],
+      "historical_scores": [
+        0.5595748434653959,
+        0.5682288416028491
+      ]
+    },
+    {
+      "row": 6022,
+      "passenger": "6369_01",
+      "transported": true,
+      "full_scores": [
+        0.47360361226583353,
+        0.5165484407319795
+      ],
+      "historical_scores": [
+        0.3581262361552882,
+        0.4137902842436387
+      ]
+    },
+    {
+      "row": 6120,
+      "passenger": "6457_01",
+      "transported": true,
+      "full_scores": [
+        0.5347999764345098,
+        0.5505121976477284
+      ],
+      "historical_scores": [
+        0.47717969378628117,
+        0.49911737514183313
+      ]
+    },
+    {
+      "row": 6146,
+      "passenger": "6485_01",
+      "transported": true,
+      "full_scores": [
+        0.5272099259289262,
+        0.5514969959049927
+      ],
+      "historical_scores": [
+        0.5178099432007726,
+        0.5711792653998409
+      ]
+    },
+    {
+      "row": 6698,
+      "passenger": "7069_02",
+      "transported": false,
+      "full_scores": [
+        0.5593096243139503,
+        0.49862779269537594
+      ],
+      "historical_scores": null
+    },
+    {
+      "row": 8428,
+      "passenger": "9003_01",
+      "transported": true,
+      "full_scores": [
+        0.48382943340691675,
+        0.5152919012969308
+      ],
+      "historical_scores": [
+        0.45281217717799,
+        0.5107775941247463
+      ]
+    }
+  ],
+  "score_column_order": [
+    "point",
+    "pair"
+  ],
+  "direct_243_overlap": {
+    "point_only": 0,
+    "pair_only": 5,
+    "both": 4
+  }
+}
