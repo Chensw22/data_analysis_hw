@@ -56,7 +56,12 @@ SOLO_RANDOM = QueuedExport('proposal_n24_solo_random_nine', 'export_solo_random_
                            '九票版已取得官方成绩，即将评测加入独行乘客随机字段模型的 70 人版。',
                            '5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223',
                            model='composition.json')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM)}
+NET_EDITS = QueuedExport('proposal_n24_bagged_net_edits', 'export_bagged_net_edits_n24.py',
+                         SOLO_RANDOM.out/'queue_status.json',
+                         '70 人版已有官方成绩，即将提交按净纠正人数训练的 41 人版。',
+                         '5dea4e65659fa7cb345c6238eedf0109d55e52afd4a4b1da88e523705b522871',
+                         model='calibrators.json')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS)}
 
 
 def verify(revision, job=HALF):
