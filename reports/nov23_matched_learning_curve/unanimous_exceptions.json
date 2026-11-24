@@ -1,0 +1,476 @@
+{
+  "sides": {
+    "False": {
+      "n": 1885,
+      "exceptions": 209,
+      "baserate": 0.11087533156498673,
+      "by_fold": [
+        {
+          "training_rows": 715,
+          "training_exceptions": 85,
+          "query_rows": 251
+        },
+        {
+          "training_rows": 681,
+          "training_exceptions": 77,
+          "query_rows": 225
+        },
+        {
+          "training_rows": 755,
+          "training_exceptions": 81,
+          "query_rows": 234
+        },
+        {
+          "training_rows": 669,
+          "training_exceptions": 65,
+          "query_rows": 247
+        },
+        {
+          "training_rows": 744,
+          "training_exceptions": 72,
+          "query_rows": 244
+        },
+        {
+          "training_rows": 668,
+          "training_exceptions": 82,
+          "query_rows": 230
+        },
+        {
+          "training_rows": 738,
+          "training_exceptions": 83,
+          "query_rows": 247
+        },
+        {
+          "training_rows": 721,
+          "training_exceptions": 79,
+          "query_rows": 207
+        }
+      ],
+      "observed": {
+        "HomePlanet": {
+          "Earth": {
+            "passengers": 1450,
+            "exceptions": 168
+          },
+          "Europa": {
+            "passengers": 88,
+            "exceptions": 7
+          },
+          "Mars": {
+            "passengers": 312,
+            "exceptions": 29
+          },
+          "missing": {
+            "passengers": 35,
+            "exceptions": 5
+          }
+        },
+        "CryoSleep": {
+          "False": {
+            "passengers": 1845,
+            "exceptions": 206
+          },
+          "missing": {
+            "passengers": 40,
+            "exceptions": 3
+          }
+        },
+        "Destination": {
+          "55 Cancri e": {
+            "passengers": 194,
+            "exceptions": 25
+          },
+          "PSO J318.5-22": {
+            "passengers": 149,
+            "exceptions": 16
+          },
+          "TRAPPIST-1e": {
+            "passengers": 1511,
+            "exceptions": 166
+          },
+          "missing": {
+            "passengers": 31,
+            "exceptions": 2
+          }
+        },
+        "VIP": {
+          "False": {
+            "passengers": 1769,
+            "exceptions": 193
+          },
+          "True": {
+            "passengers": 65,
+            "exceptions": 6
+          },
+          "missing": {
+            "passengers": 51,
+            "exceptions": 10
+          }
+        }
+      },
+      "models": {
+        "expert_mean": {
+          "auc": 0.645616128627057,
+          "average_precision": 0.20186195168187132,
+          "reviewed": 192,
+          "review_hits": 45,
+          "adopted": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "opinion_logistic": {
+          "auc": 0.64607575567254,
+          "average_precision": 0.19029846515299026,
+          "reviewed": 192,
+          "review_hits": 41,
+          "adopted": 1,
+          "fixed": 1,
+          "harmed": 0
+        },
+        "passenger_logistic": {
+          "auc": 0.5152961596875678,
+          "average_precision": 0.11640472257689732,
+          "reviewed": 192,
+          "review_hits": 21,
+          "adopted": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "combined_tree": {
+          "auc": 0.6088202715510842,
+          "average_precision": 0.1634577960726138,
+          "reviewed": 192,
+          "review_hits": 39,
+          "adopted": 6,
+          "fixed": 1,
+          "harmed": 5
+        }
+      }
+    },
+    "True": {
+      "n": 1747,
+      "exceptions": 48,
+      "baserate": 0.027475672581568404,
+      "by_fold": [
+        {
+          "training_rows": 802,
+          "training_exceptions": 51,
+          "query_rows": 195
+        },
+        {
+          "training_rows": 601,
+          "training_exceptions": 10,
+          "query_rows": 204
+        },
+        {
+          "training_rows": 725,
+          "training_exceptions": 37,
+          "query_rows": 276
+        },
+        {
+          "training_rows": 594,
+          "training_exceptions": 9,
+          "query_rows": 229
+        },
+        {
+          "training_rows": 764,
+          "training_exceptions": 43,
+          "query_rows": 245
+        },
+        {
+          "training_rows": 627,
+          "training_exceptions": 7,
+          "query_rows": 170
+        },
+        {
+          "training_rows": 778,
+          "training_exceptions": 43,
+          "query_rows": 222
+        },
+        {
+          "training_rows": 596,
+          "training_exceptions": 13,
+          "query_rows": 206
+        }
+      ],
+      "observed": {
+        "HomePlanet": {
+          "Earth": {
+            "passengers": 320,
+            "exceptions": 30
+          },
+          "Europa": {
+            "passengers": 939,
+            "exceptions": 9
+          },
+          "Mars": {
+            "passengers": 446,
+            "exceptions": 5
+          },
+          "missing": {
+            "passengers": 42,
+            "exceptions": 4
+          }
+        },
+        "CryoSleep": {
+          "False": {
+            "passengers": 204,
+            "exceptions": 15
+          },
+          "True": {
+            "passengers": 1510,
+            "exceptions": 33
+          },
+          "missing": {
+            "passengers": 33,
+            "exceptions": 0
+          }
+        },
+        "Destination": {
+          "55 Cancri e": {
+            "passengers": 634,
+            "exceptions": 21
+          },
+          "PSO J318.5-22": {
+            "passengers": 69,
+            "exceptions": 5
+          },
+          "TRAPPIST-1e": {
+            "passengers": 1005,
+            "exceptions": 21
+          },
+          "missing": {
+            "passengers": 39,
+            "exceptions": 1
+          }
+        },
+        "VIP": {
+          "False": {
+            "passengers": 1703,
+            "exceptions": 48
+          },
+          "True": {
+            "passengers": 13,
+            "exceptions": 0
+          },
+          "missing": {
+            "passengers": 31,
+            "exceptions": 0
+          }
+        }
+      },
+      "models": {
+        "expert_mean": {
+          "auc": 0.8471282126741221,
+          "average_precision": 0.20409838247607448,
+          "reviewed": 178,
+          "review_hits": 30,
+          "adopted": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "opinion_logistic": {
+          "auc": 0.867581420443398,
+          "average_precision": 0.18378995132945197,
+          "reviewed": 178,
+          "review_hits": 31,
+          "adopted": 8,
+          "fixed": 1,
+          "harmed": 7
+        },
+        "passenger_logistic": {
+          "auc": 0.7591965862271924,
+          "average_precision": 0.1110985203419717,
+          "reviewed": 178,
+          "review_hits": 22,
+          "adopted": 3,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "combined_tree": {
+          "auc": 0.8418187168922897,
+          "average_precision": 0.1663507849715279,
+          "reviewed": 178,
+          "review_hits": 28,
+          "adopted": 13,
+          "fixed": 2,
+          "harmed": 11
+        }
+      }
+    }
+  },
+  "deployed": {
+    "expert_mean": {
+      "full": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.8188197400207063,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "unseen": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.7998084291187739,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "changed_common_that_v131_also_missed": 0
+    },
+    "opinion_logistic": {
+      "full": {
+        "corrected": 2,
+        "harmed": 7,
+        "accuracy": 0.8182445645922006,
+        "net": -5,
+        "ci_pp": [
+          -0.1267573173542291,
+          0.011307260762904257
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          -6,
+          0,
+          1,
+          0
+        ]
+      },
+      "unseen": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.7998084291187739,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "changed_common_that_v131_also_missed": 2
+    },
+    "passenger_logistic": {
+      "full": {
+        "corrected": 0,
+        "harmed": 3,
+        "accuracy": 0.8184746347636029,
+        "net": -3,
+        "ci_pp": [
+          -0.08020164986251145,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -2,
+          0
+        ]
+      },
+      "unseen": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.7998084291187739,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "changed_common_that_v131_also_missed": 0
+    },
+    "combined_tree": {
+      "full": {
+        "corrected": 3,
+        "harmed": 16,
+        "accuracy": 0.8173242839065915,
+        "net": -13,
+        "ci_pp": [
+          -0.252961518310568,
+          -0.05718746425711998
+        ],
+        "fold_net": [
+          -1,
+          0,
+          -2,
+          -2,
+          -6,
+          -2,
+          0,
+          0
+        ]
+      },
+      "unseen": {
+        "corrected": 0,
+        "harmed": 1,
+        "accuracy": 0.7988505747126436,
+        "net": -1,
+        "ci_pp": [
+          -0.28846153846153844,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "changed_common_that_v131_also_missed": 2
+    }
+  }
+}
