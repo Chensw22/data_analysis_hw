@@ -52,7 +52,7 @@ def train_at_metric(x,y,t,q,c,probe,m,pairs):
     normal = k.T@k+1.5*cent+1e-5*np.eye(len(c))
     mean = y[t].mean()
     alpha = solve(normal,k.T@(y[t]-mean),assume_a='pos')
-    score = (mean+kernel(x[q],c,m,width)@alpha).clip(0,1)
+    score = mean+kernel(x[q],c,m,width)@alpha
     grad = derivative(x[probe],c,m,width,alpha)
     return score,grad
 
@@ -73,7 +73,7 @@ def score_fold(raw_features,y,t,q):
         for _ in range(2):
             value, grad = one(learned_metric(grad,diagonal))
             scores.append(value)
-    return np.column_stack(scores)
+    return np.column_stack(scores).clip(0,1)
 
 
 def protocol(x,y,g,rows,fold,tag):
