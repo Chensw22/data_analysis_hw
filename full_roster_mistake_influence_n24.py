@@ -76,6 +76,8 @@ def weights(y, offset, value, seed):
         ordered = ids[np.argsort(value[ids],kind='stable')]
         # Identical extra training mass by class and predicted direction for all four policies.
         n = len(ids)//2
+        if n == 0:
+            continue
         modes['all_mistakes'][ids] += n/len(ids)
         modes['selected'][ordered[-n:]] += 1
         modes['shuffled'][rng.permutation(ids)[:n]] += 1

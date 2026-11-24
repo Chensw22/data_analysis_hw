@@ -57,7 +57,7 @@ def train_at_metric(x,y,t,q,c,probe,m,pairs):
     return score,grad
 
 
-def score_fold(raw_features,y,t,q):
+def score_fold(raw_features,y,group,t,q):
     x = ((raw_features-raw_features[t].mean(0))/raw_features[t].std(0).clip(.2)).clip(-7,7)
     rng = np.random.default_rng(547)
     center_ids = rng.choice(t,min(len(t),768),replace=False)
@@ -76,10 +76,10 @@ def score_fold(raw_features,y,t,q):
     return np.column_stack(scores).clip(0,1)
 
 
-def protocol(x,y,g,rows,fold,tag):
-    out = ROOT/'artifacts/nov24_recursive_metric'
+def protocol(x,y,g,rows,fold,tag,scorer=score_fold,modes=MODES,experiment='recursive_metric'):
+    out = ROOT/'artifacts'/f'nov24_{experiment}'
     out.mkdir(exist_ok=True)
-    p = np.full((len(rows),len(MODES)),np.nan)
+    p = np.full((len(rows),len(modes)),np.nan)
     for f in np.unique(fold):
         held = fold == f
         q = rows[held]
@@ -87,7 +87,7 @@ def protocol(x,y,g,rows,fold,tag):
         assert not np.isin(g[t],g[q]).any()
         path = out/f'{tag}_{f}.npz'
         if not path.exists():
-            pred = score_fold(x,y,t,q)
+            pred = scorer(x,y,g,t,q)
             with path.with_suffix('.tmp').open('wb') as stream:
                 np.savez_compressed(stream,train=t,query=q,truth=y[t],prob=pred)
             path.with_suffix('.tmp').replace(path)
@@ -100,7 +100,7 @@ def protocol(x,y,g,rows,fold,tag):
     return p
 
 
-def run():
+def run(scorer=score_fold,modes=MODES,experiment='recursive_metric'):
     _,oy,og,rows,ofold,_,champ,_,_,_,_,old,_ = aligned()
     raw,y,g,fold = data()
     names,half,full = banks(raw,y,fold)
@@ -108,15 +108,15 @@ def run():
     gate,_ = gate_probabilities(names,half,full,y,g,fold)
     np.testing.assert_array_equal(gate>=.5,ref)
     x = design(raw)
-    a = protocol(x,y,g,rows,ofold,'historical')
-    b = protocol(x,y,g,np.arange(len(y)),fold,'full')
+    a = protocol(x,y,g,rows,ofold,'historical',scorer,modes,experiment)
+    b = protocol(x,y,g,np.arange(len(y)),fold,'full',scorer,modes,experiment)
     common = ((full>=.5)!=y[:,None]).all(1)
     hard = common[rows] & (champ!=oy)
     unseen = ~np.isin(g,og)
     _,inv,count = np.unique(g,return_inverse=True,return_counts=True)
     solo = count[inv]==1
     report = {}
-    for j,name in enumerate(MODES):
+    for j,name in enumerate(modes):
         report[name] = {}
         for w in (1.,.25):
             p = (1-w)*gate+w*b[:,j]>=.5
@@ -129,7 +129,7 @@ def run():
                     solo_misses_fixed=int((common & solo & y & p).sum()))
             report[name][str(w)] = v
             print(name,w,[v[k]['net'] for k in ('historical','full','new_orders')],v['common_fixed'],flush=True)
-    path = ROOT/'reports/nov23_matched_learning_curve/recursive_metric.json'
+    path = ROOT/'reports/nov23_matched_learning_curve'/f'{experiment}.json'
     path.write_text(json.dumps(report,indent=2)+'\n')
 
 
