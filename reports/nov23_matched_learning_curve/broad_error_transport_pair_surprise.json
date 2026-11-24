@@ -1,0 +1,922 @@
+{
+  "fields": [
+    [
+      "HomePlanet",
+      "CryoSleep"
+    ],
+    [
+      "HomePlanet",
+      "Destination"
+    ],
+    [
+      "HomePlanet",
+      "Deck"
+    ],
+    [
+      "CryoSleep",
+      "Age"
+    ],
+    [
+      "Spa",
+      "VRDeck"
+    ],
+    [
+      "FoodCourt",
+      "ShoppingMall"
+    ]
+  ],
+  "auxiliary_roster_rows": 12970,
+  "auxiliary_training": "four held-booking folds; no outcome labels",
+  "full_rows": 8693,
+  "baseline_errors": 1575,
+  "models": {
+    "raw_1.0": {
+      "full": {
+        "corrected": 227,
+        "harmed": 319,
+        "accuracy": 0.8082365121362015,
+        "net": -92,
+        "ci_pp": [
+          -1.5854740875406756,
+          -0.5413765131401742
+        ],
+        "fold_net": [
+          -9,
+          -11,
+          -10,
+          -5,
+          -18,
+          -19,
+          -3,
+          -17
+        ]
+      },
+      "historical": {
+        "corrected": 233,
+        "harmed": 312,
+        "accuracy": 0.8028472821397756,
+        "net": -79,
+        "ci_pp": [
+          -1.7900278571117156,
+          -0.49860545162576747
+        ],
+        "fold_net": [
+          -23,
+          -26,
+          -30
+        ]
+      },
+      "new_orders": {
+        "corrected": 32,
+        "harmed": 46,
+        "accuracy": 0.7863984674329502,
+        "net": -14,
+        "ci_pp": [
+          -2.97790585975024,
+          0.28680688336520077
+        ],
+        "fold_net": [
+          -3,
+          -3,
+          -3,
+          2,
+          3,
+          -7,
+          -2,
+          -1
+        ]
+      },
+      "versus_raw": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.8082365121362015,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "versus_margins": {
+        "corrected": 193,
+        "harmed": 224,
+        "accuracy": 0.8082365121362015,
+        "net": -31,
+        "ci_pp": [
+          -0.8042556986986005,
+          0.0919379181425131
+        ],
+        "fold_net": [
+          2,
+          -6,
+          1,
+          -14,
+          10,
+          -15,
+          3,
+          -12
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 32,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "raw_0.25": {
+      "full": {
+        "corrected": 31,
+        "harmed": 46,
+        "accuracy": 0.8170942137351892,
+        "net": -15,
+        "ci_pp": [
+          -0.3667621776504298,
+          0.02297840353587106
+        ],
+        "fold_net": [
+          -5,
+          0,
+          0,
+          5,
+          -5,
+          -3,
+          0,
+          -7
+        ]
+      },
+      "historical": {
+        "corrected": 57,
+        "harmed": 74,
+        "accuracy": 0.8117630140926085,
+        "net": -17,
+        "ci_pp": [
+          -0.564975844817381,
+          0.07183186120380539
+        ],
+        "fold_net": [
+          -3,
+          -5,
+          -9
+        ]
+      },
+      "new_orders": {
+        "corrected": 5,
+        "harmed": 6,
+        "accuracy": 0.7988505747126436,
+        "net": -1,
+        "ci_pp": [
+          -0.7626310772163966,
+          0.5708984640478457
+        ],
+        "fold_net": [
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          -1,
+          -1
+        ]
+      },
+      "versus_raw": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.8170942137351892,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "versus_margins": {
+        "corrected": 32,
+        "harmed": 35,
+        "accuracy": 0.8170942137351892,
+        "net": -3,
+        "ci_pp": [
+          -0.21637389181861347,
+          0.14891273567492974
+        ],
+        "fold_net": [
+          0,
+          3,
+          1,
+          1,
+          0,
+          -2,
+          1,
+          -7
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 8,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "pair_margins_1.0": {
+      "full": {
+        "corrected": 270,
+        "harmed": 331,
+        "accuracy": 0.8118025997929369,
+        "net": -61,
+        "ci_pp": [
+          -1.235320516129138,
+          -0.16232499583412768
+        ],
+        "fold_net": [
+          -11,
+          -5,
+          -11,
+          9,
+          -28,
+          -4,
+          -6,
+          -5
+        ]
+      },
+      "historical": {
+        "corrected": 261,
+        "harmed": 329,
+        "accuracy": 0.8044291055507622,
+        "net": -68,
+        "ci_pp": [
+          -1.6539379233684797,
+          -0.3077483485789374
+        ],
+        "fold_net": [
+          -26,
+          -11,
+          -31
+        ]
+      },
+      "new_orders": {
+        "corrected": 34,
+        "harmed": 48,
+        "accuracy": 0.7863984674329502,
+        "net": -14,
+        "ci_pp": [
+          -3.0476190476190474,
+          0.38058991436726924
+        ],
+        "fold_net": [
+          -1,
+          -3,
+          -4,
+          1,
+          2,
+          -5,
+          -2,
+          -2
+        ]
+      },
+      "versus_raw": {
+        "corrected": 224,
+        "harmed": 193,
+        "accuracy": 0.8118025997929369,
+        "net": 31,
+        "ci_pp": [
+          -0.09193791814251308,
+          0.8042556986986006
+        ],
+        "fold_net": [
+          -2,
+          6,
+          -1,
+          14,
+          -10,
+          15,
+          -3,
+          12
+        ]
+      },
+      "versus_margins": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.8118025997929369,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 34,
+        "harmed": 0,
+        "extra_vs_raw": 22,
+        "lost_vs_raw": 20
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "pair_margins_0.25": {
+      "full": {
+        "corrected": 41,
+        "harmed": 53,
+        "accuracy": 0.8174393189922926,
+        "net": -12,
+        "ci_pp": [
+          -0.3557942838702078,
+          0.07070907951378859
+        ],
+        "fold_net": [
+          -5,
+          -3,
+          -1,
+          4,
+          -5,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "historical": {
+        "corrected": 65,
+        "harmed": 71,
+        "accuracy": 0.8133448375035951,
+        "net": -6,
+        "ci_pp": [
+          -0.41505801887772353,
+          0.22907048642380118
+        ],
+        "fold_net": [
+          0,
+          -2,
+          -4
+        ]
+      },
+      "new_orders": {
+        "corrected": 5,
+        "harmed": 9,
+        "accuracy": 0.7959770114942529,
+        "net": -4,
+        "ci_pp": [
+          -1.0607521697203472,
+          0.28763183125599234
+        ],
+        "fold_net": [
+          0,
+          -1,
+          1,
+          0,
+          0,
+          -1,
+          -2,
+          -1
+        ]
+      },
+      "versus_raw": {
+        "corrected": 35,
+        "harmed": 32,
+        "accuracy": 0.8174393189922926,
+        "net": 3,
+        "ci_pp": [
+          -0.14891273567492966,
+          0.21637389181861355
+        ],
+        "fold_net": [
+          0,
+          -3,
+          -1,
+          -1,
+          0,
+          2,
+          -1,
+          7
+        ]
+      },
+      "versus_margins": {
+        "corrected": 0,
+        "harmed": 0,
+        "accuracy": 0.8174393189922926,
+        "net": 0,
+        "ci_pp": [
+          0.0,
+          0.0
+        ],
+        "fold_net": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 5,
+        "harmed": 0,
+        "extra_vs_raw": 2,
+        "lost_vs_raw": 5
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "pair_dependence_1.0": {
+      "full": {
+        "corrected": 245,
+        "harmed": 341,
+        "accuracy": 0.807776371793397,
+        "net": -96,
+        "ci_pp": [
+          -1.6439096738894765,
+          -0.5626071738099352
+        ],
+        "fold_net": [
+          -14,
+          -6,
+          -9,
+          -6,
+          -23,
+          -21,
+          1,
+          -18
+        ]
+      },
+      "historical": {
+        "corrected": 267,
+        "harmed": 349,
+        "accuracy": 0.8024158757549612,
+        "net": -82,
+        "ci_pp": [
+          -1.8884191331165134,
+          -0.4759106319228323
+        ],
+        "fold_net": [
+          -26,
+          -20,
+          -36
+        ]
+      },
+      "new_orders": {
+        "corrected": 29,
+        "harmed": 44,
+        "accuracy": 0.7854406130268199,
+        "net": -15,
+        "ci_pp": [
+          -2.977977444025715,
+          0.09615615976900868
+        ],
+        "fold_net": [
+          -2,
+          -6,
+          -2,
+          4,
+          0,
+          -7,
+          0,
+          -2
+        ]
+      },
+      "versus_raw": {
+        "corrected": 157,
+        "harmed": 161,
+        "accuracy": 0.807776371793397,
+        "net": -4,
+        "ci_pp": [
+          -0.45101582315388306,
+          0.3577311906275153
+        ],
+        "fold_net": [
+          -5,
+          5,
+          1,
+          -1,
+          -5,
+          -2,
+          4,
+          -1
+        ]
+      },
+      "versus_margins": {
+        "corrected": 213,
+        "harmed": 248,
+        "accuracy": 0.807776371793397,
+        "net": -35,
+        "ci_pp": [
+          -0.894854701215243,
+          0.06831944569845934
+        ],
+        "fold_net": [
+          -3,
+          -1,
+          2,
+          -15,
+          5,
+          -17,
+          7,
+          -13
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 36,
+        "harmed": 0,
+        "extra_vs_raw": 18,
+        "lost_vs_raw": 14
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "pair_dependence_0.25": {
+      "full": {
+        "corrected": 33,
+        "harmed": 50,
+        "accuracy": 0.816864143563787,
+        "net": -17,
+        "ci_pp": [
+          -0.4018911914247484,
+          0.01142752685913852
+        ],
+        "fold_net": [
+          -7,
+          0,
+          0,
+          -2,
+          -3,
+          1,
+          -2,
+          -4
+        ]
+      },
+      "historical": {
+        "corrected": 62,
+        "harmed": 73,
+        "accuracy": 0.8126258268622376,
+        "net": -11,
+        "ci_pp": [
+          -0.4922061756020177,
+          0.17364189250411147
+        ],
+        "fold_net": [
+          2,
+          -2,
+          -11
+        ]
+      },
+      "new_orders": {
+        "corrected": 3,
+        "harmed": 5,
+        "accuracy": 0.7978927203065134,
+        "net": -2,
+        "ci_pp": [
+          -0.7633587786259542,
+          0.3805989760318971
+        ],
+        "fold_net": [
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          -1,
+          0
+        ]
+      },
+      "versus_raw": {
+        "corrected": 21,
+        "harmed": 23,
+        "accuracy": 0.816864143563787,
+        "net": -2,
+        "ci_pp": [
+          -0.17217878034866976,
+          0.12693357351801407
+        ],
+        "fold_net": [
+          -2,
+          0,
+          0,
+          -7,
+          2,
+          4,
+          -2,
+          3
+        ]
+      },
+      "versus_margins": {
+        "corrected": 39,
+        "harmed": 44,
+        "accuracy": 0.816864143563787,
+        "net": -5,
+        "ci_pp": [
+          -0.2639536985007611,
+          0.1581286762175764
+        ],
+        "fold_net": [
+          -2,
+          3,
+          1,
+          -6,
+          2,
+          2,
+          -1,
+          -4
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 6,
+        "harmed": 0,
+        "extra_vs_raw": 3,
+        "lost_vs_raw": 5
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "margins_dependence_1.0": {
+      "full": {
+        "corrected": 274,
+        "harmed": 357,
+        "accuracy": 0.8092718279075118,
+        "net": -83,
+        "ci_pp": [
+          -1.5120471036697474,
+          -0.4005427181342377
+        ],
+        "fold_net": [
+          -15,
+          -11,
+          -16,
+          3,
+          -15,
+          -5,
+          -6,
+          -18
+        ]
+      },
+      "historical": {
+        "corrected": 266,
+        "harmed": 332,
+        "accuracy": 0.8047167098073051,
+        "net": -66,
+        "ci_pp": [
+          -1.6405259819278133,
+          -0.2708672218800591
+        ],
+        "fold_net": [
+          -28,
+          -23,
+          -15
+        ]
+      },
+      "new_orders": {
+        "corrected": 41,
+        "harmed": 55,
+        "accuracy": 0.7863984674329502,
+        "net": -14,
+        "ci_pp": [
+          -3.192270848038721,
+          0.5703557719788868
+        ],
+        "fold_net": [
+          -1,
+          -5,
+          -6,
+          1,
+          4,
+          -6,
+          -1,
+          0
+        ]
+      },
+      "versus_raw": {
+        "corrected": 236,
+        "harmed": 227,
+        "accuracy": 0.8092718279075118,
+        "net": 9,
+        "ci_pp": [
+          -0.3740988824866162,
+          0.5967503492113552
+        ],
+        "fold_net": [
+          -6,
+          0,
+          -6,
+          8,
+          3,
+          14,
+          -3,
+          -1
+        ]
+      },
+      "versus_margins": {
+        "corrected": 147,
+        "harmed": 169,
+        "accuracy": 0.8092718279075118,
+        "net": -22,
+        "ci_pp": [
+          -0.6453936521329026,
+          0.12821186638635834
+        ],
+        "fold_net": [
+          -4,
+          -6,
+          -5,
+          -6,
+          13,
+          -1,
+          0,
+          -13
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 40,
+        "harmed": 0,
+        "extra_vs_raw": 27,
+        "lost_vs_raw": 19
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    },
+    "margins_dependence_0.25": {
+      "full": {
+        "corrected": 36,
+        "harmed": 52,
+        "accuracy": 0.8169791786494881,
+        "net": -16,
+        "ci_pp": [
+          -0.38951405868926053,
+          0.023031325846635645
+        ],
+        "fold_net": [
+          -2,
+          -2,
+          -5,
+          1,
+          -4,
+          -2,
+          -2,
+          0
+        ]
+      },
+      "historical": {
+        "corrected": 60,
+        "harmed": 72,
+        "accuracy": 0.812482024733966,
+        "net": -12,
+        "ci_pp": [
+          -0.48984472667319073,
+          0.14341286951819904
+        ],
+        "fold_net": [
+          -4,
+          -6,
+          -2
+        ]
+      },
+      "new_orders": {
+        "corrected": 4,
+        "harmed": 7,
+        "accuracy": 0.7969348659003831,
+        "net": -3,
+        "ci_pp": [
+          -0.9524036497344409,
+          0.28901734104046245
+        ],
+        "fold_net": [
+          2,
+          -1,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "versus_raw": {
+        "corrected": 32,
+        "harmed": 33,
+        "accuracy": 0.8169791786494881,
+        "net": -1,
+        "ci_pp": [
+          -0.19531755408999424,
+          0.16279211785614778
+        ],
+        "fold_net": [
+          3,
+          -2,
+          -5,
+          -4,
+          1,
+          1,
+          -2,
+          7
+        ]
+      },
+      "versus_margins": {
+        "corrected": 24,
+        "harmed": 28,
+        "accuracy": 0.8169791786494881,
+        "net": -4,
+        "ci_pp": [
+          -0.20709234271345708,
+          0.1157922061210955
+        ],
+        "fold_net": [
+          3,
+          1,
+          -4,
+          -3,
+          1,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "six_model_errors": {
+        "n": 848,
+        "corrected": 4,
+        "harmed": 0,
+        "extra_vs_raw": 2,
+        "lost_vs_raw": 6
+      },
+      "common": {
+        "n": 147,
+        "corrected": 0,
+        "harmed": 0,
+        "extra_vs_raw": 0,
+        "lost_vs_raw": 0
+      }
+    }
+  }
+}
