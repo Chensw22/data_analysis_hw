@@ -66,17 +66,17 @@ def predict(x,y,g,t,q):
     return np.mean(output,axis=0)
 
 
-def protocol(x,y,g,rows,fold,tag):
-    folder = ROOT/'artifacts/nov24_class_neighborhood_mass'
+def protocol(x,y,g,rows,fold,tag,scorer=predict,modes=MODES,experiment='class_neighborhood_mass'):
+    folder = ROOT/'artifacts'/f'nov24_{experiment}'
     folder.mkdir(exist_ok=True)
-    scores = np.full((len(rows),len(MODES)),np.nan)
+    scores = np.full((len(rows),len(modes)),np.nan)
     for f in np.unique(fold):
         mask = fold==f
         q = rows[mask]
         t = rows[~mask & ~np.isin(g[rows],g[q])]
         path = folder/f'{tag}_{f}.npz'
         if not path.exists():
-            pred = predict(x,y,g,t,q)
+            pred = scorer(x,y,g,t,q)
             with path.with_suffix('.tmp').open('wb') as stream:
                 np.savez_compressed(stream,t=t,q=q,truth=y[t],p=pred)
             path.with_suffix('.tmp').replace(path)
@@ -89,7 +89,7 @@ def protocol(x,y,g,rows,fold,tag):
     return scores
 
 
-def run():
+def run(scorer=predict,modes=MODES,experiment='class_neighborhood_mass'):
     _,oy,og,rows,ofold,_,champ,_,_,_,_,old,_ = aligned()
     raw,y,g,fold = data()
     names,half,full = banks(raw,y,fold)
@@ -98,8 +98,8 @@ def run():
     np.testing.assert_array_equal(gate>=.5,ref)
     all_rows = np.arange(len(y))
     x = design(raw)
-    a = protocol(x,y,g,rows,ofold,'historical')
-    b = protocol(x,y,g,all_rows,fold,'full')
+    a = protocol(x,y,g,rows,ofold,'historical',scorer,modes,experiment)
+    b = protocol(x,y,g,all_rows,fold,'full',scorer,modes,experiment)
     _,rivals = from_cache('full',all_rows,fold,y,g)
     common = ((full>=.5)!=y[:,None]).all(1)
     missed = common & ((rivals>=.5)!=y[:,None]).all(1)
@@ -107,7 +107,7 @@ def run():
     new = ~np.isin(g,og)
     assert missed.sum()==243
     report = {}
-    for j,mode in enumerate(MODES):
+    for j,mode in enumerate(modes):
         report[mode] = {}
         for w in (1.,.25):
             p = (1-w)*gate+w*b[:,j]>=.5
@@ -121,7 +121,7 @@ def run():
                      fixed_ids=raw.loc[missed & (p==y),'PassengerId'].tolist())
             report[mode][str(w)] = v
             print(mode,w,[v[s]['net'] for s in ['historical','full','unseen']],v['new_on_243'],flush=True)
-    path = ROOT/'reports/nov23_matched_learning_curve/class_neighborhood_mass.json'
+    path = ROOT/'reports/nov23_matched_learning_curve'/f'{experiment}.json'
     path.write_text(json.dumps(report,indent=2)+'\n')
 
 
