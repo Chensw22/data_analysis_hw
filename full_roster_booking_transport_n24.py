@@ -40,31 +40,38 @@ def coupling(cost):
     return plan, float(np.max(abs(plan.sum(2)-1/rows)))
 
 
-def vote(x, y, group, fold, count=48):
+def vote(x, y, group, fold, count=48, panel=None):
+    scalar = y.ndim == 1
+    outcomes = y[:, None] if scalar else y
+    if panel is None:
+        panel = np.zeros_like(fold)
     members, group_id, summary = parties(x,group)
     sizes = np.array([len(m) for m in members])
     first = np.array([m[0] for m in members])
     ordered_fold = fold[first]
     assert np.array_equal(ordered_fold[group_id],fold)
     keys = ['individual','booking_rate','independent','transport']
-    out = {k:np.full(len(y),np.nan) for k in keys}
+    out = {k:np.full(outcomes.shape,np.nan) for k in keys}
     max_error = 0.
     for f in np.unique(fold):
-        t,q = np.flatnonzero(fold!=f),np.flatnonzero(fold==f)
-        td,qd = np.flatnonzero(ordered_fold!=f),np.flatnonzero(ordered_fold==f)
+        q = np.flatnonzero(fold == f)
+        assert np.all(panel[q] == panel[q[0]])
+        donors = (fold != f) & (panel == panel[q[0]])
+        t = np.flatnonzero(donors)
+        td, qd = np.flatnonzero(donors[first]), np.flatnonzero(ordered_fold == f)
         assert not np.isin(group[t],group[q]).any()
         dist = cdist(x[q],x[t],'sqeuclidean')
         closest = np.argpartition(dist,count-1,axis=1)[:,:count]
         d = np.take_along_axis(dist,closest,axis=1)
         w = softmax(-d/.85,axis=1)
-        out['individual'][q] = (w*y[t[closest]]).sum(1)
+        out['individual'][q] = np.einsum('ij,ijk->ik', w, outcomes[t[closest]])
         distance = cdist(summary[qd],summary[td],'sqeuclidean')
         near = td[np.argpartition(distance,count-1,axis=1)[:,:count]]
         source = np.repeat(qd,count)
         target = near.ravel()
         # Store a separate match for every target passenger and candidate order.
         cost_out = np.zeros((len(qd),count))
-        prob = {k:np.zeros((len(y),count)) for k in keys[1:]}
+        prob = {k:np.zeros((len(y),count,outcomes.shape[1])) for k in keys[1:]}
         source_size,target_size = sizes[source],sizes[target]
         for a,b in np.unique(np.column_stack([source_size,target_size]),axis=0):
             edges = np.flatnonzero((source_size==a)&(target_size==b))
@@ -78,20 +85,20 @@ def vote(x, y, group, fold, count=48):
                 plan,error = coupling(costs)
                 max_error = max(max_error,error)
                 cost_out[idx//count,idx%count] = (plan*costs).sum(axis=(1,2))
-                labels = y[dst].astype(float)
-                prob['booking_rate'][src,(idx%count)[:,None]] = labels.mean(1)[:,None]
+                labels = outcomes[dst].astype(float)
+                prob['booking_rate'][src,(idx%count)[:,None]] = labels.mean(1)[:,None,:]
                 independent = softmax(-costs/.85,axis=2)
-                prob['independent'][src,(idx%count)[:,None]] = (independent*labels[:,None,:]).sum(2)
+                prob['independent'][src,(idx%count)[:,None]] = independent @ labels
                 conditional = plan/plan.sum(axis=2,keepdims=True)
-                prob['transport'][src,(idx%count)[:,None]] = (conditional*labels[:,None,:]).sum(2)
+                prob['transport'][src,(idx%count)[:,None]] = conditional @ labels
         order_weight = softmax(-cost_out/.85,axis=1)
         lookup = np.searchsorted(qd,group_id[q])
         for k in keys[1:]:
-            out[k][q] = (prob[k][q]*order_weight[lookup]).sum(1)
+            out[k][q] = np.einsum('ijk,ij->ik', prob[k][q],order_weight[lookup])
         print('matched fold',int(f),'max marginal error',max_error,flush=True)
     for p in out.values():
         assert np.isfinite(p).all() and p.min()>=-1.e-8 and p.max()<=1+1.e-8
-    return out, max_error
+    return ({k: p[:, 0] for k, p in out.items()} if scalar else out), max_error
 
 
 def run():
