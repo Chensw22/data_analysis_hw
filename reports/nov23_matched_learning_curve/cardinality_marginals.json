@@ -1,0 +1,468 @@
+{
+  "base_correct": 7118,
+  "local_fixed_count_ceiling": 7230,
+  "multi_bookings": 1412,
+  "multi_passengers": 3888,
+  "multi_baseline_count_correct": 977,
+  "multi_base_hard": 45,
+  "oracle_count_prefix": {
+    "full": {
+      "corrected": 1373,
+      "harmed": 90,
+      "accuracy": 0.9664097549752675,
+      "net": 1283,
+      "ci_pp": [
+        13.954470460297276,
+        15.58235615278005
+      ],
+      "fold_net": [
+        144,
+        160,
+        166,
+        166,
+        155,
+        165,
+        169,
+        158
+      ]
+    },
+    "multi": {
+      "corrected": 428,
+      "harmed": 90,
+      "accuracy": 0.9248971193415638,
+      "net": 338,
+      "ci_pp": [
+        7.5575420140637535,
+        9.806626381870194
+      ],
+      "fold_net": [
+        33,
+        43,
+        47,
+        42,
+        33,
+        48,
+        53,
+        39
+      ]
+    },
+    "multi_count_correct": 1412,
+    "solo_hard_fixed": 102,
+    "multi_hard_fixed": 21,
+    "weighted_pp": 14.768179187746295
+  },
+  "oracle_count_marginal": {
+    "full": {
+      "corrected": 1392,
+      "harmed": 98,
+      "accuracy": 0.96767514091798,
+      "net": 1294,
+      "ci_pp": [
+        14.063821776115013,
+        15.698826497955638
+      ],
+      "fold_net": [
+        146,
+        162,
+        169,
+        164,
+        154,
+        166,
+        178,
+        155
+      ]
+    },
+    "multi": {
+      "corrected": 447,
+      "harmed": 98,
+      "accuracy": 0.9277263374485597,
+      "net": 349,
+      "ci_pp": [
+        7.86808621137367,
+        10.092247781825797
+      ],
+      "fold_net": [
+        35,
+        45,
+        50,
+        40,
+        32,
+        49,
+        62,
+        36
+      ]
+    },
+    "multi_count_correct": 1328,
+    "solo_hard_fixed": 102,
+    "multi_hard_fixed": 23,
+    "weighted_pp": 14.880748644084846
+  },
+  "half_source_count_median_prefix": {
+    "full": {
+      "corrected": 140,
+      "harmed": 191,
+      "accuracy": 0.8129529506499482,
+      "net": -51,
+      "ci_pp": [
+        -1.00254092398163,
+        -0.18220537650865318
+      ],
+      "fold_net": [
+        -24,
+        1,
+        -8,
+        -3,
+        -7,
+        -3,
+        -1,
+        -6
+      ]
+    },
+    "multi": {
+      "corrected": 90,
+      "harmed": 127,
+      "accuracy": 0.8284465020576132,
+      "net": -37,
+      "ci_pp": [
+        -1.6802496645935,
+        -0.2324950609919717
+      ],
+      "fold_net": [
+        -6,
+        0,
+        -4,
+        -4,
+        -10,
+        -3,
+        1,
+        -11
+      ]
+    },
+    "multi_count_correct": 989,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.5610265506648575
+  },
+  "half_source_count_marginal": {
+    "full": {
+      "corrected": 67,
+      "harmed": 93,
+      "accuracy": 0.8158288277924767,
+      "net": -26,
+      "ci_pp": [
+        -0.5879809961568849,
+        -0.011697001138409869
+      ],
+      "fold_net": [
+        -20,
+        0,
+        -3,
+        0,
+        -2,
+        0,
+        -3,
+        2
+      ]
+    },
+    "multi": {
+      "corrected": 17,
+      "harmed": 29,
+      "accuracy": 0.8348765432098766,
+      "net": -12,
+      "ci_pp": [
+        -0.6627707736166095,
+        0.050660167261901555
+      ],
+      "fold_net": [
+        -2,
+        -1,
+        1,
+        -1,
+        -5,
+        0,
+        -1,
+        -3
+      ]
+    },
+    "multi_count_correct": 969,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.2983438832691935
+  },
+  "half_source_passenger_median_prefix": {
+    "full": {
+      "corrected": 139,
+      "harmed": 192,
+      "accuracy": 0.8127228804785459,
+      "net": -53,
+      "ci_pp": [
+        -1.0155377944386073,
+        -0.20606224184604008
+      ],
+      "fold_net": [
+        -21,
+        0,
+        -10,
+        -4,
+        -7,
+        -3,
+        -1,
+        -7
+      ]
+    },
+    "multi": {
+      "corrected": 92,
+      "harmed": 131,
+      "accuracy": 0.8279320987654321,
+      "net": -39,
+      "ci_pp": [
+        -1.7389499276375089,
+        -0.28128701581204957
+      ],
+      "fold_net": [
+        -6,
+        -1,
+        -4,
+        -5,
+        -9,
+        -3,
+        1,
+        -12
+      ]
+    },
+    "multi_count_correct": 987,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.592189425856368
+  },
+  "half_source_passenger_marginal": {
+    "full": {
+      "corrected": 65,
+      "harmed": 85,
+      "accuracy": 0.8165190383066835,
+      "net": -20,
+      "ci_pp": [
+        -0.5059288578332944,
+        0.04604144378305069
+      ],
+      "fold_net": [
+        -17,
+        0,
+        -5,
+        0,
+        0,
+        2,
+        -3,
+        3
+      ]
+    },
+    "multi": {
+      "corrected": 18,
+      "harmed": 24,
+      "accuracy": 0.8364197530864198,
+      "net": -6,
+      "ci_pp": [
+        -0.4923875119662033,
+        0.17903386372641805
+      ],
+      "fold_net": [
+        -2,
+        -1,
+        1,
+        -1,
+        -2,
+        2,
+        -1,
+        -2
+      ]
+    },
+    "multi_count_correct": 972,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.2335683934029666
+  },
+  "within_outer_count_median_prefix": {
+    "full": {
+      "corrected": 130,
+      "harmed": 174,
+      "accuracy": 0.8137581962498562,
+      "net": -44,
+      "ci_pp": [
+        -0.8814732283686323,
+        -0.11703538813983977
+      ],
+      "fold_net": [
+        -8,
+        -1,
+        -8,
+        -2,
+        -11,
+        -5,
+        0,
+        -9
+      ]
+    },
+    "multi": {
+      "corrected": 96,
+      "harmed": 130,
+      "accuracy": 0.8292181069958847,
+      "net": -34,
+      "ci_pp": [
+        -1.6351966739298662,
+        -0.13043848640121206
+      ],
+      "fold_net": [
+        -6,
+        2,
+        -5,
+        -4,
+        -9,
+        -3,
+        1,
+        -10
+      ]
+    },
+    "multi_count_correct": 994,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.5007990770671249
+  },
+  "within_outer_count_marginal": {
+    "full": {
+      "corrected": 51,
+      "harmed": 86,
+      "accuracy": 0.8147935120211665,
+      "net": -35,
+      "ci_pp": [
+        -0.6585313501851744,
+        -0.14821402179742163
+      ],
+      "fold_net": [
+        -5,
+        -8,
+        -4,
+        -1,
+        -8,
+        -3,
+        -4,
+        -2
+      ]
+    },
+    "multi": {
+      "corrected": 17,
+      "harmed": 42,
+      "accuracy": 0.8315329218106996,
+      "net": -25,
+      "ci_pp": [
+        -1.0243572447521887,
+        -0.25666857399859805
+      ],
+      "fold_net": [
+        -3,
+        -5,
+        -1,
+        -3,
+        -6,
+        -1,
+        -3,
+        -3
+      ]
+    },
+    "multi_count_correct": 972,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.4089328516878691
+  },
+  "within_outer_passenger_median_prefix": {
+    "full": {
+      "corrected": 132,
+      "harmed": 174,
+      "accuracy": 0.8139882664212584,
+      "net": -42,
+      "ci_pp": [
+        -0.8615667660594055,
+        -0.09355412305313565
+      ],
+      "fold_net": [
+        -8,
+        0,
+        -7,
+        -2,
+        -12,
+        -4,
+        -2,
+        -7
+      ]
+    },
+    "multi": {
+      "corrected": 99,
+      "harmed": 131,
+      "accuracy": 0.8297325102880658,
+      "net": -32,
+      "ci_pp": [
+        -1.5605113897462042,
+        -0.07799102661780885
+      ],
+      "fold_net": [
+        -6,
+        3,
+        -5,
+        -4,
+        -10,
+        -2,
+        1,
+        -9
+      ]
+    },
+    "multi_count_correct": 997,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.4762973620580407
+  },
+  "within_outer_passenger_marginal": {
+    "full": {
+      "corrected": 51,
+      "harmed": 89,
+      "accuracy": 0.814448406764063,
+      "net": -38,
+      "ci_pp": [
+        -0.698116244906777,
+        -0.18127742212941816
+      ],
+      "fold_net": [
+        -5,
+        -7,
+        -3,
+        1,
+        -10,
+        -4,
+        -7,
+        -3
+      ]
+    },
+    "multi": {
+      "corrected": 18,
+      "harmed": 46,
+      "accuracy": 0.8307613168724279,
+      "net": -28,
+      "ci_pp": [
+        -1.131410799413596,
+        -0.3312442486266416
+      ],
+      "fold_net": [
+        -3,
+        -4,
+        -1,
+        -1,
+        -8,
+        -2,
+        -4,
+        -5
+      ]
+    },
+    "multi_count_correct": 968,
+    "solo_hard_fixed": 0,
+    "multi_hard_fixed": 0,
+    "weighted_pp": -0.4474066852083819
+  }
+}
