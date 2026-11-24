@@ -1,0 +1,106 @@
+{
+  "matches": [
+    {
+      "fold": 0,
+      "same_passenger_pairs": 155,
+      "opposite_base_direction": 5
+    },
+    {
+      "fold": 1,
+      "same_passenger_pairs": 194,
+      "opposite_base_direction": 11
+    },
+    {
+      "fold": 2,
+      "same_passenger_pairs": 164,
+      "opposite_base_direction": 0
+    },
+    {
+      "fold": 3,
+      "same_passenger_pairs": 196,
+      "opposite_base_direction": 3
+    },
+    {
+      "fold": 4,
+      "same_passenger_pairs": 139,
+      "opposite_base_direction": 7
+    },
+    {
+      "fold": 5,
+      "same_passenger_pairs": 182,
+      "opposite_base_direction": 3
+    },
+    {
+      "fold": 6,
+      "same_passenger_pairs": 138,
+      "opposite_base_direction": 0
+    },
+    {
+      "fold": 7,
+      "same_passenger_pairs": 174,
+      "opposite_base_direction": 2
+    }
+  ],
+  "results": {
+    "plain": {
+      "accuracy": 0.8181295295064995,
+      "fixed": 56,
+      "harmed": 62,
+      "additional_net": -17,
+      "fold_net": [
+        -7,
+        -7,
+        1,
+        7,
+        -3,
+        1,
+        5,
+        -3
+      ],
+      "ci_pp": [
+        -0.3113576491567456,
+        0.171164510851387
+      ]
+    },
+    "matched": {
+      "accuracy": 0.8172092488208904,
+      "fixed": 60,
+      "harmed": 74,
+      "additional_net": -13,
+      "fold_net": [
+        -10,
+        -4,
+        -4,
+        4,
+        -2,
+        -4,
+        6,
+        0
+      ],
+      "ci_pp": [
+        -0.41943918810081543,
+        0.08140151946664066
+      ]
+    },
+    "exchanged": {
+      "accuracy": 0.8164040032209824,
+      "fixed": 103,
+      "harmed": 124,
+      "additional_net": -8,
+      "fold_net": [
+        -9,
+        -5,
+        -6,
+        4,
+        -2,
+        -3,
+        0,
+        0
+      ],
+      "ci_pp": [
+        -0.5762376867075127,
+        0.1039177020530874
+      ]
+    }
+  }
+}
