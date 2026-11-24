@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 24 日 14:51 北京时间，已启动第二顺位的 Mac 一次性任务 `com.chensw22.spaceship.solorandom70.once`，导出固定在 `39b6ac5214c82632cc73e0a578814a71824c924a`。先等待 10 人九票版的官方成绩，再按主账号剩余额度弹窗提交 70 人组合版 `proposal_n24_solo_random_nine`。首次检查状态为 `awaiting_predecessor`，未尝试上传。手动提交前检查两份候选各自的 `artifacts/<候选>/queue_status.json` 和官方回执。整单留出的三次重训净增 18、19、13 人，见 `reports/nov23_matched_learning_curve/solo_release_replay.json`。
+
 - 11 月 24 日 13:54 北京时间，主账号 10 次已用、可用 0 次。已在当前 Mac 登录会话启动一次性任务 `com.chensw22.spaceship.selectedtree10.once`，等待额度刷新后弹窗提交 `proposal_n24_selected_dissent`。冻结导出版 `4cb2cb78a864e2ff10cfd69fd1996001b7d3435d`，相对 v131 改判 10 人。手动操作前检查 launchctl 实时状态、`artifacts/proposal_n24_selected_dissent/queue_status.json` 及该候选官方回执，以免重复上传。
 
 - 11 月 23 日新增第 4 份候选 `proposal_n23_adaptive_bill_prior`，导出版本 `85ee5affdc4da3628bae78bc76167a5431334cd1`，相对 v131 改判 124 人。它将在 109 人版取得主账号官方成绩后等待额度并提醒提交。手动操作前检查 `com.chensw22.spaceship.adaptivebill124.once`、该候选 artifacts 目录中的 `queue_status.json` 及线上回执。本文件用于测试增量，历史文件给出的公榜准确率上限为 83.423%。
