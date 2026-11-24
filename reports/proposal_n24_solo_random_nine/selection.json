@@ -1,0 +1,23 @@
+{
+  "version": "n24_solo_random_nine",
+  "rule": "Prefer a nine-vote change, else use random fields for single-person bookings, else use v131.",
+  "parents": {
+    "champion": {
+      "name": "proposal_v131_party_consensus",
+      "submission": "ed644344cf5df8d6e5c213b5c42b109d0efbee43404cb8b00e6bafc2fde187d4",
+      "scores": "b0890152c44213d65d49aa5739f75d4943adf5ee3478be534e2adcae37898d73"
+    },
+    "nine": {
+      "name": "proposal_n24_selected_dissent",
+      "submission": "5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223",
+      "scores": "a9e5ef878bbb5d53bcddf7ad67fb7fc3f1d7cd0971c492beed20e0a70f60c7e5"
+    },
+    "random_fields": {
+      "name": "proposal_n24_random_subspace",
+      "submission": "0462760b03e86ebd6be74d0eda9b69e8eb60f143a631e825785e9b85c6b3c2c1",
+      "scores": "f930a91f278278a577490723ca5067b0ec0db8239feec98ee0908c57bfe58072"
+    }
+  },
+  "threshold": 0.5,
+  "evidence": "reports/nov23_matched_learning_curve/solo_release_replay.json"
+}

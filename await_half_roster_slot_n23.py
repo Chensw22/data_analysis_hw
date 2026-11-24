@@ -51,7 +51,12 @@ SELECTED = QueuedExport('proposal_n24_selected_dissent', 'export_selected_dissen
                         '主账号已有提交额度，即将评测相对 v131 改判 10 人的九票树模型。',
                         'ed644344cf5df8d6e5c213b5c42b109d0efbee43404cb8b00e6bafc2fde187d4',
                         model='ensemble.joblib')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED)}
+SOLO_RANDOM = QueuedExport('proposal_n24_solo_random_nine', 'export_solo_random_nine_n24.py',
+                           SELECTED.out/'queue_status.json',
+                           '九票版已取得官方成绩，即将评测加入独行乘客随机字段模型的 70 人版。',
+                           '5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223',
+                           model='composition.json')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM)}
 
 
 def verify(revision, job=HALF):
