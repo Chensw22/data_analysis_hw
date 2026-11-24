@@ -122,6 +122,7 @@ def run():
         query_to_true=int((released & (released!=official)).sum()))
     print('bagged', [report['bagged'][k]['net'] for k in ('full','historical','new_orders')],report['bagged']['query_changes'])
     (ROOT/'reports/nov23_matched_learning_curve/edit_resampling.json').write_text(json.dumps(report,indent=2)+'\n')
+    return current,past,released
 
 
 if __name__=='__main__':
