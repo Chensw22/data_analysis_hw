@@ -73,6 +73,15 @@ def audit():
         for p in [a,b]:
             assert np.isfinite(p).all() and (0<=p).all() and (p<=1).all()
     hits=np.stack([b>=.5 for a,b in out.values()],axis=-1)==y[:,None]
+    remaining = bad & ~hits.any(axis=1)
+    folder = ROOT/'artifacts/nov24_remaining_cases'
+    np.savez_compressed(folder/'archive_scores.npz', row=rows, old_fold=of, fold=fold,
+                        passenger=raw.PassengerId.to_numpy(str), y=y, names=list(out),
+                        historical=np.column_stack([a for a,b in out.values()]),
+                        full=np.column_stack([b for a,b in out.values()]))
+    cache = folder/'after_archive.npz'
+    np.savez_compressed(cache, passenger=raw.PassengerId.to_numpy(str), y=y, fold=fold,
+                        missed=remaining, baseline_misses=bad)
     rh=bad[rows] & (champ!=oy)
     seen=~np.isin(g,og)
     result={'model_count':len(out),'source_directories':sorted({k.split('/')[0] for k in out}),
