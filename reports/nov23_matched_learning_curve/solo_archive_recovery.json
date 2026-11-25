@@ -1,0 +1,568 @@
+{
+  "historical": {
+    "solo": {
+      "oracle": {
+        "rows": 3817,
+        "errors": 761,
+        "fixed": 618,
+        "harmed": 1567
+      },
+      "learned_rules": {
+        "rows": 3817,
+        "errors": 761,
+        "fixed": 79,
+        "harmed": 121
+      },
+      "unreached_errors": 143
+    },
+    "family_consensus": {
+      "oracle": {
+        "rows": 2543,
+        "errors": 314,
+        "fixed": 171,
+        "harmed": 741
+      },
+      "learned_rules": {
+        "rows": 2543,
+        "errors": 314,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "unreached_errors": 143
+    }
+  },
+  "historical_rules_on_unseen": {
+    "solo": {
+      "rows": 978,
+      "errors": 201,
+      "fixed": 9,
+      "harmed": 17
+    },
+    "family_consensus": {
+      "rows": 649,
+      "errors": 85,
+      "fixed": 0,
+      "harmed": 0
+    }
+  },
+  "historical_rules": [
+    "permutation_selection/random & zero_truncated/truncated"
+  ],
+  "historical_rules_unseen_fold_net": [
+    0,
+    -1,
+    -2,
+    0,
+    1,
+    -4,
+    -2,
+    0
+  ],
+  "full": {
+    "solo": {
+      "oracle": {
+        "rows": 4735,
+        "errors": 896,
+        "fixed": 717,
+        "harmed": 1931
+      },
+      "learned_rules": {
+        "rows": 4735,
+        "errors": 896,
+        "fixed": 69,
+        "harmed": 107
+      },
+      "unreached_errors": 179
+    },
+    "family_consensus": {
+      "oracle": {
+        "rows": 3235,
+        "errors": 396,
+        "fixed": 217,
+        "harmed": 931
+      },
+      "learned_rules": {
+        "rows": 3235,
+        "errors": 396,
+        "fixed": 2,
+        "harmed": 0
+      },
+      "unreached_errors": 179
+    }
+  },
+  "all_experts_agree_context": {
+    "all": {
+      "rows": 2087,
+      "errors": 179
+    },
+    "zero_recorded_spend": {
+      "rows": 721,
+      "errors": 31
+    },
+    "some_recorded_spend": {
+      "rows": 1366,
+      "errors": 148
+    },
+    "awake": {
+      "rows": 1349,
+      "errors": 148
+    },
+    "asleep": {
+      "rows": 709,
+      "errors": 31
+    },
+    "earth": {
+      "rows": 1293,
+      "errors": 145
+    },
+    "positive_prediction": {
+      "rows": 763,
+      "errors": 31
+    },
+    "negative_prediction": {
+      "rows": 1324,
+      "errors": 148
+    },
+    "native_at_least_80pct": {
+      "rows": 1848,
+      "errors": 135
+    }
+  },
+  "repeat_same_passenger": {
+    "same_expert": {
+      "rows": 2339,
+      "errors": 253,
+      "fixed": 85,
+      "harmed": 445
+    },
+    "each_expert": {
+      "bill_regime_tree/pooled": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "bill_regime_tree/constant": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "bill_regime_tree/registration": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "class_neighborhood_mass/personal": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "class_neighborhood_mass/density": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 7
+      },
+      "class_neighborhood_mass/shuffled": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "companion_transition/personal": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "companion_transition/real": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "companion_transition/removed": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "companion_transition/swapped": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "error_partition_kernel/rand": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "error_partition_kernel/all_grad": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "error_partition_kernel/matched_random": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "labelled_reference_pairs/point": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "labelled_reference_pairs/joint": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "labelled_reference_pairs/near_sep": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "labelled_reference_pairs/global_rel": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "permutation_selection/all": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "permutation_selection/selected": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "permutation_selection/random": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "permutation_selection/protected_select": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "permutation_selection/protected_random": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "recursive_metric/isotropic": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "recursive_metric/diag1": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "recursive_metric/diag2": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "recursive_metric/full2": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "service_order_mixture/empty": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "maxout/linear": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "maxout/relu": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "maxout/maxout": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "zero_truncated/independent": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "zero_truncated/truncated": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "zero_truncated/reported_sleep": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "predicate_tables/main": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "predicate_tables/fixed": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "predicate_tables/learned": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "two_view_reliability/registration": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 60,
+        "harmed": 356
+      },
+      "two_view_reliability/spending": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 4
+      },
+      "two_view_reliability/mean": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 2,
+        "harmed": 0
+      },
+      "two_view_reliability/pooled": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "two_view_reliability/specialist": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "two_view_reliability/margins": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "honest_failure_partitions/natural": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "honest_failure_partitions/natural_honest": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 4
+      },
+      "honest_failure_partitions/enriched": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 12,
+        "harmed": 25
+      },
+      "honest_failure_partitions/enriched_honest": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "honest_failure_partitions/placebo": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "honest_failure_partitions/placebo_honest": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "failure_sampling_offset/natural": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "failure_sampling_offset/enriched": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 19,
+        "harmed": 20
+      },
+      "failure_sampling_offset/remove_offset": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "failure_sampling_offset/in_fit_offset": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "failure_sampling_offset/placebo": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "spending_shape/free": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "spending_shape/pooled_direction": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "spending_shape/basket_direction": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "spending_shape/reversed": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 9,
+        "harmed": 78
+      },
+      "fixed_bill_margins/personal": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fixed_bill_margins/margins": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "fixed_bill_margins/measured": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fixed_bill_margins/reconstructed": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fixed_bill_margins/same_fit": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "expected_bill": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "bill_template": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 16,
+        "harmed": 60
+      },
+      "rounding": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "charge_tree": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "charge_tabicl": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "cabin_tree": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "cabin_tabicl": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "peer_tree": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "peer_tabicl": {
+        "rows": 2339,
+        "errors": 253,
+        "fixed": 1,
+        "harmed": 0
+      }
+    }
+  },
+  "model_count": 71
+}
