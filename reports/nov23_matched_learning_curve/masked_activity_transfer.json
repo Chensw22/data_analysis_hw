@@ -1,0 +1,3322 @@
+{
+  "reference": "fare-informed 98-passenger test candidate (3bb61e7); grouped OOF decisions",
+  "comparison": "Fixed 0.5 cutoff on no-visible-positive rows. Other rows retain the reference prediction.",
+  "common_definition": "Every original model family and archived prediction agrees with the original anchor.",
+  "support_columns": [
+    "paid training passengers",
+    "positive charges all hidden by sampled missingness pattern"
+  ],
+  "eligible_paid_per_fold": [
+    [
+      4383,
+      14
+    ],
+    [
+      4442,
+      5
+    ],
+    [
+      4406,
+      5
+    ],
+    [
+      4409,
+      5
+    ],
+    [
+      4375,
+      7
+    ],
+    [
+      4421,
+      3
+    ],
+    [
+      4409,
+      8
+    ],
+    [
+      4435,
+      7
+    ]
+  ],
+  "all_passengers_by_sleep": {
+    "?": {
+      "real_zero": 98,
+      "paid_source": 119
+    },
+    "False": {
+      "real_zero": 518,
+      "paid_source": 4921
+    },
+    "True": {
+      "real_zero": 3037,
+      "paid_source": 0
+    }
+  },
+  "bookings_by_scope": {
+    "all": 5331,
+    "no_visible_bill": 1980,
+    "complete_zero": 1763,
+    "incomplete_zero": 256,
+    "known_sleep": 1804,
+    "known_awake": 178,
+    "unknown_sleep": 59,
+    "has_paid_peer": 312,
+    "no_paid_peer": 1668,
+    "unanimous_zero": 984,
+    "fresh": 1006,
+    "fresh_zero": 337,
+    "fresh_unanimous_zero": 151,
+    "complete_zero_unanimous": 894,
+    "fresh_complete_zero": 300,
+    "incomplete_zero_unanimous": 109,
+    "fresh_incomplete_zero": 38,
+    "known_sleep_unanimous": 960,
+    "fresh_known_sleep": 305,
+    "known_awake_unanimous": 32,
+    "fresh_known_awake": 23,
+    "unknown_sleep_unanimous": 12,
+    "fresh_unknown_sleep": 10,
+    "has_paid_peer_unanimous": 175,
+    "fresh_has_paid_peer": 17,
+    "no_paid_peer_unanimous": 809,
+    "fresh_no_paid_peer": 320
+  },
+  "common_zero_profile": {
+    "origin": {
+      "?": {
+        "rows": 16,
+        "errors": 3
+      },
+      "Earth": {
+        "rows": 245,
+        "errors": 28
+      },
+      "Europa": {
+        "rows": 490,
+        "errors": 5
+      },
+      "Mars": {
+        "rows": 340,
+        "errors": 3
+      }
+    },
+    "deck": {
+      "?": {
+        "rows": 19,
+        "errors": 2
+      },
+      "A": {
+        "rows": 20,
+        "errors": 2
+      },
+      "B": {
+        "rows": 241,
+        "errors": 3
+      },
+      "C": {
+        "rows": 155,
+        "errors": 0
+      },
+      "D": {
+        "rows": 43,
+        "errors": 0
+      },
+      "E": {
+        "rows": 31,
+        "errors": 1
+      },
+      "F": {
+        "rows": 334,
+        "errors": 2
+      },
+      "G": {
+        "rows": 248,
+        "errors": 29
+      }
+    },
+    "destination": {
+      "55 Cancri e": {
+        "rows": 371,
+        "errors": 11
+      },
+      "?": {
+        "rows": 24,
+        "errors": 1
+      },
+      "PSO J318.5-22": {
+        "rows": 81,
+        "errors": 14
+      },
+      "TRAPPIST-1e": {
+        "rows": 615,
+        "errors": 13
+      }
+    },
+    "solo": {
+      "False": {
+        "rows": 370,
+        "errors": 8
+      },
+      "True": {
+        "rows": 721,
+        "errors": 31
+      }
+    },
+    "original_transport_prediction": {
+      "True": {
+        "rows": 1091,
+        "errors": 39
+      }
+    }
+  },
+  "unanimous_error_ranking": {
+    "real_only": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.24537259089759633,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 27
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.30263305322128853,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "mixed": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.19711763973678123,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 24
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.23761904761904762,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "domain": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2570383083104643,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 23
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.32929971988795514,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "sham": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2819815150662305,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 24
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.21944444444444441,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 3
+      }
+    },
+    "domain_marginal": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2132903261455385,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 24
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.2441348469212246,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 3
+      }
+    },
+    "compatible": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2486730454147142,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 27
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.292156862745098,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "route_real": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.23605296219806718,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 26
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.321256038647343,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 3
+      }
+    },
+    "route_sham": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2923748469459705,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 24
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.4380952380952381,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "route_direct": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.22905782700098198,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 25
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.2584119106699752,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "route_blind": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2871281302766202,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 25
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.5039377289377289,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "existing_anchor_confidence": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.23552003335421665,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 25
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.26742919389978215,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    },
+    "existing_panel_median_confidence": {
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "average_precision": 0.2494435975846972,
+        "top_tenth_rows": 110,
+        "top_tenth_errors": 26
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "average_precision": 0.27585081585081583,
+        "top_tenth_rows": 16,
+        "top_tenth_errors": 4
+      }
+    }
+  },
+  "methods": {
+    "real_only": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 49,
+        "harmed": 67
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 49,
+        "harmed": 67
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 43,
+        "harmed": 52
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 6,
+        "harmed": 15
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 35,
+        "harmed": 48
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 11,
+        "harmed": 14
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 3,
+        "harmed": 5
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 5,
+        "harmed": 10
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 44,
+        "harmed": 57
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 6,
+        "harmed": 7
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 6,
+        "harmed": 7
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 5,
+        "harmed": 6
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 5,
+        "harmed": 6
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 6,
+        "harmed": 7
+      }
+    },
+    "mixed": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 73,
+        "harmed": 95
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 73,
+        "harmed": 95
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 60,
+        "harmed": 76
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 13,
+        "harmed": 19
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 46,
+        "harmed": 60
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 21,
+        "harmed": 15
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 6,
+        "harmed": 20
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 11,
+        "harmed": 13
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 62,
+        "harmed": 82
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 12,
+        "harmed": 12
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 12,
+        "harmed": 12
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 3,
+        "harmed": 3
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 9,
+        "harmed": 7
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 2,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 5
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 4
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 12,
+        "harmed": 12
+      }
+    },
+    "domain": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 53,
+        "harmed": 70
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 53,
+        "harmed": 70
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 45,
+        "harmed": 54
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 8,
+        "harmed": 16
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 42,
+        "harmed": 49
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 10,
+        "harmed": 15
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 1,
+        "harmed": 6
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 5,
+        "harmed": 10
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 48,
+        "harmed": 60
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 6,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 6,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 6,
+        "harmed": 8
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 6,
+        "harmed": 6
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 6,
+        "harmed": 9
+      }
+    },
+    "sham": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 64,
+        "harmed": 86
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 64,
+        "harmed": 86
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 55,
+        "harmed": 70
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 9,
+        "harmed": 16
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 42,
+        "harmed": 57
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 18,
+        "harmed": 20
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 4,
+        "harmed": 9
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 7,
+        "harmed": 13
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 57,
+        "harmed": 73
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 10,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 10,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 7,
+        "harmed": 5
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 10,
+        "harmed": 9
+      }
+    },
+    "domain_marginal": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 64,
+        "harmed": 82
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 64,
+        "harmed": 82
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 53,
+        "harmed": 66
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 11,
+        "harmed": 16
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 42,
+        "harmed": 49
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 16,
+        "harmed": 19
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 6,
+        "harmed": 14
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 8,
+        "harmed": 12
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 56,
+        "harmed": 70
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 6,
+        "harmed": 6
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 9,
+        "harmed": 9
+      }
+    },
+    "compatible": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 48,
+        "harmed": 70
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 48,
+        "harmed": 70
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 41,
+        "harmed": 54
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 7,
+        "harmed": 16
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 34,
+        "harmed": 48
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 12,
+        "harmed": 18
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 4,
+        "harmed": 10
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 44,
+        "harmed": 60
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 4,
+        "harmed": 7
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 4,
+        "harmed": 7
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 4,
+        "harmed": 6
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 4,
+        "harmed": 6
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 4,
+        "harmed": 7
+      }
+    },
+    "route_real": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 47,
+        "harmed": 80
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 47,
+        "harmed": 80
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 39,
+        "harmed": 69
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 8,
+        "harmed": 11
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 36,
+        "harmed": 52
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 9,
+        "harmed": 26
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 4,
+        "harmed": 10
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 43,
+        "harmed": 70
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 5,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 5,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 4,
+        "harmed": 8
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 4,
+        "harmed": 7
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 5,
+        "harmed": 9
+      }
+    },
+    "route_sham": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 56,
+        "harmed": 86
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 56,
+        "harmed": 86
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 46,
+        "harmed": 75
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 10,
+        "harmed": 11
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 43,
+        "harmed": 56
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 10,
+        "harmed": 26
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 3,
+        "harmed": 4
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 6,
+        "harmed": 15
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 50,
+        "harmed": 71
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 7,
+        "harmed": 8
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 9,
+        "harmed": 9
+      }
+    },
+    "route_direct": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 50,
+        "harmed": 72
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 50,
+        "harmed": 72
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 45,
+        "harmed": 64
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 5,
+        "harmed": 8
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 41,
+        "harmed": 46
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 9,
+        "harmed": 23
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 4,
+        "harmed": 8
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 46,
+        "harmed": 64
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 6,
+        "harmed": 9
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 6,
+        "harmed": 9
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 6,
+        "harmed": 8
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 6,
+        "harmed": 6
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 6,
+        "harmed": 8
+      }
+    },
+    "route_blind": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 57,
+        "harmed": 86
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 57,
+        "harmed": 86
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 47,
+        "harmed": 75
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 10,
+        "harmed": 11
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 43,
+        "harmed": 54
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 11,
+        "harmed": 26
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 3,
+        "harmed": 6
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 6,
+        "harmed": 15
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 51,
+        "harmed": 71
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 9,
+        "harmed": 10
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 9,
+        "harmed": 10
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 7,
+        "harmed": 9
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 9,
+        "harmed": 10
+      }
+    },
+    "mixed_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 37,
+        "harmed": 50
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 37,
+        "harmed": 50
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 30,
+        "harmed": 42
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 7,
+        "harmed": 8
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 19,
+        "harmed": 21
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 13,
+        "harmed": 11
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 5,
+        "harmed": 18
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 7,
+        "harmed": 8
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 30,
+        "harmed": 42
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 7,
+        "harmed": 8
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 7,
+        "harmed": 8
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 5,
+        "harmed": 6
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 5,
+        "harmed": 3
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 5
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 4
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 7,
+        "harmed": 8
+      }
+    },
+    "domain_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 20,
+        "harmed": 18
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 20,
+        "harmed": 18
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 17,
+        "harmed": 14
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 3,
+        "harmed": 4
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 18,
+        "harmed": 9
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 1,
+        "harmed": 7
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 19,
+        "harmed": 15
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 4,
+        "harmed": 4
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 4,
+        "harmed": 4
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 4,
+        "harmed": 3
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 4,
+        "harmed": 2
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 4,
+        "harmed": 4
+      }
+    },
+    "compatible_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 2,
+        "harmed": 1
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "sham_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 29,
+        "harmed": 33
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 29,
+        "harmed": 33
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 26,
+        "harmed": 27
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 3,
+        "harmed": 6
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 17,
+        "harmed": 18
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 9,
+        "harmed": 11
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 3,
+        "harmed": 4
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 5,
+        "harmed": 4
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 24,
+        "harmed": 29
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 5,
+        "harmed": 3
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 5,
+        "harmed": 3
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 5,
+        "harmed": 3
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 3,
+        "harmed": 0
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 5,
+        "harmed": 3
+      }
+    },
+    "route_real_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 11,
+        "harmed": 17
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 11,
+        "harmed": 17
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 8,
+        "harmed": 14
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 3,
+        "harmed": 3
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 7,
+        "harmed": 13
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 2,
+        "harmed": 0
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 9,
+        "harmed": 13
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 1,
+        "harmed": 2
+      }
+    },
+    "route_sham_induced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 18,
+        "harmed": 24
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 18,
+        "harmed": 24
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 12,
+        "harmed": 20
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 6,
+        "harmed": 4
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 11,
+        "harmed": 16
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 4,
+        "harmed": 6
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 3,
+        "harmed": 2
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 4,
+        "harmed": 9
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 14,
+        "harmed": 15
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 4,
+        "harmed": 2
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 4,
+        "harmed": 2
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 2,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 4,
+        "harmed": 2
+      }
+    },
+    "domain_and_route": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 28,
+        "harmed": 44
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 28,
+        "harmed": 44
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 24,
+        "harmed": 36
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 4,
+        "harmed": 8
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 23,
+        "harmed": 33
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 5,
+        "harmed": 9
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 3,
+        "harmed": 5
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 25,
+        "harmed": 39
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 2,
+        "harmed": 5
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 2,
+        "harmed": 5
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 2,
+        "harmed": 5
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 2,
+        "harmed": 4
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 2,
+        "harmed": 5
+      }
+    },
+    "domain_and_compatible": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 32,
+        "harmed": 53
+      },
+      "no_visible_bill": {
+        "rows": 2183,
+        "errors": 405,
+        "fixed": 32,
+        "harmed": 53
+      },
+      "complete_zero": {
+        "rows": 1918,
+        "errors": 356,
+        "fixed": 27,
+        "harmed": 40
+      },
+      "incomplete_zero": {
+        "rows": 265,
+        "errors": 49,
+        "fixed": 5,
+        "harmed": 13
+      },
+      "known_sleep": {
+        "rows": 1930,
+        "errors": 336,
+        "fixed": 23,
+        "harmed": 40
+      },
+      "known_awake": {
+        "rows": 194,
+        "errors": 57,
+        "fixed": 9,
+        "harmed": 9
+      },
+      "unknown_sleep": {
+        "rows": 59,
+        "errors": 12,
+        "fixed": 0,
+        "harmed": 4
+      },
+      "has_paid_peer": {
+        "rows": 378,
+        "errors": 53,
+        "fixed": 4,
+        "harmed": 7
+      },
+      "no_paid_peer": {
+        "rows": 1805,
+        "errors": 352,
+        "fixed": 28,
+        "harmed": 46
+      },
+      "unanimous_zero": {
+        "rows": 1091,
+        "errors": 39,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 191,
+        "fixed": 1,
+        "harmed": 5
+      },
+      "fresh_zero": {
+        "rows": 342,
+        "errors": 69,
+        "fixed": 1,
+        "harmed": 5
+      },
+      "fresh_unanimous_zero": {
+        "rows": 155,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "complete_zero_unanimous": {
+        "rows": 978,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_complete_zero": {
+        "rows": 304,
+        "errors": 64,
+        "fixed": 1,
+        "harmed": 5
+      },
+      "incomplete_zero_unanimous": {
+        "rows": 113,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_incomplete_zero": {
+        "rows": 38,
+        "errors": 5,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "known_sleep_unanimous": {
+        "rows": 1043,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_sleep": {
+        "rows": 309,
+        "errors": 61,
+        "fixed": 1,
+        "harmed": 4
+      },
+      "known_awake_unanimous": {
+        "rows": 36,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_known_awake": {
+        "rows": 23,
+        "errors": 6,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "unknown_sleep_unanimous": {
+        "rows": 12,
+        "errors": 1,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_unknown_sleep": {
+        "rows": 10,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "has_paid_peer_unanimous": {
+        "rows": 208,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_has_paid_peer": {
+        "rows": 17,
+        "errors": 2,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "no_paid_peer_unanimous": {
+        "rows": 883,
+        "errors": 36,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh_no_paid_peer": {
+        "rows": 325,
+        "errors": 67,
+        "fixed": 1,
+        "harmed": 5
+      }
+    }
+  }
+}
