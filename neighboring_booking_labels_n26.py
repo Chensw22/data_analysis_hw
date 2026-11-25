@@ -62,8 +62,7 @@ def aggregate(i, score, length):
     return np.bincount(i,weights=score,minlength=length)/np.bincount(i,minlength=length).clip(1)
 
 
-def run():
-    raw,y,g,f = data()
+def predict(raw,y,g,f):
     x = np.column_stack(vectors(raw))
     split = raw.Cabin.str.split('/',expand=True)
     cabin = pd.to_numeric(split[1]).to_numpy()
@@ -108,6 +107,12 @@ def run():
                     label[ix] = rng.permutation(label[ix])
             score[q,c] = aggregate(i,donor_messages(prob,label),len(y))[q]
         print('held fold',int(k),'passengers',len(np.unique(i)),flush=True)
+    return base,score,usable
+
+
+def run():
+    raw,y,g,f = data()
+    base,score,usable = predict(raw,y,g,f)
     _, cur, _ = inputs()
     parent, known = cur['parent'],cur['known']
     single = raw.groupby(g).PassengerId.transform('size').eq(1).to_numpy()
