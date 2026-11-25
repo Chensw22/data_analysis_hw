@@ -1,11 +1,15 @@
 """Screen archived challengers over entire booking folds, carrying both unresolved release branches."""
 import json
 
+import joblib
 import numpy as np
 import pandas as pd
 from threadpoolctl import threadpool_limits
 
 from broad_booking_policy_replay_n23 import interval
+from export_budget_quarter_n23 import source
+from full_roster_permutation_selection_n24 import feature_bank, ensemble_probability
+from kaggle_workflow import sha256
 from full_roster_conditional_pool_n23 import ROOT, data
 from full_roster_six_failure_archive_n24 import prediction_sets
 from grouped_peer_release_replay_n25 import edit_effect_bounds
@@ -13,6 +17,35 @@ from grouped_peer_teacher_n25 import OUT, OUTER
 
 DEST = ROOT / 'reports/nov23_matched_learning_curve'
 ART = ROOT / 'artifacts'
+
+
+def verify_scored_random_composition():
+    test = pd.read_csv(ROOT/'data/raw/test.csv', usecols=lambda c: c != 'Name')
+    random = 'proposal_n24_random_subspace'
+    nine = 'proposal_n24_selected_dissent'
+    parent = 'proposal_v131_party_consensus'
+    native = source('proposal_online_first_counts15',test)[0]
+    prev, best, old = [source(k,test)[1] for k in (parent,nine,random)]
+    model_path = ART/random/'ensemble.joblib'
+    spec = json.loads((ROOT/'reports'/random/'manifest.json').read_text())
+    assert sha256(model_path) == spec['model_sha256']
+    model = joblib.load(model_path)
+    x, fields, _ = feature_bank(test)
+    query = pd.DataFrame(x,columns=fields).reindex(columns=model['fields'],fill_value=0).to_numpy()
+    mixed = .75*native + .25*ensemble_probability(model['models'],query)
+    np.testing.assert_array_equal(np.where((native>=.5)==prev,mixed>=.5,prev),old)
+    actual = np.where(((native>=.5)==prev)&(prev==best),mixed>=.5,best)
+    changes, repairs = old != prev, best != prev
+    assert not (changes & repairs).any()
+    np.testing.assert_array_equal(actual != prev,changes | repairs)
+    def public(name):
+        receipt, = (ROOT/'reports'/name/'online_attempts').glob('*.json')
+        return float(json.loads(receipt.read_text())['evaluation']['Public Score'])
+    return dict(random_model=random, calibrated_weight=.25, formula='score(random) + score(nine) - score(parent)',
+                old_random_score=public(random), old_nine_score=public(nine), old_parent_score=public(parent),
+                disjoint_random_edits=int(changes.sum()), disjoint_nine_edits=int(repairs.sum()),
+                overlap=int((changes & repairs).sum()), differences_from_incumbent=int((actual!=best).sum()),
+                implied_score_from_rounded_receipts=round(public(random)+public(nine)-public(parent),5))
 
 
 def run():
@@ -99,6 +132,9 @@ def run():
                                  interval_pp=interval(d,groups[mask]),
                                  folds=[int(d[full_fold[mask]==k].sum()) for k in np.unique(full_fold[mask])])
         report['remaining_five_folds'][source] = dict(model=model['model'], weight=w, checks=checks)
+    if any(item['model'] == 'permutation_selection/random' and item['weight'] == .25
+           for item in report['remaining_five_folds'].values()):
+        report['scored_composition_check'] = verify_scored_random_composition()
     (DEST/'grouped_challenger_screen.json').write_text(json.dumps(report, indent=2)+'\n')
     print('selected from historical data', best_old.to_dict(), flush=True)
     print('positive on both', len(robust), 'stable',len(both), flush=True)
