@@ -1,0 +1,220 @@
+{
+  "files": {
+    "six": {
+      "digest": "222a2a6549b2b49a39452c58f203196ae20a150875766f330752bbf8de69bf2d",
+      "official_receipts": []
+    },
+    "tabnet": {
+      "digest": "4f5d0389d8f01e1c375b41521a88c87849f7183106d2537eb12bb9cca168f943",
+      "official_receipts": []
+    },
+    "reserve": {
+      "digest": "de14c99a507fb7073023908d8a26987064d134c0e77eaec6c77302caf7a76461",
+      "official_receipts": []
+    }
+  },
+  "pairs": {
+    "tabnet_minus_six": {
+      "fixes": 15,
+      "harms": 6,
+      "bookings": 19,
+      "test_changes": 18,
+      "conditional_pp": null,
+      "local_net_interval": [
+        0.0,
+        19.0
+      ],
+      "direct_pp_envelope": [
+        -0.3238251110591536,
+        0.3953493315195443
+      ],
+      "bootstrap_draws_with_missing": 20000,
+      "draws": 20000,
+      "cells": [
+        {
+          "size": 1,
+          "new_class": false,
+          "local_passengers": 1,
+          "local_bookings": 1,
+          "test_changes": 9,
+          "local_net": 1
+        },
+        {
+          "size": 1,
+          "new_class": true,
+          "local_passengers": 1,
+          "local_bookings": 1,
+          "test_changes": 4,
+          "local_net": 1
+        },
+        {
+          "size": 2,
+          "new_class": false,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 1,
+          "local_net": 0
+        },
+        {
+          "size": 2,
+          "new_class": true,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 0,
+          "local_net": 0
+        },
+        {
+          "size": 3,
+          "new_class": false,
+          "local_passengers": 8,
+          "local_bookings": 7,
+          "test_changes": 1,
+          "local_net": 6
+        },
+        {
+          "size": 3,
+          "new_class": true,
+          "local_passengers": 11,
+          "local_bookings": 11,
+          "test_changes": 3,
+          "local_net": 1
+        }
+      ]
+    },
+    "reserve_minus_six": {
+      "fixes": 48,
+      "harms": 34,
+      "bookings": 80,
+      "test_changes": 44,
+      "conditional_pp": null,
+      "local_net_interval": [
+        -4.0,
+        32.0
+      ],
+      "direct_pp_envelope": [
+        -0.30123244060308246,
+        0.490920845865729
+      ],
+      "bootstrap_draws_with_missing": 20000,
+      "draws": 20000,
+      "cells": [
+        {
+          "size": 1,
+          "new_class": false,
+          "local_passengers": 1,
+          "local_bookings": 1,
+          "test_changes": 9,
+          "local_net": 1
+        },
+        {
+          "size": 1,
+          "new_class": true,
+          "local_passengers": 46,
+          "local_bookings": 46,
+          "test_changes": 22,
+          "local_net": 8
+        },
+        {
+          "size": 2,
+          "new_class": false,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 1,
+          "local_net": 0
+        },
+        {
+          "size": 2,
+          "new_class": true,
+          "local_passengers": 10,
+          "local_bookings": 10,
+          "test_changes": 6,
+          "local_net": -4
+        },
+        {
+          "size": 3,
+          "new_class": false,
+          "local_passengers": 8,
+          "local_bookings": 7,
+          "test_changes": 1,
+          "local_net": 6
+        },
+        {
+          "size": 3,
+          "new_class": true,
+          "local_passengers": 17,
+          "local_bookings": 17,
+          "test_changes": 5,
+          "local_net": 3
+        }
+      ]
+    },
+    "reserve_minus_tabnet": {
+      "fixes": 33,
+      "harms": 28,
+      "bookings": 61,
+      "test_changes": 26,
+      "conditional_pp": 0.024939599407684507,
+      "local_net_interval": [
+        -10.0,
+        20.0
+      ],
+      "direct_pp_envelope": [
+        -0.12855011071531722,
+        0.1810778628343137
+      ],
+      "bootstrap_draws_with_missing": 40,
+      "draws": 20000,
+      "cells": [
+        {
+          "size": 1,
+          "new_class": false,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 0,
+          "local_net": 0
+        },
+        {
+          "size": 1,
+          "new_class": true,
+          "local_passengers": 45,
+          "local_bookings": 45,
+          "test_changes": 18,
+          "local_net": 7
+        },
+        {
+          "size": 2,
+          "new_class": false,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 0,
+          "local_net": 0
+        },
+        {
+          "size": 2,
+          "new_class": true,
+          "local_passengers": 10,
+          "local_bookings": 10,
+          "test_changes": 6,
+          "local_net": -4
+        },
+        {
+          "size": 3,
+          "new_class": false,
+          "local_passengers": 0,
+          "local_bookings": 0,
+          "test_changes": 0,
+          "local_net": 0
+        },
+        {
+          "size": 3,
+          "new_class": true,
+          "local_passengers": 6,
+          "local_bookings": 6,
+          "test_changes": 2,
+          "local_net": 2
+        }
+      ]
+    }
+  },
+  "interpretation": "Positive = second file outperforms first. Each pair compares predictions directly; shared successes and failures cancel. The transfer assumption is constant average correctness among changed passengers of the same size and direction. Percentile envelopes reflect whole-booking variation and worst/best values in empty resampled cells. They do not cover model reselection or domain shift."
+}
