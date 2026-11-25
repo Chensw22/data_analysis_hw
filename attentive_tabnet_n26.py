@@ -56,15 +56,12 @@ def inputs(raw, groups, t):
     return x, names, cardinality
 
 
-def train_fold(k):
+def fit_recipes(raw, y, groups, t, q, tag, query_labels=None, weights_directory=None):
     import torch
     from pytorch_tabnet.pretraining import TabNetPretrainer
     from pytorch_tabnet.tab_model import TabNetClassifier
     assert version("pytorch-tabnet")=="4.1.0"
     torch.set_num_threads(2)
-    raw,y,groups,fold = data()
-    t,q = np.flatnonzero(fold!=k),np.flatnonzero(fold==k)
-    assert not np.isin(groups[t],groups[q]).any()
     x,names,cardinality = inputs(raw,groups,t)
     constructor = dict(n_d=16,n_a=16,n_steps=3,gamma=1.5,n_independent=2,n_shared=2,
                        cat_idxs=list(range(len(CATEGORIES))),cat_dims=cardinality,cat_emb_dim=3,
@@ -88,7 +85,28 @@ def train_fold(k):
         archive[mode] = p
         archive[mode+"_importance"] = np.asarray(attribution,dtype=np.float32)
         archive[mode+"_loss"] = np.asarray(model.history["loss"])
-        print(f"fold={k} recipe={mode} accuracy={np.mean((p>=.5)==y[q]):.4f}",flush=True)
+        if weights_directory is not None:
+            weights_directory.mkdir(parents=True,exist_ok=True)
+            weights_path = model.save_model(str(weights_directory/mode))
+            restored = TabNetClassifier(device_name="cpu",verbose=0)
+            restored.load_model(weights_path)
+            p_again = restored.predict_proba(x[q])[:,1]
+            raw_attribution,_ = restored.explain(x[q], normalize=False)
+            attr_again = raw_attribution / np.maximum(raw_attribution.sum(1,keepdims=True),1e-9)
+            np.testing.assert_allclose(p_again,p,rtol=0.,atol=1e-6)
+            np.testing.assert_allclose(attr_again,attribution,rtol=0.,atol=1e-6)
+        message = f"{tag} recipe={mode}"
+        if query_labels is not None:
+            message += f" accuracy={np.mean((p>=.5)==query_labels):.4f}"
+        print(message,flush=True)
+    return names,archive
+
+
+def train_fold(k):
+    raw,y,groups,fold = data()
+    t,q = np.flatnonzero(fold!=k),np.flatnonzero(fold==k)
+    assert not np.isin(groups[t],groups[q]).any()
+    names,archive = fit_recipes(raw,y,groups,t,q,f"fold={k}",query_labels=y[q])
     OUT.mkdir(exist_ok=True,parents=True)
     np.savez_compressed(OUT/f"fold{k}.npz",t=t,q=q,train_y=y[t],passenger=raw.PassengerId.iloc[q].to_numpy(str),
                         names=names,**archive)
