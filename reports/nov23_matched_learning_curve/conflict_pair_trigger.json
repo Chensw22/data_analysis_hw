@@ -1,0 +1,183 @@
+{
+  "nearest": {
+    "agree_with_anchor": {
+      "pairs": 1519,
+      "passengers": 3038,
+      "errors": 438,
+      "zero_one_two_errors": [
+        1138,
+        324,
+        57
+      ],
+      "pair_selection_auc": 0.8512447587285333,
+      "ranking_correct_if_one": 212,
+      "ranking_accuracy_if_one": 0.654320987654321,
+      "top_fifth_any_error_rate": 0.5907590759075908,
+      "individual": {
+        "selected": 54,
+        "fixed": 21,
+        "harmed": 33,
+        "net": -12
+      },
+      "both_learned": {
+        "selected": 84,
+        "fixed": 35,
+        "harmed": 49,
+        "net": -14
+      },
+      "learned_selection_perfect_ordering": {
+        "selected": 388,
+        "fixed": 229,
+        "harmed": 159,
+        "net": 70
+      },
+      "perfect_selection_learned_ordering": {
+        "selected": 381,
+        "fixed": 269,
+        "harmed": 112,
+        "net": 157
+      },
+      "both_perfect": {
+        "selected": 381,
+        "fixed": 381,
+        "harmed": 0,
+        "net": 381
+      }
+    },
+    "all_eleven_agree": {
+      "pairs": 1493,
+      "passengers": 2986,
+      "errors": 419,
+      "zero_one_two_errors": [
+        1129,
+        309,
+        55
+      ],
+      "pair_selection_auc": 0.8525462579935564,
+      "ranking_correct_if_one": 204,
+      "ranking_accuracy_if_one": 0.6601941747572816,
+      "top_fifth_any_error_rate": 0.5838926174496645,
+      "individual": {
+        "selected": 50,
+        "fixed": 19,
+        "harmed": 31,
+        "net": -12
+      },
+      "both_learned": {
+        "selected": 76,
+        "fixed": 31,
+        "harmed": 45,
+        "net": -14
+      },
+      "learned_selection_perfect_ordering": {
+        "selected": 370,
+        "fixed": 217,
+        "harmed": 153,
+        "net": 64
+      },
+      "perfect_selection_learned_ordering": {
+        "selected": 364,
+        "fixed": 259,
+        "harmed": 105,
+        "net": 154
+      },
+      "both_perfect": {
+        "selected": 364,
+        "fixed": 364,
+        "harmed": 0,
+        "net": 364
+      }
+    }
+  },
+  "confidence_gap": {
+    "agree_with_anchor": {
+      "pairs": 1509,
+      "passengers": 3018,
+      "errors": 447,
+      "zero_one_two_errors": [
+        1124,
+        323,
+        62
+      ],
+      "pair_selection_auc": 0.8386652493414058,
+      "ranking_correct_if_one": 233,
+      "ranking_accuracy_if_one": 0.7213622291021672,
+      "top_fifth_any_error_rate": 0.574750830564784,
+      "individual": {
+        "selected": 62,
+        "fixed": 26,
+        "harmed": 36,
+        "net": -10
+      },
+      "both_learned": {
+        "selected": 120,
+        "fixed": 52,
+        "harmed": 68,
+        "net": -16
+      },
+      "learned_selection_perfect_ordering": {
+        "selected": 419,
+        "fixed": 230,
+        "harmed": 189,
+        "net": 41
+      },
+      "perfect_selection_learned_ordering": {
+        "selected": 385,
+        "fixed": 295,
+        "harmed": 90,
+        "net": 205
+      },
+      "both_perfect": {
+        "selected": 385,
+        "fixed": 385,
+        "harmed": 0,
+        "net": 385
+      }
+    },
+    "all_eleven_agree": {
+      "pairs": 1478,
+      "passengers": 2956,
+      "errors": 430,
+      "zero_one_two_errors": [
+        1108,
+        310,
+        60
+      ],
+      "pair_selection_auc": 0.8434505805444433,
+      "ranking_correct_if_one": 224,
+      "ranking_accuracy_if_one": 0.7225806451612903,
+      "top_fifth_any_error_rate": 0.5796610169491525,
+      "individual": {
+        "selected": 56,
+        "fixed": 23,
+        "harmed": 33,
+        "net": -10
+      },
+      "both_learned": {
+        "selected": 109,
+        "fixed": 46,
+        "harmed": 63,
+        "net": -17
+      },
+      "learned_selection_perfect_ordering": {
+        "selected": 398,
+        "fixed": 220,
+        "harmed": 178,
+        "net": 42
+      },
+      "perfect_selection_learned_ordering": {
+        "selected": 370,
+        "fixed": 284,
+        "harmed": 86,
+        "net": 198
+      },
+      "both_perfect": {
+        "selected": 370,
+        "fixed": 370,
+        "harmed": 0,
+        "net": 370
+      }
+    }
+  },
+  "scope": "Both members must share the Mitra prediction. A pair is formed without either outcome. All secondary training orders lie outside the query, within the same outer model fold. Counts are errors relative to the shared prediction. Each policy can change at most one passenger in each pair. Perfect selection and perfect ordering use held outcomes only for diagnostic ceilings."
+}
