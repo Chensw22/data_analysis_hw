@@ -1,0 +1,703 @@
+{
+  "protocol": "Eight order-disjoint outer folds; no test/outer-query covariates used in fitting. Three teachers refit per inner split using only the remaining outer-training orders. Identical seed and label-head inference for all student variants; blended snapshots at epochs 18,23,28.",
+  "comparisons": {
+    "swap_labels_vs_scratch": {
+      "all": {
+        "rows": 8693,
+        "errors": 1691,
+        "fixed": 182,
+        "harmed": 195
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1292,
+        "fixed": 132,
+        "harmed": 133
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 173,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 789,
+        "fixed": 74,
+        "harmed": 80
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 462,
+        "fixed": 40,
+        "harmed": 42
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 421,
+        "fixed": 38,
+        "harmed": 41
+      },
+      "originally_unanimous_wrong": {
+        "rows": 1181,
+        "errors": 1024,
+        "fixed": 44,
+        "harmed": 50
+      },
+      "fold_net": [
+        3,
+        5,
+        9,
+        -12,
+        4,
+        -13,
+        -2,
+        -7
+      ]
+    },
+    "swap_mean_vs_swap_labels": {
+      "all": {
+        "rows": 8693,
+        "errors": 1704,
+        "fixed": 120,
+        "harmed": 113
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1293,
+        "fixed": 74,
+        "harmed": 81
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 173,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 795,
+        "fixed": 47,
+        "harmed": 51
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 464,
+        "fixed": 23,
+        "harmed": 20
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 424,
+        "fixed": 25,
+        "harmed": 26
+      },
+      "originally_unanimous_wrong": {
+        "rows": 1181,
+        "errors": 1030,
+        "fixed": 22,
+        "harmed": 40
+      },
+      "fold_net": [
+        0,
+        5,
+        -1,
+        0,
+        -4,
+        -4,
+        3,
+        8
+      ]
+    },
+    "swap_individual_vs_swap_mean": {
+      "all": {
+        "rows": 8693,
+        "errors": 1697,
+        "fixed": 32,
+        "harmed": 41
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1300,
+        "fixed": 22,
+        "harmed": 22
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 173,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 799,
+        "fixed": 14,
+        "harmed": 12
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 461,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 425,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "originally_unanimous_wrong": {
+        "rows": 1181,
+        "errors": 1048,
+        "fixed": 11,
+        "harmed": 5
+      },
+      "fold_net": [
+        -1,
+        -4,
+        -1,
+        -7,
+        3,
+        5,
+        0,
+        -4
+      ]
+    },
+    "swap_individual_vs_scratch": {
+      "all": {
+        "rows": 8693,
+        "errors": 1691,
+        "fixed": 189,
+        "harmed": 204
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1292,
+        "fixed": 130,
+        "harmed": 138
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 173,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 789,
+        "fixed": 78,
+        "harmed": 86
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 462,
+        "fixed": 41,
+        "harmed": 40
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 421,
+        "fixed": 45,
+        "harmed": 49
+      },
+      "originally_unanimous_wrong": {
+        "rows": 1181,
+        "errors": 1024,
+        "fixed": 33,
+        "harmed": 51
+      },
+      "fold_net": [
+        2,
+        6,
+        7,
+        -19,
+        3,
+        -12,
+        1,
+        -3
+      ]
+    }
+  },
+  "students": {
+    "scratch": {
+      "correct": 7002,
+      "accuracy": 0.8054756700793743,
+      "per_fold": [
+        860,
+        853,
+        918,
+        865,
+        899,
+        842,
+        897,
+        868
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 293,
+        "harmed": 386
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 157,
+        "harmed": 268
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 85,
+        "harmed": 165
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 31,
+        "harmed": 69
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 57,
+        "harmed": 90
+      }
+    },
+    "swap_labels": {
+      "correct": 6989,
+      "accuracy": 0.8039802139652594,
+      "per_fold": [
+        863,
+        858,
+        927,
+        853,
+        903,
+        829,
+        895,
+        861
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 276,
+        "harmed": 379
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 151,
+        "harmed": 263
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 78,
+        "harmed": 164
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 28,
+        "harmed": 68
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 48,
+        "harmed": 84
+      }
+    },
+    "swap_mean": {
+      "correct": 6996,
+      "accuracy": 0.8047854595651673,
+      "per_fold": [
+        863,
+        863,
+        926,
+        853,
+        899,
+        825,
+        898,
+        869
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 267,
+        "harmed": 365
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 133,
+        "harmed": 252
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 68,
+        "harmed": 158
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 29,
+        "harmed": 66
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 48,
+        "harmed": 85
+      }
+    },
+    "swap_individual": {
+      "correct": 6987,
+      "accuracy": 0.8037501437938571,
+      "per_fold": [
+        862,
+        859,
+        925,
+        846,
+        902,
+        830,
+        898,
+        865
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 268,
+        "harmed": 373
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 139,
+        "harmed": 258
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 70,
+        "harmed": 158
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 28,
+        "harmed": 65
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 52,
+        "harmed": 89
+      }
+    },
+    "extra_trees": {
+      "correct": 6960,
+      "accuracy": 0.8006441964799264,
+      "per_fold": [
+        844,
+        848,
+        918,
+        861,
+        904,
+        828,
+        903,
+        854
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 269,
+        "harmed": 388
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 153,
+        "harmed": 272
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 98,
+        "harmed": 163
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 26,
+        "harmed": 42
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 66,
+        "harmed": 100
+      }
+    },
+    "hist_boost": {
+      "correct": 7048,
+      "accuracy": 0.8107672840216266,
+      "per_fold": [
+        871,
+        860,
+        918,
+        876,
+        904,
+        841,
+        918,
+        860
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 199,
+        "harmed": 240
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 90,
+        "harmed": 148
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 50,
+        "harmed": 94
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 22,
+        "harmed": 39
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 25,
+        "harmed": 36
+      }
+    },
+    "additive_logistic": {
+      "correct": 6940,
+      "accuracy": 0.7983434947659036,
+      "per_fold": [
+        847,
+        858,
+        917,
+        850,
+        895,
+        843,
+        895,
+        835
+      ],
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 296,
+        "harmed": 436
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 174,
+        "harmed": 312
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 89,
+        "harmed": 174
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 64,
+        "harmed": 94
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 3,
+        "harmed": 4
+      }
+    }
+  },
+  "switch_champion": {
+    "teacher_unanimity": {
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 63,
+        "harmed": 96
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 12,
+        "harmed": 50
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 6,
+        "harmed": 28
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 6,
+        "harmed": 15
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "nets_by_fold": [
+        -1,
+        -1,
+        -6,
+        -2,
+        -8,
+        -3,
+        -5,
+        -7
+      ]
+    },
+    "teacher_unanimity_and_student": {
+      "champion_known": {
+        "rows": 8532,
+        "errors": 1531,
+        "fixed": 43,
+        "harmed": 59
+      },
+      "old_consensus": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 7,
+        "harmed": 30
+      },
+      "unanimous_127": {
+        "rows": 3201,
+        "errors": 172,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "lone": {
+        "rows": 4341,
+        "errors": 709,
+        "fixed": 3,
+        "harmed": 15
+      },
+      "awake_paid_old_negative": {
+        "rows": 3476,
+        "errors": 424,
+        "fixed": 3,
+        "harmed": 7
+      },
+      "sleeping_old_positive": {
+        "rows": 2722,
+        "errors": 388,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "nets_by_fold": [
+        -2,
+        1,
+        -4,
+        1,
+        -3,
+        -5,
+        -3,
+        -1
+      ]
+    }
+  },
+  "separate_only": {
+    "old_consensus": {
+      "rows": 7891,
+      "errors": 1181,
+      "fixed": 11,
+      "harmed": 17
+    },
+    "unanimous_127": {
+      "rows": 3201,
+      "errors": 172,
+      "fixed": 0,
+      "harmed": 0
+    },
+    "lone": {
+      "rows": 4341,
+      "errors": 709,
+      "fixed": 6,
+      "harmed": 8
+    },
+    "awake_paid_old_negative": {
+      "rows": 3476,
+      "errors": 424,
+      "fixed": 2,
+      "harmed": 4
+    },
+    "sleeping_old_positive": {
+      "rows": 2722,
+      "errors": 388,
+      "fixed": 5,
+      "harmed": 6
+    }
+  }
+}
