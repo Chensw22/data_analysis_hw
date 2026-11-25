@@ -1,0 +1,4469 @@
+{
+  "protocol": "Eight whole-order folds. Three gradient boosting models share one specification and receive registration plus observed budget and missing indicators, then active service identities, then full charges. For held paying passengers, up to 32 distinct training orders within 1.5x observed total and identical missing-field pattern donate a service basket. Ranking uses distance in budget, origin, deck, destination. Integer apportionment preserves the query bill and the donor active services. The face control also holds all five service presence indicators constant. A seeded matched donor is the sham contrast. All training omits names, outcomes of query orders, and archive decisions.",
+  "donors": {
+    "budget": [
+      {
+        "fold": 0,
+        "pairs": 20152,
+        "median_budget_ratio": 1.0155593157192278,
+        "p90_budget_ratio": 1.1068593049929465
+      },
+      {
+        "fold": 1,
+        "pairs": 18493,
+        "median_budget_ratio": 1.0156028368794325,
+        "p90_budget_ratio": 1.109607063116661
+      },
+      {
+        "fold": 2,
+        "pairs": 19488,
+        "median_budget_ratio": 1.0155704839461794,
+        "p90_budget_ratio": 1.1129214938541978
+      },
+      {
+        "fold": 3,
+        "pairs": 19230,
+        "median_budget_ratio": 1.0161979865376363,
+        "p90_budget_ratio": 1.1167512690355326
+      },
+      {
+        "fold": 4,
+        "pairs": 20426,
+        "median_budget_ratio": 1.0178891678578788,
+        "p90_budget_ratio": 1.1146190389214443
+      },
+      {
+        "fold": 5,
+        "pairs": 18928,
+        "median_budget_ratio": 1.0134228187919463,
+        "p90_budget_ratio": 1.1070164999257763
+      },
+      {
+        "fold": 6,
+        "pairs": 19290,
+        "median_budget_ratio": 1.0171853228053886,
+        "p90_budget_ratio": 1.1160121262204714
+      },
+      {
+        "fold": 7,
+        "pairs": 18610,
+        "median_budget_ratio": 1.0188866894402386,
+        "p90_budget_ratio": 1.116153846153846
+      }
+    ],
+    "face": [
+      {
+        "fold": 0,
+        "pairs": 17055,
+        "median_budget_ratio": 1.0960451977401133,
+        "p90_budget_ratio": 1.2829764676807611
+      },
+      {
+        "fold": 1,
+        "pairs": 15661,
+        "median_budget_ratio": 1.095756880733945,
+        "p90_budget_ratio": 1.287042417199303
+      },
+      {
+        "fold": 2,
+        "pairs": 16143,
+        "median_budget_ratio": 1.0903757729506893,
+        "p90_budget_ratio": 1.2738903742613994
+      },
+      {
+        "fold": 3,
+        "pairs": 15695,
+        "median_budget_ratio": 1.0975308641975312,
+        "p90_budget_ratio": 1.2894728064857959
+      },
+      {
+        "fold": 4,
+        "pairs": 16576,
+        "median_budget_ratio": 1.099159064654373,
+        "p90_budget_ratio": 1.3084372134183972
+      },
+      {
+        "fold": 5,
+        "pairs": 15597,
+        "median_budget_ratio": 1.094130675526025,
+        "p90_budget_ratio": 1.2834455374588414
+      },
+      {
+        "fold": 6,
+        "pairs": 16368,
+        "median_budget_ratio": 1.094300479782258,
+        "p90_budget_ratio": 1.2788339670468947
+      },
+      {
+        "fold": 7,
+        "pairs": 15062,
+        "median_budget_ratio": 1.1009549795361533,
+        "p90_budget_ratio": 1.303221244852248
+      }
+    ]
+  },
+  "scopes": {
+    "remaining": {
+      "models_against_parent": {
+        "budget": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 150,
+          "harmed": 411,
+          "fold_fixed_harmed": [
+            [
+              24,
+              44
+            ],
+            [
+              15,
+              67
+            ],
+            [
+              20,
+              58
+            ],
+            [
+              21,
+              46
+            ],
+            [
+              21,
+              56
+            ],
+            [
+              16,
+              38
+            ],
+            [
+              19,
+              53
+            ],
+            [
+              14,
+              49
+            ]
+          ]
+        },
+        "active": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 119,
+          "harmed": 345,
+          "fold_fixed_harmed": [
+            [
+              21,
+              40
+            ],
+            [
+              10,
+              49
+            ],
+            [
+              12,
+              48
+            ],
+            [
+              22,
+              41
+            ],
+            [
+              16,
+              47
+            ],
+            [
+              16,
+              34
+            ],
+            [
+              14,
+              43
+            ],
+            [
+              8,
+              43
+            ]
+          ]
+        },
+        "full": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 42,
+          "harmed": 68,
+          "fold_fixed_harmed": [
+            [
+              6,
+              8
+            ],
+            [
+              7,
+              5
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              10,
+              15
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              0,
+              7
+            ]
+          ]
+        },
+        "budget_averaged": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 140,
+          "harmed": 401,
+          "fold_fixed_harmed": [
+            [
+              22,
+              44
+            ],
+            [
+              15,
+              62
+            ],
+            [
+              17,
+              55
+            ],
+            [
+              19,
+              52
+            ],
+            [
+              21,
+              55
+            ],
+            [
+              17,
+              37
+            ],
+            [
+              17,
+              46
+            ],
+            [
+              12,
+              50
+            ]
+          ]
+        },
+        "budget_random": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 133,
+          "harmed": 553,
+          "fold_fixed_harmed": [
+            [
+              19,
+              73
+            ],
+            [
+              18,
+              71
+            ],
+            [
+              16,
+              72
+            ],
+            [
+              17,
+              80
+            ],
+            [
+              21,
+              69
+            ],
+            [
+              15,
+              55
+            ],
+            [
+              18,
+              68
+            ],
+            [
+              9,
+              65
+            ]
+          ]
+        },
+        "budget_centered": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 60,
+          "harmed": 100,
+          "fold_fixed_harmed": [
+            [
+              11,
+              14
+            ],
+            [
+              8,
+              15
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              10,
+              14
+            ],
+            [
+              4,
+              13
+            ],
+            [
+              9,
+              17
+            ],
+            [
+              5,
+              11
+            ]
+          ]
+        },
+        "budget_sham_centered": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 151,
+          "harmed": 580,
+          "fold_fixed_harmed": [
+            [
+              22,
+              71
+            ],
+            [
+              19,
+              79
+            ],
+            [
+              19,
+              77
+            ],
+            [
+              19,
+              81
+            ],
+            [
+              22,
+              72
+            ],
+            [
+              17,
+              54
+            ],
+            [
+              21,
+              76
+            ],
+            [
+              12,
+              70
+            ]
+          ]
+        },
+        "face_averaged": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 117,
+          "harmed": 328,
+          "fold_fixed_harmed": [
+            [
+              20,
+              35
+            ],
+            [
+              11,
+              48
+            ],
+            [
+              11,
+              43
+            ],
+            [
+              21,
+              44
+            ],
+            [
+              18,
+              47
+            ],
+            [
+              13,
+              27
+            ],
+            [
+              15,
+              40
+            ],
+            [
+              8,
+              44
+            ]
+          ]
+        },
+        "face_random": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 112,
+          "harmed": 430,
+          "fold_fixed_harmed": [
+            [
+              19,
+              54
+            ],
+            [
+              15,
+              59
+            ],
+            [
+              9,
+              54
+            ],
+            [
+              19,
+              47
+            ],
+            [
+              17,
+              62
+            ],
+            [
+              14,
+              45
+            ],
+            [
+              14,
+              60
+            ],
+            [
+              5,
+              49
+            ]
+          ]
+        },
+        "face_centered": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 55,
+          "harmed": 109,
+          "fold_fixed_harmed": [
+            [
+              11,
+              9
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              17
+            ],
+            [
+              8,
+              17
+            ],
+            [
+              6,
+              23
+            ],
+            [
+              2,
+              15
+            ]
+          ]
+        },
+        "face_sham_centered": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 117,
+          "harmed": 466,
+          "fold_fixed_harmed": [
+            [
+              22,
+              54
+            ],
+            [
+              16,
+              65
+            ],
+            [
+              13,
+              58
+            ],
+            [
+              20,
+              47
+            ],
+            [
+              13,
+              61
+            ],
+            [
+              14,
+              57
+            ],
+            [
+              12,
+              67
+            ],
+            [
+              7,
+              57
+            ]
+          ]
+        },
+        "budget_centered_field_required": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 22,
+          "harmed": 45,
+          "fold_fixed_harmed": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        "budget_sham_centered_field_required": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 32,
+          "harmed": 259,
+          "fold_fixed_harmed": [
+            [
+              5,
+              33
+            ],
+            [
+              6,
+              29
+            ],
+            [
+              5,
+              32
+            ],
+            [
+              3,
+              43
+            ],
+            [
+              4,
+              27
+            ],
+            [
+              3,
+              24
+            ],
+            [
+              4,
+              37
+            ],
+            [
+              2,
+              34
+            ]
+          ]
+        },
+        "face_centered_field_required": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 22,
+          "harmed": 40,
+          "fold_fixed_harmed": [
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        "face_sham_centered_field_required": {
+          "rows": 2448,
+          "errors": 524,
+          "fixed": 33,
+          "harmed": 216,
+          "fold_fixed_harmed": [
+            [
+              5,
+              27
+            ],
+            [
+              7,
+              28
+            ],
+            [
+              5,
+              24
+            ],
+            [
+              4,
+              20
+            ],
+            [
+              3,
+              25
+            ],
+            [
+              3,
+              30
+            ],
+            [
+              2,
+              33
+            ],
+            [
+              4,
+              29
+            ]
+          ]
+        }
+      },
+      "with_donors": {
+        "budget": 1704,
+        "face": 1563
+      }
+    },
+    "remaining_bookingmix": {
+      "models_against_parent": {
+        "budget": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 142,
+          "harmed": 402,
+          "fold_fixed_harmed": [
+            [
+              23,
+              44
+            ],
+            [
+              15,
+              62
+            ],
+            [
+              19,
+              56
+            ],
+            [
+              19,
+              46
+            ],
+            [
+              20,
+              54
+            ],
+            [
+              16,
+              38
+            ],
+            [
+              17,
+              53
+            ],
+            [
+              13,
+              49
+            ]
+          ]
+        },
+        "active": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 113,
+          "harmed": 336,
+          "fold_fixed_harmed": [
+            [
+              20,
+              39
+            ],
+            [
+              10,
+              46
+            ],
+            [
+              12,
+              46
+            ],
+            [
+              20,
+              41
+            ],
+            [
+              14,
+              45
+            ],
+            [
+              16,
+              33
+            ],
+            [
+              13,
+              43
+            ],
+            [
+              8,
+              43
+            ]
+          ]
+        },
+        "full": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 38,
+          "harmed": 61,
+          "fold_fixed_harmed": [
+            [
+              6,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              9,
+              13
+            ],
+            [
+              4,
+              10
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              0,
+              7
+            ]
+          ]
+        },
+        "budget_averaged": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 134,
+          "harmed": 393,
+          "fold_fixed_harmed": [
+            [
+              22,
+              42
+            ],
+            [
+              15,
+              61
+            ],
+            [
+              16,
+              53
+            ],
+            [
+              17,
+              52
+            ],
+            [
+              19,
+              53
+            ],
+            [
+              17,
+              36
+            ],
+            [
+              16,
+              46
+            ],
+            [
+              12,
+              50
+            ]
+          ]
+        },
+        "budget_random": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 128,
+          "harmed": 545,
+          "fold_fixed_harmed": [
+            [
+              19,
+              71
+            ],
+            [
+              18,
+              70
+            ],
+            [
+              15,
+              70
+            ],
+            [
+              16,
+              80
+            ],
+            [
+              19,
+              67
+            ],
+            [
+              15,
+              54
+            ],
+            [
+              17,
+              68
+            ],
+            [
+              9,
+              65
+            ]
+          ]
+        },
+        "budget_centered": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 54,
+          "harmed": 92,
+          "fold_fixed_harmed": [
+            [
+              10,
+              14
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              8,
+              9
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              4,
+              13
+            ],
+            [
+              7,
+              17
+            ],
+            [
+              4,
+              11
+            ]
+          ]
+        },
+        "budget_sham_centered": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 143,
+          "harmed": 571,
+          "fold_fixed_harmed": [
+            [
+              21,
+              71
+            ],
+            [
+              19,
+              74
+            ],
+            [
+              18,
+              75
+            ],
+            [
+              17,
+              81
+            ],
+            [
+              21,
+              70
+            ],
+            [
+              17,
+              54
+            ],
+            [
+              19,
+              76
+            ],
+            [
+              11,
+              70
+            ]
+          ]
+        },
+        "face_averaged": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 111,
+          "harmed": 320,
+          "fold_fixed_harmed": [
+            [
+              20,
+              33
+            ],
+            [
+              11,
+              47
+            ],
+            [
+              10,
+              41
+            ],
+            [
+              19,
+              44
+            ],
+            [
+              16,
+              45
+            ],
+            [
+              13,
+              26
+            ],
+            [
+              14,
+              40
+            ],
+            [
+              8,
+              44
+            ]
+          ]
+        },
+        "face_random": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 106,
+          "harmed": 422,
+          "fold_fixed_harmed": [
+            [
+              19,
+              52
+            ],
+            [
+              15,
+              58
+            ],
+            [
+              8,
+              52
+            ],
+            [
+              17,
+              47
+            ],
+            [
+              15,
+              60
+            ],
+            [
+              14,
+              44
+            ],
+            [
+              13,
+              60
+            ],
+            [
+              5,
+              49
+            ]
+          ]
+        },
+        "face_centered": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 50,
+          "harmed": 100,
+          "fold_fixed_harmed": [
+            [
+              10,
+              8
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              10,
+              9
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              5,
+              15
+            ],
+            [
+              8,
+              16
+            ],
+            [
+              5,
+              23
+            ],
+            [
+              2,
+              15
+            ]
+          ]
+        },
+        "face_sham_centered": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 111,
+          "harmed": 457,
+          "fold_fixed_harmed": [
+            [
+              21,
+              53
+            ],
+            [
+              16,
+              62
+            ],
+            [
+              13,
+              56
+            ],
+            [
+              18,
+              47
+            ],
+            [
+              11,
+              59
+            ],
+            [
+              14,
+              56
+            ],
+            [
+              11,
+              67
+            ],
+            [
+              7,
+              57
+            ]
+          ]
+        },
+        "budget_centered_field_required": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 22,
+          "harmed": 45,
+          "fold_fixed_harmed": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        "budget_sham_centered_field_required": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 32,
+          "harmed": 259,
+          "fold_fixed_harmed": [
+            [
+              5,
+              33
+            ],
+            [
+              6,
+              29
+            ],
+            [
+              5,
+              32
+            ],
+            [
+              3,
+              43
+            ],
+            [
+              4,
+              27
+            ],
+            [
+              3,
+              24
+            ],
+            [
+              4,
+              37
+            ],
+            [
+              2,
+              34
+            ]
+          ]
+        },
+        "face_centered_field_required": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 22,
+          "harmed": 40,
+          "fold_fixed_harmed": [
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        "face_sham_centered_field_required": {
+          "rows": 2406,
+          "errors": 505,
+          "fixed": 33,
+          "harmed": 216,
+          "fold_fixed_harmed": [
+            [
+              5,
+              27
+            ],
+            [
+              7,
+              28
+            ],
+            [
+              5,
+              24
+            ],
+            [
+              4,
+              20
+            ],
+            [
+              3,
+              25
+            ],
+            [
+              3,
+              30
+            ],
+            [
+              2,
+              33
+            ],
+            [
+              4,
+              29
+            ]
+          ]
+        }
+      },
+      "with_donors": {
+        "budget": 1699,
+        "face": 1558
+      }
+    },
+    "remaining_new": {
+      "models_against_parent": {
+        "budget": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 38,
+          "harmed": 80,
+          "fold_fixed_harmed": [
+            [
+              8,
+              5
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              4,
+              12
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              5,
+              12
+            ]
+          ]
+        },
+        "active": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 30,
+          "harmed": 70,
+          "fold_fixed_harmed": [
+            [
+              7,
+              6
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              5,
+              9
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              11
+            ]
+          ]
+        },
+        "full": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 9,
+          "harmed": 14,
+          "fold_fixed_harmed": [
+            [
+              0,
+              3
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        "budget_averaged": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 35,
+          "harmed": 81,
+          "fold_fixed_harmed": [
+            [
+              6,
+              6
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              4,
+              12
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              4,
+              11
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              4,
+              13
+            ]
+          ]
+        },
+        "budget_random": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 31,
+          "harmed": 108,
+          "fold_fixed_harmed": [
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              14
+            ],
+            [
+              3,
+              17
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              6,
+              14
+            ],
+            [
+              3,
+              17
+            ],
+            [
+              2,
+              14
+            ],
+            [
+              4,
+              16
+            ]
+          ]
+        },
+        "budget_centered": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 12,
+          "harmed": 24,
+          "fold_fixed_harmed": [
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "budget_sham_centered": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 35,
+          "harmed": 111,
+          "fold_fixed_harmed": [
+            [
+              6,
+              5
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              4,
+              18
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              6,
+              15
+            ],
+            [
+              3,
+              18
+            ],
+            [
+              2,
+              17
+            ],
+            [
+              5,
+              17
+            ]
+          ]
+        },
+        "face_averaged": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 29,
+          "harmed": 62,
+          "fold_fixed_harmed": [
+            [
+              6,
+              5
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              9
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              11
+            ]
+          ]
+        },
+        "face_random": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 28,
+          "harmed": 94,
+          "fold_fixed_harmed": [
+            [
+              6,
+              9
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              4,
+              12
+            ],
+            [
+              3,
+              13
+            ],
+            [
+              2,
+              16
+            ],
+            [
+              1,
+              11
+            ]
+          ]
+        },
+        "face_centered": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 13,
+          "harmed": 26,
+          "fold_fixed_harmed": [
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              0,
+              3
+            ]
+          ]
+        },
+        "face_sham_centered": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 30,
+          "harmed": 101,
+          "fold_fixed_harmed": [
+            [
+              7,
+              8
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              6,
+              14
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              3,
+              13
+            ],
+            [
+              4,
+              18
+            ],
+            [
+              3,
+              17
+            ],
+            [
+              1,
+              11
+            ]
+          ]
+        },
+        "budget_centered_field_required": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 4,
+          "harmed": 14,
+          "fold_fixed_harmed": [
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "budget_sham_centered_field_required": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 8,
+          "harmed": 53,
+          "fold_fixed_harmed": [
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              0,
+              8
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              8
+            ]
+          ]
+        },
+        "face_centered_field_required": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 6,
+          "harmed": 10,
+          "fold_fixed_harmed": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        "face_sham_centered_field_required": {
+          "rows": 510,
+          "errors": 118,
+          "fixed": 5,
+          "harmed": 46,
+          "fold_fixed_harmed": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              1,
+              4
+            ]
+          ]
+        }
+      },
+      "with_donors": {
+        "budget": 353,
+        "face": 321
+      }
+    },
+    "all_known": {
+      "models_against_parent": {
+        "budget": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 418,
+          "harmed": 972,
+          "fold_fixed_harmed": [
+            [
+              57,
+              110
+            ],
+            [
+              39,
+              130
+            ],
+            [
+              52,
+              131
+            ],
+            [
+              52,
+              116
+            ],
+            [
+              54,
+              128
+            ],
+            [
+              59,
+              95
+            ],
+            [
+              57,
+              128
+            ],
+            [
+              48,
+              134
+            ]
+          ]
+        },
+        "active": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 382,
+          "harmed": 891,
+          "fold_fixed_harmed": [
+            [
+              54,
+              108
+            ],
+            [
+              33,
+              109
+            ],
+            [
+              41,
+              114
+            ],
+            [
+              56,
+              103
+            ],
+            [
+              42,
+              116
+            ],
+            [
+              59,
+              93
+            ],
+            [
+              52,
+              118
+            ],
+            [
+              45,
+              130
+            ]
+          ]
+        },
+        "full": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 287,
+          "harmed": 412,
+          "fold_fixed_harmed": [
+            [
+              34,
+              45
+            ],
+            [
+              35,
+              40
+            ],
+            [
+              29,
+              41
+            ],
+            [
+              35,
+              39
+            ],
+            [
+              34,
+              65
+            ],
+            [
+              47,
+              64
+            ],
+            [
+              44,
+              54
+            ],
+            [
+              29,
+              64
+            ]
+          ]
+        },
+        "budget_averaged": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 413,
+          "harmed": 977,
+          "fold_fixed_harmed": [
+            [
+              55,
+              115
+            ],
+            [
+              40,
+              120
+            ],
+            [
+              49,
+              131
+            ],
+            [
+              51,
+              124
+            ],
+            [
+              51,
+              131
+            ],
+            [
+              64,
+              100
+            ],
+            [
+              55,
+              118
+            ],
+            [
+              48,
+              138
+            ]
+          ]
+        },
+        "budget_random": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 422,
+          "harmed": 1475,
+          "fold_fixed_harmed": [
+            [
+              54,
+              204
+            ],
+            [
+              43,
+              166
+            ],
+            [
+              48,
+              179
+            ],
+            [
+              49,
+              192
+            ],
+            [
+              54,
+              187
+            ],
+            [
+              64,
+              160
+            ],
+            [
+              65,
+              186
+            ],
+            [
+              45,
+              201
+            ]
+          ]
+        },
+        "budget_centered": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 316,
+          "harmed": 447,
+          "fold_fixed_harmed": [
+            [
+              36,
+              54
+            ],
+            [
+              36,
+              53
+            ],
+            [
+              35,
+              46
+            ],
+            [
+              34,
+              36
+            ],
+            [
+              38,
+              63
+            ],
+            [
+              47,
+              65
+            ],
+            [
+              51,
+              61
+            ],
+            [
+              39,
+              69
+            ]
+          ]
+        },
+        "budget_sham_centered": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 441,
+          "harmed": 1551,
+          "fold_fixed_harmed": [
+            [
+              54,
+              212
+            ],
+            [
+              46,
+              179
+            ],
+            [
+              54,
+              194
+            ],
+            [
+              52,
+              196
+            ],
+            [
+              56,
+              200
+            ],
+            [
+              65,
+              165
+            ],
+            [
+              67,
+              197
+            ],
+            [
+              47,
+              208
+            ]
+          ]
+        },
+        "face_averaged": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 380,
+          "harmed": 909,
+          "fold_fixed_harmed": [
+            [
+              57,
+              103
+            ],
+            [
+              35,
+              107
+            ],
+            [
+              37,
+              115
+            ],
+            [
+              54,
+              115
+            ],
+            [
+              44,
+              120
+            ],
+            [
+              52,
+              93
+            ],
+            [
+              57,
+              124
+            ],
+            [
+              44,
+              132
+            ]
+          ]
+        },
+        "face_random": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 390,
+          "harmed": 1214,
+          "fold_fixed_harmed": [
+            [
+              49,
+              157
+            ],
+            [
+              39,
+              139
+            ],
+            [
+              39,
+              139
+            ],
+            [
+              56,
+              143
+            ],
+            [
+              46,
+              180
+            ],
+            [
+              55,
+              131
+            ],
+            [
+              60,
+              164
+            ],
+            [
+              46,
+              161
+            ]
+          ]
+        },
+        "face_centered": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 302,
+          "harmed": 465,
+          "fold_fixed_harmed": [
+            [
+              35,
+              51
+            ],
+            [
+              34,
+              52
+            ],
+            [
+              36,
+              50
+            ],
+            [
+              41,
+              35
+            ],
+            [
+              30,
+              66
+            ],
+            [
+              52,
+              74
+            ],
+            [
+              45,
+              64
+            ],
+            [
+              29,
+              73
+            ]
+          ]
+        },
+        "face_sham_centered": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 400,
+          "harmed": 1280,
+          "fold_fixed_harmed": [
+            [
+              52,
+              170
+            ],
+            [
+              39,
+              157
+            ],
+            [
+              45,
+              148
+            ],
+            [
+              60,
+              144
+            ],
+            [
+              46,
+              174
+            ],
+            [
+              55,
+              150
+            ],
+            [
+              60,
+              163
+            ],
+            [
+              43,
+              174
+            ]
+          ]
+        },
+        "budget_centered_field_required": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 122,
+          "harmed": 189,
+          "fold_fixed_harmed": [
+            [
+              12,
+              27
+            ],
+            [
+              18,
+              22
+            ],
+            [
+              14,
+              18
+            ],
+            [
+              11,
+              15
+            ],
+            [
+              13,
+              29
+            ],
+            [
+              19,
+              32
+            ],
+            [
+              18,
+              21
+            ],
+            [
+              17,
+              25
+            ]
+          ]
+        },
+        "budget_sham_centered_field_required": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 104,
+          "harmed": 800,
+          "fold_fixed_harmed": [
+            [
+              10,
+              125
+            ],
+            [
+              13,
+              87
+            ],
+            [
+              15,
+              96
+            ],
+            [
+              13,
+              104
+            ],
+            [
+              12,
+              100
+            ],
+            [
+              14,
+              87
+            ],
+            [
+              15,
+              104
+            ],
+            [
+              12,
+              97
+            ]
+          ]
+        },
+        "face_centered_field_required": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 109,
+          "harmed": 167,
+          "fold_fixed_harmed": [
+            [
+              12,
+              21
+            ],
+            [
+              14,
+              21
+            ],
+            [
+              16,
+              16
+            ],
+            [
+              10,
+              8
+            ],
+            [
+              12,
+              27
+            ],
+            [
+              19,
+              31
+            ],
+            [
+              15,
+              20
+            ],
+            [
+              11,
+              23
+            ]
+          ]
+        },
+        "face_sham_centered_field_required": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 97,
+          "harmed": 619,
+          "fold_fixed_harmed": [
+            [
+              10,
+              94
+            ],
+            [
+              11,
+              75
+            ],
+            [
+              14,
+              66
+            ],
+            [
+              15,
+              65
+            ],
+            [
+              13,
+              95
+            ],
+            [
+              9,
+              79
+            ],
+            [
+              13,
+              72
+            ],
+            [
+              12,
+              73
+            ]
+          ]
+        }
+      },
+      "with_donors": {
+        "budget": 5000,
+        "face": 4635
+      }
+    },
+    "remaining_paid": {
+      "models_against_parent": {
+        "budget": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 118,
+          "harmed": 372,
+          "fold_fixed_harmed": [
+            [
+              18,
+              41
+            ],
+            [
+              12,
+              62
+            ],
+            [
+              17,
+              55
+            ],
+            [
+              19,
+              43
+            ],
+            [
+              15,
+              48
+            ],
+            [
+              13,
+              31
+            ],
+            [
+              12,
+              47
+            ],
+            [
+              12,
+              45
+            ]
+          ]
+        },
+        "active": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 102,
+          "harmed": 320,
+          "fold_fixed_harmed": [
+            [
+              17,
+              38
+            ],
+            [
+              8,
+              46
+            ],
+            [
+              12,
+              47
+            ],
+            [
+              20,
+              39
+            ],
+            [
+              13,
+              41
+            ],
+            [
+              13,
+              27
+            ],
+            [
+              11,
+              40
+            ],
+            [
+              8,
+              42
+            ]
+          ]
+        },
+        "full": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 21,
+          "harmed": 41,
+          "fold_fixed_harmed": [
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              5,
+              8
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              0,
+              5
+            ]
+          ]
+        },
+        "budget_averaged": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 119,
+          "harmed": 374,
+          "fold_fixed_harmed": [
+            [
+              18,
+              42
+            ],
+            [
+              11,
+              61
+            ],
+            [
+              16,
+              54
+            ],
+            [
+              18,
+              46
+            ],
+            [
+              16,
+              48
+            ],
+            [
+              15,
+              31
+            ],
+            [
+              13,
+              44
+            ],
+            [
+              12,
+              48
+            ]
+          ]
+        },
+        "budget_random": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 112,
+          "harmed": 526,
+          "fold_fixed_harmed": [
+            [
+              15,
+              71
+            ],
+            [
+              14,
+              70
+            ],
+            [
+              15,
+              71
+            ],
+            [
+              16,
+              74
+            ],
+            [
+              16,
+              62
+            ],
+            [
+              13,
+              49
+            ],
+            [
+              14,
+              66
+            ],
+            [
+              9,
+              63
+            ]
+          ]
+        },
+        "budget_centered": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 28,
+          "harmed": 61,
+          "fold_fixed_harmed": [
+            [
+              5,
+              11
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        },
+        "budget_sham_centered": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 119,
+          "harmed": 541,
+          "fold_fixed_harmed": [
+            [
+              16,
+              68
+            ],
+            [
+              16,
+              74
+            ],
+            [
+              16,
+              74
+            ],
+            [
+              17,
+              78
+            ],
+            [
+              16,
+              64
+            ],
+            [
+              14,
+              47
+            ],
+            [
+              14,
+              70
+            ],
+            [
+              10,
+              66
+            ]
+          ]
+        },
+        "face_averaged": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 96,
+          "harmed": 301,
+          "fold_fixed_harmed": [
+            [
+              16,
+              33
+            ],
+            [
+              7,
+              47
+            ],
+            [
+              10,
+              42
+            ],
+            [
+              20,
+              38
+            ],
+            [
+              13,
+              40
+            ],
+            [
+              11,
+              21
+            ],
+            [
+              11,
+              38
+            ],
+            [
+              8,
+              42
+            ]
+          ]
+        },
+        "face_random": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 91,
+          "harmed": 403,
+          "fold_fixed_harmed": [
+            [
+              15,
+              52
+            ],
+            [
+              11,
+              58
+            ],
+            [
+              8,
+              53
+            ],
+            [
+              18,
+              41
+            ],
+            [
+              12,
+              55
+            ],
+            [
+              12,
+              39
+            ],
+            [
+              10,
+              58
+            ],
+            [
+              5,
+              47
+            ]
+          ]
+        },
+        "face_centered": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 38,
+          "harmed": 84,
+          "fold_fixed_harmed": [
+            [
+              7,
+              7
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              10,
+              10
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              11
+            ],
+            [
+              5,
+              10
+            ],
+            [
+              3,
+              20
+            ],
+            [
+              2,
+              14
+            ]
+          ]
+        },
+        "face_sham_centered": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 100,
+          "harmed": 441,
+          "fold_fixed_harmed": [
+            [
+              18,
+              52
+            ],
+            [
+              14,
+              62
+            ],
+            [
+              13,
+              57
+            ],
+            [
+              18,
+              45
+            ],
+            [
+              10,
+              55
+            ],
+            [
+              11,
+              50
+            ],
+            [
+              9,
+              64
+            ],
+            [
+              7,
+              56
+            ]
+          ]
+        },
+        "budget_centered_field_required": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 22,
+          "harmed": 45,
+          "fold_fixed_harmed": [
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              8
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        "budget_sham_centered_field_required": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 32,
+          "harmed": 259,
+          "fold_fixed_harmed": [
+            [
+              5,
+              33
+            ],
+            [
+              6,
+              29
+            ],
+            [
+              5,
+              32
+            ],
+            [
+              3,
+              43
+            ],
+            [
+              4,
+              27
+            ],
+            [
+              3,
+              24
+            ],
+            [
+              4,
+              37
+            ],
+            [
+              2,
+              34
+            ]
+          ]
+        },
+        "face_centered_field_required": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 22,
+          "harmed": 40,
+          "fold_fixed_harmed": [
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              0,
+              10
+            ],
+            [
+              1,
+              6
+            ]
+          ]
+        },
+        "face_sham_centered_field_required": {
+          "rows": 1716,
+          "errors": 286,
+          "fixed": 33,
+          "harmed": 216,
+          "fold_fixed_harmed": [
+            [
+              5,
+              27
+            ],
+            [
+              7,
+              28
+            ],
+            [
+              5,
+              24
+            ],
+            [
+              4,
+              20
+            ],
+            [
+              3,
+              25
+            ],
+            [
+              3,
+              30
+            ],
+            [
+              2,
+              33
+            ],
+            [
+              4,
+              29
+            ]
+          ]
+        }
+      },
+      "with_donors": {
+        "budget": 1704,
+        "face": 1563
+      }
+    }
+  },
+  "model_comparisons": {
+    "all_8693": {
+      "full_vs_budget": {
+        "rows": 8693,
+        "errors": 2073,
+        "fixed": 886,
+        "harmed": 462,
+        "fold_fixed_harmed": [
+          [
+            106,
+            66
+          ],
+          [
+            125,
+            41
+          ],
+          [
+            113,
+            48
+          ],
+          [
+            116,
+            52
+          ],
+          [
+            107,
+            65
+          ],
+          [
+            88,
+            73
+          ],
+          [
+            115,
+            51
+          ],
+          [
+            116,
+            66
+          ]
+        ],
+        "log_loss_difference": -0.10259384311628827
+      },
+      "full_vs_active": {
+        "rows": 8693,
+        "errors": 2027,
+        "fixed": 777,
+        "harmed": 399,
+        "fold_fixed_harmed": [
+          [
+            101,
+            60
+          ],
+          [
+            104,
+            33
+          ],
+          [
+            95,
+            35
+          ],
+          [
+            96,
+            52
+          ],
+          [
+            104,
+            63
+          ],
+          [
+            78,
+            64
+          ],
+          [
+            100,
+            42
+          ],
+          [
+            99,
+            50
+          ]
+        ],
+        "log_loss_difference": -0.08548836598286924
+      },
+      "full_vs_budget_averaged": {
+        "rows": 8693,
+        "errors": 2084,
+        "fixed": 795,
+        "harmed": 360,
+        "fold_fixed_harmed": [
+          [
+            100,
+            52
+          ],
+          [
+            108,
+            33
+          ],
+          [
+            109,
+            40
+          ],
+          [
+            109,
+            40
+          ],
+          [
+            101,
+            52
+          ],
+          [
+            74,
+            58
+          ],
+          [
+            91,
+            37
+          ],
+          [
+            103,
+            48
+          ]
+        ],
+        "log_loss_difference": -0.10424921349770955
+      },
+      "full_vs_face_averaged": {
+        "rows": 8693,
+        "errors": 2050,
+        "fixed": 701,
+        "harmed": 300,
+        "fold_fixed_harmed": [
+          [
+            82,
+            48
+          ],
+          [
+            93,
+            26
+          ],
+          [
+            96,
+            31
+          ],
+          [
+            91,
+            34
+          ],
+          [
+            93,
+            48
+          ],
+          [
+            68,
+            46
+          ],
+          [
+            90,
+            32
+          ],
+          [
+            88,
+            35
+          ]
+        ],
+        "log_loss_difference": -0.09095635757275722
+      },
+      "budget_centered_vs_budget": {
+        "rows": 8693,
+        "errors": 2073,
+        "fixed": 837,
+        "harmed": 421,
+        "fold_fixed_harmed": [
+          [
+            95,
+            61
+          ],
+          [
+            117,
+            43
+          ],
+          [
+            117,
+            50
+          ],
+          [
+            106,
+            44
+          ],
+          [
+            107,
+            60
+          ],
+          [
+            81,
+            66
+          ],
+          [
+            107,
+            45
+          ],
+          [
+            107,
+            52
+          ]
+        ],
+        "log_loss_difference": -0.09267622034650091
+      },
+      "face_centered_vs_active": {
+        "rows": 8693,
+        "errors": 2027,
+        "fixed": 704,
+        "harmed": 362,
+        "fold_fixed_harmed": [
+          [
+            90,
+            53
+          ],
+          [
+            92,
+            34
+          ],
+          [
+            96,
+            38
+          ],
+          [
+            86,
+            33
+          ],
+          [
+            89,
+            53
+          ],
+          [
+            70,
+            58
+          ],
+          [
+            90,
+            42
+          ],
+          [
+            91,
+            51
+          ]
+        ],
+        "log_loss_difference": -0.07191984312990385
+      },
+      "budget_centered_vs_budget_sham_centered": {
+        "rows": 8693,
+        "errors": 2632,
+        "fixed": 1386,
+        "harmed": 411,
+        "fold_fixed_harmed": [
+          [
+            182,
+            43
+          ],
+          [
+            162,
+            46
+          ],
+          [
+            184,
+            56
+          ],
+          [
+            185,
+            43
+          ],
+          [
+            181,
+            62
+          ],
+          [
+            145,
+            66
+          ],
+          [
+            174,
+            53
+          ],
+          [
+            173,
+            42
+          ]
+        ],
+        "log_loss_difference": -0.25357370551656416
+      },
+      "face_centered_vs_face_sham_centered": {
+        "rows": 8693,
+        "errors": 2398,
+        "fixed": 1062,
+        "harmed": 349,
+        "fold_fixed_harmed": [
+          [
+            148,
+            47
+          ],
+          [
+            137,
+            37
+          ],
+          [
+            124,
+            35
+          ],
+          [
+            124,
+            34
+          ],
+          [
+            139,
+            49
+          ],
+          [
+            127,
+            54
+          ],
+          [
+            130,
+            46
+          ],
+          [
+            133,
+            47
+          ]
+        ],
+        "log_loss_difference": -0.18581391752126614
+      }
+    },
+    "paid": {
+      "full_vs_budget": {
+        "rows": 5040,
+        "errors": 1352,
+        "fixed": 790,
+        "harmed": 367,
+        "fold_fixed_harmed": [
+          [
+            93,
+            53
+          ],
+          [
+            114,
+            33
+          ],
+          [
+            108,
+            41
+          ],
+          [
+            104,
+            41
+          ],
+          [
+            98,
+            54
+          ],
+          [
+            70,
+            57
+          ],
+          [
+            101,
+            36
+          ],
+          [
+            102,
+            52
+          ]
+        ],
+        "log_loss_difference": -0.1768713618680498
+      },
+      "full_vs_active": {
+        "rows": 5040,
+        "errors": 1309,
+        "fixed": 716,
+        "harmed": 336,
+        "fold_fixed_harmed": [
+          [
+            92,
+            53
+          ],
+          [
+            94,
+            28
+          ],
+          [
+            93,
+            33
+          ],
+          [
+            89,
+            39
+          ],
+          [
+            94,
+            50
+          ],
+          [
+            67,
+            55
+          ],
+          [
+            94,
+            34
+          ],
+          [
+            93,
+            44
+          ]
+        ],
+        "log_loss_difference": -0.14875030824460994
+      },
+      "full_vs_budget_averaged": {
+        "rows": 5040,
+        "errors": 1364,
+        "fixed": 795,
+        "harmed": 360,
+        "fold_fixed_harmed": [
+          [
+            100,
+            52
+          ],
+          [
+            108,
+            33
+          ],
+          [
+            109,
+            40
+          ],
+          [
+            109,
+            40
+          ],
+          [
+            101,
+            52
+          ],
+          [
+            74,
+            58
+          ],
+          [
+            91,
+            37
+          ],
+          [
+            103,
+            48
+          ]
+        ],
+        "log_loss_difference": -0.1798092089157916
+      },
+      "full_vs_face_averaged": {
+        "rows": 5040,
+        "errors": 1330,
+        "fixed": 701,
+        "harmed": 300,
+        "fold_fixed_harmed": [
+          [
+            82,
+            48
+          ],
+          [
+            93,
+            26
+          ],
+          [
+            96,
+            31
+          ],
+          [
+            91,
+            34
+          ],
+          [
+            93,
+            48
+          ],
+          [
+            68,
+            46
+          ],
+          [
+            90,
+            32
+          ],
+          [
+            88,
+            35
+          ]
+        ],
+        "log_loss_difference": -0.15688166991666247
+      },
+      "budget_centered_vs_budget": {
+        "rows": 5040,
+        "errors": 1352,
+        "fixed": 837,
+        "harmed": 421,
+        "fold_fixed_harmed": [
+          [
+            95,
+            61
+          ],
+          [
+            117,
+            43
+          ],
+          [
+            117,
+            50
+          ],
+          [
+            106,
+            44
+          ],
+          [
+            107,
+            60
+          ],
+          [
+            81,
+            66
+          ],
+          [
+            107,
+            45
+          ],
+          [
+            107,
+            52
+          ]
+        ],
+        "log_loss_difference": -0.15984809195875666
+      },
+      "face_centered_vs_active": {
+        "rows": 5040,
+        "errors": 1309,
+        "fixed": 704,
+        "harmed": 362,
+        "fold_fixed_harmed": [
+          [
+            90,
+            53
+          ],
+          [
+            92,
+            34
+          ],
+          [
+            96,
+            38
+          ],
+          [
+            86,
+            33
+          ],
+          [
+            89,
+            53
+          ],
+          [
+            70,
+            58
+          ],
+          [
+            90,
+            42
+          ],
+          [
+            91,
+            51
+          ]
+        ],
+        "log_loss_difference": -0.12404745958893931
+      },
+      "budget_centered_vs_budget_sham_centered": {
+        "rows": 5040,
+        "errors": 1911,
+        "fixed": 1386,
+        "harmed": 411,
+        "fold_fixed_harmed": [
+          [
+            182,
+            43
+          ],
+          [
+            162,
+            46
+          ],
+          [
+            184,
+            56
+          ],
+          [
+            185,
+            43
+          ],
+          [
+            181,
+            62
+          ],
+          [
+            145,
+            66
+          ],
+          [
+            174,
+            53
+          ],
+          [
+            173,
+            42
+          ]
+        ],
+        "log_loss_difference": -0.43736432977291534
+      },
+      "face_centered_vs_face_sham_centered": {
+        "rows": 5040,
+        "errors": 1680,
+        "fixed": 1062,
+        "harmed": 349,
+        "fold_fixed_harmed": [
+          [
+            148,
+            47
+          ],
+          [
+            137,
+            37
+          ],
+          [
+            124,
+            35
+          ],
+          [
+            124,
+            34
+          ],
+          [
+            139,
+            49
+          ],
+          [
+            127,
+            54
+          ],
+          [
+            130,
+            46
+          ],
+          [
+            133,
+            47
+          ]
+        ],
+        "log_loss_difference": -0.320492139883406
+      }
+    },
+    "remaining": {
+      "full_vs_budget": {
+        "rows": 2448,
+        "errors": 785,
+        "fixed": 393,
+        "harmed": 158,
+        "fold_fixed_harmed": [
+          [
+            45,
+            27
+          ],
+          [
+            69,
+            15
+          ],
+          [
+            57,
+            19
+          ],
+          [
+            43,
+            23
+          ],
+          [
+            48,
+            18
+          ],
+          [
+            33,
+            18
+          ],
+          [
+            52,
+            20
+          ],
+          [
+            46,
+            18
+          ]
+        ],
+        "log_loss_difference": -0.1590717707631974
+      },
+      "full_vs_active": {
+        "rows": 2448,
+        "errors": 750,
+        "fixed": 331,
+        "harmed": 131,
+        "fold_fixed_harmed": [
+          [
+            42,
+            25
+          ],
+          [
+            51,
+            10
+          ],
+          [
+            48,
+            12
+          ],
+          [
+            39,
+            25
+          ],
+          [
+            41,
+            15
+          ],
+          [
+            28,
+            17
+          ],
+          [
+            42,
+            15
+          ],
+          [
+            40,
+            12
+          ]
+        ],
+        "log_loss_difference": -0.12862793618875307
+      },
+      "full_vs_budget_averaged": {
+        "rows": 2448,
+        "errors": 785,
+        "fixed": 367,
+        "harmed": 132,
+        "fold_fixed_harmed": [
+          [
+            41,
+            21
+          ],
+          [
+            62,
+            13
+          ],
+          [
+            54,
+            16
+          ],
+          [
+            46,
+            18
+          ],
+          [
+            45,
+            16
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            43,
+            16
+          ],
+          [
+            46,
+            15
+          ]
+        ],
+        "log_loss_difference": -0.16152267421367245
+      },
+      "full_vs_face_averaged": {
+        "rows": 2448,
+        "errors": 735,
+        "fixed": 292,
+        "harmed": 107,
+        "fold_fixed_harmed": [
+          [
+            32,
+            19
+          ],
+          [
+            48,
+            9
+          ],
+          [
+            42,
+            10
+          ],
+          [
+            37,
+            19
+          ],
+          [
+            37,
+            13
+          ],
+          [
+            20,
+            13
+          ],
+          [
+            37,
+            14
+          ],
+          [
+            39,
+            10
+          ]
+        ],
+        "log_loss_difference": -0.13245022760199004
+      },
+      "budget_centered_vs_budget": {
+        "rows": 2448,
+        "errors": 785,
+        "fixed": 378,
+        "harmed": 157,
+        "fold_fixed_harmed": [
+          [
+            40,
+            23
+          ],
+          [
+            64,
+            19
+          ],
+          [
+            58,
+            21
+          ],
+          [
+            44,
+            21
+          ],
+          [
+            50,
+            19
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            47,
+            21
+          ],
+          [
+            45,
+            16
+          ]
+        ],
+        "log_loss_difference": -0.14582628802908476
+      },
+      "face_centered_vs_active": {
+        "rows": 2448,
+        "errors": 750,
+        "fixed": 298,
+        "harmed": 126,
+        "fold_fixed_harmed": [
+          [
+            39,
+            18
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            39,
+            19
+          ],
+          [
+            37,
+            17
+          ],
+          [
+            27,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            35,
+            13
+          ]
+        ],
+        "log_loss_difference": -0.10751248806712349
+      },
+      "budget_centered_vs_budget_sham_centered": {
+        "rows": 2448,
+        "errors": 953,
+        "fixed": 534,
+        "harmed": 145,
+        "fold_fixed_harmed": [
+          [
+            63,
+            17
+          ],
+          [
+            74,
+            21
+          ],
+          [
+            75,
+            18
+          ],
+          [
+            77,
+            17
+          ],
+          [
+            67,
+            21
+          ],
+          [
+            46,
+            18
+          ],
+          [
+            66,
+            19
+          ],
+          [
+            66,
+            14
+          ]
+        ],
+        "log_loss_difference": -0.3543710046062269
+      },
+      "face_centered_vs_face_sham_centered": {
+        "rows": 2448,
+        "errors": 873,
+        "fixed": 408,
+        "harmed": 113,
+        "fold_fixed_harmed": [
+          [
+            50,
+            16
+          ],
+          [
+            59,
+            16
+          ],
+          [
+            55,
+            11
+          ],
+          [
+            45,
+            17
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            48,
+            14
+          ],
+          [
+            53,
+            15
+          ],
+          [
+            49,
+            12
+          ]
+        ],
+        "log_loss_difference": -0.2530779611918433
+      }
+    },
+    "remaining_paid": {
+      "full_vs_budget": {
+        "rows": 1716,
+        "errors": 540,
+        "fixed": 364,
+        "harmed": 130,
+        "fold_fixed_harmed": [
+          [
+            40,
+            21
+          ],
+          [
+            63,
+            14
+          ],
+          [
+            55,
+            17
+          ],
+          [
+            43,
+            19
+          ],
+          [
+            45,
+            15
+          ],
+          [
+            29,
+            14
+          ],
+          [
+            46,
+            15
+          ],
+          [
+            43,
+            15
+          ]
+        ],
+        "log_loss_difference": -0.2278562078810114
+      },
+      "full_vs_active": {
+        "rows": 1716,
+        "errors": 504,
+        "fixed": 314,
+        "harmed": 116,
+        "fold_fixed_harmed": [
+          [
+            39,
+            22
+          ],
+          [
+            47,
+            10
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            39,
+            20
+          ],
+          [
+            38,
+            13
+          ],
+          [
+            25,
+            14
+          ],
+          [
+            39,
+            14
+          ],
+          [
+            40,
+            11
+          ]
+        ],
+        "log_loss_difference": -0.1850795072808446
+      },
+      "full_vs_budget_averaged": {
+        "rows": 1716,
+        "errors": 541,
+        "fixed": 367,
+        "harmed": 132,
+        "fold_fixed_harmed": [
+          [
+            41,
+            21
+          ],
+          [
+            62,
+            13
+          ],
+          [
+            54,
+            16
+          ],
+          [
+            46,
+            18
+          ],
+          [
+            45,
+            16
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            43,
+            16
+          ],
+          [
+            46,
+            15
+          ]
+        ],
+        "log_loss_difference": -0.230423954822302
+      },
+      "full_vs_face_averaged": {
+        "rows": 1716,
+        "errors": 491,
+        "fixed": 292,
+        "harmed": 107,
+        "fold_fixed_harmed": [
+          [
+            32,
+            19
+          ],
+          [
+            48,
+            9
+          ],
+          [
+            42,
+            10
+          ],
+          [
+            37,
+            19
+          ],
+          [
+            37,
+            13
+          ],
+          [
+            20,
+            13
+          ],
+          [
+            37,
+            14
+          ],
+          [
+            39,
+            10
+          ]
+        ],
+        "log_loss_difference": -0.18894997504060124
+      },
+      "budget_centered_vs_budget": {
+        "rows": 1716,
+        "errors": 540,
+        "fixed": 378,
+        "harmed": 157,
+        "fold_fixed_harmed": [
+          [
+            40,
+            23
+          ],
+          [
+            64,
+            19
+          ],
+          [
+            58,
+            21
+          ],
+          [
+            44,
+            21
+          ],
+          [
+            50,
+            19
+          ],
+          [
+            30,
+            17
+          ],
+          [
+            47,
+            21
+          ],
+          [
+            45,
+            16
+          ]
+        ],
+        "log_loss_difference": -0.20803190739813487
+      },
+      "face_centered_vs_active": {
+        "rows": 1716,
+        "errors": 504,
+        "fixed": 298,
+        "harmed": 126,
+        "fold_fixed_harmed": [
+          [
+            39,
+            18
+          ],
+          [
+            44,
+            11
+          ],
+          [
+            47,
+            12
+          ],
+          [
+            39,
+            19
+          ],
+          [
+            37,
+            17
+          ],
+          [
+            27,
+            18
+          ],
+          [
+            30,
+            18
+          ],
+          [
+            35,
+            13
+          ]
+        ],
+        "log_loss_difference": -0.15337445850135106
+      },
+      "budget_centered_vs_budget_sham_centered": {
+        "rows": 1716,
+        "errors": 708,
+        "fixed": 534,
+        "harmed": 145,
+        "fold_fixed_harmed": [
+          [
+            63,
+            17
+          ],
+          [
+            74,
+            21
+          ],
+          [
+            75,
+            18
+          ],
+          [
+            77,
+            17
+          ],
+          [
+            67,
+            21
+          ],
+          [
+            46,
+            18
+          ],
+          [
+            66,
+            19
+          ],
+          [
+            66,
+            14
+          ]
+        ],
+        "log_loss_difference": -0.5055362583193725
+      },
+      "face_centered_vs_face_sham_centered": {
+        "rows": 1716,
+        "errors": 627,
+        "fixed": 408,
+        "harmed": 113,
+        "fold_fixed_harmed": [
+          [
+            50,
+            16
+          ],
+          [
+            59,
+            16
+          ],
+          [
+            55,
+            11
+          ],
+          [
+            45,
+            17
+          ],
+          [
+            49,
+            12
+          ],
+          [
+            48,
+            14
+          ],
+          [
+            53,
+            15
+          ],
+          [
+            49,
+            12
+          ]
+        ],
+        "log_loss_difference": -0.3610342942876646
+      }
+    }
+  }
+}
