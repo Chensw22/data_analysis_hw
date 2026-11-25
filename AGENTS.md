@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日 05:26，第十个一次性 Mac 任务 com.chensw22.spaceship.tabnetattention.once 已启动，等待六路版回执和主账号额度。TabNet 双重确认版冻结于 1e75db62e4a538cfdbb461adf0ecd9ebf80ae52c，在此前十个版本均同判的测试乘客中改判 18 人，相对公榜最佳共改判 306 人。三种有重叠的本地验证分别为 15 修 6 伤、10 修 8 伤、3 修 1 伤。05:24 官方余量 0/10，第 113/2,205，最佳 81.739%。本地提交标准以相对提升和跨订单复现判断，无固定 83% 门槛。核对 artifacts/proposal_n26_tabnet_attention/queue_status.json 和正式回执。
+
 - 11 月 26 日 04:49，主账号可用 0 次，第 113/2,205，最佳 81.739%，第三名 83.937%。按用户要求，本地相对现有版本有明显提升即可提交。已排队的 18 人版与线上最佳九票版在可验证的 8,532 人上为 299 修、218 伤，纳入余下 161 人后全体本地净增保守区间为 29–135 人。实际提交前查官方余额、现有一次性任务及前序回执。两版共同错例 1,232 人，其中清醒有消费却被判为未传送者 441 人、休眠无正消费却被判为传送者 390 人。参见 reports/nov23_matched_learning_curve/shared_error_population.json 和 missing_branch_pair_bounds.json。
 
 - 11 月 26 日 03:52，主账号已用 10/10 次，最佳 81.739%，第 113 / 2,205。六模型加模型族多数的版本在 4,277 人中相对上版改判 18 人，冻结于 618bcdb7347b3a9ccacf721e23bf1f81230b5374。Mac 任务 com.chensw22.spaceship.sixway18.once 等待 com.chensw22.spaceship.faredeck98.once 的正式回执和主账号额度，提交前会弹窗。复查请核对实时任务、两个候选的 queue_status.json 和正式回执。
