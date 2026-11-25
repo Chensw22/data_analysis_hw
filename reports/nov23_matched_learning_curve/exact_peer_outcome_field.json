@@ -1,0 +1,434 @@
+{
+  "multiple_passengers": 3888,
+  "bookings": 1412,
+  "joint_log_loss": [
+    0.9563868490816844,
+    0.9555945817998405
+  ],
+  "views": {
+    "full": {
+      "independent": {
+        "common": {
+          "rows": 3589,
+          "errors": 490,
+          "fixed": 64,
+          "harmed": 100
+        },
+        "awake_paid_miss": {
+          "rows": 1268,
+          "errors": 134,
+          "fixed": 11,
+          "harmed": 14
+        },
+        "sleeper_false_alarm": {
+          "rows": 1389,
+          "errors": 145,
+          "fixed": 15,
+          "harmed": 17
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "coupled": {
+        "common": {
+          "rows": 3589,
+          "errors": 490,
+          "fixed": 64,
+          "harmed": 101
+        },
+        "awake_paid_miss": {
+          "rows": 1268,
+          "errors": 134,
+          "fixed": 11,
+          "harmed": 14
+        },
+        "sleeper_false_alarm": {
+          "rows": 1389,
+          "errors": 145,
+          "fixed": 15,
+          "harmed": 18
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "newly_flipped": {
+        "common": {
+          "rows": 3589,
+          "errors": 490,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "awake_paid_miss": {
+          "rows": 1268,
+          "errors": 134,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 1389,
+          "errors": 145,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "oracle_known_companions": {
+        "common": {
+          "rows": 3589,
+          "errors": 490,
+          "fixed": 61,
+          "harmed": 104
+        },
+        "awake_paid_miss": {
+          "rows": 1268,
+          "errors": 134,
+          "fixed": 12,
+          "harmed": 16
+        },
+        "sleeper_false_alarm": {
+          "rows": 1389,
+          "errors": 145,
+          "fixed": 14,
+          "harmed": 18
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      }
+    },
+    "historical_to_new": {
+      "independent": {
+        "common": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 17,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "coupled": {
+        "common": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 17,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "newly_flipped": {
+        "common": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "awake_paid_miss": {
+          "rows": 17,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "oracle_known_companions": {
+        "common": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 17,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 51,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      }
+    },
+    "bookingmix": {
+      "independent": {
+        "common": {
+          "rows": 1256,
+          "errors": 164,
+          "fixed": 19,
+          "harmed": 29
+        },
+        "awake_paid_miss": {
+          "rows": 471,
+          "errors": 55,
+          "fixed": 4,
+          "harmed": 4
+        },
+        "sleeper_false_alarm": {
+          "rows": 492,
+          "errors": 45,
+          "fixed": 7,
+          "harmed": 5
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "coupled": {
+        "common": {
+          "rows": 1256,
+          "errors": 164,
+          "fixed": 19,
+          "harmed": 29
+        },
+        "awake_paid_miss": {
+          "rows": 471,
+          "errors": 55,
+          "fixed": 4,
+          "harmed": 4
+        },
+        "sleeper_false_alarm": {
+          "rows": 492,
+          "errors": 45,
+          "fixed": 7,
+          "harmed": 5
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "newly_flipped": {
+        "common": {
+          "rows": 1256,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "awake_paid_miss": {
+          "rows": 471,
+          "errors": 55,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 492,
+          "errors": 45,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "oracle_known_companions": {
+        "common": {
+          "rows": 1256,
+          "errors": 164,
+          "fixed": 20,
+          "harmed": 28
+        },
+        "awake_paid_miss": {
+          "rows": 471,
+          "errors": 55,
+          "fixed": 4,
+          "harmed": 5
+        },
+        "sleeper_false_alarm": {
+          "rows": 492,
+          "errors": 45,
+          "fixed": 5,
+          "harmed": 4
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      }
+    },
+    "fresh_bookingmix": {
+      "independent": {
+        "common": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 16,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "coupled": {
+        "common": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 16,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "newly_flipped": {
+        "common": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "awake_paid_miss": {
+          "rows": 16,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "oracle_known_companions": {
+        "common": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "awake_paid_miss": {
+          "rows": 16,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleeper_false_alarm": {
+          "rows": 23,
+          "errors": 1,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "new_order": {
+          "rows": 50,
+          "errors": 3,
+          "fixed": 0,
+          "harmed": 2
+        }
+      }
+    }
+  }
+}
