@@ -93,8 +93,12 @@ FARE_DECK = QueuedExport('proposal_n26_fare_deck', 'export_fare_deck_n26.py',
     CONSENSUS_REVIEW.out/'queue_status.json',
     '主账号即将评测精确账单甲板版，该模型在整单验证中救回了此前一致判错的乘客。',
     '8df14a7bb4a404fcfceff3abf7f7c44e9b855b50fca72a2bb2b1d090514c4459', model='scores.npz')
+SIX_WAY_DISPUTE = QueuedExport('proposal_n26_six_way_dispute', 'export_six_way_dispute_n26.py',
+    FARE_DECK.out/'queue_status.json',
+    '主账号即将评测登记与账单六模型一致改判版，上一份账单甲板版已有官方成绩。',
+    'a8a864dacdedd6d720f581922b4c5247c7adc7b0636ec1a0aa7cc580b37f5aae', model='predictions.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE)}
 
 
 def verify(revision, job=HALF):
