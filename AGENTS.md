@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 25 日晚，全八折九票可复核 8,445 / 8,693 人，其中多人订单 3,710 / 3,888 人。已在 Mac 登录会话启动三个一次性任务 confirmedfields30、awaketabicl135、confirmedunion154（完整标签均为 com.chensw22.spaceship.<名称>.once）。首个任务在 22:47 核实当日 10 次已用，另两个等待前序官方成绩。若前两版均低于九票 81.739%，组合自动跳过。手动提交前检查 launchctl、各候选 artifacts 目录中的 queue_status.json 与线上回执。参见 reports/nov23_matched_learning_curve/RESULTS.md、complete_booking_comparison.json 和 confirmed_awake_union.json。
+
 - 11 月 25 日北京时间 22:05，主账号当日 10 次已用、可用 0 次，最佳 81.739%，第 112 / 2,198 名，第三名 83.937%。补齐八折中前三折的同行账单重训后，这三折的九票判定可核验 3,152 / 3,239 人（其中多人订单 1,364 / 1,431）。其余五折沿用独行乘客核验范围。双分组确认版相对最佳改判 30 人，已导出，未排队。见 reports/proposal_n25_confirmed_random_fields/manifest.json 与 reports/nov23_matched_learning_curve/RESULTS.md。
 
 - 11 月 25 日北京时间 21:43 再次查询，主账号当日可提交 0 次，最佳 81.739%，第 112 / 2,197 名，第三名 83.937%。八折可精确回放九票的 4,111 人全部独行；多人订单请另报可核验的基础模型比较。见 reports/nov23_matched_learning_curve/full_context_generations.json 与 new_order_error_transfer.json。
