@@ -1,0 +1,154 @@
+{
+  "rows": 6954,
+  "baseline_correct": 5668,
+  "required_correct_for_above_85": 5911,
+  "minimum_net_gain": 243,
+  "correct_with_all_unanimous_errors_repaired": 5876,
+  "minimum_further_gain_even_with_perfect_unanimous_repair": 35,
+  "results": {
+    "all": {
+      "rows": 6954,
+      "errors": 1286,
+      "policies": {
+        "paired_references": {
+          "fixed": 261,
+          "harmed": 436
+        },
+        "shared_booking_state": {
+          "fixed": 169,
+          "harmed": 200
+        },
+        "frozen_v1": {
+          "fixed": 191,
+          "harmed": 297
+        },
+        "frozen_v2": {
+          "fixed": 70,
+          "harmed": 58
+        },
+        "union": {
+          "fixed": 502,
+          "harmed": 801
+        },
+        "two_or_more": {
+          "fixed": 151,
+          "harmed": 157
+        },
+        "three_or_more": {
+          "fixed": 34,
+          "harmed": 26
+        },
+        "all_four": {
+          "fixed": 4,
+          "harmed": 7
+        },
+        "held_out_booking_gate": {
+          "fixed": 99,
+          "harmed": 116
+        }
+      },
+      "unique_fixed": {
+        "paired_references": 172,
+        "shared_booking_state": 83,
+        "frozen_v1": 84,
+        "frozen_v2": 12
+      }
+    },
+    "archive_agrees": {
+      "rows": 2884,
+      "errors": 208,
+      "policies": {
+        "paired_references": {
+          "fixed": 6,
+          "harmed": 57
+        },
+        "shared_booking_state": {
+          "fixed": 4,
+          "harmed": 10
+        },
+        "frozen_v1": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "frozen_v2": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "union": {
+          "fixed": 10,
+          "harmed": 69
+        },
+        "two_or_more": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "three_or_more": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "all_four": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "held_out_booking_gate": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "unique_fixed": {
+        "paired_references": 6,
+        "shared_booking_state": 3,
+        "frozen_v1": 0,
+        "frozen_v2": 0
+      }
+    },
+    "archive_disagrees": {
+      "rows": 4070,
+      "errors": 1078,
+      "policies": {
+        "paired_references": {
+          "fixed": 255,
+          "harmed": 379
+        },
+        "shared_booking_state": {
+          "fixed": 165,
+          "harmed": 190
+        },
+        "frozen_v1": {
+          "fixed": 191,
+          "harmed": 295
+        },
+        "frozen_v2": {
+          "fixed": 69,
+          "harmed": 58
+        },
+        "union": {
+          "fixed": 492,
+          "harmed": 732
+        },
+        "two_or_more": {
+          "fixed": 150,
+          "harmed": 157
+        },
+        "three_or_more": {
+          "fixed": 34,
+          "harmed": 26
+        },
+        "all_four": {
+          "fixed": 4,
+          "harmed": 7
+        },
+        "held_out_booking_gate": {
+          "fixed": 99,
+          "harmed": 116
+        }
+      },
+      "unique_fixed": {
+        "paired_references": 166,
+        "shared_booking_state": 80,
+        "frozen_v1": 84,
+        "frozen_v2": 12
+      }
+    }
+  }
+}
