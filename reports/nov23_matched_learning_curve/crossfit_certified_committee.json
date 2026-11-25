@@ -1,0 +1,617 @@
+{
+  "family_order": [
+    "response",
+    "projections",
+    "bill_regime_tree",
+    "class_neighborhood_mass",
+    "companion_transition",
+    "error_partition_kernel",
+    "failure_sampling_offset",
+    "fixed_bill_margins",
+    "honest_failure_partitions",
+    "labelled_reference_pairs",
+    "maxout",
+    "permutation_selection",
+    "predicate_tables",
+    "recursive_metric",
+    "service_order_mixture",
+    "spending_shape",
+    "two_view_reliability",
+    "zero_truncated"
+  ],
+  "full": {
+    "policies": {
+      "all_mean": {
+        "corrected": 26,
+        "harmed": 39,
+        "accuracy": 0.820481634638774,
+        "net": -13,
+        "ci_pp": [
+          -0.7054244709316468,
+          0.048649963512527365
+        ],
+        "fold_net": [
+          -7,
+          -1,
+          -2,
+          -3,
+          1,
+          -1,
+          0,
+          0
+        ],
+        "new_orders": {
+          "corrected": 3,
+          "harmed": 4,
+          "accuracy": 0.8061831153388823,
+          "net": -1,
+          "ci_pp": [
+            -0.713436385255648,
+            0.4756242568370987
+          ],
+          "fold_net": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "all_median": {
+        "corrected": 29,
+        "harmed": 39,
+        "accuracy": 0.8212113840914619,
+        "net": -10,
+        "ci_pp": [
+          -0.6324495256628557,
+          0.1459498905375821
+        ],
+        "fold_net": [
+          -4,
+          1,
+          -2,
+          -3,
+          2,
+          -2,
+          -1,
+          -1
+        ],
+        "new_orders": {
+          "corrected": 4,
+          "harmed": 4,
+          "accuracy": 0.807372175980975,
+          "net": 0,
+          "ci_pp": [
+            -0.713436385255648,
+            0.713436385255648
+          ],
+          "fold_net": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "majority_edits": {
+        "corrected": 27,
+        "harmed": 39,
+        "accuracy": 0.8207248844563366,
+        "net": -12,
+        "ci_pp": [
+          -0.6810994891753831,
+          0.09729992702505473
+        ],
+        "fold_net": [
+          -5,
+          1,
+          -3,
+          -3,
+          2,
+          -2,
+          -1,
+          -1
+        ],
+        "new_orders": {
+          "corrected": 4,
+          "harmed": 4,
+          "accuracy": 0.807372175980975,
+          "net": 0,
+          "ci_pp": [
+            -0.713436385255648,
+            0.713436385255648
+          ],
+          "fold_net": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      },
+      "winner": {
+        "corrected": 49,
+        "harmed": 46,
+        "accuracy": 0.8243736317197762,
+        "net": 3,
+        "ci_pp": [
+          -0.3891997081002189,
+          0.535149598637801
+        ],
+        "fold_net": [
+          2,
+          0,
+          -3,
+          5,
+          2,
+          3,
+          -3,
+          -3
+        ],
+        "new_orders": {
+          "corrected": 14,
+          "harmed": 11,
+          "accuracy": 0.8109393579072532,
+          "net": 3,
+          "ci_pp": [
+            -0.8323424494649228,
+            1.5457788347205708
+          ],
+          "fold_net": [
+            2,
+            -1,
+            0,
+            3,
+            1,
+            0,
+            -2,
+            0
+          ]
+        }
+      },
+      "two_panel_winner": {
+        "corrected": 32,
+        "harmed": 36,
+        "accuracy": 0.8226708829968378,
+        "net": -4,
+        "ci_pp": [
+          -0.48649963512527367,
+          0.2918997810751642
+        ],
+        "fold_net": [
+          0,
+          -1,
+          -5,
+          5,
+          2,
+          0,
+          -3,
+          -2
+        ],
+        "new_orders": {
+          "corrected": 10,
+          "harmed": 9,
+          "accuracy": 0.8085612366230678,
+          "net": 1,
+          "ci_pp": [
+            -0.9512485136741974,
+            1.1890606420927468
+          ],
+          "fold_net": [
+            0,
+            -2,
+            0,
+            3,
+            1,
+            0,
+            -2,
+            1
+          ]
+        }
+      },
+      "reliability_average": {
+        "corrected": 37,
+        "harmed": 36,
+        "accuracy": 0.8238871320846509,
+        "net": 1,
+        "ci_pp": [
+          -0.3891997081002189,
+          0.4141328144003914
+        ],
+        "fold_net": [
+          2,
+          -3,
+          -3,
+          2,
+          0,
+          2,
+          1,
+          0
+        ],
+        "new_orders": {
+          "corrected": 9,
+          "harmed": 6,
+          "accuracy": 0.8109393579072532,
+          "net": 3,
+          "ci_pp": [
+            -0.4756242568370987,
+            1.3079667063020215
+          ],
+          "fold_net": [
+            1,
+            -2,
+            0,
+            2,
+            0,
+            1,
+            0,
+            1
+          ]
+        }
+      },
+      "abstaining_vote": {
+        "corrected": 41,
+        "harmed": 42,
+        "accuracy": 0.8234006324495257,
+        "net": -1,
+        "ci_pp": [
+          -0.46217465336901,
+          0.4135246898564826
+        ],
+        "fold_net": [
+          3,
+          -3,
+          -4,
+          3,
+          -1,
+          3,
+          -1,
+          -1
+        ],
+        "new_orders": {
+          "corrected": 9,
+          "harmed": 6,
+          "accuracy": 0.8109393579072532,
+          "net": 3,
+          "ci_pp": [
+            -0.4756242568370987,
+            1.3079667063020215
+          ],
+          "fold_net": [
+            3,
+            -2,
+            0,
+            2,
+            -1,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "selection": [
+      {
+        "held_fold": 0,
+        "passengers": 174,
+        "chosen": 7,
+        "confirmed": 7
+      },
+      {
+        "held_fold": 0,
+        "passengers": 173,
+        "chosen": 7,
+        "confirmed": null
+      },
+      {
+        "held_fold": 0,
+        "passengers": 173,
+        "chosen": 6,
+        "confirmed": 6
+      },
+      {
+        "held_fold": 1,
+        "passengers": 173,
+        "chosen": 1,
+        "confirmed": null
+      },
+      {
+        "held_fold": 1,
+        "passengers": 172,
+        "chosen": null,
+        "confirmed": null
+      },
+      {
+        "held_fold": 1,
+        "passengers": 172,
+        "chosen": 1,
+        "confirmed": 1
+      },
+      {
+        "held_fold": 2,
+        "passengers": 169,
+        "chosen": 1,
+        "confirmed": 1
+      },
+      {
+        "held_fold": 2,
+        "passengers": 169,
+        "chosen": 2,
+        "confirmed": 2
+      },
+      {
+        "held_fold": 2,
+        "passengers": 169,
+        "chosen": 1,
+        "confirmed": null
+      },
+      {
+        "held_fold": 3,
+        "passengers": 172,
+        "chosen": 15,
+        "confirmed": 15
+      },
+      {
+        "held_fold": 3,
+        "passengers": 172,
+        "chosen": 15,
+        "confirmed": 15
+      },
+      {
+        "held_fold": 3,
+        "passengers": 172,
+        "chosen": 7,
+        "confirmed": 7
+      },
+      {
+        "held_fold": 4,
+        "passengers": 164,
+        "chosen": 14,
+        "confirmed": 14
+      },
+      {
+        "held_fold": 4,
+        "passengers": 164,
+        "chosen": 14,
+        "confirmed": 14
+      },
+      {
+        "held_fold": 4,
+        "passengers": 164,
+        "chosen": 2,
+        "confirmed": 2
+      },
+      {
+        "held_fold": 5,
+        "passengers": 175,
+        "chosen": 11,
+        "confirmed": null
+      },
+      {
+        "held_fold": 5,
+        "passengers": 175,
+        "chosen": 11,
+        "confirmed": 11
+      },
+      {
+        "held_fold": 5,
+        "passengers": 174,
+        "chosen": 7,
+        "confirmed": null
+      },
+      {
+        "held_fold": 6,
+        "passengers": 172,
+        "chosen": 11,
+        "confirmed": 11
+      },
+      {
+        "held_fold": 6,
+        "passengers": 171,
+        "chosen": 0,
+        "confirmed": 0
+      },
+      {
+        "held_fold": 6,
+        "passengers": 171,
+        "chosen": 17,
+        "confirmed": 17
+      },
+      {
+        "held_fold": 7,
+        "passengers": 174,
+        "chosen": 4,
+        "confirmed": null
+      },
+      {
+        "held_fold": 7,
+        "passengers": 174,
+        "chosen": 14,
+        "confirmed": null
+      },
+      {
+        "held_fold": 7,
+        "passengers": 173,
+        "chosen": 11,
+        "confirmed": 11
+      }
+    ]
+  },
+  "historical": {
+    "policies": {
+      "all_mean": {
+        "corrected": 26,
+        "harmed": 23,
+        "accuracy": 0.823030303030303,
+        "net": 3,
+        "ci_pp": [
+          -0.3333333333333333,
+          0.5151515151515151
+        ],
+        "fold_net": [
+          1,
+          0,
+          2
+        ]
+      },
+      "all_median": {
+        "corrected": 26,
+        "harmed": 24,
+        "accuracy": 0.8227272727272728,
+        "net": 2,
+        "ci_pp": [
+          -0.36363636363636365,
+          0.48484848484848486
+        ],
+        "fold_net": [
+          3,
+          -1,
+          0
+        ]
+      },
+      "majority_edits": {
+        "corrected": 24,
+        "harmed": 23,
+        "accuracy": 0.8224242424242424,
+        "net": 1,
+        "ci_pp": [
+          -0.3939393939393939,
+          0.45454545454545453
+        ],
+        "fold_net": [
+          1,
+          0,
+          0
+        ]
+      },
+      "winner": {
+        "corrected": 37,
+        "harmed": 40,
+        "accuracy": 0.8212121212121212,
+        "net": -3,
+        "ci_pp": [
+          -0.6363636363636364,
+          0.42424242424242425
+        ],
+        "fold_net": [
+          -4,
+          -1,
+          2
+        ]
+      },
+      "two_panel_winner": {
+        "corrected": 15,
+        "harmed": 21,
+        "accuracy": 0.8203030303030303,
+        "net": -6,
+        "ci_pp": [
+          -0.5454545454545454,
+          0.15151515151515152
+        ],
+        "fold_net": [
+          -2,
+          -4,
+          0
+        ]
+      },
+      "reliability_average": {
+        "corrected": 23,
+        "harmed": 20,
+        "accuracy": 0.823030303030303,
+        "net": 3,
+        "ci_pp": [
+          -0.30303030303030304,
+          0.48484848484848486
+        ],
+        "fold_net": [
+          0,
+          -1,
+          4
+        ]
+      },
+      "abstaining_vote": {
+        "corrected": 26,
+        "harmed": 25,
+        "accuracy": 0.8224242424242424,
+        "net": 1,
+        "ci_pp": [
+          -0.3939393939393939,
+          0.45454545454545453
+        ],
+        "fold_net": [
+          -1,
+          -1,
+          3
+        ]
+      }
+    },
+    "selection": [
+      {
+        "held_fold": 0,
+        "passengers": 359,
+        "chosen": 10,
+        "confirmed": 10
+      },
+      {
+        "held_fold": 0,
+        "passengers": 359,
+        "chosen": 15,
+        "confirmed": null
+      },
+      {
+        "held_fold": 0,
+        "passengers": 358,
+        "chosen": 5,
+        "confirmed": null
+      },
+      {
+        "held_fold": 1,
+        "passengers": 377,
+        "chosen": 7,
+        "confirmed": null
+      },
+      {
+        "held_fold": 1,
+        "passengers": 377,
+        "chosen": 2,
+        "confirmed": 2
+      },
+      {
+        "held_fold": 1,
+        "passengers": 376,
+        "chosen": 3,
+        "confirmed": 14
+      },
+      {
+        "held_fold": 2,
+        "passengers": 365,
+        "chosen": 0,
+        "confirmed": null
+      },
+      {
+        "held_fold": 2,
+        "passengers": 365,
+        "chosen": 7,
+        "confirmed": 7
+      },
+      {
+        "held_fold": 2,
+        "passengers": 364,
+        "chosen": 7,
+        "confirmed": null
+      }
+    ]
+  }
+}
