@@ -16,5 +16,50 @@
     "vetoed_raise": 5,
     "total_vetoed": 16,
     "known_with_veto": 4219
+  },
+  "environment": {
+    "interpreter": ".venv-exaone/bin/python",
+    "runtime_flag": "KMP_DUPLICATE_LIB_OK=FALSE",
+    "device": "mps",
+    "settings": {
+      "seed": 0,
+      "ensemble_count": 8,
+      "query_step": 1024,
+      "mps_memory_fraction": 0.65,
+      "threads": 4
+    },
+    "checkpoint_sha256": "2aa723e024e5c56c778d6c79cc3cee7675d1b6a03c06fa08c80e620e228b224d",
+    "checkpoint_bytes": 83286800,
+    "environment_sha256": "5e562c71ca4a164a214709a7a0ba0b62a1936af977cc904921a6de3750c3f7e4",
+    "compact_feature_columns": [
+      "HomePlanet",
+      "CryoSleep",
+      "Destination",
+      "Age",
+      "VIP",
+      "RoomService",
+      "FoodCourt",
+      "ShoppingMall",
+      "Spa",
+      "VRDeck",
+      "Deck",
+      "CabinNumber",
+      "Side"
+    ],
+    "historical_random_fold_seconds": [
+      76.63488279189914,
+      96.210268832976,
+      93.88298262504395
+    ],
+    "synthetic_resource_seconds": {
+      "D_screen": 74.68830691697076,
+      "E_full_support": 185.2404425839195,
+      "F_full_export": 694.4552561669843
+    },
+    "grouped_runtime_measured": false,
+    "grouped_certifications_observed": 0,
+    "preflight_command": ".venv-exaone/bin/python grouped_exaone_veto_n26.py",
+    "future_replay_command": ".venv-exaone/bin/python grouped_exaone_veto_n26.py --folds 0 1 2 3 4 5 6 7",
+    "future_scoring_command": ".venv/bin/python certify_patched_cabins_n26.py --exaone-folds 0 1 2 3 4 5 6 7"
   }
 }

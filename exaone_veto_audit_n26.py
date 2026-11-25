@@ -65,6 +65,20 @@ def run():
     witness=joblib.load(ART/'proposal_v128_manifest_confirmation/model.joblib').predict_proba(design(compact_features(test),True))[:,1]
     family=risk(features,controls,y,np.arange(len(y)),q,size,awake)[:,0]
     result['competition']=audit(p,sleeping[q]&(witness<.5),awake[q]&(size[q]>1)&(family>=.60),predicted,prior)
+    resource=json.loads((ROOT/'reports/exaone_resources/mps/result.json').read_text())
+    manifest=json.loads((ROOT/'reports/proposal_online_first_exaone_fixed/manifest.json').read_text())
+    result['environment']={
+        'interpreter':'.venv-exaone/bin/python','runtime_flag':'KMP_DUPLICATE_LIB_OK=FALSE',
+        'device':'mps','settings':{k:resource['settings'][k] for k in ('seed','ensemble_count','query_step','mps_memory_fraction','threads')},
+        'checkpoint_sha256':resource['checkpoint_sha256'],'checkpoint_bytes':resource['checkpoint_bytes'],
+        'environment_sha256':manifest['environment_sha256'],
+        'compact_feature_columns':resource['settings']['columns'],
+        'historical_random_fold_seconds':[json.loads((ROOT/f'reports/run_054/fold{k}.json').read_text())['seconds'] for k in range(3)],
+        'synthetic_resource_seconds':{s['stage']:s['seconds'] for s in resource['stages'] if s['stage'] in ('D_screen','E_full_support','F_full_export')},
+        'grouped_runtime_measured':False,'grouped_certifications_observed':0,
+        'preflight_command':'.venv-exaone/bin/python grouped_exaone_veto_n26.py',
+        'future_replay_command':'.venv-exaone/bin/python grouped_exaone_veto_n26.py --folds 0 1 2 3 4 5 6 7',
+        'future_scoring_command':'.venv/bin/python certify_patched_cabins_n26.py --exaone-folds 0 1 2 3 4 5 6 7'}
     DEST.with_name('exaone_veto_audit.json').write_text(json.dumps(result,indent=2)+'\n')
     print(result)
 
