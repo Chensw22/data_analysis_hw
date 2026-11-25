@@ -14,7 +14,7 @@ from kaggle_workflow import COMPETITION, sha256, validate_submission
 from submit_committed_export import submit
 
 MODEL = 'gate.joblib'
-DONE = {'completed', 'goal_reached', 'already_submitted', 'evaluation_failed', 'predecessor_failed'}
+DONE = {'completed', 'goal_reached', 'already_submitted', 'evaluation_failed', 'predecessor_failed', 'members_below_reference'}
 
 
 @dataclass(frozen=True)
@@ -69,7 +69,12 @@ AWAKE_PERSONAL = QueuedExport('proposal_n25_awake_personal_tabicl', 'export_awak
     CONFIRMED_FIELDS.out/'queue_status.json',
     '30 人版已获得官方评测，即将提交清醒乘客 TabICL。它相对原九票版改判 135 人。',
     'd023e5cea9086b1c5418fac089960865375ff55727e70fb8761d442d8dbaa582', model='training_context.csv')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS, AWAKE_PERSONAL)}
+CONFIRMED_UNION = QueuedExport('proposal_n25_confirmed_awake_union', 'export_confirmed_awake_union_n25.py',
+    AWAKE_PERSONAL.out/'queue_status.json',
+    '两个单独版本已有评测，至少一版持平或超过原九票版。即将提交保留任一版本改判的组合方案，共改判 154 人。',
+    '9efc0f5ba7fa7a7169a88375e00297b2ebcefca60cdb8b0a95b4261e00d4eeeb', model='composition.json')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
+                                  AWAKE_PERSONAL, CONFIRMED_UNION)}
 
 
 def verify(revision, job=HALF):
@@ -268,6 +273,23 @@ def run(revision, job=HALF):
                     continue
                 if rank['account_best_rank'] <= 3:
                     state('goal_reached', rank=rank, third=third)
+                    return
+            if job.name == CONFIRMED_UNION.name:
+                tree_state = read(AWAKE_PERSONAL.predecessor)
+                nine_receipt = read(CONFIRMED_FIELDS.predecessor)
+                refs = {str(r.ref): r for r in completed}
+                tree = refs.get(str(tree_state['ref']))
+                nine = refs.get(str(nine_receipt['submission_ref']))
+                if tree is None or nine is None:
+                    state('awaiting_member_scores')
+                    time.sleep(300)
+                    continue
+                tree_score = confirm_predecessor(AWAKE_PERSONAL, tree_state, tree)['score']
+                nine_score = float(nine.public_score)
+                assert float(nine_receipt['evaluation']['Public Score']) == nine_score
+                if max(tree_score, previous['score']) < nine_score:
+                    state('members_below_reference', tree_score=tree_score, neural_score=previous['score'],
+                          reference_score=nine_score)
                     return
             if limits['numAllowedNow'] <= 0:
                 state('waiting_for_slot', limits=limits)
