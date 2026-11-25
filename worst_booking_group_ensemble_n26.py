@@ -65,7 +65,7 @@ def portfolios(xt,xq,ct,cq,train_scope,wrong,groups):
     return outputs,used
 
 
-def run():
+def order_splits():
     raw,_,_,_,_,_=paired()
     prior,y,g,fold,versions=collect()
     panels=sources()[-1]
@@ -74,7 +74,6 @@ def run():
     with np.load(DECK/'deck_estimates.npz') as z:
         enabled=z['eligible']
     iters={tag:iter(rows) for tag,rows in prior.items()}
-    result={}
     for details,b in zip(protocols(panels,g,True),batches(True),strict=True):
         key,src,_,it,_=details
         origin='full' if b.tag=='full' else 'historical'
@@ -93,18 +92,25 @@ def run():
         # Historical filtered-awake changes are contained in the awake branch.
         xt,xq=b.train_actions[:,:100],b.query_actions[:,:100]
         assert not xt[:,0].any() and not xq[:,0].any()
-        policies,used=portfolios(xt,xq,b.train_cell%4,b.query_cell%4,train_scope,b.train_error,b.groups)
         scope=same&~previous['actual_and_scores']
-        result.setdefault(b.tag,[]).append((q,scope,b.query_error,policies,used))
+        yield b,origin,it,details[-1],train_scope,scope,fold[q],xt,xq
+
+
+def run():
+    result={}
+    for b,_,_,_,train_scope,scope,fold,xt,xq in order_splits():
+        policies,used=portfolios(xt,xq,b.train_cell%4,b.query_cell%4,train_scope,b.train_error,b.groups)
+        result.setdefault(b.tag,[]).append((b.ids,scope,b.query_error,policies,used,fold))
     report={}
     for tag,rows in result.items():
         ids,scope,wrong=(np.concatenate([row[k] for row in rows]) for k in range(3))
         assert len(ids)==len(np.unique(ids))
+        fold=np.concatenate([row[5] for row in rows])
         metrics={}
         for name in rows[0][3]:
             act=np.concatenate([row[3][name] for row in rows])
             r=ticker(scope,wrong,act)
-            r['net_by_fold']=[int((np.where(wrong,1,-1)*scope*act*(fold[ids]==k)).sum()) for k in range(8)]
+            r['net_by_fold']=[int((np.where(wrong,1,-1)*scope*act*(fold==k)).sum()) for k in range(8)]
             metrics[name]=r
         counts=np.concatenate([row[4] for row in rows])
         report[tag]=dict(methods=metrics,cell_fits=len(counts),nonempty_robust_fits=int((counts>0).sum()),
