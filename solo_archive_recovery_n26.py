@@ -3,6 +3,7 @@ import itertools
 import json
 
 import numpy as np
+from scipy.special import expit
 from sklearn.model_selection import KFold
 from threadpoolctl import threadpool_limits
 
@@ -15,7 +16,7 @@ from outstanding_error_families_n26 import observed
 from receipt_expert_transfer_n26 import read as receipt_scores
 
 
-def archive(tag, idx, fold, g, y, path):
+def archive(tag, idx, fold, g, y, path, *, probabilities=False):
     with np.load(path) as z:
         names = z['names'].tolist()
         matrices = [z[tag]]
@@ -26,9 +27,15 @@ def archive(tag, idx, fold, g, y, path):
     _, novel = predictions(tag, idx, fold)
     names.extend(['expected_bill', 'bill_template', 'rounding', 'charge_tree', 'charge_tabicl',
                   'cabin_tree', 'cabin_tabicl', 'peer_tree', 'peer_tabicl'])
-    votes = np.column_stack([np.column_stack(matrices) >= .5, bills >= 0,
-                             novel[:, [0, 2]].reshape(len(idx), 4) >= .5])
-    assert len(set(names)) == len(names) == votes.shape[1]
+    plain = np.column_stack(matrices)
+    novel = novel[:, [0, 2]].reshape(len(idx), 4)
+    assert len(set(names)) == len(names) == plain.shape[1] + bills.shape[1] + novel.shape[1]
+    votes = np.column_stack([plain >= .5, bills >= 0, novel >= .5])
+    if probabilities:
+        scores = np.column_stack([plain, expit(bills), novel])
+        assert np.isfinite(scores).all() and np.all((scores >= 0) & (scores <= 1))
+        np.testing.assert_array_equal(scores >= .5, votes)
+        return names, scores
     return names, votes
 
 
