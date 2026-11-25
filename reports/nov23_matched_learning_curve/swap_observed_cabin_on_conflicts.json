@@ -1,0 +1,170 @@
+{
+  "ordering": {
+    "spending": {
+      "all": {
+        "pairs": 896,
+        "actual": 568.0,
+        "swapped": 401.0,
+        "symmetrized": 489.5,
+        "actual_correct_swapped_wrong": 351,
+        "swapped_correct_actual_wrong": 184
+      },
+      "same_deck_and_side": {
+        "pairs": 308,
+        "actual": 187.0,
+        "swapped": 139.0,
+        "symmetrized": 166.0,
+        "actual_correct_swapped_wrong": 102,
+        "swapped_correct_actual_wrong": 54
+      },
+      "different_track": {
+        "pairs": 588,
+        "actual": 381.0,
+        "swapped": 262.0,
+        "symmetrized": 323.5,
+        "actual_correct_swapped_wrong": 249,
+        "swapped_correct_actual_wrong": 130
+      }
+    },
+    "registration": {
+      "all": {
+        "pairs": 330,
+        "actual": 200.0,
+        "swapped": 146.0,
+        "symmetrized": 181.5,
+        "actual_correct_swapped_wrong": 112,
+        "swapped_correct_actual_wrong": 58
+      },
+      "same_deck_and_side": {
+        "pairs": 330,
+        "actual": 200.0,
+        "swapped": 146.0,
+        "symmetrized": 181.5,
+        "actual_correct_swapped_wrong": 112,
+        "swapped_correct_actual_wrong": 58
+      },
+      "different_track": {
+        "pairs": 0,
+        "actual": 0.0,
+        "swapped": 0.0,
+        "symmetrized": 0.0,
+        "actual_correct_swapped_wrong": 0,
+        "swapped_correct_actual_wrong": 0
+      }
+    }
+  },
+  "deployment": {
+    "all": {
+      "covered_by_other_cabins": 6947,
+      "net_relative_to_control": {
+        "rows": 8532,
+        "errors": 1551,
+        "fixed": 171,
+        "harmed": 151,
+        "net": 20,
+        "net_by_fold": [
+          3,
+          1,
+          13,
+          -1,
+          4,
+          -3,
+          6,
+          -3
+        ]
+      },
+      "extra_challenges": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 98,
+        "harmed": 99,
+        "net": -1,
+        "net_by_fold": [
+          -3,
+          -4,
+          9,
+          1,
+          -1,
+          -4,
+          5,
+          -4
+        ]
+      }
+    },
+    "common": {
+      "covered_by_other_cabins": 6419,
+      "net_relative_to_control": {
+        "rows": 7870,
+        "errors": 1194,
+        "fixed": 104,
+        "harmed": 109,
+        "net": -5,
+        "net_by_fold": [
+          0,
+          -5,
+          2,
+          3,
+          6,
+          -10,
+          5,
+          -6
+        ]
+      },
+      "extra_challenges": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 70,
+        "harmed": 82,
+        "net": -12,
+        "net_by_fold": [
+          -4,
+          -6,
+          4,
+          3,
+          0,
+          -7,
+          3,
+          -5
+        ]
+      }
+    },
+    "new_orders": {
+      "covered_by_other_cabins": 827,
+      "net_relative_to_control": {
+        "rows": 1033,
+        "errors": 220,
+        "fixed": 21,
+        "harmed": 17,
+        "net": 4,
+        "net_by_fold": [
+          3,
+          1,
+          2,
+          3,
+          -1,
+          -2,
+          -2,
+          0
+        ]
+      },
+      "extra_challenges": {
+        "rows": 1033,
+        "errors": 190,
+        "fixed": 12,
+        "harmed": 13,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          1,
+          1,
+          2,
+          -2,
+          -1,
+          -1,
+          -1
+        ]
+      }
+    }
+  },
+  "scope": "Only the complete cabin triple is swapped. Ranking on a held conflict excludes both orders during training. Deployment contrasts each actual cabin with up to seven other training bookings with similar observed spending and registration, without consulting the donors\u2019 labels. Source controls and factual contrasts are calibrated on separate orders inside each base-model fold."
+}
