@@ -30,9 +30,8 @@ def learned_scores(counts, flags, reference, labels, t, q):
     return linear, lookup
 
 
-def run():
+def context():
     raw, y, g, fold, parent, same, reach, blocks, flags, wrong, solo, _ = population()
-    counts = {n: v.mean(axis=1) for n, v in blocks.items()}
     with np.load(ROOT / 'artifacts/nov26_replicated_solo_training_errors/scores.npz') as z:
         np.testing.assert_array_equal(z['passenger'], raw.PassengerId)
         np.testing.assert_array_equal(z['fold'], fold)
@@ -49,6 +48,12 @@ def run():
         scope = np.zeros(len(y), bool)
         scope[ids] = use & (parent[ids] == now)
         masks[tag] = scope & same & solo & ~stable & ~region & (reach > 0)
+    return raw, y, g, fold, parent, blocks, flags, wrong, masks
+
+
+def run():
+    _, y, g, fold, parent, blocks, flags, wrong, masks = context()
+    counts = {n: v.mean(axis=1) for n, v in blocks.items()}
     eligible = masks['full']
     assert (eligible & wrong).sum() == 524
     linear, lookup = np.full(len(y), np.nan), np.full(len(y), np.nan)
