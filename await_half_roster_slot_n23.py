@@ -65,7 +65,11 @@ CONFIRMED_FIELDS = QueuedExport('proposal_n25_confirmed_random_fields', 'export_
     ROOT/'reports/proposal_n24_selected_dissent/online_attempts/20261125T070137804381Z.json',
     '主账号额度已刷新，即将提交双分组确认版。与当前最佳相比，该版本改判 30 名乘客。',
     '5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223', model='ensemble.joblib')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS)}
+AWAKE_PERSONAL = QueuedExport('proposal_n25_awake_personal_tabicl', 'export_awake_personal_n25.py',
+    CONFIRMED_FIELDS.out/'queue_status.json',
+    '30 人版已获得官方评测，即将提交清醒乘客 TabICL。它相对原九票版改判 135 人。',
+    'd023e5cea9086b1c5418fac089960865375ff55727e70fb8761d442d8dbaa582', model='training_context.csv')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS, AWAKE_PERSONAL)}
 
 
 def verify(revision, job=HALF):
