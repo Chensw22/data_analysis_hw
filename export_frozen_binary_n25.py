@@ -13,6 +13,7 @@ from relational_error_corrector import write
 ROOT = Path(__file__).resolve().parent
 BASE_NAME = 'proposal_n25_frozen_binary'
 TREE = Path('artifacts/nov25_mitra_token_trees/predictions.npz')
+STRATIFIED = Path('artifacts/nov25_mitra_stratified_support/test.npz')
 NATIVE = 'proposal_online_first_counts15'
 PREVIOUS = 'proposal_v131_party_consensus'
 BEST = 'proposal_n24_selected_dissent'
@@ -45,16 +46,30 @@ def apply(spec, train, test):
             np.testing.assert_array_equal(z['test_ids'], test.PassengerId)
             tree = z['test_by_fold'].mean(axis=0)[:, z['model_names'].tolist().index('joint')]
         eligible = decisions(scores, tree, native, previous, nine)['binary_confirmed']
+    if spec['policy'] == 'matched_0.5':
+        from mitra_four_outcomes_n25 import FEES
+        assert sha256(ROOT / STRATIFIED) == spec['stratified_sha256']
+        with np.load(ROOT / STRATIFIED) as z:
+            np.testing.assert_array_equal(z['q'], np.arange(len(train), len(train) + len(test)))
+            np.testing.assert_array_equal(z['t'], np.arange(len(train)))
+            np.testing.assert_array_equal(z['passenger'], test.PassengerId)
+            np.testing.assert_array_equal(z['active'], test[FEES].gt(0).any(axis=1))
+            np.testing.assert_array_equal(z['checkpoint'], spec['checkpoint'])
+            alternative = .5 * alternative + .5 * z['scores'][:, 0]
     return np.where(eligible, alternative, current), nine
 
 
-def run(confirmed):
+def run(confirmed, stratified=False):
     name = BASE_NAME + ('_confirmed' if confirmed else '')
     policy = 'binary_confirmed' if confirmed else 'binary_1.0'
     report = 'reports/nov23_matched_learning_curve/frozen_joint_corroboration.json' if confirmed else REPORT
+    if stratified:
+        name = BASE_NAME + '_matched_support'
+        policy = 'matched_0.5'
+        report = 'reports/nov23_matched_learning_curve/mitra_stratified_support.json'
     train = pd.read_csv(ROOT / 'data/raw/train.csv', usecols=['Transported'])
     test_file = ROOT / 'data/raw/test.csv'
-    test = pd.read_csv(test_file, usecols=['PassengerId'])
+    test = pd.read_csv(test_file, usecols=lambda c: c != 'Name')
     parents = {name: source(name, test)[2] for name in (NATIVE, PREVIOUS, BEST)}
     with np.load(ROOT / CACHE) as z:
         checkpoint = str(z['checkpoint'])
@@ -66,6 +81,9 @@ def run(confirmed):
     if confirmed:
         spec['tree_sha256'] = sha256(ROOT / TREE)
         spec['rule'] += ' Require corroboration from both spending outputs or the token tree.'
+    if stratified:
+        spec['stratified_sha256'] = sha256(ROOT / STRATIFIED)
+        spec['rule'] += ' Average the full-context probability with the spending-matched context probability.'
     folder = ROOT / 'artifacts' / name
     folder.mkdir(exist_ok=True)
     composition = folder / 'composition.json'
@@ -105,5 +123,8 @@ def run(confirmed):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--confirmed', action='store_true')
-    run(parser.parse_args().confirmed)
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--confirmed', action='store_true')
+    group.add_argument('--stratified', action='store_true')
+    args = parser.parse_args()
+    run(args.confirmed, args.stratified)
