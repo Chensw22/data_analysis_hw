@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日核对同一批冻结文件，历史记录之外的 1,033 名验证乘客中有 978 名独行、55 名来自双人订单、无人来自三人及以上订单。正式测试集相应为 2,340、908、1,029 人。选模涉及多人订单时可参考完整八折的 1,652 名双人订单乘客和 2,145 名更大订单乘客。逐候选的改判方向、订单数和覆盖空缺见 reports/nov23_matched_learning_curve/frozen_release_order_mix.json。
+
 - 11 月 26 日北京时间 06:54，主账号剩余 0 次，最佳 81.739%，第 113 / 2,206，第三名 83.937%。下一轮十个候选尚无回执。Mac 条件备用任务 com.chensw22.spaceship.historicalveto26.once 已启动（导出提交 2d83321），初始状态 awaiting_predecessor。只有原组合因两个前序成绩不足而跳过、最后一份 TabNet 已在同一 UTC 日期取得正式成绩、且主账号尚有额度时才弹窗提交。见 reports/proposal_n26_historical_veto/manifest.json 和 artifacts/proposal_n26_historical_veto/queue_status.json。
 
 - 11 月 26 日 05:26，第十个一次性 Mac 任务 com.chensw22.spaceship.tabnetattention.once 已启动，等待六路版回执和主账号额度。TabNet 双重确认版冻结于 1e75db62e4a538cfdbb461adf0ecd9ebf80ae52c，在此前十个版本均同判的测试乘客中改判 18 人，相对公榜最佳共改判 306 人。三种有重叠的本地验证分别为 15 修 6 伤、10 修 8 伤、3 修 1 伤。05:24 官方余量 0/10，第 113/2,205，最佳 81.739%。本地提交标准以相对提升和跨订单复现判断，无固定 83% 门槛。核对 artifacts/proposal_n26_tabnet_attention/queue_status.json 和正式回执。
