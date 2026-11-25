@@ -89,8 +89,12 @@ CONSENSUS_REVIEW = QueuedExport('proposal_n26_consensus_review', 'export_consens
     JOINT_DISPUTE.out/'queue_status.json',
     '214 人组合已有官方成绩。即将提交神经网络双重确认版。',
     '1f7d0612ba4f1cef17723ae242dbba1787502e4bd69066e30eaca49345c59ef7', model='review_scores.npz')
+FARE_DECK = QueuedExport('proposal_n26_fare_deck', 'export_fare_deck_n26.py',
+    CONSENSUS_REVIEW.out/'queue_status.json',
+    '主账号即将评测精确账单甲板版，该模型在整单验证中救回了此前一致判错的乘客。',
+    '8df14a7bb4a404fcfceff3abf7f7c44e9b855b50fca72a2bb2b1d090514c4459', model='scores.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK)}
 
 
 def verify(revision, job=HALF):
