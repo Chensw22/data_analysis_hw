@@ -1,0 +1,536 @@
+{
+  "rows": 8532,
+  "baseline_correct": 7082,
+  "target_correct": 7253,
+  "net_needed": 171,
+  "baseline_accuracy": 0.8300515705578997,
+  "common_rows": 7891,
+  "test_rows": 4277,
+  "common_test_rows": 3929,
+  "strata": {
+    "one": {
+      "cells": {
+        "all": {
+          "local_rows": 7891,
+          "test_rows": 3929,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        }
+      },
+      "oracle": {
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "overall_correct": 7082,
+        "overall_accuracy": 0.8300515705578997,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "order_held": {
+        "fixed": 83,
+        "harmed": 123,
+        "net": -40,
+        "overall_correct": 7042,
+        "overall_accuracy": 0.8253633380215659,
+        "net_by_fold": [
+          -10,
+          0,
+          -5,
+          -4,
+          -7,
+          -11,
+          -3,
+          0
+        ]
+      },
+      "optimistic_gap_to_85": 171,
+      "held_gap_to_85": 211,
+      "test_edits_with_hindsight_winners": 0,
+      "local_test_population_total_variation": 0.0
+    },
+    "parent": {
+      "cells": {
+        "negative": {
+          "local_rows": 3844,
+          "test_rows": 1888,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive": {
+          "local_rows": 4047,
+          "test_rows": 2041,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        }
+      },
+      "oracle": {
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "overall_correct": 7082,
+        "overall_accuracy": 0.8300515705578997,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "order_held": {
+        "fixed": 120,
+        "harmed": 154,
+        "net": -34,
+        "overall_correct": 7048,
+        "overall_accuracy": 0.8260665729020159,
+        "net_by_fold": [
+          -6,
+          -15,
+          4,
+          -4,
+          -8,
+          -2,
+          -1,
+          -2
+        ]
+      },
+      "optimistic_gap_to_85": 171,
+      "held_gap_to_85": 205,
+      "test_edits_with_hindsight_winners": 0,
+      "local_test_population_total_variation": 0.006607848169538522
+    },
+    "parent_paid": {
+      "cells": {
+        "negative|no_positive": {
+          "local_rows": 285,
+          "test_rows": 134,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "negative|positive_spend": {
+          "local_rows": 3559,
+          "test_rows": 1754,
+          "winner": "neural_deck_raw",
+          "local_fixed": 15,
+          "local_harmed": 10,
+          "edits_on_test_rows_using_hindsight_winner": 13
+        },
+        "positive|no_positive": {
+          "local_rows": 3077,
+          "test_rows": 1571,
+          "winner": "two_view_reliability/mean",
+          "local_fixed": 3,
+          "local_harmed": 1,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        },
+        "positive|positive_spend": {
+          "local_rows": 970,
+          "test_rows": 470,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        }
+      },
+      "oracle": {
+        "fixed": 18,
+        "harmed": 11,
+        "net": 7,
+        "overall_correct": 7089,
+        "overall_accuracy": 0.8308720112517581,
+        "net_by_fold": [
+          1,
+          -2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      "order_held": {
+        "fixed": 117,
+        "harmed": 171,
+        "net": -54,
+        "overall_correct": 7028,
+        "overall_accuracy": 0.823722456633849,
+        "net_by_fold": [
+          -5,
+          -13,
+          -9,
+          -2,
+          -9,
+          7,
+          -4,
+          -19
+        ]
+      },
+      "optimistic_gap_to_85": 164,
+      "held_gap_to_85": 225,
+      "test_edits_with_hindsight_winners": 14,
+      "local_test_population_total_variation": 0.009909385445413546
+    },
+    "parent_spend": {
+      "cells": {
+        "negative|1500_plus": {
+          "local_rows": 1462,
+          "test_rows": 744,
+          "winner": "neural_deck_fine",
+          "local_fixed": 5,
+          "local_harmed": 3,
+          "edits_on_test_rows_using_hindsight_winner": 6
+        },
+        "negative|1_499": {
+          "local_rows": 88,
+          "test_rows": 43,
+          "winner": "neural_deck_raw",
+          "local_fixed": 2,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        },
+        "negative|500_1499": {
+          "local_rows": 2009,
+          "test_rows": 967,
+          "winner": "tree_deck_raw",
+          "local_fixed": 15,
+          "local_harmed": 10,
+          "edits_on_test_rows_using_hindsight_winner": 24
+        },
+        "negative|no_positive": {
+          "local_rows": 285,
+          "test_rows": 134,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|1500_plus": {
+          "local_rows": 521,
+          "test_rows": 241,
+          "winner": "failure_sampling_offset/enriched",
+          "local_fixed": 13,
+          "local_harmed": 9,
+          "edits_on_test_rows_using_hindsight_winner": 12
+        },
+        "positive|1_499": {
+          "local_rows": 10,
+          "test_rows": 5,
+          "winner": "failure_sampling_offset",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|500_1499": {
+          "local_rows": 439,
+          "test_rows": 224,
+          "winner": "permutation_selection/selected",
+          "local_fixed": 15,
+          "local_harmed": 13,
+          "edits_on_test_rows_using_hindsight_winner": 18
+        },
+        "positive|no_positive": {
+          "local_rows": 3077,
+          "test_rows": 1571,
+          "winner": "two_view_reliability/mean",
+          "local_fixed": 3,
+          "local_harmed": 1,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        }
+      },
+      "oracle": {
+        "fixed": 54,
+        "harmed": 36,
+        "net": 18,
+        "overall_correct": 7100,
+        "overall_accuracy": 0.8321612751992499,
+        "net_by_fold": [
+          -2,
+          -4,
+          5,
+          5,
+          4,
+          5,
+          1,
+          4
+        ]
+      },
+      "order_held": {
+        "fixed": 120,
+        "harmed": 188,
+        "net": -68,
+        "overall_correct": 7014,
+        "overall_accuracy": 0.8220815752461322,
+        "net_by_fold": [
+          -13,
+          -11,
+          -9,
+          -5,
+          -19,
+          7,
+          -7,
+          -11
+        ]
+      },
+      "optimistic_gap_to_85": 153,
+      "held_gap_to_85": 239,
+      "test_edits_with_hindsight_winners": 62,
+      "local_test_population_total_variation": 0.015380467497807275
+    },
+    "parent_spend_deck": {
+      "cells": {
+        "negative|1500_plus|F": {
+          "local_rows": 407,
+          "test_rows": 223,
+          "winner": "permutation_selection/all",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 3
+        },
+        "negative|1500_plus|G": {
+          "local_rows": 104,
+          "test_rows": 47,
+          "winner": "honest_failure_partitions",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 2
+        },
+        "negative|1500_plus|other_or_missing": {
+          "local_rows": 951,
+          "test_rows": 474,
+          "winner": "neural_deck_raw",
+          "local_fixed": 6,
+          "local_harmed": 2,
+          "edits_on_test_rows_using_hindsight_winner": 3
+        },
+        "negative|1_499|F": {
+          "local_rows": 33,
+          "test_rows": 15,
+          "winner": "error_partition_kernel/all_grad",
+          "local_fixed": 4,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "negative|1_499|G": {
+          "local_rows": 39,
+          "test_rows": 20,
+          "winner": "register_all",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "negative|1_499|other_or_missing": {
+          "local_rows": 16,
+          "test_rows": 8,
+          "winner": "zero_truncated/reported_sleep",
+          "local_fixed": 3,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        },
+        "negative|500_1499|F": {
+          "local_rows": 1146,
+          "test_rows": 581,
+          "winner": "failure_sampling_offset",
+          "local_fixed": 21,
+          "local_harmed": 15,
+          "edits_on_test_rows_using_hindsight_winner": 26
+        },
+        "negative|500_1499|G": {
+          "local_rows": 482,
+          "test_rows": 205,
+          "winner": "error_partition_kernel/rand",
+          "local_fixed": 15,
+          "local_harmed": 5,
+          "edits_on_test_rows_using_hindsight_winner": 10
+        },
+        "negative|500_1499|other_or_missing": {
+          "local_rows": 381,
+          "test_rows": 181,
+          "winner": "cabin_tabicl",
+          "local_fixed": 3,
+          "local_harmed": 1,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        },
+        "negative|no_positive|G": {
+          "local_rows": 191,
+          "test_rows": 86,
+          "winner": "honest_failure_partitions/enriched",
+          "local_fixed": 4,
+          "local_harmed": 3,
+          "edits_on_test_rows_using_hindsight_winner": 6
+        },
+        "negative|no_positive|other_or_missing": {
+          "local_rows": 94,
+          "test_rows": 48,
+          "winner": "cabin_tabicl",
+          "local_fixed": 6,
+          "local_harmed": 2,
+          "edits_on_test_rows_using_hindsight_winner": 9
+        },
+        "positive|1500_plus|F": {
+          "local_rows": 100,
+          "test_rows": 50,
+          "winner": "rounding",
+          "local_fixed": 3,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 5
+        },
+        "positive|1500_plus|G": {
+          "local_rows": 35,
+          "test_rows": 17,
+          "winner": "service_order_mixture",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 1
+        },
+        "positive|1500_plus|other_or_missing": {
+          "local_rows": 386,
+          "test_rows": 174,
+          "winner": "permutation_selection/random",
+          "local_fixed": 7,
+          "local_harmed": 6,
+          "edits_on_test_rows_using_hindsight_winner": 9
+        },
+        "positive|1_499|F": {
+          "local_rows": 3,
+          "test_rows": 1,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|1_499|G": {
+          "local_rows": 3,
+          "test_rows": 3,
+          "winner": "keep",
+          "local_fixed": 0,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|1_499|other_or_missing": {
+          "local_rows": 4,
+          "test_rows": 1,
+          "winner": "broad_error_transport_projection",
+          "local_fixed": 1,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|500_1499|F": {
+          "local_rows": 234,
+          "test_rows": 123,
+          "winner": "charge_tree",
+          "local_fixed": 17,
+          "local_harmed": 9,
+          "edits_on_test_rows_using_hindsight_winner": 16
+        },
+        "positive|500_1499|G": {
+          "local_rows": 124,
+          "test_rows": 56,
+          "winner": "fixed_bill_margins",
+          "local_fixed": 8,
+          "local_harmed": 7,
+          "edits_on_test_rows_using_hindsight_winner": 9
+        },
+        "positive|500_1499|other_or_missing": {
+          "local_rows": 81,
+          "test_rows": 45,
+          "winner": "permutation_selection/selected",
+          "local_fixed": 4,
+          "local_harmed": 3,
+          "edits_on_test_rows_using_hindsight_winner": 9
+        },
+        "positive|no_positive|F": {
+          "local_rows": 649,
+          "test_rows": 340,
+          "winner": "two_view_reliability",
+          "local_fixed": 2,
+          "local_harmed": 0,
+          "edits_on_test_rows_using_hindsight_winner": 0
+        },
+        "positive|no_positive|G": {
+          "local_rows": 1237,
+          "test_rows": 647,
+          "winner": "two_view_reliability/specialist",
+          "local_fixed": 28,
+          "local_harmed": 24,
+          "edits_on_test_rows_using_hindsight_winner": 41
+        },
+        "positive|no_positive|other_or_missing": {
+          "local_rows": 1191,
+          "test_rows": 584,
+          "winner": "spending_shape/free",
+          "local_fixed": 12,
+          "local_harmed": 8,
+          "edits_on_test_rows_using_hindsight_winner": 9
+        }
+      },
+      "oracle": {
+        "fixed": 148,
+        "harmed": 85,
+        "net": 63,
+        "overall_correct": 7145,
+        "overall_accuracy": 0.8374355368026254,
+        "net_by_fold": [
+          5,
+          1,
+          11,
+          12,
+          2,
+          8,
+          8,
+          16
+        ]
+      },
+      "order_held": {
+        "fixed": 133,
+        "harmed": 247,
+        "net": -114,
+        "overall_correct": 6968,
+        "overall_accuracy": 0.8166901078293484,
+        "net_by_fold": [
+          -14,
+          -10,
+          -18,
+          -6,
+          -19,
+          -16,
+          -10,
+          -21
+        ]
+      },
+      "optimistic_gap_to_85": 108,
+      "held_gap_to_85": 285,
+      "test_edits_with_hindsight_winners": 160,
+      "local_test_population_total_variation": 0.02389031206848955
+    }
+  },
+  "reference": "The six-stage parent is kept outside the ten-way unanimous rows.",
+  "coverage_order": "Only outcome experts are eligible; keep parent on ties if no change wins; two paid-only experts abstain on no-positive-spend rows.",
+  "inference": "The hindsight upper bound applies only to the stated fixed strata and one of 99 hard expert decisions or keep per stratum. Finer partitions, soft combinations, new models and inter-expert rules are different classes. Membership covers all test rows but 8532 known training rows.",
+  "test_interpretation": "The test target is unavailable: population counts and changes quantify reach only; no public leaderboard transfer is assumed.",
+  "separate_passenger_oracle": {
+    "repairable": 967,
+    "unreachable_errors": 214,
+    "overall_accuracy_if_every_available_correction_were_known": 0.9433895921237694,
+    "test_rows_with_any_challenger": 2144
+  }
+}
