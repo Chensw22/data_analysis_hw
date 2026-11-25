@@ -1,0 +1,2367 @@
+{
+  "test_passengers": 4277,
+  "test_bookings": 3063,
+  "test_size_1_2_3plus": [
+    2340,
+    908,
+    1029
+  ],
+  "cohorts": {
+    "all_eight_folds": {
+      "passengers": 8532,
+      "bookings": 6147,
+      "strata": {
+        "1": {
+          "rows": 4735,
+          "orders": 4735,
+          "champion_wrong": 923,
+          "tabnet_wrong": 868
+        },
+        "2": {
+          "rows": 1652,
+          "orders": 841,
+          "champion_wrong": 234,
+          "tabnet_wrong": 215
+        },
+        "3": {
+          "rows": 2145,
+          "orders": 571,
+          "champion_wrong": 374,
+          "tabnet_wrong": 358
+        }
+      },
+      "candidates": {
+        "fields": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 18,
+              "bookings": 18,
+              "test_changes": 13,
+              "net": 2
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 24,
+              "bookings": 24,
+              "test_changes": 7,
+              "net": 4
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 1,
+              "net": -1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 1,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 0,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 14,
+              "bookings": 14,
+              "test_changes": 8,
+              "net": 2
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 2,
+          "effective_reference_bookings_for_supported_edits": 53.45904537418976,
+          "point_gain_pp": 0.10335831004524014,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.10335831004524014,
+            0.10335831004524014
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.04100931152602885,
+            0.1345328093048458
+          ],
+          "validation_net": 11,
+          "raw_gain_pp": 0.12892639474917955,
+          "test_changes": 30
+        },
+        "awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 104,
+              "bookings": 104,
+              "test_changes": 58,
+              "net": 8
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 54,
+              "bookings": 54,
+              "test_changes": 20,
+              "net": 14
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 28,
+              "bookings": 28,
+              "test_changes": 23,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 8,
+              "bookings": 8,
+              "test_changes": 7,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 29,
+              "bookings": 28,
+              "test_changes": 13,
+              "net": -3
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 32,
+              "bookings": 30,
+              "test_changes": 14,
+              "net": -6
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 7,
+          "effective_reference_bookings_for_supported_edits": 233.9792209571893,
+          "point_gain_pp": 0.1736473243048106,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.1736473243048106,
+            0.1736473243048106
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -0.03093532708635141,
+            0.29639691513950783
+          ],
+          "validation_net": 15,
+          "raw_gain_pp": 0.17580872011251758,
+          "test_changes": 135
+        },
+        "fields_awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 111,
+              "bookings": 111,
+              "test_changes": 63,
+              "net": 7
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 68,
+              "bookings": 68,
+              "test_changes": 25,
+              "net": 16
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 29,
+              "bookings": 29,
+              "test_changes": 23,
+              "net": -1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 8,
+              "net": 4
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 31,
+              "bookings": 30,
+              "test_changes": 13,
+              "net": -1
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 39,
+              "bookings": 35,
+              "test_changes": 22,
+              "net": -3
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 261.12699059874035,
+          "point_gain_pp": 0.23732896738031825,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.23732896738031825,
+            0.23732896738031825
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.23732896738031825,
+            0.23732896738031825
+          ],
+          "validation_net": 22,
+          "raw_gain_pp": 0.2578527894983591,
+          "test_changes": 154
+        },
+        "filtered": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 47,
+              "bookings": 47,
+              "test_changes": 22,
+              "net": 13
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 8,
+              "bookings": 8,
+              "test_changes": 1,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 12,
+              "bookings": 12,
+              "test_changes": 11,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 1,
+              "net": 1
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 5,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 7,
+              "bookings": 7,
+              "test_changes": 1,
+              "net": 1
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 3,
+          "effective_reference_bookings_for_supported_edits": 69.60932657160393,
+          "point_gain_pp": 0.21770626278160388,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.21770626278160388,
+            0.21770626278160388
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.11499742147093887,
+            0.2552826681391643
+          ],
+          "validation_net": 19,
+          "raw_gain_pp": 0.2226910454758556,
+          "test_changes": 41
+        },
+        "band": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 40,
+              "bookings": 40,
+              "test_changes": 21,
+              "net": 2
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 32,
+              "bookings": 32,
+              "test_changes": 25,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 16,
+              "bookings": 15,
+              "test_changes": 13,
+              "net": -4
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 9,
+              "bookings": 9,
+              "test_changes": 6,
+              "net": 5
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 12,
+              "bookings": 12,
+              "test_changes": 5,
+              "net": -2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 37,
+              "bookings": 37,
+              "test_changes": 17,
+              "net": 13
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 6,
+          "effective_reference_bookings_for_supported_edits": 132.5593032684131,
+          "point_gain_pp": 0.18320020979595447,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.18320020979595447,
+            0.18320020979595447
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -0.03502128502128504,
+            0.24554920831516572
+          ],
+          "validation_net": 16,
+          "raw_gain_pp": 0.1875293014533521,
+          "test_changes": 87
+        },
+        "all_three": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 131,
+              "bookings": 131,
+              "test_changes": 74,
+              "net": 7
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 84,
+              "bookings": 84,
+              "test_changes": 44,
+              "net": 20
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 41,
+              "bookings": 39,
+              "test_changes": 34,
+              "net": -5
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 17,
+              "bookings": 17,
+              "test_changes": 12,
+              "net": 7
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 39,
+              "bookings": 37,
+              "test_changes": 18,
+              "net": -5
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 72,
+              "bookings": 66,
+              "test_changes": 32,
+              "net": 10
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 346.79740974045416,
+          "point_gain_pp": 0.40593818315171054,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.40593818315171054,
+            0.40593818315171054
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.40593818315171054,
+            0.40593818315171054
+          ],
+          "validation_net": 34,
+          "raw_gain_pp": 0.3984997655883732,
+          "test_changes": 214
+        },
+        "review": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 127,
+              "bookings": 127,
+              "test_changes": 86,
+              "net": 9
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 104,
+              "bookings": 104,
+              "test_changes": 57,
+              "net": 14
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 37,
+              "bookings": 33,
+              "test_changes": 34,
+              "net": -9
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 21,
+              "bookings": 21,
+              "test_changes": 13,
+              "net": 11
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 35,
+              "bookings": 33,
+              "test_changes": 15,
+              "net": -7
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 83,
+              "bookings": 68,
+              "test_changes": 41,
+              "net": 11
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 337.8061351117849,
+          "point_gain_pp": 0.34464703275814534,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.34464703275814534,
+            0.34464703275814534
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.34464703275814534,
+            0.34464703275814534
+          ],
+          "validation_net": 29,
+          "raw_gain_pp": 0.3398968588842007,
+          "test_changes": 246
+        },
+        "fare": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 153,
+              "bookings": 153,
+              "test_changes": 90,
+              "net": 3
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 180,
+              "bookings": 180,
+              "test_changes": 87,
+              "net": 38
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 41,
+              "bookings": 36,
+              "test_changes": 37,
+              "net": -3
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 17,
+              "net": 21
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 39,
+              "bookings": 37,
+              "test_changes": 16,
+              "net": -9
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 94,
+              "bookings": 77,
+              "test_changes": 49,
+              "net": 14
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 444.90281323747746,
+          "point_gain_pp": 0.7446294585491824,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.7446294585491824,
+            0.7446294585491824
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.7446294585491824,
+            0.7446294585491824
+          ],
+          "validation_net": 64,
+          "raw_gain_pp": 0.7501172058134083,
+          "test_changes": 296
+        },
+        "six": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 154,
+              "bookings": 154,
+              "test_changes": 92,
+              "net": 4
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 155,
+              "bookings": 155,
+              "test_changes": 78,
+              "net": 49
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 44,
+              "bookings": 39,
+              "test_changes": 39,
+              "net": -2
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 16,
+              "net": 21
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 40,
+              "bookings": 38,
+              "test_changes": 17,
+              "net": -8
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 91,
+              "bookings": 75,
+              "test_changes": 46,
+              "net": 17
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 429.77609685028233,
+          "point_gain_pp": 0.9504365772325676,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.9504365772325676,
+            0.9504365772325676
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.9504365772325676,
+            0.9504365772325676
+          ],
+          "validation_net": 81,
+          "raw_gain_pp": 0.9493670886075949,
+          "test_changes": 288
+        },
+        "tabnet": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 155,
+              "bookings": 155,
+              "test_changes": 101,
+              "net": 5
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 156,
+              "bookings": 156,
+              "test_changes": 82,
+              "net": 50
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 44,
+              "bookings": 39,
+              "test_changes": 40,
+              "net": -2
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 16,
+              "net": 21
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 48,
+              "bookings": 43,
+              "test_changes": 18,
+              "net": -2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 102,
+              "bookings": 82,
+              "test_changes": 49,
+              "net": 18
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 439.53307405582933,
+          "point_gain_pp": 1.0708630111140072,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            1.0708630111140072,
+            1.0708630111140072
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            1.0708630111140072,
+            1.0708630111140072
+          ],
+          "validation_net": 90,
+          "raw_gain_pp": 1.0548523206751055,
+          "test_changes": 306
+        },
+        "reserve": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 110,
+              "bookings": 110,
+              "test_changes": 83,
+              "net": 12
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 156,
+              "bookings": 156,
+              "test_changes": 82,
+              "net": 50
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 34,
+              "bookings": 30,
+              "test_changes": 34,
+              "net": -6
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 16,
+              "net": 21
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 42,
+              "bookings": 37,
+              "test_changes": 16,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 102,
+              "bookings": 82,
+              "test_changes": 49,
+              "net": 18
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 379.334298260132,
+          "point_gain_pp": 1.1261508941300988,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            1.1261508941300988,
+            1.1261508941300988
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            1.1261508941300988,
+            1.1261508941300988
+          ],
+          "validation_net": 95,
+          "raw_gain_pp": 1.113455227379278,
+          "test_changes": 280
+        }
+      },
+      "raw_ranking": [
+        "reserve",
+        "tabnet",
+        "six",
+        "fare",
+        "all_three",
+        "review",
+        "fields_awake",
+        "filtered",
+        "band",
+        "awake",
+        "fields"
+      ],
+      "projected_ranking_supported_only": [
+        "reserve",
+        "tabnet",
+        "six",
+        "fare",
+        "all_three",
+        "review",
+        "fields_awake",
+        "filtered",
+        "band",
+        "awake",
+        "fields"
+      ]
+    },
+    "outside_historical_orders": {
+      "passengers": 1033,
+      "bookings": 1006,
+      "strata": {
+        "1": {
+          "rows": 978,
+          "orders": 978,
+          "champion_wrong": 206,
+          "tabnet_wrong": 187
+        },
+        "2": {
+          "rows": 55,
+          "orders": 28,
+          "champion_wrong": 7,
+          "tabnet_wrong": 3
+        },
+        "3": {
+          "rows": 0,
+          "orders": 0,
+          "champion_wrong": 0,
+          "tabnet_wrong": 0
+        }
+      },
+      "candidates": {
+        "fields": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 13,
+              "net": -1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 6,
+              "bookings": 6,
+              "test_changes": 7,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 1,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 1,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 0,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 8,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 10,
+          "changes_with_under_ten_reference_bookings": 30,
+          "effective_reference_bookings_for_supported_edits": 2.2577610536218256,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.4832047385238874,
+            -0.015587249629802806
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -0.701426233341127,
+            0.701426233341127
+          ],
+          "validation_net": 1,
+          "raw_gain_pp": 0.0968054211035818,
+          "test_changes": 30
+        },
+        "awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 25,
+              "bookings": 25,
+              "test_changes": 58,
+              "net": -1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 20,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 23,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 7,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 13,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 14,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 34,
+          "changes_with_under_ten_reference_bookings": 57,
+          "effective_reference_bookings_for_supported_edits": 23.233726597731497,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.7556698620528408,
+            0.834229600187047
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.293429974281038,
+            1.3719897124152443
+          ],
+          "validation_net": 1,
+          "raw_gain_pp": 0.0968054211035818,
+          "test_changes": 135
+        },
+        "fields_awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 25,
+              "bookings": 25,
+              "test_changes": 63,
+              "net": -1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 14,
+              "bookings": 14,
+              "test_changes": 25,
+              "net": 4
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 23,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 8,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 13,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 22,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 43,
+          "changes_with_under_ten_reference_bookings": 66,
+          "effective_reference_bookings_for_supported_edits": 26.332388896352107,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.897291158689335,
+            1.113464043555229
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.4350512709175323,
+            1.6512241557834264
+          ],
+          "validation_net": 3,
+          "raw_gain_pp": 0.2904162633107454,
+          "test_changes": 154
+        },
+        "filtered": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 22,
+              "net": 0
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 1,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 11,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 1,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 5,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 1,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 7,
+          "changes_with_under_ten_reference_bookings": 19,
+          "effective_reference_bookings_for_supported_edits": 6.804002354326073,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.11690437222352117,
+            0.4442366144493804
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -0.4442366144493804,
+            0.4442366144493804
+          ],
+          "validation_net": 3,
+          "raw_gain_pp": 0.2904162633107454,
+          "test_changes": 41
+        },
+        "band": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 5,
+              "bookings": 5,
+              "test_changes": 21,
+              "net": 1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 5,
+              "bookings": 5,
+              "test_changes": 25,
+              "net": 3
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 13,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 6,
+              "net": 1
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 5,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 17,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 35,
+          "changes_with_under_ten_reference_bookings": 87,
+          "effective_reference_bookings_for_supported_edits": 10.850722311396469,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.2291325695581015,
+            1.4075286415711947
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -2.034136076689268,
+            2.034136076689268
+          ],
+          "validation_net": 5,
+          "raw_gain_pp": 0.484027105517909,
+          "test_changes": 87
+        },
+        "all_three": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 28,
+              "bookings": 28,
+              "test_changes": 74,
+              "net": 0
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 17,
+              "bookings": 17,
+              "test_changes": 44,
+              "net": 5
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 34,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 12,
+              "net": 1
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 18,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 32,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 50,
+          "changes_with_under_ten_reference_bookings": 96,
+          "effective_reference_bookings_for_supported_edits": 26.075816950864816,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.5858972066731767,
+            1.7521902377972465
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.941987924466022,
+            2.5471399689171905
+          ],
+          "validation_net": 6,
+          "raw_gain_pp": 0.5808325266214908,
+          "test_changes": 214
+        },
+        "review": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 24,
+              "bookings": 24,
+              "test_changes": 86,
+              "net": -2
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 21,
+              "bookings": 21,
+              "test_changes": 57,
+              "net": 5
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 34,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 13,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 15,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 41,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 56,
+          "changes_with_under_ten_reference_bookings": 103,
+          "effective_reference_bookings_for_supported_edits": 32.078026488384886,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            -0.8556286671788191,
+            1.7630292706280546
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -2.2584811338610735,
+            2.557979001747998
+          ],
+          "validation_net": 5,
+          "raw_gain_pp": 0.484027105517909,
+          "test_changes": 246
+        },
+        "fare": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 90,
+              "net": 0
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 39,
+              "bookings": 39,
+              "test_changes": 87,
+              "net": 15
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 37,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 17,
+              "net": 3
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 16,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 49,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 65,
+          "changes_with_under_ten_reference_bookings": 119,
+          "effective_reference_bookings_for_supported_edits": 27.65663747391923,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.5251704106041256,
+            3.564684088415676
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.9999640294239314,
+            3.564684088415676
+          ],
+          "validation_net": 19,
+          "raw_gain_pp": 1.8393030009680542,
+          "test_changes": 296
+        },
+        "six": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 92,
+              "net": 0
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 78,
+              "net": 19
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 39,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 16,
+              "net": 3
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 17,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 46,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 63,
+          "changes_with_under_ten_reference_bookings": 118,
+          "effective_reference_bookings_for_supported_edits": 24.423128090124187,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.8629668204136288,
+            3.808957000446362
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.7089293685038365,
+            3.808957000446362
+          ],
+          "validation_net": 23,
+          "raw_gain_pp": 2.2265246853823815,
+          "test_changes": 288
+        },
+        "tabnet": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 101,
+              "net": 0
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 82,
+              "net": 19
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 40,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 16,
+              "net": 3
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 18,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 49,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 67,
+          "changes_with_under_ten_reference_bookings": 123,
+          "effective_reference_bookings_for_supported_edits": 25.6248615096838,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.846671059437017,
+            3.979708235027384
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.771986878369857,
+            3.979708235027384
+          ],
+          "validation_net": 23,
+          "raw_gain_pp": 2.2265246853823815,
+          "test_changes": 306
+        },
+        "reserve": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 19,
+              "bookings": 19,
+              "test_changes": 83,
+              "net": 1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 33,
+              "bookings": 33,
+              "test_changes": 82,
+              "net": 19
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 34,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 16,
+              "net": 3
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 16,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 0,
+              "bookings": 0,
+              "test_changes": 49,
+              "net": 0
+            }
+          ],
+          "unsupported_test_changes": 65,
+          "changes_with_under_ten_reference_bookings": 115,
+          "effective_reference_bookings_for_supported_edits": 25.571594190623152,
+          "point_gain_pp": null,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.8552850658113816,
+            3.894798743622932
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -1.4828023786590416,
+            3.894798743622932
+          ],
+          "validation_net": 24,
+          "raw_gain_pp": 2.323330106485963,
+          "test_changes": 280
+        }
+      },
+      "raw_ranking": [
+        "reserve",
+        "six",
+        "tabnet",
+        "fare",
+        "all_three",
+        "band",
+        "review",
+        "fields_awake",
+        "filtered",
+        "fields",
+        "awake"
+      ],
+      "projected_ranking_supported_only": []
+    },
+    "inside_historical_orders": {
+      "passengers": 7499,
+      "bookings": 5141,
+      "strata": {
+        "1": {
+          "rows": 3757,
+          "orders": 3757,
+          "champion_wrong": 717,
+          "tabnet_wrong": 681
+        },
+        "2": {
+          "rows": 1597,
+          "orders": 813,
+          "champion_wrong": 227,
+          "tabnet_wrong": 212
+        },
+        "3": {
+          "rows": 2145,
+          "orders": 571,
+          "champion_wrong": 374,
+          "tabnet_wrong": 358
+        }
+      },
+      "candidates": {
+        "fields": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 17,
+              "bookings": 17,
+              "test_changes": 13,
+              "net": 3
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 18,
+              "bookings": 18,
+              "test_changes": 7,
+              "net": 2
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 3,
+              "bookings": 3,
+              "test_changes": 1,
+              "net": -1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 1,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 2,
+              "bookings": 2,
+              "test_changes": 0,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 14,
+              "bookings": 14,
+              "test_changes": 8,
+              "net": 2
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 2,
+          "effective_reference_bookings_for_supported_edits": 49.81137925688598,
+          "point_gain_pp": 0.11413185023054502,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.11413185023054502,
+            0.11413185023054502
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.051782851711333726,
+            0.14530634949015067
+          ],
+          "validation_net": 10,
+          "raw_gain_pp": 0.13335111348179757,
+          "test_changes": 30
+        },
+        "awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 79,
+              "bookings": 79,
+              "test_changes": 58,
+              "net": 9
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 44,
+              "bookings": 44,
+              "test_changes": 20,
+              "net": 12
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 26,
+              "bookings": 26,
+              "test_changes": 23,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 8,
+              "bookings": 8,
+              "test_changes": 7,
+              "net": 2
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 29,
+              "bookings": 28,
+              "test_changes": 13,
+              "net": -3
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 32,
+              "bookings": 30,
+              "test_changes": 14,
+              "net": -6
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 7,
+          "effective_reference_bookings_for_supported_edits": 199.69439334993436,
+          "point_gain_pp": 0.23012187994031838,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.23012187994031838,
+            0.23012187994031838
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.025539228549156346,
+            0.3528714707750156
+          ],
+          "validation_net": 14,
+          "raw_gain_pp": 0.1866915588745166,
+          "test_changes": 135
+        },
+        "fields_awake": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 86,
+              "bookings": 86,
+              "test_changes": 63,
+              "net": 8
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 54,
+              "bookings": 54,
+              "test_changes": 25,
+              "net": 12
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 27,
+              "bookings": 27,
+              "test_changes": 23,
+              "net": -1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 8,
+              "net": 4
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 31,
+              "bookings": 30,
+              "test_changes": 13,
+              "net": -1
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 39,
+              "bookings": 35,
+              "test_changes": 22,
+              "net": -3
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 225.97378333076398,
+          "point_gain_pp": 0.2724457865084266,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.2724457865084266,
+            0.2724457865084266
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.2724457865084266,
+            0.2724457865084266
+          ],
+          "validation_net": 19,
+          "raw_gain_pp": 0.25336711561541536,
+          "test_changes": 154
+        },
+        "filtered": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 37,
+              "bookings": 37,
+              "test_changes": 22,
+              "net": 13
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 6,
+              "bookings": 6,
+              "test_changes": 1,
+              "net": 0
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 11,
+              "bookings": 11,
+              "test_changes": 11,
+              "net": 1
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 1,
+              "bookings": 1,
+              "test_changes": 1,
+              "net": 1
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 10,
+              "bookings": 10,
+              "test_changes": 5,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 7,
+              "bookings": 7,
+              "test_changes": 1,
+              "net": 1
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 3,
+          "effective_reference_bookings_for_supported_edits": 60.27119191546306,
+          "point_gain_pp": 0.2308297141123889,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.2308297141123889,
+            0.2308297141123889
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.13396609141289995,
+            0.2742513380811253
+          ],
+          "validation_net": 16,
+          "raw_gain_pp": 0.21336178157087612,
+          "test_changes": 41
+        },
+        "band": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 35,
+              "bookings": 35,
+              "test_changes": 21,
+              "net": 1
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 27,
+              "bookings": 27,
+              "test_changes": 25,
+              "net": -1
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 16,
+              "bookings": 15,
+              "test_changes": 13,
+              "net": -4
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 8,
+              "bookings": 8,
+              "test_changes": 6,
+              "net": 4
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 12,
+              "bookings": 12,
+              "test_changes": 5,
+              "net": -2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 37,
+              "bookings": 37,
+              "test_changes": 17,
+              "net": 13
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 6,
+          "effective_reference_bookings_for_supported_edits": 120.54300143842579,
+          "point_gain_pp": 0.10670361734191522,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.10670361734191522,
+            0.10670361734191522
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            -0.10372425266042287,
+            0.17684624067602792
+          ],
+          "validation_net": 11,
+          "raw_gain_pp": 0.14668622482997734,
+          "test_changes": 87
+        },
+        "all_three": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 103,
+              "bookings": 103,
+              "test_changes": 74,
+              "net": 7
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 67,
+              "bookings": 67,
+              "test_changes": 44,
+              "net": 15
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 39,
+              "bookings": 37,
+              "test_changes": 34,
+              "net": -5
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 16,
+              "bookings": 16,
+              "test_changes": 12,
+              "net": 6
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 39,
+              "bookings": 37,
+              "test_changes": 18,
+              "net": -5
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 72,
+              "bookings": 66,
+              "test_changes": 32,
+              "net": 10
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 302.22369276556293,
+          "point_gain_pp": 0.4011608664958318,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.4011608664958318,
+            0.4011608664958318
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.4011608664958318,
+            0.4011608664958318
+          ],
+          "validation_net": 28,
+          "raw_gain_pp": 0.3733831177490332,
+          "test_changes": 214
+        },
+        "review": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 103,
+              "bookings": 103,
+              "test_changes": 86,
+              "net": 11
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 83,
+              "bookings": 83,
+              "test_changes": 57,
+              "net": 9
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 35,
+              "bookings": 31,
+              "test_changes": 34,
+              "net": -9
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 19,
+              "bookings": 19,
+              "test_changes": 13,
+              "net": 9
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 35,
+              "bookings": 33,
+              "test_changes": 15,
+              "net": -7
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 83,
+              "bookings": 68,
+              "test_changes": 41,
+              "net": 11
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 296.58235259671426,
+          "point_gain_pp": 0.3557157223457503,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.3557157223457503,
+            0.3557157223457503
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.3557157223457503,
+            0.3557157223457503
+          ],
+          "validation_net": 24,
+          "raw_gain_pp": 0.3200426723563142,
+          "test_changes": 246
+        },
+        "fare": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 123,
+              "bookings": 123,
+              "test_changes": 90,
+              "net": 3
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 141,
+              "bookings": 141,
+              "test_changes": 87,
+              "net": 23
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 40,
+              "bookings": 35,
+              "test_changes": 37,
+              "net": -4
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 17,
+              "net": 18
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 39,
+              "bookings": 37,
+              "test_changes": 16,
+              "net": -9
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 94,
+              "bookings": 77,
+              "test_changes": 49,
+              "net": 14
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 391.8442721863358,
+          "point_gain_pp": 0.6194102399120758,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.6194102399120758,
+            0.6194102399120758
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.6194102399120758,
+            0.6194102399120758
+          ],
+          "validation_net": 45,
+          "raw_gain_pp": 0.600080010668089,
+          "test_changes": 296
+        },
+        "six": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 124,
+              "bookings": 124,
+              "test_changes": 92,
+              "net": 4
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 122,
+              "bookings": 122,
+              "test_changes": 78,
+              "net": 30
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 43,
+              "bookings": 38,
+              "test_changes": 39,
+              "net": -3
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 16,
+              "net": 18
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 40,
+              "bookings": 38,
+              "test_changes": 17,
+              "net": -8
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 91,
+              "bookings": 75,
+              "test_changes": 46,
+              "net": 17
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 378.98699683348394,
+          "point_gain_pp": 0.8001062933173904,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.8001062933173904,
+            0.8001062933173904
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.8001062933173904,
+            0.8001062933173904
+          ],
+          "validation_net": 58,
+          "raw_gain_pp": 0.773436458194426,
+          "test_changes": 288
+        },
+        "tabnet": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 125,
+              "bookings": 125,
+              "test_changes": 101,
+              "net": 5
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 123,
+              "bookings": 123,
+              "test_changes": 82,
+              "net": 31
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 43,
+              "bookings": 38,
+              "test_changes": 40,
+              "net": -3
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 16,
+              "net": 18
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 48,
+              "bookings": 43,
+              "test_changes": 18,
+              "net": -2
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 102,
+              "bookings": 82,
+              "test_changes": 49,
+              "net": 18
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 386.2797202107381,
+          "point_gain_pp": 0.9215110548463287,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.9215110548463287,
+            0.9215110548463287
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.9215110548463287,
+            0.9215110548463287
+          ],
+          "validation_net": 67,
+          "raw_gain_pp": 0.8934524603280437,
+          "test_changes": 306
+        },
+        "reserve": {
+          "by_cell": [
+            {
+              "size": 1,
+              "new_class": false,
+              "passengers": 91,
+              "bookings": 91,
+              "test_changes": 83,
+              "net": 11
+            },
+            {
+              "size": 1,
+              "new_class": true,
+              "passengers": 123,
+              "bookings": 123,
+              "test_changes": 82,
+              "net": 31
+            },
+            {
+              "size": 2,
+              "new_class": false,
+              "passengers": 33,
+              "bookings": 29,
+              "test_changes": 34,
+              "net": -7
+            },
+            {
+              "size": 2,
+              "new_class": true,
+              "passengers": 30,
+              "bookings": 30,
+              "test_changes": 16,
+              "net": 18
+            },
+            {
+              "size": 3,
+              "new_class": false,
+              "passengers": 42,
+              "bookings": 37,
+              "test_changes": 16,
+              "net": 0
+            },
+            {
+              "size": 3,
+              "new_class": true,
+              "passengers": 102,
+              "bookings": 82,
+              "test_changes": 49,
+              "net": 18
+            }
+          ],
+          "unsupported_test_changes": 0,
+          "changes_with_under_ten_reference_bookings": 0,
+          "effective_reference_bookings_for_supported_edits": 335.59310886998514,
+          "point_gain_pp": 0.975790771827026,
+          "gain_pp_range_if_missing_cells_arbitrary": [
+            0.975790771827026,
+            0.975790771827026
+          ],
+          "gain_pp_range_if_sparse_cells_arbitrary": [
+            0.975790771827026,
+            0.975790771827026
+          ],
+          "validation_net": 71,
+          "raw_gain_pp": 0.9467929057207628,
+          "test_changes": 280
+        }
+      },
+      "raw_ranking": [
+        "reserve",
+        "tabnet",
+        "six",
+        "fare",
+        "all_three",
+        "review",
+        "fields_awake",
+        "filtered",
+        "awake",
+        "band",
+        "fields"
+      ],
+      "projected_ranking_supported_only": [
+        "reserve",
+        "tabnet",
+        "six",
+        "fare",
+        "all_three",
+        "review",
+        "fields_awake",
+        "filtered",
+        "awake",
+        "fields",
+        "band"
+      ]
+    }
+  },
+  "interpretation": "All and fresh use exactly the same eight-fold frozen decisions. Fresh is a descriptive subset whose booking IDs were absent from the historical replay. Transfer assumes equal net gain per changed row of each booking size and prediction direction. Ranges allow arbitrary net effects in sparse cells while keeping other cell averages fixed; they are sensitivity analyses, not sampling confidence intervals."
+}
