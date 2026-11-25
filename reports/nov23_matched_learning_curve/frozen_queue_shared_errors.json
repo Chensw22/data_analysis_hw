@@ -1,0 +1,148 @@
+{
+  "versions": {
+    "nine": "proposal_n24_selected_dissent",
+    "fields": "proposal_n25_confirmed_random_fields",
+    "awake": "proposal_n25_awake_personal_tabicl",
+    "fields_awake": "proposal_n25_confirmed_awake_union",
+    "filtered": "proposal_n25_awake_error_confirmation",
+    "band": "proposal_n26_dispute_band",
+    "all_three": "proposal_n26_joint_dispute_awake",
+    "review": "proposal_n26_consensus_review",
+    "fare": "proposal_n26_fare_deck",
+    "six": "proposal_n26_six_way_dispute"
+  },
+  "test_rows": 4277,
+  "test_any_changed": 348,
+  "scopes": {
+    "all": {
+      "rows": 8532,
+      "incumbent_errors": 1531,
+      "any_candidate_correct": 350,
+      "unanimous_rows": 7891,
+      "all_wrong": 1181,
+      "all_wrong_per_fold": [
+        139,
+        145,
+        153,
+        159,
+        150,
+        156,
+        162,
+        117
+      ]
+    },
+    "solo": {
+      "rows": 4735,
+      "incumbent_errors": 923,
+      "any_candidate_correct": 214,
+      "unanimous_rows": 4341,
+      "all_wrong": 709,
+      "all_wrong_per_fold": [
+        91,
+        87,
+        100,
+        99,
+        91,
+        89,
+        83,
+        69
+      ]
+    },
+    "awake_paid_miss": {
+      "rows": 3736,
+      "incumbent_errors": 586,
+      "any_candidate_correct": 162,
+      "unanimous_rows": 3476,
+      "all_wrong": 424,
+      "all_wrong_per_fold": [
+        56,
+        45,
+        55,
+        65,
+        57,
+        50,
+        59,
+        37
+      ]
+    },
+    "sleeper_false_alarm": {
+      "rows": 2763,
+      "incumbent_errors": 407,
+      "any_candidate_correct": 19,
+      "unanimous_rows": 2722,
+      "all_wrong": 388,
+      "all_wrong_per_fold": [
+        44,
+        58,
+        47,
+        51,
+        49,
+        47,
+        54,
+        38
+      ]
+    }
+  },
+  "by_candidate": {
+    "nine": {
+      "test_edits": 0,
+      "additional_test_rows": 0,
+      "local_fixed": 0,
+      "local_harmed": 0
+    },
+    "fields": {
+      "test_edits": 30,
+      "additional_test_rows": 30,
+      "local_fixed": 37,
+      "local_harmed": 26
+    },
+    "awake": {
+      "test_edits": 135,
+      "additional_test_rows": 124,
+      "local_fixed": 135,
+      "local_harmed": 120
+    },
+    "fields_awake": {
+      "test_edits": 154,
+      "additional_test_rows": 0,
+      "local_fixed": 155,
+      "local_harmed": 133
+    },
+    "filtered": {
+      "test_edits": 41,
+      "additional_test_rows": 0,
+      "local_fixed": 52,
+      "local_harmed": 33
+    },
+    "band": {
+      "test_edits": 87,
+      "additional_test_rows": 60,
+      "local_fixed": 81,
+      "local_harmed": 65
+    },
+    "all_three": {
+      "test_edits": 214,
+      "additional_test_rows": 0,
+      "local_fixed": 209,
+      "local_harmed": 175
+    },
+    "review": {
+      "test_edits": 246,
+      "additional_test_rows": 59,
+      "local_fixed": 218,
+      "local_harmed": 189
+    },
+    "fare": {
+      "test_edits": 296,
+      "additional_test_rows": 73,
+      "local_fixed": 302,
+      "local_harmed": 238
+    },
+    "six": {
+      "test_edits": 288,
+      "additional_test_rows": 2,
+      "local_fixed": 299,
+      "local_harmed": 218
+    }
+  }
+}
