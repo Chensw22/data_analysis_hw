@@ -95,7 +95,10 @@ def fit_banks(values,side,marks,edges,dist,regions,g,f,shard_seed):
     support = np.zeros((len(g),3),bool)
     for k in np.unique(f):
         rows = np.flatnonzero(f==k)
-        shards = [rows[q] for _,q in GroupKFold(4,shuffle=True,random_state=shard_seed).split(rows,groups=g[rows])]
+        if shard_seed=='ordered':
+            shards = [rows[np.isin(g[rows],chunk)] for chunk in np.array_split(np.unique(g[rows]),4)]
+        else:
+            shards = [rows[q] for _,q in GroupKFold(4,shuffle=True,random_state=shard_seed).split(rows,groups=g[rows])]
         for j,q in enumerate(shards):
             for repeat,cal in enumerate([h for h in range(4) if h!=j]):
                 t = shards[cal]
