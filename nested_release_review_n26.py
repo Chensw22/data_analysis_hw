@@ -9,13 +9,13 @@ OUT=ROOT/'artifacts/nov26_nested_release_review'
 REPORT=ROOT/'reports/nov23_matched_learning_curve/nested_release_review.json'
 
 
-def protocols(panels,g):
+def protocols(panels,g,include_full=False):
     for item in splits(panels,g):
-        if item[0].startswith('bookingmix') or item[0]=='historical_to_new':
+        if item[0].startswith('bookingmix') or item[0]=='historical_to_new' or (include_full and item[0].startswith('full_')):
             yield item
 
 
-def train():
+def train(include_full=False):
     import torch
     from joint_party_tabicl_n26 import model
     from tabicl_routed_context_n23 import DIGEST,WEIGHT
@@ -23,7 +23,7 @@ def train():
     torch.set_num_threads(2)
     raw,y,g,panels=sources()
     OUT.mkdir(exist_ok=True)
-    for key,src,dst,t,q in protocols(panels,g):
+    for key,src,dst,t,q in protocols(panels,g,include_full=include_full):
         a,b=src['ids'][t],dst['ids'][q]
         assert not np.isin(g[a],g[b]).any()
         filename=OUT/f'{key}.npz'
@@ -51,4 +51,7 @@ def train():
 
 
 if __name__=='__main__':
-    train()
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--include-full', action='store_true')
+    train(**vars(parser.parse_args()))
