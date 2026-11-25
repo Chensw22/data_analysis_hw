@@ -21,7 +21,8 @@ def run():
     rerun = np.column_stack(panels[0])[rows] >= .5
     assert original.shape == rerun.shape == (len(rows), 68)
     # The first six columns are the same two archived model families in both protocols.
-    names = [f'base_panel_{i+1}' for i in range(6)] + alt_names
+    names = ([f'response_channels/{key}' for key in ('additive', 'any_event', 'odd_events')] +
+             [f'broad_error_transport_projection/{key}' for key in ('linear', 'fixed_curves', 'learned_curves')] + alt_names)
     assert len(names) == original.shape[1]
     all_agree = (original == nine[:, None]).all(1)
     wrong = all_agree & (nine != y[rows])
