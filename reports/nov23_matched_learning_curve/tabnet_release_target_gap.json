@@ -1,0 +1,103 @@
+{
+  "proposal": "proposal_n26_tabnet_attention",
+  "sha256": "4f5d0389d8f01e1c375b41521a88c87849f7183106d2537eb12bb9cca168f943",
+  "champion": "proposal_n24_selected_dissent",
+  "official_receipt": "reports/proposal_n24_selected_dissent/online_attempts/20261125T070137804381Z.json",
+  "target": 0.85,
+  "compatible_denominator": 4277,
+  "champion_correct": 3496,
+  "required_correct": 3636,
+  "required_net": 140,
+  "predictions_changed": 306,
+  "changes_to_true": 147,
+  "changes_to_false": 159,
+  "minimum_fixes": 223,
+  "blind_only_local_scenario": {
+    "errors": 172,
+    "correct": 3029,
+    "local_net_needed": 162,
+    "minimum_share_of_blind_errors_even_if_no_harms": 0.9418604651162791,
+    "maximum_harms_if_every_blind_error_corrected": 10,
+    "additional_needed_even_if_entire_awake_blind_group_fixed": 35
+  },
+  "maximum_harms": 83,
+  "required_edit_precision": 0.7287581699346405,
+  "local": {
+    "full": {
+      "rows": 8532,
+      "fixed": 314,
+      "harmed": 224,
+      "net": 90,
+      "edit_precision": 0.5836431226765799,
+      "nine_accuracy": 0.8205578996718237,
+      "candidate_accuracy": 0.8311064228785747,
+      "net_by_fold": [
+        5,
+        15,
+        13,
+        -2,
+        8,
+        13,
+        14,
+        24
+      ],
+      "required_additional_local_correct_for_above_85": 162,
+      "test_direction_weighted_edit_precision": 0.5745138685995984,
+      "booking_bootstrap_precision_95": [
+        0.5322668583482875,
+        0.6168329439865466
+      ]
+    },
+    "historical_to_new": {
+      "rows": 1033,
+      "fixed": 48,
+      "harmed": 19,
+      "net": 29,
+      "edit_precision": 0.7164179104477612,
+      "nine_accuracy": 0.7938044530493708,
+      "candidate_accuracy": 0.8218780251694094,
+      "net_by_fold": [
+        2,
+        1,
+        4,
+        4,
+        2,
+        1,
+        2,
+        13
+      ],
+      "required_additional_local_correct_for_above_85": 30,
+      "test_direction_weighted_edit_precision": 0.6969351704645822,
+      "booking_bootstrap_precision_95": [
+        0.5902882566069906,
+        0.8077248602790398
+      ]
+    },
+    "bookingmix": {
+      "rows": 6055,
+      "fixed": 242,
+      "harmed": 155,
+      "net": 87,
+      "edit_precision": 0.6095717884130982,
+      "nine_accuracy": 0.8142031379025598,
+      "candidate_accuracy": 0.8285714285714286,
+      "net_by_fold": [
+        10,
+        13,
+        1,
+        9,
+        5,
+        16,
+        7,
+        26
+      ],
+      "required_additional_local_correct_for_above_85": 130,
+      "test_direction_weighted_edit_precision": 0.6119431136406389,
+      "booking_bootstrap_precision_95": [
+        0.5641062622905985,
+        0.6597003572968864
+      ]
+    }
+  },
+  "interpretation": "Compatible denominator inferred from published aggregate scores. Local rows and evaluation scopes overlap. Booking resampling covers only local within-sample variation; different test error rates can change online precision."
+}

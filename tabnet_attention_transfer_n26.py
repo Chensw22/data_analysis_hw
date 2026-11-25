@@ -47,7 +47,7 @@ def decide(train,query,old,now,outcome,p1,p2,a1,a2):
     return {'attention':challenge&attention,'actual_and_scores':challenge&attention&probability}
 
 
-def run():
+def collect():
     raw,y,g,fold,known,versions = paired()
     _,_,_,panels = sources()
     current = panel_predictions(panels['full'],'full')
@@ -73,6 +73,11 @@ def run():
         p,a = full if b.tag=='full' else hist
         actions = decide(b.train_fields,b.query_fields,old,now,b.train_error,p[t],full[0][q],a[t],full[1][q])
         accumulated.setdefault(b.tag,[]).append((q,common,now,actions))
+    return accumulated,y,g,fold,versions
+
+
+def run():
+    accumulated,y,_,fold,_ = collect()
     report = {}
     for tag,items in accumulated.items():
         q,common,parent = (np.concatenate([i[j] for i in items]) for j in range(3))
