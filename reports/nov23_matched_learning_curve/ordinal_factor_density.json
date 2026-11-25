@@ -1,0 +1,463 @@
+{
+  "protocol": "Eight outer partitions hold out whole booking groups, audited against train_y and PassengerId. Two class-specific ordinal probit factors, 9x9 Gauss-Hermite nodes for fitting, 85 Adam steps. Joint and conditional predictions use 17x17 nodes; nine-node versions check integration accuracy. Positive bill cutpoints are pooled development quantiles. Zero and missing have explicit mass. Nominal probabilities use factor-dependent logits. Conditional bill posterior replaces the joint model's own nonbill posterior with CatBoost fitted on nonbill covariates.",
+  "results": {
+    "independent": {
+      "accuracy": 0.7594616357989187,
+      "log_loss": 0.7153370187600319,
+      "fold_accuracy": [
+        0.7679924242424242,
+        0.7673314339981007,
+        0.7699115044247787,
+        0.7455731593662628,
+        0.7727272727272727,
+        0.7565298507462687,
+        0.7402135231316725,
+        0.7554092191909689
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 310,
+          "correct": 6783,
+          "harmed": 784
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 42,
+          "correct": 802,
+          "harmed": 108
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 199,
+          "correct": 4783,
+          "harmed": 569
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 39,
+          "correct": 797,
+          "harmed": 107
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 1,
+        "recovered_rows": []
+      }
+    },
+    "context_only": {
+      "accuracy": 0.7501437938571264,
+      "log_loss": 0.4940133790087875,
+      "fold_accuracy": [
+        0.7670454545454546,
+        0.7312440645773979,
+        0.7601769911504425,
+        0.7530288909599254,
+        0.7379679144385026,
+        0.7723880597014925,
+        0.7295373665480427,
+        0.7507055503292568
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 287,
+          "correct": 6783,
+          "harmed": 876
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 44,
+          "correct": 802,
+          "harmed": 107
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 199,
+          "correct": 4783,
+          "harmed": 634
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 42,
+          "correct": 797,
+          "harmed": 106
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 5,
+        "recovered_rows": []
+      }
+    },
+    "joint": {
+      "accuracy": 0.7808581617393305,
+      "log_loss": 0.5288978688118776,
+      "fold_accuracy": [
+        0.7878787878787878,
+        0.7977207977207977,
+        0.7946902654867256,
+        0.7614165890027959,
+        0.7816399286987522,
+        0.7658582089552238,
+        0.7820284697508897,
+        0.7751646284101599
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 263,
+          "correct": 6783,
+          "harmed": 560,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 65,
+            "harmed": 143
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 198,
+            "harmed": 417
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 116,
+              "harmed": 256
+            },
+            "0.85": {
+              "fixed": 50,
+              "harmed": 113
+            },
+            "0.95": {
+              "fixed": 23,
+              "harmed": 45
+            }
+          }
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 39,
+          "correct": 802,
+          "harmed": 84,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 7,
+            "harmed": 21
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 32,
+            "harmed": 63
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 14,
+              "harmed": 28
+            },
+            "0.85": {
+              "fixed": 3,
+              "harmed": 13
+            },
+            "0.95": {
+              "fixed": 3,
+              "harmed": 5
+            }
+          }
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 177,
+          "correct": 4783,
+          "harmed": 413,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 44,
+            "harmed": 102
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 133,
+            "harmed": 311
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 73,
+              "harmed": 175
+            },
+            "0.85": {
+              "fixed": 32,
+              "harmed": 74
+            },
+            "0.95": {
+              "fixed": 17,
+              "harmed": 31
+            }
+          }
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 38,
+          "correct": 797,
+          "harmed": 84,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 6,
+            "harmed": 20
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 32,
+            "harmed": 64
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 13,
+              "harmed": 27
+            },
+            "0.85": {
+              "fixed": 3,
+              "harmed": 12
+            },
+            "0.95": {
+              "fixed": 3,
+              "harmed": 5
+            }
+          }
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 6,
+        "recovered_rows": []
+      }
+    },
+    "conditional_bills": {
+      "accuracy": 0.7824686529391465,
+      "log_loss": 0.4937687601182612,
+      "fold_accuracy": [
+        0.7859848484848485,
+        0.7815764482431149,
+        0.7911504424778761,
+        0.7781919850885368,
+        0.7950089126559715,
+        0.7770522388059702,
+        0.7704626334519573,
+        0.779868297271872
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 267,
+          "correct": 6783,
+          "harmed": 546,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 67,
+            "harmed": 129
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 200,
+            "harmed": 417
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 117,
+              "harmed": 222
+            },
+            "0.85": {
+              "fixed": 30,
+              "harmed": 73
+            },
+            "0.95": {
+              "fixed": 8,
+              "harmed": 18
+            }
+          }
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 36,
+          "correct": 802,
+          "harmed": 63,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 9,
+            "harmed": 16
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 27,
+            "harmed": 47
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 13,
+              "harmed": 21
+            },
+            "0.85": {
+              "fixed": 2,
+              "harmed": 9
+            },
+            "0.95": {
+              "fixed": 0,
+              "harmed": 2
+            }
+          }
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 164,
+          "correct": 4783,
+          "harmed": 365,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 43,
+            "harmed": 84
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 121,
+            "harmed": 281
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 67,
+              "harmed": 144
+            },
+            "0.85": {
+              "fixed": 21,
+              "harmed": 52
+            },
+            "0.95": {
+              "fixed": 5,
+              "harmed": 12
+            }
+          }
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 34,
+          "correct": 797,
+          "harmed": 62,
+          "both_density_and_tabstar_dissent": {
+            "fixed": 7,
+            "harmed": 14
+          },
+          "density_dissents_tabstar_agrees": {
+            "fixed": 27,
+            "harmed": 48
+          },
+          "confident_disagreements": {
+            "0.7": {
+              "fixed": 12,
+              "harmed": 21
+            },
+            "0.85": {
+              "fixed": 2,
+              "harmed": 8
+            },
+            "0.95": {
+              "fixed": 0,
+              "harmed": 2
+            }
+          }
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 2,
+        "recovered_rows": []
+      }
+    },
+    "joint_nine_nodes": {
+      "accuracy": 0.7807431266536293,
+      "log_loss": 0.5296315398312865,
+      "fold_accuracy": [
+        0.7897727272727273,
+        0.7948717948717948,
+        0.7982300884955752,
+        0.7623485554520038,
+        0.7825311942959001,
+        0.7658582089552238,
+        0.7766903914590747,
+        0.7751646284101599
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 265,
+          "correct": 6783,
+          "harmed": 566
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 39,
+          "correct": 802,
+          "harmed": 86
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 181,
+          "correct": 4783,
+          "harmed": 422
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 38,
+          "correct": 797,
+          "harmed": 86
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 5,
+        "recovered_rows": []
+      }
+    },
+    "conditional_nine_nodes": {
+      "accuracy": 0.7824686529391465,
+      "log_loss": 0.4932349891906404,
+      "fold_accuracy": [
+        0.7859848484848485,
+        0.7806267806267806,
+        0.7929203539823009,
+        0.7753960857409133,
+        0.7887700534759359,
+        0.7835820895522388,
+        0.7758007117437722,
+        0.7761053621825024
+      ],
+      "views": {
+        "full": {
+          "errors": 1232,
+          "fixed": 271,
+          "correct": 6783,
+          "harmed": 549
+        },
+        "historical_to_new": {
+          "errors": 168,
+          "fixed": 40,
+          "correct": 802,
+          "harmed": 70
+        },
+        "bookingmix": {
+          "errors": 893,
+          "fixed": 171,
+          "correct": 4783,
+          "harmed": 373
+        },
+        "fresh_bookingmix": {
+          "errors": 164,
+          "fixed": 38,
+          "correct": 797,
+          "harmed": 69
+        }
+      },
+      "strict": {
+        "errors": 178,
+        "recovered": 0,
+        "correct": 3073,
+        "harmed": 3,
+        "recovered_rows": []
+      }
+    }
+  }
+}
