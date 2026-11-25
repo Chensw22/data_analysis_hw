@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日 00:17 主账号官方余量 0 / 10，最佳 81.739%，第 113 / 2,203，第三名 83.937%。全量重训的 68 个配置已预测全部 4,277 人。4–16 张少数票版本改判 87 人，冻结于 6a64d36000c2c821a166d995685482c423fd1d12。Mac 任务 com.chensw22.spaceship.disputeband87.once 已启动，等待 41 人版官方回执后复查额度、提醒并提交。参见 reports/proposal_n26_dispute_band/manifest.json 与 reports/nov23_matched_learning_curve/RESULTS.md；重新提交前核验实时任务及回执。
+
 - 11 月 25 日 23:19 主账号官方余量 0 / 10，最佳 81.739%，第 112 / 2,203，第三名 83.937%。第四个 Mac 任务 com.chensw22.spaceship.awakeerror41.once 已运行，等待前三个任务得出结果或有条件跳过组合，再核验主账号额度并弹窗提交。正式输出固定在 413d8b95789d7b8638db69e696d804e1f4f9521c，相对九票改判 41 人。参见 reports/proposal_n25_awake_error_confirmation/manifest.json 和 reports/nov23_matched_learning_curve/awake_error_demonstrations.json。
 
 - 11 月 25 日晚，全八折九票可复核 8,445 / 8,693 人，其中多人订单 3,710 / 3,888 人。已在 Mac 登录会话启动三个一次性任务 confirmedfields30、awaketabicl135、confirmedunion154（完整标签均为 com.chensw22.spaceship.<名称>.once）。首个任务在 22:47 核实当日 10 次已用，另两个等待前序官方成绩。若前两版均低于九票 81.739%，组合自动跳过。手动提交前检查 launchctl、各候选 artifacts 目录中的 queue_status.json 与线上回执。参见 reports/nov23_matched_learning_curve/RESULTS.md、complete_booking_comparison.json 和 confirmed_awake_union.json。
