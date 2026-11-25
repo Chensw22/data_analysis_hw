@@ -1,0 +1,6 @@
+{
+  "version": "n26_historical_veto",
+  "rule": "Keep the frozen TabNet parent outside historical-release disagreement. Within disagreement, reverse the six-way decision only when both separately fitted historical half-order policies endorse it for the same prediction direction.",
+  "use": "One conditional replacement for a skipped confirmed-union submission, after the terminal TabNet score and only with a remaining primary slot in the same UTC scoring day.",
+  "evidence": "reports/nov23_matched_learning_curve/check_disagreement_fallback.json"
+}

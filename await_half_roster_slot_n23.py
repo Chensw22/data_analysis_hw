@@ -14,7 +14,7 @@ from kaggle_workflow import COMPETITION, sha256, validate_submission
 from submit_committed_export import submit
 
 MODEL = 'gate.joblib'
-DONE = {'completed', 'goal_reached', 'already_submitted', 'evaluation_failed', 'predecessor_failed', 'members_below_reference'}
+DONE = {'completed', 'goal_reached', 'already_submitted', 'evaluation_failed', 'predecessor_failed', 'members_below_reference', 'reserve_not_needed'}
 
 
 @dataclass(frozen=True)
@@ -101,9 +101,19 @@ TABNET_ATTENTION = QueuedExport('proposal_n26_tabnet_attention', 'export_tabnet_
     SIX_WAY_DISPUTE.out/'queue_status.json',
     'Kaggle 主账号即将提交 TabNet 双重确认版。本版改判了此前十个版本都判断一致的 18 名乘客。',
     '222a2a6549b2b49a39452c58f203196ae20a150875766f330752bbf8de69bf2d', model='predictions.npz')
+HISTORICAL_VETO = QueuedExport('proposal_n26_historical_veto', 'export_historical_veto_n26.py',
+    TABNET_ATTENTION.out/'queue_status.json',
+    '组合版已跳过，主账号仍有本轮额度。即将评测从两批历史订单选出的备用版。',
+    '4f5d0389d8f01e1c375b41521a88c87849f7183106d2537eb12bb9cca168f943', model='composition.json')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
                                   AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE,
-                                  TABNET_ATTENTION)}
+                                  TABNET_ATTENTION, HISTORICAL_VETO)}
+
+
+def reserve_available(union, expected_digest, official_match, last_submission_date, today, remaining):
+    return (union.get('phase') == 'members_below_reference' and union.get('attempted') is False
+            and union.get('sha256') == expected_digest and not official_match
+            and str(last_submission_date)[:10] == today.isoformat() and remaining > 0)
 
 
 def verify(revision, job=HALF):
@@ -326,6 +336,14 @@ def run(revision, job=HALF):
                 if max(tree_score, previous['score']) < nine_score:
                     state('members_below_reference', tree_score=tree_score, neural_score=previous['score'],
                           reference_score=nine_score)
+                    return
+            if job.name == HISTORICAL_VETO.name:
+                union = read(CONFIRMED_UNION.out/'queue_status.json')
+                original = read(CONFIRMED_UNION.report/'manifest.json')
+                if not reserve_available(union, original['sha256'], find_remote(rows, original) is not None,
+                                         first.date, datetime.now(timezone.utc).date(), limits['numAllowedNow']):
+                    state('reserve_not_needed', union_phase=union.get('phase'), predecessor_ref=previous['ref'],
+                          limits=limits)
                     return
             if limits['numAllowedNow'] <= 0:
                 state('waiting_for_slot', limits=limits)
