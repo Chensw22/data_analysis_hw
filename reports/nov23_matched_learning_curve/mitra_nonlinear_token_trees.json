@@ -1,0 +1,233 @@
+{
+  "rows": 6954,
+  "consensus_rows": 2884,
+  "consensus_errors": 208,
+  "folds": 3,
+  "methods": {
+    "raw_direct": {
+      "corrected": 280,
+      "harmed": 358,
+      "accuracy": 0.8038538970376762,
+      "net": -78,
+      "ci_pp": [
+        -1.8166360597693254,
+        -0.40604301239141377
+      ],
+      "fold_net": [
+        -28,
+        -17,
+        -33
+      ],
+      "consensus": {
+        "fixed": 2,
+        "harmed": 9
+      },
+      "disputed": {
+        "fixed": 278,
+        "harmed": 349
+      },
+      "test_changes": 290
+    },
+    "raw_quarter": {
+      "corrected": 72,
+      "harmed": 73,
+      "accuracy": 0.8149266609145815,
+      "net": -1,
+      "ci_pp": [
+        -0.34170393028683266,
+        0.3170577147864102
+      ],
+      "fold_net": [
+        0,
+        4,
+        -5
+      ],
+      "consensus": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "disputed": {
+        "fixed": 72,
+        "harmed": 73
+      },
+      "test_changes": 69
+    },
+    "tokens_direct": {
+      "corrected": 245,
+      "harmed": 273,
+      "accuracy": 0.811044003451251,
+      "net": -28,
+      "ci_pp": [
+        -1.0213637030166103,
+        0.25410091420119196
+      ],
+      "fold_net": [
+        -8,
+        -8,
+        -12
+      ],
+      "consensus": {
+        "fixed": 6,
+        "harmed": 10
+      },
+      "disputed": {
+        "fixed": 239,
+        "harmed": 263
+      },
+      "test_changes": 126
+    },
+    "tokens_quarter": {
+      "corrected": 58,
+      "harmed": 60,
+      "accuracy": 0.8147828587863101,
+      "net": -2,
+      "ci_pp": [
+        -0.34532995633730595,
+        0.2721682860847433
+      ],
+      "fold_net": [
+        -4,
+        -1,
+        3
+      ],
+      "consensus": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "disputed": {
+        "fixed": 58,
+        "harmed": 60
+      },
+      "test_changes": 24
+    },
+    "joint_direct": {
+      "corrected": 245,
+      "harmed": 261,
+      "accuracy": 0.8127696289905091,
+      "net": -16,
+      "ci_pp": [
+        -0.8386382294814421,
+        0.4049668662269428
+      ],
+      "fold_net": [
+        -9,
+        -4,
+        -3
+      ],
+      "consensus": {
+        "fixed": 4,
+        "harmed": 5
+      },
+      "disputed": {
+        "fixed": 241,
+        "harmed": 256
+      },
+      "test_changes": 117
+    },
+    "joint_quarter": {
+      "corrected": 58,
+      "harmed": 55,
+      "accuracy": 0.8155018694276676,
+      "net": 3,
+      "ci_pp": [
+        -0.2311804652506863,
+        0.3482336228396444
+      ],
+      "fold_net": [
+        -3,
+        2,
+        4
+      ],
+      "consensus": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "disputed": {
+        "fixed": 58,
+        "harmed": 55
+      },
+      "test_changes": 23
+    },
+    "token_increment": {
+      "corrected": 245,
+      "harmed": 338,
+      "accuracy": 0.8016968651136037,
+      "net": -93,
+      "ci_pp": [
+        -2.039666213824543,
+        -0.6398215550799654
+      ],
+      "fold_net": [
+        -43,
+        -27,
+        -23
+      ],
+      "consensus": {
+        "fixed": 11,
+        "harmed": 20
+      },
+      "disputed": {
+        "fixed": 234,
+        "harmed": 318
+      },
+      "test_changes": 291
+    }
+  },
+  "joint_versus_raw_direct": {
+    "corrected": 384,
+    "harmed": 322,
+    "accuracy": 0.8127696289905091,
+    "net": 62,
+    "ci_pp": [
+      0.13155451700507684,
+      1.6503613627515843
+    ],
+    "fold_net": [
+      19,
+      13,
+      30
+    ],
+    "all_initial_errors": {
+      "new_fixed": 125,
+      "lost_fixed": 160,
+      "both_fixed": 120
+    },
+    "consensus_errors": {
+      "new_fixed": 3,
+      "lost_fixed": 1,
+      "both_fixed": 1,
+      "new_passengers": [
+        "0005_01",
+        "0020_03",
+        "3464_02"
+      ]
+    }
+  },
+  "joint_versus_raw_quarter": {
+    "corrected": 90,
+    "harmed": 86,
+    "accuracy": 0.8155018694276676,
+    "net": 4,
+    "ci_pp": [
+      -0.30426073711867613,
+      0.4186743662580403
+    ],
+    "fold_net": [
+      -3,
+      -2,
+      9
+    ],
+    "all_initial_errors": {
+      "new_fixed": 33,
+      "lost_fixed": 47,
+      "both_fixed": 25
+    },
+    "consensus_errors": {
+      "new_fixed": 0,
+      "lost_fixed": 0,
+      "both_fixed": 0,
+      "new_passengers": []
+    }
+  },
+  "output_sha256": "a74d745bdb6528a6540c1bce3a687685ab30ad0e613cd5376d0f4a6c691f1962"
+}
