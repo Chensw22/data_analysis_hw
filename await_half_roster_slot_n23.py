@@ -97,8 +97,13 @@ SIX_WAY_DISPUTE = QueuedExport('proposal_n26_six_way_dispute', 'export_six_way_d
     FARE_DECK.out/'queue_status.json',
     '主账号即将评测登记与账单六模型一致改判版，上一份账单甲板版已有官方成绩。',
     'a8a864dacdedd6d720f581922b4c5247c7adc7b0636ec1a0aa7cc580b37f5aae', model='predictions.npz')
+TABNET_ATTENTION = QueuedExport('proposal_n26_tabnet_attention', 'export_tabnet_attention_n26.py',
+    SIX_WAY_DISPUTE.out/'queue_status.json',
+    'Kaggle 主账号即将提交 TabNet 双重确认版。本版改判了此前十个版本都判断一致的 18 名乘客。',
+    '222a2a6549b2b49a39452c58f203196ae20a150875766f330752bbf8de69bf2d', model='predictions.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE,
+                                  TABNET_ATTENTION)}
 
 
 def verify(revision, job=HALF):
