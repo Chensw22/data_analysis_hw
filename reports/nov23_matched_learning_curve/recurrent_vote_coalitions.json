@@ -1,0 +1,433 @@
+{
+  "global_rule": {
+    "source_cells": {
+      "0": {
+        "subsets_passing_all_three": 41,
+        "held_shard_net": [
+          11,
+          -6,
+          -40
+        ]
+      }
+    },
+    "evaluation": {
+      "two_shards": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 269,
+          "harmed": 371,
+          "net": -102,
+          "net_by_fold": [
+            -9,
+            -20,
+            -6,
+            -14,
+            -20,
+            -6,
+            1,
+            -28
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 37,
+          "harmed": 43,
+          "net": -6,
+          "net_by_fold": [
+            -1,
+            -3,
+            1,
+            -1,
+            1,
+            0,
+            1,
+            -4
+          ]
+        }
+      },
+      "all_three": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 81,
+          "harmed": 122,
+          "net": -41,
+          "net_by_fold": [
+            -6,
+            -5,
+            0,
+            -5,
+            -8,
+            -10,
+            1,
+            -8
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 13,
+          "harmed": 12,
+          "net": 1,
+          "net_by_fold": [
+            0,
+            -2,
+            2,
+            0,
+            1,
+            -1,
+            2,
+            -1
+          ]
+        }
+      },
+      "union_checked": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "direction": {
+    "source_cells": {
+      "0": {
+        "subsets_passing_all_three": 320,
+        "held_shard_net": [
+          5,
+          -4,
+          -13
+        ]
+      },
+      "1": {
+        "subsets_passing_all_three": 2,
+        "held_shard_net": [
+          0,
+          -3,
+          -16
+        ]
+      }
+    },
+    "evaluation": {
+      "two_shards": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 250,
+          "harmed": 386,
+          "net": -136,
+          "net_by_fold": [
+            -16,
+            -23,
+            -10,
+            -14,
+            -23,
+            -9,
+            -10,
+            -31
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 33,
+          "harmed": 42,
+          "net": -9,
+          "net_by_fold": [
+            -1,
+            -4,
+            0,
+            0,
+            2,
+            -2,
+            1,
+            -5
+          ]
+        }
+      },
+      "all_three": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 87,
+          "harmed": 130,
+          "net": -43,
+          "net_by_fold": [
+            -3,
+            -8,
+            -3,
+            0,
+            -8,
+            -9,
+            -1,
+            -11
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 16,
+          "harmed": 13,
+          "net": 3,
+          "net_by_fold": [
+            0,
+            -2,
+            3,
+            1,
+            3,
+            0,
+            0,
+            -2
+          ]
+        }
+      },
+      "union_checked": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "direction_solo_paid": {
+    "source_cells": {
+      "0": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          0,
+          0,
+          0
+        ]
+      },
+      "1": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          0,
+          0,
+          0
+        ]
+      },
+      "2": {
+        "subsets_passing_all_three": 69,
+        "held_shard_net": [
+          7,
+          -2,
+          -6
+        ]
+      },
+      "3": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          -2,
+          -1,
+          0
+        ]
+      },
+      "4": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          0,
+          0,
+          0
+        ]
+      },
+      "5": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          0,
+          0,
+          -2
+        ]
+      },
+      "6": {
+        "subsets_passing_all_three": 0,
+        "held_shard_net": [
+          0,
+          0,
+          -5
+        ]
+      },
+      "7": {
+        "subsets_passing_all_three": 17,
+        "held_shard_net": [
+          -5,
+          1,
+          -6
+        ]
+      }
+    },
+    "evaluation": {
+      "two_shards": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 129,
+          "harmed": 177,
+          "net": -48,
+          "net_by_fold": [
+            -7,
+            -11,
+            0,
+            -5,
+            -7,
+            -13,
+            3,
+            -8
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 30,
+          "harmed": 32,
+          "net": -2,
+          "net_by_fold": [
+            -3,
+            -1,
+            0,
+            0,
+            -1,
+            -1,
+            5,
+            -1
+          ]
+        }
+      },
+      "all_three": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 21,
+          "harmed": 47,
+          "net": -26,
+          "net_by_fold": [
+            -3,
+            -3,
+            -3,
+            -7,
+            -1,
+            -5,
+            -3,
+            -1
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 3,
+          "harmed": 9,
+          "net": -6,
+          "net_by_fold": [
+            -1,
+            -2,
+            -1,
+            -1,
+            1,
+            -2,
+            0,
+            0
+          ]
+        }
+      },
+      "union_checked": {
+        "including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "scope": "The 18 architecture opinions match architecture_quorum_transfer. Every candidate conjunction in a supporting shard occurs in at least three distinct bookings and has positive passenger net. New orders share no booking with historical discovery. Common agreement in history predates TabNet. The three-shard recurrence rule permits subsets never observed as exact complete signatures."
+}
