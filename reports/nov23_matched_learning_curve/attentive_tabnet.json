@@ -1,0 +1,420 @@
+{
+  "package": "pytorch-tabnet==4.1.0 (DreamQuark PyTorch implementation, MIT)",
+  "implementation": "https://github.com/dreamquark-ai/tabnet",
+  "paper": "https://arxiv.org/abs/1908.07442",
+  "release": "https://pypi.org/project/pytorch-tabnet/4.1.0/",
+  "package_python_source_fingerprint": "0b7e094a8a63a7cc83e87d040377d97b20e14f7dfa69db47f7b1ad92e599b6de",
+  "protocol": "8 GroupKFold splits, no external weights or data. Encoders, centering, reconstruction pretraining and supervised fitting use only nonheld bookings. 55 fixed supervised epochs, n_d=n_a=16, three sparsemax decision steps; second seed is a reproducibility control. The third recipe adds 18 epochs of masked self-supervised reconstruction on the same training passengers. No name or passenger ID inputs; known booking size, cabin parts and expense summaries included.",
+  "results": {
+    "scratch_seed_431": {
+      "accuracy": 0.783734038881859,
+      "log_loss": 0.44580560800582336,
+      "support": {
+        "queue_unanimous": {
+          "errors": 1181,
+          "fixed": 258,
+          "correct": 6710,
+          "harmed": 537
+        },
+        "sleeper_false_alarm_candidate": {
+          "errors": 388,
+          "fixed": 92,
+          "correct": 2334,
+          "harmed": 133
+        },
+        "other_unanimous": {
+          "errors": 793,
+          "fixed": 166,
+          "correct": 4376,
+          "harmed": 404
+        },
+        "solo_unanimous": {
+          "errors": 709,
+          "fixed": 149,
+          "correct": 3632,
+          "harmed": 291
+        },
+        "queue_and_tabstar_and_density": {
+          "errors": 827,
+          "fixed": 140,
+          "correct": 5996,
+          "harmed": 326
+        }
+      },
+      "fold_accuracy": [
+        0.7926136363636364,
+        0.7730294396961064,
+        0.7991150442477876,
+        0.766076421248835,
+        0.7825311942959001,
+        0.7658582089552238,
+        0.8069395017793595,
+        0.7817497648165569
+      ],
+      "mean_attention": {
+        "fixed_unanimous": {
+          "Spa": 0.1505739688873291,
+          "bill_total": 0.14562256634235382,
+          "RoomService": 0.08956372737884521,
+          "FoodCourt": 0.08057697117328644,
+          "berth": 0.07254858314990997
+        },
+        "harmed_unanimous": {
+          "Spa": 0.1384095549583435,
+          "bill_total": 0.12486042827367783,
+          "FoodCourt": 0.11625788360834122,
+          "RoomService": 0.09067513793706894,
+          "berth": 0.09016862511634827
+        }
+      }
+    },
+    "scratch_seed_731": {
+      "accuracy": 0.7874151616242954,
+      "log_loss": 0.4441666446588906,
+      "support": {
+        "queue_unanimous": {
+          "errors": 1181,
+          "fixed": 248,
+          "correct": 6710,
+          "harmed": 496
+        },
+        "sleeper_false_alarm_candidate": {
+          "errors": 388,
+          "fixed": 78,
+          "correct": 2334,
+          "harmed": 133
+        },
+        "other_unanimous": {
+          "errors": 793,
+          "fixed": 170,
+          "correct": 4376,
+          "harmed": 363
+        },
+        "solo_unanimous": {
+          "errors": 709,
+          "fixed": 137,
+          "correct": 3632,
+          "harmed": 278
+        },
+        "queue_and_tabstar_and_density": {
+          "errors": 827,
+          "fixed": 121,
+          "correct": 5996,
+          "harmed": 279
+        }
+      },
+      "fold_accuracy": [
+        0.8077651515151515,
+        0.785375118708452,
+        0.8106194690265487,
+        0.7670083876980429,
+        0.7754010695187166,
+        0.7807835820895522,
+        0.7882562277580071,
+        0.7836312323612418
+      ],
+      "mean_attention": {
+        "fixed_unanimous": {
+          "RoomService": 0.1378730684518814,
+          "VRDeck": 0.11417374759912491,
+          "bill_total": 0.11382418125867844,
+          "Spa": 0.08425300568342209,
+          "berth": 0.05916526913642883
+        },
+        "harmed_unanimous": {
+          "RoomService": 0.1475507915019989,
+          "VRDeck": 0.12426682561635971,
+          "bill_total": 0.08893956243991852,
+          "Spa": 0.06904683262109756,
+          "FoodCourt": 0.06857093423604965
+        }
+      }
+    },
+    "masked_pretraining": {
+      "accuracy": 0.7915564247095364,
+      "log_loss": 0.4348706343093089,
+      "support": {
+        "queue_unanimous": {
+          "errors": 1181,
+          "fixed": 234,
+          "correct": 6710,
+          "harmed": 450
+        },
+        "sleeper_false_alarm_candidate": {
+          "errors": 388,
+          "fixed": 61,
+          "correct": 2334,
+          "harmed": 83
+        },
+        "other_unanimous": {
+          "errors": 793,
+          "fixed": 173,
+          "correct": 4376,
+          "harmed": 367
+        },
+        "solo_unanimous": {
+          "errors": 709,
+          "fixed": 135,
+          "correct": 3632,
+          "harmed": 259
+        },
+        "queue_and_tabstar_and_density": {
+          "errors": 827,
+          "fixed": 106,
+          "correct": 5996,
+          "harmed": 253
+        }
+      },
+      "fold_accuracy": [
+        0.7935606060606061,
+        0.8015194681861348,
+        0.8123893805309734,
+        0.7809878844361603,
+        0.7816399286987522,
+        0.7742537313432836,
+        0.791814946619217,
+        0.7958607714016933
+      ],
+      "mean_attention": {
+        "fixed_unanimous": {
+          "bill_total": 0.2741425931453705,
+          "Spa": 0.1286287009716034,
+          "VRDeck": 0.09694045782089233,
+          "paid_services": 0.07438364624977112,
+          "FoodCourt": 0.06773800402879715
+        },
+        "harmed_unanimous": {
+          "bill_total": 0.2430979609489441,
+          "FoodCourt": 0.10772854089736938,
+          "VRDeck": 0.09927959740161896,
+          "Spa": 0.09294572472572327,
+          "paid_services": 0.06386907398700714
+        }
+      }
+    },
+    "scratch_mean": {
+      "accuracy": 0.793742091337858,
+      "log_loss": 0.42076275453367806,
+      "support": {
+        "queue_unanimous": {
+          "errors": 1181,
+          "fixed": 215,
+          "correct": 6710,
+          "harmed": 418
+        },
+        "sleeper_false_alarm_candidate": {
+          "errors": 388,
+          "fixed": 81,
+          "correct": 2334,
+          "harmed": 113
+        },
+        "other_unanimous": {
+          "errors": 793,
+          "fixed": 134,
+          "correct": 4376,
+          "harmed": 305
+        },
+        "solo_unanimous": {
+          "errors": 709,
+          "fixed": 120,
+          "correct": 3632,
+          "harmed": 218
+        },
+        "queue_and_tabstar_and_density": {
+          "errors": 827,
+          "fixed": 99,
+          "correct": 5996,
+          "harmed": 224
+        }
+      },
+      "fold_accuracy": [
+        0.7982954545454546,
+        0.798670465337132,
+        0.8115044247787611,
+        0.7781919850885368,
+        0.7825311942959001,
+        0.7807835820895522,
+        0.8131672597864769,
+        0.7855126999059266
+      ]
+    },
+    "three_model_mean": {
+      "accuracy": 0.8022546876797423,
+      "log_loss": 0.4115753419523054,
+      "support": {
+        "queue_unanimous": {
+          "errors": 1181,
+          "fixed": 190,
+          "correct": 6710,
+          "harmed": 322
+        },
+        "sleeper_false_alarm_candidate": {
+          "errors": 388,
+          "fixed": 60,
+          "correct": 2334,
+          "harmed": 72
+        },
+        "other_unanimous": {
+          "errors": 793,
+          "fixed": 130,
+          "correct": 4376,
+          "harmed": 250
+        },
+        "solo_unanimous": {
+          "errors": 709,
+          "fixed": 110,
+          "correct": 3632,
+          "harmed": 171
+        },
+        "queue_and_tabstar_and_density": {
+          "errors": 827,
+          "fixed": 85,
+          "correct": 5996,
+          "harmed": 155
+        }
+      },
+      "fold_accuracy": [
+        0.8077651515151515,
+        0.8072174738841406,
+        0.8212389380530973,
+        0.7791239515377446,
+        0.7976827094474154,
+        0.7798507462686567,
+        0.8149466192170819,
+        0.8090310442144873
+      ]
+    }
+  },
+  "unanimous_three_seeds_or_recipes": {
+    "0.5": {
+      "fixed": 73,
+      "harmed": 96
+    },
+    "0.7": {
+      "fixed": 7,
+      "harmed": 10
+    },
+    "0.85": {
+      "fixed": 1,
+      "harmed": 2
+    },
+    "0.95": {
+      "fixed": 0,
+      "harmed": 1
+    }
+  },
+  "train_loss_first_last": {
+    "0": {
+      "scratch_seed_431": [
+        0.7388772240511734,
+        0.397744613928025
+      ],
+      "scratch_seed_731": [
+        0.6783323432507277,
+        0.3905829765713307
+      ],
+      "masked_pretraining": [
+        0.8899826043186285,
+        0.37518842965735183
+      ]
+    },
+    "1": {
+      "scratch_seed_431": [
+        0.7245836602455659,
+        0.4062545625639211
+      ],
+      "scratch_seed_731": [
+        0.6560108361443924,
+        0.38079619158000844
+      ],
+      "masked_pretraining": [
+        0.7632646385287739,
+        0.37601362850653564
+      ]
+    },
+    "2": {
+      "scratch_seed_431": [
+        0.7048325496077396,
+        0.3834309440062315
+      ],
+      "scratch_seed_731": [
+        0.6449214749261846,
+        0.3908190406828382
+      ],
+      "masked_pretraining": [
+        0.7159648942329511,
+        0.3751581093865571
+      ]
+    },
+    "3": {
+      "scratch_seed_431": [
+        0.7286415745267092,
+        0.41211381274571257
+      ],
+      "scratch_seed_731": [
+        0.6684322330582486,
+        0.392270372358207
+      ],
+      "masked_pretraining": [
+        0.7256464381856242,
+        0.372282837272629
+      ]
+    },
+    "4": {
+      "scratch_seed_431": [
+        0.6964347175540327,
+        0.39538932686248207
+      ],
+      "scratch_seed_731": [
+        0.6664486558855234,
+        0.37478585335178904
+      ],
+      "masked_pretraining": [
+        0.8056188171581585,
+        0.40601390785214264
+      ]
+    },
+    "5": {
+      "scratch_seed_431": [
+        0.7255019487522513,
+        0.3837643894853906
+      ],
+      "scratch_seed_731": [
+        0.6540840811310845,
+        0.37856918048192284
+      ],
+      "masked_pretraining": [
+        0.8189444489529746,
+        0.36803652647051216
+      ]
+    },
+    "6": {
+      "scratch_seed_431": [
+        0.7122138879906786,
+        0.3848579465941309
+      ],
+      "scratch_seed_731": [
+        0.6482733197501384,
+        0.38775334125986377
+      ],
+      "masked_pretraining": [
+        0.6530438151364598,
+        0.39907772903839905
+      ]
+    },
+    "7": {
+      "scratch_seed_431": [
+        0.7093796612863303,
+        0.38234367353419335
+      ],
+      "scratch_seed_731": [
+        0.6532320889857931,
+        0.392046642615942
+      ],
+      "masked_pretraining": [
+        0.627754922744331,
+        0.37278579057903466
+      ]
+    }
+  }
+}
