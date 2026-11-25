@@ -1,0 +1,377 @@
+{
+  "epochs": 28,
+  "seeds": [
+    4537,
+    8912
+  ],
+  "source": "https://arxiv.org/abs/1710.09829",
+  "reference": "Mitra2 adapted; 3:1 reference/capsule log odds",
+  "runs": {
+    "mean": {
+      "accuracy": {
+        "dynamic": 0.8024847578511446,
+        "fixed": 0.8042102841366617
+      },
+      "scopes": {
+        "eight_fold": {
+          "dynamic": {
+            "n": 8532,
+            "fixed": 355,
+            "harmed": 551,
+            "net": -196
+          },
+          "fixed": {
+            "n": 8532,
+            "fixed": 346,
+            "harmed": 530,
+            "net": -184
+          },
+          "dynamic_only": {
+            "n": 8532,
+            "fixed": 31,
+            "harmed": 73,
+            "net": -42
+          },
+          "blend": {
+            "n": 8532,
+            "fixed": 260,
+            "harmed": 337,
+            "net": -77
+          },
+          "blend_extra": {
+            "n": 8532,
+            "fixed": 65,
+            "harmed": 72,
+            "net": -7
+          },
+          "blend_routing_only": {
+            "n": 8532,
+            "fixed": 7,
+            "harmed": 9,
+            "net": -2
+          }
+        },
+        "eleven_agree": {
+          "dynamic": {
+            "n": 7870,
+            "fixed": 184,
+            "harmed": 326,
+            "net": -142
+          },
+          "fixed": {
+            "n": 7870,
+            "fixed": 175,
+            "harmed": 306,
+            "net": -131
+          },
+          "dynamic_only": {
+            "n": 7870,
+            "fixed": 26,
+            "harmed": 61,
+            "net": -35
+          },
+          "blend": {
+            "n": 7870,
+            "fixed": 58,
+            "harmed": 71,
+            "net": -13
+          },
+          "blend_extra": {
+            "n": 7870,
+            "fixed": 47,
+            "harmed": 49,
+            "net": -2
+          },
+          "blend_routing_only": {
+            "n": 7870,
+            "fixed": 6,
+            "harmed": 6,
+            "net": 0
+          }
+        },
+        "new_orders": {
+          "dynamic": {
+            "n": 1033,
+            "fixed": 44,
+            "harmed": 75,
+            "net": -31
+          },
+          "fixed": {
+            "n": 1033,
+            "fixed": 45,
+            "harmed": 73,
+            "net": -28
+          },
+          "dynamic_only": {
+            "n": 1033,
+            "fixed": 1,
+            "harmed": 9,
+            "net": -8
+          },
+          "blend": {
+            "n": 1033,
+            "fixed": 25,
+            "harmed": 54,
+            "net": -29
+          },
+          "blend_extra": {
+            "n": 1033,
+            "fixed": 6,
+            "harmed": 14,
+            "net": -8
+          },
+          "blend_routing_only": {
+            "n": 1033,
+            "fixed": 0,
+            "harmed": 2,
+            "net": -2
+          }
+        }
+      }
+    },
+    "4537": {
+      "accuracy": {
+        "dynamic": 0.7985735649373059,
+        "fixed": 0.800299091222823
+      },
+      "scopes": {
+        "eight_fold": {
+          "dynamic": {
+            "n": 8532,
+            "fixed": 371,
+            "harmed": 604,
+            "net": -233
+          },
+          "fixed": {
+            "n": 8532,
+            "fixed": 351,
+            "harmed": 563,
+            "net": -212
+          },
+          "dynamic_only": {
+            "n": 8532,
+            "fixed": 46,
+            "harmed": 102,
+            "net": -56
+          },
+          "blend": {
+            "n": 8532,
+            "fixed": 271,
+            "harmed": 344,
+            "net": -73
+          },
+          "blend_extra": {
+            "n": 8532,
+            "fixed": 75,
+            "harmed": 80,
+            "net": -5
+          },
+          "blend_routing_only": {
+            "n": 8532,
+            "fixed": 19,
+            "harmed": 13,
+            "net": 6
+          }
+        },
+        "eleven_agree": {
+          "dynamic": {
+            "n": 7870,
+            "fixed": 200,
+            "harmed": 371,
+            "net": -171
+          },
+          "fixed": {
+            "n": 7870,
+            "fixed": 182,
+            "harmed": 330,
+            "net": -148
+          },
+          "dynamic_only": {
+            "n": 7870,
+            "fixed": 31,
+            "harmed": 88,
+            "net": -57
+          },
+          "blend": {
+            "n": 7870,
+            "fixed": 64,
+            "harmed": 80,
+            "net": -16
+          },
+          "blend_extra": {
+            "n": 7870,
+            "fixed": 56,
+            "harmed": 58,
+            "net": -2
+          },
+          "blend_routing_only": {
+            "n": 7870,
+            "fixed": 14,
+            "harmed": 11,
+            "net": 3
+          }
+        },
+        "new_orders": {
+          "dynamic": {
+            "n": 1033,
+            "fixed": 50,
+            "harmed": 83,
+            "net": -33
+          },
+          "fixed": {
+            "n": 1033,
+            "fixed": 50,
+            "harmed": 79,
+            "net": -29
+          },
+          "dynamic_only": {
+            "n": 1033,
+            "fixed": 4,
+            "harmed": 13,
+            "net": -9
+          },
+          "blend": {
+            "n": 1033,
+            "fixed": 28,
+            "harmed": 53,
+            "net": -25
+          },
+          "blend_extra": {
+            "n": 1033,
+            "fixed": 7,
+            "harmed": 12,
+            "net": -5
+          },
+          "blend_routing_only": {
+            "n": 1033,
+            "fixed": 1,
+            "harmed": 3,
+            "net": -2
+          }
+        }
+      }
+    },
+    "8912": {
+      "accuracy": {
+        "dynamic": 0.7989186701944093,
+        "fixed": 0.8027148280225469
+      },
+      "scopes": {
+        "eight_fold": {
+          "dynamic": {
+            "n": 8532,
+            "fixed": 356,
+            "harmed": 590,
+            "net": -234
+          },
+          "fixed": {
+            "n": 8532,
+            "fixed": 351,
+            "harmed": 554,
+            "net": -203
+          },
+          "dynamic_only": {
+            "n": 8532,
+            "fixed": 48,
+            "harmed": 93,
+            "net": -45
+          },
+          "blend": {
+            "n": 8532,
+            "fixed": 248,
+            "harmed": 344,
+            "net": -96
+          },
+          "blend_extra": {
+            "n": 8532,
+            "fixed": 64,
+            "harmed": 90,
+            "net": -26
+          },
+          "blend_routing_only": {
+            "n": 8532,
+            "fixed": 10,
+            "harmed": 13,
+            "net": -3
+          }
+        },
+        "eleven_agree": {
+          "dynamic": {
+            "n": 7870,
+            "fixed": 195,
+            "harmed": 378,
+            "net": -183
+          },
+          "fixed": {
+            "n": 7870,
+            "fixed": 187,
+            "harmed": 340,
+            "net": -153
+          },
+          "dynamic_only": {
+            "n": 7870,
+            "fixed": 36,
+            "harmed": 78,
+            "net": -42
+          },
+          "blend": {
+            "n": 7870,
+            "fixed": 55,
+            "harmed": 88,
+            "net": -33
+          },
+          "blend_extra": {
+            "n": 7870,
+            "fixed": 46,
+            "harmed": 65,
+            "net": -19
+          },
+          "blend_routing_only": {
+            "n": 7870,
+            "fixed": 8,
+            "harmed": 10,
+            "net": -2
+          }
+        },
+        "new_orders": {
+          "dynamic": {
+            "n": 1033,
+            "fixed": 41,
+            "harmed": 82,
+            "net": -41
+          },
+          "fixed": {
+            "n": 1033,
+            "fixed": 41,
+            "harmed": 75,
+            "net": -34
+          },
+          "dynamic_only": {
+            "n": 1033,
+            "fixed": 5,
+            "harmed": 11,
+            "net": -6
+          },
+          "blend": {
+            "n": 1033,
+            "fixed": 25,
+            "harmed": 52,
+            "net": -27
+          },
+          "blend_extra": {
+            "n": 1033,
+            "fixed": 7,
+            "harmed": 14,
+            "net": -7
+          },
+          "blend_routing_only": {
+            "n": 1033,
+            "fixed": 0,
+            "harmed": 2,
+            "net": -2
+          }
+        }
+      }
+    }
+  }
+}
