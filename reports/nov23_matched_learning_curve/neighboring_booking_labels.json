@@ -1,0 +1,99 @@
+{
+  "all_known": {
+    "rows": 8332,
+    "errors": 1402,
+    "fixed": 56,
+    "harmed": 74,
+    "net": -18,
+    "net_by_fold": [
+      -1,
+      -2,
+      -4,
+      2,
+      -7,
+      -3,
+      3,
+      -6
+    ],
+    "sham_net_min_median_max": [
+      -33.0,
+      -19.0,
+      -1.0
+    ],
+    "observed_minus_base_logloss": 0.0011001736899172586,
+    "sham_minus_base_mean_logloss": 0.0011132852701993287
+  },
+  "eleven_agree": {
+    "rows": 7681,
+    "errors": 1133,
+    "fixed": 45,
+    "harmed": 56,
+    "net": -11,
+    "net_by_fold": [
+      1,
+      -3,
+      -1,
+      1,
+      -7,
+      0,
+      5,
+      -7
+    ],
+    "sham_net_min_median_max": [
+      -19.0,
+      -7.0,
+      6.0
+    ],
+    "observed_minus_base_logloss": 0.0008639361256893702,
+    "sham_minus_base_mean_logloss": 0.0006222150619829171
+  },
+  "solo": {
+    "rows": 4635,
+    "errors": 845,
+    "fixed": 44,
+    "harmed": 52,
+    "net": -8,
+    "net_by_fold": [
+      0,
+      -4,
+      -1,
+      2,
+      -5,
+      1,
+      3,
+      -4
+    ],
+    "sham_net_min_median_max": [
+      -16.0,
+      -7.0,
+      5.0
+    ],
+    "observed_minus_base_logloss": 0.0006227446446578013,
+    "sham_minus_base_mean_logloss": 0.0010380031659182926
+  },
+  "new_orders": {
+    "rows": 1012,
+    "errors": 186,
+    "fixed": 9,
+    "harmed": 10,
+    "net": -1,
+    "net_by_fold": [
+      -1,
+      0,
+      3,
+      0,
+      -3,
+      -2,
+      2,
+      0
+    ],
+    "sham_net_min_median_max": [
+      -3.0,
+      2.0,
+      6.0
+    ],
+    "observed_minus_base_logloss": 0.0005173421244259946,
+    "sham_minus_base_mean_logloss": 0.00037093968340588086
+  },
+  "scope": "Each donor label is from a different training booking; three distinct training bookings, same deck and side, closest cabin numbers. Secondary model and strong anchor both exclude the target booking. All 31 within-risk-bin shuffles are descriptive controls, not independent trials."
+}
