@@ -68,7 +68,7 @@ def evidence(h,prob,net,ask,refs,relational):
     return np.vstack(output)
 
 
-def predict(x,y,g,t,q):
+def predict(x,y,g,t,q,include_near_relation=True):
     a,b = next(GroupShuffleSplit(n_splits=1,test_size=.20,random_state=819).split(t,groups=g[t]))
     train,cal = t[a],t[b]
     assert not np.isin(g[train],g[cal]).any() and not np.isin(g[t],g[q]).any()
@@ -95,6 +95,8 @@ def predict(x,y,g,t,q):
             matrices.append(raw)
             if paired:
                 for reference,relational in [(close,False),(close,True),(far,True)]:
+                    if reference is close and relational and not include_near_relation:
+                        continue
                     summary = evidence(h,binary,net,ask,reference,relational)
                     matrices.append(np.column_stack([raw,summary]))
     output = []

@@ -43,7 +43,7 @@ def class_profile(x, donors, q, seed):
     return np.column_stack(features)
 
 
-def predict(x,y,g,t,q):
+def predict(x,y,g,t,q,selected=None):
     output = []
     for fit,val in GroupKFold(2,shuffle=True,random_state=267).split(t,groups=g[t]):
         geom,cal = t[fit],t[val]
@@ -58,7 +58,9 @@ def predict(x,y,g,t,q):
         matrices = [z[ask],candidates['true'],np.column_stack([z[ask],candidates['true']]),
                     np.column_stack([z[ask],candidates['shuffled']])]
         columns = []
-        for mat in matrices:
+        for j,mat in enumerate(matrices):
+            if selected is not None and j not in selected:
+                continue
             classifier = make_pipeline(StandardScaler(),LogisticRegression(C=.1,max_iter=350))
             classifier.fit(mat[:len(cal)],y[cal])
             columns.append(classifier.predict_proba(mat[len(cal):])[:,1])
