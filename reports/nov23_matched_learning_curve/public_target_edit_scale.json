@@ -1,0 +1,123 @@
+{
+  "official_ref": "58873426",
+  "starting_public_score": 0.81739,
+  "target": 0.85,
+  "assumption": "Conditional planning scenario: the all-test edit share, direction mix and held-out direction-specific edit precision transfer to the public evaluation population. The actual public subset and its labels are unknown.",
+  "test_rows": 4277,
+  "up_edits": 140,
+  "down_edits": 148,
+  "edits": 288,
+  "net_needed_all_test_equivalent": 140,
+  "minimum_correct_edits": 214,
+  "required_edit_precision": 0.7430555555555556,
+  "maximum_harms": 74,
+  "conditional_maximum_if_all_edits_correct": 0.8847269184007481,
+  "local": {
+    "full": {
+      "rows": 8532,
+      "up_precision": 0.6559139784946236,
+      "down_precision": 0.48739495798319327,
+      "observed_candidate_correct": 7082,
+      "additional_net_to_local_target": 171,
+      "test_mix_precision": 0.5693139262873608,
+      "precision_cluster_95": [
+        0.527513779993241,
+        0.6116039446978395
+      ],
+      "scenario_public_score": 0.8267247723968949,
+      "conditional_cluster_95": [
+        0.821095386316602,
+        0.83242013143464
+      ],
+      "gain_pp": 0.933477239689498,
+      "remaining_gap_pp": 2.327522760310505,
+      "equivalent_net": 39.92482154151983,
+      "minimum_edits_at_same_precision": 1007,
+      "minimum_down_precision_at_observed_up": 0.8254867770996803,
+      "minimum_up_precision_at_observed_down": 1.0133253301320528,
+      "bootstrap": 2000
+    },
+    "bookingmix": {
+      "rows": 6055,
+      "up_precision": 0.6888888888888889,
+      "down_precision": 0.542713567839196,
+      "observed_candidate_correct": 5015,
+      "additional_net_to_local_target": 132,
+      "test_mix_precision": 0.6137710155716856,
+      "precision_cluster_95": [
+        0.5658336987163664,
+        0.662962631613621
+      ],
+      "scenario_public_score": 0.8327119791838417,
+      "conditional_cluster_95": [
+        0.8262560767969668,
+        0.8393368028546752
+      ],
+      "gain_pp": 1.5321979183841687,
+      "remaining_gap_pp": 1.728802081615834,
+      "equivalent_net": 65.5321049692909,
+      "minimum_edits_at_same_precision": 613,
+      "minimum_down_precision_at_observed_up": 0.7942942942942943,
+      "minimum_up_precision_at_observed_down": 0.9548456568557071,
+      "bootstrap": 2000
+    },
+    "historical_to_new": {
+      "rows": 1033,
+      "up_precision": 0.8333333333333334,
+      "down_precision": 0.5555555555555556,
+      "observed_candidate_correct": 847,
+      "additional_net_to_local_target": 32,
+      "test_mix_precision": 0.6905864197530864,
+      "precision_cluster_95": [
+        0.5760705950635386,
+        0.8021094750765803
+      ],
+      "scenario_public_score": 0.8430570043904086,
+      "conditional_cluster_95": [
+        0.8276347189049796,
+        0.8580762421426491
+      ],
+      "gain_pp": 2.5667004390408645,
+      "remaining_gap_pp": 0.6942995609591381,
+      "equivalent_net": 109.77777777777779,
+      "minimum_edits_at_same_precision": 366,
+      "minimum_down_precision_at_observed_up": 0.6576576576576576,
+      "minimum_up_precision_at_observed_down": 0.9412698412698413,
+      "bootstrap": 2000
+    }
+  },
+  "coverage_at_assumed_precision": {
+    "0.55": {
+      "minimum_edits_in_expectation": 1395,
+      "share_of_test": 0.326163198503624
+    },
+    "0.6": {
+      "minimum_edits_in_expectation": 698,
+      "share_of_test": 0.16319850362403554
+    },
+    "0.65": {
+      "minimum_edits_in_expectation": 465,
+      "share_of_test": 0.10872106616787468
+    },
+    "0.7": {
+      "minimum_edits_in_expectation": 349,
+      "share_of_test": 0.08159925181201777
+    },
+    "0.75": {
+      "minimum_edits_in_expectation": 279,
+      "share_of_test": 0.0652326397007248
+    },
+    "0.8": {
+      "minimum_edits_in_expectation": 233,
+      "share_of_test": 0.05447743745616086
+    },
+    "0.9": {
+      "minimum_edits_in_expectation": 175,
+      "share_of_test": 0.04091653027823241
+    },
+    "1.0": {
+      "minimum_edits_in_expectation": 140,
+      "share_of_test": 0.03273322422258593
+    }
+  }
+}
