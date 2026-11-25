@@ -1,0 +1,1003 @@
+{
+  "config": {
+    "seeds": [
+      431,
+      731
+    ],
+    "width": 24,
+    "epochs": 48,
+    "batch": 384,
+    "lr": 0.005,
+    "weight_decay": 0.006,
+    "second_difference_penalty": 0.001,
+    "hidden_knots": 9,
+    "positive_quantiles": 9
+  },
+  "files": {
+    "fold0": {
+      "training_rows": 7637,
+      "training_bookings": 5439,
+      "query_rows": 1056,
+      "features": 130,
+      "sha256": "89acaa5bb508515dda850da1ff53f76eafeb7995bbade428c7025ac8e480ffb5",
+      "torch_version": "2.13.0"
+    },
+    "fold1": {
+      "training_rows": 7640,
+      "training_bookings": 5440,
+      "query_rows": 1053,
+      "features": 130,
+      "sha256": "7501980f93429a192ed77744a29b06f45c77bcc2c431eb1d8bb94bc0445e3f88",
+      "torch_version": "2.13.0"
+    },
+    "fold2": {
+      "training_rows": 7563,
+      "training_bookings": 5440,
+      "query_rows": 1130,
+      "features": 129,
+      "sha256": "e4f5b5069b1a016ea6dd9a257838918f86b06864537f3d8fde94f5c83ab91ac5",
+      "torch_version": "2.13.0"
+    },
+    "fold3": {
+      "training_rows": 7620,
+      "training_bookings": 5440,
+      "query_rows": 1073,
+      "features": 130,
+      "sha256": "be7b19a3ef941bd0c52e76ce2de186d02b85c287529b78dd6128b62e4103bc92",
+      "torch_version": "2.13.0"
+    },
+    "fold4": {
+      "training_rows": 7571,
+      "training_bookings": 5440,
+      "query_rows": 1122,
+      "features": 130,
+      "sha256": "69f23a0a99680f4fc13296ab254f91e84e42d8d0a12e590a363a6fad38930495",
+      "torch_version": "2.13.0"
+    },
+    "fold5": {
+      "training_rows": 7621,
+      "training_bookings": 5440,
+      "query_rows": 1072,
+      "features": 130,
+      "sha256": "d484e96d6001eb017dc6b8889ed3c0f5f6a69486e5c3aaa26d04a2bdba7bb8cd",
+      "torch_version": "2.13.0"
+    },
+    "fold6": {
+      "training_rows": 7569,
+      "training_bookings": 5440,
+      "query_rows": 1124,
+      "features": 129,
+      "sha256": "db6ef7cd60b241c2bd7d03b3ec2f3c2024190bb4866c8b92743523ca35838a05",
+      "torch_version": "2.13.0"
+    },
+    "fold7": {
+      "training_rows": 7630,
+      "training_bookings": 5440,
+      "query_rows": 1063,
+      "features": 130,
+      "sha256": "6c768869f82faac30597ef47c34bf95f1e8b5f1dd83ddcdafec12d059bf3493d",
+      "torch_version": "2.13.0"
+    },
+    "history_to_new": {
+      "training_rows": 6954,
+      "training_bookings": 5201,
+      "query_rows": 1044,
+      "features": 130,
+      "sha256": "f776ce5341d93a1c2a0285f628020f849a75fb2dcd334ec0480b7340ccc016b7",
+      "torch_version": "2.13.0"
+    }
+  },
+  "accuracy": {
+    "eight_fold": {
+      "additive": {
+        "rows": 8693,
+        "correct": 6923,
+        "accuracy": 0.7963878983089843,
+        "log_loss": 0.4253826316785129,
+        "seed_accuracy": [
+          0.7963878983089843
+        ],
+        "fold_accuracy": [
+          0.7982954545454546,
+          0.8100664767331434,
+          0.8070796460176991,
+          0.7921714818266542,
+          0.8048128342245989,
+          0.7817164179104478,
+          0.7900355871886121,
+          0.786453433678269
+        ]
+      },
+      "silu": {
+        "rows": 8693,
+        "correct": 7012,
+        "accuracy": 0.8066260209363856,
+        "log_loss": 0.39021689739100124,
+        "seed_accuracy": [
+          0.8068560911077879,
+          0.8050155297365696
+        ],
+        "fold_accuracy": [
+          0.8172348484848485,
+          0.8148148148148148,
+          0.8194690265486726,
+          0.8033550792171482,
+          0.8092691622103387,
+          0.7873134328358209,
+          0.7927046263345195,
+          0.8090310442144873
+        ]
+      },
+      "learned_spline": {
+        "rows": 8693,
+        "correct": 6963,
+        "accuracy": 0.8009893017370298,
+        "log_loss": 0.41730189798261097,
+        "seed_accuracy": [
+          0.7951225123662717,
+          0.793742091337858
+        ],
+        "fold_accuracy": [
+          0.8049242424242424,
+          0.8129154795821463,
+          0.8115044247787611,
+          0.7921714818266542,
+          0.8021390374331551,
+          0.7882462686567164,
+          0.7855871886120996,
+          0.8109125117591721
+        ]
+      }
+    },
+    "history_to_new": {
+      "additive": {
+        "rows": 1044,
+        "correct": 804,
+        "accuracy": 0.7701149425287356,
+        "log_loss": 0.4693051401985517,
+        "seed_accuracy": [
+          0.7701149425287356
+        ],
+        "fold_accuracy": [
+          0.8,
+          0.7982456140350878,
+          0.7446808510638298,
+          0.7614678899082569,
+          0.762962962962963,
+          0.7687074829931972,
+          0.7938931297709924,
+          0.7394366197183099
+        ]
+      },
+      "silu": {
+        "rows": 1044,
+        "correct": 815,
+        "accuracy": 0.7806513409961686,
+        "log_loss": 0.42741848617869715,
+        "seed_accuracy": [
+          0.7825670498084292,
+          0.7796934865900383
+        ],
+        "fold_accuracy": [
+          0.784,
+          0.8245614035087719,
+          0.7446808510638298,
+          0.8073394495412844,
+          0.7851851851851852,
+          0.7619047619047619,
+          0.7862595419847328,
+          0.7676056338028169
+        ]
+      },
+      "learned_spline": {
+        "rows": 1044,
+        "correct": 824,
+        "accuracy": 0.789272030651341,
+        "log_loss": 0.4360120280232197,
+        "seed_accuracy": [
+          0.7969348659003831,
+          0.7777777777777778
+        ],
+        "fold_accuracy": [
+          0.808,
+          0.8070175438596491,
+          0.75177304964539,
+          0.8165137614678899,
+          0.7703703703703704,
+          0.8095238095238095,
+          0.7938931297709924,
+          0.7676056338028169
+        ]
+      }
+    }
+  },
+  "scopes": {
+    "full": {
+      "known_all": {
+        "rows": 8532,
+        "errors": 1441,
+        "changes": {
+          "additive": {
+            "fixed": 313,
+            "harmed": 563,
+            "net": -250,
+            "fold_net": [
+              -34,
+              -21,
+              -27,
+              -29,
+              -24,
+              -21,
+              -33,
+              -61
+            ]
+          },
+          "silu": {
+            "fixed": 315,
+            "harmed": 491,
+            "net": -176,
+            "fold_net": [
+              -15,
+              -22,
+              -18,
+              -14,
+              -20,
+              -19,
+              -31,
+              -37
+            ]
+          },
+          "learned_spline": {
+            "fixed": 398,
+            "harmed": 609,
+            "net": -211,
+            "fold_net": [
+              -29,
+              -20,
+              -26,
+              -23,
+              -27,
+              -15,
+              -38,
+              -33
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 175,
+            "harmed": 252,
+            "net": -77,
+            "fold_net": [
+              -13,
+              -12,
+              -2,
+              -13,
+              -6,
+              -7,
+              -20,
+              -4
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 194,
+            "harmed": 293,
+            "net": -99,
+            "fold_net": [
+              -10,
+              -10,
+              -17,
+              -8,
+              -18,
+              -2,
+              -13,
+              -21
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 266,
+            "harmed": 351,
+            "net": -85,
+            "fold_net": [
+              -12,
+              -8,
+              -7,
+              -4,
+              -11,
+              -4,
+              -19,
+              -20
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 44,
+            "harmed": 49,
+            "net": -5,
+            "fold_net": [
+              1,
+              0,
+              -1,
+              1,
+              -1,
+              1,
+              0,
+              -6
+            ]
+          }
+        }
+      },
+      "ten_unanimous": {
+        "rows": 7891,
+        "errors": 1181,
+        "changes": {
+          "additive": {
+            "fixed": 166,
+            "harmed": 324,
+            "net": -158,
+            "fold_net": [
+              -24,
+              -17,
+              -17,
+              -21,
+              -13,
+              -12,
+              -19,
+              -35
+            ]
+          },
+          "silu": {
+            "fixed": 142,
+            "harmed": 266,
+            "net": -124,
+            "fold_net": [
+              -10,
+              -14,
+              -8,
+              -13,
+              -14,
+              -22,
+              -22,
+              -21
+            ]
+          },
+          "learned_spline": {
+            "fixed": 240,
+            "harmed": 391,
+            "net": -151,
+            "fold_net": [
+              -29,
+              -17,
+              -14,
+              -20,
+              -16,
+              -14,
+              -26,
+              -15
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 152,
+            "harmed": 219,
+            "net": -67,
+            "fold_net": [
+              -14,
+              -10,
+              -4,
+              -13,
+              -3,
+              -2,
+              -16,
+              -5
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 67,
+            "harmed": 131,
+            "net": -64,
+            "fold_net": [
+              -9,
+              -9,
+              -7,
+              -7,
+              -10,
+              -8,
+              -8,
+              -6
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 142,
+            "harmed": 204,
+            "net": -62,
+            "fold_net": [
+              -14,
+              -10,
+              -3,
+              -6,
+              -7,
+              -6,
+              -13,
+              -3
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 7,
+            "harmed": 10,
+            "net": -3,
+            "fold_net": [
+              1,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -2
+            ]
+          }
+        }
+      },
+      "untouched_by_queued_tabnet": {
+        "rows": 7870,
+        "errors": 1166,
+        "changes": {
+          "additive": {
+            "fixed": 162,
+            "harmed": 320,
+            "net": -158,
+            "fold_net": [
+              -23,
+              -18,
+              -17,
+              -21,
+              -13,
+              -12,
+              -20,
+              -34
+            ]
+          },
+          "silu": {
+            "fixed": 138,
+            "harmed": 262,
+            "net": -124,
+            "fold_net": [
+              -9,
+              -15,
+              -9,
+              -13,
+              -14,
+              -22,
+              -22,
+              -20
+            ]
+          },
+          "learned_spline": {
+            "fixed": 233,
+            "harmed": 387,
+            "net": -154,
+            "fold_net": [
+              -29,
+              -19,
+              -15,
+              -20,
+              -16,
+              -14,
+              -27,
+              -14
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 149,
+            "harmed": 218,
+            "net": -69,
+            "fold_net": [
+              -14,
+              -10,
+              -4,
+              -13,
+              -3,
+              -2,
+              -18,
+              -5
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 65,
+            "harmed": 128,
+            "net": -63,
+            "fold_net": [
+              -9,
+              -10,
+              -8,
+              -7,
+              -10,
+              -8,
+              -6,
+              -5
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 138,
+            "harmed": 200,
+            "net": -62,
+            "fold_net": [
+              -14,
+              -10,
+              -3,
+              -6,
+              -7,
+              -6,
+              -14,
+              -2
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 6,
+            "harmed": 10,
+            "net": -4,
+            "fold_net": [
+              1,
+              -1,
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              -2
+            ]
+          }
+        }
+      },
+      "no_archived_challenger_countervote": {
+        "rows": 3201,
+        "errors": 172,
+        "changes": {
+          "additive": {
+            "fixed": 0,
+            "harmed": 2,
+            "net": -2,
+            "fold_net": [
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ]
+          },
+          "silu": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "fold_net": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "learned_spline": {
+            "fixed": 2,
+            "harmed": 12,
+            "net": -10,
+            "fold_net": [
+              -1,
+              -2,
+              1,
+              -3,
+              0,
+              0,
+              -3,
+              -2
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 2,
+            "harmed": 12,
+            "net": -10,
+            "fold_net": [
+              -1,
+              -2,
+              1,
+              -3,
+              0,
+              0,
+              -3,
+              -2
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "fold_net": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 2,
+            "harmed": 6,
+            "net": -4,
+            "fold_net": [
+              -1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -3,
+              -1
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "fold_net": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "historical_to_new": {
+      "known_all": {
+        "rows": 1033,
+        "errors": 184,
+        "changes": {
+          "additive": {
+            "fixed": 31,
+            "harmed": 82,
+            "net": -51,
+            "fold_net": [
+              -4,
+              -6,
+              -4,
+              -7,
+              -7,
+              -5,
+              -3,
+              -15
+            ]
+          },
+          "silu": {
+            "fixed": 32,
+            "harmed": 73,
+            "net": -41,
+            "fold_net": [
+              -6,
+              -3,
+              -5,
+              -2,
+              -4,
+              -6,
+              -4,
+              -11
+            ]
+          },
+          "learned_spline": {
+            "fixed": 54,
+            "harmed": 83,
+            "net": -29,
+            "fold_net": [
+              -3,
+              -4,
+              -4,
+              0,
+              -6,
+              1,
+              -3,
+              -10
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 28,
+            "harmed": 40,
+            "net": -12,
+            "fold_net": [
+              0,
+              -4,
+              -1,
+              1,
+              -3,
+              1,
+              -1,
+              -5
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 20,
+            "harmed": 40,
+            "net": -20,
+            "fold_net": [
+              -4,
+              -1,
+              -4,
+              -1,
+              -1,
+              -2,
+              -2,
+              -5
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 38,
+            "harmed": 53,
+            "net": -15,
+            "fold_net": [
+              -1,
+              -1,
+              -4,
+              0,
+              -2,
+              3,
+              -1,
+              -9
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 5,
+            "harmed": 10,
+            "net": -5,
+            "fold_net": [
+              -1,
+              -1,
+              -1,
+              1,
+              1,
+              0,
+              0,
+              -4
+            ]
+          }
+        }
+      },
+      "ten_unanimous": {
+        "rows": 948,
+        "errors": 160,
+        "changes": {
+          "additive": {
+            "fixed": 17,
+            "harmed": 41,
+            "net": -24,
+            "fold_net": [
+              -1,
+              -5,
+              -3,
+              -4,
+              -3,
+              -2,
+              -1,
+              -5
+            ]
+          },
+          "silu": {
+            "fixed": 19,
+            "harmed": 37,
+            "net": -18,
+            "fold_net": [
+              -4,
+              -2,
+              -1,
+              -1,
+              -1,
+              -5,
+              -2,
+              -2
+            ]
+          },
+          "learned_spline": {
+            "fixed": 40,
+            "harmed": 46,
+            "net": -6,
+            "fold_net": [
+              -2,
+              -5,
+              0,
+              1,
+              -1,
+              3,
+              -1,
+              -1
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 27,
+            "harmed": 32,
+            "net": -5,
+            "fold_net": [
+              0,
+              -5,
+              1,
+              1,
+              -2,
+              3,
+              0,
+              -3
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 9,
+            "harmed": 13,
+            "net": -4,
+            "fold_net": [
+              -3,
+              -1,
+              -1,
+              0,
+              1,
+              -1,
+              -1,
+              2
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 27,
+            "harmed": 24,
+            "net": 3,
+            "fold_net": [
+              0,
+              -1,
+              0,
+              1,
+              1,
+              3,
+              1,
+              -2
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "fold_net": [
+              -1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "untouched_by_queued_tabnet": {
+        "rows": 944,
+        "errors": 157,
+        "changes": {
+          "additive": {
+            "fixed": 16,
+            "harmed": 41,
+            "net": -25,
+            "fold_net": [
+              -1,
+              -5,
+              -3,
+              -4,
+              -3,
+              -2,
+              -2,
+              -5
+            ]
+          },
+          "silu": {
+            "fixed": 18,
+            "harmed": 37,
+            "net": -19,
+            "fold_net": [
+              -4,
+              -2,
+              -1,
+              -1,
+              -1,
+              -5,
+              -3,
+              -2
+            ]
+          },
+          "learned_spline": {
+            "fixed": 38,
+            "harmed": 46,
+            "net": -8,
+            "fold_net": [
+              -2,
+              -5,
+              0,
+              1,
+              -2,
+              3,
+              -2,
+              -1
+            ]
+          },
+          "spline_alone_vs_two_controls": {
+            "fixed": 26,
+            "harmed": 32,
+            "net": -6,
+            "fold_net": [
+              0,
+              -5,
+              1,
+              1,
+              -3,
+              3,
+              0,
+              -3
+            ]
+          },
+          "spline_and_silu": {
+            "fixed": 8,
+            "harmed": 13,
+            "net": -5,
+            "fold_net": [
+              -3,
+              -1,
+              -1,
+              0,
+              1,
+              -1,
+              -2,
+              2
+            ]
+          },
+          "spline_opposed_both_seeds": {
+            "fixed": 25,
+            "harmed": 24,
+            "net": 1,
+            "fold_net": [
+              0,
+              -1,
+              0,
+              1,
+              0,
+              3,
+              0,
+              -2
+            ]
+          },
+          "spline_opposed_both_seeds_at_80pct": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "fold_net": [
+              -1,
+              0,
+              0,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  },
+  "train_inputs": "Official training roster only. Home planet, destination, cryosleep, VIP, deck, side, cabin number, age, five bills, their observed sum and active count, booking size. Order size is the count on the unlabeled 8693-row training roster, including members outside the historical subset. No names or identifiers enter the design. Each outer training set determines its categories, positive numeric knots and first-layer design.",
+  "architecture": "One positive-quantile hat basis per numeric input. Linear coefficients give each incoming numeric-hidden edge its own spline. Each hidden unit then has a learned nine-knot output spline plus a linear term. SiLU replaces this second layer with a fixed activation under identical inputs and width. The logistic control uses the same first-layer basis without hidden units. Both networks train on the same batches and fixed two seeds; probability mean is evaluated at 0.5.",
+  "earlier_implementations": "broad_adaptive_manifest_splines_n23.py selects products of input basis terms; solo_conditional_splines_n25.py uses predefined interactions and linear logistic coefficients. Neither learns a spline of a hidden projection.",
+  "scope": "Eight outer folds train from all other orders. Transfer trains once per recipe on exactly 6954 historic labels to predict 1044 passengers whose orders never appeared there. No tuning using their labels. In 1033/1044 cases the existing competing releases can be reconstructed. That queued comparator uses some full-data outer-fold base predictions. These protocols and passengers overlap; this is not an independent new dataset.",
+  "denominators": "known_all compares each model to the queued TabNet version. ten_unanimous compares to all ten prior versions on common decisions. untouched_by_queued_tabnet retains only unanimous cases the double-confirmed TabNet did not flip. The zero-archived block is the previously enumerated bank and three TabNet recipes; its membership is not a model error oracle.",
+  "caches": "artifacts/nov26_booking_spline_network"
+}
