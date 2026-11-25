@@ -1,0 +1,17 @@
+{
+  "version": "n25_certified_bill_margins",
+  "seeds": [
+    251141,
+    251143
+  ],
+  "validation": "eight held-out whole bookings folds per seed",
+  "arms": [
+    "personal",
+    "margins",
+    "measured",
+    "reconstructed",
+    "same_fit_reconstructed"
+  ],
+  "rule": "Average per-seed medians, weight 25% versus 75% original Mitra; preserve nine and require certification.",
+  "evidence": "reports/nov23_matched_learning_curve/certified_bill_margins.json"
+}
