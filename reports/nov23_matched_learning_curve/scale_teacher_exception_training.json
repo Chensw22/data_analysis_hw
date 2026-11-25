@@ -1,0 +1,270 @@
+{
+  "training_rows_by_fold": {
+    "1": [
+      638,
+      647,
+      584,
+      628,
+      615,
+      621,
+      637,
+      635
+    ],
+    "5": [
+      3224,
+      3166,
+      3068,
+      3209,
+      3129,
+      3188,
+      3135,
+      3208
+    ],
+    "10": [
+      6548,
+      6525,
+      6393,
+      6516,
+      6412,
+      6512,
+      6447,
+      6545
+    ]
+  },
+  "eightfold": {
+    "linear_10pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 32,
+        "harmed": 79
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 32,
+        "harmed": 71
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 8
+      }
+    },
+    "tree_10pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 30,
+        "harmed": 54
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 30,
+        "harmed": 53
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "linear_50pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 8,
+        "harmed": 12
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 8,
+        "harmed": 12
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "tree_50pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 2,
+        "harmed": 6
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 2,
+        "harmed": 6
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "linear_100pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 2,
+        "harmed": 7
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 2,
+        "harmed": 7
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "tree_100pct": {
+      "all_aligned": {
+        "rows": 6400,
+        "errors": 642,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "with_any_challenger": {
+        "rows": 3205,
+        "errors": 471,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "no_challenger": {
+        "rows": 3195,
+        "errors": 171,
+        "fixed": 0,
+        "harmed": 0
+      }
+    }
+  },
+  "full": {
+    "linear_10pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 32,
+      "harmed": 79
+    },
+    "tree_10pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 30,
+      "harmed": 54
+    },
+    "linear_50pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 8,
+      "harmed": 12
+    },
+    "tree_50pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 2,
+      "harmed": 6
+    },
+    "linear_100pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 2,
+      "harmed": 7
+    },
+    "tree_100pct": {
+      "rows": 6399,
+      "errors": 641,
+      "fixed": 0,
+      "harmed": 1
+    }
+  },
+  "historical_to_new": {
+    "linear_10pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 9,
+      "harmed": 12
+    },
+    "tree_10pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 8,
+      "harmed": 11
+    },
+    "linear_50pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 3,
+      "harmed": 1
+    },
+    "tree_50pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 1,
+      "harmed": 1
+    },
+    "linear_100pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 0,
+      "harmed": 1
+    },
+    "tree_100pct": {
+      "rows": 741,
+      "errors": 86,
+      "fixed": 0,
+      "harmed": 0
+    }
+  },
+  "bookingmix": {
+    "linear_10pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 26,
+      "harmed": 51
+    },
+    "tree_10pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 22,
+      "harmed": 42
+    },
+    "linear_50pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 8,
+      "harmed": 8
+    },
+    "tree_50pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 2,
+      "harmed": 5
+    },
+    "linear_100pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 1,
+      "harmed": 5
+    },
+    "tree_100pct": {
+      "rows": 4498,
+      "errors": 482,
+      "fixed": 0,
+      "harmed": 1
+    }
+  }
+}
