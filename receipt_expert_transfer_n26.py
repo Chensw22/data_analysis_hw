@@ -103,9 +103,22 @@ def run():
                 sets[cohort]=stats(delta,mask,fold,g[ids])
             res[key]=sets
         edits_any=(post>0).any(1)&known
+        earlier=(pre>0).any(1)
+        charges=raw.iloc[ids][['RoomService','FoodCourt','ShoppingMall','Spa','VRDeck']]
+        positive=charges.gt(0).any(axis=1).to_numpy()
+        cohorts={'family_agreement':family,'anchor_false':family&~anchor,'anchor_true':family&anchor,
+                 'has_positive_charge':family&positive,'no_recorded_positive_charge':family&~positive,
+                 'awake_and_positive':family&awake[ids]&positive,'at_least_one_missing_charge':family&charges.isna().any(axis=1).to_numpy()}
+        coverage={}
+        for key,mask in cohorts.items():
+            errors=mask&wrong
+            correct=mask&~wrong
+            coverage[key]=dict(rows=int(mask.sum()),errors=int(errors.sum()),any_rescue=int((errors&edits_any).sum()),
+                               any_harm=int((correct&edits_any).sum()),new_only_rescue=int((errors&edits_any&~earlier).sum()),
+                               new_only_harm=int((correct&edits_any&~earlier).sum()),no_rescue=int((errors&~edits_any).sum()))
         report[tag]=dict(results=res,upper=dict(original_errors=int((known&wrong).sum()),reachable=int((edits_any&wrong).sum()),
             exposed_correct=int((edits_any&~wrong).sum()),family_errors=int((family&wrong).sum()),
-            family_reachable=int((edits_any&family&wrong).sum()),family_exposed=int((edits_any&family&~wrong).sum())))
+            family_reachable=int((edits_any&family&wrong).sum()),family_exposed=int((edits_any&family&~wrong).sum())),coverage=coverage)
         print(tag,[(m,s.get('all',s['new'])['fixed'],s.get('all',s['new'])['harmed']) for m,s in res.items()],flush=True)
     DEST.with_name('receipt_expert_transfer.json').write_text(json.dumps(report,indent=2)+'\n')
 
