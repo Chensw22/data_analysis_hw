@@ -1,0 +1,338 @@
+{
+  "input_names": [
+    "Mitra2_adapted",
+    "Mitra1_frozen",
+    "Mitra2_frozen",
+    "TabDPT",
+    "mask_net_discriminative",
+    "mask_net_joint",
+    "mask_net_class_likelihood",
+    "conditional_bill_flow",
+    "latent_class_mixture",
+    "conditional_profile_mixture",
+    "LimiX2",
+    "booking_transport_classifier",
+    "conditional_age_density",
+    "conditional_bill_deviations",
+    "confidence_ordered_booking",
+    "constrained_track_odds",
+    "joint_manifest_forest",
+    "joint_party_tabicl",
+    "latent_receipt_channel",
+    "manifest_role_joint",
+    "neighbor_booking_composition",
+    "solo_selection_likelihood",
+    "scratch_seed_431",
+    "scratch_seed_731",
+    "masked_pretraining",
+    "tuned_tabstar",
+    "conditional_bills"
+  ],
+  "counts": {
+    "selected_under_all_127": 1435,
+    "majority_correct_in_selected": 1308
+  },
+  "label_isolation": "All supervised inputs use the same outer booking fold. The three-way second level trains on other orders in that same outer fold. The 127-model subgroup and ten-way parent enter only final stratification. EXAONE and all queue meta-predictions are excluded from calibration features, routing labels and sample selection.",
+  "scopes": {
+    "awake_paid_127_unanimous_negative": {
+      "equal_soft_vote": {
+        "rows": 1435,
+        "errors": 127,
+        "base_rate": 0.08850174216027874,
+        "auc": 0.5895819788581473,
+        "average_precision": 0.11816441666125307,
+        "maximum": 0.3042339948772404,
+        "at_half": {
+          "corrected": 0,
+          "harmed": 0,
+          "by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 147,
+          "corrected": 17,
+          "harmed": 130
+        },
+        "individual_fold_auc": [
+          0.6354166666666666,
+          0.6351020408163266,
+          0.5924775707384403,
+          0.5817643894566972,
+          0.6441441441441442,
+          0.4880382775119617,
+          0.607030978071702,
+          0.5713470319634704
+        ]
+      },
+      "mean_logit": {
+        "rows": 1435,
+        "errors": 127,
+        "base_rate": 0.08850174216027874,
+        "auc": 0.5857051698812878,
+        "average_precision": 0.10589063077902058,
+        "maximum": 0.32951308590321227,
+        "at_half": {
+          "corrected": 0,
+          "harmed": 0,
+          "by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 147,
+          "corrected": 12,
+          "harmed": 135
+        },
+        "individual_fold_auc": [
+          0.6302083333333333,
+          0.639591836734694,
+          0.5614216701173224,
+          0.5804195804195804,
+          0.6527777777777778,
+          0.5007974481658692,
+          0.5471632439958232,
+          0.531392694063927
+        ]
+      },
+      "individual_profiles": {
+        "rows": 1435,
+        "errors": 127,
+        "base_rate": 0.08850174216027874,
+        "auc": 0.5636121746249609,
+        "average_precision": 0.116824698971228,
+        "maximum": 0.5243968545977811,
+        "at_half": {
+          "corrected": 1,
+          "harmed": 0,
+          "by_fold": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 147,
+          "corrected": 15,
+          "harmed": 132
+        },
+        "individual_fold_auc": [
+          0.5655381944444444,
+          0.6828571428571428,
+          0.5631469979296065,
+          0.534158149542765,
+          0.5364114114114115,
+          0.4370015948963318,
+          0.5976331360946746,
+          0.5034246575342466
+        ]
+      },
+      "sorted_profiles": {
+        "rows": 1435,
+        "errors": 127,
+        "base_rate": 0.08850174216027874,
+        "auc": 0.5752004623275301,
+        "average_precision": 0.10268261540432873,
+        "maximum": 0.3449136055506825,
+        "at_half": {
+          "corrected": 0,
+          "harmed": 0,
+          "by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 147,
+          "corrected": 11,
+          "harmed": 136
+        },
+        "individual_fold_auc": [
+          0.5963541666666667,
+          0.6355102040816326,
+          0.5697032436162871,
+          0.5406132329209252,
+          0.6445195195195195,
+          0.5146198830409356,
+          0.5280194918203968,
+          0.5114155251141553
+        ]
+      }
+    },
+    "awake_paid_ten_unanimous_negative": {
+      "equal_soft_vote": {
+        "rows": 3476,
+        "errors": 424,
+        "base_rate": 0.12197928653624857,
+        "auc": 0.7036276861445635,
+        "average_precision": 0.28244210312706897,
+        "maximum": 0.6708543471692688,
+        "at_half": {
+          "corrected": 7,
+          "harmed": 10,
+          "by_fold": [
+            0,
+            -2,
+            0,
+            1,
+            -3,
+            1,
+            -1,
+            1
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 351,
+          "corrected": 132,
+          "harmed": 219
+        },
+        "individual_fold_auc": [
+          0.7682047271463329,
+          0.6873140857392827,
+          0.6665366804776992,
+          0.7388288104468476,
+          0.6776315789473684,
+          0.7406332453825858,
+          0.66097303943093,
+          0.6933019976498238
+        ]
+      },
+      "mean_logit": {
+        "rows": 3476,
+        "errors": 424,
+        "base_rate": 0.12197928653624857,
+        "auc": 0.6997646146047133,
+        "average_precision": 0.2719880864475152,
+        "maximum": 0.7607376312889155,
+        "at_half": {
+          "corrected": 11,
+          "harmed": 17,
+          "by_fold": [
+            -2,
+            -3,
+            0,
+            5,
+            -4,
+            0,
+            -1,
+            -1
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 351,
+          "corrected": 124,
+          "harmed": 227
+        },
+        "individual_fold_auc": [
+          0.7649026763990268,
+          0.705395158938466,
+          0.6532293443821594,
+          0.7431136502754541,
+          0.6808333333333334,
+          0.7330870712401056,
+          0.6308509704048476,
+          0.6708186447316883
+        ]
+      },
+      "individual_profiles": {
+        "rows": 3476,
+        "errors": 424,
+        "base_rate": 0.12197928653624857,
+        "auc": 0.6828695689804397,
+        "average_precision": 0.24122099206593223,
+        "maximum": 0.9550633458645197,
+        "at_half": {
+          "corrected": 27,
+          "harmed": 47,
+          "by_fold": [
+            1,
+            -6,
+            -3,
+            -3,
+            -2,
+            -1,
+            -4,
+            -2
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 351,
+          "corrected": 109,
+          "harmed": 242
+        },
+        "individual_fold_auc": [
+          0.7035106013208203,
+          0.7229512977544473,
+          0.6437728491347794,
+          0.7040603958375842,
+          0.6646052631578947,
+          0.7096042216358839,
+          0.6320365328883815,
+          0.6802193497845672
+        ]
+      },
+      "sorted_profiles": {
+        "rows": 3476,
+        "errors": 424,
+        "base_rate": 0.12197928653624857,
+        "auc": 0.6765089084794382,
+        "average_precision": 0.23934096948524392,
+        "maximum": 0.8425598873647079,
+        "at_half": {
+          "corrected": 14,
+          "harmed": 20,
+          "by_fold": [
+            0,
+            -2,
+            -2,
+            -1,
+            -4,
+            3,
+            2,
+            -2
+          ]
+        },
+        "per_fold_top_tenth": {
+          "rows": 351,
+          "corrected": 113,
+          "harmed": 238
+        },
+        "individual_fold_auc": [
+          0.7510862009037191,
+          0.6710994459025954,
+          0.6199853765537411,
+          0.7043868598245255,
+          0.6480263157894737,
+          0.7346174142480212,
+          0.6154386581189074,
+          0.6589894242068155
+        ]
+      }
+    }
+  }
+}
