@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日 02:51，主账号当日已用 10/10 次，累计 90 次，公榜最佳 81.739%，第 113 / 2,206，第三名 83.937%。本地明显提升即可进入线上评测。双重确认版冻结于 d61021545110dedbd84395aee791cf77aedfc879，测试集相对 214 人版改判 86 人。Mac 一次性任务 com.chensw22.spaceship.consensusreview.once 已启动，等待 214 人版回执与可用额度，提交前通过现有流程弹窗。复核请查实时任务、artifacts/proposal_n26_consensus_review/queue_status.json 及正式回执。
+
 - 11 月 26 日 00:33 主账号可用 0 次、累计 90 次，最佳 81.739%，第 113 / 2,203，第三名 83.937%。214 人组合版合并 87 与 154 人版的改判，其中 27 人重合；冻结于 3fda5252c99e7b5ca2203025ff8468850e9e6763。Mac 一次性任务 com.chensw22.spaceship.joint214.once 已启动，等待 87 人版获得正式回执。手动操作前核对实时任务、queue_status.json 及线上回执。参见 reports/proposal_n26_joint_dispute_awake/manifest.json。
 
 - 11 月 26 日 00:17 主账号官方余量 0 / 10，最佳 81.739%，第 113 / 2,203，第三名 83.937%。全量重训的 68 个配置已预测全部 4,277 人。4–16 张少数票版本改判 87 人，冻结于 6a64d36000c2c821a166d995685482c423fd1d12。Mac 任务 com.chensw22.spaceship.disputeband87.once 已启动，等待 41 人版官方回执后复查额度、提醒并提交。参见 reports/proposal_n26_dispute_band/manifest.json 与 reports/nov23_matched_learning_curve/RESULTS.md；重新提交前核验实时任务及回执。
