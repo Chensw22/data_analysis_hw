@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 25 日，北京时间 15:04 确认昨日三份排队文件均获主账号公榜回执。10 人九票版成为新最佳 81.739%（58873426），70 人版 81.552%（58873486），41 人版 81.529%（58873513）。账号第 112 / 2,176 名，第三名 83.937%，当时可用 7 次。以各候选 reports 目录的官方回执和 reports/current_best_submission.json 为准。
+
 - 11 月 24 日 15:43 北京时间，第三顺位的 Mac 任务 `com.chensw22.spaceship.netedits41.once` 已在当前会话启动。候选 `proposal_n24_bagged_net_edits` 冻结于 `af958adc9025fc874eeb726c22d26d4dfee18969`，相对 v131 改判 41 人。它等待第二顺位 70 人版取得官方回执，再根据主账号额度弹窗提交。初始状态 `awaiting_predecessor`、未上传；检查时使用各候选的 `artifacts/<候选>/queue_status.json` 与实际进程。
 
 - 11 月 24 日 14:51 北京时间，已启动第二顺位的 Mac 一次性任务 `com.chensw22.spaceship.solorandom70.once`，导出固定在 `39b6ac5214c82632cc73e0a578814a71824c924a`。先等待 10 人九票版的官方成绩，再按主账号剩余额度弹窗提交 70 人组合版 `proposal_n24_solo_random_nine`。首次检查状态为 `awaiting_predecessor`，未尝试上传。手动提交前检查两份候选各自的 `artifacts/<候选>/queue_status.json` 和官方回执。整单留出的三次重训净增 18、19、13 人，见 `reports/nov23_matched_learning_curve/solo_release_replay.json`。
