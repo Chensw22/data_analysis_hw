@@ -1,0 +1,189 @@
+{
+  "historical_to_new": {
+    "real": {
+      "rows": 230,
+      "errors": 20,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.6947619047619048,
+      "top_tenth_size": 23,
+      "top_tenth_errors": 7,
+      "max_risk": 0.14759558758968194
+    },
+    "permuted": {
+      "rows": 230,
+      "errors": 20,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.561547619047619,
+      "top_tenth_size": 23,
+      "top_tenth_errors": 3,
+      "max_risk": 0.10876226700108438
+    },
+    "original": {
+      "rows": 230,
+      "errors": 20,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.6398809523809524,
+      "top_tenth_size": 23,
+      "top_tenth_errors": 5,
+      "max_risk": 0.3073580265045166
+    },
+    "confirmation_rules": [
+      {
+        "rule": "booking <= 7305 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 227,
+        "confirmation_errors": 31,
+        "estimated_risk": 0.13485755499459068
+      },
+      {
+        "rule": "RoomService_share <= 0.157 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 134,
+        "confirmation_errors": 13,
+        "estimated_risk": 0.09641919312485081
+      },
+      {
+        "rule": "active_services > 2 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 207,
+        "confirmation_errors": 27,
+        "estimated_risk": 0.1287977926685061
+      },
+      {
+        "rule": "deck = F & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 210,
+        "confirmation_errors": 29,
+        "estimated_risk": 0.1361996579070129
+      },
+      {
+        "rule": "Destination = 55 Cancri e & fare_model_error_probability <= 0.08328",
+        "confirmation_rows": 45,
+        "confirmation_errors": 4,
+        "estimated_risk": 0.08851934761752478
+      },
+      {
+        "rule": "original_error_odds <= -1.703 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 188,
+        "confirmation_errors": 24,
+        "estimated_risk": 0.12597717052922863
+      },
+      {
+        "rule": "Destination = 55 Cancri e & deck_probability > 0.9094",
+        "confirmation_rows": 24,
+        "confirmation_errors": 2,
+        "estimated_risk": 0.08411016949152542
+      },
+      {
+        "rule": "bill > 951.5 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 127,
+        "confirmation_errors": 19,
+        "estimated_risk": 0.1458631512868801
+      },
+      {
+        "rule": "Age > 21.25 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 216,
+        "confirmation_errors": 24,
+        "estimated_risk": 0.11023002421307505
+      },
+      {
+        "rule": "deck_probability <= 0.9594 & fare_model_error_probability > 0.05092",
+        "confirmation_rows": 231,
+        "confirmation_errors": 27,
+        "estimated_risk": 0.11586412311183604
+      },
+      {
+        "rule": "ShoppingMall_share > 0.09401 & fare_model_error_probability > 0.08581",
+        "confirmation_rows": 48,
+        "confirmation_errors": 7,
+        "estimated_risk": 0.135932944606414
+      },
+      {
+        "rule": "deck_probability > 0.9037 & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 143,
+        "confirmation_errors": 18,
+        "estimated_risk": 0.12325989998648465
+      },
+      {
+        "rule": "RoomService_share > 0.1325 & fare_model_error_probability > 0.08581",
+        "confirmation_rows": 83,
+        "confirmation_errors": 8,
+        "estimated_risk": 0.09464005382372728
+      },
+      {
+        "rule": "bill > 788 & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 190,
+        "confirmation_errors": 27,
+        "estimated_risk": 0.13945578231292516
+      },
+      {
+        "rule": "party_size <= 2 & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 253,
+        "confirmation_errors": 30,
+        "estimated_risk": 0.11728829462819611
+      },
+      {
+        "rule": "side = P & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 147,
+        "confirmation_errors": 19,
+        "estimated_risk": 0.12653061224489795
+      },
+      {
+        "rule": "Age > 39.75 & RoomService_share > 0.1325",
+        "confirmation_rows": 65,
+        "confirmation_errors": 6,
+        "estimated_risk": 0.09057869723231758
+      },
+      {
+        "rule": "Age > 39.75 & ShoppingMall_share > 0.002399",
+        "confirmation_rows": 61,
+        "confirmation_errors": 8,
+        "estimated_risk": 0.12481514344868382
+      },
+      {
+        "rule": "Spa_share <= 0.02735 & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 162,
+        "confirmation_errors": 18,
+        "estimated_risk": 0.10948379351740696
+      },
+      {
+        "rule": "deck = F & fare_model_error_probability > 0.05176",
+        "confirmation_rows": 197,
+        "confirmation_errors": 30,
+        "estimated_risk": 0.1493280238924838
+      }
+    ]
+  },
+  "bookingmix": {
+    "real": {
+      "rows": 1256,
+      "errors": 97,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.551319569838912,
+      "top_tenth_size": 126,
+      "top_tenth_errors": 17,
+      "max_risk": 0.21807892747742375
+    },
+    "permuted": {
+      "rows": 1256,
+      "errors": 97,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.48873006413278425,
+      "top_tenth_size": 126,
+      "top_tenth_errors": 7,
+      "max_risk": 0.2062465977136636
+    },
+    "original": {
+      "rows": 1256,
+      "errors": 97,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.5951050941533316,
+      "top_tenth_size": 126,
+      "top_tenth_errors": 15,
+      "max_risk": 0.3486451804637909
+    },
+    "confirmation_rules": []
+  }
+}
