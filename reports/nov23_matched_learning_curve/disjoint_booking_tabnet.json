@@ -1,0 +1,379 @@
+{
+  "protocol": "Each fold shuffles sorted available whole order IDs with numpy default_rng(421901+fold). The first floor(n_orders/2) order IDs form half 0; remaining orders form half 1. Train labels and order IDs are disjoint. Both fits use the same seed-431 initialization and 55 supervised epochs. Each half fits all preprocessing on its own support. Original full-support scores come from the same fold's verified archive. No filtering or learned selection.",
+  "comparison": "both means both models oppose the frozen ten-version decision; one means exactly one does. Full is an eight-fold same-protocol comparison. Historical accuracy is independently group-purged; the additional comparison uses the same passengers' eight-fold frozen releases.",
+  "reports": {
+    "full": {
+      "folds": {
+        "0": {
+          "people0": 3793,
+          "people1": 3844,
+          "orders0": 2719,
+          "orders1": 2720,
+          "held_people": 1056,
+          "held_orders": 778,
+          "source_sha256": "4b6caeba8606917b9f1bbffbaab5ecc07ef8404181e6669aa087b7193a2b6c86",
+          "prediction_sha256": "52bffa5887e9d67930a3e7344adf773f71e24e91c4838b856c313a6b876b0a93",
+          "rerun_full_support_max_abs_difference": 0.0
+        },
+        "1": {
+          "people0": 3789,
+          "people1": 3851,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1053,
+          "held_orders": 777,
+          "source_sha256": "b4331daa06317ef7c671e234cd5181b51109f778f3b2f8e071b29364f4a17983",
+          "prediction_sha256": "0282a8a597afa52892feab7c11ee67cbc5a46ec30851a554ffb03b75d0c59943"
+        },
+        "2": {
+          "people0": 3780,
+          "people1": 3783,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1130,
+          "held_orders": 777,
+          "source_sha256": "dfce9dd5b609ccc4a1717e102bd51afa4461c75706947ad9a81a390569eb1fee",
+          "prediction_sha256": "0c7ed712e6c67a6856264051a4a3212d2ffb874506edf6ef7f508f58fa8530a5"
+        },
+        "3": {
+          "people0": 3805,
+          "people1": 3815,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1073,
+          "held_orders": 777,
+          "source_sha256": "fa47e57e39640071241613cda94c339a14409799ba8bdbd432474f099f62fc24",
+          "prediction_sha256": "0e516d6a66bdcbdb9e7ec1035843c07ca94deebb5b603c2fc400b767eefe911d"
+        },
+        "4": {
+          "people0": 3818,
+          "people1": 3753,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1122,
+          "held_orders": 777,
+          "source_sha256": "8b74e3bc92fc856c3e6682d4fd42df3bf1d2b25d7e488810cc38249c71a0b220",
+          "prediction_sha256": "43d6373798c82fd1fe7d87fa186bf61cbed3858846222c9ee7e59317fcbd261d"
+        },
+        "5": {
+          "people0": 3807,
+          "people1": 3814,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1072,
+          "held_orders": 777,
+          "source_sha256": "49d519be06fa8651e323c7241a8646ddabeab488a4545eecf5d9f4b0a7f6f228",
+          "prediction_sha256": "b061ae05db24f46fa3c0c6e94236e1c9dbaac80689b8ef8219e3a468bb91e1a5"
+        },
+        "6": {
+          "people0": 3744,
+          "people1": 3825,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1124,
+          "held_orders": 777,
+          "source_sha256": "9a996a471759309d75f9ba20d1dea7e7b6b9906105b6d31ea71c61e6aace5e92",
+          "prediction_sha256": "a1da6f22d649ebefb97fc5e9b98df625dc5f715adfca0a58c4a73154325095da"
+        },
+        "7": {
+          "people0": 3828,
+          "people1": 3802,
+          "orders0": 2720,
+          "orders1": 2720,
+          "held_people": 1063,
+          "held_orders": 777,
+          "source_sha256": "db51f85c8b5b87490f9150e7aa99a2b48892c14e34d29a607af46b332e922444",
+          "prediction_sha256": "36a5e298b9e7230b06bb2521a86b16694c1cfea2f3bb410e2f02e9e08e368e7f"
+        }
+      },
+      "rows": 8693,
+      "combined_sha256": "231b8fc8b77868f23baaf99c48f4c22bc4e174544e71bd49356148bdeeb5d4fc",
+      "accuracy": {
+        "half0": 0.7708501092833314,
+        "half1": 0.7680892672265041,
+        "original_full_support": 0.783734038881859,
+        "mean_2_halves": 0.7817784424249397
+      },
+      "halves_agree": {
+        "rows": 7103,
+        "accuracy": 0.8297902294805012
+      },
+      "ten_versions": {
+        "common_wrong": 1181,
+        "common_correct": 6710,
+        "eligible": 7891,
+        "baseline_accuracy_on_common": 0.8503358256241288,
+        "all_wrong_overlap": {
+          "half0": 285,
+          "half1": 292,
+          "intersection": 110,
+          "union": 467,
+          "intersection_over_union": 0.23554603854389722,
+          "expected_intersection_if_independent": 70.46570702794241
+        },
+        "all_correct_overlap": {
+          "half0": 676,
+          "half1": 692,
+          "intersection": 222,
+          "union": 1146,
+          "intersection_over_union": 0.193717277486911,
+          "expected_intersection_if_independent": 69.7156482861401
+        },
+        "both_vs_release": {
+          "fixed": 110,
+          "harmed": 222,
+          "flips": 332,
+          "net": -112,
+          "fraction_correct_among_changes": 0.3313253012048193,
+          "accuracy_after": 0.8361424407552909,
+          "net_by_fold": [
+            -6,
+            -18,
+            -6,
+            -23,
+            -10,
+            -11,
+            -7,
+            -31
+          ]
+        },
+        "one_vs_release": {
+          "fixed": 357,
+          "harmed": 924,
+          "flips": 1281,
+          "net": -567,
+          "fraction_correct_among_changes": 0.2786885245901639,
+          "accuracy_after": 0.7784818147256368,
+          "net_by_fold": [
+            -69,
+            -52,
+            -87,
+            -61,
+            -99,
+            -72,
+            -57,
+            -70
+          ]
+        },
+        "full_support_vs_release": {
+          "fixed": 258,
+          "harmed": 537,
+          "flips": 795,
+          "net": -279,
+          "fraction_correct_among_changes": 0.32452830188679244,
+          "accuracy_after": 0.8149790901026486,
+          "net_by_fold": [
+            -25,
+            -54,
+            -20,
+            -48,
+            -46,
+            -33,
+            -5,
+            -48
+          ]
+        },
+        "both_and_full_support": {
+          "fixed": 57,
+          "harmed": 104,
+          "flips": 161,
+          "net": -47,
+          "fraction_correct_among_changes": 0.35403726708074534,
+          "accuracy_after": 0.8443796730452414,
+          "net_by_fold": [
+            -1,
+            -9,
+            -2,
+            -16,
+            4,
+            -4,
+            -5,
+            -14
+          ]
+        },
+        "both_when_full_support_agrees": {
+          "fixed": 53,
+          "harmed": 118,
+          "flips": 171,
+          "net": -65,
+          "fraction_correct_among_changes": 0.30994152046783624,
+          "accuracy_after": 0.8420985933341781,
+          "net_by_fold": [
+            -5,
+            -9,
+            -4,
+            -7,
+            -14,
+            -7,
+            -2,
+            -17
+          ]
+        },
+        "one_when_full_support_agrees": {
+          "fixed": 242,
+          "harmed": 697,
+          "flips": 939,
+          "net": -455,
+          "fraction_correct_among_changes": 0.2577209797657082,
+          "accuracy_after": 0.7926751995944747,
+          "net_by_fold": [
+            -53,
+            -35,
+            -78,
+            -42,
+            -75,
+            -60,
+            -57,
+            -55
+          ]
+        }
+      }
+    },
+    "historical": {
+      "folds": {
+        "0": {
+          "people0": 1834,
+          "people1": 1840,
+          "orders0": 1578,
+          "orders1": 1578,
+          "held_people": 2318,
+          "held_orders": 2045,
+          "source_sha256": "e5cd26de5af9626c2786498ace80df939b371337fe6898a610dadbf7e461605c",
+          "prediction_sha256": "0e22e3cbfcc144d6a46901301880fed17100ec2e45cae572ed34b1b0e9006071"
+        },
+        "1": {
+          "people0": 1855,
+          "people1": 1861,
+          "orders0": 1575,
+          "orders1": 1576,
+          "held_people": 2318,
+          "held_orders": 2050,
+          "source_sha256": "78153f224c6800d78dfae61b480406dea3f3dc6431dce2ee52ca107f18088c33",
+          "prediction_sha256": "bcfd2c5f7891dc84c88bb04f62aa02dccaa7cb2c156e0ddb70bc3eb9834477e9"
+        },
+        "2": {
+          "people0": 1850,
+          "people1": 1876,
+          "orders0": 1578,
+          "orders1": 1578,
+          "held_people": 2318,
+          "held_orders": 2045,
+          "source_sha256": "b3fa590392e451215a792c22b339d9e790f3576d291d239a3649e86f6c9eb6e0",
+          "prediction_sha256": "9a5c236f2ab48da4c422f818eadaa30dd5f2b07ccd4c5a7a2fd1562faed6c470"
+        }
+      },
+      "rows": 6954,
+      "combined_sha256": "eab80652321fcd72874e847c030528ab46469f450e984e099bf3348d5e0d4c2f",
+      "accuracy": {
+        "half0": 0.7608570606844981,
+        "half1": 0.7482024733966063,
+        "original_full_support": 0.7844406097210239,
+        "mean_2_halves": 0.7782571182053495
+      },
+      "halves_agree": {
+        "rows": 5520,
+        "accuracy": 0.8206521739130435
+      },
+      "overlapping_passengers_vs_eight_fold_ten_versions": {
+        "common_wrong": 941,
+        "common_correct": 5380,
+        "eligible": 6321,
+        "baseline_accuracy_on_common": 0.8511311501344724,
+        "all_wrong_overlap": {
+          "half0": 243,
+          "half1": 244,
+          "intersection": 100,
+          "union": 387,
+          "intersection_over_union": 0.25839793281653745,
+          "expected_intersection_if_independent": 63.009564293305
+        },
+        "all_correct_overlap": {
+          "half0": 648,
+          "half1": 712,
+          "intersection": 229,
+          "union": 1131,
+          "intersection_over_union": 0.20247568523430592,
+          "expected_intersection_if_independent": 85.75762081784387
+        },
+        "both_vs_release": {
+          "fixed": 100,
+          "harmed": 229,
+          "flips": 329,
+          "net": -129,
+          "fraction_correct_among_changes": 0.303951367781155,
+          "accuracy_after": 0.8307229868691662,
+          "net_by_fold": [
+            -50,
+            -42,
+            -37
+          ]
+        },
+        "one_vs_release": {
+          "fixed": 287,
+          "harmed": 902,
+          "flips": 1189,
+          "net": -615,
+          "fraction_correct_among_changes": 0.2413793103448276,
+          "accuracy_after": 0.7538364182882455,
+          "net_by_fold": [
+            -221,
+            -178,
+            -216
+          ]
+        },
+        "full_support_vs_release": {
+          "fixed": 224,
+          "harmed": 459,
+          "flips": 683,
+          "net": -235,
+          "fraction_correct_among_changes": 0.3279648609077599,
+          "accuracy_after": 0.813953488372093,
+          "net_by_fold": [
+            -84,
+            -74,
+            -77
+          ]
+        },
+        "both_and_full_support": {
+          "fixed": 57,
+          "harmed": 115,
+          "flips": 172,
+          "net": -58,
+          "fraction_correct_among_changes": 0.3313953488372093,
+          "accuracy_after": 0.8419553868058851,
+          "net_by_fold": [
+            -24,
+            -14,
+            -20
+          ]
+        },
+        "both_when_full_support_agrees": {
+          "fixed": 43,
+          "harmed": 114,
+          "flips": 157,
+          "net": -71,
+          "fraction_correct_among_changes": 0.27388535031847133,
+          "accuracy_after": 0.8398987501977535,
+          "net_by_fold": [
+            -26,
+            -28,
+            -17
+          ]
+        },
+        "one_when_full_support_agrees": {
+          "fixed": 187,
+          "harmed": 731,
+          "flips": 918,
+          "net": -544,
+          "fraction_correct_among_changes": 0.2037037037037037,
+          "accuracy_after": 0.7650688182249644,
+          "net_by_fold": [
+            -188,
+            -162,
+            -194
+          ]
+        }
+      }
+    }
+  }
+}
