@@ -1,0 +1,140 @@
+{
+  "matching_consensus": {
+    "rows": 4298,
+    "errors": 387,
+    "counts": {
+      "either_fit": {
+        "fixed": 24,
+        "harmed": 54
+      },
+      "both_fits_any": {
+        "fixed": 3,
+        "harmed": 4
+      },
+      "same_model_both_fits": {
+        "fixed": 2,
+        "harmed": 3
+      },
+      "induced_same_model_both_fits": {
+        "fixed": 1,
+        "harmed": 1
+      },
+      "cabin_tree": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "cabin_transformer": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "party_tree": {
+        "fixed": 0,
+        "harmed": 2
+      },
+      "party_transformer": {
+        "fixed": 2,
+        "harmed": 0
+      }
+    }
+  },
+  "no_billing_rescue": {
+    "rows": 4041,
+    "errors": 339,
+    "counts": {
+      "either_fit": {
+        "fixed": 17,
+        "harmed": 37
+      },
+      "both_fits_any": {
+        "fixed": 2,
+        "harmed": 4
+      },
+      "same_model_both_fits": {
+        "fixed": 1,
+        "harmed": 3
+      },
+      "induced_same_model_both_fits": {
+        "fixed": 1,
+        "harmed": 1
+      },
+      "cabin_tree": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "cabin_transformer": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "party_tree": {
+        "fixed": 0,
+        "harmed": 2
+      },
+      "party_transformer": {
+        "fixed": 1,
+        "harmed": 0
+      }
+    }
+  },
+  "unseen_no_billing_rescue": {
+    "rows": 2727,
+    "errors": 255,
+    "counts": {
+      "either_fit": {
+        "fixed": 7,
+        "harmed": 10
+      },
+      "both_fits_any": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "same_model_both_fits": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "induced_same_model_both_fits": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "cabin_tree": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "cabin_transformer": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "party_tree": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "party_transformer": {
+        "fixed": 0,
+        "harmed": 0
+      }
+    }
+  },
+  "examples": [
+    {
+      "rescued": {
+        "passenger": "6363_07",
+        "planet": "Earth",
+        "age": null,
+        "anchor": true,
+        "actual": false,
+        "repeated_dissent": [
+          "party_transformer"
+        ]
+      },
+      "misclassified_if_changed": {
+        "passenger": "3067_01",
+        "planet": "Earth",
+        "age": 22,
+        "anchor": true,
+        "actual": true,
+        "repeated_dissent": [
+          "cabin_tree"
+        ]
+      }
+    }
+  ]
+}

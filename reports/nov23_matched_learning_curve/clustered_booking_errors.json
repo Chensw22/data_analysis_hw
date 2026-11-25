@@ -1,28 +1,51 @@
 {
   "historical": {
     "pair_counts": {
-      "pairs": [
-        583,
-        441
-      ],
-      "both_wrong": [
-        33,
-        24
-      ],
-      "shuffle_median": [
-        31.0,
-        22.0
-      ],
-      "shuffle_range": [
-        [
+      "same_prediction": {
+        "pairs": 583,
+        "both_wrong": 33,
+        "shuffle_median": 31.0,
+        "shuffle_range": [
           21.0,
-          15.0
-        ],
-        [
-          40.14999999999999,
+          40.14999999999999
+        ]
+      },
+      "opposite_prediction": {
+        "pairs": 441,
+        "both_wrong": 24,
+        "shuffle_median": 22.0,
+        "shuffle_range": [
+          15.0,
           31.14999999999999
         ]
-      ]
+      },
+      "same_cabin": {
+        "pairs": 763,
+        "both_wrong": 39,
+        "shuffle_median": 37.0,
+        "shuffle_range": [
+          27.0,
+          47.29999999999998
+        ]
+      },
+      "different_known_cabins": {
+        "pairs": 215,
+        "both_wrong": 16,
+        "shuffle_median": 12.0,
+        "shuffle_range": [
+          4.0,
+          17.299999999999983
+        ]
+      },
+      "same_cabin_sleep_and_prediction": {
+        "pairs": 288,
+        "both_wrong": 16,
+        "shuffle_median": 14.0,
+        "shuffle_range": [
+          8.0,
+          18.299999999999983
+        ]
+      }
     },
     "group_negative_loglikelihood": {
       "own": 0.8259536565394504,
@@ -267,28 +290,51 @@
   },
   "full": {
     "pair_counts": {
-      "pairs": [
-        2359,
-        1916
-      ],
-      "both_wrong": [
-        123,
-        92
-      ],
-      "shuffle_median": [
-        105.0,
-        87.0
-      ],
-      "shuffle_range": [
-        [
+      "same_prediction": {
+        "pairs": 2359,
+        "both_wrong": 123,
+        "shuffle_median": 105.0,
+        "shuffle_range": [
           89.85,
-          71.85
-        ],
-        [
-          126.0,
+          126.0
+        ]
+      },
+      "opposite_prediction": {
+        "pairs": 1916,
+        "both_wrong": 92,
+        "shuffle_median": 87.0,
+        "shuffle_range": [
+          71.85,
           102.29999999999998
         ]
-      ]
+      },
+      "same_cabin": {
+        "pairs": 3155,
+        "both_wrong": 143,
+        "shuffle_median": 135.0,
+        "shuffle_range": [
+          113.0,
+          155.0
+        ]
+      },
+      "different_known_cabins": {
+        "pairs": 879,
+        "both_wrong": 45,
+        "shuffle_median": 41.0,
+        "shuffle_range": [
+          31.0,
+          55.14999999999999
+        ]
+      },
+      "same_cabin_sleep_and_prediction": {
+        "pairs": 1128,
+        "both_wrong": 53,
+        "shuffle_median": 45.0,
+        "shuffle_range": [
+          31.55,
+          55.14999999999999
+        ]
+      }
     },
     "group_negative_loglikelihood": {
       "own": 0.8855643303185059,

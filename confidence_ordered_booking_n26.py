@@ -95,7 +95,7 @@ def integrate(probability,description,rows):
     return np.divide(total,hit,out=np.full(rows,np.nan),where=hit>0),joint
 
 
-def simulate(raw,y,g,t,q):
+def simulate(raw,y,g,t,q,keep_joint=False):
     frame=compact_features(raw)
     x=pd.get_dummies(frame,dtype=float).fillna(-1).to_numpy()
     whole_query=np.flatnonzero(np.isin(g,g[q]))
@@ -116,6 +116,7 @@ def simulate(raw,y,g,t,q):
     xf,states,_,desc=examples(test_groups,p,x,cabin,sleep)
     results={'raw':p[q]}
     logs={}
+    distributions={}
     for mode in MODES:
         model=classifier(310)
         if mode=='independent':
@@ -127,6 +128,18 @@ def simulate(raw,y,g,t,q):
             prob=model.predict_proba(np.column_stack([xf,states]))[:,1]
         scores,joint=integrate(prob,desc,len(y))
         results[mode]=np.where(np.isfinite(scores[q]),scores[q],p[q])
+        if keep_joint:
+            canonical={}
+            for (order,_),outcomes in zip(desc,joint):
+                members=tuple(sorted(order.tolist()))
+                ranks=np.searchsorted(members,order)
+                index=np.arange(len(outcomes))
+                remap=((index[:,None]>>ranks)&1)@(1<<np.arange(len(members)))
+                canonical[members]=canonical.get(members,0)+outcomes[remap]/2
+            for members,mass in canonical.items():
+                bits=(np.arange(len(mass))[:,None]>>np.arange(len(members)))&1
+                np.testing.assert_allclose(mass@bits,scores[list(members)],atol=1e-12)
+            distributions[mode]=canonical
         # Evaluate joint likelihood only for bookings whose entire truth belongs
         # to this query. Combine reversed orderings in the same passenger order.
         known=np.zeros(len(y),bool);known[q]=True
@@ -136,6 +149,8 @@ def simulate(raw,y,g,t,q):
                 code=int(y[order]@(1<<np.arange(len(order))))
                 by_group.setdefault(g[order[0]],[]).append(outcomes[code])
         logs[mode]=np.array([-np.log(np.mean(v).clip(1e-12)) for v in by_group.values()])
+    if keep_joint:
+        return results,logs,distributions
     return results,logs
 
 

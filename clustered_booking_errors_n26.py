@@ -82,14 +82,21 @@ def pair_audit(bundle):
         left.extend(grp[i]);right.extend(grp[j])
     left,right=np.array(left),np.array(right)
     same=bundle['anchor'][left]==bundle['anchor'][right]
+    cabins=bundle['raw'].Cabin.fillna('?').to_numpy()[bundle['ids']]
+    sleep=bundle['raw'].CryoSleep.astype('string').fillna('?').to_numpy()[bundle['ids']]
+    cabin_known=(cabins[left]!='?')&(cabins[right]!='?')
+    cabin_shared=cabin_known&(cabins[left]==cabins[right])
+    sleep_shared=(sleep[left]!='?')&(sleep[left]==sleep[right])
+    masks={'same_prediction':same,'opposite_prediction':~same,'same_cabin':cabin_shared,
+           'different_known_cabins':cabin_known&~cabin_shared,'same_cabin_sleep_and_prediction':cabin_shared&sleep_shared&same}
     def count(labels):
         both=labels[left]&labels[right]
-        return np.array([both[same].sum(),both[~same].sum()])
+        return np.array([both[mask].sum() for mask in masks.values()])
     rng=np.random.default_rng(7702)
     observed=count(bundle['err'])
     placebo=np.stack([count(permute_errors(bundle,rng)) for _ in range(75)])
-    return dict(pairs=[int(same.sum()),int((~same).sum())],both_wrong=observed.tolist(),
-                shuffle_median=np.median(placebo,axis=0).tolist(),shuffle_range=np.quantile(placebo,[.025,.975],axis=0).tolist())
+    return {name:dict(pairs=int(mask.sum()),both_wrong=int(observed[i]),shuffle_median=float(np.median(placebo[:,i])),
+                      shuffle_range=np.quantile(placebo[:,i],[.025,.975]).tolist()) for i,(name,mask) in enumerate(masks.items())}
 
 
 def packed(bundle,selected,unary,target=None):
