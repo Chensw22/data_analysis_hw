@@ -1,0 +1,474 @@
+{
+  "models": [
+    "response_channels",
+    "broad_error_transport_projection",
+    "bill_regime_tree",
+    "class_neighborhood_mass",
+    "companion_transition",
+    "error_partition_kernel",
+    "labelled_reference_pairs",
+    "permutation_selection",
+    "recursive_metric",
+    "service_order_mixture",
+    "maxout",
+    "zero_truncated",
+    "predicate_tables",
+    "two_view_reliability",
+    "honest_failure_partitions",
+    "failure_sampling_offset",
+    "spending_shape",
+    "fixed_bill_margins",
+    "neural_deck_raw",
+    "tree_deck_raw",
+    "neural_deck_fine",
+    "tree_deck_fine",
+    "neural_route_exact",
+    "tree_route_exact",
+    "swap",
+    "register_all",
+    "booking_transport_classifier",
+    "conditional_age_density",
+    "conditional_bill_deviations",
+    "confidence_ordered_booking",
+    "constrained_track_odds",
+    "joint_manifest_forest",
+    "joint_party_tabicl",
+    "latent_receipt_channel",
+    "manifest_role_joint",
+    "neighbor_booking_composition",
+    "solo_selection_likelihood",
+    "TabNet_mean"
+  ],
+  "method_source": "https://research.ibm.com/publications/approximating-discrete-probability-distributions-with-dependence-trees",
+  "evaluations": {
+    "full": {
+      "rows": 8532,
+      "common": {
+        "rows": 7891,
+        "errors": 1181,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "by_number_dissenting": {
+        "zero": {
+          "rows": 5206,
+          "wrong": 442
+        },
+        "one": {
+          "rows": 662,
+          "wrong": 125
+        },
+        "two_to_four": {
+          "rows": 951,
+          "wrong": 218
+        },
+        "five_to_half": {
+          "rows": 915,
+          "wrong": 342
+        },
+        "majority": {
+          "rows": 157,
+          "wrong": 54
+        }
+      },
+      "methods": {
+        "base": {
+          "rows": 7891,
+          "errors": 1181,
+          "fixed": 44,
+          "harmed": 66,
+          "net_by_fold": [
+            1,
+            -1,
+            -5,
+            -4,
+            -3,
+            -2,
+            -5,
+            -3
+          ],
+          "all_changes": {
+            "rows": 8532,
+            "errors": 1450,
+            "fixed": 96,
+            "harmed": 151
+          }
+        },
+        "independent": {
+          "rows": 7891,
+          "errors": 1181,
+          "fixed": 304,
+          "harmed": 483,
+          "net_by_fold": [
+            -25,
+            -27,
+            -16,
+            -25,
+            -27,
+            -15,
+            -16,
+            -28
+          ],
+          "all_changes": {
+            "rows": 8532,
+            "errors": 1450,
+            "fixed": 547,
+            "harmed": 810
+          }
+        },
+        "tree": {
+          "rows": 7891,
+          "errors": 1181,
+          "fixed": 379,
+          "harmed": 610,
+          "net_by_fold": [
+            -34,
+            -37,
+            -19,
+            -33,
+            -36,
+            -11,
+            -17,
+            -44
+          ],
+          "all_changes": {
+            "rows": 8532,
+            "errors": 1450,
+            "fixed": 586,
+            "harmed": 850
+          }
+        },
+        "calibrated_independent": {
+          "rows": 7891,
+          "errors": 1181,
+          "fixed": 47,
+          "harmed": 66,
+          "net_by_fold": [
+            1,
+            -1,
+            -5,
+            -5,
+            -3,
+            -1,
+            -4,
+            -1
+          ],
+          "all_changes": {
+            "rows": 8532,
+            "errors": 1450,
+            "fixed": 97,
+            "harmed": 149
+          }
+        },
+        "calibrated_tree": {
+          "rows": 7891,
+          "errors": 1181,
+          "fixed": 59,
+          "harmed": 70,
+          "net_by_fold": [
+            1,
+            0,
+            -6,
+            -1,
+            -3,
+            -1,
+            4,
+            -5
+          ],
+          "all_changes": {
+            "rows": 8532,
+            "errors": 1450,
+            "fixed": 115,
+            "harmed": 160
+          }
+        }
+      }
+    },
+    "historical_to_new": {
+      "rows": 1033,
+      "common": {
+        "rows": 948,
+        "errors": 160,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "by_number_dissenting": {
+        "zero": {
+          "rows": 597,
+          "wrong": 60
+        },
+        "one": {
+          "rows": 79,
+          "wrong": 19
+        },
+        "two_to_four": {
+          "rows": 129,
+          "wrong": 30
+        },
+        "five_to_half": {
+          "rows": 123,
+          "wrong": 45
+        },
+        "majority": {
+          "rows": 20,
+          "wrong": 6
+        }
+      },
+      "methods": {
+        "base": {
+          "rows": 948,
+          "errors": 160,
+          "fixed": 12,
+          "harmed": 12,
+          "net_by_fold": [
+            -2,
+            1,
+            2,
+            -1,
+            -1,
+            2,
+            -1,
+            0
+          ],
+          "all_changes": {
+            "rows": 1033,
+            "errors": 186,
+            "fixed": 20,
+            "harmed": 32
+          }
+        },
+        "independent": {
+          "rows": 948,
+          "errors": 160,
+          "fixed": 41,
+          "harmed": 72,
+          "net_by_fold": [
+            -4,
+            -7,
+            -3,
+            -2,
+            -2,
+            -4,
+            -4,
+            -5
+          ],
+          "all_changes": {
+            "rows": 1033,
+            "errors": 186,
+            "fixed": 66,
+            "harmed": 124
+          }
+        },
+        "tree": {
+          "rows": 948,
+          "errors": 160,
+          "fixed": 53,
+          "harmed": 82,
+          "net_by_fold": [
+            -5,
+            -6,
+            -5,
+            0,
+            -5,
+            -2,
+            -2,
+            -4
+          ],
+          "all_changes": {
+            "rows": 1033,
+            "errors": 186,
+            "fixed": 75,
+            "harmed": 122
+          }
+        },
+        "calibrated_independent": {
+          "rows": 948,
+          "errors": 160,
+          "fixed": 10,
+          "harmed": 8,
+          "net_by_fold": [
+            -1,
+            0,
+            2,
+            -1,
+            1,
+            1,
+            -1,
+            1
+          ],
+          "all_changes": {
+            "rows": 1033,
+            "errors": 186,
+            "fixed": 18,
+            "harmed": 32
+          }
+        },
+        "calibrated_tree": {
+          "rows": 948,
+          "errors": 160,
+          "fixed": 13,
+          "harmed": 12,
+          "net_by_fold": [
+            -1,
+            1,
+            2,
+            -1,
+            -1,
+            2,
+            -2,
+            1
+          ],
+          "all_changes": {
+            "rows": 1033,
+            "errors": 186,
+            "fixed": 23,
+            "harmed": 36
+          }
+        }
+      }
+    },
+    "bookingmix": {
+      "rows": 6055,
+      "common": {
+        "rows": 5587,
+        "errors": 866,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "by_number_dissenting": {
+        "zero": {
+          "rows": 3671,
+          "wrong": 337
+        },
+        "one": {
+          "rows": 453,
+          "wrong": 91
+        },
+        "two_to_four": {
+          "rows": 709,
+          "wrong": 168
+        },
+        "five_to_half": {
+          "rows": 658,
+          "wrong": 238
+        },
+        "majority": {
+          "rows": 96,
+          "wrong": 32
+        }
+      },
+      "methods": {
+        "base": {
+          "rows": 5587,
+          "errors": 866,
+          "fixed": 56,
+          "harmed": 55,
+          "net_by_fold": [
+            6,
+            2,
+            4,
+            0,
+            -3,
+            -4,
+            -1,
+            -3
+          ],
+          "all_changes": {
+            "rows": 6055,
+            "errors": 1040,
+            "fixed": 111,
+            "harmed": 156
+          }
+        },
+        "independent": {
+          "rows": 5587,
+          "errors": 866,
+          "fixed": 205,
+          "harmed": 327,
+          "net_by_fold": [
+            -15,
+            -20,
+            -3,
+            -17,
+            -14,
+            -21,
+            -16,
+            -16
+          ],
+          "all_changes": {
+            "rows": 6055,
+            "errors": 1040,
+            "fixed": 360,
+            "harmed": 590
+          }
+        },
+        "tree": {
+          "rows": 5587,
+          "errors": 866,
+          "fixed": 260,
+          "harmed": 424,
+          "net_by_fold": [
+            -24,
+            -26,
+            -7,
+            -20,
+            -25,
+            -22,
+            -16,
+            -24
+          ],
+          "all_changes": {
+            "rows": 6055,
+            "errors": 1040,
+            "fixed": 395,
+            "harmed": 628
+          }
+        },
+        "calibrated_independent": {
+          "rows": 5587,
+          "errors": 866,
+          "fixed": 58,
+          "harmed": 54,
+          "net_by_fold": [
+            6,
+            3,
+            6,
+            0,
+            -3,
+            -5,
+            -2,
+            -1
+          ],
+          "all_changes": {
+            "rows": 6055,
+            "errors": 1040,
+            "fixed": 113,
+            "harmed": 154
+          }
+        },
+        "calibrated_tree": {
+          "rows": 5587,
+          "errors": 866,
+          "fixed": 69,
+          "harmed": 65,
+          "net_by_fold": [
+            6,
+            1,
+            6,
+            0,
+            -3,
+            -5,
+            0,
+            -1
+          ],
+          "all_changes": {
+            "rows": 6055,
+            "errors": 1040,
+            "fixed": 136,
+            "harmed": 171
+          }
+        }
+      }
+    }
+  }
+}
