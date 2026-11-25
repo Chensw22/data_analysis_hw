@@ -61,7 +61,11 @@ NET_EDITS = QueuedExport('proposal_n24_bagged_net_edits', 'export_bagged_net_edi
                          '70 人版已有官方成绩，即将提交按净纠正人数训练的 41 人版。',
                          '5dea4e65659fa7cb345c6238eedf0109d55e52afd4a4b1da88e523705b522871',
                          model='calibrators.json')
-JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS)}
+CONFIRMED_FIELDS = QueuedExport('proposal_n25_confirmed_random_fields', 'export_confirmed_random_fields_n25.py',
+    ROOT/'reports/proposal_n24_selected_dissent/online_attempts/20261125T070137804381Z.json',
+    '主账号额度已刷新，即将提交双分组确认版。与当前最佳相比，该版本改判 30 名乘客。',
+    '5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223', model='ensemble.joblib')
+JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS)}
 
 
 def verify(revision, job=HALF):
