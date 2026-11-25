@@ -1,0 +1,167 @@
+{
+  "exact_historical": {
+    "rows": 6954,
+    "certified_v96_rows": 3300,
+    "changes": [
+      6,
+      45,
+      38,
+      25
+    ],
+    "correct": [
+      5658,
+      5658,
+      5663,
+      5671,
+      5662
+    ],
+    "peer_probability_max_difference": 0,
+    "equality_checks": [
+      "v96 native OOF",
+      "v106 exact outer query batches",
+      "v108 frozen peer offsets",
+      "v127 from v118 and five votes",
+      "v128 cohort witness",
+      "v131 refitted family decision"
+    ]
+  },
+  "exact_test": {
+    "rows": 4277,
+    "certified_v96_rows": 1989,
+    "certified_tree_changes": 67,
+    "certified_nine_changes": 4,
+    "changes": [
+      2,
+      39,
+      15,
+      5
+    ],
+    "peer_probability_max_difference": 0.0,
+    "tree_changes": 157
+  },
+  "certified_eightfold_subset": {
+    "rows": 4111,
+    "nine_edits": 6,
+    "corrected": 84,
+    "harmed": 55,
+    "net": 29,
+    "area": "v131==v96 by structural exclusion of all four stages"
+  },
+  "eight_fold": {
+    "earlier_half_gate": {
+      "protected_against_v96": 300,
+      "correct": 7118,
+      "cuts": 201,
+      "fixed": 110,
+      "harmed": 91,
+      "net": 19,
+      "solo_cuts": 113
+    },
+    "peer_offset_only": {
+      "protected_against_v96": 114,
+      "correct": 7066,
+      "cuts": 269,
+      "fixed": 153,
+      "harmed": 116,
+      "net": 37,
+      "solo_cuts": 182
+    },
+    "necessary_conditions_suffice": {
+      "protected_against_v96": 234,
+      "correct": 7062,
+      "cuts": 237,
+      "fixed": 135,
+      "harmed": 102,
+      "net": 33,
+      "solo_cuts": 156
+    },
+    "available_family_votes": {
+      "protected_against_v96": 172,
+      "correct": 7060,
+      "cuts": 268,
+      "fixed": 153,
+      "harmed": 115,
+      "net": 38,
+      "solo_cuts": 178
+    }
+  },
+  "pending": {
+    "cabin_patch_rows": 87,
+    "sleeper_eligible_without_committees": 108,
+    "family_eligible_without_committees": 56
+  },
+  "conditional_on_approximate_v108": {
+    "all": {
+      "n": 8693,
+      "tree_cuts": [
+        230,
+        276
+      ],
+      "tree_net": [
+        12,
+        58
+      ]
+    },
+    "outside_cabin_patch": {
+      "n": 8606,
+      "tree_cuts": [
+        230,
+        276
+      ],
+      "tree_net": [
+        12,
+        58
+      ]
+    }
+  },
+  "limits": [
+    "Official and historical v106 use saved native Mitra query results; no eight-fold patched query probabilities available.",
+    "Peer offset in eightfold uses same-parity held-out Mitra96 instead of exact original rawMitra inner predictions.",
+    "The four available family votes substitute for original five; v118 union is not available for these eight folds.",
+    "No probabilistic confidence statement: bounds vary the missing committee decisions only, conditional on approximate v108."
+  ],
+  "by_certificate": {
+    "earlier_half_gate": {
+      "certified": {
+        "rows": 4111,
+        "cuts": 97,
+        "fixed": 57,
+        "harmed": 40
+      },
+      "outside": {
+        "rows": 4582,
+        "cuts": 104,
+        "fixed": 53,
+        "harmed": 51
+      }
+    },
+    "available_family_votes": {
+      "certified": {
+        "rows": 4111,
+        "cuts": 139,
+        "fixed": 84,
+        "harmed": 55
+      },
+      "outside": {
+        "rows": 4582,
+        "cuts": 129,
+        "fixed": 69,
+        "harmed": 60
+      }
+    },
+    "v96": {
+      "certified": {
+        "rows": 4111,
+        "cuts": 139,
+        "fixed": 84,
+        "harmed": 55
+      },
+      "outside": {
+        "rows": 4582,
+        "cuts": 166,
+        "fixed": 89,
+        "harmed": 77
+      }
+    }
+  }
+}
