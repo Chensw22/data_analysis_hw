@@ -13,7 +13,7 @@ from target_mix_expert_routing_n26 import ROOT,sources
 RESULT=ROOT/'reports/nov23_matched_learning_curve/distinct_challenger_error_reach.json'
 
 
-def run():
+def population():
     raw,y,g,f,known,versions=paired()
     parent=versions[:,-1]
     same=known&(versions==parent[:,None]).all(1)
@@ -45,6 +45,11 @@ def run():
     count=signature.sum(1)
     wrong=y!=parent
     solo=raw.groupby(g).PassengerId.transform('size').eq(1).to_numpy()
+    return raw,y,g,f,parent,same,count,blocks,signature,wrong,solo,paid
+
+
+def run():
+    raw,y,g,f,parent,same,count,blocks,signature,wrong,solo,paid=population()
     gaps={}
     for name,mask in dict(all=same,solo=same&solo,multiple=same&~solo,
                           awake_paid_negative=same&~parent&paid&raw.CryoSleep.eq(False).to_numpy(),
