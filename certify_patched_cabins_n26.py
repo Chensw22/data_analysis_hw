@@ -52,7 +52,13 @@ def run(folds):
             np.testing.assert_array_equal(d[0,known],d[1,known])
             summary={}
             for key,use in [('all',np.ones(n,bool)),('new',~np.isin(g,g[rows]))]:
-                summary[key]=dict(resolved=int((known&use).sum()),fixed=int(((d[0]>0)&known&use).sum()),
+                audited=known&use
+                comparator_correct=int(((a[comparator][0]==y)&audited).sum())
+                union_correct=int(((a['all_three'][0]==y)&audited).sum())
+                assert union_correct-comparator_correct==int(d[0,audited].sum())
+                summary[key]=dict(resolved=int(audited.sum()),rows=int(use.sum()),
+                    comparator_correct=comparator_correct,union_correct=union_correct,
+                    comparator_accuracy=comparator_correct/int(audited.sum()),union_accuracy=union_correct/int(audited.sum()),fixed=int(((d[0]>0)&known&use).sum()),
                     harmed=int(((d[0]<0)&known&use).sum()),net_bounds=[int(op(d[:,use],axis=0).sum()) for op in (np.min,np.max)])
             if comparator=='nine':
                 out[tag].update(summary)
