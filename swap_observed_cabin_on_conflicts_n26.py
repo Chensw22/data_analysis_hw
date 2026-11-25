@@ -42,6 +42,28 @@ def model_scores(model,x):
     return model.predict(x)
 
 
+def contrasts(rank,params,x,y,g,a,b,d,eligible,q,cabin):
+    result = np.empty((len(q),2,5))
+    i,j = analogues(a,b,d,eligible,g)
+    assert np.isin(i,q).all() and eligible[j].all()
+    hypothetical = x[i].copy()
+    hypothetical[:,cabin] = x[j,cabin]
+    point = CatBoostClassifier(**params).fit(x[np.flatnonzero(eligible)],y[eligible].astype(int))
+    count = np.bincount(i,minlength=len(y))
+    for m,model in enumerate((rank,point)):
+        actual = model_scores(model,x[q])
+        alternative = model_scores(model,hypothetical)
+        mean = np.bincount(i,weights=alternative,minlength=len(y))[q]/np.maximum(1,count[q])
+        mean_sq = np.bincount(i,weights=alternative**2,minlength=len(y))[q]/np.maximum(1,count[q])
+        factual = np.zeros(len(y))
+        factual[q] = actual
+        percentile = np.bincount(i,weights=(alternative<factual[i])+.5*(alternative==factual[i]),minlength=len(y))[q]/np.maximum(1,count[q])
+        supported = count[q]>0
+        result[:,m] = np.column_stack([actual,np.where(supported,actual-mean,0),
+                  np.sqrt(np.maximum(0,mean_sq-mean**2)),np.where(supported,percentile-.5,0),count[q]/7])
+    return result
+
+
 def run():
     raw,y,g,f = data()
     _,cur,_ = inputs()
@@ -80,23 +102,7 @@ def run():
         if k!=h:
             continue
         q = np.flatnonzero(f==k)
-        i,j = analogues(a,b,d,eligible,g)
-        assert np.isin(i,q).all() and np.isin(j,t).all()
-        hypothetical = x[i].copy()
-        hypothetical[:,cabin] = x[j,cabin]
-        point = CatBoostClassifier(**params).fit(x[t],y[t].astype(int))
-        count = np.bincount(i,minlength=len(y))
-        for m,model in enumerate((rank,point)):
-            actual = model_scores(model,x[q])
-            alternative = model_scores(model,hypothetical)
-            mean = np.bincount(i,weights=alternative,minlength=len(y))[q]/np.maximum(1,count[q])
-            mean_sq = np.bincount(i,weights=alternative**2,minlength=len(y))[q]/np.maximum(1,count[q])
-            factual = np.zeros(len(y))
-            factual[q] = actual
-            percentile = np.bincount(i,weights=(alternative<factual[i])+.5*(alternative==factual[i]),minlength=len(y))[q]/np.maximum(1,count[q])
-            supported = count[q]>0
-            signal[q,m] = np.column_stack([actual,np.where(supported,actual-mean,0),
-                      np.sqrt(np.maximum(0,mean_sq-mean**2)),np.where(supported,percentile-.5,0),count[q]/7])
+        signal[q] = contrasts(rank,params,x,y,g,a,b,d,eligible,q,cabin)
     assert np.isfinite(signal).all()
     report = {'ordering':{},'deployment':{}}
     pieces = raw.Cabin.str.split('/',expand=True)
