@@ -1,0 +1,208 @@
+{
+  "baseline": "Public champion and nine November 25-26 candidate decisions before TabNet routing",
+  "blocks": {
+    "original_99": {
+      "models": 99,
+      "any": {
+        "fixed": 967,
+        "harmed": 3349
+      },
+      "added_in_list_order": {
+        "fixed": 967,
+        "harmed": 3349
+      },
+      "exclusive": {
+        "fixed": 156,
+        "harmed": 1093
+      }
+    },
+    "other_archives": {
+      "models": 12,
+      "any": {
+        "fixed": 725,
+        "harmed": 2127
+      },
+      "added_in_list_order": {
+        "fixed": 35,
+        "harmed": 282
+      },
+      "exclusive": {
+        "fixed": 33,
+        "harmed": 258
+      }
+    },
+    "supplementary": {
+      "models": 11,
+      "any": {
+        "fixed": 557,
+        "harmed": 1240
+      },
+      "added_in_list_order": {
+        "fixed": 1,
+        "harmed": 6
+      },
+      "exclusive": {
+        "fixed": 0,
+        "harmed": 3
+      }
+    },
+    "tabstar": {
+      "models": 1,
+      "any": {
+        "fixed": 169,
+        "harmed": 306
+      },
+      "added_in_list_order": {
+        "fixed": 2,
+        "harmed": 1
+      },
+      "exclusive": {
+        "fixed": 2,
+        "harmed": 1
+      }
+    },
+    "bill_density": {
+      "models": 1,
+      "any": {
+        "fixed": 241,
+        "harmed": 513
+      },
+      "added_in_list_order": {
+        "fixed": 0,
+        "harmed": 2
+      },
+      "exclusive": {
+        "fixed": 0,
+        "harmed": 2
+      }
+    },
+    "tabnet_recipes": {
+      "models": 3,
+      "any": {
+        "fixed": 472,
+        "harmed": 1027
+      },
+      "added_in_list_order": {
+        "fixed": 4,
+        "harmed": 41
+      },
+      "exclusive": {
+        "fixed": 4,
+        "harmed": 41
+      }
+    }
+  },
+  "scopes": {
+    "all": {
+      "all": {
+        "rows": 7891,
+        "wrong": 1181,
+        "correct": 6710
+      },
+      "none": {
+        "rows": 3201,
+        "wrong": 172,
+        "correct": 3029
+      },
+      "single_block": {
+        "rows": 1593,
+        "wrong": 195,
+        "correct": 1398
+      },
+      "two_or_more": {
+        "rows": 3097,
+        "wrong": 814,
+        "correct": 2283
+      }
+    },
+    "solo": {
+      "all": {
+        "rows": 4341,
+        "wrong": 709,
+        "correct": 3632
+      },
+      "none": {
+        "rows": 1741,
+        "wrong": 128,
+        "correct": 1613
+      },
+      "single_block": {
+        "rows": 857,
+        "wrong": 111,
+        "correct": 746
+      },
+      "two_or_more": {
+        "rows": 1743,
+        "wrong": 470,
+        "correct": 1273
+      }
+    },
+    "multiple": {
+      "all": {
+        "rows": 3550,
+        "wrong": 472,
+        "correct": 3078
+      },
+      "none": {
+        "rows": 1460,
+        "wrong": 44,
+        "correct": 1416
+      },
+      "single_block": {
+        "rows": 736,
+        "wrong": 84,
+        "correct": 652
+      },
+      "two_or_more": {
+        "rows": 1354,
+        "wrong": 344,
+        "correct": 1010
+      }
+    },
+    "awake_paid_negative": {
+      "all": {
+        "rows": 3476,
+        "wrong": 424,
+        "correct": 3052
+      },
+      "none": {
+        "rows": 1435,
+        "wrong": 127,
+        "correct": 1308
+      },
+      "single_block": {
+        "rows": 961,
+        "wrong": 89,
+        "correct": 872
+      },
+      "two_or_more": {
+        "rows": 1080,
+        "wrong": 208,
+        "correct": 872
+      }
+    },
+    "sleeping_no_positive_true": {
+      "all": {
+        "rows": 2722,
+        "wrong": 388,
+        "correct": 2334
+      },
+      "none": {
+        "rows": 1605,
+        "wrong": 44,
+        "correct": 1561
+      },
+      "single_block": {
+        "rows": 478,
+        "wrong": 90,
+        "correct": 388
+      },
+      "two_or_more": {
+        "rows": 639,
+        "wrong": 254,
+        "correct": 385
+      }
+    }
+  },
+  "interpretation": "A model opposing a binary baseline fixes each baseline error it opposes and harms every originally correct case it opposes. Block counts pool potentially related predictions and are descriptive, not a deployable selector."
+}
