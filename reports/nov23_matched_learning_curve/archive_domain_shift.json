@@ -1,0 +1,297 @@
+{
+  "competition": {
+    "raw": {
+      "auc": 0.48727865798460634,
+      "fold_auc": [
+        0.49789543489290367,
+        0.47017837704748083,
+        0.4765503416256802,
+        0.5013922677251316,
+        0.49844012174072383
+      ],
+      "log_loss": 0.6402357458666159,
+      "source_weight_quantiles": [
+        0.32893811937721673,
+        0.8066692539413545,
+        0.998348802523663,
+        1.2388641888966119,
+        2.9017269706503495
+      ],
+      "clipped_fraction": 0.0
+    },
+    "vote_distribution": {
+      "auc": 0.6094454214193501,
+      "fold_auc": [
+        0.646160426731079,
+        0.5915165612689198,
+        0.6102796901716288,
+        0.6106549588586909,
+        0.6027831036929491
+      ],
+      "log_loss": 0.5987130482248122,
+      "source_weight_quantiles": [
+        0.06625888265902433,
+        0.5988081030518294,
+        0.9514279652063504,
+        1.2355803853918956,
+        11.17432216421146
+      ],
+      "clipped_fraction": 0.023467157483032325
+    },
+    "individual_votes": {
+      "auc": 0.8733170403271805,
+      "fold_auc": [
+        0.8842861436481151,
+        0.8647185361808003,
+        0.8805057403809369,
+        0.8665296412855228,
+        0.8730078532263231
+      ],
+      "log_loss": 0.39792081033939747,
+      "source_weight_quantiles": [
+        0.018521624621826657,
+        0.042082438950967055,
+        0.6238053924312661,
+        1.1954074451798364,
+        64.94154587092538
+      ],
+      "clipped_fraction": 0.320602783849074
+    },
+    "combined": {
+      "auc": 0.8806128252797254,
+      "fold_auc": [
+        0.8848937997705866,
+        0.8770021252332574,
+        0.8852849348765335,
+        0.871763449265791,
+        0.8859362847411472
+      ],
+      "log_loss": 0.39182244778842323,
+      "source_weight_quantiles": [
+        0.017074953095739132,
+        0.04000045988724991,
+        0.6412307973447199,
+        1.1954178562624598,
+        58.92500633241775
+      ],
+      "clipped_fraction": 0.32405383642010815
+    }
+  },
+  "same_passengers_old_vs_new": {
+    "raw": {
+      "auc": 0.5,
+      "fold_auc": [
+        0.5,
+        0.5,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "log_loss": 0.6931471805599453,
+      "source_weight_quantiles": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "clipped_fraction": 0.0
+    },
+    "vote_distribution": {
+      "auc": 0.6764863937213765,
+      "fold_auc": [
+        0.6857972312538971,
+        0.6855660162857312,
+        0.6716734733284058,
+        0.675813563136523,
+        0.6649055455727604
+      ],
+      "log_loss": 0.6368170663156923,
+      "source_weight_quantiles": [
+        0.05292821152029825,
+        0.5268234255127534,
+        0.861249207789117,
+        1.2822708961894413,
+        23.776650174216616
+      ],
+      "clipped_fraction": 0.02444636180615473
+    },
+    "individual_votes": {
+      "auc": 0.9067744181762581,
+      "fold_auc": [
+        0.9092056220815511,
+        0.9037964623583711,
+        0.9091593547824498,
+        0.9047520103799567,
+        0.9075431775678112
+      ],
+      "log_loss": 0.41719953221651457,
+      "source_weight_quantiles": [
+        0.02211744239442035,
+        0.06894357001744324,
+        0.4631019487663742,
+        1.1056030342523953,
+        20.37990384228241
+      ],
+      "clipped_fraction": 0.35835490365257405
+    },
+    "combined": {
+      "auc": 0.9112627133778329,
+      "fold_auc": [
+        0.9161995334109772,
+        0.906220250490867,
+        0.9142228259515485,
+        0.9092622518998845,
+        0.910666136210549
+      ],
+      "log_loss": 0.41135588197883366,
+      "source_weight_quantiles": [
+        0.0223647610024233,
+        0.06496884627078643,
+        0.45604085254231863,
+        1.1008963290177427,
+        15.862173014929713
+      ],
+      "clipped_fraction": 0.3639631866551625
+    }
+  },
+  "target_weighted_effects": {
+    "nine": {
+      "uniform": {
+        "rows": 8445,
+        "weighted_fixed": 208.0,
+        "weighted_harmed": 174.0,
+        "equivalent_net_people": 34.0,
+        "gain_pp": 0.40260509177027826,
+        "gain_pp_interval_fixed_weights": [
+          -0.07065162891377216,
+          0.8475673685304296
+        ],
+        "effective_sample_size": 8445.0
+      },
+      "raw": {
+        "rows": 8445,
+        "weighted_fixed": 211.51504206940496,
+        "weighted_harmed": 175.50301622247125,
+        "equivalent_net_people": 36.01202584693373,
+        "gain_pp": 0.42643014620407027,
+        "gain_pp_interval_fixed_weights": [
+          -0.06041573713318649,
+          0.8842492843927691
+        ],
+        "effective_sample_size": 8124.055269432692
+      },
+      "vote_distribution": {
+        "rows": 8445,
+        "weighted_fixed": 210.82475545871063,
+        "weighted_harmed": 167.99621200325367,
+        "equivalent_net_people": 42.828543455456945,
+        "gain_pp": 0.5071467549491645,
+        "gain_pp_interval_fixed_weights": [
+          0.030946907394867846,
+          0.964306568603393
+        ],
+        "effective_sample_size": 7571.862360928565
+      },
+      "individual_votes": {
+        "rows": 8445,
+        "weighted_fixed": 258.1751234478189,
+        "weighted_harmed": 225.17894471188532,
+        "equivalent_net_people": 32.9961787359336,
+        "gain_pp": 0.39071851670732505,
+        "gain_pp_interval_fixed_weights": [
+          -0.24686118215554692,
+          1.0362236655151922
+        ],
+        "effective_sample_size": 5849.383348254881
+      },
+      "combined": {
+        "rows": 8445,
+        "weighted_fixed": 255.1571762930235,
+        "weighted_harmed": 218.25552681833588,
+        "equivalent_net_people": 36.90164947468762,
+        "gain_pp": 0.4369644698009192,
+        "gain_pp_interval_fixed_weights": [
+          -0.17712549098931363,
+          1.060979630914729
+        ],
+        "effective_sample_size": 5914.477065419788
+      }
+    },
+    "band": {
+      "uniform": {
+        "rows": 8445,
+        "weighted_fixed": 128.0,
+        "weighted_harmed": 109.0,
+        "equivalent_net_people": 19.0,
+        "gain_pp": 0.22498519834221434,
+        "gain_pp_interval_fixed_weights": [
+          -0.14015990823410665,
+          0.5875700021233198
+        ],
+        "effective_sample_size": 8445.0
+      },
+      "raw": {
+        "rows": 8445,
+        "weighted_fixed": 130.51473753369865,
+        "weighted_harmed": 109.78277697850181,
+        "equivalent_net_people": 20.73196055519684,
+        "gain_pp": 0.2454939082912592,
+        "gain_pp_interval_fixed_weights": [
+          -0.1369161782665671,
+          0.6174828464497958
+        ],
+        "effective_sample_size": 8124.055269432692
+      },
+      "vote_distribution": {
+        "rows": 8445,
+        "weighted_fixed": 137.9734786178215,
+        "weighted_harmed": 106.72057119868897,
+        "equivalent_net_people": 31.25290741913252,
+        "gain_pp": 0.37007587234023115,
+        "gain_pp_interval_fixed_weights": [
+          -0.026733704384351974,
+          0.7667781207357595
+        ],
+        "effective_sample_size": 7571.862360928565
+      },
+      "individual_votes": {
+        "rows": 8445,
+        "weighted_fixed": 172.60182951174917,
+        "weighted_harmed": 140.6951679050687,
+        "equivalent_net_people": 31.906661606680448,
+        "gain_pp": 0.3778171889482588,
+        "gain_pp_interval_fixed_weights": [
+          -0.13289596179296553,
+          0.9396374032001501
+        ],
+        "effective_sample_size": 5849.383348254881
+      },
+      "combined": {
+        "rows": 8445,
+        "weighted_fixed": 170.51810663944528,
+        "weighted_harmed": 137.32809692241926,
+        "equivalent_net_people": 33.190009717026044,
+        "gain_pp": 0.39301373258763816,
+        "gain_pp_interval_fixed_weights": [
+          -0.10060147304002261,
+          0.934136912788661
+        ],
+        "effective_sample_size": 5914.477065419788
+      }
+    }
+  },
+  "method": {
+    "weight_clip": [
+      0.25,
+      4
+    ],
+    "folds": 5,
+    "conditional_on_known_baseline": true,
+    "notes": [
+      "Weights rescaled to mean one on 8445 known passengers. Intervals resample bookings at fixed fitted weights.",
+      "Same-person contrast changes both training size and training allocation. It is a reference for score-model effects.",
+      "Target labels are unavailable. Weighting requires unchanged conditional model performance given the measured covariates."
+    ]
+  }
+}
