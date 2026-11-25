@@ -3,7 +3,7 @@ import json
 
 import numpy as np
 
-from audit_fare_routes_n26 import DECK, held_fare, reviews
+from audit_fare_routes_n26 import DECK, OUT as ROUTES, held_fare, reviews
 from export_fare_deck_n26 import combine
 from full_roster_booking_validation_n23 import ROOT, data
 from price_implied_deck_n26 import FEES
@@ -20,6 +20,12 @@ def run():
         deck=z['label']
         supported=z['fine'].argmax(1)==deck
     total=raw[FEES].fillna(0).sum(axis=1).to_numpy()
+    import pandas as pd
+    levels=sorted(raw.Destination.dropna().unique())
+    actual_destination=pd.Index(levels).get_indexer(raw.Destination)
+    with np.load(ROUTES/'routes.npz') as z:
+        np.testing.assert_array_equal(z['passenger'][:len(y)],raw.PassengerId)
+        destination_matches=z['exact'][:len(y),:len(levels)].argmax(1)==actual_destination
     report={}
     for name,q,parent in reviews(views,g):
         tag='historical' if name=='historical' else 'full'
@@ -42,7 +48,13 @@ def run():
             details[key]=part
         for keys in [('complete_positive','some_positive_incomplete','no_visible_positive'),('original_true','original_false')]:
             assert all(sum(details[k][n] for k in keys)==base[n] for n in base)
-        report[name]=dict(total=base,by_group=details)
+        recorded=eligible[ids]&(deck[ids]>=0)&(actual_destination[ids]>=0)
+        cross={}
+        for a in [True,False]:
+            for b in [True,False]:
+                mask=recorded&common&(supported[ids]==a)&(destination_matches[ids]==b)
+                cross[f'deck_matches_{a}_destination_matches_{b}']=dict(rows=int(mask.sum()),errors_after=int((mask&(new!=y[ids])).sum()))
+        report[name]=dict(total=base,by_group=details,registered_fields=cross)
     destination=ROOT/'reports/nov23_matched_learning_curve/fare_deck_rescue_profile.json'
     destination.write_text(json.dumps(report,indent=2)+'\n')
     print(report['bookingmix'])

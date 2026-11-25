@@ -57,6 +57,7 @@ def run(swaps=False):
     report = diagnostic
     with np.load(DECK/'deck_estimates.npz') as z:
         deck_eligible = z['eligible']
+        deck_agrees = (z['label'] >= 0) & (z['label'] == z['fine'].argmax(1))
     for tag, q, review in reviews(panels, g):
         base = 'historical' if tag == 'historical' else 'full'
         panel, all_p = panels[base], predictions[base]
@@ -67,6 +68,7 @@ def run(swaps=False):
         true = y[ids]
         wrong = fare != true
         masks = {'all': np.ones(len(q), bool), 'unanimous': common,
+                 'unanimous_paid_deck_agrees': common & deck_eligible[ids] & deck_agrees[ids],
                  'remaining_original_unanimous_errors': common & (review != true) & wrong,
                  'previously_repaired_unanimous_errors': common & (review != true) & ~wrong}
         actions = {}
