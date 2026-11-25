@@ -1,0 +1,1294 @@
+{
+  "families": [
+    "response_channels",
+    "broad_error_transport_projection",
+    "bill_regime_tree",
+    "class_neighborhood_mass",
+    "companion_transition",
+    "error_partition_kernel",
+    "labelled_reference_pairs",
+    "permutation_selection",
+    "recursive_metric",
+    "service_order_mixture",
+    "maxout",
+    "zero_truncated",
+    "predicate_tables",
+    "two_view_reliability",
+    "honest_failure_partitions",
+    "failure_sampling_offset",
+    "spending_shape",
+    "fixed_bill_margins"
+  ],
+  "number_of_nonempty_subsets": 262143,
+  "number_of_subset_thresholds": 2359296,
+  "target_gain": 162,
+  "experiments": {
+    "common_global_rule": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 19,
+        "harmed": 14,
+        "net": 5,
+        "net_by_fold": [
+          1,
+          1,
+          2,
+          0,
+          1,
+          0,
+          -1,
+          1
+        ],
+        "overall_known_accuracy": 0.8316924519456165
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 4,
+          "families": [
+            "response_channels",
+            "permutation_selection",
+            "maxout",
+            "fixed_bill_margins"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "permutation_selection",
+                "recursive_metric",
+                "service_order_mixture"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 20,
+            "harmed": 7,
+            "net": 13,
+            "net_by_fold": [
+              6,
+              4,
+              3
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 3,
+            "harmed": 3,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              -2,
+              1,
+              1,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 20,
+            "harmed": 30,
+            "net": -10,
+            "net_by_fold": [
+              0,
+              -5,
+              -1,
+              -3,
+              -2,
+              0,
+              0,
+              1
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 5,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "permutation_selection",
+                "recursive_metric",
+                "service_order_mixture",
+                "spending_shape"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 18,
+            "harmed": 12,
+            "net": 6,
+            "net_by_fold": [
+              4,
+              0,
+              2
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 0,
+            "harmed": 3,
+            "net": -3,
+            "net_by_fold": [
+              -1,
+              -1,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 17,
+            "harmed": 37,
+            "net": -20,
+            "net_by_fold": [
+              -2,
+              -2,
+              -1,
+              -3,
+              -4,
+              -5,
+              0,
+              -3
+            ]
+          }
+        }
+      }
+    },
+    "common_direction": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 43,
+        "harmed": 28,
+        "net": 15,
+        "net_by_fold": [
+          5,
+          0,
+          4,
+          1,
+          2,
+          4,
+          -3,
+          2
+        ],
+        "overall_known_accuracy": 0.8328645100797
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 4,
+          "families": [
+            "labelled_reference_pairs",
+            "recursive_metric",
+            "service_order_mixture",
+            "maxout",
+            "failure_sampling_offset"
+          ]
+        },
+        "1": {
+          "threshold": 3,
+          "families": [
+            "class_neighborhood_mass",
+            "permutation_selection",
+            "failure_sampling_offset"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 2,
+              "families": [
+                "recursive_metric",
+                "service_order_mixture"
+              ]
+            },
+            "1": {
+              "threshold": 4,
+              "families": [
+                "response_channels",
+                "permutation_selection",
+                "service_order_mixture",
+                "honest_failure_partitions",
+                "failure_sampling_offset"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 44,
+            "harmed": 27,
+            "net": 17,
+            "net_by_fold": [
+              2,
+              9,
+              6
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 8,
+            "harmed": 14,
+            "net": -6,
+            "net_by_fold": [
+              -4,
+              -1,
+              -2,
+              0,
+              2,
+              1,
+              -1,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 60,
+            "harmed": 81,
+            "net": -21,
+            "net_by_fold": [
+              0,
+              -4,
+              1,
+              -4,
+              -1,
+              -5,
+              -6,
+              -2
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 5,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "labelled_reference_pairs",
+                "permutation_selection",
+                "zero_truncated",
+                "fixed_bill_margins"
+              ]
+            },
+            "1": {
+              "threshold": 4,
+              "families": [
+                "response_channels",
+                "permutation_selection",
+                "service_order_mixture",
+                "honest_failure_partitions",
+                "failure_sampling_offset"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 20,
+            "harmed": 7,
+            "net": 13,
+            "net_by_fold": [
+              3,
+              8,
+              2
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 2,
+            "harmed": 5,
+            "net": -3,
+            "net_by_fold": [
+              -2,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 20,
+            "harmed": 32,
+            "net": -12,
+            "net_by_fold": [
+              -3,
+              -2,
+              1,
+              -2,
+              0,
+              -4,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "common_direction_solo_paid": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 110,
+        "harmed": 62,
+        "net": 48,
+        "net_by_fold": [
+          8,
+          4,
+          7,
+          7,
+          7,
+          4,
+          7,
+          4
+        ],
+        "overall_known_accuracy": 0.8367323019221753
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 3,
+          "families": [
+            "companion_transition",
+            "recursive_metric",
+            "fixed_bill_margins"
+          ]
+        },
+        "1": {
+          "threshold": 3,
+          "families": [
+            "response_channels",
+            "broad_error_transport_projection",
+            "two_view_reliability",
+            "honest_failure_partitions",
+            "spending_shape"
+          ]
+        },
+        "2": {
+          "threshold": 4,
+          "families": [
+            "permutation_selection",
+            "recursive_metric",
+            "service_order_mixture",
+            "fixed_bill_margins"
+          ]
+        },
+        "3": {
+          "threshold": 5,
+          "families": [
+            "class_neighborhood_mass",
+            "labelled_reference_pairs",
+            "recursive_metric",
+            "service_order_mixture",
+            "maxout",
+            "failure_sampling_offset"
+          ]
+        },
+        "4": {
+          "threshold": 3,
+          "families": [
+            "service_order_mixture",
+            "zero_truncated",
+            "spending_shape"
+          ]
+        },
+        "5": {
+          "threshold": 3,
+          "families": [
+            "class_neighborhood_mass",
+            "companion_transition",
+            "zero_truncated",
+            "predicate_tables",
+            "failure_sampling_offset",
+            "spending_shape",
+            "fixed_bill_margins"
+          ]
+        },
+        "6": {
+          "threshold": 3,
+          "families": [
+            "labelled_reference_pairs",
+            "permutation_selection",
+            "failure_sampling_offset"
+          ]
+        },
+        "7": {
+          "threshold": 2,
+          "families": [
+            "permutation_selection",
+            "spending_shape",
+            "fixed_bill_margins"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 2,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "service_order_mixture"
+              ]
+            },
+            "1": {
+              "threshold": 2,
+              "families": [
+                "bill_regime_tree",
+                "labelled_reference_pairs",
+                "fixed_bill_margins"
+              ]
+            },
+            "2": {
+              "threshold": 2,
+              "families": [
+                "labelled_reference_pairs",
+                "recursive_metric",
+                "service_order_mixture"
+              ]
+            },
+            "3": {
+              "threshold": 2,
+              "families": [
+                "recursive_metric",
+                "service_order_mixture"
+              ]
+            },
+            "4": {
+              "threshold": 3,
+              "families": [
+                "response_channels",
+                "companion_transition",
+                "error_partition_kernel",
+                "predicate_tables"
+              ]
+            },
+            "5": {
+              "threshold": 2,
+              "families": [
+                "bill_regime_tree",
+                "companion_transition",
+                "service_order_mixture",
+                "honest_failure_partitions",
+                "spending_shape"
+              ]
+            },
+            "6": {
+              "threshold": 2,
+              "families": [
+                "response_channels",
+                "recursive_metric",
+                "service_order_mixture",
+                "two_view_reliability"
+              ]
+            },
+            "7": {
+              "threshold": 2,
+              "families": [
+                "response_channels",
+                "spending_shape"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 77,
+            "harmed": 36,
+            "net": 41,
+            "net_by_fold": [
+              14,
+              19,
+              8
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 10,
+            "harmed": 16,
+            "net": -6,
+            "net_by_fold": [
+              -3,
+              -3,
+              -1,
+              -1,
+              3,
+              0,
+              0,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 90,
+            "harmed": 153,
+            "net": -63,
+            "net_by_fold": [
+              -7,
+              -5,
+              0,
+              -13,
+              -1,
+              -18,
+              -9,
+              -10
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            },
+            "1": {
+              "threshold": 2,
+              "families": [
+                "broad_error_transport_projection",
+                "service_order_mixture"
+              ]
+            },
+            "2": {
+              "threshold": 3,
+              "families": [
+                "companion_transition",
+                "zero_truncated",
+                "failure_sampling_offset"
+              ]
+            },
+            "3": {
+              "threshold": 6,
+              "families": [
+                "broad_error_transport_projection",
+                "bill_regime_tree",
+                "class_neighborhood_mass",
+                "permutation_selection",
+                "zero_truncated",
+                "honest_failure_partitions",
+                "failure_sampling_offset",
+                "spending_shape"
+              ]
+            },
+            "4": {
+              "threshold": 4,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "error_partition_kernel",
+                "recursive_metric",
+                "predicate_tables",
+                "spending_shape"
+              ]
+            },
+            "5": {
+              "threshold": 4,
+              "families": [
+                "response_channels",
+                "permutation_selection",
+                "service_order_mixture",
+                "honest_failure_partitions",
+                "failure_sampling_offset"
+              ]
+            },
+            "6": {
+              "threshold": 3,
+              "families": [
+                "permutation_selection",
+                "recursive_metric",
+                "service_order_mixture",
+                "two_view_reliability"
+              ]
+            },
+            "7": {
+              "threshold": 2,
+              "families": [
+                "response_channels",
+                "spending_shape"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 38,
+            "harmed": 9,
+            "net": 29,
+            "net_by_fold": [
+              13,
+              9,
+              7
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 2,
+            "harmed": 6,
+            "net": -4,
+            "net_by_fold": [
+              -1,
+              -1,
+              -1,
+              -1,
+              1,
+              -1,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 21,
+            "harmed": 62,
+            "net": -41,
+            "net_by_fold": [
+              -9,
+              -9,
+              -3,
+              -6,
+              -4,
+              -7,
+              0,
+              -3
+            ]
+          }
+        }
+      }
+    },
+    "known_global_rule": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "overall_known_accuracy": 0.8311064228785747
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "known_direction": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 46,
+        "harmed": 31,
+        "net": 15,
+        "net_by_fold": [
+          -2,
+          2,
+          4,
+          3,
+          -2,
+          1,
+          4,
+          5
+        ],
+        "overall_known_accuracy": 0.8328645100797
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 6,
+          "families": [
+            "bill_regime_tree",
+            "error_partition_kernel",
+            "recursive_metric",
+            "predicate_tables",
+            "failure_sampling_offset",
+            "fixed_bill_margins"
+          ]
+        },
+        "1": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 5,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "error_partition_kernel",
+                "recursive_metric",
+                "service_order_mixture",
+                "fixed_bill_margins"
+              ]
+            },
+            "1": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 70,
+            "harmed": 45,
+            "net": 25,
+            "net_by_fold": [
+              9,
+              15,
+              1
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 12,
+            "harmed": 14,
+            "net": -2,
+            "net_by_fold": [
+              -2,
+              -1,
+              1,
+              -1,
+              -1,
+              4,
+              1,
+              -3
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 93,
+            "harmed": 112,
+            "net": -19,
+            "net_by_fold": [
+              -2,
+              -2,
+              1,
+              -4,
+              -4,
+              4,
+              -7,
+              -5
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 4,
+              "families": [
+                "broad_error_transport_projection",
+                "labelled_reference_pairs",
+                "recursive_metric",
+                "service_order_mixture",
+                "zero_truncated",
+                "spending_shape"
+              ]
+            },
+            "1": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 92,
+            "harmed": 70,
+            "net": 22,
+            "net_by_fold": [
+              6,
+              13,
+              3
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 16,
+            "harmed": 22,
+            "net": -6,
+            "net_by_fold": [
+              -1,
+              -2,
+              -1,
+              -1,
+              0,
+              1,
+              2,
+              -4
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 123,
+            "harmed": 138,
+            "net": -15,
+            "net_by_fold": [
+              2,
+              1,
+              2,
+              -10,
+              -5,
+              4,
+              -5,
+              -4
+            ]
+          }
+        }
+      }
+    },
+    "known_direction_solo_paid": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 117,
+        "harmed": 65,
+        "net": 52,
+        "net_by_fold": [
+          1,
+          3,
+          9,
+          3,
+          3,
+          18,
+          12,
+          3
+        ],
+        "overall_known_accuracy": 0.8372011251758087
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 1,
+          "families": []
+        },
+        "1": {
+          "threshold": 3,
+          "families": [
+            "response_channels",
+            "broad_error_transport_projection",
+            "honest_failure_partitions",
+            "spending_shape"
+          ]
+        },
+        "2": {
+          "threshold": 6,
+          "families": [
+            "companion_transition",
+            "error_partition_kernel",
+            "permutation_selection",
+            "recursive_metric",
+            "zero_truncated",
+            "fixed_bill_margins"
+          ]
+        },
+        "3": {
+          "threshold": 4,
+          "families": [
+            "class_neighborhood_mass",
+            "labelled_reference_pairs",
+            "service_order_mixture",
+            "maxout",
+            "predicate_tables"
+          ]
+        },
+        "4": {
+          "threshold": 3,
+          "families": [
+            "permutation_selection",
+            "predicate_tables",
+            "honest_failure_partitions"
+          ]
+        },
+        "5": {
+          "threshold": 1,
+          "families": []
+        },
+        "6": {
+          "threshold": 2,
+          "families": [
+            "labelled_reference_pairs",
+            "permutation_selection"
+          ]
+        },
+        "7": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "broad_error_transport_projection",
+                "error_partition_kernel",
+                "permutation_selection",
+                "service_order_mixture",
+                "predicate_tables"
+              ]
+            },
+            "1": {
+              "threshold": 2,
+              "families": [
+                "bill_regime_tree",
+                "zero_truncated",
+                "fixed_bill_margins"
+              ]
+            },
+            "2": {
+              "threshold": 1,
+              "families": []
+            },
+            "3": {
+              "threshold": 4,
+              "families": [
+                "broad_error_transport_projection",
+                "companion_transition",
+                "recursive_metric",
+                "service_order_mixture",
+                "fixed_bill_margins"
+              ]
+            },
+            "4": {
+              "threshold": 3,
+              "families": [
+                "response_channels",
+                "companion_transition",
+                "error_partition_kernel",
+                "predicate_tables"
+              ]
+            },
+            "5": {
+              "threshold": 5,
+              "families": [
+                "response_channels",
+                "error_partition_kernel",
+                "labelled_reference_pairs",
+                "permutation_selection",
+                "service_order_mixture",
+                "failure_sampling_offset"
+              ]
+            },
+            "6": {
+              "threshold": 3,
+              "families": [
+                "error_partition_kernel",
+                "permutation_selection",
+                "service_order_mixture",
+                "two_view_reliability",
+                "honest_failure_partitions"
+              ]
+            },
+            "7": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 94,
+            "harmed": 35,
+            "net": 59,
+            "net_by_fold": [
+              15,
+              34,
+              10
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 14,
+            "harmed": 17,
+            "net": -3,
+            "net_by_fold": [
+              -5,
+              1,
+              0,
+              -1,
+              -1,
+              4,
+              1,
+              -2
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 153,
+            "harmed": 203,
+            "net": -50,
+            "net_by_fold": [
+              -9,
+              -3,
+              -2,
+              -13,
+              -6,
+              6,
+              -17,
+              -6
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            },
+            "1": {
+              "threshold": 2,
+              "families": [
+                "bill_regime_tree",
+                "zero_truncated"
+              ]
+            },
+            "2": {
+              "threshold": 1,
+              "families": []
+            },
+            "3": {
+              "threshold": 5,
+              "families": [
+                "response_channels",
+                "broad_error_transport_projection",
+                "companion_transition",
+                "recursive_metric",
+                "service_order_mixture",
+                "zero_truncated",
+                "spending_shape",
+                "fixed_bill_margins"
+              ]
+            },
+            "4": {
+              "threshold": 1,
+              "families": []
+            },
+            "5": {
+              "threshold": 1,
+              "families": []
+            },
+            "6": {
+              "threshold": 2,
+              "families": [
+                "response_channels",
+                "recursive_metric",
+                "service_order_mixture",
+                "two_view_reliability"
+              ]
+            },
+            "7": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 78,
+            "harmed": 35,
+            "net": 43,
+            "net_by_fold": [
+              13,
+              18,
+              12
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 16,
+            "harmed": 18,
+            "net": -2,
+            "net_by_fold": [
+              -2,
+              -2,
+              1,
+              -1,
+              0,
+              3,
+              2,
+              -3
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 84,
+            "harmed": 85,
+            "net": -1,
+            "net_by_fold": [
+              0,
+              -9,
+              3,
+              -1,
+              2,
+              9,
+              -4,
+              -1
+            ]
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "Hindsight is an exact ceiling only for these predictors, scopes, partitions and common subset/quorum per cell. Historical selection excludes all new orders. The historical baseline predates the newest TabNet correction. Current base votes are individual order-held-out predictions. Full transfer includes historical discovery passengers."
+}
