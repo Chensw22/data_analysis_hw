@@ -109,7 +109,7 @@ def batches(include_full):
         wrong = old!=y[a]
         wt,wq = np.column_stack([xt,raw_fields[a]]),np.column_stack([xq,raw_fields[b]])
         strict = ((score['full'][q]>=.5)==parent[:,None]).all(1)
-        yield SimpleNamespace(tag=tag,ids=b,query_error=parent!=y[b],train_error=wrong,groups=g[a],
+        yield SimpleNamespace(tag=tag,ids=b,train_ids=a,query_error=parent!=y[b],train_error=wrong,groups=g[a],
                               train_actions=at,query_actions=aq,train_cell=ct,query_cell=cq,
                               train_fields=wt,query_fields=wq,strict=strict,multiple=raw.booking_size.iloc[b].to_numpy()>1)
 
