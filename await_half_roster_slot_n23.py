@@ -81,8 +81,12 @@ DISPUTE_BAND = QueuedExport('proposal_n26_dispute_band', 'export_dispute_band_n2
     AWAKE_FILTER.out/'queue_status.json',
     '即将向主账号提交 68 个配置的分歧验证版，检验树模型对中等分歧乘客的改判。',
     'ca69b47c31f92b2204ac7abbeaff8caba43ab83e43213ef20a9119f9c9f6464f', model='frozen_votes.npz')
+JOINT_DISPUTE = QueuedExport('proposal_n26_joint_dispute_awake', 'export_joint_dispute_awake_n26.py',
+    DISPUTE_BAND.out/'queue_status.json',
+    '87 人版已有官方评测。即将提交合并分歧与清醒乘客改判的 214 人版。',
+    'e375a1a35f90d51a2b01ca66a6f6f17ec5f97e95e05184c6bf2cd6deb4bad7c8', model='composition.json')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE)}
 
 
 def verify(revision, job=HALF):
