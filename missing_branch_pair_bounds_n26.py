@@ -127,6 +127,12 @@ def run():
                 semantics='Fixed original validation training sets. On excluded queries enumerate both upstream branches and every existing same-fold reviewer whose support excludes the entire order. Per-row extrema give conservative full-roster bounds, not a realized accuracy.')
     grouped=[sum(fun(np.array(choices)[:,j]) for choices in by_group.values()) for j,fun in enumerate([min,max])]
     report['whole_net_bounds_same_order_same_fit']=[int(81+v) for v in grouped]
+    report['per_fold_net_bounds'] = [
+        [int(lo[f == k].sum()), int(hi[f == k].sum())] for k in np.unique(f)
+    ]
+    report['leave_one_fold_out_net_bounds'] = [
+        [int(lo[f != k].sum()), int(hi[f != k].sum())] for k in np.unique(f)
+    ]
     report['both_wrong_8532']=int(sum(both_wrong[i][0] for i in np.flatnonzero(known)))
     report['both_wrong_whole_bounds']=[int(sum(op(values) for values in both_wrong)) for op in (min,max)]
     print(report,flush=True)
