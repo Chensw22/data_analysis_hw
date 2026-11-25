@@ -28,7 +28,7 @@ def parties(ids,g):
 
 
 def person_scores(frame,y,g,t,whole_query):
-    result=np.full(len(y),np.nan)
+    result=np.full(len(frame),np.nan)
     for a,b in GroupKFold(3,shuffle=True,random_state=7281).split(t,groups=g[t]):
         tr,te=t[a],t[b]
         assert not np.isin(g[tr],g[te]).any()
