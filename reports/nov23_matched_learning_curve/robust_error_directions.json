@@ -1,0 +1,54 @@
+{
+  "per_direction": {
+    "all/predicted_False": {
+      "passengers": 1822,
+      "mistakes": 184,
+      "auc": 0.6031546955459999,
+      "median_if_wrong": 0.13296423852443695,
+      "median_if_correct": 0.11124120652675629
+    },
+    "all/predicted_True": {
+      "passengers": 1870,
+      "mistakes": 56,
+      "auc": 0.9072836273428886,
+      "median_if_wrong": 0.21479707956314087,
+      "median_if_correct": 0.0049245357513427734
+    },
+    "new/predicted_False": {
+      "passengers": 268,
+      "mistakes": 29,
+      "auc": 0.6103015437887751,
+      "median_if_wrong": 0.1259227693080902,
+      "median_if_correct": 0.11279541254043579
+    },
+    "new/predicted_True": {
+      "passengers": 163,
+      "mistakes": 5,
+      "auc": 0.9373417721518988,
+      "median_if_wrong": 0.26894140243530273,
+      "median_if_correct": 0.007846295833587646
+    },
+    "awake_solo/predicted_False": {
+      "passengers": 1284,
+      "mistakes": 143,
+      "auc": 0.5806065100543627,
+      "median_if_wrong": 0.13296423852443695,
+      "median_if_correct": 0.11920292675495148
+    },
+    "awake_solo/predicted_True": {
+      "passengers": 52,
+      "mistakes": 0,
+      "auc": null,
+      "median_if_wrong": null,
+      "median_if_correct": 0.009152770042419434
+    }
+  },
+  "repeated_inner_teacher": {
+    "common_errors": 240,
+    "all_seven_wrong": 237,
+    "wrong_predictions": 1676,
+    "opportunities": 1680,
+    "inner_queries_with_fellow_booking_in_training": 22343,
+    "inner_queries": 60851
+  }
+}
