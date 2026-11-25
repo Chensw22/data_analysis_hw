@@ -4,17 +4,23 @@ import numpy as np
 from disjoint_tree_fields_n25 import ART,DEST
 from family_identity_transfer_n26 import panels_and_reference
 from dispute_band_stability_n26 import gate
+from full_roster_booking_validation_n23 import data
+from joint_candidate_coverage_n26 import branch_decisions
 
 
 def run():
-    y,g,f,rows,names,p,h,_,_,(parent,lo,hi)=panels_and_reference()
+    y,g,f,rows,names,p,h,native,old_native,(parent,lo,hi)=panels_and_reference()
     a,b=[names.index('spending_shape/'+n) for n in ('pooled_direction','basket_direction')]
     tree=[i for i,n in enumerate(names) if n.startswith('permutation_selection/')]
     with np.load(ART/'proposal_n26_dispute_band/frozen_votes.npz') as z:
         maxdiff=float(np.max(np.abs(z['p'][:,a]-z['p'][:,b])))
     assert maxdiff==0
     with np.load(ART/'nov25_historical_nine/historical.npz') as z:
-        old=z['nine']
+        old=z['nine'];hf=z['fold'];old_prior=z['v131']
+    raw,_,_,_=data()
+    awake=raw.CryoSleep.eq(False).to_numpy()
+    full_154=branch_decisions(np.arange(len(y)),f,p,names,native,parent,lo,hi,awake,'full',891)['fields_awake'][0]
+    old_154=branch_decisions(rows,hf,h,names,old_native,old_prior,old,old,awake,'historical',891)['fields_awake'][0]
     known=parent>=0
     new=~np.isin(g,g[rows])
     reference=np.where(parent,hi,lo)
@@ -29,7 +35,11 @@ def run():
             v[:,dest]=v[:,src]
             support=gate(v)
             flip=support & mask & (candidate!=anchor)
-            out[policy]=dict(changed_band=int(np.sum(mask&(support!=original))),
+            other=old_154 if tag=='historical' else full_154
+            joint_change=flip|(mask&(other!=anchor))
+            original_joint=mask&((other!=anchor)|(original&(candidate!=anchor)))
+            out[policy]=dict(joint_fixed=int(np.sum(joint_change&(target!=anchor))),
+                joint_harmed=int(np.sum(joint_change&(target==anchor))),joint_changed_decisions=int(np.sum(joint_change!=original_joint)),changed_band=int(np.sum(mask&(support!=original))),
                 changed_decisions=int(np.sum(mask&(support!=original)&(candidate!=anchor))),
                 fixed=int(np.sum(flip&(target==candidate))),harmed=int(np.sum(flip&(target!=candidate))))
         result[tag]=out
