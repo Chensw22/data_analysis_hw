@@ -1,0 +1,126 @@
+{
+  "train": 8693,
+  "query": 4277,
+  "replay": {
+    "recursive_metric": {
+      "fold": 0,
+      "columns": [
+        "isotropic",
+        "diag1",
+        "diag2",
+        "full2"
+      ],
+      "max_absolute_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hard_label_differences": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "service_order_mixture": {
+      "fold": 0,
+      "columns": [
+        "empty"
+      ],
+      "max_absolute_error": [
+        0.0
+      ],
+      "hard_label_differences": [
+        0
+      ]
+    },
+    "maxout": {
+      "fold": 0,
+      "columns": [
+        "linear",
+        "relu",
+        "maxout"
+      ],
+      "max_absolute_error": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hard_label_differences": [
+        0,
+        0,
+        0
+      ]
+    },
+    "zero_truncated": {
+      "fold": 0,
+      "columns": [
+        "independent",
+        "truncated",
+        "reported_sleep"
+      ],
+      "max_absolute_error": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hard_label_differences": [
+        0,
+        0,
+        0
+      ]
+    },
+    "honest_failure_partitions": {
+      "fold": 0,
+      "columns": [
+        "natural",
+        "natural_honest",
+        "enriched",
+        "enriched_honest",
+        "placebo",
+        "placebo_honest"
+      ],
+      "max_absolute_error": [
+        2.220446049250313e-16,
+        0.0,
+        2.220446049250313e-16,
+        0.0,
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "hard_label_differences": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "failure_sampling_offset": {
+      "fold": 0,
+      "columns": [
+        "natural",
+        "enriched",
+        "remove_offset",
+        "in_fit_offset",
+        "placebo"
+      ],
+      "max_absolute_error": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "hard_label_differences": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  }
+}
