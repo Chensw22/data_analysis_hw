@@ -1,0 +1,715 @@
+{
+  "composition": {
+    "asleep": {
+      "rows": 12371,
+      "near_mse": 0.2465538287389974,
+      "shifted_mse": 0.24842186152763185
+    },
+    "party_size": {
+      "rows": 12671,
+      "near_mse": 0.4573289681994168,
+      "shifted_mse": 0.4583022747452135
+    },
+    "child": {
+      "rows": 12406,
+      "near_mse": 0.08854680069532307,
+      "shifted_mse": 0.0885491444287903
+    },
+    "young_adult": {
+      "rows": 12406,
+      "near_mse": 0.2920682231557617,
+      "shifted_mse": 0.2901927796990854
+    },
+    "earth": {
+      "rows": 12390,
+      "near_mse": 0.13289166890861806,
+      "shifted_mse": 0.13328681284189758
+    },
+    "europa": {
+      "rows": 12390,
+      "near_mse": 0.03472054075867635,
+      "shifted_mse": 0.03386747825307147
+    },
+    "paid": {
+      "rows": 12671,
+      "near_mse": 0.25047209000879306,
+      "shifted_mse": 0.25642118769457184
+    },
+    "budget": {
+      "rows": 12671,
+      "near_mse": 0.390781303766724,
+      "shifted_mse": 0.39838891978683233
+    },
+    "RoomService": {
+      "rows": 12412,
+      "near_mse": 0.24411268872323238,
+      "shifted_mse": 0.24216312048524818
+    },
+    "FoodCourt": {
+      "rows": 12390,
+      "near_mse": 0.26686349168316104,
+      "shifted_mse": 0.2652781581175557
+    },
+    "ShoppingMall": {
+      "rows": 12370,
+      "near_mse": 0.2435862372451207,
+      "shifted_mse": 0.2489859591559984
+    },
+    "Spa": {
+      "rows": 12390,
+      "near_mse": 0.26767885055644497,
+      "shifted_mse": 0.27150934521185016
+    },
+    "VRDeck": {
+      "rows": 12407,
+      "near_mse": 0.26413054725482105,
+      "shifted_mse": 0.2628315343062501
+    }
+  },
+  "historical": {
+    "losses": {
+      "plain": 0.3936618345844073,
+      "near": 0.40686227684468007,
+      "shifted": 0.4045302684708091
+    },
+    "near_all": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 241,
+        "harmed": 348
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 162,
+        "harmed": 233
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 0,
+        "harmed": 5
+      }
+    },
+    "near_induced": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 98,
+        "harmed": 171
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 5
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 68,
+        "harmed": 121
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 0,
+        "harmed": 5
+      }
+    },
+    "near_offset_0.5": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 68,
+        "harmed": 82
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 47,
+        "harmed": 55
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 1,
+        "harmed": 0
+      }
+    },
+    "near_offset_1.0": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 117,
+        "harmed": 179
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 4,
+        "harmed": 5
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 83,
+        "harmed": 127
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 4,
+        "harmed": 4
+      }
+    },
+    "shifted_all": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 237,
+        "harmed": 331
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 163,
+        "harmed": 212
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "shifted_induced": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 88,
+        "harmed": 148
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 66,
+        "harmed": 91
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "shifted_offset_0.5": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 58,
+        "harmed": 77
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 41,
+        "harmed": 51
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "shifted_offset_1.0": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 109,
+        "harmed": 141
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 2,
+        "harmed": 2
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 80,
+        "harmed": 97
+      },
+      "fresh_common": {
+        "rows": 2005,
+        "errors": 168,
+        "fixed": 2,
+        "harmed": 0
+      }
+    },
+    "crossfit_place": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 222,
+        "harmed": 266
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 147,
+        "harmed": 171
+      }
+    },
+    "crossfit_real_place": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 221,
+        "harmed": 274
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 146,
+        "harmed": 178
+      }
+    },
+    "crossfit_shifted_profile": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 215,
+        "harmed": 259
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 142,
+        "harmed": 166
+      }
+    },
+    "crossfit_real_profile": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 232,
+        "harmed": 265
+      },
+      "common": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 4691,
+        "errors": 898,
+        "fixed": 156,
+        "harmed": 173
+      }
+    }
+  },
+  "full": {
+    "losses": {
+      "plain": 0.38754352171443934,
+      "near": 0.3941100166499555,
+      "shifted": 0.3944586760226192
+    },
+    "near_all": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 248,
+        "harmed": 359
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 31,
+        "harmed": 47
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "near_induced": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 114,
+        "harmed": 155
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 17,
+        "harmed": 20
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "near_offset_0.5": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 49,
+        "harmed": 71
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 7,
+        "harmed": 10
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "near_offset_1.0": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 119,
+        "harmed": 172
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 14,
+        "harmed": 26
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 1
+      }
+    },
+    "shifted_all": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 235,
+        "harmed": 356
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 28,
+        "harmed": 41
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "shifted_induced": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 101,
+        "harmed": 131
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 14,
+        "harmed": 10
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "shifted_offset_0.5": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 54,
+        "harmed": 56
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 7,
+        "harmed": 4
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "shifted_offset_1.0": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 113,
+        "harmed": 136
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 17,
+        "harmed": 16
+      },
+      "fresh_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "crossfit_place": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 202,
+        "harmed": 233
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 25,
+        "harmed": 31
+      }
+    },
+    "from_history_place": {
+      "all": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 24,
+        "harmed": 32
+      },
+      "common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "crossfit_real_place": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 205,
+        "harmed": 235
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 25,
+        "harmed": 33
+      }
+    },
+    "from_history_real_place": {
+      "all": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 23,
+        "harmed": 33
+      },
+      "common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "crossfit_shifted_profile": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 212,
+        "harmed": 249
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 26,
+        "harmed": 31
+      }
+    },
+    "from_history_shifted_profile": {
+      "all": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 25,
+        "harmed": 27
+      },
+      "common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "crossfit_real_profile": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 216,
+        "harmed": 236
+      },
+      "common": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "fresh": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 28,
+        "harmed": 30
+      }
+    },
+    "from_history_real_profile": {
+      "all": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 25,
+        "harmed": 29
+      },
+      "common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0
+      }
+    }
+  }
+}
