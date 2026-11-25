@@ -74,6 +74,8 @@ def evaluate(raw,y,g,ids,fold,anchor,known,families,fresh):
     reg,bill=vectors(raw)
     rowscores={m:np.zeros(len(ids)) for m in ('masked','observed','swapped')}
     accuracy={m:[] for m in rowscores}
+    pair_actions={}
+    pair_diagnostics={}
     for k in np.unique(fold):
         loc=np.flatnonzero(fold==k)
         q=ids[loc]
@@ -97,8 +99,28 @@ def evaluate(raw,y,g,ids,fold,anchor,known,families,fresh):
             np.testing.assert_array_equal(model.classes_,np.arange(4))
             for mode in ([train_mode] if train_mode=='masked' else ['observed','swapped']):
                 joint=symmetric(model,reg,bill,left,right,mode)
+                # Historical rows are not necessarily sorted.
+                lookup={int(v):j for j,v in enumerate(ids)}
+                li=np.array([lookup[v] for v in left])
+                ri=np.array([lookup[v] for v in right])
+                valid=known[li]&known[ri]
+                give_left=joint[:,2]>joint[:,1]
+                mixed=joint[:,1]+joint[:,2]>.5
+                clear=abs(joint[:,2]-joint[:,1])>1e-12
+                reverse=(anchor[li]!=anchor[ri])&(anchor[li]!=give_left)&clear
+                for name,condition in [('reverse',reverse),('mixed_reverse',mixed&reverse),
+                                       ('mixed_orient',mixed&clear)]:
+                    active=valid&condition
+                    edits=pair_actions.setdefault(mode+'_'+name,np.zeros(len(ids),bool))
+                    edits[li[active]]=anchor[li[active]]!=give_left[active]
+                    edits[ri[active]]=anchor[ri[active]]==give_left[active]
                 unequal=y[left]!=y[right]
                 signed=(joint[:,2]-joint[:,1])*np.where(y[left],1,-1)
+                for cohort,selected in [('same_anchor',valid&(anchor[li]==anchor[ri])),
+                                       ('both_families',families[li]&families[ri])]:
+                    actual=selected&unequal
+                    entry=pair_diagnostics.setdefault(mode+'_'+cohort,np.zeros(3,int))
+                    entry+=[actual.sum(),(actual&(signed>1e-12)).sum(),(actual&(abs(signed)<=1e-12)).sum()]
                 accuracy[mode].append([int(unequal.sum()),int((unequal&(signed>1e-12)).sum()),
                                        int((unequal&(abs(signed)<=1e-12)).sum()),len(left)])
                 # In deployment no knowledge of whether labels differ is available.
@@ -122,6 +144,34 @@ def evaluate(raw,y,g,ids,fold,anchor,known,families,fresh):
                 return dict(fixed=int((mask&wrong&change).sum()),harmed=int((mask&~wrong&change).sum()))
             result[mode]['deployment'][name]=dict(rows=int(mask.sum()),direct=count(edits),
                 induced=count(edits&(side!=(rowscores['masked']>=.5))))
+    wrong=anchor!=y[ids]
+    result['conditional_pair_diagnostics']={k:dict(discordant=int(n),correct=int(w),ties=int(t))
+                  for k,(n,w,t) in pair_diagnostics.items()}
+    result['paired_deployment']={name:{scope:dict(fixed=int((edits&wrong&msk).sum()),
+                harmed=int((edits&~wrong&msk).sum())) for scope,msk in
+                [('all',known),('new',known&fresh),('families',families)]} for name,edits in pair_actions.items()}
+    return result
+
+
+def reference():
+    """Score exactly the same held pairs with existing per-passenger Mitra probabilities."""
+    raw,y,g,f=data()
+    _,_,_,rows,_,_,_,native,old_native,_=panels_and_reference()
+    with np.load(ART/'nov25_historical_nine/historical.npz') as z:
+        hf=z['fold']
+    reg,_=vectors(raw)
+    result={}
+    for tag,ids,fold,scores in [('full',np.arange(len(y)),f,native),('historical',rows,hf,old_native)]:
+        score=np.full(len(y),np.nan)
+        score[ids]=scores
+        counts=np.zeros(3,int)
+        for k in np.unique(fold):
+            i,j=independent_pairs(reg,g,ids[fold==k])
+            mask=y[i]!=y[j]
+            margin=(score[i]-score[j])*np.where(y[i],1,-1)
+            counts+=[mask.sum(),(mask&(margin>1e-12)).sum(),(mask&(abs(margin)<=1e-12)).sum()]
+        n,w,tied=map(int,counts)
+        result[tag]=dict(discordant=n,correct=w,ties=tied,pair_accuracy=(w+.5*tied)/n)
     return result
 
 
@@ -145,6 +195,7 @@ def run():
         common=view['eligible']&(view['votes']==view['anchor'][:,None]).all(1)
         output[tag]=evaluate(raw,y,g,ids,fold,view['anchor'],view['known'],common,fresh)
         print(tag,output[tag],flush=True)
+    output['native_reference']=reference()
     DEST.with_name('matched_bill_pair_states.json').write_text(json.dumps(output,indent=2)+'\n')
 
 
