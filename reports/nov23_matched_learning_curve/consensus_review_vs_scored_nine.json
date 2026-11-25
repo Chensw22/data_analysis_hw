@@ -1,0 +1,198 @@
+{
+  "historical": {
+    "total": 6954,
+    "accuracy": {
+      "nine": 0.815070463042853,
+      "parent": 0.8183779119930975,
+      "review": 0.8198159332758125
+    },
+    "parent_vs_nine": {
+      "rows": 6954,
+      "errors": 1286,
+      "fixed": 211,
+      "harmed": 188
+    },
+    "review_vs_nine": {
+      "rows": 6954,
+      "errors": 1286,
+      "fixed": 221,
+      "harmed": 188
+    },
+    "review_reversing_parent_edits": {
+      "rows": 399,
+      "errors": 188,
+      "fixed": 27,
+      "harmed": 23
+    },
+    "review_on_parent_unchanged": {
+      "rows": 6555,
+      "errors": 1075,
+      "fixed": 33,
+      "harmed": 27
+    }
+  },
+  "full": {
+    "total": 8532,
+    "accuracy": {
+      "nine": 0.8205578996718237,
+      "parent": 0.8245428973277075,
+      "review": 0.8239568682606657
+    },
+    "parent_vs_nine": {
+      "rows": 8532,
+      "errors": 1531,
+      "fixed": 209,
+      "harmed": 175
+    },
+    "review_vs_nine": {
+      "rows": 8532,
+      "errors": 1531,
+      "fixed": 218,
+      "harmed": 189
+    },
+    "review_reversing_parent_edits": {
+      "rows": 384,
+      "errors": 175,
+      "fixed": 26,
+      "harmed": 28
+    },
+    "review_on_parent_unchanged": {
+      "rows": 8148,
+      "errors": 1322,
+      "fixed": 37,
+      "harmed": 40
+    }
+  },
+  "historical_to_new": {
+    "total": 1033,
+    "accuracy": {
+      "nine": 0.7938044530493708,
+      "parent": 0.7996127783155856,
+      "review": 0.8044530493707648
+    },
+    "parent_vs_nine": {
+      "rows": 1033,
+      "errors": 213,
+      "fixed": 27,
+      "harmed": 21
+    },
+    "review_vs_nine": {
+      "rows": 1033,
+      "errors": 213,
+      "fixed": 27,
+      "harmed": 16
+    },
+    "review_reversing_parent_edits": {
+      "rows": 48,
+      "errors": 21,
+      "fixed": 6,
+      "harmed": 6
+    },
+    "review_on_parent_unchanged": {
+      "rows": 985,
+      "errors": 186,
+      "fixed": 6,
+      "harmed": 1
+    }
+  },
+  "bookingmix": {
+    "total": 6055,
+    "accuracy": {
+      "nine": 0.8142031379025598,
+      "parent": 0.8188274153592072,
+      "review": 0.823121387283237
+    },
+    "parent_vs_nine": {
+      "rows": 6055,
+      "errors": 1125,
+      "fixed": 146,
+      "harmed": 118
+    },
+    "review_vs_nine": {
+      "rows": 6055,
+      "errors": 1125,
+      "fixed": 167,
+      "harmed": 113
+    },
+    "review_reversing_parent_edits": {
+      "rows": 264,
+      "errors": 118,
+      "fixed": 31,
+      "harmed": 5
+    },
+    "review_on_parent_unchanged": {
+      "rows": 5791,
+      "errors": 979,
+      "fixed": 26,
+      "harmed": 26
+    },
+    "weighted_vs_parent": {
+      "by_size": {
+        "1": {
+          "n": 4735,
+          "fixed": 51,
+          "harmed": 28
+        },
+        "2": {
+          "n": 929,
+          "fixed": 6,
+          "harmed": 3
+        },
+        "3": {
+          "n": 279,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "4": {
+          "n": 112,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fixed": 57,
+      "harmed": 31,
+      "poststratified_gain_pp": 0.33431389805631884,
+      "group_bootstrap_pp": [
+        0.08088251814239816,
+        0.5752536844753069
+      ]
+    },
+    "weighted_vs_nine": {
+      "by_size": {
+        "1": {
+          "n": 4735,
+          "fixed": 141,
+          "harmed": 91
+        },
+        "2": {
+          "n": 929,
+          "fixed": 17,
+          "harmed": 14
+        },
+        "3": {
+          "n": 279,
+          "fixed": 8,
+          "harmed": 4
+        },
+        "4": {
+          "n": 112,
+          "fixed": 1,
+          "harmed": 4
+        }
+      },
+      "fixed": 167,
+      "harmed": 113,
+      "poststratified_gain_pp": 0.469134756047725,
+      "group_bootstrap_pp": [
+        -0.16055936366033108,
+        1.0899243645778933
+      ]
+    },
+    "single_source_on_fresh": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 10,
+      "harmed": 7
+    }
+  }
+}
