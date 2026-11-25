@@ -1,4 +1,5 @@
-"""Recreate deployed raw out-of-fold teacher scores inside three group-disjoint outer splits."""
+"""Recreate deployed raw out-of-fold teacher scores inside selected group-disjoint outer splits."""
+import argparse
 from pathlib import Path
 
 import numpy as np
@@ -11,7 +12,7 @@ OUT = ROOT / 'artifacts/nov25_grouped_peer_teacher'
 OUTER = (0, 1, 2)
 
 
-def run():
+def run(folds_to_fit=OUTER):
     import torch
     import mitra_candidate as base
     from prepare_residual_ready import load_frames, probability, SEED
@@ -24,7 +25,7 @@ def run():
     np.testing.assert_array_equal(raw.PassengerId, train.PassengerId)
     np.testing.assert_array_equal(y, labels)
     OUT.mkdir(exist_ok=True)
-    for outer in OUTER:
+    for outer in folds_to_fit:
         t, q = np.flatnonzero(folds != outer), np.flatnonzero(folds == outer)
         assert not np.intersect1d(group[t], group[q]).size
         scores = np.full(len(t), np.nan, dtype=np.float32)
@@ -60,4 +61,6 @@ def run():
 
 
 if __name__ == '__main__':
-    run()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--folds", nargs="+", type=int, choices=range(8), default=OUTER)
+    run(parser.parse_args().folds)

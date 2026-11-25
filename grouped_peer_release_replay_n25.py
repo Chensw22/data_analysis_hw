@@ -136,7 +136,7 @@ def run(folds=OUTER):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--fold', type=int, choices=OUTER)
+    parser.add_argument('--fold', type=int, choices=range(8))
     args = parser.parse_args()
     with threadpool_limits(1):
         run(OUTER if args.fold is None else (args.fold,))
