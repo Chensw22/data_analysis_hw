@@ -1,0 +1,421 @@
+{
+  "384": {
+    "package": "synthefy-nori==0.24.0",
+    "wheel_sha256": "4cb1f0da3a397db79dc28932f860b6df90e4aff3c0c29027987c11b6d55d40c0",
+    "model": "Synthefy/Nori nori-6m",
+    "model_sha256": "a13b2bc31d8db24d17bae6d04844e0adf669e446087b0b7a34c7b05045d61323",
+    "weight_url": "https://huggingface.co/Synthefy/Nori/blob/1aca005143362552bb56c62e110ab77767cf4f77/nori.pt",
+    "code": "https://github.com/Synthefy/synthefy-nori",
+    "license": "Apache-2.0",
+    "context": 384,
+    "folds": {
+      "0": {
+        "rows": 1056,
+        "accuracy": 0.7897727272727273,
+        "seconds": 5.072059583995724
+      },
+      "1": {
+        "rows": 1053,
+        "accuracy": 0.7568850902184235,
+        "seconds": 1.1747247919847723
+      },
+      "2": {
+        "rows": 1130,
+        "accuracy": 0.779646017699115,
+        "seconds": 1.2592444579931907
+      },
+      "3": {
+        "rows": 1073,
+        "accuracy": 0.7642124883504194,
+        "seconds": 1.2077298340154812
+      },
+      "4": {
+        "rows": 1122,
+        "accuracy": 0.7691622103386809,
+        "seconds": 1.3720690409827512
+      },
+      "5": {
+        "rows": 1072,
+        "accuracy": 0.7574626865671642,
+        "seconds": 1.2218572089914232
+      },
+      "6": {
+        "rows": 1124,
+        "accuracy": 0.7731316725978647,
+        "seconds": 1.3394697920011822
+      },
+      "7": {
+        "rows": 1063,
+        "accuracy": 0.7883349012229539,
+        "seconds": 1.2385543750133365
+      }
+    },
+    "recipe": "first official default preprocessing member; no target-specific training; threshold 0.5; 3:1 Mitra/Nori log-odds blend",
+    "accuracy": 0.7723455653974463,
+    "scopes": {
+      "known": {
+        "nori": {
+          "rows": 8532,
+          "fixed": 403,
+          "harmed": 859
+        },
+        "mitra": {
+          "rows": 8532,
+          "fixed": 241,
+          "harmed": 324
+        },
+        "nori_only": {
+          "rows": 8532,
+          "fixed": 273,
+          "harmed": 639
+        },
+        "blend": {
+          "rows": 8532,
+          "fixed": 259,
+          "harmed": 387
+        },
+        "blend_extra": {
+          "rows": 8532,
+          "fixed": 68,
+          "harmed": 108
+        }
+      },
+      "common": {
+        "nori": {
+          "rows": 7870,
+          "fixed": 264,
+          "harmed": 622
+        },
+        "mitra": {
+          "rows": 7870,
+          "fixed": 25,
+          "harmed": 34
+        },
+        "nori_only": {
+          "rows": 7870,
+          "fixed": 249,
+          "harmed": 597
+        },
+        "blend": {
+          "rows": 7870,
+          "fixed": 73,
+          "harmed": 112
+        },
+        "blend_extra": {
+          "rows": 7870,
+          "fixed": 54,
+          "harmed": 86
+        }
+      },
+      "new_orders": {
+        "nori": {
+          "rows": 1033,
+          "fixed": 49,
+          "harmed": 116
+        },
+        "mitra": {
+          "rows": 1033,
+          "fixed": 23,
+          "harmed": 46
+        },
+        "nori_only": {
+          "rows": 1033,
+          "fixed": 39,
+          "harmed": 84
+        },
+        "blend": {
+          "rows": 1033,
+          "fixed": 26,
+          "harmed": 64
+        },
+        "blend_extra": {
+          "rows": 1033,
+          "fixed": 11,
+          "harmed": 21
+        }
+      }
+    }
+  },
+  "1536": {
+    "package": "synthefy-nori==0.24.0",
+    "wheel_sha256": "4cb1f0da3a397db79dc28932f860b6df90e4aff3c0c29027987c11b6d55d40c0",
+    "model": "Synthefy/Nori nori-6m",
+    "model_sha256": "a13b2bc31d8db24d17bae6d04844e0adf669e446087b0b7a34c7b05045d61323",
+    "weight_url": "https://huggingface.co/Synthefy/Nori/blob/1aca005143362552bb56c62e110ab77767cf4f77/nori.pt",
+    "code": "https://github.com/Synthefy/synthefy-nori",
+    "license": "Apache-2.0",
+    "context": 1536,
+    "folds": {
+      "0": {
+        "rows": 1056,
+        "accuracy": 0.7727272727272727,
+        "seconds": 3.0629034170124214
+      },
+      "1": {
+        "rows": 1053,
+        "accuracy": 0.8091168091168092,
+        "seconds": 2.842345541022951
+      },
+      "2": {
+        "rows": 1130,
+        "accuracy": 0.8088495575221238,
+        "seconds": 3.04968379199272
+      },
+      "3": {
+        "rows": 1073,
+        "accuracy": 0.7800559179869525,
+        "seconds": 3.015239707980072
+      },
+      "4": {
+        "rows": 1122,
+        "accuracy": 0.8021390374331551,
+        "seconds": 3.257708832999924
+      },
+      "5": {
+        "rows": 1072,
+        "accuracy": 0.7742537313432836,
+        "seconds": 3.367674959008582
+      },
+      "6": {
+        "rows": 1124,
+        "accuracy": 0.7882562277580071,
+        "seconds": 3.5134972500090953
+      },
+      "7": {
+        "rows": 1063,
+        "accuracy": 0.8052681091251176,
+        "seconds": 3.3898160420067143
+      }
+    },
+    "recipe": "first official default preprocessing member; no target-specific training; threshold 0.5; 3:1 Mitra/Nori log-odds blend",
+    "accuracy": 0.7927067755665478,
+    "scopes": {
+      "known": {
+        "nori": {
+          "rows": 8532,
+          "fixed": 395,
+          "harmed": 681
+        },
+        "mitra": {
+          "rows": 8532,
+          "fixed": 241,
+          "harmed": 324
+        },
+        "nori_only": {
+          "rows": 8532,
+          "fixed": 257,
+          "harmed": 454
+        },
+        "blend": {
+          "rows": 8532,
+          "fixed": 247,
+          "harmed": 370
+        },
+        "blend_extra": {
+          "rows": 8532,
+          "fixed": 41,
+          "harmed": 90
+        }
+      },
+      "common": {
+        "nori": {
+          "rows": 7870,
+          "fixed": 247,
+          "harmed": 427
+        },
+        "mitra": {
+          "rows": 7870,
+          "fixed": 25,
+          "harmed": 34
+        },
+        "nori_only": {
+          "rows": 7870,
+          "fixed": 235,
+          "harmed": 408
+        },
+        "blend": {
+          "rows": 7870,
+          "fixed": 45,
+          "harmed": 81
+        },
+        "blend_extra": {
+          "rows": 7870,
+          "fixed": 30,
+          "harmed": 60
+        }
+      },
+      "new_orders": {
+        "nori": {
+          "rows": 1033,
+          "fixed": 51,
+          "harmed": 100
+        },
+        "mitra": {
+          "rows": 1033,
+          "fixed": 23,
+          "harmed": 46
+        },
+        "nori_only": {
+          "rows": 1033,
+          "fixed": 39,
+          "harmed": 67
+        },
+        "blend": {
+          "rows": 1033,
+          "fixed": 31,
+          "harmed": 58
+        },
+        "blend_extra": {
+          "rows": 1033,
+          "fixed": 10,
+          "harmed": 13
+        }
+      }
+    }
+  },
+  "0": {
+    "package": "synthefy-nori==0.24.0",
+    "wheel_sha256": "4cb1f0da3a397db79dc28932f860b6df90e4aff3c0c29027987c11b6d55d40c0",
+    "model": "Synthefy/Nori nori-6m",
+    "model_sha256": "a13b2bc31d8db24d17bae6d04844e0adf669e446087b0b7a34c7b05045d61323",
+    "weight_url": "https://huggingface.co/Synthefy/Nori/blob/1aca005143362552bb56c62e110ab77767cf4f77/nori.pt",
+    "code": "https://github.com/Synthefy/synthefy-nori",
+    "license": "Apache-2.0",
+    "context": 0,
+    "folds": {
+      "0": {
+        "rows": 1056,
+        "provided_context_rows": 7637,
+        "accuracy": 0.8229166666666666,
+        "seconds": 32.949623792024795
+      },
+      "1": {
+        "rows": 1053,
+        "provided_context_rows": 7640,
+        "accuracy": 0.805318138651472,
+        "seconds": 35.74835075001465
+      },
+      "2": {
+        "rows": 1130,
+        "provided_context_rows": 7563,
+        "accuracy": 0.8212389380530973,
+        "seconds": 32.10425454200595
+      },
+      "3": {
+        "rows": 1073,
+        "provided_context_rows": 7620,
+        "accuracy": 0.8108108108108109,
+        "seconds": 33.80392754098284
+      },
+      "4": {
+        "rows": 1122,
+        "provided_context_rows": 7571,
+        "accuracy": 0.803030303030303,
+        "seconds": 36.77572887498536
+      },
+      "5": {
+        "rows": 1072,
+        "provided_context_rows": 7621,
+        "accuracy": 0.789179104477612,
+        "seconds": 44.71577912502107
+      },
+      "6": {
+        "rows": 1124,
+        "provided_context_rows": 7569,
+        "accuracy": 0.806049822064057,
+        "seconds": 43.462712250009645
+      },
+      "7": {
+        "rows": 1063,
+        "provided_context_rows": 7630,
+        "accuracy": 0.8137347130761995,
+        "seconds": 39.919259165995754
+      }
+    },
+    "recipe": "first official default preprocessing member; no target-specific training; threshold 0.5; 3:1 Mitra/Nori log-odds blend",
+    "accuracy": 0.8090417577361095,
+    "scopes": {
+      "known": {
+        "nori": {
+          "rows": 8532,
+          "fixed": 320,
+          "harmed": 458
+        },
+        "mitra": {
+          "rows": 8532,
+          "fixed": 241,
+          "harmed": 324
+        },
+        "nori_only": {
+          "rows": 8532,
+          "fixed": 146,
+          "harmed": 225
+        },
+        "blend": {
+          "rows": 8532,
+          "fixed": 250,
+          "harmed": 340
+        },
+        "blend_extra": {
+          "rows": 8532,
+          "fixed": 33,
+          "harmed": 50
+        }
+      },
+      "common": {
+        "nori": {
+          "rows": 7870,
+          "fixed": 132,
+          "harmed": 212
+        },
+        "mitra": {
+          "rows": 7870,
+          "fixed": 25,
+          "harmed": 34
+        },
+        "nori_only": {
+          "rows": 7870,
+          "fixed": 122,
+          "harmed": 194
+        },
+        "blend": {
+          "rows": 7870,
+          "fixed": 36,
+          "harmed": 54
+        },
+        "blend_extra": {
+          "rows": 7870,
+          "fixed": 22,
+          "harmed": 36
+        }
+      },
+      "new_orders": {
+        "nori": {
+          "rows": 1033,
+          "fixed": 42,
+          "harmed": 73
+        },
+        "mitra": {
+          "rows": 1033,
+          "fixed": 23,
+          "harmed": 46
+        },
+        "nori_only": {
+          "rows": 1033,
+          "fixed": 25,
+          "harmed": 35
+        },
+        "blend": {
+          "rows": 1033,
+          "fixed": 27,
+          "harmed": 50
+        },
+        "blend_extra": {
+          "rows": 1033,
+          "fixed": 5,
+          "harmed": 5
+        }
+      }
+    }
+  }
+}
