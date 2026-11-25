@@ -1,0 +1,804 @@
+{
+  "test_rows": 4277,
+  "current_test_unanimous": 3929,
+  "candidates": {
+    "all_booking_union": {
+      "sha256": "76ea7ffbfa1e444307bd3d523b23e922723fa37cc7638b73df8a56b41174d3a5",
+      "test_distances": {
+        "nine": 226,
+        "fields": 212,
+        "awake": 247,
+        "fields_awake": 240,
+        "filtered": 211,
+        "band": 239,
+        "all_three": 260,
+        "review": 282,
+        "fare": 342,
+        "six": 328
+      },
+      "test_new_rows": 113,
+      "legacy_net_by_plan": {
+        "20261112": 9,
+        "20261115": 39,
+        "20261116": 10,
+        "v131": 27
+      },
+      "legacy_metric_source": "reports/nov23_booking_influence/combined.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 123,
+          "harmed": 108,
+          "net": 15,
+          "net_by_fold": [
+            8,
+            4,
+            3
+          ],
+          "paired_booking_interval_pp": [
+            -0.2794977298640986,
+            1.0019452938505302
+          ]
+        },
+        "versus_six": {
+          "fixed": 171,
+          "harmed": 205,
+          "net": -34,
+          "net_by_fold": [
+            -6,
+            -2,
+            -26
+          ],
+          "paired_booking_interval_pp": [
+            -1.5545310389354927,
+            0.08620035919884847
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 44,
+          "harmed": 51,
+          "net": -7,
+          "net_by_fold": [
+            -2,
+            0,
+            -5
+          ],
+          "paired_booking_interval_pp": [
+            -0.6142288508378894,
+            0.28189694092470347
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 184,
+          "harmed": 163,
+          "net": 21,
+          "net_by_fold": [
+            8,
+            5,
+            8
+          ],
+          "paired_booking_interval_pp": [
+            -0.24338826552617257,
+            0.8385320061107803
+          ]
+        },
+        "versus_six": {
+          "fixed": 256,
+          "harmed": 290,
+          "net": -34,
+          "net_by_fold": [
+            -8,
+            -1,
+            -25
+          ],
+          "paired_booking_interval_pp": [
+            -1.132194596239554,
+            0.14664235844121445
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 73,
+          "harmed": 83,
+          "net": -10,
+          "net_by_fold": [
+            -5,
+            -1,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.5404846476016911,
+            0.22257640147419688
+          ]
+        }
+      }
+    },
+    "budget_quarter_incumbent": {
+      "sha256": "2840ac0701a280433c870104c9d1c3828d6e01581d7c6778fb51c27e49fdd1e2",
+      "test_distances": {
+        "nine": 159,
+        "fields": 167,
+        "awake": 190,
+        "fields_awake": 201,
+        "filtered": 160,
+        "band": 220,
+        "all_three": 245,
+        "review": 261,
+        "fare": 309,
+        "six": 295
+      },
+      "test_new_rows": 73,
+      "legacy_net_by_plan": {
+        "20261112": 16,
+        "20261115": 31,
+        "20261116": 8,
+        "v131": -1
+      },
+      "legacy_metric_source": "reports/nov23_budget_quarter_replay/result.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 80,
+          "harmed": 85,
+          "net": -5,
+          "net_by_fold": [
+            -5,
+            -6,
+            6
+          ],
+          "paired_booking_interval_pp": [
+            -0.6359746252120108,
+            0.4529711900989497
+          ]
+        },
+        "versus_six": {
+          "fixed": 162,
+          "harmed": 216,
+          "net": -54,
+          "net_by_fold": [
+            -19,
+            -12,
+            -23
+          ],
+          "paired_booking_interval_pp": [
+            -1.93869675948832,
+            -0.3414207914774534
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 30,
+          "harmed": 41,
+          "net": -11,
+          "net_by_fold": [
+            -5,
+            -2,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.6574429072799397,
+            0.11817886773787728
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 110,
+          "harmed": 117,
+          "net": -7,
+          "net_by_fold": [
+            -2,
+            -9,
+            4
+          ],
+          "paired_booking_interval_pp": [
+            -0.5320086057732414,
+            0.33874539991967956
+          ]
+        },
+        "versus_six": {
+          "fixed": 237,
+          "harmed": 299,
+          "net": -62,
+          "net_by_fold": [
+            -18,
+            -15,
+            -29
+          ],
+          "paired_booking_interval_pp": [
+            -1.5149329616644038,
+            -0.25934410544452635
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 44,
+          "harmed": 55,
+          "net": -11,
+          "net_by_fold": [
+            -4,
+            -3,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.4895091166552182,
+            0.14167541799851932
+          ]
+        }
+      }
+    },
+    "large_booking_union": {
+      "sha256": "7d1a2be86974f5d7cee351913b85339f37c794f51a175c4bb2bcde54ce19e7ee",
+      "test_distances": {
+        "nine": 190,
+        "fields": 180,
+        "awake": 229,
+        "fields_awake": 224,
+        "filtered": 189,
+        "band": 209,
+        "all_three": 246,
+        "review": 268,
+        "fare": 326,
+        "six": 312
+      },
+      "test_new_rows": 92,
+      "legacy_net_by_plan": {
+        "20261112": 19,
+        "20261115": 35,
+        "20261116": 19,
+        "v131": 23
+      },
+      "legacy_metric_source": "reports/nov23_booking_influence/combined.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 93,
+          "harmed": 85,
+          "net": 8,
+          "net_by_fold": [
+            2,
+            -2,
+            8
+          ],
+          "paired_booking_interval_pp": [
+            -0.36395166028326326,
+            0.7464477293824472
+          ]
+        },
+        "versus_six": {
+          "fixed": 163,
+          "harmed": 204,
+          "net": -41,
+          "net_by_fold": [
+            -12,
+            -8,
+            -21
+          ],
+          "paired_booking_interval_pp": [
+            -1.6838068687720618,
+            -0.1060914070389051
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 31,
+          "harmed": 41,
+          "net": -10,
+          "net_by_fold": [
+            -6,
+            -2,
+            -2
+          ],
+          "paired_booking_interval_pp": [
+            -0.6133775688081372,
+            0.16378100140383717
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 154,
+          "harmed": 137,
+          "net": 17,
+          "net_by_fold": [
+            2,
+            2,
+            13
+          ],
+          "paired_booking_interval_pp": [
+            -0.2591559730124131,
+            0.7245972893676902
+          ]
+        },
+        "versus_six": {
+          "fixed": 248,
+          "harmed": 286,
+          "net": -38,
+          "net_by_fold": [
+            -14,
+            -4,
+            -20
+          ],
+          "paired_booking_interval_pp": [
+            -1.202963859631608,
+            0.08624469073502455
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 60,
+          "harmed": 70,
+          "net": -10,
+          "net_by_fold": [
+            -9,
+            0,
+            -1
+          ],
+          "paired_booking_interval_pp": [
+            -0.5159643145647818,
+            0.19119400669670122
+          ]
+        }
+      }
+    },
+    "pending_family_support": {
+      "sha256": "c3dba215b279f73644e1a8be622d943262e224989993347aca5418334b18ec1d",
+      "test_distances": {
+        "nine": 209,
+        "fields": 197,
+        "awake": 230,
+        "fields_awake": 225,
+        "filtered": 196,
+        "band": 224,
+        "all_three": 245,
+        "review": 265,
+        "fare": 325,
+        "six": 311
+      },
+      "test_new_rows": 97,
+      "legacy_net_by_plan": {
+        "20261112": 13,
+        "20261115": 39,
+        "20261116": 15,
+        "v131": 33
+      },
+      "legacy_metric_source": "reports/nov23_pending_family_coverage/coverage.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 119,
+          "harmed": 101,
+          "net": 18,
+          "net_by_fold": [
+            8,
+            5,
+            5
+          ],
+          "paired_booking_interval_pp": [
+            -0.2117320751591124,
+            1.0249949329694468
+          ]
+        },
+        "versus_six": {
+          "fixed": 170,
+          "harmed": 201,
+          "net": -31,
+          "net_by_fold": [
+            -6,
+            -1,
+            -24
+          ],
+          "paired_booking_interval_pp": [
+            -1.4821480965362381,
+            0.12815722045373418
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 40,
+          "harmed": 47,
+          "net": -7,
+          "net_by_fold": [
+            -3,
+            0,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.5881073014392094,
+            0.2587886181328085
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 173,
+          "harmed": 146,
+          "net": 27,
+          "net_by_fold": [
+            7,
+            11,
+            9
+          ],
+          "paired_booking_interval_pp": [
+            -0.13116955223965326,
+            0.8816304712836914
+          ]
+        },
+        "versus_six": {
+          "fixed": 254,
+          "harmed": 282,
+          "net": -28,
+          "net_by_fold": [
+            -9,
+            5,
+            -24
+          ],
+          "paired_booking_interval_pp": [
+            -1.031086547887276,
+            0.2013363523894309
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 65,
+          "harmed": 72,
+          "net": -7,
+          "net_by_fold": [
+            -7,
+            3,
+            -3
+          ],
+          "paired_booking_interval_pp": [
+            -0.45335880207159557,
+            0.2524080049447371
+          ]
+        }
+      }
+    },
+    "service_bag_tree_quarter": {
+      "sha256": "003d133d95bd7b4c3a10281afaa0588f0c637c93f725360654de934340b88182",
+      "test_distances": {
+        "nine": 125,
+        "fields": 131,
+        "awake": 170,
+        "fields_awake": 179,
+        "filtered": 128,
+        "band": 180,
+        "all_three": 219,
+        "review": 241,
+        "fare": 303,
+        "six": 289
+      },
+      "test_new_rows": 50,
+      "legacy_net_by_plan": {
+        "20261112": 11,
+        "20261115": 30,
+        "20261116": 13,
+        "v131": 5
+      },
+      "legacy_metric_source": "reports/nov23_fixed_vote_totals/service_bag_trees.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 72,
+          "harmed": 75,
+          "net": -3,
+          "net_by_fold": [
+            -7,
+            -1,
+            5
+          ],
+          "paired_booking_interval_pp": [
+            -0.5361760014597319,
+            0.4676150665126574
+          ]
+        },
+        "versus_six": {
+          "fixed": 159,
+          "harmed": 211,
+          "net": -52,
+          "net_by_fold": [
+            -21,
+            -7,
+            -24
+          ],
+          "paired_booking_interval_pp": [
+            -1.8917761630753718,
+            -0.2993916055117446
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 24,
+          "harmed": 36,
+          "net": -12,
+          "net_by_fold": [
+            -6,
+            -2,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.6377949795220828,
+            0.07057537339579303
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 101,
+          "harmed": 102,
+          "net": -1,
+          "net_by_fold": [
+            -9,
+            -1,
+            9
+          ],
+          "paired_booking_interval_pp": [
+            -0.4298349501007622,
+            0.4012745306626948
+          ]
+        },
+        "versus_six": {
+          "fixed": 241,
+          "harmed": 297,
+          "net": -56,
+          "net_by_fold": [
+            -25,
+            -7,
+            -24
+          ],
+          "paired_booking_interval_pp": [
+            -1.4472094450583817,
+            -0.17109628252138062
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 41,
+          "harmed": 49,
+          "net": -8,
+          "net_by_fold": [
+            -7,
+            0,
+            -1
+          ],
+          "paired_booking_interval_pp": [
+            -0.40926352860498555,
+            0.1745290871407286
+          ]
+        }
+      }
+    },
+    "service_pair_change_150": {
+      "sha256": "a68fc1c9c8f237b65697be94b3e3489d3c6c203fa5aac85b529cf4ea2c270bab",
+      "test_distances": {
+        "nine": 160,
+        "fields": 156,
+        "awake": 205,
+        "fields_awake": 206,
+        "filtered": 161,
+        "band": 189,
+        "all_three": 232,
+        "review": 256,
+        "fare": 316,
+        "six": 302
+      },
+      "test_new_rows": 73,
+      "legacy_net_by_plan": {
+        "20261112": 15,
+        "20261115": 28,
+        "20261116": 13,
+        "v131": 14
+      },
+      "legacy_metric_source": "reports/nov23_passenger_service_pairs/test_budget.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 83,
+          "harmed": 81,
+          "net": 2,
+          "net_by_fold": [
+            -1,
+            -4,
+            7
+          ],
+          "paired_booking_interval_pp": [
+            -0.46859358856569205,
+            0.5798345696592134
+          ]
+        },
+        "versus_six": {
+          "fixed": 160,
+          "harmed": 207,
+          "net": -47,
+          "net_by_fold": [
+            -15,
+            -10,
+            -22
+          ],
+          "paired_booking_interval_pp": [
+            -1.8055721724329292,
+            -0.21385000658516412
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 27,
+          "harmed": 38,
+          "net": -11,
+          "net_by_fold": [
+            -6,
+            -2,
+            -3
+          ],
+          "paired_booking_interval_pp": [
+            -0.6143739916967202,
+            0.11753643629525153
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 124,
+          "harmed": 116,
+          "net": 8,
+          "net_by_fold": [
+            -4,
+            2,
+            10
+          ],
+          "paired_booking_interval_pp": [
+            -0.33004842318619443,
+            0.5487602753353827
+          ]
+        },
+        "versus_six": {
+          "fixed": 241,
+          "harmed": 288,
+          "net": -47,
+          "net_by_fold": [
+            -20,
+            -4,
+            -23
+          ],
+          "paired_booking_interval_pp": [
+            -1.3010099747278445,
+            -0.05754484948092538
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 45,
+          "harmed": 57,
+          "net": -12,
+          "net_by_fold": [
+            -11,
+            2,
+            -3
+          ],
+          "paired_booking_interval_pp": [
+            -0.49789208341723334,
+            0.12788286895501053
+          ]
+        }
+      }
+    },
+    "service_pair_corroborated": {
+      "sha256": "6939931368f915e242a6268db9b2a0e605256bed6c7ecbf7aafd464d87c91ac7",
+      "test_distances": {
+        "nine": 184,
+        "fields": 172,
+        "awake": 215,
+        "fields_awake": 210,
+        "filtered": 175,
+        "band": 201,
+        "all_three": 230,
+        "review": 260,
+        "fare": 318,
+        "six": 304
+      },
+      "test_new_rows": 83,
+      "legacy_net_by_plan": {
+        "20261112": 14,
+        "20261115": 32,
+        "20261116": 12,
+        "v131": 26
+      },
+      "legacy_metric_source": "reports/nov23_passenger_service_pairs/portfolio.json",
+      "whole_order_cold": {
+        "versus_nine": {
+          "fixed": 111,
+          "harmed": 97,
+          "net": 14,
+          "net_by_fold": [
+            6,
+            4,
+            4
+          ],
+          "paired_booking_interval_pp": [
+            -0.25750241389470274,
+            0.8995984943780522
+          ]
+        },
+        "versus_six": {
+          "fixed": 166,
+          "harmed": 201,
+          "net": -35,
+          "net_by_fold": [
+            -8,
+            -2,
+            -25
+          ],
+          "paired_booking_interval_pp": [
+            -1.5500259173521422,
+            0.042763598680221775
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 36,
+          "harmed": 45,
+          "net": -9,
+          "net_by_fold": [
+            -4,
+            -1,
+            -4
+          ],
+          "paired_booking_interval_pp": [
+            -0.6342718514683524,
+            0.19063177189517924
+          ]
+        }
+      },
+      "all_historical": {
+        "versus_nine": {
+          "fixed": 160,
+          "harmed": 140,
+          "net": 20,
+          "net_by_fold": [
+            4,
+            11,
+            5
+          ],
+          "paired_booking_interval_pp": [
+            -0.21282879271711938,
+            0.7722094224661462
+          ]
+        },
+        "versus_six": {
+          "fixed": 247,
+          "harmed": 282,
+          "net": -35,
+          "net_by_fold": [
+            -12,
+            5,
+            -28
+          ],
+          "paired_booking_interval_pp": [
+            -1.1299762785609813,
+            0.10001617541337159
+          ]
+        },
+        "outside_current_reach": {
+          "fixed": 58,
+          "harmed": 68,
+          "net": -10,
+          "net_by_fold": [
+            -8,
+            3,
+            -5
+          ],
+          "paired_booking_interval_pp": [
+            -0.5057150264305583,
+            0.19021277501767872
+          ]
+        }
+      }
+    }
+  },
+  "seven_union_new_test_rows": 140,
+  "protocol": {
+    "historical_rows": 6954,
+    "fully_held_booking_rows": 4691,
+    "scope": "Same historical outer folds and same passenger ids. Only complete-order holdout is used for recommendation; other historical rows can have a booking peer in the outer training fold. Three extra early plans each use a different parent, not the scored nine. This is reused development data.",
+    "filtered": "The filtered release only accepts edits made by awake, so it cannot affect exact current unanimity. No individual historical predictions for filtered are assumed."
+  },
+  "current_unanimously_wrong": {
+    "whole_order_cold": 674,
+    "all_historical": 955
+  },
+  "seven_union_outside_current_reach": {
+    "whole_order_cold": {
+      "recoverable_errors": 57,
+      "correct_at_risk": 70
+    },
+    "all_historical": {
+      "recoverable_errors": 92,
+      "correct_at_risk": 110
+    }
+  }
+}
