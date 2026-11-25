@@ -1,0 +1,506 @@
+{
+  "matched_charge_ranks": {
+    "exact": {
+      "passengers": 6533,
+      "service_comparisons": 18543,
+      "mean_rank": 0.7297392025401246,
+      "per_service": [
+        0.7685285935075192,
+        0.6951944896890959,
+        0.7712260727906068,
+        0.7120037999075322,
+        0.7041178183792417
+      ],
+      "fold_mean_rank": [
+        0.7270668796665,
+        0.7454035838580582,
+        0.7344767262253471,
+        0.733397854595266,
+        0.7079489587200113
+      ]
+    },
+    "broad": {
+      "passengers": 6533,
+      "service_comparisons": 18543,
+      "mean_rank": 0.608712291936197,
+      "per_service": [
+        0.6334018491506073,
+        0.5917969076767258,
+        0.6357156466068743,
+        0.5976720425202069,
+        0.5863401579289222
+      ],
+      "fold_mean_rank": [
+        0.6167935491826306,
+        0.6127407154439937,
+        0.607890102774184,
+        0.6140232140271832,
+        0.592038108500295
+      ]
+    },
+    "displaced": {
+      "passengers": 6533,
+      "service_comparisons": 18543,
+      "mean_rank": 0.5700299903142991,
+      "per_service": [
+        0.5922832917670243,
+        0.5576765187039355,
+        0.5853181203360409,
+        0.5639883525721554,
+        0.5516834289577386
+      ],
+      "fold_mean_rank": [
+        0.5779573610883209,
+        0.5716822452252225,
+        0.5793012961098944,
+        0.5601565290412198,
+        0.5603692067262045
+      ]
+    }
+  },
+  "historical": {
+    "rows": 6954,
+    "before": 0.8228357779695139,
+    "tree_exact": {
+      "all": {
+        "rows": 6954,
+        "errors": 1232,
+        "fixed": 19,
+        "harmed": 39
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 198,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 186,
+        "errors": 186,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 22,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.819959735404084,
+      "net_by_fold": [
+        -6,
+        -4,
+        -10
+      ]
+    },
+    "tree_broad": {
+      "all": {
+        "rows": 6954,
+        "errors": 1232,
+        "fixed": 22,
+        "harmed": 42
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 198,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 186,
+        "errors": 186,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 22,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.819959735404084,
+      "net_by_fold": [
+        -8,
+        -8,
+        -4
+      ]
+    },
+    "tree_displaced": {
+      "all": {
+        "rows": 6954,
+        "errors": 1232,
+        "fixed": 19,
+        "harmed": 36
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 198,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 186,
+        "errors": 186,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 22,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "after": 0.8203911417888984,
+      "net_by_fold": [
+        -3,
+        -6,
+        -8
+      ]
+    }
+  },
+  "full": {
+    "rows": 8532,
+    "before": 0.8280590717299579,
+    "tree_exact": {
+      "all": {
+        "rows": 8532,
+        "errors": 1467,
+        "fixed": 29,
+        "harmed": 37
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 232,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 223,
+        "errors": 223,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 23,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.827121425222691,
+      "net_by_fold": [
+        -2,
+        -5,
+        -1,
+        2,
+        0,
+        -4,
+        5,
+        -3
+      ]
+    },
+    "tree_broad": {
+      "all": {
+        "rows": 8532,
+        "errors": 1467,
+        "fixed": 33,
+        "harmed": 34
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 232,
+        "fixed": 1,
+        "harmed": 3
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 223,
+        "errors": 223,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 23,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "after": 0.8279418659165495,
+      "net_by_fold": [
+        -4,
+        -2,
+        1,
+        2,
+        4,
+        -3,
+        3,
+        -2
+      ]
+    },
+    "tree_displaced": {
+      "all": {
+        "rows": 8532,
+        "errors": 1467,
+        "fixed": 32,
+        "harmed": 36
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 232,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 223,
+        "errors": 223,
+        "fixed": 1,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 23,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.8275902484763245,
+      "net_by_fold": [
+        -1,
+        -2,
+        -4,
+        -1,
+        0,
+        -3,
+        7,
+        0
+      ]
+    }
+  },
+  "historical_to_new": {
+    "rows": 1033,
+    "before": 0.8160696999031946,
+    "tree_exact": {
+      "all": {
+        "rows": 1033,
+        "errors": 190,
+        "fixed": 3,
+        "harmed": 8
+      },
+      "unanimous": {
+        "rows": 434,
+        "errors": 34,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 33,
+        "errors": 33,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 4,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "after": 0.8112294288480155,
+      "net_by_fold": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -1,
+        -2,
+        -1
+      ]
+    },
+    "tree_broad": {
+      "all": {
+        "rows": 1033,
+        "errors": 190,
+        "fixed": 4,
+        "harmed": 5
+      },
+      "unanimous": {
+        "rows": 434,
+        "errors": 34,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 33,
+        "errors": 33,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 4,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "after": 0.8151016456921587,
+      "net_by_fold": [
+        0,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        1,
+        -1
+      ]
+    },
+    "tree_displaced": {
+      "all": {
+        "rows": 1033,
+        "errors": 190,
+        "fixed": 7,
+        "harmed": 7
+      },
+      "unanimous": {
+        "rows": 434,
+        "errors": 34,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 33,
+        "errors": 33,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 4,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "after": 0.8160696999031946,
+      "net_by_fold": [
+        0,
+        1,
+        -1,
+        -1,
+        1,
+        0,
+        1,
+        -1
+      ]
+    }
+  },
+  "bookingmix": {
+    "rows": 6055,
+    "before": 0.8262592898431049,
+    "tree_exact": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 23,
+        "harmed": 29
+      },
+      "unanimous": {
+        "rows": 2652,
+        "errors": 186,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 179,
+        "errors": 179,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 21,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.8252683732452519,
+      "net_by_fold": [
+        -3,
+        -3,
+        -1,
+        1,
+        2,
+        -3,
+        4,
+        -3
+      ]
+    },
+    "tree_broad": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 23,
+        "harmed": 30
+      },
+      "unanimous": {
+        "rows": 2652,
+        "errors": 186,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 179,
+        "errors": 179,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 21,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "after": 0.825103220478943,
+      "net_by_fold": [
+        -5,
+        -3,
+        1,
+        2,
+        2,
+        -1,
+        2,
+        -5
+      ]
+    },
+    "tree_displaced": {
+      "all": {
+        "rows": 6055,
+        "errors": 1052,
+        "fixed": 23,
+        "harmed": 35
+      },
+      "unanimous": {
+        "rows": 2652,
+        "errors": 186,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "remaining_original_unanimous_errors": {
+        "rows": 179,
+        "errors": 179,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "previously_repaired_unanimous_errors": {
+        "rows": 21,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "after": 0.8242774566473989,
+      "net_by_fold": [
+        -3,
+        -2,
+        -4,
+        -3,
+        1,
+        -2,
+        4,
+        -3
+      ]
+    }
+  }
+}
