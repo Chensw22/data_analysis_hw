@@ -1,0 +1,173 @@
+{
+  "method": "Retrospective diagnostic. Target covariates are unlabeled. Intervals condition on estimated weights, target edits and target edit rate.",
+  "results": {
+    "proposal_n25_frozen_binary": {
+      "history_changes": 128,
+      "test_changes": 80,
+      "public_delta_pp": -0.281,
+      "training_wrong": 70,
+      "by_direction": {
+        "False": {
+          "history": 70,
+          "test": 37,
+          "history_fixed": 40
+        },
+        "True": {
+          "history": 58,
+          "test": 43,
+          "history_fixed": 30
+        }
+      },
+      "unweighted": {
+        "fraction_beneficial": 0.546875,
+        "expected_accuracy_delta_pp": 0.17535655833528174,
+        "order_bootstrap_pp": [
+          -0.16200920875070648,
+          0.5129361205647821
+        ],
+        "effective_passengers": 128.0
+      },
+      "direction_matched": {
+        "fraction_beneficial": 0.5423029556650247,
+        "expected_accuracy_delta_pp": 0.15825281520701298,
+        "order_bootstrap_pp": [
+          -0.18480917084333828,
+          0.48809446161005626
+        ],
+        "effective_passengers": 124.42537542139132
+      },
+      "model_scores": {
+        "domain_auc": 0.5409179687500001,
+        "fraction_beneficial": 0.5441471349473032,
+        "expected_accuracy_delta_pp": 0.16515177908740966,
+        "order_bootstrap_pp": [
+          -0.18499905392905874,
+          0.5160555593772326
+        ],
+        "effective_passengers": 121.42156854877496
+      },
+      "passenger_and_scores": {
+        "domain_auc": 0.47988281250000003,
+        "fraction_beneficial": 0.5643105062727978,
+        "expected_accuracy_delta_pp": 0.24058173962234378,
+        "order_bootstrap_pp": [
+          -0.158642262846731,
+          0.6202432032947838
+        ],
+        "effective_passengers": 88.2416488611597
+      }
+    },
+    "proposal_n25_frozen_binary_confirmed": {
+      "history_changes": 104,
+      "test_changes": 63,
+      "public_delta_pp": -0.21,
+      "training_wrong": 58,
+      "by_direction": {
+        "False": {
+          "history": 62,
+          "test": 34,
+          "history_fixed": 35
+        },
+        "True": {
+          "history": 42,
+          "test": 29,
+          "history_fixed": 23
+        }
+      },
+      "unweighted": {
+        "fraction_beneficial": 0.5576923076923077,
+        "expected_accuracy_delta_pp": 0.1699609719249654,
+        "order_bootstrap_pp": [
+          -0.09824734241177124,
+          0.4621161066718013
+        ],
+        "effective_passengers": 104.0
+      },
+      "direction_matched": {
+        "fraction_beneficial": 0.5567381074293517,
+        "expected_accuracy_delta_pp": 0.1671499073205123,
+        "order_bootstrap_pp": [
+          -0.10383544559873284,
+          0.4548923458863771
+        ],
+        "effective_passengers": 102.64043537847337
+      },
+      "model_scores": {
+        "domain_auc": 0.5163308913308913,
+        "fraction_beneficial": 0.5504590079622822,
+        "expected_accuracy_delta_pp": 0.1486517419510769,
+        "order_bootstrap_pp": [
+          -0.13380144790176343,
+          0.4493370766937574
+        ],
+        "effective_passengers": 97.86106259159644
+      },
+      "passenger_and_scores": {
+        "domain_auc": 0.5247252747252747,
+        "fraction_beneficial": 0.6258674336557938,
+        "expected_accuracy_delta_pp": 0.3708042235358897,
+        "order_bootstrap_pp": [
+          0.03656013973274606,
+          0.6920299348759522
+        ],
+        "effective_passengers": 66.30589014779063
+      }
+    },
+    "proposal_n25_frozen_binary_matched_support": {
+      "history_changes": 176,
+      "test_changes": 104,
+      "public_delta_pp": -0.281,
+      "training_wrong": 91,
+      "by_direction": {
+        "False": {
+          "history": 64,
+          "test": 36,
+          "history_fixed": 36
+        },
+        "True": {
+          "history": 112,
+          "test": 68,
+          "history_fixed": 55
+        }
+      },
+      "unweighted": {
+        "fraction_beneficial": 0.5170454545454546,
+        "expected_accuracy_delta_pp": 0.08289582757667863,
+        "order_bootstrap_pp": [
+          -0.2853533776419464,
+          0.45335119262273965
+        ],
+        "effective_passengers": 176.0
+      },
+      "direction_matched": {
+        "fraction_beneficial": 0.5157967032967034,
+        "expected_accuracy_delta_pp": 0.07682287317545673,
+        "order_bootstrap_pp": [
+          -0.2877690090549462,
+          0.4481930649329676
+        ],
+        "effective_passengers": 175.7678467788741
+      },
+      "model_scores": {
+        "domain_auc": 0.5258413461538461,
+        "fraction_beneficial": 0.515278228138394,
+        "expected_accuracy_delta_pp": 0.07430141343899815,
+        "order_bootstrap_pp": [
+          -0.3079094740953351,
+          0.44820084519217335
+        ],
+        "effective_passengers": 165.60058736487682
+      },
+      "passenger_and_scores": {
+        "domain_auc": 0.6118881118881118,
+        "fraction_beneficial": 0.5608092692896176,
+        "expected_accuracy_delta_pp": 0.29572896918963015,
+        "order_bootstrap_pp": [
+          -0.16506716320358694,
+          0.7196607217843676
+        ],
+        "effective_passengers": 114.26976525317178
+      }
+    }
+  }
+}
