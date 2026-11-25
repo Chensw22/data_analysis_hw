@@ -43,7 +43,7 @@ def run():
     x=compact_features(pd.concat([raw,test],ignore_index=True)).iloc[:len(y)].copy()
     awake=raw.CryoSleep.eq(False).to_numpy()
     OUT.mkdir(exist_ok=True)
-    for k in np.unique(fold):
+    for k in map(int,np.unique(fold)):
         q=np.flatnonzero((fold==k)&awake)
         t=np.flatnonzero((fold!=k)&awake)
         with np.load(INITIAL/f'{k}_personal.npz') as z:
