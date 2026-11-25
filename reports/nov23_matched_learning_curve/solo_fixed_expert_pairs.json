@@ -1,0 +1,2253 @@
+{
+  "rows": 2448,
+  "errors": 524,
+  "correct": 1924,
+  "holdout_method": "Leave one solo order out inside the same base fold, reviewer query batch and EXAONE support regime. Select the best observed net rule on the other in-scope bookings of that same covariate cell. Allow keeping the baseline and prefer fewer flips on ties. No new search on the focal outcome.",
+  "scope": "All 127 archived opinion columns are compared individually. The 109-view analysis removes the first 18 pre-averaged family representatives. A pair requires two distinct columns to oppose the baseline simultaneously. Related source columns are not independent replications.",
+  "validation_groups": 96,
+  "validation_group_size_range": [
+    14,
+    39
+  ],
+  "versions": {
+    "127_archived_opinions": {
+      "single": {
+        "number_of_rules": 127,
+        "partitions": {
+          "all": {
+            "cells": {
+              "all": {
+                "rows": 2448,
+                "errors": 524,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 8
+              }
+            },
+            "hindsight": {
+              "fixed": 40,
+              "harmed": 32,
+              "net": 8,
+              "net_by_fold": [
+                4,
+                -2,
+                0,
+                5,
+                2,
+                -3,
+                1,
+                1
+              ]
+            },
+            "other_orders": {
+              "fixed": 83,
+              "harmed": 151,
+              "net": -68,
+              "net_by_fold": [
+                -5,
+                0,
+                0,
+                -1,
+                -16,
+                -10,
+                -17,
+                -19
+              ]
+            }
+          },
+          "direction": {
+            "cells": {
+              "negative": {
+                "rows": 1264,
+                "errors": 203,
+                "choice": "original_99/neural_deck_fine",
+                "best_forced_rule": "original_99/neural_deck_fine",
+                "best_forced_net": 3
+              },
+              "positive": {
+                "rows": 1184,
+                "errors": 321,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 8
+              }
+            },
+            "hindsight": {
+              "fixed": 52,
+              "harmed": 41,
+              "net": 11,
+              "net_by_fold": [
+                0,
+                -1,
+                3,
+                4,
+                1,
+                4,
+                2,
+                -2
+              ]
+            },
+            "other_orders": {
+              "fixed": 73,
+              "harmed": 149,
+              "net": -76,
+              "net_by_fold": [
+                -6,
+                -4,
+                -8,
+                -8,
+                -10,
+                -5,
+                -14,
+                -21
+              ]
+            }
+          },
+          "direction_origin": {
+            "cells": {
+              "negative/Earth": {
+                "rows": 721,
+                "errors": 127,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 4
+              },
+              "negative/Europa": {
+                "rows": 229,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_net": 5
+              },
+              "negative/Mars": {
+                "rows": 279,
+                "errors": 44,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 5
+              },
+              "negative/missing": {
+                "rows": 35,
+                "errors": 6,
+                "choice": "original_99/error_partition_kernel",
+                "best_forced_rule": "original_99/error_partition_kernel",
+                "best_forced_net": 1
+              },
+              "positive/Earth": {
+                "rows": 831,
+                "errors": 270,
+                "choice": "original_99/permutation_selection/all",
+                "best_forced_rule": "original_99/permutation_selection/all",
+                "best_forced_net": 7
+              },
+              "positive/Europa": {
+                "rows": 161,
+                "errors": 12,
+                "choice": "original_99/cabin_tree",
+                "best_forced_rule": "original_99/cabin_tree",
+                "best_forced_net": 3
+              },
+              "positive/Mars": {
+                "rows": 152,
+                "errors": 26,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 5
+              },
+              "positive/missing": {
+                "rows": 40,
+                "errors": 13,
+                "choice": "tabnet_recipes/scratch_seed_731",
+                "best_forced_rule": "tabnet_recipes/scratch_seed_731",
+                "best_forced_net": 4
+              }
+            },
+            "hindsight": {
+              "fixed": 55,
+              "harmed": 21,
+              "net": 34,
+              "net_by_fold": [
+                5,
+                2,
+                5,
+                4,
+                4,
+                4,
+                7,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 56,
+              "harmed": 152,
+              "net": -96,
+              "net_by_fold": [
+                -8,
+                -2,
+                -15,
+                -10,
+                -10,
+                -13,
+                -16,
+                -22
+              ]
+            }
+          },
+          "direction_origin_cryo": {
+            "cells": {
+              "negative/Earth/False": {
+                "rows": 681,
+                "errors": 113,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 3
+              },
+              "negative/Earth/True": {
+                "rows": 14,
+                "errors": 7,
+                "choice": "original_99/class_neighborhood_mass/density",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density",
+                "best_forced_net": 3
+              },
+              "negative/Earth/missing": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/spending_shape/reversed",
+                "best_forced_rule": "original_99/spending_shape/reversed",
+                "best_forced_net": 3
+              },
+              "negative/Europa/False": {
+                "rows": 222,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_net": 5
+              },
+              "negative/Europa/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              },
+              "negative/Mars/False": {
+                "rows": 260,
+                "errors": 40,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 3
+              },
+              "negative/Mars/True": {
+                "rows": 12,
+                "errors": 4,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 2
+              },
+              "negative/Mars/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              },
+              "negative/missing/False": {
+                "rows": 34,
+                "errors": 6,
+                "choice": "original_99/error_partition_kernel",
+                "best_forced_rule": "original_99/error_partition_kernel",
+                "best_forced_net": 1
+              },
+              "negative/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              },
+              "positive/Earth/False": {
+                "rows": 339,
+                "errors": 84,
+                "choice": "original_99/permutation_selection/all",
+                "best_forced_rule": "original_99/permutation_selection/all",
+                "best_forced_net": 5
+              },
+              "positive/Earth/True": {
+                "rows": 477,
+                "errors": 183,
+                "choice": "supplementary/booking_transport_classifier",
+                "best_forced_rule": "supplementary/booking_transport_classifier",
+                "best_forced_net": 8
+              },
+              "positive/Earth/missing": {
+                "rows": 15,
+                "errors": 3,
+                "choice": "original_99/broad_error_transport_projection",
+                "best_forced_rule": "original_99/broad_error_transport_projection",
+                "best_forced_net": 1
+              },
+              "positive/Europa/False": {
+                "rows": 126,
+                "errors": 12,
+                "choice": "original_99/cabin_tree",
+                "best_forced_rule": "original_99/cabin_tree",
+                "best_forced_net": 3
+              },
+              "positive/Europa/True": {
+                "rows": 26,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              },
+              "positive/Europa/missing": {
+                "rows": 9,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              },
+              "positive/Mars/False": {
+                "rows": 59,
+                "errors": 14,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 5
+              },
+              "positive/Mars/True": {
+                "rows": 85,
+                "errors": 11,
+                "choice": "original_99/two_view_reliability/margins",
+                "best_forced_rule": "original_99/two_view_reliability/margins",
+                "best_forced_net": 2
+              },
+              "positive/Mars/missing": {
+                "rows": 8,
+                "errors": 1,
+                "choice": "original_99/service_order_mixture",
+                "best_forced_rule": "original_99/service_order_mixture",
+                "best_forced_net": 1
+              },
+              "positive/missing/False": {
+                "rows": 13,
+                "errors": 6,
+                "choice": "original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/companion_transition/personal",
+                "best_forced_net": 4
+              },
+              "positive/missing/True": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "other_archives/mask_net_discriminative",
+                "best_forced_rule": "other_archives/mask_net_discriminative",
+                "best_forced_net": 1
+              },
+              "positive/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels",
+                "best_forced_net": 0
+              }
+            },
+            "hindsight": {
+              "fixed": 90,
+              "harmed": 40,
+              "net": 50,
+              "net_by_fold": [
+                7,
+                5,
+                14,
+                8,
+                2,
+                4,
+                9,
+                1
+              ]
+            },
+            "other_orders": {
+              "fixed": 44,
+              "harmed": 146,
+              "net": -102,
+              "net_by_fold": [
+                -18,
+                -15,
+                -14,
+                -8,
+                -12,
+                -11,
+                -7,
+                -17
+              ]
+            }
+          }
+        }
+      },
+      "pair": {
+        "number_of_rules": 8001,
+        "partitions": {
+          "all": {
+            "cells": {
+              "all": {
+                "rows": 2448,
+                "errors": 524,
+                "choice": "original_99/service_order_mixture & original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/service_order_mixture & original_99/permutation_selection/selected",
+                "best_forced_net": 14
+              }
+            },
+            "hindsight": {
+              "fixed": 19,
+              "harmed": 5,
+              "net": 14,
+              "net_by_fold": [
+                5,
+                0,
+                1,
+                1,
+                4,
+                1,
+                -1,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 41,
+              "harmed": 79,
+              "net": -38,
+              "net_by_fold": [
+                -3,
+                -6,
+                1,
+                -6,
+                -4,
+                -7,
+                -7,
+                -6
+              ]
+            }
+          },
+          "direction": {
+            "cells": {
+              "negative": {
+                "rows": 1264,
+                "errors": 203,
+                "choice": "original_99/maxout & original_99/failure_sampling_offset",
+                "best_forced_rule": "original_99/maxout & original_99/failure_sampling_offset",
+                "best_forced_net": 10
+              },
+              "positive": {
+                "rows": 1184,
+                "errors": 321,
+                "choice": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+                "best_forced_rule": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+                "best_forced_net": 10
+              }
+            },
+            "hindsight": {
+              "fixed": 34,
+              "harmed": 14,
+              "net": 20,
+              "net_by_fold": [
+                7,
+                -1,
+                3,
+                0,
+                6,
+                3,
+                1,
+                1
+              ]
+            },
+            "other_orders": {
+              "fixed": 36,
+              "harmed": 104,
+              "net": -68,
+              "net_by_fold": [
+                0,
+                -4,
+                -14,
+                -11,
+                -7,
+                -7,
+                -12,
+                -13
+              ]
+            }
+          },
+          "direction_origin": {
+            "cells": {
+              "negative/Earth": {
+                "rows": 721,
+                "errors": 127,
+                "choice": "original_99/honest_failure_partitions & original_99/swap",
+                "best_forced_rule": "original_99/honest_failure_partitions & original_99/swap",
+                "best_forced_net": 7
+              },
+              "negative/Europa": {
+                "rows": 229,
+                "errors": 26,
+                "choice": "original_99/broad_error_transport_projection & original_99/class_neighborhood_mass",
+                "best_forced_rule": "original_99/broad_error_transport_projection & original_99/class_neighborhood_mass",
+                "best_forced_net": 5
+              },
+              "negative/Mars": {
+                "rows": 279,
+                "errors": 44,
+                "choice": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_net": 6
+              },
+              "negative/missing": {
+                "rows": 35,
+                "errors": 6,
+                "choice": "original_99/companion_transition & original_99/error_partition_kernel",
+                "best_forced_rule": "original_99/companion_transition & original_99/error_partition_kernel",
+                "best_forced_net": 1
+              },
+              "positive/Earth": {
+                "rows": 831,
+                "errors": 270,
+                "choice": "original_99/permutation_selection/selected & original_99/bill_template",
+                "best_forced_rule": "original_99/permutation_selection/selected & original_99/bill_template",
+                "best_forced_net": 8
+              },
+              "positive/Europa": {
+                "rows": 161,
+                "errors": 12,
+                "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_net": 5
+              },
+              "positive/Mars": {
+                "rows": 152,
+                "errors": 26,
+                "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_net": 6
+              },
+              "positive/missing": {
+                "rows": 40,
+                "errors": 13,
+                "choice": "original_99/companion_transition & original_99/class_neighborhood_mass/density",
+                "best_forced_rule": "original_99/companion_transition & original_99/class_neighborhood_mass/density",
+                "best_forced_net": 4
+              }
+            },
+            "hindsight": {
+              "fixed": 50,
+              "harmed": 8,
+              "net": 42,
+              "net_by_fold": [
+                7,
+                3,
+                5,
+                9,
+                3,
+                4,
+                6,
+                5
+              ]
+            },
+            "other_orders": {
+              "fixed": 32,
+              "harmed": 80,
+              "net": -48,
+              "net_by_fold": [
+                -3,
+                -2,
+                -13,
+                -2,
+                -4,
+                -6,
+                -9,
+                -9
+              ]
+            }
+          },
+          "direction_origin_cryo": {
+            "cells": {
+              "negative/Earth/False": {
+                "rows": 681,
+                "errors": 113,
+                "choice": "original_99/failure_sampling_offset & original_99/recursive_metric/full2",
+                "best_forced_rule": "original_99/failure_sampling_offset & original_99/recursive_metric/full2",
+                "best_forced_net": 7
+              },
+              "negative/Earth/True": {
+                "rows": 14,
+                "errors": 7,
+                "choice": "original_99/service_order_mixture & original_99/class_neighborhood_mass/density",
+                "best_forced_rule": "original_99/service_order_mixture & original_99/class_neighborhood_mass/density",
+                "best_forced_net": 3
+              },
+              "negative/Earth/missing": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+                "best_forced_rule": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+                "best_forced_net": 3
+              },
+              "negative/Europa/False": {
+                "rows": 222,
+                "errors": 26,
+                "choice": "original_99/broad_error_transport_projection & original_99/class_neighborhood_mass",
+                "best_forced_rule": "original_99/broad_error_transport_projection & original_99/class_neighborhood_mass",
+                "best_forced_net": 5
+              },
+              "negative/Europa/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              },
+              "negative/Mars/False": {
+                "rows": 260,
+                "errors": 40,
+                "choice": "original_99/broad_error_transport_projection & supplementary/joint_manifest_forest",
+                "best_forced_rule": "original_99/broad_error_transport_projection & supplementary/joint_manifest_forest",
+                "best_forced_net": 4
+              },
+              "negative/Mars/True": {
+                "rows": 12,
+                "errors": 4,
+                "choice": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+                "best_forced_rule": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+                "best_forced_net": 3
+              },
+              "negative/Mars/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              },
+              "negative/missing/False": {
+                "rows": 34,
+                "errors": 6,
+                "choice": "original_99/companion_transition & original_99/error_partition_kernel",
+                "best_forced_rule": "original_99/companion_transition & original_99/error_partition_kernel",
+                "best_forced_net": 1
+              },
+              "negative/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              },
+              "positive/Earth/False": {
+                "rows": 339,
+                "errors": 84,
+                "choice": "original_99/bill_regime_tree & original_99/tree_deck_raw",
+                "best_forced_rule": "original_99/bill_regime_tree & original_99/tree_deck_raw",
+                "best_forced_net": 5
+              },
+              "positive/Earth/True": {
+                "rows": 477,
+                "errors": 183,
+                "choice": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+                "best_forced_net": 11
+              },
+              "positive/Earth/missing": {
+                "rows": 15,
+                "errors": 3,
+                "choice": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+                "best_forced_rule": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+                "best_forced_net": 2
+              },
+              "positive/Europa/False": {
+                "rows": 126,
+                "errors": 12,
+                "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_net": 5
+              },
+              "positive/Europa/True": {
+                "rows": 26,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              },
+              "positive/Europa/missing": {
+                "rows": 9,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              },
+              "positive/Mars/False": {
+                "rows": 59,
+                "errors": 14,
+                "choice": "original_99/charge_tree & original_99/neural_route_exact",
+                "best_forced_rule": "original_99/charge_tree & original_99/neural_route_exact",
+                "best_forced_net": 5
+              },
+              "positive/Mars/True": {
+                "rows": 85,
+                "errors": 11,
+                "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_net": 3
+              },
+              "positive/Mars/missing": {
+                "rows": 8,
+                "errors": 1,
+                "choice": "original_99/service_order_mixture & original_99/service_order_mixture/empty",
+                "best_forced_rule": "original_99/service_order_mixture & original_99/service_order_mixture/empty",
+                "best_forced_net": 1
+              },
+              "positive/missing/False": {
+                "rows": 13,
+                "errors": 6,
+                "choice": "original_99/companion_transition & original_99/class_neighborhood_mass/density",
+                "best_forced_rule": "original_99/companion_transition & original_99/class_neighborhood_mass/density",
+                "best_forced_net": 4
+              },
+              "positive/missing/True": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/labelled_reference_pairs & original_99/failure_sampling_offset/remove_offset",
+                "best_forced_rule": "original_99/labelled_reference_pairs & original_99/failure_sampling_offset/remove_offset",
+                "best_forced_net": 1
+              },
+              "positive/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/response_channels & original_99/broad_error_transport_projection",
+                "best_forced_net": 0
+              }
+            },
+            "hindsight": {
+              "fixed": 88,
+              "harmed": 25,
+              "net": 63,
+              "net_by_fold": [
+                11,
+                9,
+                10,
+                6,
+                6,
+                6,
+                12,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 28,
+              "harmed": 80,
+              "net": -52,
+              "net_by_fold": [
+                -9,
+                -7,
+                -10,
+                -6,
+                -6,
+                -3,
+                -5,
+                -6
+              ]
+            }
+          }
+        }
+      }
+    },
+    "109_without_family_means": {
+      "single": {
+        "number_of_rules": 109,
+        "partitions": {
+          "all": {
+            "cells": {
+              "all": {
+                "rows": 2448,
+                "errors": 524,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 8
+              }
+            },
+            "hindsight": {
+              "fixed": 40,
+              "harmed": 32,
+              "net": 8,
+              "net_by_fold": [
+                4,
+                -2,
+                0,
+                5,
+                2,
+                -3,
+                1,
+                1
+              ]
+            },
+            "other_orders": {
+              "fixed": 87,
+              "harmed": 149,
+              "net": -62,
+              "net_by_fold": [
+                -7,
+                0,
+                2,
+                -1,
+                -17,
+                -5,
+                -18,
+                -16
+              ]
+            }
+          },
+          "direction": {
+            "cells": {
+              "negative": {
+                "rows": 1264,
+                "errors": 203,
+                "choice": "original_99/neural_deck_fine",
+                "best_forced_rule": "original_99/neural_deck_fine",
+                "best_forced_net": 3
+              },
+              "positive": {
+                "rows": 1184,
+                "errors": 321,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 8
+              }
+            },
+            "hindsight": {
+              "fixed": 52,
+              "harmed": 41,
+              "net": 11,
+              "net_by_fold": [
+                0,
+                -1,
+                3,
+                4,
+                1,
+                4,
+                2,
+                -2
+              ]
+            },
+            "other_orders": {
+              "fixed": 85,
+              "harmed": 144,
+              "net": -59,
+              "net_by_fold": [
+                -6,
+                -2,
+                -8,
+                -6,
+                -9,
+                0,
+                -13,
+                -15
+              ]
+            }
+          },
+          "direction_origin": {
+            "cells": {
+              "negative/Earth": {
+                "rows": 721,
+                "errors": 127,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 4
+              },
+              "negative/Europa": {
+                "rows": 229,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_net": 5
+              },
+              "negative/Mars": {
+                "rows": 279,
+                "errors": 44,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 5
+              },
+              "negative/missing": {
+                "rows": 35,
+                "errors": 6,
+                "choice": "original_99/error_partition_kernel/rand",
+                "best_forced_rule": "original_99/error_partition_kernel/rand",
+                "best_forced_net": 1
+              },
+              "positive/Earth": {
+                "rows": 831,
+                "errors": 270,
+                "choice": "original_99/permutation_selection/all",
+                "best_forced_rule": "original_99/permutation_selection/all",
+                "best_forced_net": 7
+              },
+              "positive/Europa": {
+                "rows": 161,
+                "errors": 12,
+                "choice": "original_99/cabin_tree",
+                "best_forced_rule": "original_99/cabin_tree",
+                "best_forced_net": 3
+              },
+              "positive/Mars": {
+                "rows": 152,
+                "errors": 26,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 5
+              },
+              "positive/missing": {
+                "rows": 40,
+                "errors": 13,
+                "choice": "tabnet_recipes/scratch_seed_731",
+                "best_forced_rule": "tabnet_recipes/scratch_seed_731",
+                "best_forced_net": 4
+              }
+            },
+            "hindsight": {
+              "fixed": 55,
+              "harmed": 21,
+              "net": 34,
+              "net_by_fold": [
+                5,
+                2,
+                5,
+                4,
+                4,
+                4,
+                7,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 68,
+              "harmed": 155,
+              "net": -87,
+              "net_by_fold": [
+                -6,
+                -3,
+                -13,
+                -8,
+                -10,
+                -10,
+                -17,
+                -20
+              ]
+            }
+          },
+          "direction_origin_cryo": {
+            "cells": {
+              "negative/Earth/False": {
+                "rows": 681,
+                "errors": 113,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 3
+              },
+              "negative/Earth/True": {
+                "rows": 14,
+                "errors": 7,
+                "choice": "original_99/class_neighborhood_mass/density",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density",
+                "best_forced_net": 3
+              },
+              "negative/Earth/missing": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/spending_shape/reversed",
+                "best_forced_rule": "original_99/spending_shape/reversed",
+                "best_forced_net": 3
+              },
+              "negative/Europa/False": {
+                "rows": 222,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+                "best_forced_net": 5
+              },
+              "negative/Europa/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled",
+                "best_forced_net": 0
+              },
+              "negative/Mars/False": {
+                "rows": 260,
+                "errors": 40,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 3
+              },
+              "negative/Mars/True": {
+                "rows": 12,
+                "errors": 4,
+                "choice": "original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/cabin_tabicl",
+                "best_forced_net": 2
+              },
+              "negative/Mars/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "negative/missing/False": {
+                "rows": 34,
+                "errors": 6,
+                "choice": "original_99/error_partition_kernel/rand",
+                "best_forced_rule": "original_99/error_partition_kernel/rand",
+                "best_forced_net": 1
+              },
+              "negative/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled",
+                "best_forced_net": 0
+              },
+              "positive/Earth/False": {
+                "rows": 339,
+                "errors": 84,
+                "choice": "original_99/permutation_selection/all",
+                "best_forced_rule": "original_99/permutation_selection/all",
+                "best_forced_net": 5
+              },
+              "positive/Earth/True": {
+                "rows": 477,
+                "errors": 183,
+                "choice": "supplementary/booking_transport_classifier",
+                "best_forced_rule": "supplementary/booking_transport_classifier",
+                "best_forced_net": 8
+              },
+              "positive/Earth/missing": {
+                "rows": 15,
+                "errors": 3,
+                "choice": "original_99/permutation_selection/selected",
+                "best_forced_rule": "original_99/permutation_selection/selected",
+                "best_forced_net": 1
+              },
+              "positive/Europa/False": {
+                "rows": 126,
+                "errors": 12,
+                "choice": "original_99/cabin_tree",
+                "best_forced_rule": "original_99/cabin_tree",
+                "best_forced_net": 3
+              },
+              "positive/Europa/True": {
+                "rows": 26,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled",
+                "best_forced_net": 0
+              },
+              "positive/Europa/missing": {
+                "rows": 9,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled",
+                "best_forced_net": 0
+              },
+              "positive/Mars/False": {
+                "rows": 59,
+                "errors": 14,
+                "choice": "original_99/charge_tree",
+                "best_forced_rule": "original_99/charge_tree",
+                "best_forced_net": 5
+              },
+              "positive/Mars/True": {
+                "rows": 85,
+                "errors": 11,
+                "choice": "original_99/two_view_reliability/margins",
+                "best_forced_rule": "original_99/two_view_reliability/margins",
+                "best_forced_net": 2
+              },
+              "positive/Mars/missing": {
+                "rows": 8,
+                "errors": 1,
+                "choice": "original_99/service_order_mixture/empty",
+                "best_forced_rule": "original_99/service_order_mixture/empty",
+                "best_forced_net": 1
+              },
+              "positive/missing/False": {
+                "rows": 13,
+                "errors": 6,
+                "choice": "original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/companion_transition/personal",
+                "best_forced_net": 4
+              },
+              "positive/missing/True": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "other_archives/mask_net_discriminative",
+                "best_forced_rule": "other_archives/mask_net_discriminative",
+                "best_forced_net": 1
+              },
+              "positive/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled",
+                "best_forced_net": 0
+              }
+            },
+            "hindsight": {
+              "fixed": 90,
+              "harmed": 40,
+              "net": 50,
+              "net_by_fold": [
+                7,
+                5,
+                14,
+                8,
+                1,
+                5,
+                9,
+                1
+              ]
+            },
+            "other_orders": {
+              "fixed": 54,
+              "harmed": 154,
+              "net": -100,
+              "net_by_fold": [
+                -14,
+                -16,
+                -14,
+                -8,
+                -13,
+                -11,
+                -10,
+                -14
+              ]
+            }
+          }
+        }
+      },
+      "pair": {
+        "number_of_rules": 5886,
+        "partitions": {
+          "all": {
+            "cells": {
+              "all": {
+                "rows": 2448,
+                "errors": 524,
+                "choice": "original_99/permutation_selection/selected & original_99/service_order_mixture/empty",
+                "best_forced_rule": "original_99/permutation_selection/selected & original_99/service_order_mixture/empty",
+                "best_forced_net": 14
+              }
+            },
+            "hindsight": {
+              "fixed": 19,
+              "harmed": 5,
+              "net": 14,
+              "net_by_fold": [
+                5,
+                0,
+                1,
+                1,
+                4,
+                1,
+                -1,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 38,
+              "harmed": 85,
+              "net": -47,
+              "net_by_fold": [
+                -5,
+                -1,
+                -3,
+                -7,
+                -4,
+                -9,
+                -11,
+                -7
+              ]
+            }
+          },
+          "direction": {
+            "cells": {
+              "negative": {
+                "rows": 1264,
+                "errors": 203,
+                "choice": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+                "best_forced_rule": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+                "best_forced_net": 9
+              },
+              "positive": {
+                "rows": 1184,
+                "errors": 321,
+                "choice": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+                "best_forced_rule": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+                "best_forced_net": 10
+              }
+            },
+            "hindsight": {
+              "fixed": 28,
+              "harmed": 9,
+              "net": 19,
+              "net_by_fold": [
+                7,
+                -1,
+                2,
+                1,
+                6,
+                2,
+                2,
+                0
+              ]
+            },
+            "other_orders": {
+              "fixed": 43,
+              "harmed": 110,
+              "net": -67,
+              "net_by_fold": [
+                2,
+                -5,
+                -13,
+                -12,
+                -11,
+                -6,
+                -12,
+                -10
+              ]
+            }
+          },
+          "direction_origin": {
+            "cells": {
+              "negative/Earth": {
+                "rows": 721,
+                "errors": 127,
+                "choice": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+                "best_forced_rule": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+                "best_forced_net": 7
+              },
+              "negative/Europa": {
+                "rows": 229,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+                "best_forced_net": 5
+              },
+              "negative/Mars": {
+                "rows": 279,
+                "errors": 44,
+                "choice": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_net": 6
+              },
+              "negative/missing": {
+                "rows": 35,
+                "errors": 6,
+                "choice": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+                "best_forced_net": 1
+              },
+              "positive/Earth": {
+                "rows": 831,
+                "errors": 270,
+                "choice": "original_99/permutation_selection/selected & original_99/bill_template",
+                "best_forced_rule": "original_99/permutation_selection/selected & original_99/bill_template",
+                "best_forced_net": 8
+              },
+              "positive/Europa": {
+                "rows": 161,
+                "errors": 12,
+                "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_net": 5
+              },
+              "positive/Mars": {
+                "rows": 152,
+                "errors": 26,
+                "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_net": 6
+              },
+              "positive/missing": {
+                "rows": 40,
+                "errors": 13,
+                "choice": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+                "best_forced_net": 4
+              }
+            },
+            "hindsight": {
+              "fixed": 50,
+              "harmed": 8,
+              "net": 42,
+              "net_by_fold": [
+                10,
+                3,
+                6,
+                9,
+                2,
+                3,
+                5,
+                4
+              ]
+            },
+            "other_orders": {
+              "fixed": 39,
+              "harmed": 92,
+              "net": -53,
+              "net_by_fold": [
+                -2,
+                -4,
+                -13,
+                -5,
+                -6,
+                -5,
+                -8,
+                -10
+              ]
+            }
+          },
+          "direction_origin_cryo": {
+            "cells": {
+              "negative/Earth/False": {
+                "rows": 681,
+                "errors": 113,
+                "choice": "original_99/failure_sampling_offset/natural & tabnet_recipes/scratch_seed_731",
+                "best_forced_rule": "original_99/failure_sampling_offset/natural & tabnet_recipes/scratch_seed_731",
+                "best_forced_net": 6
+              },
+              "negative/Earth/True": {
+                "rows": 14,
+                "errors": 7,
+                "choice": "original_99/class_neighborhood_mass/density & original_99/service_order_mixture/empty",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/service_order_mixture/empty",
+                "best_forced_net": 3
+              },
+              "negative/Earth/missing": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+                "best_forced_rule": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+                "best_forced_net": 3
+              },
+              "negative/Europa/False": {
+                "rows": 222,
+                "errors": 26,
+                "choice": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+                "best_forced_net": 5
+              },
+              "negative/Europa/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "negative/Mars/False": {
+                "rows": 260,
+                "errors": 40,
+                "choice": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+                "best_forced_net": 4
+              },
+              "negative/Mars/True": {
+                "rows": 12,
+                "errors": 4,
+                "choice": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+                "best_forced_rule": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+                "best_forced_net": 3
+              },
+              "negative/Mars/missing": {
+                "rows": 7,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "negative/missing/False": {
+                "rows": 34,
+                "errors": 6,
+                "choice": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+                "best_forced_net": 1
+              },
+              "negative/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "positive/Earth/False": {
+                "rows": 339,
+                "errors": 84,
+                "choice": "original_99/spending_shape/pooled_direction & original_99/fixed_bill_margins/margins",
+                "best_forced_rule": "original_99/spending_shape/pooled_direction & original_99/fixed_bill_margins/margins",
+                "best_forced_net": 5
+              },
+              "positive/Earth/True": {
+                "rows": 477,
+                "errors": 183,
+                "choice": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+                "best_forced_net": 11
+              },
+              "positive/Earth/missing": {
+                "rows": 15,
+                "errors": 3,
+                "choice": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+                "best_forced_rule": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+                "best_forced_net": 2
+              },
+              "positive/Europa/False": {
+                "rows": 126,
+                "errors": 12,
+                "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+                "best_forced_net": 5
+              },
+              "positive/Europa/True": {
+                "rows": 26,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "positive/Europa/missing": {
+                "rows": 9,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              },
+              "positive/Mars/False": {
+                "rows": 59,
+                "errors": 14,
+                "choice": "original_99/charge_tree & original_99/neural_route_exact",
+                "best_forced_rule": "original_99/charge_tree & original_99/neural_route_exact",
+                "best_forced_net": 5
+              },
+              "positive/Mars/True": {
+                "rows": 85,
+                "errors": 11,
+                "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+                "best_forced_net": 3
+              },
+              "positive/Mars/missing": {
+                "rows": 8,
+                "errors": 1,
+                "choice": "original_99/service_order_mixture/empty & original_99/zero_truncated/truncated",
+                "best_forced_rule": "original_99/service_order_mixture/empty & original_99/zero_truncated/truncated",
+                "best_forced_net": 1
+              },
+              "positive/missing/False": {
+                "rows": 13,
+                "errors": 6,
+                "choice": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+                "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+                "best_forced_net": 4
+              },
+              "positive/missing/True": {
+                "rows": 26,
+                "errors": 7,
+                "choice": "original_99/labelled_reference_pairs/point & original_99/failure_sampling_offset/remove_offset",
+                "best_forced_rule": "original_99/labelled_reference_pairs/point & original_99/failure_sampling_offset/remove_offset",
+                "best_forced_net": 1
+              },
+              "positive/missing/missing": {
+                "rows": 1,
+                "errors": 0,
+                "choice": "keep",
+                "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+                "best_forced_net": 0
+              }
+            },
+            "hindsight": {
+              "fixed": 85,
+              "harmed": 23,
+              "net": 62,
+              "net_by_fold": [
+                9,
+                7,
+                12,
+                9,
+                4,
+                6,
+                12,
+                3
+              ]
+            },
+            "other_orders": {
+              "fixed": 37,
+              "harmed": 86,
+              "net": -49,
+              "net_by_fold": [
+                -9,
+                -7,
+                -8,
+                -7,
+                -8,
+                -2,
+                -5,
+                -3
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "larger_calibration_without_exaone": {
+    "partitions": 24,
+    "size_range": [
+      88,
+      112
+    ],
+    "results": {
+      "single": {
+        "all": {
+          "cells": {
+            "all": {
+              "rows": 2448,
+              "errors": 524,
+              "choice": "original_99/permutation_selection/selected",
+              "best_forced_rule": "original_99/permutation_selection/selected",
+              "best_forced_net": 8
+            }
+          },
+          "hindsight": {
+            "fixed": 40,
+            "harmed": 32,
+            "net": 8,
+            "net_by_fold": [
+              4,
+              -2,
+              0,
+              5,
+              2,
+              -3,
+              1,
+              1
+            ]
+          },
+          "other_orders": {
+            "fixed": 47,
+            "harmed": 81,
+            "net": -34,
+            "net_by_fold": [
+              -4,
+              -10,
+              3,
+              -6,
+              -2,
+              -3,
+              -11,
+              -1
+            ]
+          }
+        },
+        "direction": {
+          "cells": {
+            "negative": {
+              "rows": 1264,
+              "errors": 203,
+              "choice": "original_99/neural_deck_fine",
+              "best_forced_rule": "original_99/neural_deck_fine",
+              "best_forced_net": 3
+            },
+            "positive": {
+              "rows": 1184,
+              "errors": 321,
+              "choice": "original_99/charge_tree",
+              "best_forced_rule": "original_99/charge_tree",
+              "best_forced_net": 8
+            }
+          },
+          "hindsight": {
+            "fixed": 52,
+            "harmed": 41,
+            "net": 11,
+            "net_by_fold": [
+              0,
+              -1,
+              3,
+              4,
+              1,
+              4,
+              2,
+              -2
+            ]
+          },
+          "other_orders": {
+            "fixed": 71,
+            "harmed": 117,
+            "net": -46,
+            "net_by_fold": [
+              -5,
+              -3,
+              -3,
+              1,
+              -2,
+              -24,
+              -9,
+              -1
+            ]
+          }
+        },
+        "direction_origin": {
+          "cells": {
+            "negative/Earth": {
+              "rows": 721,
+              "errors": 127,
+              "choice": "original_99/permutation_selection/selected",
+              "best_forced_rule": "original_99/permutation_selection/selected",
+              "best_forced_net": 4
+            },
+            "negative/Europa": {
+              "rows": 229,
+              "errors": 26,
+              "choice": "original_99/class_neighborhood_mass/shuffled",
+              "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+              "best_forced_net": 5
+            },
+            "negative/Mars": {
+              "rows": 279,
+              "errors": 44,
+              "choice": "original_99/cabin_tabicl",
+              "best_forced_rule": "original_99/cabin_tabicl",
+              "best_forced_net": 5
+            },
+            "negative/missing": {
+              "rows": 35,
+              "errors": 6,
+              "choice": "original_99/error_partition_kernel/rand",
+              "best_forced_rule": "original_99/error_partition_kernel/rand",
+              "best_forced_net": 1
+            },
+            "positive/Earth": {
+              "rows": 831,
+              "errors": 270,
+              "choice": "original_99/permutation_selection/all",
+              "best_forced_rule": "original_99/permutation_selection/all",
+              "best_forced_net": 7
+            },
+            "positive/Europa": {
+              "rows": 161,
+              "errors": 12,
+              "choice": "original_99/cabin_tree",
+              "best_forced_rule": "original_99/cabin_tree",
+              "best_forced_net": 3
+            },
+            "positive/Mars": {
+              "rows": 152,
+              "errors": 26,
+              "choice": "original_99/charge_tree",
+              "best_forced_rule": "original_99/charge_tree",
+              "best_forced_net": 5
+            },
+            "positive/missing": {
+              "rows": 40,
+              "errors": 13,
+              "choice": "tabnet_recipes/scratch_seed_731",
+              "best_forced_rule": "tabnet_recipes/scratch_seed_731",
+              "best_forced_net": 4
+            }
+          },
+          "hindsight": {
+            "fixed": 55,
+            "harmed": 21,
+            "net": 34,
+            "net_by_fold": [
+              5,
+              2,
+              5,
+              4,
+              4,
+              4,
+              7,
+              3
+            ]
+          },
+          "other_orders": {
+            "fixed": 69,
+            "harmed": 134,
+            "net": -65,
+            "net_by_fold": [
+              -10,
+              -7,
+              8,
+              -1,
+              -20,
+              -16,
+              -13,
+              -6
+            ]
+          }
+        },
+        "direction_origin_cryo": {
+          "cells": {
+            "negative/Earth/False": {
+              "rows": 681,
+              "errors": 113,
+              "choice": "original_99/permutation_selection/selected",
+              "best_forced_rule": "original_99/permutation_selection/selected",
+              "best_forced_net": 3
+            },
+            "negative/Earth/True": {
+              "rows": 14,
+              "errors": 7,
+              "choice": "original_99/class_neighborhood_mass/density",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density",
+              "best_forced_net": 3
+            },
+            "negative/Earth/missing": {
+              "rows": 26,
+              "errors": 7,
+              "choice": "original_99/spending_shape/reversed",
+              "best_forced_rule": "original_99/spending_shape/reversed",
+              "best_forced_net": 3
+            },
+            "negative/Europa/False": {
+              "rows": 222,
+              "errors": 26,
+              "choice": "original_99/class_neighborhood_mass/shuffled",
+              "best_forced_rule": "original_99/class_neighborhood_mass/shuffled",
+              "best_forced_net": 5
+            },
+            "negative/Europa/missing": {
+              "rows": 7,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled",
+              "best_forced_net": 0
+            },
+            "negative/Mars/False": {
+              "rows": 260,
+              "errors": 40,
+              "choice": "original_99/cabin_tabicl",
+              "best_forced_rule": "original_99/cabin_tabicl",
+              "best_forced_net": 3
+            },
+            "negative/Mars/True": {
+              "rows": 12,
+              "errors": 4,
+              "choice": "original_99/cabin_tabicl",
+              "best_forced_rule": "original_99/cabin_tabicl",
+              "best_forced_net": 2
+            },
+            "negative/Mars/missing": {
+              "rows": 7,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "negative/missing/False": {
+              "rows": 34,
+              "errors": 6,
+              "choice": "original_99/error_partition_kernel/rand",
+              "best_forced_rule": "original_99/error_partition_kernel/rand",
+              "best_forced_net": 1
+            },
+            "negative/missing/missing": {
+              "rows": 1,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled",
+              "best_forced_net": 0
+            },
+            "positive/Earth/False": {
+              "rows": 339,
+              "errors": 84,
+              "choice": "original_99/permutation_selection/all",
+              "best_forced_rule": "original_99/permutation_selection/all",
+              "best_forced_net": 5
+            },
+            "positive/Earth/True": {
+              "rows": 477,
+              "errors": 183,
+              "choice": "supplementary/booking_transport_classifier",
+              "best_forced_rule": "supplementary/booking_transport_classifier",
+              "best_forced_net": 8
+            },
+            "positive/Earth/missing": {
+              "rows": 15,
+              "errors": 3,
+              "choice": "original_99/permutation_selection/selected",
+              "best_forced_rule": "original_99/permutation_selection/selected",
+              "best_forced_net": 1
+            },
+            "positive/Europa/False": {
+              "rows": 126,
+              "errors": 12,
+              "choice": "original_99/cabin_tree",
+              "best_forced_rule": "original_99/cabin_tree",
+              "best_forced_net": 3
+            },
+            "positive/Europa/True": {
+              "rows": 26,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled",
+              "best_forced_net": 0
+            },
+            "positive/Europa/missing": {
+              "rows": 9,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled",
+              "best_forced_net": 0
+            },
+            "positive/Mars/False": {
+              "rows": 59,
+              "errors": 14,
+              "choice": "original_99/charge_tree",
+              "best_forced_rule": "original_99/charge_tree",
+              "best_forced_net": 5
+            },
+            "positive/Mars/True": {
+              "rows": 85,
+              "errors": 11,
+              "choice": "original_99/two_view_reliability/margins",
+              "best_forced_rule": "original_99/two_view_reliability/margins",
+              "best_forced_net": 2
+            },
+            "positive/Mars/missing": {
+              "rows": 8,
+              "errors": 1,
+              "choice": "original_99/service_order_mixture/empty",
+              "best_forced_rule": "original_99/service_order_mixture/empty",
+              "best_forced_net": 1
+            },
+            "positive/missing/False": {
+              "rows": 13,
+              "errors": 6,
+              "choice": "original_99/companion_transition/personal",
+              "best_forced_rule": "original_99/companion_transition/personal",
+              "best_forced_net": 4
+            },
+            "positive/missing/True": {
+              "rows": 26,
+              "errors": 7,
+              "choice": "other_archives/mask_net_discriminative",
+              "best_forced_rule": "other_archives/mask_net_discriminative",
+              "best_forced_net": 1
+            },
+            "positive/missing/missing": {
+              "rows": 1,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled",
+              "best_forced_net": 0
+            }
+          },
+          "hindsight": {
+            "fixed": 90,
+            "harmed": 40,
+            "net": 50,
+            "net_by_fold": [
+              7,
+              5,
+              14,
+              8,
+              1,
+              5,
+              9,
+              1
+            ]
+          },
+          "other_orders": {
+            "fixed": 68,
+            "harmed": 155,
+            "net": -87,
+            "net_by_fold": [
+              -7,
+              -14,
+              3,
+              -12,
+              -19,
+              -18,
+              -13,
+              -7
+            ]
+          }
+        }
+      },
+      "pair": {
+        "all": {
+          "cells": {
+            "all": {
+              "rows": 2448,
+              "errors": 524,
+              "choice": "original_99/permutation_selection/selected & original_99/service_order_mixture/empty",
+              "best_forced_rule": "original_99/permutation_selection/selected & original_99/service_order_mixture/empty",
+              "best_forced_net": 14
+            }
+          },
+          "hindsight": {
+            "fixed": 19,
+            "harmed": 5,
+            "net": 14,
+            "net_by_fold": [
+              5,
+              0,
+              1,
+              1,
+              4,
+              1,
+              -1,
+              3
+            ]
+          },
+          "other_orders": {
+            "fixed": 33,
+            "harmed": 58,
+            "net": -25,
+            "net_by_fold": [
+              -6,
+              -5,
+              4,
+              3,
+              -11,
+              -4,
+              -7,
+              1
+            ]
+          }
+        },
+        "direction": {
+          "cells": {
+            "negative": {
+              "rows": 1264,
+              "errors": 203,
+              "choice": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+              "best_forced_rule": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+              "best_forced_net": 9
+            },
+            "positive": {
+              "rows": 1184,
+              "errors": 321,
+              "choice": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+              "best_forced_rule": "original_99/labelled_reference_pairs/point & original_99/permutation_selection/protected_select",
+              "best_forced_net": 10
+            }
+          },
+          "hindsight": {
+            "fixed": 28,
+            "harmed": 9,
+            "net": 19,
+            "net_by_fold": [
+              7,
+              -1,
+              2,
+              1,
+              6,
+              2,
+              2,
+              0
+            ]
+          },
+          "other_orders": {
+            "fixed": 51,
+            "harmed": 70,
+            "net": -19,
+            "net_by_fold": [
+              -5,
+              7,
+              4,
+              -4,
+              -7,
+              -4,
+              -4,
+              -6
+            ]
+          }
+        },
+        "direction_origin": {
+          "cells": {
+            "negative/Earth": {
+              "rows": 721,
+              "errors": 127,
+              "choice": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+              "best_forced_rule": "original_99/failure_sampling_offset/in_fit_offset & other_archives/mask_net_joint",
+              "best_forced_net": 7
+            },
+            "negative/Europa": {
+              "rows": 229,
+              "errors": 26,
+              "choice": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+              "best_forced_net": 5
+            },
+            "negative/Mars": {
+              "rows": 279,
+              "errors": 44,
+              "choice": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+              "best_forced_net": 6
+            },
+            "negative/missing": {
+              "rows": 35,
+              "errors": 6,
+              "choice": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+              "best_forced_rule": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+              "best_forced_net": 1
+            },
+            "positive/Earth": {
+              "rows": 831,
+              "errors": 270,
+              "choice": "original_99/permutation_selection/selected & original_99/bill_template",
+              "best_forced_rule": "original_99/permutation_selection/selected & original_99/bill_template",
+              "best_forced_net": 8
+            },
+            "positive/Europa": {
+              "rows": 161,
+              "errors": 12,
+              "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+              "best_forced_net": 5
+            },
+            "positive/Mars": {
+              "rows": 152,
+              "errors": 26,
+              "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+              "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+              "best_forced_net": 6
+            },
+            "positive/missing": {
+              "rows": 40,
+              "errors": 13,
+              "choice": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+              "best_forced_net": 4
+            }
+          },
+          "hindsight": {
+            "fixed": 50,
+            "harmed": 8,
+            "net": 42,
+            "net_by_fold": [
+              10,
+              3,
+              6,
+              9,
+              2,
+              3,
+              5,
+              4
+            ]
+          },
+          "other_orders": {
+            "fixed": 41,
+            "harmed": 90,
+            "net": -49,
+            "net_by_fold": [
+              0,
+              -8,
+              -2,
+              -5,
+              -9,
+              -6,
+              -6,
+              -13
+            ]
+          }
+        },
+        "direction_origin_cryo": {
+          "cells": {
+            "negative/Earth/False": {
+              "rows": 681,
+              "errors": 113,
+              "choice": "original_99/failure_sampling_offset/natural & tabnet_recipes/scratch_seed_731",
+              "best_forced_rule": "original_99/failure_sampling_offset/natural & tabnet_recipes/scratch_seed_731",
+              "best_forced_net": 6
+            },
+            "negative/Earth/True": {
+              "rows": 14,
+              "errors": 7,
+              "choice": "original_99/class_neighborhood_mass/density & original_99/service_order_mixture/empty",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/service_order_mixture/empty",
+              "best_forced_net": 3
+            },
+            "negative/Earth/missing": {
+              "rows": 26,
+              "errors": 7,
+              "choice": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+              "best_forced_rule": "original_99/spending_shape/reversed & tabnet_recipes/scratch_seed_431",
+              "best_forced_net": 3
+            },
+            "negative/Europa/False": {
+              "rows": 222,
+              "errors": 26,
+              "choice": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/recursive_metric/isotropic",
+              "best_forced_net": 5
+            },
+            "negative/Europa/missing": {
+              "rows": 7,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "negative/Mars/False": {
+              "rows": 260,
+              "errors": 40,
+              "choice": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/cabin_tabicl",
+              "best_forced_net": 4
+            },
+            "negative/Mars/True": {
+              "rows": 12,
+              "errors": 4,
+              "choice": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+              "best_forced_rule": "original_99/honest_failure_partitions/natural_honest & original_99/failure_sampling_offset/in_fit_offset",
+              "best_forced_net": 3
+            },
+            "negative/Mars/missing": {
+              "rows": 7,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "negative/missing/False": {
+              "rows": 34,
+              "errors": 6,
+              "choice": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+              "best_forced_rule": "original_99/class_neighborhood_mass/personal & original_99/companion_transition/personal",
+              "best_forced_net": 1
+            },
+            "negative/missing/missing": {
+              "rows": 1,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "positive/Earth/False": {
+              "rows": 339,
+              "errors": 84,
+              "choice": "original_99/spending_shape/pooled_direction & original_99/fixed_bill_margins/margins",
+              "best_forced_rule": "original_99/spending_shape/pooled_direction & original_99/fixed_bill_margins/margins",
+              "best_forced_net": 5
+            },
+            "positive/Earth/True": {
+              "rows": 477,
+              "errors": 183,
+              "choice": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+              "best_forced_rule": "original_99/honest_failure_partitions/enriched & supplementary/booking_transport_classifier",
+              "best_forced_net": 11
+            },
+            "positive/Earth/missing": {
+              "rows": 15,
+              "errors": 3,
+              "choice": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+              "best_forced_rule": "original_99/predicate_tables/main & original_99/predicate_tables/learned",
+              "best_forced_net": 2
+            },
+            "positive/Europa/False": {
+              "rows": 126,
+              "errors": 12,
+              "choice": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & supplementary/booking_transport_classifier",
+              "best_forced_net": 5
+            },
+            "positive/Europa/True": {
+              "rows": 26,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "positive/Europa/missing": {
+              "rows": 9,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            },
+            "positive/Mars/False": {
+              "rows": 59,
+              "errors": 14,
+              "choice": "original_99/charge_tree & original_99/neural_route_exact",
+              "best_forced_rule": "original_99/charge_tree & original_99/neural_route_exact",
+              "best_forced_net": 5
+            },
+            "positive/Mars/True": {
+              "rows": 85,
+              "errors": 11,
+              "choice": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+              "best_forced_rule": "original_99/labelled_reference_pairs/joint & original_99/spending_shape/free",
+              "best_forced_net": 3
+            },
+            "positive/Mars/missing": {
+              "rows": 8,
+              "errors": 1,
+              "choice": "original_99/service_order_mixture/empty & original_99/zero_truncated/truncated",
+              "best_forced_rule": "original_99/service_order_mixture/empty & original_99/zero_truncated/truncated",
+              "best_forced_net": 1
+            },
+            "positive/missing/False": {
+              "rows": 13,
+              "errors": 6,
+              "choice": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+              "best_forced_rule": "original_99/class_neighborhood_mass/density & original_99/companion_transition/personal",
+              "best_forced_net": 4
+            },
+            "positive/missing/True": {
+              "rows": 26,
+              "errors": 7,
+              "choice": "original_99/labelled_reference_pairs/point & original_99/failure_sampling_offset/remove_offset",
+              "best_forced_rule": "original_99/labelled_reference_pairs/point & original_99/failure_sampling_offset/remove_offset",
+              "best_forced_net": 1
+            },
+            "positive/missing/missing": {
+              "rows": 1,
+              "errors": 0,
+              "choice": "keep",
+              "best_forced_rule": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+              "best_forced_net": 0
+            }
+          },
+          "hindsight": {
+            "fixed": 85,
+            "harmed": 23,
+            "net": 62,
+            "net_by_fold": [
+              9,
+              7,
+              12,
+              9,
+              4,
+              6,
+              12,
+              3
+            ]
+          },
+          "other_orders": {
+            "fixed": 62,
+            "harmed": 99,
+            "net": -37,
+            "net_by_fold": [
+              2,
+              -7,
+              2,
+              -15,
+              -7,
+              -1,
+              -6,
+              -5
+            ]
+          }
+        }
+      }
+    }
+  }
+}
