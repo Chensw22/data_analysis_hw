@@ -1,0 +1,471 @@
+{
+  "overlap": {
+    "all": {
+      "rows": 6823,
+      "both_wrong": 981,
+      "current_only_wrong": 200,
+      "historical_only_wrong": 223,
+      "both_correct": 5419
+    },
+    "current_unanimous": {
+      "rows": 2986,
+      "both_wrong": 202,
+      "current_only_wrong": 0,
+      "historical_only_wrong": 0,
+      "both_correct": 2784
+    },
+    "both_unanimous": {
+      "rows": 2588,
+      "both_wrong": 161,
+      "current_only_wrong": 0,
+      "historical_only_wrong": 0,
+      "both_correct": 2427
+    },
+    "cold_both_unanimous": {
+      "rows": 1805,
+      "both_wrong": 133,
+      "current_only_wrong": 0,
+      "historical_only_wrong": 0,
+      "both_correct": 1672
+    },
+    "current_unanimous_errors_without_known_history": 43
+  },
+  "auxiliary_training_agreement": {
+    "historical_wrong": [
+      0,
+      2,
+      206
+    ],
+    "historical_correct": [
+      2687,
+      6,
+      0
+    ]
+  },
+  "binary": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 72,
+      "harmed": 59,
+      "auc": 0.7966749317788108,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 274,
+      "nll": 0.3829390801638809
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7573633768352366,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 54,
+      "nll": 0.23340222723989945
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 11,
+      "harmed": 16,
+      "auc": 0.7852931887567112,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 40,
+      "nll": 0.40897679008925225
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7506978010756349,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 9,
+      "nll": 0.25351813023266023
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 30,
+      "harmed": 34,
+      "auc": 0.7907913225398511,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 258,
+      "nll": 0.3786431311121875
+    }
+  },
+  "repeat": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 68,
+      "harmed": 48,
+      "auc": 0.7981163009020531,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 267,
+      "nll": 0.3819658769811699
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7681566068515497,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 56,
+      "nll": 0.23275754386345915
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 10,
+      "harmed": 11,
+      "auc": 0.7937677650278977,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 42,
+      "nll": 0.4028253801116215
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7759547961059297,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 10,
+      "nll": 0.2480112367771736
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 33,
+      "harmed": 25,
+      "auc": 0.7926959571279136,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 248,
+      "nll": 0.3771579026054728
+    }
+  },
+  "repeat_two_or_more": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 104,
+      "harmed": 117,
+      "auc": 0.796619773830348,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 269
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7681586460032627,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 56
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 14,
+      "harmed": 23,
+      "auc": 0.790053923804845,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 46
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.776159030567091,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 10
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 67,
+      "harmed": 94,
+      "auc": 0.7913641082887075,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 234
+    }
+  },
+  "repeat_all": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 8,
+      "harmed": 2,
+      "auc": 0.7283472876814283,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 239
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7679975530179446,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 56
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 1,
+      "harmed": 0,
+      "auc": 0.7150460282368903,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 40
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7749336238001227,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 10
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 1,
+      "harmed": 0,
+      "auc": 0.731294203056939,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 229
+    }
+  },
+  "shuffled": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 48,
+      "harmed": 28,
+      "auc": 0.7956473391989521,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 271,
+      "nll": 0.3837295796460568
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7553772430668841,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 50,
+      "nll": 0.234798708253861
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 7,
+      "harmed": 8,
+      "auc": 0.7846147547695078,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 39,
+      "nll": 0.4083839351148205
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.743073047858942,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 8,
+      "nll": 0.2542970479396921
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 19,
+      "harmed": 10,
+      "auc": 0.7898697912600897,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 251,
+      "nll": 0.37904068994775447
+    }
+  },
+  "shuffled_two_or_more": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 21,
+      "harmed": 16,
+      "auc": 0.7945677142877104,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 268
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7553140293637846,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 49
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 2,
+      "harmed": 4,
+      "auc": 0.783281281070522,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 45
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7429368915515011,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 7
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 6,
+      "harmed": 2,
+      "auc": 0.7887689107117765,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 252
+    }
+  },
+  "shuffled_all": {
+    "all": {
+      "rows": 6055,
+      "errors": 1097,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7877983631327213,
+      "top_tenth_rows": 606,
+      "top_tenth_errors": 253
+    },
+    "common": {
+      "rows": 2652,
+      "errors": 200,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.755163132137031,
+      "top_tenth_rows": 266,
+      "top_tenth_errors": 48
+    },
+    "new": {
+      "rows": 1033,
+      "errors": 207,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.7790176743750805,
+      "top_tenth_rows": 104,
+      "top_tenth_errors": 40
+    },
+    "new_common": {
+      "rows": 434,
+      "errors": 37,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.741915719245694,
+      "top_tenth_rows": 44,
+      "top_tenth_errors": 7
+    },
+    "outside_latest_review": {
+      "rows": 5967,
+      "errors": 1040,
+      "fixed": 0,
+      "harmed": 0,
+      "auc": 0.782978798145228,
+      "top_tenth_rows": 597,
+      "top_tenth_errors": 238
+    }
+  },
+  "actual_states_on_new_orders": {
+    "binary": {
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 17,
+        "harmed": 13,
+        "auc": 0.8085587956627013
+      },
+      "new_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0,
+        "auc": 0.7662196201239022
+      }
+    },
+    "paired": {
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 16,
+        "harmed": 11,
+        "auc": 0.8071668362751636
+      },
+      "new_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0,
+        "auc": 0.7662196201239022
+      }
+    },
+    "paired_persistent": {
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 2,
+        "harmed": 0,
+        "auc": 0.7987448971236739
+      },
+      "new_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0,
+        "auc": 0.7654026822792566
+      }
+    },
+    "sham": {
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 8,
+        "harmed": 5,
+        "auc": 0.7980372202921944
+      },
+      "new_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0,
+        "auc": 0.7323166995711077
+      }
+    },
+    "sham_persistent": {
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 3,
+        "harmed": 0,
+        "auc": 0.7959960697617292
+      },
+      "new_common": {
+        "rows": 434,
+        "errors": 37,
+        "fixed": 0,
+        "harmed": 0,
+        "auc": 0.731499761726462
+      }
+    }
+  }
+}
