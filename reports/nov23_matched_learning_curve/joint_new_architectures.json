@@ -1,0 +1,535 @@
+{
+  "existing": [
+    "Mitra2_adapted",
+    "TabDPT",
+    "LimiX2",
+    "mask_net_joint",
+    "conditional_bill_flow",
+    "latent_class_mixture",
+    "cat",
+    "budget",
+    "tabicl",
+    "v44_without_name"
+  ],
+  "added": [
+    "Nori_1536",
+    "learned_clauses",
+    "routed_capsules"
+  ],
+  "common_coverage": {
+    "Nori_1536": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 145,
+      "harmed": 259,
+      "net": -114,
+      "net_by_fold": [
+        -34,
+        -9,
+        -6,
+        -19,
+        -20,
+        -2,
+        -9,
+        -15
+      ]
+    },
+    "learned_clauses": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 57,
+      "harmed": 128,
+      "net": -71,
+      "net_by_fold": [
+        -6,
+        -14,
+        -7,
+        -2,
+        -14,
+        -4,
+        -10,
+        -14
+      ]
+    },
+    "routed_capsules": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 82,
+      "harmed": 156,
+      "net": -74,
+      "net_by_fold": [
+        1,
+        -7,
+        -8,
+        -12,
+        -9,
+        -13,
+        -13,
+        -13
+      ]
+    },
+    "exactly_0_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 738,
+      "harmed": 5934,
+      "net": -5196,
+      "net_by_fold": [
+        -631,
+        -646,
+        -708,
+        -635,
+        -671,
+        -599,
+        -656,
+        -650
+      ]
+    },
+    "exactly_1_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 284,
+      "harmed": 543,
+      "net": -259,
+      "net_by_fold": [
+        -39,
+        -30,
+        -21,
+        -33,
+        -43,
+        -19,
+        -32,
+        -42
+      ]
+    },
+    "exactly_2_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 118,
+      "harmed": 190,
+      "net": -72,
+      "net_by_fold": [
+        -13,
+        -9,
+        -4,
+        -4,
+        -7,
+        -13,
+        -11,
+        -11
+      ]
+    },
+    "exactly_3_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 26,
+      "harmed": 37,
+      "net": -11,
+      "net_by_fold": [
+        -3,
+        -1,
+        -3,
+        -1,
+        -1,
+        -3,
+        1,
+        0
+      ]
+    }
+  },
+  "comparisons": {
+    "shuffled": {
+      "all": {
+        "baseline_correct": 7092,
+        "augmented_correct": 7079,
+        "against_baseline": {
+          "rows": 8693,
+          "errors": 1601,
+          "fixed": 75,
+          "harmed": 88,
+          "net": -13,
+          "net_by_fold": [
+            2,
+            -6,
+            -6,
+            -9,
+            4,
+            5,
+            -4,
+            1
+          ]
+        }
+      },
+      "known": {
+        "baseline_correct": 7004,
+        "augmented_correct": 6992,
+        "against_baseline": {
+          "rows": 8532,
+          "errors": 1528,
+          "fixed": 67,
+          "harmed": 79,
+          "net": -12,
+          "net_by_fold": [
+            4,
+            -8,
+            -6,
+            -6,
+            5,
+            3,
+            -5,
+            1
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 33,
+          "harmed": 46,
+          "net": -13,
+          "net_by_fold": [
+            2,
+            -8,
+            0,
+            -5,
+            4,
+            -4,
+            -3,
+            1
+          ]
+        },
+        "against_release": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 253,
+          "harmed": 352,
+          "net": -99,
+          "net_by_fold": [
+            1,
+            -19,
+            -18,
+            -7,
+            -12,
+            -3,
+            -20,
+            -21
+          ]
+        }
+      },
+      "common": {
+        "baseline_correct": 6672,
+        "augmented_correct": 6669,
+        "against_baseline": {
+          "rows": 7870,
+          "errors": 1198,
+          "fixed": 39,
+          "harmed": 42,
+          "net": -3,
+          "net_by_fold": [
+            2,
+            -5,
+            -2,
+            -4,
+            1,
+            4,
+            -2,
+            3
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 20,
+          "harmed": 25,
+          "net": -5,
+          "net_by_fold": [
+            1,
+            -7,
+            2,
+            -3,
+            1,
+            1,
+            -1,
+            1
+          ]
+        },
+        "against_release": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 78,
+          "harmed": 113,
+          "net": -35,
+          "net_by_fold": [
+            3,
+            -10,
+            -7,
+            -7,
+            -9,
+            -1,
+            -3,
+            -1
+          ]
+        }
+      },
+      "fresh": {
+        "baseline_correct": 820,
+        "augmented_correct": 812,
+        "against_baseline": {
+          "rows": 1033,
+          "errors": 213,
+          "fixed": 5,
+          "harmed": 13,
+          "net": -8,
+          "net_by_fold": [
+            -2,
+            -1,
+            -2,
+            0,
+            -1,
+            -2,
+            -1,
+            1
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 3,
+          "harmed": 7,
+          "net": -4,
+          "net_by_fold": [
+            -2,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            -1,
+            0
+          ]
+        },
+        "against_release": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 25,
+          "harmed": 56,
+          "net": -31,
+          "net_by_fold": [
+            -1,
+            -6,
+            -5,
+            -2,
+            -1,
+            2,
+            -5,
+            -13
+          ]
+        }
+      }
+    },
+    "ordered": {
+      "all": {
+        "baseline_correct": 7089,
+        "augmented_correct": 7088,
+        "against_baseline": {
+          "rows": 8693,
+          "errors": 1604,
+          "fixed": 75,
+          "harmed": 76,
+          "net": -1,
+          "net_by_fold": [
+            2,
+            -4,
+            -4,
+            2,
+            2,
+            4,
+            -4,
+            1
+          ]
+        }
+      },
+      "known": {
+        "baseline_correct": 7003,
+        "augmented_correct": 7005,
+        "against_baseline": {
+          "rows": 8532,
+          "errors": 1529,
+          "fixed": 69,
+          "harmed": 67,
+          "net": 2,
+          "net_by_fold": [
+            3,
+            -4,
+            -4,
+            4,
+            1,
+            3,
+            -4,
+            3
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 36,
+          "harmed": 38,
+          "net": -2,
+          "net_by_fold": [
+            2,
+            -4,
+            -3,
+            1,
+            2,
+            0,
+            -3,
+            3
+          ]
+        },
+        "against_release": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 260,
+          "harmed": 346,
+          "net": -86,
+          "net_by_fold": [
+            -2,
+            -14,
+            -13,
+            4,
+            -21,
+            -6,
+            -16,
+            -18
+          ]
+        }
+      },
+      "common": {
+        "baseline_correct": 6674,
+        "augmented_correct": 6677,
+        "against_baseline": {
+          "rows": 7870,
+          "errors": 1196,
+          "fixed": 48,
+          "harmed": 45,
+          "net": 3,
+          "net_by_fold": [
+            1,
+            -3,
+            0,
+            -1,
+            4,
+            4,
+            -6,
+            4
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 27,
+          "harmed": 29,
+          "net": -2,
+          "net_by_fold": [
+            1,
+            -4,
+            -1,
+            -1,
+            3,
+            1,
+            -4,
+            3
+          ]
+        },
+        "against_release": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 83,
+          "harmed": 110,
+          "net": -27,
+          "net_by_fold": [
+            4,
+            -4,
+            -3,
+            -3,
+            -11,
+            -3,
+            -8,
+            1
+          ]
+        }
+      },
+      "fresh": {
+        "baseline_correct": 813,
+        "augmented_correct": 808,
+        "against_baseline": {
+          "rows": 1033,
+          "errors": 220,
+          "fixed": 6,
+          "harmed": 11,
+          "net": -5,
+          "net_by_fold": [
+            1,
+            -1,
+            0,
+            1,
+            -1,
+            -2,
+            -4,
+            1
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 3,
+          "harmed": 7,
+          "net": -4,
+          "net_by_fold": [
+            1,
+            -1,
+            -1,
+            1,
+            0,
+            -2,
+            -2,
+            0
+          ]
+        },
+        "against_release": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 23,
+          "harmed": 58,
+          "net": -35,
+          "net_by_fold": [
+            -2,
+            -5,
+            -8,
+            -1,
+            -3,
+            0,
+            -5,
+            -11
+          ]
+        }
+      }
+    }
+  },
+  "previously_unopposed": {
+    "rows": 5189,
+    "errors": 513,
+    "fixed": 83,
+    "harmed": 186,
+    "net": -103,
+    "net_by_fold": [
+      -29,
+      -10,
+      -7,
+      -8,
+      -9,
+      -17,
+      -10,
+      -13
+    ]
+  }
+}
