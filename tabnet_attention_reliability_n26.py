@@ -10,6 +10,28 @@ from frozen_queue_shared_errors_n26 import paired
 from target_mix_expert_routing_n26 import ROOT, batches, ticker
 
 
+def network_outputs(z):
+    labels=z['names'].tolist()
+    sets=[{'HomePlanet','Destination','VIP'}, {'deck','berth','side'}, {'Age','order_size'},
+          {'CryoSleep'}, set(BILLS)|{'bill_total','paid_services'}]
+    masks=[np.isin(labels,list(fields)) for fields in sets]
+    masks.append(np.array([n.endswith('_missing') for n in labels]))
+    assert (np.sum(masks,axis=0)==1).all()
+    attention=[]
+    for name in MODELS:
+
+        attrs=z[name+'_importance']
+        attention.append(np.column_stack([attrs[:,mask].sum(1) for mask in masks]))
+    a=np.stack(attention,axis=1)
+    spread=np.std(a,axis=1)
+    # Entropy and disagreement concern observed network masks, not a causal importance claim.
+    entropy=-(a*np.log(a.clip(1.e-8,1))).sum(2)
+    probability=np.column_stack([z[name] for name in MODELS])
+    probdev=probability-probability.mean(1,keepdims=True)
+    packet=np.column_stack([a.mean(1),spread,entropy,(a*probdev[:,:,None]).sum(1)])
+    return probability,packet
+
+
 def signals(raw,y,g,f):
     probability=np.empty((len(y),len(MODELS)))
     features=None
@@ -21,23 +43,7 @@ def signals(raw,y,g,f):
             np.testing.assert_array_equal(z['passenger'],raw.PassengerId.iloc[q])
             np.testing.assert_array_equal(z['train_y'],y[t])
             assert not np.isin(g[q],g[t]).any()
-            labels=z['names'].tolist()
-            sets=[{'HomePlanet','Destination','VIP'}, {'deck','berth','side'}, {'Age','order_size'},
-                  {'CryoSleep'}, set(BILLS)|{'bill_total','paid_services'}]
-            masks=[np.isin(labels,list(fields)) for fields in sets]
-            masks.append(np.array([n.endswith('_missing') for n in labels]))
-            assert (np.sum(masks,axis=0)==1).all()
-            attention=[]
-            for j,name in enumerate(MODELS):
-                probability[q,j]=z[name]
-                attrs=z[name+'_importance']
-                attention.append(np.column_stack([attrs[:,mask].sum(1) for mask in masks]))
-            a=np.stack(attention,axis=1)
-            spread=np.std(a,axis=1)
-            # Entropy and disagreement concern observed network masks, not a causal importance claim.
-            entropy=-(a*np.log(a.clip(1.e-8,1))).sum(2)
-            probdev=probability[q]-probability[q].mean(1,keepdims=True)
-            packet=np.column_stack([a.mean(1),spread,entropy,(a*probdev[:,:,None]).sum(1)])
+            probability[q],packet=network_outputs(z)
             if features is None:
                 features=np.zeros((len(y),packet.shape[1]))
             features[q]=packet
