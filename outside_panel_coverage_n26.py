@@ -14,7 +14,7 @@ MITRA = ['e06a055e91a3baeffc37f9cf634d9e69a27d904b6686131dc3b702f9c0126b19',
 TABDPT = '97dc3b60bfad6b42ec1a07b7e121d86b0fc7c9fd67c8d2eaac3d815da197eacb'
 
 
-def projection():
+def projection(include_full=False):
     raw,y,g,f = data()
     _,_,_,panels = sources()
     v = panels['full']
@@ -28,8 +28,15 @@ def projection():
     with np.load(DECK/'deck_estimates.npz') as z:
         enabled = z['eligible']
     views = {}
+    if include_full:
+        views['full'] = np.zeros(len(y),bool),np.zeros(len(y),bool)
     for key,src,dst,t,q in splits(panels,g):
-        if key.startswith('bookingmix'):
+        if include_full and key.startswith('full_'):
+            mask,full_parent = views['full']
+            assert not mask[q].any()
+            full_parent[q] = replay(key,q,dst,p,enabled)
+            mask[q] = True
+        elif key.startswith('bookingmix'):
             assert not valid[q].any()
             parent[q] = replay(key,q,dst,p,enabled)
             valid[q] = True
@@ -40,6 +47,8 @@ def projection():
     fresh = ~np.isin(g,g[panels['historical']['ids']])
     views['bookingmix'] = valid,parent
     views['fresh_bookingmix'] = valid&fresh,parent
+    if include_full:
+        np.testing.assert_array_equal(views['full'][0],v['known'])
     assert valid.sum()==6055 and (valid&fresh).sum()==1033
     return raw,y,g,f,views,original
 
