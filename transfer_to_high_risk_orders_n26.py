@@ -26,9 +26,22 @@ def challenge(x, y, z, weight):
     return reg.predict_proba(z)[:,1]
 
 
+def expert_inputs(raw,y,g,f):
+    raw_x = case_features(raw,g)
+    bundles = {}
+    for first in range(0,8,2):
+        held = np.isin(f,[first,first+1])
+        train,both = np.flatnonzero(~held),np.flatnonzero(held)
+        folder = OUT/f'pair{first}_{first+1}'
+        pr = read_experts(raw,y,g,train,both,folder/'density.npz',folder/f'tuned{first}.npz')
+        scores = np.zeros((len(y),pr.shape[1]))
+        scores[both] = logit(pr.clip(.005,.995))
+        bundles[first] = np.column_stack([scores,raw_x])
+    return bundles
+
+
 def run():
     raw,y,g,f,known,versions = paired()
-    raw_x = case_features(raw,g)
     with np.load(ROOT/'artifacts/nov26_independently_calibrated_release_risk/held_risk.npz') as z:
         np.testing.assert_array_equal(np.sort(z['ids']),np.flatnonzero(known))
         np.testing.assert_array_equal(z['passenger'],raw.PassengerId.iloc[z['ids']])
@@ -40,15 +53,7 @@ def run():
     assert (known & common & high & (current!=y)).sum()==525
     decisions = {}
     ess = []
-    bundles = {}
-    for first in range(0,8,2):
-        held = np.isin(f,[first,first+1])
-        train,both = np.flatnonzero(~held),np.flatnonzero(held)
-        folder = OUT/f'pair{first}_{first+1}'
-        pr = read_experts(raw,y,g,train,both,folder/'density.npz',folder/f'tuned{first}.npz')
-        scores = np.zeros((len(y),pr.shape[1]))
-        scores[both] = logit(pr.clip(.005,.995))
-        bundles[first] = np.column_stack([scores,raw_x])
+    bundles = expert_inputs(raw,y,g,f)
     for b in batches(True):
         if b.tag!='full':
             continue
