@@ -1,0 +1,2003 @@
+{
+  "families": [
+    "Mitra2_adapted",
+    "EXAONE_grouped",
+    "mask_net_joint",
+    "conditional_bill_flow",
+    "latent_class_mixture",
+    "conditional_profile_mixture",
+    "three_tabnet_mean",
+    "booking_transport_classifier",
+    "conditional_age_density",
+    "conditional_bill_deviations",
+    "confidence_ordered_booking",
+    "constrained_track_odds",
+    "joint_manifest_forest",
+    "joint_party_tabicl",
+    "latent_receipt_channel",
+    "manifest_role_joint",
+    "neighbor_booking_composition",
+    "solo_selection_likelihood"
+  ],
+  "number_of_nonempty_subsets": 262143,
+  "number_of_subset_thresholds": 2359296,
+  "target_gain": 162,
+  "experiments": {
+    "common_global_rule": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 61,
+        "harmed": 56,
+        "net": 5,
+        "net_by_fold": [
+          0,
+          0,
+          4,
+          2,
+          1,
+          -1,
+          1,
+          -2
+        ],
+        "overall_known_accuracy": 0.8316924519456165
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 4,
+          "families": [
+            "Mitra2_adapted",
+            "EXAONE_grouped",
+            "booking_transport_classifier",
+            "joint_manifest_forest",
+            "latent_receipt_channel",
+            "solo_selection_likelihood"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 4,
+              "families": [
+                "mask_net_joint",
+                "latent_class_mixture",
+                "conditional_profile_mixture",
+                "manifest_role_joint",
+                "neighbor_booking_composition"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 31,
+            "harmed": 20,
+            "net": 11,
+            "net_by_fold": [
+              5,
+              3,
+              3
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 3,
+            "harmed": 8,
+            "net": -5,
+            "net_by_fold": [
+              -3,
+              -1,
+              1,
+              -1,
+              0,
+              -1,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 25,
+            "harmed": 53,
+            "net": -28,
+            "net_by_fold": [
+              -7,
+              -4,
+              -1,
+              -2,
+              -2,
+              -5,
+              -4,
+              -3
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 7,
+              "families": [
+                "Mitra2_adapted",
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "three_tabnet_mean",
+                "conditional_age_density",
+                "conditional_bill_deviations",
+                "constrained_track_odds",
+                "joint_party_tabicl",
+                "solo_selection_likelihood"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 19,
+            "harmed": 11,
+            "net": 8,
+            "net_by_fold": [
+              3,
+              3,
+              2
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 0,
+            "harmed": 3,
+            "net": -3,
+            "net_by_fold": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 7,
+            "harmed": 28,
+            "net": -21,
+            "net_by_fold": [
+              -1,
+              -1,
+              -2,
+              -3,
+              -2,
+              -6,
+              -4,
+              -2
+            ]
+          }
+        }
+      }
+    },
+    "common_direction": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 109,
+        "harmed": 88,
+        "net": 21,
+        "net_by_fold": [
+          6,
+          -2,
+          6,
+          4,
+          -4,
+          2,
+          9,
+          0
+        ],
+        "overall_known_accuracy": 0.8335677449601501
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 3,
+          "families": [
+            "EXAONE_grouped",
+            "mask_net_joint",
+            "three_tabnet_mean",
+            "booking_transport_classifier",
+            "joint_manifest_forest",
+            "joint_party_tabicl",
+            "manifest_role_joint",
+            "solo_selection_likelihood"
+          ]
+        },
+        "1": {
+          "threshold": 4,
+          "families": [
+            "three_tabnet_mean",
+            "confidence_ordered_booking",
+            "joint_manifest_forest",
+            "latent_receipt_channel"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "mask_net_joint",
+                "conditional_profile_mixture",
+                "manifest_role_joint",
+                "neighbor_booking_composition"
+              ]
+            },
+            "1": {
+              "threshold": 4,
+              "families": [
+                "EXAONE_grouped",
+                "conditional_bill_flow",
+                "booking_transport_classifier",
+                "confidence_ordered_booking",
+                "neighbor_booking_composition",
+                "solo_selection_likelihood"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 46,
+            "harmed": 29,
+            "net": 17,
+            "net_by_fold": [
+              5,
+              8,
+              4
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 5,
+            "harmed": 8,
+            "net": -3,
+            "net_by_fold": [
+              -1,
+              -2,
+              2,
+              0,
+              1,
+              -1,
+              -1,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 39,
+            "harmed": 66,
+            "net": -27,
+            "net_by_fold": [
+              -4,
+              -6,
+              -1,
+              -1,
+              -3,
+              -5,
+              -2,
+              -5
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 2,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint"
+              ]
+            },
+            "1": {
+              "threshold": 5,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "conditional_profile_mixture",
+                "three_tabnet_mean",
+                "booking_transport_classifier",
+                "conditional_bill_deviations",
+                "joint_party_tabicl"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 35,
+            "harmed": 24,
+            "net": 11,
+            "net_by_fold": [
+              5,
+              7,
+              -1
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 6,
+            "harmed": 6,
+            "net": 0,
+            "net_by_fold": [
+              -1,
+              -1,
+              1,
+              0,
+              1,
+              -1,
+              2,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 46,
+            "harmed": 73,
+            "net": -27,
+            "net_by_fold": [
+              2,
+              -5,
+              1,
+              0,
+              -7,
+              -10,
+              -1,
+              -7
+            ]
+          }
+        }
+      }
+    },
+    "common_direction_solo_paid": {
+      "hindsight": {
+        "rows": 7870,
+        "errors": 1166,
+        "fixed": 142,
+        "harmed": 70,
+        "net": 72,
+        "net_by_fold": [
+          11,
+          2,
+          8,
+          11,
+          13,
+          9,
+          10,
+          8
+        ],
+        "overall_known_accuracy": 0.8395452414439756
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 4,
+          "families": [
+            "Mitra2_adapted",
+            "mask_net_joint",
+            "conditional_profile_mixture",
+            "booking_transport_classifier",
+            "latent_receipt_channel",
+            "manifest_role_joint"
+          ]
+        },
+        "1": {
+          "threshold": 2,
+          "families": [
+            "EXAONE_grouped",
+            "three_tabnet_mean",
+            "joint_manifest_forest",
+            "solo_selection_likelihood"
+          ]
+        },
+        "2": {
+          "threshold": 2,
+          "families": [
+            "EXAONE_grouped",
+            "booking_transport_classifier",
+            "constrained_track_odds",
+            "manifest_role_joint"
+          ]
+        },
+        "3": {
+          "threshold": 3,
+          "families": [
+            "EXAONE_grouped",
+            "mask_net_joint",
+            "conditional_bill_flow",
+            "three_tabnet_mean",
+            "joint_manifest_forest",
+            "joint_party_tabicl"
+          ]
+        },
+        "4": {
+          "threshold": 2,
+          "families": [
+            "booking_transport_classifier",
+            "manifest_role_joint"
+          ]
+        },
+        "5": {
+          "threshold": 4,
+          "families": [
+            "mask_net_joint",
+            "conditional_bill_flow",
+            "latent_class_mixture",
+            "conditional_bill_deviations",
+            "latent_receipt_channel"
+          ]
+        },
+        "6": {
+          "threshold": 3,
+          "families": [
+            "conditional_bill_flow",
+            "latent_class_mixture",
+            "conditional_profile_mixture",
+            "booking_transport_classifier",
+            "conditional_age_density",
+            "constrained_track_odds",
+            "latent_receipt_channel"
+          ]
+        },
+        "7": {
+          "threshold": 3,
+          "families": [
+            "conditional_bill_flow",
+            "confidence_ordered_booking",
+            "joint_manifest_forest"
+          ]
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 2,
+              "families": [
+                "conditional_age_density",
+                "conditional_bill_deviations"
+              ]
+            },
+            "1": {
+              "threshold": 2,
+              "families": [
+                "Mitra2_adapted",
+                "booking_transport_classifier",
+                "conditional_bill_deviations",
+                "solo_selection_likelihood"
+              ]
+            },
+            "2": {
+              "threshold": 2,
+              "families": [
+                "manifest_role_joint",
+                "neighbor_booking_composition"
+              ]
+            },
+            "3": {
+              "threshold": 4,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "conditional_bill_flow",
+                "conditional_profile_mixture",
+                "booking_transport_classifier",
+                "constrained_track_odds",
+                "joint_party_tabicl"
+              ]
+            },
+            "4": {
+              "threshold": 1,
+              "families": [
+                "EXAONE_grouped",
+                "conditional_profile_mixture",
+                "constrained_track_odds",
+                "solo_selection_likelihood"
+              ]
+            },
+            "5": {
+              "threshold": 4,
+              "families": [
+                "mask_net_joint",
+                "conditional_bill_flow",
+                "three_tabnet_mean",
+                "booking_transport_classifier",
+                "conditional_bill_deviations",
+                "joint_party_tabicl",
+                "neighbor_booking_composition"
+              ]
+            },
+            "6": {
+              "threshold": 2,
+              "families": [
+                "Mitra2_adapted",
+                "latent_class_mixture",
+                "constrained_track_odds"
+              ]
+            },
+            "7": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "latent_receipt_channel",
+                "neighbor_booking_composition"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 96,
+            "harmed": 44,
+            "net": 52,
+            "net_by_fold": [
+              20,
+              23,
+              9
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 12,
+            "harmed": 15,
+            "net": -3,
+            "net_by_fold": [
+              -3,
+              0,
+              2,
+              0,
+              3,
+              -4,
+              1,
+              -2
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 115,
+            "harmed": 150,
+            "net": -35,
+            "net_by_fold": [
+              -8,
+              -2,
+              0,
+              -4,
+              -7,
+              -14,
+              3,
+              -3
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            },
+            "1": {
+              "threshold": 1,
+              "families": []
+            },
+            "2": {
+              "threshold": 4,
+              "families": [
+                "latent_class_mixture",
+                "booking_transport_classifier",
+                "conditional_age_density",
+                "manifest_role_joint",
+                "neighbor_booking_composition"
+              ]
+            },
+            "3": {
+              "threshold": 3,
+              "families": [
+                "conditional_bill_flow",
+                "conditional_profile_mixture",
+                "three_tabnet_mean"
+              ]
+            },
+            "4": {
+              "threshold": 2,
+              "families": [
+                "EXAONE_grouped",
+                "latent_class_mixture",
+                "conditional_profile_mixture",
+                "three_tabnet_mean",
+                "conditional_age_density",
+                "solo_selection_likelihood"
+              ]
+            },
+            "5": {
+              "threshold": 3,
+              "families": [
+                "conditional_bill_flow",
+                "conditional_profile_mixture",
+                "constrained_track_odds",
+                "latent_receipt_channel",
+                "neighbor_booking_composition"
+              ]
+            },
+            "6": {
+              "threshold": 2,
+              "families": [
+                "Mitra2_adapted",
+                "latent_class_mixture",
+                "constrained_track_odds"
+              ]
+            },
+            "7": {
+              "threshold": 3,
+              "families": [
+                "mask_net_joint",
+                "conditional_bill_deviations",
+                "neighbor_booking_composition"
+              ]
+            }
+          },
+          "hist": {
+            "rows": 4251,
+            "errors": 674,
+            "fixed": 58,
+            "harmed": 20,
+            "net": 38,
+            "net_by_fold": [
+              16,
+              13,
+              9
+            ]
+          },
+          "new_orders": {
+            "rows": 946,
+            "errors": 161,
+            "fixed": 7,
+            "harmed": 8,
+            "net": -1,
+            "net_by_fold": [
+              -2,
+              0,
+              -1,
+              0,
+              2,
+              0,
+              1,
+              -1
+            ]
+          },
+          "full_including_historical": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 66,
+            "harmed": 103,
+            "net": -37,
+            "net_by_fold": [
+              -7,
+              -2,
+              -2,
+              -3,
+              1,
+              -12,
+              -7,
+              -5
+            ]
+          }
+        }
+      }
+    },
+    "known_global_rule": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "overall_known_accuracy": 0.8311064228785747
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "known_direction": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 90,
+        "harmed": 59,
+        "net": 31,
+        "net_by_fold": [
+          0,
+          5,
+          5,
+          3,
+          -2,
+          11,
+          6,
+          3
+        ],
+        "overall_known_accuracy": 0.8347398030942335
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 3,
+          "families": [
+            "constrained_track_odds",
+            "joint_party_tabicl",
+            "latent_receipt_channel",
+            "manifest_role_joint"
+          ]
+        },
+        "1": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "three_tabnet_mean",
+                "booking_transport_classifier",
+                "conditional_bill_deviations",
+                "joint_manifest_forest",
+                "joint_party_tabicl"
+              ]
+            },
+            "1": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 99,
+            "harmed": 75,
+            "net": 24,
+            "net_by_fold": [
+              0,
+              14,
+              10
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 21,
+            "harmed": 19,
+            "net": 2,
+            "net_by_fold": [
+              -1,
+              0,
+              1,
+              -1,
+              1,
+              2,
+              4,
+              -4
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 155,
+            "harmed": 152,
+            "net": 3,
+            "net_by_fold": [
+              2,
+              1,
+              2,
+              2,
+              -6,
+              1,
+              5,
+              -4
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "three_tabnet_mean",
+                "booking_transport_classifier",
+                "conditional_bill_deviations",
+                "joint_manifest_forest",
+                "joint_party_tabicl"
+              ]
+            },
+            "1": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 99,
+            "harmed": 75,
+            "net": 24,
+            "net_by_fold": [
+              0,
+              14,
+              10
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 21,
+            "harmed": 19,
+            "net": 2,
+            "net_by_fold": [
+              -1,
+              0,
+              1,
+              -1,
+              1,
+              2,
+              4,
+              -4
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 155,
+            "harmed": 152,
+            "net": 3,
+            "net_by_fold": [
+              2,
+              1,
+              2,
+              2,
+              -6,
+              1,
+              5,
+              -4
+            ]
+          }
+        }
+      }
+    },
+    "known_direction_solo_paid": {
+      "hindsight": {
+        "rows": 8532,
+        "errors": 1441,
+        "fixed": 213,
+        "harmed": 114,
+        "net": 99,
+        "net_by_fold": [
+          6,
+          4,
+          13,
+          17,
+          6,
+          17,
+          25,
+          11
+        ],
+        "overall_known_accuracy": 0.8427097984060009
+      },
+      "hindsight_rules": {
+        "0": {
+          "threshold": 3,
+          "families": [
+            "conditional_profile_mixture",
+            "three_tabnet_mean",
+            "neighbor_booking_composition"
+          ]
+        },
+        "1": {
+          "threshold": 4,
+          "families": [
+            "Mitra2_adapted",
+            "EXAONE_grouped",
+            "three_tabnet_mean",
+            "booking_transport_classifier",
+            "conditional_age_density",
+            "joint_manifest_forest",
+            "latent_receipt_channel"
+          ]
+        },
+        "2": {
+          "threshold": 6,
+          "families": [
+            "booking_transport_classifier",
+            "conditional_bill_deviations",
+            "confidence_ordered_booking",
+            "constrained_track_odds",
+            "joint_party_tabicl",
+            "latent_receipt_channel",
+            "manifest_role_joint"
+          ]
+        },
+        "3": {
+          "threshold": 3,
+          "families": [
+            "EXAONE_grouped",
+            "mask_net_joint",
+            "three_tabnet_mean",
+            "booking_transport_classifier",
+            "confidence_ordered_booking",
+            "joint_manifest_forest",
+            "joint_party_tabicl",
+            "manifest_role_joint"
+          ]
+        },
+        "4": {
+          "threshold": 2,
+          "families": [
+            "Mitra2_adapted",
+            "latent_class_mixture"
+          ]
+        },
+        "5": {
+          "threshold": 1,
+          "families": []
+        },
+        "6": {
+          "threshold": 3,
+          "families": [
+            "Mitra2_adapted",
+            "conditional_bill_flow",
+            "latent_class_mixture",
+            "conditional_profile_mixture",
+            "booking_transport_classifier",
+            "conditional_age_density",
+            "constrained_track_odds",
+            "latent_receipt_channel"
+          ]
+        },
+        "7": {
+          "threshold": 1,
+          "families": []
+        }
+      },
+      "transfer": {
+        "pooled_history": {
+          "rules": {
+            "0": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "conditional_profile_mixture"
+              ]
+            },
+            "1": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "conditional_bill_flow",
+                "three_tabnet_mean",
+                "confidence_ordered_booking",
+                "neighbor_booking_composition"
+              ]
+            },
+            "2": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "latent_receipt_channel"
+              ]
+            },
+            "3": {
+              "threshold": 3,
+              "families": [
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "conditional_bill_flow",
+                "three_tabnet_mean",
+                "conditional_bill_deviations",
+                "joint_party_tabicl"
+              ]
+            },
+            "4": {
+              "threshold": 1,
+              "families": [
+                "EXAONE_grouped",
+                "conditional_profile_mixture",
+                "constrained_track_odds",
+                "solo_selection_likelihood"
+              ]
+            },
+            "5": {
+              "threshold": 3,
+              "families": [
+                "mask_net_joint",
+                "latent_class_mixture",
+                "confidence_ordered_booking"
+              ]
+            },
+            "6": {
+              "threshold": 3,
+              "families": [
+                "Mitra2_adapted",
+                "EXAONE_grouped",
+                "latent_class_mixture",
+                "conditional_profile_mixture",
+                "joint_party_tabicl"
+              ]
+            },
+            "7": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 138,
+            "harmed": 66,
+            "net": 72,
+            "net_by_fold": [
+              27,
+              28,
+              17
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 21,
+            "harmed": 22,
+            "net": -1,
+            "net_by_fold": [
+              -2,
+              -1,
+              4,
+              -3,
+              0,
+              3,
+              4,
+              -6
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 227,
+            "harmed": 232,
+            "net": -5,
+            "net_by_fold": [
+              -5,
+              1,
+              -5,
+              7,
+              -7,
+              -8,
+              12,
+              0
+            ]
+          }
+        },
+        "worst_historical_third": {
+          "rules": {
+            "0": {
+              "threshold": 1,
+              "families": []
+            },
+            "1": {
+              "threshold": 3,
+              "families": [
+                "Mitra2_adapted",
+                "EXAONE_grouped",
+                "mask_net_joint",
+                "three_tabnet_mean",
+                "manifest_role_joint"
+              ]
+            },
+            "2": {
+              "threshold": 1,
+              "families": []
+            },
+            "3": {
+              "threshold": 5,
+              "families": [
+                "Mitra2_adapted",
+                "EXAONE_grouped",
+                "conditional_profile_mixture",
+                "conditional_bill_deviations",
+                "constrained_track_odds",
+                "joint_party_tabicl",
+                "latent_receipt_channel",
+                "manifest_role_joint",
+                "solo_selection_likelihood"
+              ]
+            },
+            "4": {
+              "threshold": 1,
+              "families": [
+                "EXAONE_grouped",
+                "latent_class_mixture",
+                "conditional_profile_mixture",
+                "constrained_track_odds",
+                "solo_selection_likelihood"
+              ]
+            },
+            "5": {
+              "threshold": 3,
+              "families": [
+                "mask_net_joint",
+                "confidence_ordered_booking",
+                "constrained_track_odds"
+              ]
+            },
+            "6": {
+              "threshold": 3,
+              "families": [
+                "Mitra2_adapted",
+                "latent_class_mixture",
+                "conditional_profile_mixture",
+                "conditional_age_density",
+                "constrained_track_odds"
+              ]
+            },
+            "7": {
+              "threshold": 1,
+              "families": []
+            }
+          },
+          "hist": {
+            "rows": 4691,
+            "errors": 862,
+            "fixed": 107,
+            "harmed": 51,
+            "net": 56,
+            "net_by_fold": [
+              20,
+              16,
+              20
+            ]
+          },
+          "new_orders": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 16,
+            "harmed": 16,
+            "net": 0,
+            "net_by_fold": [
+              -3,
+              -1,
+              3,
+              -2,
+              0,
+              4,
+              3,
+              -4
+            ]
+          },
+          "full_including_historical": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 197,
+            "harmed": 229,
+            "net": -32,
+            "net_by_fold": [
+              -7,
+              -1,
+              -2,
+              6,
+              -11,
+              -10,
+              -1,
+              -6
+            ]
+          }
+        }
+      }
+    }
+  },
+  "interpretation": "Hindsight is an exact ceiling only for these predictors, scopes, partitions and common subset/quorum per cell. Historical selection excludes all new orders. The historical baseline predates the newest TabNet correction. Current base votes are individual order-held-out predictions. Full transfer includes historical discovery passengers.",
+  "continuous": {
+    "common_global_rule": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 71,
+          "harmed": 96,
+          "net": -25,
+          "net_by_fold": [
+            -1,
+            -10,
+            2,
+            -4,
+            -2,
+            -7,
+            1,
+            -4
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 7,
+          "harmed": 12,
+          "net": -5,
+          "net_by_fold": [
+            -3,
+            -2,
+            2,
+            -1,
+            1,
+            -3,
+            1,
+            0
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 21,
+          "harmed": 50,
+          "net": -29,
+          "net_by_fold": [
+            -2,
+            -3,
+            -1,
+            -6,
+            -5,
+            -7,
+            -4,
+            -1
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 1,
+          "harmed": 5,
+          "net": -4,
+          "net_by_fold": [
+            -1,
+            0,
+            0,
+            -1,
+            0,
+            -2,
+            0,
+            0
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 27,
+          "harmed": 50,
+          "net": -23,
+          "net_by_fold": [
+            -1,
+            -4,
+            1,
+            0,
+            -3,
+            -9,
+            -3,
+            -4
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 3,
+          "harmed": 4,
+          "net": -1,
+          "net_by_fold": [
+            1,
+            -1,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            -1
+          ]
+        }
+      }
+    },
+    "common_direction": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 71,
+          "harmed": 96,
+          "net": -25,
+          "net_by_fold": [
+            -1,
+            -10,
+            2,
+            -4,
+            -2,
+            -7,
+            1,
+            -4
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 7,
+          "harmed": 12,
+          "net": -5,
+          "net_by_fold": [
+            -3,
+            -2,
+            2,
+            -1,
+            1,
+            -3,
+            1,
+            0
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 25,
+          "harmed": 46,
+          "net": -21,
+          "net_by_fold": [
+            -2,
+            -4,
+            1,
+            -7,
+            2,
+            -7,
+            -2,
+            -2
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 3,
+          "harmed": 4,
+          "net": -1,
+          "net_by_fold": [
+            0,
+            -1,
+            0,
+            -1,
+            1,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 47,
+          "harmed": 64,
+          "net": -17,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            -4,
+            -8,
+            -3,
+            -2
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 7,
+          "harmed": 8,
+          "net": -1,
+          "net_by_fold": [
+            -2,
+            1,
+            2,
+            0,
+            0,
+            -1,
+            0,
+            -1
+          ]
+        }
+      }
+    },
+    "common_direction_solo_paid": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 71,
+          "harmed": 96,
+          "net": -25,
+          "net_by_fold": [
+            -1,
+            -10,
+            2,
+            -4,
+            -2,
+            -7,
+            1,
+            -4
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 7,
+          "harmed": 12,
+          "net": -5,
+          "net_by_fold": [
+            -3,
+            -2,
+            2,
+            -1,
+            1,
+            -3,
+            1,
+            0
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 18,
+          "harmed": 27,
+          "net": -9,
+          "net_by_fold": [
+            1,
+            -3,
+            -1,
+            2,
+            0,
+            -4,
+            -3,
+            -1
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 2,
+          "harmed": 4,
+          "net": -2,
+          "net_by_fold": [
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 106,
+          "harmed": 149,
+          "net": -43,
+          "net_by_fold": [
+            0,
+            -6,
+            1,
+            -3,
+            -19,
+            -6,
+            -3,
+            -7
+          ]
+        },
+        "new_orders": {
+          "rows": 946,
+          "errors": 161,
+          "fixed": 21,
+          "harmed": 21,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            -2,
+            2,
+            1,
+            -3,
+            2,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "known_global_rule": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 246,
+          "harmed": 344,
+          "net": -98,
+          "net_by_fold": [
+            -14,
+            -15,
+            -7,
+            -6,
+            -6,
+            -9,
+            -12,
+            -29
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 25,
+          "harmed": 52,
+          "net": -27,
+          "net_by_fold": [
+            -5,
+            -3,
+            -1,
+            -3,
+            0,
+            -3,
+            -2,
+            -10
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 67,
+          "harmed": 139,
+          "net": -72,
+          "net_by_fold": [
+            -12,
+            -7,
+            -13,
+            -9,
+            -1,
+            -8,
+            -8,
+            -14
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 8,
+          "harmed": 20,
+          "net": -12,
+          "net_by_fold": [
+            0,
+            -2,
+            -2,
+            -2,
+            1,
+            0,
+            -2,
+            -5
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 98,
+          "harmed": 125,
+          "net": -27,
+          "net_by_fold": [
+            3,
+            -4,
+            -8,
+            0,
+            -1,
+            -4,
+            -10,
+            -3
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 14,
+          "harmed": 18,
+          "net": -4,
+          "net_by_fold": [
+            0,
+            -2,
+            0,
+            0,
+            -1,
+            2,
+            0,
+            -3
+          ]
+        }
+      }
+    },
+    "known_direction": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 246,
+          "harmed": 344,
+          "net": -98,
+          "net_by_fold": [
+            -14,
+            -15,
+            -7,
+            -6,
+            -6,
+            -9,
+            -12,
+            -29
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 25,
+          "harmed": 52,
+          "net": -27,
+          "net_by_fold": [
+            -5,
+            -3,
+            -1,
+            -3,
+            0,
+            -3,
+            -2,
+            -10
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 76,
+          "harmed": 145,
+          "net": -69,
+          "net_by_fold": [
+            -11,
+            -3,
+            -9,
+            -11,
+            -6,
+            -3,
+            -12,
+            -14
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 8,
+          "harmed": 19,
+          "net": -11,
+          "net_by_fold": [
+            0,
+            -2,
+            -1,
+            -2,
+            0,
+            0,
+            -1,
+            -5
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 130,
+          "harmed": 155,
+          "net": -25,
+          "net_by_fold": [
+            2,
+            -3,
+            -2,
+            8,
+            -8,
+            -6,
+            -10,
+            -6
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 17,
+          "harmed": 21,
+          "net": -4,
+          "net_by_fold": [
+            1,
+            -2,
+            0,
+            1,
+            -2,
+            4,
+            -1,
+            -5
+          ]
+        }
+      }
+    },
+    "known_direction_solo_paid": {
+      "mean_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 246,
+          "harmed": 344,
+          "net": -98,
+          "net_by_fold": [
+            -14,
+            -15,
+            -7,
+            -6,
+            -6,
+            -9,
+            -12,
+            -29
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 25,
+          "harmed": 52,
+          "net": -27,
+          "net_by_fold": [
+            -5,
+            -3,
+            -1,
+            -3,
+            0,
+            -3,
+            -2,
+            -10
+          ]
+        }
+      },
+      "calibrated_mean": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 67,
+          "harmed": 78,
+          "net": -11,
+          "net_by_fold": [
+            -7,
+            -4,
+            -1,
+            5,
+            -2,
+            2,
+            -3,
+            -1
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 7,
+          "harmed": 12,
+          "net": -5,
+          "net_by_fold": [
+            -3,
+            -2,
+            1,
+            -1,
+            -1,
+            1,
+            0,
+            0
+          ]
+        }
+      },
+      "all_odds": {
+        "all_including_historical": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 170,
+          "harmed": 218,
+          "net": -48,
+          "net_by_fold": [
+            -8,
+            -7,
+            -2,
+            -5,
+            -20,
+            -3,
+            -3,
+            0
+          ]
+        },
+        "new_orders": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 27,
+          "harmed": 36,
+          "net": -9,
+          "net_by_fold": [
+            -3,
+            -2,
+            2,
+            -1,
+            -6,
+            4,
+            0,
+            -3
+          ]
+        }
+      }
+    }
+  }
+}
