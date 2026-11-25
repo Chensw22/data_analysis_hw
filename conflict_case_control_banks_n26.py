@@ -65,9 +65,7 @@ def predict_model(train,query,truth):
     return fit.predict_proba(norm.transform(query).clip(-6,6))[:,1]
 
 
-def run():
-    raw,y,g,f = data()
-    _,cur,_ = inputs()
+def inputs_for_banks(raw,y,g,f):
     archive,_ = archives(raw,y,g,f,True)
     names = ['Mitra2_adapted','TabDPT','LimiX2','mask_net_joint','conditional_bill_flow','latent_class_mixture']
     p = np.column_stack([archive[n] for n in names])
@@ -89,11 +87,15 @@ def run():
     edges = np.split(np.r_[b,a][idx],splits)
     dist = np.split(np.r_[d,d][idx],splits)
     regions = (raw.HomePlanet.fillna('?')+'_'+raw.CryoSleep.astype('string').fillna('?')).to_numpy(str)
-    scored = np.full((len(y),3,3),np.nan)
-    support = np.zeros((len(y),3),bool)
+    return values,side,marks,edges,dist,regions
+
+
+def fit_banks(values,side,marks,edges,dist,regions,g,f,shard_seed):
+    scored = np.full((len(g),3,3),np.nan)
+    support = np.zeros((len(g),3),bool)
     for k in np.unique(f):
         rows = np.flatnonzero(f==k)
-        shards = [rows[q] for _,q in GroupKFold(4,shuffle=True,random_state=214).split(rows,groups=g[rows])]
+        shards = [rows[q] for _,q in GroupKFold(4,shuffle=True,random_state=shard_seed).split(rows,groups=g[rows])]
         for j,q in enumerate(shards):
             for repeat,cal in enumerate([h for h in range(4) if h!=j]):
                 t = shards[cal]
@@ -111,6 +113,14 @@ def run():
                     if c==1:
                         support[q,repeat] = present[len(t):]
     assert np.isfinite(scored).all()
+    return scored,support
+
+
+def run():
+    raw,y,g,f = data()
+    _,cur,_ = inputs()
+    values,side,marks,edges,dist,regions = inputs_for_banks(raw,y,g,f)
+    scored,support = fit_banks(values,side,marks,edges,dist,regions,g,f,214)
     prob = scored.mean(1)
     base,model,placebo = (prob>.5).T
     actual = (side==cur['parent'])&cur['known']
