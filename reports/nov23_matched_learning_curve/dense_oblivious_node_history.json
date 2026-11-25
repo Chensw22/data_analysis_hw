@@ -1,0 +1,47 @@
+{
+  "held": 6954,
+  "folds": {
+    "0": {
+      "train": 3674,
+      "held": 2318,
+      "removed_same_order": 962,
+      "sha256": "588ca7fce575c961918883345617e29a0c04974333af7679d94c9e48a76c69a2",
+      "weights_node_sha256": "ac80caec40952ab6949b63d94035afff6baa5322e984f88adad2d27dd1872f46",
+      "weights_hgb_sha256": "dee83a2868e98e905cbac9424ed4c202e1a4f120729d808a9a7547a29d55032c"
+    },
+    "1": {
+      "train": 3716,
+      "held": 2318,
+      "removed_same_order": 920,
+      "sha256": "ab3ac4595021d77ea65d7a228a970847dea3f18b8db737b638a2c839c8b83f52",
+      "weights_node_sha256": "15e39628287eeb1f8dfa3a59ae23a648d9fb8316f90531be99897c2791b2035d",
+      "weights_hgb_sha256": "5e5f3a915f2e7c63267367c915d325e7b9a1d9153f91d66df1b9bf1989d06e62"
+    },
+    "2": {
+      "train": 3726,
+      "held": 2318,
+      "removed_same_order": 910,
+      "sha256": "303dcacc1978ae36c5cb75b0d4905afcf00716590939de52b692b52ce05931fa",
+      "weights_node_sha256": "c38f78b1a2432f0e933ec8f9cf15490374baf383ca053007c1916cf67fe224c4",
+      "weights_hgb_sha256": "d1620a6fa6d77099d0d3690bee504c307bd17ee82fb4c37e3eb199d1a99d2076"
+    }
+  },
+  "combined_sha256": "2a9f1b71d293e62d4adced7f30725bb04f2d859995520e85eb1f328f73558497",
+  "source_panel_sha256": "1390c47a9d1e047abbfacb67ca8908ca61a23344e02d23f76cf1982b5c6f6527",
+  "accuracy": {
+    "NODE": 0.8001150417026172,
+    "ordinary_tree": 0.8037100949094047
+  },
+  "log_loss": {
+    "NODE": 0.4206549369353782,
+    "ordinary_tree": 0.3943664649546117
+  },
+  "age_observed": 6814,
+  "mean_abs_age_delta": {
+    "node_age_plus1_delta": 0.002094619078897891,
+    "ordinary_tree_age_plus1_delta": 0.008809823787199878
+  },
+  "finite_difference": "Each held passenger with observed Age is made one year older, then predicted with the same fitted network or HGB and training-only preprocessing. Each stored delta is perturbed P(True) minus observed P(True). Missing ages stay missing.",
+  "eight_fold_difference": "Unavailable: the original eight folds retained predictions, not fitted weights.",
+  "training": "Each model uses the same eight-fold recipe and upstream commit, trained on the other historical panel folds after removing every booking that occurs in the query fold."
+}
