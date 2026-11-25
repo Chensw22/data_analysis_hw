@@ -73,8 +73,12 @@ CONFIRMED_UNION = QueuedExport('proposal_n25_confirmed_awake_union', 'export_con
     AWAKE_PERSONAL.out/'queue_status.json',
     '两个单独版本已有评测，至少一版持平或超过原九票版。即将提交保留任一版本改判的组合方案，共改判 154 人。',
     '9efc0f5ba7fa7a7169a88375e00297b2ebcefca60cdb8b0a95b4261e00d4eeeb', model='composition.json')
+AWAKE_FILTER = QueuedExport('proposal_n25_awake_error_confirmation', 'export_awake_error_confirmation_n25.py',
+    AWAKE_PERSONAL.out/'queue_status.json',
+    '清醒乘客模型已取得正式成绩，即将提交错误模型筛选的 41 人版。',
+    '9efc0f5ba7fa7a7169a88375e00297b2ebcefca60cdb8b0a95b4261e00d4eeeb', model='error_context.joblib')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER)}
 
 
 def verify(revision, job=HALF):
@@ -199,6 +203,13 @@ def run(revision, job=HALF):
         if saved.get('phase') in DONE:
             return
         while True:
+            if job.name == AWAKE_FILTER.name:
+                union_status = CONFIRMED_UNION.out/'queue_status.json'
+                union = read(union_status) if union_status.exists() else {}
+                if union.get('phase') not in DONE:
+                    state('awaiting_union_decision', union_phase=union.get('phase'))
+                    time.sleep(300)
+                    continue
             previous_path = job.predecessor
             previous = read(previous_path) if previous_path.exists() else {}
             if previous.get('evaluation', {}).get('Status') == 'COMPLETE':
