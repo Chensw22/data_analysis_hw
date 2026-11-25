@@ -1,0 +1,378 @@
+{
+  "models": [
+    "Mitra2_adapted",
+    "TabDPT",
+    "LimiX2"
+  ],
+  "variant": "finetuned",
+  "views": {
+    "full": {
+      "three_architectures": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 242,
+          "harmed": 326
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 64,
+          "harmed": 97
+        }
+      },
+      "blend": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 256,
+          "harmed": 345
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 88,
+          "harmed": 128
+        }
+      },
+      "newly_flipped": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 63,
+          "harmed": 64
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 52,
+          "harmed": 53
+        }
+      },
+      "new_model_veto": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 49,
+          "harmed": 45
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 28,
+          "harmed": 22
+        }
+      },
+      "three_with_tabstar_confirmation": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 150,
+          "harmed": 240
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 24,
+          "harmed": 60
+        }
+      },
+      "three_with_confident_confirmation": {
+        "all_paired": {
+          "rows": 8532,
+          "errors": 1450,
+          "fixed": 42,
+          "harmed": 78
+        },
+        "common": {
+          "rows": 8015,
+          "errors": 1232,
+          "fixed": 1,
+          "harmed": 10
+        }
+      },
+      "increment_vs_three": {
+        "realigned_correct": 74,
+        "realigned_wrong": 81,
+        "veto_beneficial": 22,
+        "veto_costly": 28
+      }
+    },
+    "historical_to_new": {
+      "three_architectures": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 18,
+          "harmed": 46
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 2,
+          "harmed": 9
+        }
+      },
+      "blend": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 25,
+          "harmed": 55
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 9,
+          "harmed": 20
+        }
+      },
+      "newly_flipped": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 8,
+          "harmed": 12
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 7,
+          "harmed": 11
+        }
+      },
+      "new_model_veto": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 1,
+          "harmed": 3
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "three_with_tabstar_confirmation": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 11,
+          "harmed": 39
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 1,
+          "harmed": 7
+        }
+      },
+      "three_with_confident_confirmation": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 186,
+          "fixed": 5,
+          "harmed": 8
+        },
+        "common": {
+          "rows": 970,
+          "errors": 168,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "increment_vs_three": {
+        "realigned_correct": 7,
+        "realigned_wrong": 11,
+        "veto_beneficial": 0,
+        "veto_costly": 0
+      }
+    },
+    "bookingmix": {
+      "three_architectures": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 154,
+          "harmed": 241
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 26,
+          "harmed": 52
+        }
+      },
+      "blend": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 169,
+          "harmed": 256
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 57,
+          "harmed": 80
+        }
+      },
+      "newly_flipped": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 47,
+          "harmed": 46
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 43,
+          "harmed": 40
+        }
+      },
+      "new_model_veto": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 32,
+          "harmed": 31
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 12,
+          "harmed": 12
+        }
+      },
+      "three_with_tabstar_confirmation": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 93,
+          "harmed": 182
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 10,
+          "harmed": 33
+        }
+      },
+      "three_with_confident_confirmation": {
+        "all_paired": {
+          "rows": 6055,
+          "errors": 1040,
+          "fixed": 27,
+          "harmed": 61
+        },
+        "common": {
+          "rows": 5676,
+          "errors": 893,
+          "fixed": 1,
+          "harmed": 6
+        }
+      },
+      "increment_vs_three": {
+        "realigned_correct": 55,
+        "realigned_wrong": 52,
+        "veto_beneficial": 12,
+        "veto_costly": 12
+      }
+    },
+    "fresh_bookingmix": {
+      "three_architectures": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 25,
+          "harmed": 52
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 3,
+          "harmed": 10
+        }
+      },
+      "blend": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 28,
+          "harmed": 57
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 9,
+          "harmed": 18
+        }
+      },
+      "newly_flipped": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 6,
+          "harmed": 10
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 6,
+          "harmed": 9
+        }
+      },
+      "new_model_veto": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 3,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "three_with_tabstar_confirmation": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 16,
+          "harmed": 41
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 2,
+          "harmed": 7
+        }
+      },
+      "three_with_confident_confirmation": {
+        "all_paired": {
+          "rows": 1033,
+          "errors": 187,
+          "fixed": 6,
+          "harmed": 9
+        },
+        "common": {
+          "rows": 961,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "increment_vs_three": {
+        "realigned_correct": 7,
+        "realigned_wrong": 9,
+        "veto_beneficial": 1,
+        "veto_costly": 0
+      }
+    }
+  }
+}
