@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日 00:33 主账号可用 0 次、累计 90 次，最佳 81.739%，第 113 / 2,203，第三名 83.937%。214 人组合版合并 87 与 154 人版的改判，其中 27 人重合；冻结于 3fda5252c99e7b5ca2203025ff8468850e9e6763。Mac 一次性任务 com.chensw22.spaceship.joint214.once 已启动，等待 87 人版获得正式回执。手动操作前核对实时任务、queue_status.json 及线上回执。参见 reports/proposal_n26_joint_dispute_awake/manifest.json。
+
 - 11 月 26 日 00:17 主账号官方余量 0 / 10，最佳 81.739%，第 113 / 2,203，第三名 83.937%。全量重训的 68 个配置已预测全部 4,277 人。4–16 张少数票版本改判 87 人，冻结于 6a64d36000c2c821a166d995685482c423fd1d12。Mac 任务 com.chensw22.spaceship.disputeband87.once 已启动，等待 41 人版官方回执后复查额度、提醒并提交。参见 reports/proposal_n26_dispute_band/manifest.json 与 reports/nov23_matched_learning_curve/RESULTS.md；重新提交前核验实时任务及回执。
 
 - 11 月 25 日 23:19 主账号官方余量 0 / 10，最佳 81.739%，第 112 / 2,203，第三名 83.937%。第四个 Mac 任务 com.chensw22.spaceship.awakeerror41.once 已运行，等待前三个任务得出结果或有条件跳过组合，再核验主账号额度并弹窗提交。正式输出固定在 413d8b95789d7b8638db69e696d804e1f4f9521c，相对九票改判 41 人。参见 reports/proposal_n25_awake_error_confirmation/manifest.json 和 reports/nov23_matched_learning_curve/awake_error_demonstrations.json。
