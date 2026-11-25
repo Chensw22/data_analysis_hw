@@ -85,8 +85,12 @@ JOINT_DISPUTE = QueuedExport('proposal_n26_joint_dispute_awake', 'export_joint_d
     DISPUTE_BAND.out/'queue_status.json',
     '87 人版已有官方评测。即将提交合并分歧与清醒乘客改判的 214 人版。',
     'e375a1a35f90d51a2b01ca66a6f6f17ec5f97e95e05184c6bf2cd6deb4bad7c8', model='composition.json')
+CONSENSUS_REVIEW = QueuedExport('proposal_n26_consensus_review', 'export_consensus_review_n26.py',
+    JOINT_DISPUTE.out/'queue_status.json',
+    '214 人组合已有官方成绩。即将提交神经网络双重确认版。',
+    '1f7d0612ba4f1cef17723ae242dbba1787502e4bd69066e30eaca49345c59ef7', model='review_scores.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
-                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE)}
+                                  AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW)}
 
 
 def verify(revision, job=HALF):
