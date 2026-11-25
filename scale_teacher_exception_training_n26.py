@@ -19,7 +19,7 @@ CACHE=ROOT/'artifacts/nov26_booking_block_teacher/nested'
 REPORT=RESULT.parent/'scale_teacher_exception_training.json'
 
 
-def features(raw,group,opinions):
+def manifest_features(raw,group):
     frame=compact_features(raw)
     frame[FEES]=np.log1p(frame[FEES])
     # Explicit levels keep the design identical across independently generated rosters.
@@ -27,9 +27,13 @@ def features(raw,group,opinions):
                 'Deck':list('ABCDEFGT'),'Side':['P','S'],'CryoSleep':['True','False'],'VIP':['True','False']}
     encoded=[frame[n].eq(v).to_numpy() for n in CATEGORICAL for v in [*categories[n],'__MISSING__']]
     num=frame.drop(columns=CATEGORICAL)
+    return np.column_stack([num.fillna(-1),num.isna(),group,*encoded])
+
+
+def features(raw,group,opinions):
     ref=opinions.mean(1)>=.5
     signed=logit(opinions.clip(.002,.998))*np.where(ref,-1,1)[:,None]
-    return np.column_stack([ref,signed,signed.std(1),num.fillna(-1),num.isna(),group,*encoded]),ref
+    return np.column_stack([ref,signed,signed.std(1),manifest_features(raw,group)]),ref
 
 
 def run():
