@@ -1,6 +1,6 @@
 """Estimate transport odds from a missing-field network and from its class-conditional manifest likelihoods."""
+import argparse
 import hashlib
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -128,19 +128,26 @@ def predict(model,x,base_rate,joint):
     return result
 
 
-def run():
+def run(historical=False):
     torch.set_num_threads(2)
     raw,y,g,fold=data()
     OUT.mkdir(exist_ok=True)
-    for k in range(8):
-        t,q=np.flatnonzero(fold!=k),np.flatnonzero(fold==k)
+    rows=np.arange(len(y))
+    if historical:
+        with np.load(ROOT/'artifacts/nov25_historical_nine/historical.npz') as z:
+            rows,fold=z['rows'],z['fold']
+            np.testing.assert_array_equal(z['passenger'],raw.PassengerId.iloc[rows])
+    for k in map(int,np.unique(fold)):
+        q=rows[fold==k]
+        t=rows[(fold!=k)&~np.isin(g[rows],g[q])]
         assert not np.isin(g[t],g[q]).any()
         encoded,cards=encode(raw,t)
         inputs=torch.as_tensor(np.column_stack([encoded,y.astype(int)]))
         query=inputs[q].clone()
         query[:,TARGET]=0
         digest=hashlib.sha256(encoded.tobytes()).hexdigest()
-        path=OUT/f'fold{k}.npz'
+        prefix='historical' if historical else 'fold'
+        path=OUT/f'{prefix}{k}.npz'
         if not path.exists():
             estimates={}
             for joint in (False,True):
@@ -160,4 +167,6 @@ def run():
 
 
 if __name__=='__main__':
-    run()
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--historical',action='store_true')
+    run(parser.parse_args().historical)
