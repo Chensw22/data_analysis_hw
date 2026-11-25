@@ -45,13 +45,19 @@ def run(folds):
     out={'folds':records}
     for tag,r in [('old',ref),('updated',reference)]:
         a=branch_decisions(np.arange(n),f,p,names,native,*r,raw.CryoSleep.eq(False).to_numpy(),'full',891)
-        d=(a['all_three']==y).astype(int)-(a['nine']==y)
         known=r[0]>=0
-        np.testing.assert_array_equal(d[0,known],d[1,known])
         out[tag]={}
-        for key,use in [('all',np.ones(n,bool)),('new',~np.isin(g,g[rows]))]:
-            out[tag][key]=dict(resolved=int((known&use).sum()),fixed=int(((d[0]>0)&known&use).sum()),
-                harmed=int(((d[0]<0)&known&use).sum()),net_bounds=[int(op(d[:,use],axis=0).sum()) for op in (np.min,np.max)])
+        for comparator in ('nine','band','fields_awake'):
+            d=(a['all_three']==y).astype(int)-(a[comparator]==y)
+            np.testing.assert_array_equal(d[0,known],d[1,known])
+            summary={}
+            for key,use in [('all',np.ones(n,bool)),('new',~np.isin(g,g[rows]))]:
+                summary[key]=dict(resolved=int((known&use).sum()),fixed=int(((d[0]>0)&known&use).sum()),
+                    harmed=int(((d[0]<0)&known&use).sum()),net_bounds=[int(op(d[:,use],axis=0).sum()) for op in (np.min,np.max)])
+            if comparator=='nine':
+                out[tag].update(summary)
+            else:
+                out[tag]['relative_to_'+comparator]=summary
     np.savez_compressed(PATCH/('known_'+'_'.join(map(str,folds))+'.npz'),row=np.arange(n),fold=f,prior=reference[0],original_prior=ref[0])
     path=DEST.with_name('certified_patched_cabins.json') if len(folds)==8 else PATCH/'progress.json'
     path.write_text(json.dumps(out,indent=2)+'\n')
