@@ -53,6 +53,11 @@ def run(folds,exaone_folds=()):
             reference[0,q[cert]]=prior[cert]
             records[str(k)]={'exaone_vetoes':newly_vetoed,'patched':int(patch[q].sum()),'newly_determined':int((patch[q]&cert).sum()),
                              'v106_changes':int((patch[q]&((repaired>=.5)!=(native[q]>=.5))).sum())}
+    votes=(p>=.5).sum(axis=1)
+    minority=np.minimum(votes,len(names)-votes)
+    cohorts={'all':np.ones(n,bool),'new':~np.isin(g,g[rows]),
+             'unanimous_68':minority==0,'at_least_62_of_68':minority<=6}
+    assert len(names)==68
     out={'folds':records}
     for tag,r in [('old',ref),('updated',reference)]:
         a=branch_decisions(np.arange(n),f,p,names,native,*r,raw.CryoSleep.eq(False).to_numpy(),'full',891)
@@ -62,7 +67,7 @@ def run(folds,exaone_folds=()):
             d=(a['all_three']==y).astype(int)-(a[comparator]==y)
             np.testing.assert_array_equal(d[0,known],d[1,known])
             summary={}
-            for key,use in [('all',np.ones(n,bool)),('new',~np.isin(g,g[rows]))]:
+            for key,use in cohorts.items():
                 audited=known&use
                 comparator_correct=int(((a[comparator][0]==y)&audited).sum())
                 union_correct=int(((a['all_three'][0]==y)&audited).sum())
@@ -72,7 +77,7 @@ def run(folds,exaone_folds=()):
                     comparator_accuracy=comparator_correct/int(audited.sum()),union_accuracy=union_correct/int(audited.sum()),fixed=int(((d[0]>0)&known&use).sum()),
                     harmed=int(((d[0]<0)&known&use).sum()),net_bounds=[int(op(d[:,use],axis=0).sum()) for op in (np.min,np.max)])
             if comparator=='nine':
-                for key,use in [('all',np.ones(n,bool)),('new',~np.isin(g,g[rows]))]:
+                for key,use in cohorts.items():
                     left=a['nine']==y
                     right=a['all_three']==y
                     both=use&(left[0]==left[1])&(right[0]==right[1])
