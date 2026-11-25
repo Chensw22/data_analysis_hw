@@ -48,7 +48,10 @@ def run():
                 votes[source][held, column] = prior + values >= 0
     edits = {'forward': forward != anchor}
     for source, labels in votes.items():
-        opponents = (labels != anchor[:, None]).sum(axis=1)
+        disagreement = labels != anchor[:, None]
+        for column, name in enumerate(VIEWS):
+            edits[f'{source}_{name}'] = disagreement[:, column]
+        opponents = disagreement.sum(axis=1)
         edits[source + '_any'] = opponents >= 1
         edits[source + '_majority'] = opponents >= 2
         edits[source + '_all'] = opponents == len(VIEWS)
