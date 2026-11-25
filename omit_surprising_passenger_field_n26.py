@@ -73,6 +73,29 @@ def mask(frame,columns):
     return result
 
 
+def fit_split(frame,y,g,t,q,k):
+    bucket=partition(g[t],'field-reconstruction:',6)
+    ref,cal=t[bucket!=0],t[bucket==0]
+    assert not np.isin(g[ref],g[cal]).any() and not np.isin(g[t],g[q]).any()
+    s=surprise(frame,ref,np.r_[cal,q])
+    rank=rank_by_calibration(s[:len(cal)],s[len(cal):])
+    rng=np.random.default_rng(9207+k)
+    choice=rank.argmax(1)
+    # Displace the score vectors within the fold, excluding fields missing on the recipient.
+    shuffled=rank[rng.permutation(len(q))].copy()
+    shuffled[rank<0]=-2
+    alt=shuffled.argmax(1)
+    assert (rank[np.arange(len(q)),choice]>=0).all() and (rank[np.arange(len(q)),alt]>=0).all()
+    train=frame.iloc[t]
+    x=pd.concat([mask(train,np.full(len(t),-1)),mask(train,rng.integers(0,len(frame.columns),len(t)))])
+    fitted=CatBoostClassifier(iterations=380,depth=5,learning_rate=.055,l2_leaf_reg=6,random_seed=3027,
+                              thread_count=3,verbose=False,allow_writing_files=False,cat_features=[*CATEGORICAL,'hidden_field'])
+    fitted.fit(x,np.tile(y[t],2))
+    variants=[np.full(len(q),-1),choice,alt]
+    scores=np.column_stack([fitted.predict_proba(mask(frame.iloc[q],which))[:,1] for which in variants])
+    return scores,choice,alt
+
+
 def run():
     raw,y,g,fold,parent,same,count,_,_,wrong,_,_=population()
     frame=compact_features(raw)
@@ -83,26 +106,7 @@ def run():
     sham=np.zeros(len(y),int)
     for k in range(8):
         t,q=np.flatnonzero(fold!=k),np.flatnonzero(fold==k)
-        bucket=partition(g[t],'field-reconstruction:',6)
-        ref,cal=t[bucket!=0],t[bucket==0]
-        assert not np.isin(g[ref],g[cal]).any() and not np.isin(g[t],g[q]).any()
-        s=surprise(frame,ref,np.r_[cal,q])
-        rank=rank_by_calibration(s[:len(cal)],s[len(cal):])
-        rng=np.random.default_rng(9207+k)
-        choice=rank.argmax(1)
-        # Displace the score vectors within the fold, excluding fields missing on the recipient.
-        shuffled=rank[rng.permutation(len(q))].copy()
-        shuffled[rank<0]=-2
-        alt=shuffled.argmax(1)
-        assert (rank[np.arange(len(q)),choice]>=0).all() and (rank[np.arange(len(q)),alt]>=0).all()
-        train=frame.iloc[t]
-        x=pd.concat([mask(train,np.full(len(t),-1)),mask(train,rng.integers(0,len(frame.columns),len(t)))])
-        fitted=CatBoostClassifier(iterations=380,depth=5,learning_rate=.055,l2_leaf_reg=6,random_seed=3027,
-                                  thread_count=3,verbose=False,allow_writing_files=False,cat_features=[*CATEGORICAL,'hidden_field'])
-        fitted.fit(x,np.tile(y[t],2))
-        for col,which in enumerate([np.full(len(q),-1),choice,alt]):
-            scores[q,col]=fitted.predict_proba(mask(frame.iloc[q],which))[:,1]
-        selected[q],sham[q]=choice,alt
+        scores[q],selected[q],sham[q]=fit_split(frame,y,g,t,q,k)
         print(k,flush=True)
     assert np.isfinite(scores).all()
     path=CACHE/'scores.npz'
