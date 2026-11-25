@@ -1,0 +1,1215 @@
+{
+  "training": "Separate regularized logistic regression for each unanimous direction, C=0.12.",
+  "validation": "Four group partitions inside each original outer fold; separately train on all historical unanimous cases and query only previously unseen orders.",
+  "target": "68/68 agreement; mistake means their shared label differs from truth. Tail fractions measure retrieval at fixed workload, not deployment recommendations.",
+  "results": {
+    "within_outer_fold": {
+      "direction_only": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.6625066386635767,
+          "average_precision": 0.10399342930798258,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 5,
+              "harmed": 27
+            },
+            "top_five_percent": {
+              "fixed": 21,
+              "harmed": 165
+            },
+            "within_direction_top_one": {
+              "fixed": 8,
+              "harmed": 56
+            },
+            "within_direction_top_five": {
+              "fixed": 18,
+              "harmed": 173
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.5404025322503583,
+          "average_precision": 0.11191531972172453,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 5,
+              "harmed": 26
+            },
+            "top_five_percent": {
+              "fixed": 21,
+              "harmed": 160
+            },
+            "within_direction_top_one": {
+              "fixed": 6,
+              "harmed": 26
+            },
+            "within_direction_top_five": {
+              "fixed": 12,
+              "harmed": 83
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.5290843046149,
+          "average_precision": 0.030516276668143827,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 5
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 30
+            },
+            "within_direction_top_five": {
+              "fixed": 6,
+              "harmed": 90
+            }
+          }
+        }
+      },
+      "registration": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.7217029982618772,
+          "average_precision": 0.12289108310608585,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 30
+            },
+            "top_five_percent": {
+              "fixed": 24,
+              "harmed": 162
+            },
+            "within_direction_top_one": {
+              "fixed": 12,
+              "harmed": 52
+            },
+            "within_direction_top_five": {
+              "fixed": 32,
+              "harmed": 159
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.5527502388915433,
+          "average_precision": 0.1182426777910465,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 29
+            },
+            "top_five_percent": {
+              "fixed": 19,
+              "harmed": 145
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 30
+            },
+            "within_direction_top_five": {
+              "fixed": 12,
+              "harmed": 83
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.8194794455819814,
+          "average_precision": 0.19343643853273973,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 5,
+              "harmed": 17
+            },
+            "within_direction_top_one": {
+              "fixed": 10,
+              "harmed": 22
+            },
+            "within_direction_top_five": {
+              "fixed": 20,
+              "harmed": 76
+            }
+          }
+        }
+      },
+      "payment": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.6539506083429896,
+          "average_precision": 0.09658544735120386,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 31
+            },
+            "top_five_percent": {
+              "fixed": 17,
+              "harmed": 169
+            },
+            "within_direction_top_one": {
+              "fixed": 5,
+              "harmed": 59
+            },
+            "within_direction_top_five": {
+              "fixed": 8,
+              "harmed": 183
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.5519788182831661,
+          "average_precision": 0.10942127426860865,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 23
+            },
+            "top_five_percent": {
+              "fixed": 17,
+              "harmed": 144
+            },
+            "within_direction_top_one": {
+              "fixed": 5,
+              "harmed": 27
+            },
+            "within_direction_top_five": {
+              "fixed": 8,
+              "harmed": 87
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.49034296739644034,
+          "average_precision": 0.02800301997541654,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 8
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 25
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 32
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 96
+            }
+          }
+        }
+      },
+      "both": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.7188188006952491,
+          "average_precision": 0.11502889186557112,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 30
+            },
+            "top_five_percent": {
+              "fixed": 19,
+              "harmed": 167
+            },
+            "within_direction_top_one": {
+              "fixed": 7,
+              "harmed": 57
+            },
+            "within_direction_top_five": {
+              "fixed": 23,
+              "harmed": 168
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.5738440303657695,
+          "average_precision": 0.11667279684580747,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 28
+            },
+            "top_five_percent": {
+              "fixed": 19,
+              "harmed": 159
+            },
+            "within_direction_top_one": {
+              "fixed": 3,
+              "harmed": 29
+            },
+            "within_direction_top_five": {
+              "fixed": 10,
+              "harmed": 85
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.7815108678532052,
+          "average_precision": 0.11698838994923165,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 2
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 8
+            },
+            "within_direction_top_one": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "within_direction_top_five": {
+              "fixed": 13,
+              "harmed": 83
+            }
+          }
+        }
+      },
+      "confidence": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.584874710312862,
+          "average_precision": 0.08298440037291631,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 31
+            },
+            "top_five_percent": {
+              "fixed": 11,
+              "harmed": 175
+            },
+            "within_direction_top_one": {
+              "fixed": 3,
+              "harmed": 61
+            },
+            "within_direction_top_five": {
+              "fixed": 3,
+              "harmed": 188
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.47152545522110734,
+          "average_precision": 0.09713545928722761,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 26
+            },
+            "top_five_percent": {
+              "fixed": 11,
+              "harmed": 140
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 31
+            },
+            "within_direction_top_five": {
+              "fixed": 1,
+              "harmed": 94
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.5147267286186801,
+          "average_precision": 0.03080290077525725,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 5
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 35
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 30
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 94
+            }
+          }
+        }
+      },
+      "both_and_confidence": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.7136575415218233,
+          "average_precision": 0.11485831136137886,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "top_five_percent": {
+              "fixed": 20,
+              "harmed": 166
+            },
+            "within_direction_top_one": {
+              "fixed": 9,
+              "harmed": 55
+            },
+            "within_direction_top_five": {
+              "fixed": 27,
+              "harmed": 164
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.5540525295960079,
+          "average_precision": 0.11107628466361559,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 4,
+              "harmed": 25
+            },
+            "top_five_percent": {
+              "fixed": 17,
+              "harmed": 155
+            },
+            "within_direction_top_one": {
+              "fixed": 5,
+              "harmed": 27
+            },
+            "within_direction_top_five": {
+              "fixed": 10,
+              "harmed": 85
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.7833713970704048,
+          "average_precision": 0.15892654670093578,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 3
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 11
+            },
+            "within_direction_top_one": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "within_direction_top_five": {
+              "fixed": 17,
+              "harmed": 79
+            }
+          }
+        }
+      },
+      "shuffle_within_direction": {
+        "all": {
+          "passengers": 3692,
+          "errors": 240,
+          "auc": 0.6120715044418694,
+          "average_precision": 0.09407226342776909,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "top_five_percent": {
+              "fixed": 19,
+              "harmed": 167
+            },
+            "within_direction_top_one": {
+              "fixed": 4,
+              "harmed": 60
+            },
+            "within_direction_top_five": {
+              "fixed": 12,
+              "harmed": 179
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 1822,
+          "errors": 184,
+          "auc": 0.503550193767585,
+          "average_precision": 0.1065566330646536,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "top_five_percent": {
+              "fixed": 19,
+              "harmed": 163
+            },
+            "within_direction_top_one": {
+              "fixed": 4,
+              "harmed": 28
+            },
+            "within_direction_top_five": {
+              "fixed": 12,
+              "harmed": 83
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 1870,
+          "errors": 56,
+          "auc": 0.4450897779177823,
+          "average_precision": 0.025504735552154136,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 4
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 32
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 96
+            }
+          }
+        }
+      }
+    },
+    "historical_to_new_orders": {
+      "direction_only": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.6254630315602312,
+          "average_precision": 0.10389680164755585,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 4
+            },
+            "top_five_percent": {
+              "fixed": 4,
+              "harmed": 18
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 5
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 19
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.5,
+          "average_precision": 0.10820895522388059,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 4
+            },
+            "top_five_percent": {
+              "fixed": 4,
+              "harmed": 18
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 11
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.5,
+          "average_precision": 0.03067484662576687,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 8
+            }
+          }
+        }
+      },
+      "registration": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.7304785894206549,
+          "average_precision": 0.20080001742081272,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 2
+            },
+            "top_five_percent": {
+              "fixed": 6,
+              "harmed": 16
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 5,
+              "harmed": 16
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.6166498340787765,
+          "average_precision": 0.1634078870798627,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 13
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 11
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.9050632911392406,
+          "average_precision": 0.4365079365079365,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 3
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 1
+            },
+            "within_direction_top_five": {
+              "fixed": 3,
+              "harmed": 5
+            }
+          }
+        }
+      },
+      "payment": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.6603941324640689,
+          "average_precision": 0.1877840790058896,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 3,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 4,
+              "harmed": 18
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 3,
+              "harmed": 18
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.5865675948636561,
+          "average_precision": 0.20988928945217844,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 3,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 4,
+              "harmed": 18
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 1
+            },
+            "within_direction_top_five": {
+              "fixed": 3,
+              "harmed": 10
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.4525316455696202,
+          "average_precision": 0.031055900621118012,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 8
+            }
+          }
+        }
+      },
+      "both": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.76129797006964,
+          "average_precision": 0.22151526055752396,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 3
+            },
+            "top_five_percent": {
+              "fixed": 5,
+              "harmed": 17
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 5,
+              "harmed": 16
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.6729187707401529,
+          "average_precision": 0.2145827202723683,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 15
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 11
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.8962025316455697,
+          "average_precision": 0.41939393939393943,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 1
+            },
+            "top_five_percent": {
+              "fixed": 2,
+              "harmed": 2
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 1
+            },
+            "within_direction_top_five": {
+              "fixed": 3,
+              "harmed": 5
+            }
+          }
+        }
+      },
+      "confidence": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.7140317084012446,
+          "average_precision": 0.20015104833954456,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 3
+            },
+            "top_five_percent": {
+              "fixed": 6,
+              "harmed": 16
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 8,
+              "harmed": 13
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.5963064492858173,
+          "average_precision": 0.2838297245860785,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 5,
+              "harmed": 6
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 7,
+              "harmed": 6
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.8848101265822785,
+          "average_precision": 0.2223770739064857,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 3
+            },
+            "top_five_percent": {
+              "fixed": 1,
+              "harmed": 10
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 1
+            },
+            "within_direction_top_five": {
+              "fixed": 1,
+              "harmed": 7
+            }
+          }
+        }
+      },
+      "both_and_confidence": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.7809305082234406,
+          "average_precision": 0.25532476719070435,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 2,
+              "harmed": 2
+            },
+            "top_five_percent": {
+              "fixed": 4,
+              "harmed": 18
+            },
+            "within_direction_top_one": {
+              "fixed": 2,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 4,
+              "harmed": 17
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.6925407589092484,
+          "average_precision": 0.2366194031434126,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 2,
+              "harmed": 12
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 11
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.9164556962025316,
+          "average_precision": 0.4188679245283019,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "top_five_percent": {
+              "fixed": 2,
+              "harmed": 6
+            },
+            "within_direction_top_one": {
+              "fixed": 1,
+              "harmed": 1
+            },
+            "within_direction_top_five": {
+              "fixed": 2,
+              "harmed": 6
+            }
+          }
+        }
+      },
+      "shuffle_within_direction": {
+        "all": {
+          "passengers": 431,
+          "errors": 34,
+          "auc": 0.6028300488961327,
+          "average_precision": 0.10357621758802718,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 4
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 19
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 5
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 21
+            }
+          }
+        },
+        "unanimous_false": {
+          "passengers": 268,
+          "errors": 29,
+          "auc": 0.458808252777377,
+          "average_precision": 0.10596571707553898,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 4
+            },
+            "top_five_percent": {
+              "fixed": 3,
+              "harmed": 19
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 3
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 13
+            }
+          }
+        },
+        "unanimous_true": {
+          "passengers": 163,
+          "errors": 5,
+          "auc": 0.5746835443037975,
+          "average_precision": 0.05384129759129759,
+          "flips": {
+            "risk_half": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_one_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "top_five_percent": {
+              "fixed": 0,
+              "harmed": 0
+            },
+            "within_direction_top_one": {
+              "fixed": 0,
+              "harmed": 2
+            },
+            "within_direction_top_five": {
+              "fixed": 0,
+              "harmed": 8
+            }
+          }
+        }
+      }
+    }
+  }
+}
