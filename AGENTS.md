@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 25 日北京时间 22:05，主账号当日 10 次已用、可用 0 次，最佳 81.739%，第 112 / 2,198 名，第三名 83.937%。补齐八折中前三折的同行账单重训后，这三折的九票判定可核验 3,152 / 3,239 人（其中多人订单 1,364 / 1,431）。其余五折沿用独行乘客核验范围。双分组确认版相对最佳改判 30 人，已导出，未排队。见 reports/proposal_n25_confirmed_random_fields/manifest.json 与 reports/nov23_matched_learning_curve/RESULTS.md。
+
 - 11 月 25 日北京时间 21:43 再次查询，主账号当日可提交 0 次，最佳 81.739%，第 112 / 2,197 名，第三名 83.937%。八折可精确回放九票的 4,111 人全部独行；多人订单请另报可核验的基础模型比较。见 reports/nov23_matched_learning_curve/full_context_generations.json 与 new_order_error_transfer.json。
 
 - 11 月 25 日 21:15 北京时间，主账号当日 10 次全部完成，可用 0 次。最佳九票版 81.739%（58873426），第 112 / 2,199 名，第三名 83.937%。最后三份冻结二分类及其组合依次为 81.458%（58888895）、81.529%（58888964）、81.458%（58889212）。见 reports/nov23_matched_learning_curve/RESULTS.md 和各候选目录中的 followup_result.json。
