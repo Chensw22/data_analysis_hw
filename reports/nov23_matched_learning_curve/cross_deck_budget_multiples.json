@@ -1,0 +1,600 @@
+{
+  "unlabelled_density": {
+    "all": {
+      "rows": 6749,
+      "mean_log_probability": [
+        -3.604973164325448,
+        -3.6386423459363813,
+        -3.608844901069326,
+        -3.6305069537729464
+      ],
+      "integer_minus_direct": -0.0038717367438780848,
+      "integer_minus_noninteger": 0.021662052703620205,
+      "by_fold": [
+        0.030714260345224363,
+        0.02335101938262215,
+        0.012863411706676611,
+        0.017173756237628807,
+        0.024317794552783416
+      ]
+    },
+    "Earth": {
+      "rows": 3816,
+      "mean_log_probability": [
+        -3.466570543720845,
+        -3.5493202203143563,
+        -3.5205612576174192,
+        -3.531470163770178
+      ],
+      "integer_minus_direct": -0.05399071389657406,
+      "integer_minus_noninteger": 0.010908906152758746,
+      "by_fold": [
+        0.018931205793964068,
+        0.019139204796833356,
+        -0.0033990397443798568,
+        0.003974567978374223,
+        0.015477211342000467
+      ]
+    },
+    "Mars": {
+      "rows": 1314,
+      "mean_log_probability": [
+        -3.015041759990559,
+        -3.1109233050109766,
+        -3.0523588898358045,
+        -3.116176915071179
+      ],
+      "integer_minus_direct": -0.03731712984524549,
+      "integer_minus_noninteger": 0.06381802523537461,
+      "by_fold": [
+        0.06590986492049403,
+        0.05613768298166982,
+        0.06307011411700268,
+        0.06617921429055809,
+        0.06818383164959085
+      ]
+    },
+    "Europa": {
+      "rows": 1461,
+      "mean_log_probability": [
+        -4.439710835784671,
+        -4.291666053816289,
+        -4.286851900302762,
+        -4.312439799486063
+      ],
+      "integer_minus_direct": 0.152858935481909,
+      "integer_minus_noninteger": 0.025587899183300955,
+      "by_fold": [
+        0.035939011512435025,
+        0.029802850112872217,
+        0.01106887405014075,
+        0.016713708104525528,
+        0.03532403694106817
+      ]
+    }
+  },
+  "historical": {
+    "direct": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 182,
+        "harmed": 305
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 14,
+        "harmed": 37
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 182,
+        "harmed": 305
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "cross_deck": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 169,
+        "harmed": 275
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 11,
+        "harmed": 28
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 169,
+        "harmed": 275
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "cross_deck_new_vs_direct": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 9,
+        "harmed": 19
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 9,
+        "harmed": 19
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "cross_deck_increment": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 24,
+        "harmed": 44
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 4
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 24,
+        "harmed": 44
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "multiples": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 169,
+        "harmed": 261
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 10,
+        "harmed": 23
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 169,
+        "harmed": 261
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "multiples_new_vs_direct": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 10,
+        "harmed": 21
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 1,
+        "harmed": 1
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 10,
+        "harmed": 21
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "multiples_increment": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 29,
+        "harmed": 65
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 6
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 29,
+        "harmed": 65
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "noninteger": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 169,
+        "harmed": 279
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 12,
+        "harmed": 30
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 169,
+        "harmed": 279
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "noninteger_new_vs_direct": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 8,
+        "harmed": 23
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 0,
+        "harmed": 2
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 8,
+        "harmed": 23
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "noninteger_increment": {
+      "all": {
+        "rows": 6954,
+        "errors": 1263,
+        "fixed": 28,
+        "harmed": 53
+      },
+      "unanimous": {
+        "rows": 2901,
+        "errors": 208,
+        "fixed": 1,
+        "harmed": 6
+      },
+      "eligible": {
+        "rows": 3612,
+        "errors": 622,
+        "fixed": 28,
+        "harmed": 53
+      },
+      "new": {
+        "rows": 0,
+        "errors": 0,
+        "fixed": 0,
+        "harmed": 0
+      }
+    }
+  },
+  "full": {
+    "direct": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 240,
+        "harmed": 331
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 15,
+        "harmed": 25
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 240,
+        "harmed": 331
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 38,
+        "harmed": 46
+      }
+    },
+    "cross_deck": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 218,
+        "harmed": 317
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 9,
+        "harmed": 16
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 218,
+        "harmed": 317
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 34,
+        "harmed": 40
+      }
+    },
+    "cross_deck_new_vs_direct": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 8,
+        "harmed": 28
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 8,
+        "harmed": 28
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 3,
+        "harmed": 3
+      }
+    },
+    "cross_deck_increment": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 25,
+        "harmed": 69
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 3
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 25,
+        "harmed": 69
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 4,
+        "harmed": 8
+      }
+    },
+    "multiples": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 214,
+        "harmed": 303
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 7,
+        "harmed": 16
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 214,
+        "harmed": 303
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 33,
+        "harmed": 39
+      }
+    },
+    "multiples_new_vs_direct": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 7,
+        "harmed": 40
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 0
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 7,
+        "harmed": 40
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 2,
+        "harmed": 6
+      }
+    },
+    "multiples_increment": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 27,
+        "harmed": 85
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 1,
+        "harmed": 2
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 27,
+        "harmed": 85
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 3,
+        "harmed": 14
+      }
+    },
+    "noninteger": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 223,
+        "harmed": 306
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 9,
+        "harmed": 17
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 223,
+        "harmed": 306
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 35,
+        "harmed": 38
+      }
+    },
+    "noninteger_new_vs_direct": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 14,
+        "harmed": 26
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 1
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 14,
+        "harmed": 26
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 3,
+        "harmed": 0
+      }
+    },
+    "noninteger_increment": {
+      "all": {
+        "rows": 8532,
+        "errors": 1497,
+        "fixed": 16,
+        "harmed": 70
+      },
+      "unanimous": {
+        "rows": 3702,
+        "errors": 245,
+        "fixed": 0,
+        "harmed": 6
+      },
+      "eligible": {
+        "rows": 4525,
+        "errors": 765,
+        "fixed": 16,
+        "harmed": 70
+      },
+      "new": {
+        "rows": 1033,
+        "errors": 207,
+        "fixed": 5,
+        "harmed": 8
+      }
+    }
+  }
+}
