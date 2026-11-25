@@ -1,6 +1,6 @@
 """Learn whether a passenger shares the outcome of a different, known booking."""
+import argparse
 import json
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -108,7 +108,7 @@ def counts(ref, pred, y, mask):
                 fixed=int((mask & ~good & (pred == y)).sum()), harmed=int((mask & good & (pred != y)).sum()))
 
 
-def evaluate():
+def evaluate(reference_folds):
     raw, y, group, fold = data()
     prob = fit(raw, y, group, fold)
     with np.load(ROOT/'artifacts/nov25_historical_nine/historical.npz') as z:
@@ -123,14 +123,10 @@ def evaluate():
         native = z['v96']
         best = z['certified_nine'].copy().astype(int)
         best[~z['certified_v131_equals_v96']] = -1
-    available = []
-    for f in np.unique(fold):
-        release = RELEASE/f'release{f}.npz'
-        if release.exists():
-            with np.load(release) as z:
-                np.testing.assert_array_equal(z['q'], np.flatnonzero(fold == f))
-                best[z['q']] = z['nine']
-            available.append(int(f))
+    for f in reference_folds:
+        with np.load(RELEASE/f'release{f}.npz') as z:
+            np.testing.assert_array_equal(z['q'], np.flatnonzero(fold == f))
+            best[z['q']] = z['nine']
     known = best >= 0
     all_rows = np.ones(len(y), dtype=bool)
     result = {}
@@ -144,10 +140,14 @@ def evaluate():
                             known_nine_direct=counts(best,pred,y,known), known_nine_quarter=counts(best,challenger,y,known),
                             nine_quarter_folds=[counts(best,challenger,y,known & (fold == f)) for f in np.unique(fold)])
         print(name,result[name]['unanimous'],result[name]['known_nine_quarter'],flush=True)
-    result['reference'] = dict(reconstructed_folds=available, full_consensus_count=68, known_nine=int(known.sum()))
-    DEST.write_text(json.dumps(result, indent=2)+'\n')
+    result['reference'] = dict(reconstructed_folds=list(reference_folds), full_consensus_count=68, known_nine=int(known.sum()))
+    path = DEST if tuple(reference_folds) == (0,1,2) else DEST.with_stem(DEST.stem + '_all_folds')
+    path.write_text(json.dumps(result, indent=2)+'\n')
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--all-reference-folds', action='store_true')
+    folds = range(8) if parser.parse_args().all_reference_folds else range(3)
     with threadpool_limits(2):
-        evaluate()
+        evaluate(folds)

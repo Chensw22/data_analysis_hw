@@ -128,6 +128,8 @@ def run(folds=OUTER):
                               v131_to_nine_edits=int((cert & (nine != v131)).sum()))
         print(k, output[str(k)], flush=True)
     target = REPORT if tuple(folds) == OUTER else OUT / ('release_summary_' + '_'.join(map(str, folds)) + '.json')
+    if tuple(folds) == tuple(range(8)):
+        target = REPORT.with_name('grouped_peer_release_all_folds.json')
     target.write_text(json.dumps(dict(official_test_replay=dict(unchanged_v106=int(unchanged.sum()), v108_rows=len(test),
                                                                    max_abs_error=float(abs(replay-test_108).max())),
                                       folds=output, totals={key:sum(part[key] for part in output.values())
@@ -136,7 +138,10 @@ def run(folds=OUTER):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--fold', type=int, choices=range(8))
+    options = parser.add_mutually_exclusive_group()
+    options.add_argument('--fold', type=int, choices=range(8))
+    options.add_argument('--all-folds', action='store_true')
     args = parser.parse_args()
+    folds = range(8) if args.all_folds else OUTER
     with threadpool_limits(1):
-        run(OUTER if args.fold is None else (args.fold,))
+        run(folds if args.fold is None else (args.fold,))
