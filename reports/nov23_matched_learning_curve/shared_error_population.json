@@ -1,0 +1,816 @@
+{
+  "sleep_bill_direction": [
+    {
+      "group": [
+        "awake",
+        "positive_spending",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 3527,
+      "shared_errors": 441,
+      "shared_error_rate": 0.12503544088460447,
+      "no_witness_rows": 1473,
+      "no_witness_errors": 130,
+      "per_fold_errors": [
+        58,
+        47,
+        57,
+        66,
+        59,
+        53,
+        61,
+        40
+      ]
+    },
+    {
+      "group": [
+        "asleep",
+        "no_positive_spending",
+        "predicted_transported"
+      ],
+      "shared_predictions": 2725,
+      "shared_errors": 390,
+      "shared_error_rate": 0.14311926605504588,
+      "no_witness_rows": 1613,
+      "no_witness_errors": 46,
+      "per_fold_errors": [
+        44,
+        58,
+        47,
+        51,
+        49,
+        49,
+        54,
+        38
+      ]
+    },
+    {
+      "group": [
+        "awake",
+        "positive_spending",
+        "predicted_transported"
+      ],
+      "shared_predictions": 1000,
+      "shared_errors": 209,
+      "shared_error_rate": 0.209,
+      "no_witness_rows": 4,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        28,
+        18,
+        30,
+        24,
+        28,
+        27,
+        23,
+        31
+      ]
+    },
+    {
+      "group": [
+        "awake",
+        "no_positive_spending",
+        "predicted_transported"
+      ],
+      "shared_predictions": 288,
+      "shared_errors": 59,
+      "shared_error_rate": 0.2048611111111111,
+      "no_witness_rows": 120,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        2,
+        5,
+        9,
+        12,
+        6,
+        9,
+        11,
+        5
+      ]
+    },
+    {
+      "group": [
+        "asleep",
+        "no_positive_spending",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 125,
+      "shared_errors": 55,
+      "shared_error_rate": 0.44,
+      "no_witness_rows": 0,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        3,
+        5,
+        9,
+        6,
+        3,
+        15,
+        9,
+        5
+      ]
+    },
+    {
+      "group": [
+        "awake",
+        "no_positive_spending",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 141,
+      "shared_errors": 50,
+      "shared_error_rate": 0.3546099290780142,
+      "no_witness_rows": 0,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        8,
+        9,
+        3,
+        3,
+        6,
+        9,
+        8,
+        4
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "no_positive_spending",
+        "predicted_transported"
+      ],
+      "shared_predictions": 71,
+      "shared_errors": 9,
+      "shared_error_rate": 0.1267605633802817,
+      "no_witness_rows": 23,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        0,
+        4,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "no_positive_spending",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 24,
+      "shared_errors": 8,
+      "shared_error_rate": 0.3333333333333333,
+      "no_witness_rows": 0,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        1,
+        1,
+        2,
+        1,
+        0,
+        2,
+        1,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "positive_spending",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 85,
+      "shared_errors": 7,
+      "shared_error_rate": 0.08235294117647059,
+      "no_witness_rows": 18,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "positive_spending",
+        "predicted_transported"
+      ],
+      "shared_predictions": 29,
+      "shared_errors": 4,
+      "shared_error_rate": 0.13793103448275862,
+      "no_witness_rows": 0,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "order_size_direction": [
+    {
+      "group": [
+        "alone",
+        "predicted_transported"
+      ],
+      "shared_predictions": 2011,
+      "shared_errors": 393,
+      "shared_error_rate": 0.19542516161113874,
+      "no_witness_rows": 704,
+      "no_witness_errors": 27,
+      "per_fold_errors": [
+        51,
+        50,
+        57,
+        55,
+        47,
+        51,
+        42,
+        40
+      ]
+    },
+    {
+      "group": [
+        "alone",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 2415,
+      "shared_errors": 349,
+      "shared_error_rate": 0.14451345755693581,
+      "no_witness_rows": 1073,
+      "no_witness_errors": 106,
+      "per_fold_errors": [
+        42,
+        39,
+        49,
+        48,
+        48,
+        46,
+        43,
+        34
+      ]
+    },
+    {
+      "group": [
+        "with_others",
+        "predicted_transported"
+      ],
+      "shared_predictions": 2102,
+      "shared_errors": 278,
+      "shared_error_rate": 0.13225499524262607,
+      "no_witness_rows": 1056,
+      "no_witness_errors": 21,
+      "per_fold_errors": [
+        23,
+        36,
+        30,
+        33,
+        37,
+        37,
+        47,
+        35
+      ]
+    },
+    {
+      "group": [
+        "with_others",
+        "predicted_not_transported"
+      ],
+      "shared_predictions": 1487,
+      "shared_errors": 212,
+      "shared_error_rate": 0.1425689307330195,
+      "no_witness_rows": 418,
+      "no_witness_errors": 24,
+      "per_fold_errors": [
+        28,
+        24,
+        24,
+        29,
+        22,
+        33,
+        36,
+        16
+      ]
+    }
+  ],
+  "origin_deck": [
+    {
+      "group": [
+        "Earth",
+        "G"
+      ],
+      "shared_predictions": 2194,
+      "shared_errors": 564,
+      "shared_error_rate": 0.25706472196900637,
+      "no_witness_rows": 578,
+      "no_witness_errors": 50,
+      "per_fold_errors": [
+        67,
+        74,
+        68,
+        65,
+        75,
+        79,
+        82,
+        54
+      ]
+    },
+    {
+      "group": [
+        "Earth",
+        "F"
+      ],
+      "shared_predictions": 1475,
+      "shared_errors": 257,
+      "shared_error_rate": 0.17423728813559322,
+      "no_witness_rows": 689,
+      "no_witness_errors": 69,
+      "per_fold_errors": [
+        27,
+        28,
+        33,
+        43,
+        36,
+        33,
+        28,
+        29
+      ]
+    },
+    {
+      "group": [
+        "Mars",
+        "F"
+      ],
+      "shared_predictions": 1084,
+      "shared_errors": 71,
+      "shared_error_rate": 0.06549815498154982,
+      "no_witness_rows": 585,
+      "no_witness_errors": 8,
+      "per_fold_errors": [
+        10,
+        7,
+        13,
+        7,
+        7,
+        10,
+        13,
+        4
+      ]
+    },
+    {
+      "group": [
+        "Mars",
+        "E"
+      ],
+      "shared_predictions": 314,
+      "shared_errors": 64,
+      "shared_error_rate": 0.20382165605095542,
+      "no_witness_rows": 115,
+      "no_witness_errors": 7,
+      "per_fold_errors": [
+        6,
+        15,
+        10,
+        10,
+        6,
+        5,
+        8,
+        4
+      ]
+    },
+    {
+      "group": [
+        "Earth",
+        "E"
+      ],
+      "shared_predictions": 318,
+      "shared_errors": 50,
+      "shared_error_rate": 0.15723270440251572,
+      "no_witness_rows": 118,
+      "no_witness_errors": 7,
+      "per_fold_errors": [
+        5,
+        6,
+        12,
+        6,
+        8,
+        4,
+        5,
+        4
+      ]
+    },
+    {
+      "group": [
+        "Mars",
+        "D"
+      ],
+      "shared_predictions": 263,
+      "shared_errors": 39,
+      "shared_error_rate": 0.1482889733840304,
+      "no_witness_rows": 131,
+      "no_witness_errors": 11,
+      "per_fold_errors": [
+        2,
+        2,
+        6,
+        7,
+        5,
+        8,
+        6,
+        3
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "C"
+      ],
+      "shared_predictions": 711,
+      "shared_errors": 34,
+      "shared_error_rate": 0.04781997187060478,
+      "no_witness_rows": 307,
+      "no_witness_errors": 2,
+      "per_fold_errors": [
+        5,
+        4,
+        3,
+        6,
+        3,
+        5,
+        6,
+        2
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "A"
+      ],
+      "shared_predictions": 238,
+      "shared_errors": 33,
+      "shared_error_rate": 0.13865546218487396,
+      "no_witness_rows": 78,
+      "no_witness_errors": 8,
+      "per_fold_errors": [
+        6,
+        1,
+        3,
+        3,
+        3,
+        8,
+        4,
+        5
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "B"
+      ],
+      "shared_predictions": 740,
+      "shared_errors": 30,
+      "shared_error_rate": 0.04054054054054054,
+      "no_witness_rows": 436,
+      "no_witness_errors": 3,
+      "per_fold_errors": [
+        3,
+        3,
+        1,
+        2,
+        4,
+        5,
+        4,
+        8
+      ]
+    },
+    {
+      "group": [
+        "Earth",
+        "unknown"
+      ],
+      "shared_predictions": 88,
+      "shared_errors": 25,
+      "shared_error_rate": 0.2840909090909091,
+      "no_witness_rows": 18,
+      "no_witness_errors": 4,
+      "per_fold_errors": [
+        3,
+        3,
+        5,
+        3,
+        3,
+        2,
+        2,
+        4
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "D"
+      ],
+      "shared_predictions": 178,
+      "shared_errors": 18,
+      "shared_error_rate": 0.10112359550561797,
+      "no_witness_rows": 63,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        3,
+        2,
+        2,
+        3,
+        0,
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "F"
+      ],
+      "shared_predictions": 67,
+      "shared_errors": 16,
+      "shared_error_rate": 0.23880597014925373,
+      "no_witness_rows": 12,
+      "no_witness_errors": 3,
+      "per_fold_errors": [
+        4,
+        2,
+        1,
+        3,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "G"
+      ],
+      "shared_predictions": 52,
+      "shared_errors": 13,
+      "shared_error_rate": 0.25,
+      "no_witness_rows": 10,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        1,
+        1,
+        0,
+        3,
+        2,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "E"
+      ],
+      "shared_predictions": 125,
+      "shared_errors": 7,
+      "shared_error_rate": 0.056,
+      "no_witness_rows": 44,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "unknown"
+      ],
+      "shared_predictions": 60,
+      "shared_errors": 4,
+      "shared_error_rate": 0.06666666666666667,
+      "no_witness_rows": 30,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "group": [
+        "Mars",
+        "unknown"
+      ],
+      "shared_predictions": 36,
+      "shared_errors": 2,
+      "shared_error_rate": 0.05555555555555555,
+      "no_witness_rows": 10,
+      "no_witness_errors": 2,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "unknown"
+      ],
+      "shared_predictions": 5,
+      "shared_errors": 2,
+      "shared_error_rate": 0.4,
+      "no_witness_rows": 2,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "B"
+      ],
+      "shared_predictions": 13,
+      "shared_errors": 1,
+      "shared_error_rate": 0.07692307692307693,
+      "no_witness_rows": 9,
+      "no_witness_errors": 1,
+      "per_fold_errors": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "C"
+      ],
+      "shared_predictions": 13,
+      "shared_errors": 1,
+      "shared_error_rate": 0.07692307692307693,
+      "no_witness_rows": 6,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "E"
+      ],
+      "shared_predictions": 23,
+      "shared_errors": 1,
+      "shared_error_rate": 0.043478260869565216,
+      "no_witness_rows": 6,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "Europa",
+        "T"
+      ],
+      "shared_predictions": 4,
+      "shared_errors": 0,
+      "shared_error_rate": 0.0,
+      "no_witness_rows": 1,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "A"
+      ],
+      "shared_predictions": 4,
+      "shared_errors": 0,
+      "shared_error_rate": 0.0,
+      "no_witness_rows": 1,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "D"
+      ],
+      "shared_predictions": 9,
+      "shared_errors": 0,
+      "shared_error_rate": 0.0,
+      "no_witness_rows": 2,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "group": [
+        "unknown",
+        "T"
+      ],
+      "shared_predictions": 1,
+      "shared_errors": 0,
+      "shared_error_rate": 0.0,
+      "no_witness_rows": 0,
+      "no_witness_errors": 0,
+      "per_fold_errors": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}
