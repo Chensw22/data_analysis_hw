@@ -1,0 +1,1016 @@
+{
+  "discovery": {
+    "rows": 2109,
+    "errors": 483
+  },
+  "historical_rows": 6954,
+  "target_groups": {
+    "all_new_target": {
+      "rows": 516,
+      "errors": 122
+    },
+    "also_historical_to_new": {
+      "rows": 510,
+      "errors": 118
+    }
+  },
+  "columns": 123,
+  "matched": [
+    "original_99/response_channels",
+    "original_99/broad_error_transport_projection",
+    "original_99/bill_regime_tree",
+    "original_99/class_neighborhood_mass",
+    "original_99/companion_transition",
+    "original_99/error_partition_kernel",
+    "original_99/labelled_reference_pairs",
+    "original_99/permutation_selection",
+    "original_99/recursive_metric",
+    "original_99/service_order_mixture",
+    "original_99/maxout",
+    "original_99/zero_truncated",
+    "original_99/predicate_tables",
+    "original_99/two_view_reliability",
+    "original_99/honest_failure_partitions",
+    "original_99/failure_sampling_offset",
+    "original_99/spending_shape",
+    "original_99/fixed_bill_margins",
+    "original_99/bill_regime_tree/pooled",
+    "original_99/bill_regime_tree/constant",
+    "original_99/bill_regime_tree/registration",
+    "original_99/class_neighborhood_mass/personal",
+    "original_99/class_neighborhood_mass/density",
+    "original_99/class_neighborhood_mass/shuffled",
+    "original_99/companion_transition/personal",
+    "original_99/companion_transition/real",
+    "original_99/companion_transition/removed",
+    "original_99/companion_transition/swapped",
+    "original_99/error_partition_kernel/rand",
+    "original_99/error_partition_kernel/all_grad",
+    "original_99/error_partition_kernel/matched_random",
+    "original_99/labelled_reference_pairs/point",
+    "original_99/labelled_reference_pairs/joint",
+    "original_99/labelled_reference_pairs/near_sep",
+    "original_99/labelled_reference_pairs/global_rel",
+    "original_99/permutation_selection/all",
+    "original_99/permutation_selection/selected",
+    "original_99/permutation_selection/random",
+    "original_99/permutation_selection/protected_select",
+    "original_99/permutation_selection/protected_random",
+    "original_99/recursive_metric/isotropic",
+    "original_99/recursive_metric/diag1",
+    "original_99/recursive_metric/diag2",
+    "original_99/recursive_metric/full2",
+    "original_99/service_order_mixture/empty",
+    "original_99/maxout/linear",
+    "original_99/maxout/relu",
+    "original_99/maxout/maxout",
+    "original_99/zero_truncated/independent",
+    "original_99/zero_truncated/truncated",
+    "original_99/zero_truncated/reported_sleep",
+    "original_99/predicate_tables/main",
+    "original_99/predicate_tables/fixed",
+    "original_99/predicate_tables/learned",
+    "original_99/two_view_reliability/registration",
+    "original_99/two_view_reliability/spending",
+    "original_99/two_view_reliability/mean",
+    "original_99/two_view_reliability/pooled",
+    "original_99/two_view_reliability/specialist",
+    "original_99/two_view_reliability/margins",
+    "original_99/honest_failure_partitions/natural",
+    "original_99/honest_failure_partitions/natural_honest",
+    "original_99/honest_failure_partitions/enriched",
+    "original_99/honest_failure_partitions/enriched_honest",
+    "original_99/honest_failure_partitions/placebo",
+    "original_99/honest_failure_partitions/placebo_honest",
+    "original_99/failure_sampling_offset/natural",
+    "original_99/failure_sampling_offset/enriched",
+    "original_99/failure_sampling_offset/remove_offset",
+    "original_99/failure_sampling_offset/in_fit_offset",
+    "original_99/failure_sampling_offset/placebo",
+    "original_99/spending_shape/free",
+    "original_99/spending_shape/pooled_direction",
+    "original_99/spending_shape/basket_direction",
+    "original_99/spending_shape/reversed",
+    "original_99/fixed_bill_margins/personal",
+    "original_99/fixed_bill_margins/margins",
+    "original_99/fixed_bill_margins/measured",
+    "original_99/fixed_bill_margins/reconstructed",
+    "original_99/fixed_bill_margins/same_fit",
+    "original_99/expected_bill",
+    "original_99/bill_template",
+    "original_99/rounding",
+    "original_99/charge_tree",
+    "original_99/charge_tabicl",
+    "original_99/cabin_tree",
+    "original_99/cabin_tabicl",
+    "original_99/peer_tree",
+    "original_99/peer_tabicl",
+    "original_99/neural_deck_raw",
+    "original_99/tree_deck_raw",
+    "original_99/neural_deck_fine",
+    "original_99/tree_deck_fine",
+    "original_99/neural_route_exact",
+    "original_99/tree_route_exact",
+    "original_99/swap",
+    "original_99/register_all",
+    "original_99/register_paid",
+    "original_99/sequence_paid",
+    "other_archives/Mitra2_adapted",
+    "other_archives/Mitra1_frozen",
+    "other_archives/Mitra2_frozen",
+    "other_archives/mask_net_discriminative",
+    "other_archives/mask_net_joint",
+    "other_archives/mask_net_class_likelihood",
+    "other_archives/conditional_bill_flow",
+    "other_archives/latent_class_mixture",
+    "other_archives/conditional_profile_mixture",
+    "other_archives/EXAONE_grouped",
+    "supplementary/booking_transport_classifier",
+    "supplementary/conditional_age_density",
+    "supplementary/conditional_bill_deviations",
+    "supplementary/confidence_ordered_booking",
+    "supplementary/constrained_track_odds",
+    "supplementary/joint_manifest_forest",
+    "supplementary/joint_party_tabicl",
+    "supplementary/latent_receipt_channel",
+    "supplementary/manifest_role_joint",
+    "supplementary/neighbor_booking_composition",
+    "supplementary/solo_selection_likelihood",
+    "tabnet_recipes/scratch_seed_431",
+    "tabnet_recipes/scratch_seed_731",
+    "tabnet_recipes/masked_pretraining"
+  ],
+  "unavailable": [
+    "TabDPT_global_compact",
+    "LimiX2_fixed512",
+    "TabSTAR_finetuned",
+    "conditional_bill_density"
+  ],
+  "protocol": "Historical source uses only historical labels and solo bookings with ten agreeing replayed releases and an available countervote. Training excludes entire query orders. Historical-only predictions for the two newest repair gates were unavailable, so they apply only in target evaluation. Full target predictions have per-order eightfold exclusion; the entire new cohort was not removed in a single base fit. Nominated two-expert combination was previously selected on all current cases and is retrospective.",
+  "nominated": {
+    "selected_tree": {
+      "discovery_fixed": 55,
+      "discovery_harmed": 85,
+      "evaluations": {
+        "all_new_target": {
+          "fixed": 7,
+          "harmed": 10,
+          "net": -3,
+          "net_by_fold": [
+            -1,
+            -3,
+            0,
+            1,
+            1,
+            0,
+            -2,
+            1
+          ]
+        },
+        "also_historical_to_new": {
+          "fixed": 7,
+          "harmed": 10,
+          "net": -3,
+          "net_by_fold": [
+            -1,
+            -3,
+            0,
+            1,
+            1,
+            0,
+            -2,
+            1
+          ]
+        }
+      }
+    },
+    "empty_service": {
+      "discovery_fixed": 90,
+      "discovery_harmed": 182,
+      "evaluations": {
+        "all_new_target": {
+          "fixed": 24,
+          "harmed": 37,
+          "net": -13,
+          "net_by_fold": [
+            2,
+            -2,
+            -4,
+            -4,
+            -2,
+            0,
+            -4,
+            1
+          ]
+        },
+        "also_historical_to_new": {
+          "fixed": 23,
+          "harmed": 37,
+          "net": -14,
+          "net_by_fold": [
+            2,
+            -2,
+            -4,
+            -4,
+            -2,
+            0,
+            -5,
+            1
+          ]
+        }
+      }
+    },
+    "both": {
+      "discovery_fixed": 28,
+      "discovery_harmed": 25,
+      "evaluations": {
+        "all_new_target": {
+          "fixed": 3,
+          "harmed": 2,
+          "net": 1,
+          "net_by_fold": [
+            1,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ]
+        },
+        "also_historical_to_new": {
+          "fixed": 3,
+          "harmed": 2,
+          "net": 1,
+          "net_by_fold": [
+            1,
+            1,
+            -1,
+            0,
+            0,
+            0,
+            -1,
+            1
+          ]
+        }
+      }
+    }
+  },
+  "all_matched": {
+    "single": {
+      "all": {
+        "choices": {
+          "all": "other_archives/Mitra2_adapted"
+        },
+        "discovery_fixed": 11,
+        "discovery_harmed": 10,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "direction": {
+        "choices": {
+          "negative": "original_99/neural_deck_raw",
+          "positive": "keep"
+        },
+        "discovery_fixed": 25,
+        "discovery_harmed": 19,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          }
+        }
+      },
+      "direction_origin": {
+        "choices": {
+          "negative/Earth": "original_99/neural_deck_raw",
+          "negative/Europa": "original_99/class_neighborhood_mass",
+          "negative/Mars": "keep",
+          "negative/missing": "original_99/error_partition_kernel/all_grad",
+          "positive/Earth": "other_archives/EXAONE_grouped",
+          "positive/Europa": "original_99/broad_error_transport_projection",
+          "positive/Mars": "keep",
+          "positive/missing": "original_99/maxout"
+        },
+        "discovery_fixed": 71,
+        "discovery_harmed": 49,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 4,
+            "harmed": 11,
+            "net": -7,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              -2,
+              -2,
+              -1,
+              -1,
+              -2
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 4,
+            "harmed": 11,
+            "net": -7,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              -2,
+              -2,
+              -1,
+              -1,
+              -2
+            ]
+          }
+        }
+      },
+      "direction_origin_cryo": {
+        "choices": {
+          "negative/Earth/False": "other_archives/EXAONE_grouped",
+          "negative/Earth/True": "supplementary/neighbor_booking_composition",
+          "negative/Earth/missing": "original_99/spending_shape/reversed",
+          "negative/Europa/False": "original_99/class_neighborhood_mass",
+          "negative/Europa/missing": "keep",
+          "negative/Mars/False": "original_99/register_all",
+          "negative/Mars/True": "keep",
+          "negative/Mars/missing": "original_99/response_channels",
+          "negative/missing/False": "original_99/error_partition_kernel/all_grad",
+          "negative/missing/True": "keep",
+          "negative/missing/missing": "keep",
+          "positive/Earth/False": "original_99/fixed_bill_margins/personal",
+          "positive/Earth/True": "other_archives/EXAONE_grouped",
+          "positive/Earth/missing": "original_99/predicate_tables",
+          "positive/Europa/False": "original_99/broad_error_transport_projection",
+          "positive/Europa/True": "keep",
+          "positive/Europa/missing": "keep",
+          "positive/Mars/False": "original_99/spending_shape/free",
+          "positive/Mars/True": "tabnet_recipes/scratch_seed_731",
+          "positive/Mars/missing": "keep",
+          "positive/missing/False": "original_99/error_partition_kernel/rand",
+          "positive/missing/True": "keep",
+          "positive/missing/missing": "keep"
+        },
+        "discovery_fixed": 96,
+        "discovery_harmed": 52,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 8,
+            "harmed": 9,
+            "net": -1,
+            "net_by_fold": [
+              0,
+              1,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 8,
+            "harmed": 9,
+            "net": -1,
+            "net_by_fold": [
+              0,
+              1,
+              0,
+              -1,
+              -1,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    },
+    "pair": {
+      "all": {
+        "choices": {
+          "all": "other_archives/Mitra2_frozen & supplementary/neighbor_booking_composition"
+        },
+        "discovery_fixed": 20,
+        "discovery_harmed": 9,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "direction": {
+        "choices": {
+          "negative": "original_99/class_neighborhood_mass/density & original_99/neural_deck_raw",
+          "positive": "other_archives/latent_class_mixture & other_archives/EXAONE_grouped"
+        },
+        "discovery_fixed": 31,
+        "discovery_harmed": 12,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 4,
+            "harmed": 3,
+            "net": 1,
+            "net_by_fold": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              2,
+              -1,
+              -2
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 4,
+            "harmed": 3,
+            "net": 1,
+            "net_by_fold": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              2,
+              -1,
+              -2
+            ]
+          }
+        }
+      },
+      "direction_origin": {
+        "choices": {
+          "negative/Earth": "supplementary/manifest_role_joint & supplementary/neighbor_booking_composition",
+          "negative/Europa": "original_99/class_neighborhood_mass & original_99/spending_shape/reversed",
+          "negative/Mars": "original_99/recursive_metric & original_99/charge_tabicl",
+          "negative/missing": "original_99/error_partition_kernel/all_grad & original_99/error_partition_kernel/matched_random",
+          "positive/Earth": "original_99/labelled_reference_pairs/point & other_archives/EXAONE_grouped",
+          "positive/Europa": "original_99/labelled_reference_pairs & original_99/zero_truncated/independent",
+          "positive/Mars": "original_99/spending_shape/free & original_99/rounding",
+          "positive/missing": "original_99/labelled_reference_pairs & original_99/spending_shape/reversed"
+        },
+        "discovery_fixed": 54,
+        "discovery_harmed": 13,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 4,
+            "harmed": 2,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 4,
+            "harmed": 2,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0
+            ]
+          }
+        }
+      },
+      "direction_origin_cryo": {
+        "choices": {
+          "negative/Earth/False": "original_99/predicate_tables & original_99/peer_tabicl",
+          "negative/Earth/True": "supplementary/manifest_role_joint & supplementary/neighbor_booking_composition",
+          "negative/Earth/missing": "original_99/honest_failure_partitions/placebo_honest & original_99/charge_tabicl",
+          "negative/Europa/False": "original_99/class_neighborhood_mass & original_99/spending_shape/reversed",
+          "negative/Europa/missing": "keep",
+          "negative/Mars/False": "original_99/error_partition_kernel & tabnet_recipes/masked_pretraining",
+          "negative/Mars/True": "keep",
+          "negative/Mars/missing": "original_99/response_channels & original_99/broad_error_transport_projection",
+          "negative/missing/False": "original_99/error_partition_kernel/all_grad & original_99/error_partition_kernel/matched_random",
+          "negative/missing/True": "keep",
+          "negative/missing/missing": "keep",
+          "positive/Earth/False": "original_99/spending_shape/pooled_direction & tabnet_recipes/masked_pretraining",
+          "positive/Earth/True": "original_99/class_neighborhood_mass/density & other_archives/mask_net_joint",
+          "positive/Earth/missing": "original_99/predicate_tables & original_99/predicate_tables/main",
+          "positive/Europa/False": "original_99/labelled_reference_pairs & original_99/zero_truncated/independent",
+          "positive/Europa/True": "keep",
+          "positive/Europa/missing": "keep",
+          "positive/Mars/False": "original_99/spending_shape & other_archives/EXAONE_grouped",
+          "positive/Mars/True": "original_99/zero_truncated & original_99/companion_transition/personal",
+          "positive/Mars/missing": "keep",
+          "positive/missing/False": "original_99/labelled_reference_pairs & original_99/spending_shape/reversed",
+          "positive/missing/True": "keep",
+          "positive/missing/missing": "keep"
+        },
+        "discovery_fixed": 87,
+        "discovery_harmed": 20,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 7,
+            "harmed": 5,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              0,
+              2,
+              1,
+              -2,
+              0,
+              -1,
+              1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 7,
+            "harmed": 5,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              0,
+              2,
+              1,
+              -2,
+              0,
+              -1,
+              1
+            ]
+          }
+        }
+      }
+    }
+  },
+  "non_averaged": {
+    "single": {
+      "all": {
+        "choices": {
+          "all": "other_archives/Mitra2_adapted"
+        },
+        "discovery_fixed": 11,
+        "discovery_harmed": 10,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "direction": {
+        "choices": {
+          "negative": "original_99/neural_deck_raw",
+          "positive": "keep"
+        },
+        "discovery_fixed": 25,
+        "discovery_harmed": 19,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 2,
+            "harmed": 1,
+            "net": 1,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              1,
+              0,
+              -1
+            ]
+          }
+        }
+      },
+      "direction_origin": {
+        "choices": {
+          "negative/Earth": "original_99/neural_deck_raw",
+          "negative/Europa": "original_99/maxout/linear",
+          "negative/Mars": "keep",
+          "negative/missing": "original_99/error_partition_kernel/all_grad",
+          "positive/Earth": "other_archives/EXAONE_grouped",
+          "positive/Europa": "original_99/permutation_selection/all",
+          "positive/Mars": "keep",
+          "positive/missing": "original_99/spending_shape/reversed"
+        },
+        "discovery_fixed": 73,
+        "discovery_harmed": 51,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 4,
+            "harmed": 13,
+            "net": -9,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              -1,
+              -3,
+              0,
+              -3,
+              -3
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 4,
+            "harmed": 13,
+            "net": -9,
+            "net_by_fold": [
+              0,
+              0,
+              1,
+              -1,
+              -3,
+              0,
+              -3,
+              -3
+            ]
+          }
+        }
+      },
+      "direction_origin_cryo": {
+        "choices": {
+          "negative/Earth/False": "other_archives/EXAONE_grouped",
+          "negative/Earth/True": "supplementary/neighbor_booking_composition",
+          "negative/Earth/missing": "original_99/spending_shape/reversed",
+          "negative/Europa/False": "original_99/maxout/linear",
+          "negative/Europa/missing": "keep",
+          "negative/Mars/False": "original_99/register_all",
+          "negative/Mars/True": "keep",
+          "negative/Mars/missing": "original_99/bill_regime_tree/pooled",
+          "negative/missing/False": "original_99/error_partition_kernel/all_grad",
+          "negative/missing/True": "keep",
+          "negative/missing/missing": "keep",
+          "positive/Earth/False": "original_99/fixed_bill_margins/personal",
+          "positive/Earth/True": "other_archives/EXAONE_grouped",
+          "positive/Earth/missing": "original_99/predicate_tables/main",
+          "positive/Europa/False": "original_99/permutation_selection/all",
+          "positive/Europa/True": "keep",
+          "positive/Europa/missing": "keep",
+          "positive/Mars/False": "original_99/spending_shape/free",
+          "positive/Mars/True": "tabnet_recipes/scratch_seed_731",
+          "positive/Mars/missing": "keep",
+          "positive/missing/False": "original_99/error_partition_kernel/rand",
+          "positive/missing/True": "keep",
+          "positive/missing/missing": "keep"
+        },
+        "discovery_fixed": 98,
+        "discovery_harmed": 54,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 8,
+            "harmed": 10,
+            "net": -2,
+            "net_by_fold": [
+              0,
+              1,
+              0,
+              0,
+              -2,
+              1,
+              -1,
+              -1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 8,
+            "harmed": 10,
+            "net": -2,
+            "net_by_fold": [
+              0,
+              1,
+              0,
+              0,
+              -2,
+              1,
+              -1,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "pair": {
+      "all": {
+        "choices": {
+          "all": "other_archives/Mitra2_frozen & supplementary/neighbor_booking_composition"
+        },
+        "discovery_fixed": 20,
+        "discovery_harmed": 9,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 0,
+            "harmed": 0,
+            "net": 0,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "direction": {
+        "choices": {
+          "negative": "original_99/class_neighborhood_mass/density & original_99/neural_deck_raw",
+          "positive": "other_archives/latent_class_mixture & other_archives/EXAONE_grouped"
+        },
+        "discovery_fixed": 31,
+        "discovery_harmed": 12,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 4,
+            "harmed": 3,
+            "net": 1,
+            "net_by_fold": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              2,
+              -1,
+              -2
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 4,
+            "harmed": 3,
+            "net": 1,
+            "net_by_fold": [
+              1,
+              0,
+              0,
+              1,
+              0,
+              2,
+              -1,
+              -2
+            ]
+          }
+        }
+      },
+      "direction_origin": {
+        "choices": {
+          "negative/Earth": "supplementary/manifest_role_joint & supplementary/neighbor_booking_composition",
+          "negative/Europa": "original_99/bill_regime_tree/registration & original_99/maxout/maxout",
+          "negative/Mars": "original_99/class_neighborhood_mass/density & original_99/zero_truncated/independent",
+          "negative/missing": "original_99/error_partition_kernel/all_grad & original_99/error_partition_kernel/matched_random",
+          "positive/Earth": "original_99/labelled_reference_pairs/point & other_archives/EXAONE_grouped",
+          "positive/Europa": "original_99/labelled_reference_pairs/point & original_99/zero_truncated/independent",
+          "positive/Mars": "original_99/spending_shape/free & original_99/rounding",
+          "positive/missing": "original_99/class_neighborhood_mass/density & original_99/error_partition_kernel/rand"
+        },
+        "discovery_fixed": 53,
+        "discovery_harmed": 13,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 5,
+            "harmed": 3,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              -2,
+              1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 5,
+            "harmed": 3,
+            "net": 2,
+            "net_by_fold": [
+              1,
+              1,
+              0,
+              1,
+              0,
+              0,
+              -2,
+              1
+            ]
+          }
+        }
+      },
+      "direction_origin_cryo": {
+        "choices": {
+          "negative/Earth/False": "original_99/predicate_tables/fixed & original_99/peer_tabicl",
+          "negative/Earth/True": "supplementary/manifest_role_joint & supplementary/neighbor_booking_composition",
+          "negative/Earth/missing": "original_99/honest_failure_partitions/placebo_honest & original_99/charge_tabicl",
+          "negative/Europa/False": "original_99/bill_regime_tree/registration & original_99/maxout/maxout",
+          "negative/Europa/missing": "keep",
+          "negative/Mars/False": "original_99/error_partition_kernel/matched_random & tabnet_recipes/masked_pretraining",
+          "negative/Mars/True": "keep",
+          "negative/Mars/missing": "original_99/bill_regime_tree/pooled & original_99/bill_regime_tree/constant",
+          "negative/missing/False": "original_99/error_partition_kernel/all_grad & original_99/error_partition_kernel/matched_random",
+          "negative/missing/True": "keep",
+          "negative/missing/missing": "keep",
+          "positive/Earth/False": "original_99/spending_shape/pooled_direction & tabnet_recipes/masked_pretraining",
+          "positive/Earth/True": "original_99/class_neighborhood_mass/density & other_archives/mask_net_joint",
+          "positive/Earth/missing": "original_99/predicate_tables/main & original_99/honest_failure_partitions/enriched",
+          "positive/Europa/False": "original_99/labelled_reference_pairs/point & original_99/zero_truncated/independent",
+          "positive/Europa/True": "keep",
+          "positive/Europa/missing": "keep",
+          "positive/Mars/False": "original_99/predicate_tables/fixed & original_99/rounding",
+          "positive/Mars/True": "original_99/companion_transition/personal & original_99/zero_truncated/independent",
+          "positive/Mars/missing": "keep",
+          "positive/missing/False": "original_99/class_neighborhood_mass/density & original_99/error_partition_kernel/rand",
+          "positive/missing/True": "keep",
+          "positive/missing/missing": "keep"
+        },
+        "discovery_fixed": 86,
+        "discovery_harmed": 20,
+        "evaluations": {
+          "all_new_target": {
+            "fixed": 5,
+            "harmed": 6,
+            "net": -1,
+            "net_by_fold": [
+              1,
+              0,
+              2,
+              0,
+              -3,
+              -1,
+              -1,
+              1
+            ]
+          },
+          "also_historical_to_new": {
+            "fixed": 5,
+            "harmed": 6,
+            "net": -1,
+            "net_by_fold": [
+              1,
+              0,
+              2,
+              0,
+              -3,
+              -1,
+              -1,
+              1
+            ]
+          }
+        }
+      }
+    }
+  }
+}
