@@ -77,9 +77,7 @@ def measure(mass,rank,base,two_errors,query,keep):
                 both_perfect=stats(any_error,any_error))
 
 
-def run():
-    raw,y,g,f = data()
-    _,cur,_ = inputs()
+def inputs_for_trigger(raw,y,g,f):
     archive,_ = archives(raw,y,g,f,True)
     names = ['Mitra2_adapted','LimiX2','TabDPT','mask_net_joint','latent_class_mixture','conditional_bill_flow']
     probability = np.column_stack([archive[key] for key in names])
@@ -97,6 +95,13 @@ def run():
     same = (side[a]==side[b])&(f[a]==f[b])
     a,b,d = a[same],b[same],d[same]
     gap = np.abs(x[a,0]-x[b,0])
+    return side,wrong,x,a,b,d,gap
+
+
+def run():
+    raw,y,g,f = data()
+    _,cur,_ = inputs()
+    side,wrong,x,a,b,d,gap = inputs_for_trigger(raw,y,g,f)
     report = {}
     for name,order in [('nearest',np.lexsort((b,a,d))),('confidence_gap',np.lexsort((b,a,d,-gap)))]:
         chunks = []
