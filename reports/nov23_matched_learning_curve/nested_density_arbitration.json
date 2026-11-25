@@ -1,0 +1,713 @@
+{
+  "protocol": "Fold k uses fold k XOR 1 as calibration. Both base experts exclude that entire pair during calibration. No release prediction is an input to the learner. Matched uses the same two models on both folds. Refit applies the fixed gate to separately trained outer experts using the seven nonquery folds. The gate trains only on opposed labels. Two residual log-odds calibrators fit every calibration row, with matched raw fields and TabSTAR; the extended calibrator also gets the density odds.",
+  "calibration": {
+    "0": {
+      "passengers": 1053,
+      "bookings": 777,
+      "disagreements": 147
+    },
+    "1": {
+      "passengers": 1056,
+      "bookings": 778,
+      "disagreements": 125
+    },
+    "2": {
+      "passengers": 1073,
+      "bookings": 777,
+      "disagreements": 177
+    },
+    "3": {
+      "passengers": 1130,
+      "bookings": 777,
+      "disagreements": 157
+    },
+    "4": {
+      "passengers": 1072,
+      "bookings": 777,
+      "disagreements": 124
+    },
+    "5": {
+      "passengers": 1122,
+      "bookings": 777,
+      "disagreements": 134
+    },
+    "6": {
+      "passengers": 1063,
+      "bookings": 777,
+      "disagreements": 134
+    },
+    "7": {
+      "passengers": 1124,
+      "bookings": 777,
+      "disagreements": 115
+    }
+  },
+  "results": {
+    "matched_six_fold_experts": {
+      "tabstar": {
+        "accuracy": 0.8001840561371218,
+        "log_loss": 0.4105388145566353,
+        "per_fold": [
+          0.8077651515151515,
+          0.8062678062678063,
+          0.8088495575221238,
+          0.777260018639329,
+          0.8110516934046346,
+          0.789179104477612,
+          0.8016014234875445,
+          0.7986829727187206
+        ]
+      },
+      "density": {
+        "accuracy": 0.7844242493960658,
+        "log_loss": 0.4919006845040114,
+        "per_fold": [
+          0.7859848484848485,
+          0.7844254510921178,
+          0.7920353982300885,
+          0.7781919850885368,
+          0.7914438502673797,
+          0.789179104477612,
+          0.7740213523131673,
+          0.779868297271872
+        ]
+      },
+      "gate": {
+        "accuracy": 0.802829863108248,
+        "log_loss": 0.40930929548875666,
+        "per_fold": [
+          0.8106060606060606,
+          0.8072174738841406,
+          0.8070796460176991,
+          0.7847157502329916,
+          0.8146167557932263,
+          0.7910447761194029,
+          0.806049822064057,
+          0.8005644402634055
+        ]
+      },
+      "control": {
+        "accuracy": 0.8040952490509605,
+        "log_loss": 0.40558669315409507,
+        "per_fold": [
+          0.8125,
+          0.8043684710351378,
+          0.8123893805309734,
+          0.7903075489282386,
+          0.8128342245989305,
+          0.7873134328358209,
+          0.8104982206405694,
+          0.8015051740357478
+        ]
+      },
+      "adjusted": {
+        "accuracy": 0.8035200736224548,
+        "log_loss": 0.4007533701881208,
+        "per_fold": [
+          0.8115530303030303,
+          0.805318138651472,
+          0.8115044247787611,
+          0.7875116495806151,
+          0.8146167557932263,
+          0.7873134328358209,
+          0.8069395017793595,
+          0.8024459078080903
+        ]
+      },
+      "gate_on_disagreement": {
+        "rows": 1113,
+        "density_correct": 488,
+        "tabstar_correct": 625,
+        "density_correct_selected": 176,
+        "density_incorrect_selected": 153,
+        "auc": 0.6175065573770492
+      },
+      "shared_release_decisions": {
+        "full": {
+          "wrong": 1232,
+          "correct": 6783,
+          "density_direct": {
+            "fixed": 273,
+            "harmed": 537
+          },
+          "tabstar_direct": {
+            "fixed": 212,
+            "harmed": 346
+          },
+          "gated_direct": {
+            "fixed": 200,
+            "harmed": 300
+          },
+          "adjusted_direct": {
+            "fixed": 170,
+            "harmed": 287
+          },
+          "control_direct": {
+            "fixed": 193,
+            "harmed": 307
+          },
+          "accept_density_increment": {
+            "fixed": 50,
+            "harmed": 50
+          },
+          "accept_density_increment_65": {
+            "fixed": 2,
+            "harmed": 1
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 13,
+            "harmed": 18
+          }
+        },
+        "historical_to_new": {
+          "wrong": 168,
+          "correct": 802,
+          "density_direct": {
+            "fixed": 34,
+            "harmed": 64
+          },
+          "tabstar_direct": {
+            "fixed": 31,
+            "harmed": 43
+          },
+          "gated_direct": {
+            "fixed": 24,
+            "harmed": 34
+          },
+          "adjusted_direct": {
+            "fixed": 24,
+            "harmed": 40
+          },
+          "control_direct": {
+            "fixed": 27,
+            "harmed": 38
+          },
+          "accept_density_increment": {
+            "fixed": 4,
+            "harmed": 6
+          },
+          "accept_density_increment_65": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 0,
+            "harmed": 1
+          }
+        },
+        "bookingmix": {
+          "wrong": 893,
+          "correct": 4783,
+          "density_direct": {
+            "fixed": 168,
+            "harmed": 361
+          },
+          "tabstar_direct": {
+            "fixed": 138,
+            "harmed": 239
+          },
+          "gated_direct": {
+            "fixed": 125,
+            "harmed": 207
+          },
+          "adjusted_direct": {
+            "fixed": 121,
+            "harmed": 208
+          },
+          "control_direct": {
+            "fixed": 137,
+            "harmed": 225
+          },
+          "accept_density_increment": {
+            "fixed": 31,
+            "harmed": 37
+          },
+          "accept_density_increment_65": {
+            "fixed": 2,
+            "harmed": 0
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 6,
+            "harmed": 9
+          }
+        },
+        "fresh_bookingmix": {
+          "wrong": 164,
+          "correct": 797,
+          "density_direct": {
+            "fixed": 31,
+            "harmed": 63
+          },
+          "tabstar_direct": {
+            "fixed": 30,
+            "harmed": 40
+          },
+          "gated_direct": {
+            "fixed": 23,
+            "harmed": 32
+          },
+          "adjusted_direct": {
+            "fixed": 22,
+            "harmed": 36
+          },
+          "control_direct": {
+            "fixed": 25,
+            "harmed": 35
+          },
+          "accept_density_increment": {
+            "fixed": 4,
+            "harmed": 6
+          },
+          "accept_density_increment_65": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 0,
+            "harmed": 1
+          }
+        },
+        "strict_consensus": {
+          "wrong": 178,
+          "correct": 3073,
+          "density_direct": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "tabstar_direct": {
+            "fixed": 2,
+            "harmed": 4
+          },
+          "gated_direct": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "adjusted_direct": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "control_direct": {
+            "fixed": 1,
+            "harmed": 1
+          },
+          "accept_density_increment": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "accept_density_increment_65": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "paired_booking_bootstrap_95": {
+        "gate_minus_tabstar": [
+          -0.0012792115420632,
+          0.006778980786003911
+        ],
+        "adjusted_minus_control": [
+          -0.0034310812997971423,
+          0.002190336943267757
+        ],
+        "density_increment_minus_release_on_common": [
+          -0.002372598918528207,
+          0.002355084987194149
+        ]
+      },
+      "density_only_disagreement_profile": {
+        "no_recorded_spending": {
+          "passengers": 160,
+          "density_was_right": 69,
+          "old_label_was_right": 91
+        },
+        "one_service": {
+          "passengers": 29,
+          "density_was_right": 12,
+          "old_label_was_right": 17
+        },
+        "two_or_more_services": {
+          "passengers": 377,
+          "density_was_right": 98,
+          "old_label_was_right": 279
+        },
+        "solo_order": {
+          "passengers": 306,
+          "density_was_right": 94,
+          "old_label_was_right": 212
+        },
+        "multi_passenger_order": {
+          "passengers": 260,
+          "density_was_right": 85,
+          "old_label_was_right": 175
+        },
+        "density_proposes_transported": {
+          "passengers": 214,
+          "density_was_right": 83,
+          "old_label_was_right": 131
+        },
+        "density_proposes_not_transported": {
+          "passengers": 352,
+          "density_was_right": 96,
+          "old_label_was_right": 256
+        }
+      }
+    },
+    "refit_seven_fold_experts": {
+      "tabstar": {
+        "accuracy": 0.800299091222823,
+        "log_loss": 0.4052618816805609,
+        "per_fold": [
+          0.790719696969697,
+          0.8062678062678063,
+          0.8141592920353983,
+          0.7912395153774464,
+          0.8181818181818182,
+          0.7798507462686567,
+          0.791814946619217,
+          0.8090310442144873
+        ]
+      },
+      "density": {
+        "accuracy": 0.7824686529391465,
+        "log_loss": 0.4937687601182612,
+        "per_fold": [
+          0.7859848484848485,
+          0.7815764482431149,
+          0.7911504424778761,
+          0.7781919850885368,
+          0.7950089126559715,
+          0.7770522388059702,
+          0.7704626334519573,
+          0.779868297271872
+        ]
+      },
+      "gate": {
+        "accuracy": 0.8027148280225469,
+        "log_loss": 0.40567495417350125,
+        "per_fold": [
+          0.8001893939393939,
+          0.8091168091168092,
+          0.8150442477876106,
+          0.7875116495806151,
+          0.8190730837789661,
+          0.792910447761194,
+          0.7873665480427047,
+          0.8099717779868297
+        ]
+      },
+      "control": {
+        "accuracy": 0.7981134245945013,
+        "log_loss": 0.40987297923480326,
+        "per_fold": [
+          0.790719696969697,
+          0.8072174738841406,
+          0.8150442477876106,
+          0.7931034482758621,
+          0.820855614973262,
+          0.7705223880597015,
+          0.797153024911032,
+          0.7883349012229539
+        ]
+      },
+      "adjusted": {
+        "accuracy": 0.8001840561371218,
+        "log_loss": 0.40476112933529546,
+        "per_fold": [
+          0.7945075757575758,
+          0.8062678062678063,
+          0.8141592920353983,
+          0.7968313140726934,
+          0.8253119429590018,
+          0.7807835820895522,
+          0.791814946619217,
+          0.7902163687676388
+        ]
+      },
+      "gate_on_disagreement": {
+        "rows": 1195,
+        "density_correct": 520,
+        "tabstar_correct": 675,
+        "density_correct_selected": 204,
+        "density_incorrect_selected": 183,
+        "auc": 0.6137792022792022
+      },
+      "shared_release_decisions": {
+        "full": {
+          "wrong": 1232,
+          "correct": 6783,
+          "density_direct": {
+            "fixed": 267,
+            "harmed": 546
+          },
+          "tabstar_direct": {
+            "fixed": 189,
+            "harmed": 339
+          },
+          "gated_direct": {
+            "fixed": 175,
+            "harmed": 300
+          },
+          "adjusted_direct": {
+            "fixed": 216,
+            "harmed": 380
+          },
+          "control_direct": {
+            "fixed": 235,
+            "harmed": 419
+          },
+          "accept_density_increment": {
+            "fixed": 53,
+            "harmed": 68
+          },
+          "accept_density_increment_65": {
+            "fixed": 2,
+            "harmed": 8
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 12,
+            "harmed": 13
+          }
+        },
+        "historical_to_new": {
+          "wrong": 168,
+          "correct": 802,
+          "density_direct": {
+            "fixed": 36,
+            "harmed": 63
+          },
+          "tabstar_direct": {
+            "fixed": 25,
+            "harmed": 48
+          },
+          "gated_direct": {
+            "fixed": 27,
+            "harmed": 44
+          },
+          "adjusted_direct": {
+            "fixed": 33,
+            "harmed": 61
+          },
+          "control_direct": {
+            "fixed": 35,
+            "harmed": 67
+          },
+          "accept_density_increment": {
+            "fixed": 9,
+            "harmed": 11
+          },
+          "accept_density_increment_65": {
+            "fixed": 0,
+            "harmed": 3
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 2,
+            "harmed": 1
+          }
+        },
+        "bookingmix": {
+          "wrong": 893,
+          "correct": 4783,
+          "density_direct": {
+            "fixed": 164,
+            "harmed": 365
+          },
+          "tabstar_direct": {
+            "fixed": 129,
+            "harmed": 250
+          },
+          "gated_direct": {
+            "fixed": 116,
+            "harmed": 210
+          },
+          "adjusted_direct": {
+            "fixed": 160,
+            "harmed": 289
+          },
+          "control_direct": {
+            "fixed": 172,
+            "harmed": 320
+          },
+          "accept_density_increment": {
+            "fixed": 33,
+            "harmed": 46
+          },
+          "accept_density_increment_65": {
+            "fixed": 2,
+            "harmed": 8
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 7,
+            "harmed": 8
+          }
+        },
+        "fresh_bookingmix": {
+          "wrong": 164,
+          "correct": 797,
+          "density_direct": {
+            "fixed": 34,
+            "harmed": 62
+          },
+          "tabstar_direct": {
+            "fixed": 23,
+            "harmed": 46
+          },
+          "gated_direct": {
+            "fixed": 25,
+            "harmed": 42
+          },
+          "adjusted_direct": {
+            "fixed": 30,
+            "harmed": 58
+          },
+          "control_direct": {
+            "fixed": 33,
+            "harmed": 64
+          },
+          "accept_density_increment": {
+            "fixed": 9,
+            "harmed": 11
+          },
+          "accept_density_increment_65": {
+            "fixed": 0,
+            "harmed": 3
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 1,
+            "harmed": 1
+          }
+        },
+        "strict_consensus": {
+          "wrong": 178,
+          "correct": 3073,
+          "density_direct": {
+            "fixed": 0,
+            "harmed": 2
+          },
+          "tabstar_direct": {
+            "fixed": 2,
+            "harmed": 1
+          },
+          "gated_direct": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "adjusted_direct": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "control_direct": {
+            "fixed": 1,
+            "harmed": 3
+          },
+          "accept_density_increment": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "accept_density_increment_65": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "accept_density_increment_75": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "residual_change_attributable_to_density": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "paired_booking_bootstrap_95": {
+        "gate_minus_tabstar": [
+          -0.0017402099813813596,
+          0.006914414769893728
+        ],
+        "adjusted_minus_control": [
+          -0.0006867060360317789,
+          0.004975427044156808
+        ],
+        "density_increment_minus_release_on_common": [
+          -0.004731224414443741,
+          0.0006187487158215415
+        ]
+      },
+      "density_only_disagreement_profile": {
+        "no_recorded_spending": {
+          "passengers": 207,
+          "density_was_right": 86,
+          "old_label_was_right": 121
+        },
+        "one_service": {
+          "passengers": 23,
+          "density_was_right": 8,
+          "old_label_was_right": 15
+        },
+        "two_or_more_services": {
+          "passengers": 387,
+          "density_was_right": 106,
+          "old_label_was_right": 281
+        },
+        "solo_order": {
+          "passengers": 302,
+          "density_was_right": 91,
+          "old_label_was_right": 211
+        },
+        "multi_passenger_order": {
+          "passengers": 315,
+          "density_was_right": 109,
+          "old_label_was_right": 206
+        },
+        "density_proposes_transported": {
+          "passengers": 271,
+          "density_was_right": 102,
+          "old_label_was_right": 169
+        },
+        "density_proposes_not_transported": {
+          "passengers": 346,
+          "density_was_right": 98,
+          "old_label_was_right": 248
+        }
+      }
+    }
+  }
+}

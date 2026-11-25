@@ -44,7 +44,7 @@ def audit():
                 implementation='tabstar==1.2.2, original TabStarModel',local_device='cpu')
 
 
-def run(k,finetune=False,embedding_only=False):
+def run(k,finetune=False,embedding_only=False,extra_holdout=(),output_dir=ART):
     import torch
     from safetensors.torch import load_file
     from tabstar.arch.arch import TabStarModel
@@ -56,14 +56,17 @@ def run(k,finetune=False,embedding_only=False):
     path=ART/'tabstar.safetensors'
     assert hashlib.sha256(path.read_bytes()).hexdigest()==SHA
     raw,y,g,f=data()
-    q=np.flatnonzero(f==k)
+    if extra_holdout and (not finetune or output_dir==ART):
+        raise ValueError('Nested fine-tuning requires a separate output directory.')
+    held=np.isin(f,(k,*extra_holdout))
+    q=np.flatnonzero(held)
     rng=np.random.default_rng(8251+k)
-    groups=rng.permutation(np.unique(g[f!=k]))
+    groups=rng.permutation(np.unique(g[~held]))
     count=pd.Series(g).value_counts()
     take=np.searchsorted(np.cumsum(count.loc[groups]),1536)+1
     t=np.flatnonzero(np.isin(g,groups[:take]))
     if finetune or embedding_only:
-        t=np.flatnonzero(f!=k)
+        t=np.flatnonzero(~held)
     assert not np.isin(g[t],g[q]).any()
     frame=raw.drop(columns=['PassengerId','Cabin']).copy()
     cabin=raw.Cabin.str.split('/',expand=True)
@@ -96,7 +99,7 @@ def run(k,finetune=False,embedding_only=False):
             encs.append(hidden.flatten(1).numpy())
     embedding=np.concatenate(encs)
     cache=ART/f'base_embedding{k}.npz'
-    if (finetune or embedding_only) and not cache.exists():
+    if (finetune or embedding_only) and not extra_holdout and not cache.exists():
         temporary=ART/f'.base_embedding{k}.{os.getpid()}.npz'
         np.savez_compressed(temporary,ids=ids,embedding=embedding)
         temporary.replace(cache)
@@ -132,10 +135,10 @@ def run(k,finetune=False,embedding_only=False):
                 logits=model.cls_head(model.tabular_encoder(z)[:,:2]).squeeze(-1)
                 preds.extend(torch.softmax(logits,dim=1)[:,1].tolist())
         prob=np.array(preds)
-        receipt=ART/f'.tuned{k}.{os.getpid()}.npz'
+        receipt=output_dir/f'.tuned{k}.{os.getpid()}.npz'
         np.savez_compressed(receipt,t=t,q=q,passenger=raw.PassengerId.iloc[q].to_numpy(str),
                             train_y=y[t],checkpoint=SHA,finetuned=prob)
-        receipt.replace(ART/f'tuned{k}.npz')
+        receipt.replace(output_dir/f'tuned{k}.npz')
         print(dict(fold=k,seconds=round(time.monotonic()-started,2),held=len(q),
                    accuracy=accuracy_score(y[q],prob>=.5),log_loss=log_loss(y[q],prob)),flush=True)
         return

@@ -123,9 +123,31 @@ def fit_density(x, widths, train, query, seed):
         return np.column_stack(result)
 
 
+def score_split(frame, context, y, t, q, k):
+    from catboost import CatBoostClassifier
+
+    x, widths = encode(frame, t)
+    support = [t[y[t] == outcome] for outcome in (False, True)]
+    scores = [fit_density(x, widths, a, q, seed=9018+k) for a in support]
+    differences = scores[1] - scores[0]
+    prior = np.log((len(support[1])+1) / (len(support[0])+1))
+    classifier = CatBoostClassifier(iterations=300, depth=5, learning_rate=.055, verbose=False,
+                                    random_seed=9018+k, allow_writing_files=False, thread_count=2)
+    classifier.fit(context.iloc[t], y[t], cat_features=CATEGORIES)
+    context_prior = classifier.predict_proba(context.iloc[q])[:, 1]
+    predictions = {
+        "independent": expit(prior + differences[:, 0]),
+        "joint_nine_nodes": expit(prior + differences[:, 1]),
+        "joint": expit(prior + differences[:, 3]),
+        "context_only": context_prior,
+        "conditional_nine_nodes": expit(logit(context_prior) + differences[:, 2]),
+        "conditional_bills": expit(logit(context_prior) + differences[:, 4]),
+    }
+    return predictions
+
+
 def run():
     import torch
-    from catboost import CatBoostClassifier
 
     torch.set_num_threads(2)
     ART.mkdir(parents=True, exist_ok=True)
@@ -137,23 +159,7 @@ def run():
     for k in range(8):
         t, q = np.flatnonzero(folds != k), np.flatnonzero(folds == k)
         assert not np.isin(groups[t], groups[q]).any()
-        x, widths = encode(frame, t)
-        support = [t[y[t] == outcome] for outcome in (False, True)]
-        scores = [fit_density(x, widths, a, q, seed=9018+k) for a in support]
-        differences = scores[1] - scores[0]
-        prior = np.log((len(support[1])+1) / (len(support[0])+1))
-        classifier = CatBoostClassifier(iterations=300, depth=5, learning_rate=.055, verbose=False,
-                                        random_seed=9018+k, allow_writing_files=False, thread_count=2)
-        classifier.fit(context.iloc[t], y[t], cat_features=CATEGORIES)
-        context_prior = classifier.predict_proba(context.iloc[q])[:, 1]
-        predictions = {
-            "independent": expit(prior + differences[:, 0]),
-            "joint_nine_nodes": expit(prior + differences[:, 1]),
-            "joint": expit(prior + differences[:, 3]),
-            "context_only": context_prior,
-            "conditional_nine_nodes": expit(logit(context_prior) + differences[:, 2]),
-            "conditional_bills": expit(logit(context_prior) + differences[:, 4]),
-        }
+        predictions = score_split(frame, context, y, t, q, k)
         np.savez_compressed(ART / f"fold{k}.npz", t=t, q=q, train_y=y[t],
                             passenger=raw.PassengerId.iloc[q].to_numpy(str), **predictions)
         print(k, {n: round(np.mean((p >= .5) == y[q]), 4) for n, p in predictions.items()}, flush=True)
