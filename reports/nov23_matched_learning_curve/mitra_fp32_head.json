@@ -1,0 +1,211 @@
+{
+  "models": {
+    "fold0": {
+      "rows": 2318,
+      "native_replay_max_diff": 0.0,
+      "ties": 55,
+      "ties_to_negative": 29,
+      "fp32_ties": 0,
+      "off_tie_flips": 0,
+      "cache": "artifacts/nov25_mitra_fp32_head/fold0.npz",
+      "cache_sha256": "e7f56cabd342d3c1cc0fecf0e2f0dbec1cabea41ef2ee5817580815efcc62e59",
+      "model_sha256": "dbe33fa1cc2342acd029a1b6446d599f2ab368b1d17ad362abacc6da5df9f153",
+      "head_input_dtype": [
+        "torch.float32"
+      ],
+      "hidden_shape": [
+        2318,
+        512
+      ],
+      "feature_projection_shape": [
+        2318,
+        15
+      ],
+      "fp16_hidden_projection_max_abs_diff": 0.0004943356491349249
+    },
+    "fold1": {
+      "rows": 2318,
+      "native_replay_max_diff": 0.0,
+      "ties": 57,
+      "ties_to_negative": 23,
+      "fp32_ties": 0,
+      "off_tie_flips": 0,
+      "cache": "artifacts/nov25_mitra_fp32_head/fold1.npz",
+      "cache_sha256": "0414af13c5860c956f44e30e079fd796ea10197721f6a16527cc01d55b85b933",
+      "model_sha256": "a94b166b443aa2bf0e8a3f981adf4f2db5a16330eafb4e69cded0829634d507f",
+      "head_input_dtype": [
+        "torch.float32"
+      ],
+      "hidden_shape": [
+        2318,
+        512
+      ],
+      "feature_projection_shape": [
+        2318,
+        15
+      ],
+      "fp16_hidden_projection_max_abs_diff": 0.0005699639471146156
+    },
+    "fold2": {
+      "rows": 2318,
+      "native_replay_max_diff": 0.0,
+      "ties": 44,
+      "ties_to_negative": 21,
+      "fp32_ties": 0,
+      "off_tie_flips": 0,
+      "cache": "artifacts/nov25_mitra_fp32_head/fold2.npz",
+      "cache_sha256": "3bf428e46da2085fd26bdbf856c6e5c9b8db904ccacc699cfdd01ee9fd352ba4",
+      "model_sha256": "5c2bc444ff1ad4e0e1e635a37531e77e4074c88166986c64aa7bc6d97696684e",
+      "head_input_dtype": [
+        "torch.float32"
+      ],
+      "hidden_shape": [
+        2318,
+        512
+      ],
+      "feature_projection_shape": [
+        2318,
+        15
+      ],
+      "fp16_hidden_projection_max_abs_diff": 0.000595537877851271
+    },
+    "test": {
+      "rows": 4277,
+      "native_replay_max_diff": 0.0,
+      "ties": 123,
+      "ties_to_negative": 56,
+      "fp32_ties": 0,
+      "off_tie_flips": 1,
+      "cache": "artifacts/nov25_mitra_fp32_head/test.npz",
+      "cache_sha256": "f6550407adb4db7e6cedeed9ce8d05313132552a86b9a8d20836309975568201",
+      "model_sha256": "1a0bc01cd5077f68afdc3c59d39c1f882ac1ab9ab5807df82968dc19c0138b6b",
+      "head_input_dtype": [
+        "torch.float32",
+        "torch.float32"
+      ],
+      "hidden_shape": [
+        4277,
+        512
+      ],
+      "feature_projection_shape": [
+        4277,
+        15
+      ],
+      "fp16_hidden_projection_max_abs_diff": 0.0005514881018200413
+    }
+  },
+  "source_hashes": {
+    "mitra_candidate.py": "71e17c8720897a858c2a1d3e7f9a65aa1ad5702433341ff545688558a321d394",
+    "mitra_counts_fixed15_online_first.py": "58d818359ab542cd5180c40444afe7da9c6e818b85d52d757a0a1afcde046be6",
+    "third_party/mitra/_internal/models/tab2d.py": "45e071526d5cb2ec06b1b4a2ea8dda85c2791443750f42174d48b8c85f181465",
+    "third_party/mitra/_internal/models/embedding.py": "42c61e6388a7fd2fcc67182be9fa05177de600d4fdfb5bb184d4b0b6d581815c",
+    "third_party/mitra/_internal/data/preprocessor.py": "a9bc29f9dd71d29a77a5a74e5f4c0604f1319bb2363ef400951c97453e743606"
+  },
+  "historical": {
+    "v96_all": {
+      "corrected": 37,
+      "harmed": 36,
+      "total_correct": 5659,
+      "eligible": 6954,
+      "protected": 0,
+      "fold_net": [
+        3,
+        -7,
+        5
+      ]
+    },
+    "v96_ties": {
+      "corrected": 37,
+      "harmed": 36,
+      "total_correct": 5659,
+      "eligible": 156,
+      "protected": 0,
+      "fold_net": [
+        3,
+        -7,
+        5
+      ]
+    },
+    "historical_v131_all": {
+      "corrected": 26,
+      "harmed": 27,
+      "total_correct": 5661,
+      "eligible": 6842,
+      "protected": 112,
+      "fold_net": [
+        1,
+        -6,
+        4
+      ]
+    },
+    "historical_v131_ties": {
+      "corrected": 26,
+      "harmed": 27,
+      "total_correct": 5661,
+      "eligible": 121,
+      "protected": 112,
+      "fold_net": [
+        1,
+        -6,
+        4
+      ]
+    },
+    "historical_nine_all": {
+      "corrected": 26,
+      "harmed": 27,
+      "total_correct": 5667,
+      "eligible": 6824,
+      "protected": 130,
+      "fold_net": [
+        1,
+        -6,
+        4
+      ]
+    },
+    "historical_nine_ties": {
+      "corrected": 26,
+      "harmed": 27,
+      "total_correct": 5667,
+      "eligible": 121,
+      "protected": 130,
+      "fold_net": [
+        1,
+        -6,
+        4
+      ]
+    }
+  },
+  "test_release": {
+    "proposal_v131_party_consensus_all": {
+      "changed": 42,
+      "eligible": 4216,
+      "protected": 61,
+      "to_true": 0,
+      "to_false": 42
+    },
+    "proposal_v131_party_consensus_ties": {
+      "changed": 41,
+      "eligible": 93,
+      "protected": 61,
+      "to_true": 0,
+      "to_false": 41
+    },
+    "proposal_n24_selected_dissent_all": {
+      "changed": 42,
+      "eligible": 4206,
+      "protected": 71,
+      "to_true": 0,
+      "to_false": 42
+    },
+    "proposal_n24_selected_dissent_ties": {
+      "changed": 41,
+      "eligible": 93,
+      "protected": 71,
+      "to_true": 0,
+      "to_false": 41
+    }
+  },
+  "oof_cache": "artifacts/nov25_mitra_fp32_head/oof.npz",
+  "oof_sha256": "2b2657276468b489859caf010a965db12cba14cc9b725cf6aedc6a45814bacf2",
+  "covered": "Three original v96 historical folds (6,954 unique passengers) and the frozen 4,277 passenger test model."
+}
