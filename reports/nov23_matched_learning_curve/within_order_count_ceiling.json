@@ -1,0 +1,295 @@
+{
+  "candidate": "proposal_n26_tabnet_attention",
+  "known_rows": 8532,
+  "known_correct": 7091,
+  "target_correct": 7253,
+  "known_needed": 162,
+  "raw_rows": 8693,
+  "unknown_rows": 161,
+  "orders": 6217,
+  "complete_orders": 6065,
+  "partial_orders": 82,
+  "all_unknown_orders": 70,
+  "known_in_partial": 189,
+  "scopes": {
+    "known": {
+      "rows": 8532,
+      "errors": 1441,
+      "false_negative": 677,
+      "false_positive": 764,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 86,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        86,
+        120
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        354,
+        373
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 57,
+      "maximum_target_FP_fixes_without_known_harms": 63
+    },
+    "complete_orders": {
+      "rows": 8343,
+      "errors": 1389,
+      "false_negative": 657,
+      "false_positive": 732,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 76,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        76,
+        76
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        328,
+        328
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 38,
+      "maximum_target_FP_fixes_without_known_harms": 38
+    },
+    "partial_orders": {
+      "rows": 189,
+      "errors": 52,
+      "false_negative": 20,
+      "false_positive": 32,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 10,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        10,
+        44
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        26,
+        45
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 19,
+      "maximum_target_FP_fixes_without_known_harms": 25
+    },
+    "solo": {
+      "rows": 4735,
+      "errors": 868,
+      "false_negative": 423,
+      "false_positive": 445,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 0,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        0,
+        0
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        0,
+        0
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 0,
+      "maximum_target_FP_fixes_without_known_harms": 0
+    },
+    "multiple": {
+      "rows": 3797,
+      "errors": 573,
+      "false_negative": 254,
+      "false_positive": 319,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 86,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        86,
+        120
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        354,
+        373
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 57,
+      "maximum_target_FP_fixes_without_known_harms": 63
+    },
+    "known_members_same_prediction": {
+      "rows": 6158,
+      "errors": 1057,
+      "false_negative": 502,
+      "false_positive": 555,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 0,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        0,
+        16
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        0,
+        16
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 9,
+      "maximum_target_FP_fixes_without_known_harms": 7
+    },
+    "known_members_mixed_prediction": {
+      "rows": 2374,
+      "errors": 384,
+      "false_negative": 175,
+      "false_positive": 209,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 86,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        86,
+        104
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        354,
+        357
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 48,
+      "maximum_target_FP_fixes_without_known_harms": 56
+    },
+    "complete_multiple_same_prediction": {
+      "rows": 1344,
+      "errors": 169,
+      "false_negative": 70,
+      "false_positive": 99,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 0,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        0,
+        0
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        0,
+        0
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 0,
+      "maximum_target_FP_fixes_without_known_harms": 0
+    },
+    "complete_multiple_mixed_prediction": {
+      "rows": 2264,
+      "errors": 352,
+      "false_negative": 164,
+      "false_positive": 188,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 76,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        76,
+        76
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        328,
+        328
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 38,
+      "maximum_target_FP_fixes_without_known_harms": 38
+    },
+    "all_eleven_agree": {
+      "rows": 7870,
+      "errors": 1166,
+      "false_negative": 534,
+      "false_positive": 632,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 68,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        68,
+        92
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        285,
+        298
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 43,
+      "maximum_target_FP_fixes_without_known_harms": 49
+    },
+    "any_eleven_disagree": {
+      "rows": 662,
+      "errors": 275,
+      "false_negative": 143,
+      "false_positive": 132,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 23,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        23,
+        33
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        73,
+        80
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 15,
+      "maximum_target_FP_fixes_without_known_harms": 18
+    },
+    "all_ten_agreed_before_tabnet": {
+      "rows": 7891,
+      "errors": 1172,
+      "false_negative": 535,
+      "false_positive": 637,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 70,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        70,
+        94
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        289,
+        302
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 44,
+      "maximum_target_FP_fixes_without_known_harms": 50
+    },
+    "all_127_challengers_silent": {
+      "rows": 3201,
+      "errors": 172,
+      "false_negative": 127,
+      "false_positive": 45,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 7,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        7,
+        8
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        28,
+        29
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 5,
+      "maximum_target_FP_fixes_without_known_harms": 3
+    },
+    "awake_paid_negative_all_127_silent": {
+      "rows": 1435,
+      "errors": 127,
+      "false_negative": 127,
+      "false_positive": 0,
+      "max_target_fixes_without_known_harms_unknowns_frozen": 4,
+      "maximum_target_fixes_without_known_harms_over_unknown_counts": [
+        4,
+        5
+      ],
+      "maximum_target_fixes_allowing_known_harms_over_unknown_counts": [
+        16,
+        17
+      ],
+      "maximum_target_FN_fixes_without_known_harms": 5,
+      "maximum_target_FP_fixes_without_known_harms": 0
+    }
+  },
+  "known_oracle": {
+    "correct_interval": [
+      7177,
+      7211
+    ],
+    "gain_interval": [
+      86,
+      120
+    ],
+    "accuracy_interval": [
+      0.8411861228316925,
+      0.8451711204875761
+    ],
+    "remaining_to_85_interval": [
+      42,
+      76
+    ],
+    "gain_from_unknown_exchanges_at_most": 34
+  },
+  "whole_roster_oracle": {
+    "known_labels_all_rows": 8693,
+    "correct_interval": [
+      7201,
+      7359
+    ],
+    "accuracy_interval": [
+      0.8283676521339008,
+      0.8465431956746807
+    ],
+    "target_correct": 7390
+  },
+  "interpretation": "Every bound uses only the count conserved within each booking. With all members known, one false negative and one false positive can be repaired together. For unknown predictions we take the minimum and maximum over all possible original positive counts, allowing them to absorb swaps. Subscope no-harm counts permit swaps with other known mistakes, and are independent maxima, not additive. Gross fixes allowing harms may displace a correct passenger; they are not accuracy gains.",
+  "test_unlabelled": {
+    "sha256": "4f5d0389d8f01e1c375b41521a88c87849f7183106d2537eb12bb9cca168f943",
+    "orders": 3063,
+    "rows": 4277,
+    "solo": 2340,
+    "mixed_prediction_orders": 406,
+    "rows_in_mixed_orders": 1206,
+    "max_changed_rows_from_fixed_counts": 950
+  }
+}
