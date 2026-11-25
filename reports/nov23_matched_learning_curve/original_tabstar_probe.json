@@ -1,0 +1,149 @@
+{
+  "audit": {
+    "count": 400,
+    "resolved": 400,
+    "matches": {
+      "40945": "BIN_TRANSPORTATION_TITANIC_SURVIVAL"
+    },
+    "manifest_sha256": "fd0a7e18c1ef21e6f7cdf5d1c55930a3420094af94d37bad433fac4a5c6c934b",
+    "catalog_commit": "4d14a660ae32b978b9bcde8c9f39e119513cf030",
+    "weight_sha256": "455272659647d442117ea31ca274e9b683d47295738957229a4ffb632f6fa465",
+    "checkpoint_revision": "73560fb23d34307f4b6fa849f38f8299a8980a4a",
+    "model_card": "https://huggingface.co/alana89/TabSTAR",
+    "classic_titanic": "https://www.openml.org/d/40945",
+    "manifest_url": "https://huggingface.co/alana89/TabSTAR/blob/73560fb23d34307f4b6fa849f38f8299a8980a4a/pretrain_args.json",
+    "catalog_url": "https://github.com/alanarazi7/TabSTAR/blob/4d14a660ae32b978b9bcde8c9f39e119513cf030/src/tabstar/datasets/all_datasets.py",
+    "audit_scope": "Matched public training manifest identifiers to author catalog names. Dataset contents were not fingerprinted.",
+    "implementation": "tabstar==1.2.2, original TabStarModel",
+    "local_device": "cpu"
+  },
+  "folds": {
+    "0": {
+      "support": 1536,
+      "held": 1056,
+      "train_groups": 1076,
+      "held_groups": 778,
+      "unique_verbalizations": 87,
+      "seconds": 2.15,
+      "native_accuracy": 0.4981060606060606,
+      "readout_accuracy": 0.7821969696969697,
+      "native_loss": 1.9695123619286514,
+      "readout_loss": 0.442477822303772,
+      "adapted_head_accuracy": 0.7585227272727273,
+      "adapted_head_loss": 0.48722514510154724
+    },
+    "1": {
+      "support": 1536,
+      "held": 1053,
+      "train_groups": 1130,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 1.85,
+      "native_accuracy": 0.49572649572649574,
+      "readout_accuracy": 0.7749287749287749,
+      "native_loss": 1.7797877354777527,
+      "readout_loss": 0.44986823201179504,
+      "adapted_head_accuracy": 0.7454890788224121,
+      "adapted_head_loss": 0.49371275305747986
+    },
+    "2": {
+      "support": 1536,
+      "held": 1130,
+      "train_groups": 1062,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 1.9,
+      "native_accuracy": 0.4504424778761062,
+      "readout_accuracy": 0.8061946902654867,
+      "native_loss": 2.1480289988715366,
+      "readout_loss": 0.4279746413230896,
+      "adapted_head_accuracy": 0.7938053097345132,
+      "adapted_head_loss": 0.43914228677749634
+    },
+    "3": {
+      "support": 1536,
+      "held": 1073,
+      "train_groups": 1072,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 1.88,
+      "native_accuracy": 0.48835041938490215,
+      "readout_accuracy": 0.7781919850885368,
+      "native_loss": 2.048924600391462,
+      "readout_loss": 0.44431614875793457,
+      "adapted_head_accuracy": 0.7576887232059646,
+      "adapted_head_loss": 0.47379013895988464
+    },
+    "4": {
+      "support": 1536,
+      "held": 1122,
+      "train_groups": 1087,
+      "held_groups": 777,
+      "unique_verbalizations": 88,
+      "seconds": 1.95,
+      "native_accuracy": 0.4982174688057041,
+      "readout_accuracy": 0.7967914438502673,
+      "native_loss": 1.930108423119079,
+      "readout_loss": 0.42789730429649353,
+      "adapted_head_accuracy": 0.7950089126559715,
+      "adapted_head_loss": 0.44282135367393494
+    },
+    "5": {
+      "support": 1537,
+      "held": 1072,
+      "train_groups": 1088,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 1.85,
+      "native_accuracy": 0.5,
+      "readout_accuracy": 0.7677238805970149,
+      "native_loss": 2.0428755338671816,
+      "readout_loss": 0.4565318524837494,
+      "adapted_head_accuracy": 0.7630597014925373,
+      "adapted_head_loss": 0.487123966217041
+    },
+    "6": {
+      "support": 1536,
+      "held": 1124,
+      "train_groups": 1119,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 1.95,
+      "native_accuracy": 0.46174377224199287,
+      "readout_accuracy": 0.7802491103202847,
+      "native_loss": 1.9194170954030634,
+      "readout_loss": 0.4573307931423187,
+      "adapted_head_accuracy": 0.7491103202846975,
+      "adapted_head_loss": 0.4916137456893921
+    },
+    "7": {
+      "support": 1536,
+      "held": 1063,
+      "train_groups": 1117,
+      "held_groups": 777,
+      "unique_verbalizations": 87,
+      "seconds": 2.0,
+      "native_accuracy": 0.4468485418626529,
+      "readout_accuracy": 0.7892756349952963,
+      "native_loss": 1.9649116345613726,
+      "readout_loss": 0.4419228136539459,
+      "adapted_head_accuracy": 0.7789275634995296,
+      "adapted_head_loss": 0.4773537814617157
+    }
+  },
+  "protocol": {
+    "excluded_fields": [
+      "Name",
+      "PassengerId"
+    ],
+    "grouping": "Whole PassengerId prefix orders; eight shuffled GroupKFold partitions from full_roster_booking_validation_n23.",
+    "input": "Age, expenses, destination, home planet, VIP, CryoSleep, cabin components and observed booking size.",
+    "small_support": "Shuffle non-held booking groups with seed 8251+fold; select whole groups until at least 1536 passengers. The verbalizer, scaler and fitted heads use only training orders.",
+    "readout": "Logistic regression C=0.01 on two flattened contextualized target tokens after the original table encoder.",
+    "adapted_head": "Freeze all prior stages and fit original classification head for ten epochs at learning rate 0.0001.",
+    "finetuned": "All non-held orders; train numerical fusion, table interaction and prediction head, freeze E5. Three epochs, batches of 64, AdamW lr=0.00002 and weight decay=0.01; seed=5591+fold.",
+    "reference_forward": "Validated official complete-model forward and cached full-model path on four rows per fold to 1e-4 tolerance.",
+    "probability_keys": "fold{k}.npz: native,readout,adapted_head. tuned{k}.npz: finetuned. Training and query indices t/q alongside train_y, held PassengerId, checkpoint SHA.",
+    "software": "Python 3.12; torch 2.13.0, transformers 4.57.6, tabstar 1.2.2, peft 0.17.1, accelerate 1.10.1, pandas 3.1.1, numpy 2.5.4, scikit-learn 1.9.1, skrub 0.10.1, safetensors 0.8.0."
+  }
+}
