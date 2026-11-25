@@ -1,0 +1,1961 @@
+{
+  "selection": "same known cabin, then closest ticket position; one companion per non-solo passenger",
+  "unrelated_control": "different booking, matching focal size, origin, co-room status, deck, sleep and payment when possible",
+  "train_and_test_shared_orders": 0,
+  "bookingmix": {
+    "profile": {
+      "single": {
+        "people": 1112,
+        "errors": 92
+      },
+      "pair": {
+        "people": 111,
+        "errors": 5
+      },
+      "three_plus": {
+        "people": 33,
+        "errors": 0
+      },
+      "same_cabin": {
+        "people": 75,
+        "errors": 3
+      },
+      "different_or_unknown_cabin": {
+        "people": 69,
+        "errors": 2
+      },
+      "paid_peer": {
+        "people": 80,
+        "errors": 3
+      },
+      "sleeping_peer": {
+        "people": 49,
+        "errors": 2
+      },
+      "awake_peer": {
+        "people": 89,
+        "errors": 3
+      },
+      "focal_predicted_transported": {
+        "people": 38,
+        "errors": 0
+      },
+      "peer_base_vote_same_as_focal": {
+        "people": 77,
+        "errors": 4
+      },
+      "peer_base_vote_correct_posthoc": {
+        "people": 113,
+        "errors": 4
+      },
+      "different_outcomes_posthoc": {
+        "people": 67,
+        "errors": 5
+      }
+    },
+    "actions": {
+      "direct_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 44,
+          "harmed": 65
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 44,
+          "harmed": 65
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 29,
+          "harmed": 44
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 17,
+          "harmed": 18
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 17,
+          "harmed": 18
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 12,
+          "harmed": 8
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 34,
+          "harmed": 59
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 34,
+          "harmed": 59
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 21,
+          "harmed": 45
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 9,
+          "harmed": 30
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 9,
+          "harmed": 30
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 4,
+          "harmed": 26
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 14,
+          "harmed": 57
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 14,
+          "harmed": 57
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 7,
+          "harmed": 47
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 23
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 67,
+          "harmed": 318
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 67,
+          "harmed": 318
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 42,
+          "harmed": 233
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 5,
+          "harmed": 123
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 1,
+          "harmed": 25
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 1,
+          "harmed": 25
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "all_three_real": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 4,
+          "harmed": 14
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 4,
+          "harmed": 14
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 3,
+          "harmed": 13
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 40,
+          "harmed": 65
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 40,
+          "harmed": 65
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 24,
+          "harmed": 44
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 15,
+          "harmed": 19
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 15,
+          "harmed": 19
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 10,
+          "harmed": 11
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 34,
+          "harmed": 59
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 34,
+          "harmed": 59
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 21,
+          "harmed": 45
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 10,
+          "harmed": 26
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 10,
+          "harmed": 26
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 7,
+          "harmed": 20
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 14,
+          "harmed": 57
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 14,
+          "harmed": 57
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 10,
+          "harmed": 46
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 1,
+          "harmed": 25
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 1,
+          "harmed": 7
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 1,
+          "harmed": 7
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 64,
+          "harmed": 300
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 64,
+          "harmed": 300
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 41,
+          "harmed": 216
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 4,
+          "harmed": 113
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 1,
+          "harmed": 28
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 1,
+          "harmed": 28
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "all_three_unrelated": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 5,
+          "harmed": 9
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 5,
+          "harmed": 9
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 3,
+          "harmed": 6
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_only_with_real_peer": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 7,
+          "harmed": 7
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 7,
+          "harmed": 7
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 6,
+          "harmed": 2
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_only_with_real_peer": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_only_with_real_peer": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 7,
+          "harmed": 24
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 7,
+          "harmed": 24
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 3,
+          "harmed": 22
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_only_with_real_peer": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 12,
+          "harmed": 50
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 12,
+          "harmed": 50
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 6,
+          "harmed": 42
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 0,
+          "harmed": 23
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_only_with_real_peer": {
+        "all": {
+          "rows": 6055,
+          "errors": 1052,
+          "fixed": 31,
+          "harmed": 182
+        },
+        "multiple": {
+          "rows": 1320,
+          "errors": 190,
+          "fixed": 31,
+          "harmed": 182
+        },
+        "two_passengers": {
+          "rows": 929,
+          "errors": 121,
+          "fixed": 21,
+          "harmed": 136
+        },
+        "common": {
+          "rows": 2652,
+          "errors": 186,
+          "fixed": 3,
+          "harmed": 81
+        },
+        "unanimous_matching_deck": {
+          "rows": 1256,
+          "errors": 97,
+          "fixed": 0,
+          "harmed": 17
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 144,
+          "errors": 5,
+          "fixed": 0,
+          "harmed": 17
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 1112,
+          "errors": 92,
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  },
+  "fresh_bookingmix": {
+    "profile": {
+      "single": {
+        "people": 223,
+        "errors": 20
+      },
+      "pair": {
+        "people": 7,
+        "errors": 0
+      },
+      "three_plus": {
+        "people": 0,
+        "errors": 0
+      },
+      "same_cabin": {
+        "people": 4,
+        "errors": 0
+      },
+      "different_or_unknown_cabin": {
+        "people": 3,
+        "errors": 0
+      },
+      "paid_peer": {
+        "people": 5,
+        "errors": 0
+      },
+      "sleeping_peer": {
+        "people": 2,
+        "errors": 0
+      },
+      "awake_peer": {
+        "people": 5,
+        "errors": 0
+      },
+      "focal_predicted_transported": {
+        "people": 5,
+        "errors": 0
+      },
+      "peer_base_vote_same_as_focal": {
+        "people": 6,
+        "errors": 0
+      },
+      "peer_base_vote_correct_posthoc": {
+        "people": 5,
+        "errors": 0
+      },
+      "different_outcomes_posthoc": {
+        "people": 3,
+        "errors": 0
+      }
+    },
+    "actions": {
+      "direct_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 2,
+          "harmed": 17
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 2,
+          "harmed": 17
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 2,
+          "harmed": 17
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 7
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 3
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "all_three_real": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 19
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 19
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 19
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 6
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 2
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "all_three_unrelated": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "direct_induced_only_with_real_peer": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "ratio_induced_only_with_real_peer": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_if_mixed_only_with_real_peer": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "opposite_peer_if_mixed_only_with_real_peer": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 2
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "rank_without_mixed_guard_only_with_real_peer": {
+        "all": {
+          "rows": 1033,
+          "errors": 191,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multiple": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "two_passengers": {
+          "rows": 55,
+          "errors": 4,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "common": {
+          "rows": 434,
+          "errors": 34,
+          "fixed": 0,
+          "harmed": 4
+        },
+        "unanimous_matching_deck": {
+          "rows": 230,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "unanimous_matching_deck_with_peer": {
+          "rows": 7,
+          "errors": 0,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "unanimous_matching_deck_solo": {
+          "rows": 223,
+          "errors": 20,
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}
