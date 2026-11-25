@@ -1,0 +1,220 @@
+{
+  "unordered_pairs": 4501,
+  "bookings": 1412,
+  "weak_independent_pair_nll": 0.7403306617780747,
+  "weak_dependent_pair_nll": 0.7429669366712923,
+  "strong_individual_accuracy": 0.816058897963879,
+  "grouped_results": {
+    "multi": {
+      "relational_prediction": {
+        "rows": 3797,
+        "errors": 573,
+        "fixed": 107,
+        "harmed": 136,
+        "net": -29,
+        "net_by_fold": [
+          -3,
+          2,
+          -12,
+          2,
+          4,
+          -12,
+          -9,
+          -1
+        ]
+      },
+      "only_transferred_evidence": {
+        "rows": 3797,
+        "errors": 573,
+        "fixed": 12,
+        "harmed": 13,
+        "net": -1,
+        "net_by_fold": [
+          -1,
+          3,
+          -3,
+          2,
+          1,
+          -3,
+          0,
+          0
+        ]
+      },
+      "strong_before": {
+        "rows": 3797,
+        "errors": 573,
+        "fixed": 111,
+        "harmed": 137,
+        "net": -26,
+        "net_by_fold": [
+          -2,
+          -1,
+          -6,
+          0,
+          3,
+          -13,
+          -7,
+          0
+        ]
+      },
+      "after_vs_before": {
+        "rows": 3797,
+        "errors": 599,
+        "fixed": 26,
+        "harmed": 29,
+        "net": -3,
+        "net_by_fold": [
+          -1,
+          3,
+          -6,
+          2,
+          1,
+          1,
+          -2,
+          -1
+        ]
+      }
+    },
+    "multi_unanimous": {
+      "relational_prediction": {
+        "rows": 3531,
+        "errors": 459,
+        "fixed": 19,
+        "harmed": 30,
+        "net": -11,
+        "net_by_fold": [
+          -2,
+          2,
+          -5,
+          -1,
+          1,
+          -1,
+          -2,
+          -3
+        ]
+      },
+      "only_transferred_evidence": {
+        "rows": 3531,
+        "errors": 459,
+        "fixed": 6,
+        "harmed": 8,
+        "net": -2,
+        "net_by_fold": [
+          0,
+          2,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          -2
+        ]
+      },
+      "strong_before": {
+        "rows": 3531,
+        "errors": 459,
+        "fixed": 23,
+        "harmed": 30,
+        "net": -7,
+        "net_by_fold": [
+          -2,
+          0,
+          -1,
+          -2,
+          0,
+          -2,
+          0,
+          0
+        ]
+      },
+      "after_vs_before": {
+        "rows": 3531,
+        "errors": 466,
+        "fixed": 14,
+        "harmed": 18,
+        "net": -4,
+        "net_by_fold": [
+          0,
+          2,
+          -4,
+          1,
+          1,
+          1,
+          -2,
+          -3
+        ]
+      }
+    },
+    "multi_new_orders": {
+      "relational_prediction": {
+        "rows": 55,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 4,
+        "net": -4,
+        "net_by_fold": [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -2
+        ]
+      },
+      "only_transferred_evidence": {
+        "rows": 55,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "strong_before": {
+        "rows": 55,
+        "errors": 3,
+        "fixed": 0,
+        "harmed": 4,
+        "net": -4,
+        "net_by_fold": [
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -2
+        ]
+      },
+      "after_vs_before": {
+        "rows": 55,
+        "errors": 7,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  "scope": "Eight folds hold out complete bookings. Strong margins are adapted Mitra; weak margins and pair interactions are trained on raw covariates. New orders are a subset of these same folds. Common is agreement of eleven frozen candidate versions. Pair NLL weights unordered pairs equally."
+}
