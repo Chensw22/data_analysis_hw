@@ -54,13 +54,21 @@ class JointTable(nn.Module):
                                nn.Linear(144,96),nn.LayerNorm(96),nn.SiLU(),nn.Dropout(.12),
                                nn.Linear(96,self.n*self.width))
 
-    def forward(self,values,observed):
+    def forward(self,values,observed,position=None):
         ids=torch.where(observed,values,self.mask_id)+self.offset
-        logits=self.net(self.embedding(ids).flatten(1)).reshape(-1,self.n,self.width)
+        embedding=self.embedding(ids)
+        if position is not None:
+            # Only positive bill bins receive a nonzero within-bin coordinate.
+            # Interpolate along the direction between adjacent positive-bin embeddings.
+            upper=torch.minimum(values+1,self.mask_id-1)+self.offset
+            lower=torch.maximum(values-1,torch.minimum(self.mask_id-1,torch.full_like(values,2)))+self.offset
+            slope=(self.embedding(upper)-self.embedding(lower))*.5
+            embedding=embedding+torch.where(observed,position,0.)[:,:,None]*slope
+        logits=self.net(embedding.flatten(1)).reshape(-1,self.n,self.width)
         return logits.masked_fill(self.invalid,-1e6)
 
 
-def train_model(x,cards,t,seed,joint):
+def train_model(x,cards,t,seed,joint,position=None):
     torch.manual_seed(seed)
     rng=torch.Generator().manual_seed(seed+1)
     model=JointTable(cards)
@@ -68,10 +76,12 @@ def train_model(x,cards,t,seed,joint):
     for _ in range(36):
         model.train()
         for idx in torch.randperm(len(t),generator=rng).split(256):
-            v=x[t[idx.numpy()]]
+            rows=t[idx.numpy()]
+            v=x[rows]
+            within=None if position is None else position[rows]
             full=torch.ones_like(v,dtype=torch.bool)
             full[:,TARGET]=False
-            logits=model(v,full)[:,TARGET,:2]
+            logits=model(v,full,within)[:,TARGET,:2]
             loss=F.cross_entropy(logits,v[:,TARGET])
             if joint:
                 # For a random fraction of observed fields, predict all remaining fields.
@@ -79,7 +89,7 @@ def train_model(x,cards,t,seed,joint):
                 prob=torch.rand((len(v),1),generator=rng)
                 observed=torch.rand(v.shape,generator=rng)<prob
                 observed[:,TARGET]=torch.rand(len(v),generator=rng)<.5
-                scores=model(v,observed)
+                scores=model(v,observed,within)
                 hidden=~observed
                 partial=F.cross_entropy(scores.transpose(1,2),v,reduction='none')
                 w=hidden.to(partial.dtype)
