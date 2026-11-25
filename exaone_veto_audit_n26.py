@@ -14,12 +14,18 @@ from sleeper_consensus_scope import cohort
 from sleeper_manifest_risk import design
 
 
-def audit(p108,can_lower,can_raise,exaone,v131):
+def branches(p108,can_lower,can_raise,exaone):
     base=p108>=.5
     lower=base&can_lower
     raise_it=~base&can_raise
     cannot_lower=lower&(exaone<.5)
     cannot_raise=raise_it&(exaone>=.5)
+    return lower,raise_it,cannot_lower,cannot_raise
+
+
+def audit(p108,can_lower,can_raise,exaone,v131):
+    base=p108>=.5
+    lower,raise_it,cannot_lower,cannot_raise=branches(p108,can_lower,can_raise,exaone)
     known=~(lower|raise_it)|cannot_lower|cannot_raise
     np.testing.assert_array_equal(v131[known],base[known])
     return dict(rows=len(base),possible_lower=int(lower.sum()),possible_raise=int(raise_it.sum()),
