@@ -1,0 +1,535 @@
+{
+  "existing": [
+    "Mitra2_adapted",
+    "TabDPT",
+    "LimiX2",
+    "mask_net_joint",
+    "conditional_bill_flow",
+    "latent_class_mixture",
+    "cat",
+    "budget",
+    "tabicl",
+    "v44_without_name"
+  ],
+  "added": [
+    "Nori_full",
+    "learned_clauses",
+    "routed_capsules"
+  ],
+  "common_coverage": {
+    "Nori_full": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 54,
+      "harmed": 94,
+      "net": -40,
+      "net_by_fold": [
+        -2,
+        -8,
+        -5,
+        -11,
+        -8,
+        -1,
+        2,
+        -7
+      ]
+    },
+    "learned_clauses": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 79,
+      "harmed": 146,
+      "net": -67,
+      "net_by_fold": [
+        -6,
+        -15,
+        -8,
+        -5,
+        -8,
+        -2,
+        -8,
+        -15
+      ]
+    },
+    "routed_capsules": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 91,
+      "harmed": 193,
+      "net": -102,
+      "net_by_fold": [
+        -10,
+        -8,
+        -5,
+        -17,
+        -12,
+        -16,
+        -19,
+        -15
+      ]
+    },
+    "exactly_0_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 829,
+      "harmed": 6099,
+      "net": -5270,
+      "net_by_fold": [
+        -663,
+        -647,
+        -709,
+        -643,
+        -683,
+        -600,
+        -667,
+        -658
+      ]
+    },
+    "exactly_1_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 224,
+      "harmed": 433,
+      "net": -209,
+      "net_by_fold": [
+        -18,
+        -31,
+        -18,
+        -33,
+        -28,
+        -19,
+        -25,
+        -37
+      ]
+    },
+    "exactly_2_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 80,
+      "harmed": 130,
+      "net": -50,
+      "net_by_fold": [
+        -2,
+        -5,
+        -10,
+        3,
+        -7,
+        -14,
+        -9,
+        -6
+      ]
+    },
+    "exactly_3_challenges": {
+      "rows": 7870,
+      "errors": 1166,
+      "fixed": 33,
+      "harmed": 42,
+      "net": -9,
+      "net_by_fold": [
+        -3,
+        -3,
+        1,
+        0,
+        -4,
+        -1,
+        3,
+        -2
+      ]
+    }
+  },
+  "comparisons": {
+    "shuffled": {
+      "all": {
+        "baseline_correct": 7092,
+        "augmented_correct": 7066,
+        "against_baseline": {
+          "rows": 8693,
+          "errors": 1601,
+          "fixed": 65,
+          "harmed": 91,
+          "net": -26,
+          "net_by_fold": [
+            -2,
+            -7,
+            -6,
+            -4,
+            0,
+            -6,
+            0,
+            -1
+          ]
+        }
+      },
+      "known": {
+        "baseline_correct": 7004,
+        "augmented_correct": 6980,
+        "against_baseline": {
+          "rows": 8532,
+          "errors": 1528,
+          "fixed": 59,
+          "harmed": 83,
+          "net": -24,
+          "net_by_fold": [
+            0,
+            -9,
+            -6,
+            -3,
+            2,
+            -7,
+            0,
+            -1
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 35,
+          "harmed": 53,
+          "net": -18,
+          "net_by_fold": [
+            -1,
+            -9,
+            0,
+            -3,
+            1,
+            -7,
+            0,
+            1
+          ]
+        },
+        "against_release": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 258,
+          "harmed": 369,
+          "net": -111,
+          "net_by_fold": [
+            -3,
+            -20,
+            -18,
+            -4,
+            -15,
+            -13,
+            -15,
+            -23
+          ]
+        }
+      },
+      "common": {
+        "baseline_correct": 6672,
+        "augmented_correct": 6666,
+        "against_baseline": {
+          "rows": 7870,
+          "errors": 1198,
+          "fixed": 39,
+          "harmed": 45,
+          "net": -6,
+          "net_by_fold": [
+            -1,
+            -5,
+            -2,
+            -1,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 23,
+          "harmed": 32,
+          "net": -9,
+          "net_by_fold": [
+            -2,
+            -7,
+            1,
+            -1,
+            0,
+            -3,
+            1,
+            2
+          ]
+        },
+        "against_release": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 85,
+          "harmed": 123,
+          "net": -38,
+          "net_by_fold": [
+            0,
+            -10,
+            -7,
+            -4,
+            -9,
+            -5,
+            -1,
+            -2
+          ]
+        }
+      },
+      "fresh": {
+        "baseline_correct": 820,
+        "augmented_correct": 813,
+        "against_baseline": {
+          "rows": 1033,
+          "errors": 213,
+          "fixed": 5,
+          "harmed": 12,
+          "net": -7,
+          "net_by_fold": [
+            -3,
+            -1,
+            -1,
+            0,
+            -1,
+            -3,
+            1,
+            1
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 5,
+          "harmed": 7,
+          "net": -2,
+          "net_by_fold": [
+            -3,
+            0,
+            1,
+            0,
+            0,
+            -2,
+            1,
+            1
+          ]
+        },
+        "against_release": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 28,
+          "harmed": 58,
+          "net": -30,
+          "net_by_fold": [
+            -2,
+            -6,
+            -4,
+            -2,
+            -1,
+            1,
+            -3,
+            -13
+          ]
+        }
+      }
+    },
+    "ordered": {
+      "all": {
+        "baseline_correct": 7089,
+        "augmented_correct": 7066,
+        "against_baseline": {
+          "rows": 8693,
+          "errors": 1604,
+          "fixed": 56,
+          "harmed": 79,
+          "net": -23,
+          "net_by_fold": [
+            4,
+            -10,
+            -2,
+            -1,
+            4,
+            -4,
+            -9,
+            -5
+          ]
+        }
+      },
+      "known": {
+        "baseline_correct": 7003,
+        "augmented_correct": 6984,
+        "against_baseline": {
+          "rows": 8532,
+          "errors": 1529,
+          "fixed": 52,
+          "harmed": 71,
+          "net": -19,
+          "net_by_fold": [
+            6,
+            -9,
+            -2,
+            -1,
+            2,
+            -3,
+            -9,
+            -3
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 26,
+          "harmed": 47,
+          "net": -21,
+          "net_by_fold": [
+            3,
+            -8,
+            -2,
+            -1,
+            2,
+            -3,
+            -10,
+            -2
+          ]
+        },
+        "against_release": {
+          "rows": 8532,
+          "errors": 1441,
+          "fixed": 255,
+          "harmed": 362,
+          "net": -107,
+          "net_by_fold": [
+            1,
+            -19,
+            -11,
+            -1,
+            -20,
+            -12,
+            -21,
+            -24
+          ]
+        }
+      },
+      "common": {
+        "baseline_correct": 6674,
+        "augmented_correct": 6667,
+        "against_baseline": {
+          "rows": 7870,
+          "errors": 1196,
+          "fixed": 37,
+          "harmed": 44,
+          "net": -7,
+          "net_by_fold": [
+            4,
+            -9,
+            -1,
+            0,
+            4,
+            2,
+            -7,
+            0
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 21,
+          "harmed": 31,
+          "net": -10,
+          "net_by_fold": [
+            2,
+            -7,
+            0,
+            0,
+            2,
+            0,
+            -7,
+            0
+          ]
+        },
+        "against_release": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 80,
+          "harmed": 117,
+          "net": -37,
+          "net_by_fold": [
+            7,
+            -10,
+            -4,
+            -2,
+            -11,
+            -5,
+            -9,
+            -3
+          ]
+        }
+      },
+      "fresh": {
+        "baseline_correct": 813,
+        "augmented_correct": 812,
+        "against_baseline": {
+          "rows": 1033,
+          "errors": 220,
+          "fixed": 6,
+          "harmed": 7,
+          "net": -1,
+          "net_by_fold": [
+            1,
+            -2,
+            1,
+            1,
+            -1,
+            0,
+            -1,
+            0
+          ]
+        },
+        "new_challenges_only": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 3,
+          "harmed": 6,
+          "net": -3,
+          "net_by_fold": [
+            0,
+            -2,
+            -1,
+            1,
+            0,
+            0,
+            -1,
+            0
+          ]
+        },
+        "against_release": {
+          "rows": 1033,
+          "errors": 190,
+          "fixed": 26,
+          "harmed": 57,
+          "net": -31,
+          "net_by_fold": [
+            -2,
+            -6,
+            -7,
+            -1,
+            -3,
+            2,
+            -2,
+            -12
+          ]
+        }
+      }
+    }
+  },
+  "previously_unopposed": {
+    "rows": 5189,
+    "errors": 513,
+    "fixed": 49,
+    "harmed": 142,
+    "net": -93,
+    "net_by_fold": [
+      -16,
+      -13,
+      -6,
+      -12,
+      -7,
+      -20,
+      -7,
+      -12
+    ]
+  }
+}

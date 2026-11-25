@@ -1,0 +1,565 @@
+{
+  "anchor_models": [
+    "Mitra2_adapted",
+    "TabDPT",
+    "LimiX2",
+    "mask_net_joint",
+    "conditional_bill_flow",
+    "latent_class_mixture",
+    "cat",
+    "budget",
+    "tabicl",
+    "v44_without_name"
+  ],
+  "new_models": [
+    "Nori_full",
+    "learned_clauses",
+    "routed_capsules"
+  ],
+  "protocols": {
+    "shuffled": {
+      "train_range": [
+        115,
+        171
+      ],
+      "scopes": {
+        "all": {
+          "eligible": 969,
+          "available": {
+            "rows": 7906,
+            "errors": 1191,
+            "fixed": 360,
+            "harmed": 609,
+            "net": -249,
+            "net_by_fold": [
+              -13,
+              -34,
+              -31,
+              -27,
+              -34,
+              -36,
+              -29,
+              -45
+            ]
+          },
+          "baseline": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 84,
+            "harmed": 107,
+            "net": -23,
+            "net_by_fold": [
+              7,
+              -3,
+              -3,
+              -5,
+              -3,
+              -8,
+              -6,
+              -2
+            ]
+          },
+          "referee": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 100,
+            "harmed": 115,
+            "net": -15,
+            "net_by_fold": [
+              6,
+              -5,
+              -1,
+              -2,
+              -1,
+              -1,
+              -7,
+              -4
+            ]
+          },
+          "incremental": {
+            "rows": 8532,
+            "errors": 1464,
+            "fixed": 49,
+            "harmed": 41,
+            "net": 8,
+            "net_by_fold": [
+              -1,
+              -2,
+              2,
+              3,
+              2,
+              7,
+              -1,
+              -2
+            ]
+          },
+          "exclusive": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 31,
+            "harmed": 26,
+            "net": 5,
+            "net_by_fold": [
+              2,
+              -2,
+              3,
+              2,
+              0,
+              2,
+              0,
+              -2
+            ]
+          }
+        },
+        "common": {
+          "eligible": 787,
+          "available": {
+            "rows": 7663,
+            "errors": 1083,
+            "fixed": 275,
+            "harmed": 512,
+            "net": -237,
+            "net_by_fold": [
+              -20,
+              -31,
+              -24,
+              -28,
+              -35,
+              -27,
+              -28,
+              -44
+            ]
+          },
+          "baseline": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 49,
+            "harmed": 65,
+            "net": -16,
+            "net_by_fold": [
+              2,
+              -3,
+              -2,
+              -4,
+              -2,
+              -2,
+              -3,
+              -2
+            ]
+          },
+          "referee": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 63,
+            "harmed": 76,
+            "net": -13,
+            "net_by_fold": [
+              1,
+              -4,
+              -1,
+              -2,
+              -1,
+              2,
+              -4,
+              -4
+            ]
+          },
+          "incremental": {
+            "rows": 7870,
+            "errors": 1182,
+            "fixed": 35,
+            "harmed": 32,
+            "net": 3,
+            "net_by_fold": [
+              -1,
+              -1,
+              1,
+              2,
+              1,
+              4,
+              -1,
+              -2
+            ]
+          },
+          "exclusive": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 25,
+            "harmed": 21,
+            "net": 4,
+            "net_by_fold": [
+              1,
+              -2,
+              2,
+              2,
+              0,
+              3,
+              0,
+              -2
+            ]
+          }
+        },
+        "fresh": {
+          "eligible": 121,
+          "available": {
+            "rows": 956,
+            "errors": 169,
+            "fixed": 51,
+            "harmed": 70,
+            "net": -19,
+            "net_by_fold": [
+              -4,
+              2,
+              5,
+              -3,
+              -2,
+              -6,
+              1,
+              -12
+            ]
+          },
+          "baseline": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 12,
+            "harmed": 15,
+            "net": -3,
+            "net_by_fold": [
+              -2,
+              2,
+              -2,
+              -1,
+              0,
+              0,
+              1,
+              -1
+            ]
+          },
+          "referee": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 14,
+            "harmed": 14,
+            "net": 0,
+            "net_by_fold": [
+              -2,
+              3,
+              -1,
+              0,
+              1,
+              -1,
+              1,
+              -1
+            ]
+          },
+          "incremental": {
+            "rows": 1033,
+            "errors": 193,
+            "fixed": 9,
+            "harmed": 6,
+            "net": 3,
+            "net_by_fold": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              -1,
+              0,
+              0
+            ]
+          },
+          "exclusive": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 4,
+            "harmed": 4,
+            "net": 0,
+            "net_by_fold": [
+              1,
+              0,
+              0,
+              0,
+              1,
+              -1,
+              0,
+              -1
+            ]
+          }
+        }
+      }
+    },
+    "ordered": {
+      "train_range": [
+        111,
+        174
+      ],
+      "scopes": {
+        "all": {
+          "eligible": 969,
+          "available": {
+            "rows": 7906,
+            "errors": 1191,
+            "fixed": 360,
+            "harmed": 609,
+            "net": -249,
+            "net_by_fold": [
+              -13,
+              -34,
+              -31,
+              -27,
+              -34,
+              -36,
+              -29,
+              -45
+            ]
+          },
+          "baseline": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 92,
+            "harmed": 95,
+            "net": -3,
+            "net_by_fold": [
+              10,
+              -3,
+              1,
+              -2,
+              6,
+              -8,
+              -4,
+              -3
+            ]
+          },
+          "referee": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 101,
+            "harmed": 116,
+            "net": -15,
+            "net_by_fold": [
+              12,
+              -5,
+              -1,
+              -2,
+              -3,
+              -7,
+              -3,
+              -6
+            ]
+          },
+          "incremental": {
+            "rows": 8532,
+            "errors": 1444,
+            "fixed": 46,
+            "harmed": 58,
+            "net": -12,
+            "net_by_fold": [
+              2,
+              -2,
+              -2,
+              0,
+              -9,
+              1,
+              1,
+              -3
+            ]
+          },
+          "exclusive": {
+            "rows": 8532,
+            "errors": 1441,
+            "fixed": 24,
+            "harmed": 43,
+            "net": -19,
+            "net_by_fold": [
+              -1,
+              -1,
+              -2,
+              -1,
+              -6,
+              -3,
+              -2,
+              -3
+            ]
+          }
+        },
+        "common": {
+          "eligible": 787,
+          "available": {
+            "rows": 7663,
+            "errors": 1083,
+            "fixed": 275,
+            "harmed": 512,
+            "net": -237,
+            "net_by_fold": [
+              -20,
+              -31,
+              -24,
+              -28,
+              -35,
+              -27,
+              -28,
+              -44
+            ]
+          },
+          "baseline": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 53,
+            "harmed": 60,
+            "net": -7,
+            "net_by_fold": [
+              6,
+              -3,
+              0,
+              -2,
+              3,
+              -2,
+              -5,
+              -4
+            ]
+          },
+          "referee": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 61,
+            "harmed": 76,
+            "net": -15,
+            "net_by_fold": [
+              7,
+              -5,
+              -2,
+              -3,
+              -2,
+              -2,
+              -2,
+              -6
+            ]
+          },
+          "incremental": {
+            "rows": 7870,
+            "errors": 1173,
+            "fixed": 32,
+            "harmed": 40,
+            "net": -8,
+            "net_by_fold": [
+              1,
+              -2,
+              -2,
+              -1,
+              -5,
+              0,
+              3,
+              -2
+            ]
+          },
+          "exclusive": {
+            "rows": 7870,
+            "errors": 1166,
+            "fixed": 19,
+            "harmed": 29,
+            "net": -10,
+            "net_by_fold": [
+              0,
+              -1,
+              -2,
+              -1,
+              -3,
+              -1,
+              0,
+              -2
+            ]
+          }
+        },
+        "fresh": {
+          "eligible": 121,
+          "available": {
+            "rows": 956,
+            "errors": 169,
+            "fixed": 51,
+            "harmed": 70,
+            "net": -19,
+            "net_by_fold": [
+              -4,
+              2,
+              5,
+              -3,
+              -2,
+              -6,
+              1,
+              -12
+            ]
+          },
+          "baseline": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 13,
+            "harmed": 12,
+            "net": 1,
+            "net_by_fold": [
+              1,
+              1,
+              0,
+              -1,
+              1,
+              -1,
+              2,
+              -2
+            ]
+          },
+          "referee": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 15,
+            "harmed": 15,
+            "net": 0,
+            "net_by_fold": [
+              1,
+              2,
+              0,
+              0,
+              -1,
+              -2,
+              2,
+              -2
+            ]
+          },
+          "incremental": {
+            "rows": 1033,
+            "errors": 189,
+            "fixed": 5,
+            "harmed": 6,
+            "net": -1,
+            "net_by_fold": [
+              0,
+              1,
+              0,
+              1,
+              -2,
+              -1,
+              0,
+              0
+            ]
+          },
+          "exclusive": {
+            "rows": 1033,
+            "errors": 190,
+            "fixed": 2,
+            "harmed": 6,
+            "net": -4,
+            "net_by_fold": [
+              0,
+              0,
+              0,
+              0,
+              -2,
+              -2,
+              0,
+              0
+            ]
+          }
+        }
+      }
+    }
+  }
+}
