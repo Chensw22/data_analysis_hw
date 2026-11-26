@@ -1,0 +1,929 @@
+{
+  "source": "https://doi.org/10.1214/14-AOS1220",
+  "application": "Three nested independent pilots per outer fold. Local acceptance probability is .15+.85 times the surprise probability of the observed label. TabICL log odds are restored to the unsampled population using the known log acceptance odds.",
+  "accuracy": {
+    "pilot": 0.8068560911077879,
+    "unadjusted": 0.8004141263085242,
+    "adjusted": 0.8175543540779938,
+    "uniform": 0.8173242839065915,
+    "full": 0.8208903715633268
+  },
+  "training": [
+    {
+      "fold": 0,
+      "rows": 7637,
+      "retained": 2931,
+      "source_errors": 1481,
+      "sampled_errors": 1083,
+      "uniform_errors": 571
+    },
+    {
+      "fold": 1,
+      "rows": 7640,
+      "retained": 2895,
+      "source_errors": 1486,
+      "sampled_errors": 1073,
+      "uniform_errors": 566
+    },
+    {
+      "fold": 2,
+      "rows": 7563,
+      "retained": 2802,
+      "source_errors": 1477,
+      "sampled_errors": 1068,
+      "uniform_errors": 532
+    },
+    {
+      "fold": 3,
+      "rows": 7620,
+      "retained": 2909,
+      "source_errors": 1471,
+      "sampled_errors": 1059,
+      "uniform_errors": 568
+    },
+    {
+      "fold": 4,
+      "rows": 7571,
+      "retained": 2859,
+      "source_errors": 1439,
+      "sampled_errors": 1048,
+      "uniform_errors": 531
+    },
+    {
+      "fold": 5,
+      "rows": 7621,
+      "retained": 2833,
+      "source_errors": 1450,
+      "sampled_errors": 1038,
+      "uniform_errors": 535
+    },
+    {
+      "fold": 6,
+      "rows": 7569,
+      "retained": 2768,
+      "source_errors": 1451,
+      "sampled_errors": 1037,
+      "uniform_errors": 535
+    },
+    {
+      "fold": 7,
+      "rows": 7630,
+      "retained": 2841,
+      "source_errors": 1464,
+      "sampled_errors": 1032,
+      "uniform_errors": 569
+    },
+    {
+      "fold": 8,
+      "rows": 8693,
+      "retained": 3254,
+      "source_errors": 1678,
+      "sampled_errors": 1188,
+      "uniform_errors": 641
+    }
+  ],
+  "against_161": {
+    "pilot": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 252,
+        "harmed": 393,
+        "net": -141,
+        "net_by_fold": [
+          -13,
+          -8,
+          -11,
+          -12,
+          -16,
+          -12,
+          -22,
+          -47
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 111,
+        "harmed": 173,
+        "net": -62,
+        "net_by_fold": [
+          -2,
+          -7,
+          -8,
+          -7,
+          -6,
+          -6,
+          -11,
+          -15
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 26,
+        "harmed": 52,
+        "net": -26,
+        "net_by_fold": [
+          -6,
+          -2,
+          0,
+          -2,
+          1,
+          -3,
+          -3,
+          -11
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 0,
+        "harmed": 1,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 25,
+        "harmed": 40,
+        "net": -15,
+        "net_by_fold": [
+          1,
+          -9,
+          -1,
+          1,
+          -4,
+          3,
+          0,
+          -6
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 16,
+        "harmed": 26,
+        "net": -10,
+        "net_by_fold": [
+          1,
+          -1,
+          -1,
+          -1,
+          -3,
+          -3,
+          -1,
+          -1
+        ]
+      }
+    },
+    "unadjusted": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 444,
+        "harmed": 649,
+        "net": -205,
+        "net_by_fold": [
+          -30,
+          -28,
+          -16,
+          -18,
+          -27,
+          -5,
+          -25,
+          -56
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 336,
+        "harmed": 540,
+        "net": -204,
+        "net_by_fold": [
+          -30,
+          -28,
+          -11,
+          -28,
+          -30,
+          -9,
+          -17,
+          -51
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 68,
+        "harmed": 86,
+        "net": -18,
+        "net_by_fold": [
+          -8,
+          -6,
+          4,
+          -1,
+          -1,
+          -2,
+          1,
+          -5
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 39,
+        "harmed": 78,
+        "net": -39,
+        "net_by_fold": [
+          -3,
+          -4,
+          -6,
+          -6,
+          -3,
+          -4,
+          0,
+          -13
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 48,
+        "harmed": 120,
+        "net": -72,
+        "net_by_fold": [
+          -3,
+          -6,
+          -9,
+          -8,
+          -7,
+          -4,
+          -14,
+          -21
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 172,
+        "harmed": 256,
+        "net": -84,
+        "net_by_fold": [
+          -17,
+          -6,
+          -2,
+          -3,
+          -19,
+          -14,
+          -3,
+          -20
+        ]
+      }
+    },
+    "adjusted": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 258,
+        "harmed": 308,
+        "net": -50,
+        "net_by_fold": [
+          -12,
+          2,
+          1,
+          -8,
+          -11,
+          9,
+          -4,
+          -27
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 141,
+        "harmed": 190,
+        "net": -49,
+        "net_by_fold": [
+          -8,
+          0,
+          0,
+          -10,
+          -14,
+          1,
+          -1,
+          -17
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 37,
+        "harmed": 44,
+        "net": -7,
+        "net_by_fold": [
+          -5,
+          -1,
+          6,
+          0,
+          2,
+          1,
+          -3,
+          -7
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 1,
+        "harmed": 5,
+        "net": -4,
+        "net_by_fold": [
+          0,
+          -1,
+          0,
+          -3,
+          0,
+          1,
+          -1,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 21,
+        "harmed": 46,
+        "net": -25,
+        "net_by_fold": [
+          -2,
+          -1,
+          -4,
+          -3,
+          -2,
+          0,
+          -7,
+          -6
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 55,
+        "harmed": 53,
+        "net": 2,
+        "net_by_fold": [
+          1,
+          3,
+          3,
+          4,
+          -8,
+          -1,
+          4,
+          -4
+        ]
+      }
+    },
+    "uniform": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 246,
+        "harmed": 313,
+        "net": -67,
+        "net_by_fold": [
+          -20,
+          2,
+          -2,
+          2,
+          -11,
+          -6,
+          -5,
+          -27
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 125,
+        "harmed": 176,
+        "net": -51,
+        "net_by_fold": [
+          -14,
+          -7,
+          -2,
+          -3,
+          -9,
+          -6,
+          -1,
+          -9
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 24,
+        "harmed": 45,
+        "net": -21,
+        "net_by_fold": [
+          -8,
+          1,
+          1,
+          1,
+          2,
+          -2,
+          -2,
+          -14
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 2,
+        "harmed": 6,
+        "net": -4,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          -3,
+          1,
+          -1,
+          -1,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 23,
+        "harmed": 45,
+        "net": -22,
+        "net_by_fold": [
+          -1,
+          -7,
+          -1,
+          -1,
+          -5,
+          2,
+          -5,
+          -4
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 41,
+        "harmed": 53,
+        "net": -12,
+        "net_by_fold": [
+          -3,
+          0,
+          0,
+          1,
+          -6,
+          -3,
+          1,
+          -2
+        ]
+      }
+    },
+    "full": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 195,
+        "harmed": 230,
+        "net": -35,
+        "net_by_fold": [
+          -9,
+          3,
+          10,
+          -5,
+          -10,
+          2,
+          -8,
+          -18
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 94,
+        "harmed": 137,
+        "net": -43,
+        "net_by_fold": [
+          -7,
+          0,
+          6,
+          -9,
+          -13,
+          -2,
+          -6,
+          -12
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 28,
+        "harmed": 35,
+        "net": -7,
+        "net_by_fold": [
+          -1,
+          -1,
+          6,
+          1,
+          -2,
+          -2,
+          -2,
+          -6
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 1,
+        "harmed": 5,
+        "net": -4,
+        "net_by_fold": [
+          0,
+          -1,
+          -1,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 12,
+        "harmed": 28,
+        "net": -16,
+        "net_by_fold": [
+          -3,
+          -2,
+          0,
+          1,
+          -4,
+          -1,
+          -3,
+          -4
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 40,
+        "harmed": 43,
+        "net": -3,
+        "net_by_fold": [
+          -1,
+          3,
+          6,
+          -2,
+          -7,
+          1,
+          -1,
+          -2
+        ]
+      }
+    },
+    "new_only": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 71,
+        "harmed": 84,
+        "net": -13,
+        "net_by_fold": [
+          -3,
+          -1,
+          -5,
+          -4,
+          -5,
+          7,
+          2,
+          -4
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 54,
+        "harmed": 63,
+        "net": -9,
+        "net_by_fold": [
+          0,
+          0,
+          -4,
+          -4,
+          -3,
+          3,
+          2,
+          -3
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 11,
+        "harmed": 9,
+        "net": 2,
+        "net_by_fold": [
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          2,
+          0,
+          1
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 1,
+        "harmed": 1,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          -1,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 7,
+        "harmed": 17,
+        "net": -10,
+        "net_by_fold": [
+          0,
+          0,
+          -4,
+          -3,
+          1,
+          1,
+          -3,
+          -2
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 23,
+        "harmed": 18,
+        "net": 5,
+        "net_by_fold": [
+          0,
+          2,
+          -1,
+          2,
+          -1,
+          -2,
+          4,
+          1
+        ]
+      }
+    },
+    "both": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 156,
+        "harmed": 177,
+        "net": -21,
+        "net_by_fold": [
+          -5,
+          4,
+          8,
+          -1,
+          -8,
+          3,
+          -6,
+          -16
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 72,
+        "harmed": 105,
+        "net": -33,
+        "net_by_fold": [
+          -5,
+          0,
+          6,
+          -4,
+          -12,
+          -2,
+          -4,
+          -12
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 21,
+        "harmed": 26,
+        "net": -5,
+        "net_by_fold": [
+          -1,
+          0,
+          4,
+          1,
+          -1,
+          -2,
+          -2,
+          -4
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 0,
+        "harmed": 3,
+        "net": -3,
+        "net_by_fold": [
+          0,
+          -1,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 11,
+        "harmed": 22,
+        "net": -11,
+        "net_by_fold": [
+          -2,
+          -1,
+          1,
+          1,
+          -3,
+          -1,
+          -3,
+          -3
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 28,
+        "harmed": 29,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          2,
+          4,
+          2,
+          -7,
+          2,
+          -1,
+          -3
+        ]
+      }
+    },
+    "two_samples": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 143,
+        "harmed": 182,
+        "net": -39,
+        "net_by_fold": [
+          -13,
+          -1,
+          0,
+          1,
+          -5,
+          3,
+          -3,
+          -21
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 59,
+        "harmed": 96,
+        "net": -37,
+        "net_by_fold": [
+          -10,
+          -4,
+          -1,
+          -2,
+          -10,
+          -1,
+          0,
+          -9
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 17,
+        "harmed": 28,
+        "net": -11,
+        "net_by_fold": [
+          -5,
+          -1,
+          2,
+          1,
+          3,
+          1,
+          -3,
+          -9
+        ]
+      },
+      "all31_agree": {
+        "rows": 3861,
+        "errors": 266,
+        "fixed": 0,
+        "harmed": 3,
+        "net": -3,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          -3,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 12,
+        "harmed": 25,
+        "net": -13,
+        "net_by_fold": [
+          -2,
+          -1,
+          -1,
+          0,
+          -3,
+          0,
+          -2,
+          -4
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 18,
+        "harmed": 22,
+        "net": -4,
+        "net_by_fold": [
+          1,
+          -3,
+          0,
+          3,
+          -5,
+          1,
+          1,
+          -2
+        ]
+      }
+    }
+  },
+  "test_changes": {
+    "pilot": 389,
+    "unadjusted": 499,
+    "adjusted": 290,
+    "uniform": 314,
+    "full": 261,
+    "new_only": 56,
+    "both": 194,
+    "two_samples": 193
+  }
+}
