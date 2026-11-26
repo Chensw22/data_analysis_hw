@@ -1,0 +1,813 @@
+{
+  "comparison": "Same 1024 distinct training bookings per bank and same exact class count; full-fare features and query batch held constant.",
+  "against_161": {
+    "specific": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 245,
+        "harmed": 372,
+        "net": -127,
+        "net_by_fold": [
+          -18,
+          -13,
+          -9,
+          -18,
+          -18,
+          -2,
+          -18,
+          -31
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 145,
+        "harmed": 250,
+        "net": -105,
+        "net_by_fold": [
+          -20,
+          -14,
+          -6,
+          -17,
+          -15,
+          -2,
+          -15,
+          -16
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 38,
+        "harmed": 44,
+        "net": -6,
+        "net_by_fold": [
+          1,
+          -4,
+          2,
+          -1,
+          2,
+          -1,
+          0,
+          -5
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 166,
+        "harmed": 287,
+        "net": -121,
+        "net_by_fold": [
+          -10,
+          -15,
+          -11,
+          -15,
+          -12,
+          -7,
+          -22,
+          -29
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 79,
+        "harmed": 85,
+        "net": -6,
+        "net_by_fold": [
+          -8,
+          2,
+          2,
+          -3,
+          -6,
+          5,
+          4,
+          -2
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 43,
+        "harmed": 79,
+        "net": -36,
+        "net_by_fold": [
+          -8,
+          -6,
+          -3,
+          0,
+          -3,
+          0,
+          -11,
+          -5
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 25,
+        "harmed": 28,
+        "net": -3,
+        "net_by_fold": [
+          -4,
+          1,
+          -1,
+          1,
+          0,
+          -2,
+          2,
+          0
+        ]
+      }
+    },
+    "matched": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 280,
+        "harmed": 595,
+        "net": -315,
+        "net_by_fold": [
+          -26,
+          -39,
+          -30,
+          -40,
+          -24,
+          -40,
+          -67,
+          -49
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 180,
+        "harmed": 415,
+        "net": -235,
+        "net_by_fold": [
+          -19,
+          -35,
+          -21,
+          -41,
+          -20,
+          -25,
+          -53,
+          -21
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 42,
+        "harmed": 82,
+        "net": -40,
+        "net_by_fold": [
+          1,
+          -7,
+          -4,
+          -3,
+          1,
+          -15,
+          -5,
+          -8
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 205,
+        "harmed": 508,
+        "net": -303,
+        "net_by_fold": [
+          -22,
+          -40,
+          -35,
+          -34,
+          -17,
+          -41,
+          -67,
+          -47
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 75,
+        "harmed": 87,
+        "net": -12,
+        "net_by_fold": [
+          -4,
+          1,
+          5,
+          -6,
+          -7,
+          1,
+          0,
+          -2
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 5,
+        "harmed": 7,
+        "net": -2,
+        "net_by_fold": [
+          -2,
+          -2,
+          -1,
+          0,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    },
+    "matched_prior_restored": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 249,
+        "harmed": 473,
+        "net": -224,
+        "net_by_fold": [
+          -28,
+          -19,
+          -20,
+          -19,
+          -39,
+          -27,
+          -30,
+          -42
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 150,
+        "harmed": 314,
+        "net": -164,
+        "net_by_fold": [
+          -22,
+          -20,
+          -14,
+          -22,
+          -34,
+          -12,
+          -24,
+          -16
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 32,
+        "harmed": 60,
+        "net": -28,
+        "net_by_fold": [
+          -3,
+          -3,
+          -3,
+          0,
+          -3,
+          -6,
+          -1,
+          -9
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 159,
+        "harmed": 355,
+        "net": -196,
+        "net_by_fold": [
+          -20,
+          -20,
+          -24,
+          -13,
+          -24,
+          -27,
+          -28,
+          -40
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 90,
+        "harmed": 118,
+        "net": -28,
+        "net_by_fold": [
+          -8,
+          1,
+          4,
+          -6,
+          -15,
+          0,
+          -2,
+          -2
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 28,
+        "harmed": 57,
+        "net": -29,
+        "net_by_fold": [
+          -7,
+          -9,
+          -7,
+          2,
+          -2,
+          -1,
+          -4,
+          -1
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 24,
+        "harmed": 41,
+        "net": -17,
+        "net_by_fold": [
+          -4,
+          -1,
+          0,
+          0,
+          -9,
+          -1,
+          -2,
+          0
+        ]
+      }
+    },
+    "context_only": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 102,
+        "harmed": 139,
+        "net": -37,
+        "net_by_fold": [
+          -12,
+          3,
+          0,
+          -1,
+          -14,
+          5,
+          -7,
+          -11
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 64,
+        "harmed": 105,
+        "net": -41,
+        "net_by_fold": [
+          -13,
+          -3,
+          0,
+          1,
+          -8,
+          -3,
+          -9,
+          -6
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 16,
+        "harmed": 15,
+        "net": 1,
+        "net_by_fold": [
+          -1,
+          -1,
+          3,
+          -1,
+          1,
+          2,
+          1,
+          -3
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 78,
+        "harmed": 115,
+        "net": -37,
+        "net_by_fold": [
+          -8,
+          2,
+          -1,
+          -1,
+          -14,
+          7,
+          -11,
+          -11
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 24,
+        "harmed": 24,
+        "net": 0,
+        "net_by_fold": [
+          -4,
+          1,
+          1,
+          0,
+          0,
+          -2,
+          4,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 37,
+        "harmed": 74,
+        "net": -37,
+        "net_by_fold": [
+          -7,
+          -4,
+          -2,
+          0,
+          -7,
+          -1,
+          -11,
+          -5
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 23,
+        "harmed": 23,
+        "net": 0,
+        "net_by_fold": [
+          -4,
+          1,
+          1,
+          1,
+          0,
+          -2,
+          3,
+          0
+        ]
+      }
+    },
+    "with_global": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 49,
+        "harmed": 69,
+        "net": -20,
+        "net_by_fold": [
+          -2,
+          -3,
+          -2,
+          -5,
+          -6,
+          7,
+          -4,
+          -5
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 22,
+        "harmed": 39,
+        "net": -17,
+        "net_by_fold": [
+          -2,
+          -4,
+          -4,
+          -4,
+          -5,
+          4,
+          -1,
+          -1
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 4,
+        "harmed": 5,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 16,
+        "harmed": 33,
+        "net": -17,
+        "net_by_fold": [
+          0,
+          -2,
+          -2,
+          -4,
+          -2,
+          1,
+          -5,
+          -3
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 33,
+        "harmed": 36,
+        "net": -3,
+        "net_by_fold": [
+          -2,
+          -1,
+          0,
+          -1,
+          -4,
+          6,
+          1,
+          -2
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 1,
+        "harmed": 2,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          -1,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 2,
+        "harmed": 5,
+        "net": -3,
+        "net_by_fold": [
+          0,
+          0,
+          -2,
+          0,
+          0,
+          0,
+          -1,
+          0
+        ]
+      }
+    },
+    "without_matched": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 105,
+        "harmed": 157,
+        "net": -52,
+        "net_by_fold": [
+          -12,
+          1,
+          -4,
+          -2,
+          -15,
+          3,
+          -11,
+          -12
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 67,
+        "harmed": 112,
+        "net": -45,
+        "net_by_fold": [
+          -13,
+          -4,
+          -3,
+          1,
+          -8,
+          -2,
+          -10,
+          -6
+        ]
+      },
+      "unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 16,
+        "harmed": 16,
+        "net": 0,
+        "net_by_fold": [
+          -1,
+          -1,
+          3,
+          -1,
+          1,
+          1,
+          1,
+          -3
+        ]
+      },
+      "awake_paid": {
+        "rows": 4905,
+        "errors": 797,
+        "fixed": 79,
+        "harmed": 128,
+        "net": -49,
+        "net_by_fold": [
+          -8,
+          0,
+          -3,
+          -2,
+          -15,
+          5,
+          -14,
+          -12
+        ]
+      },
+      "sleeping_no_positive": {
+        "rows": 2925,
+        "errors": 482,
+        "fixed": 26,
+        "harmed": 29,
+        "net": -3,
+        "net_by_fold": [
+          -4,
+          1,
+          -1,
+          0,
+          0,
+          -2,
+          3,
+          0
+        ]
+      },
+      "hard_awake": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 38,
+        "harmed": 76,
+        "net": -38,
+        "net_by_fold": [
+          -7,
+          -5,
+          -3,
+          0,
+          -7,
+          0,
+          -11,
+          -5
+        ]
+      },
+      "hard_sleep": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 25,
+        "harmed": 28,
+        "net": -3,
+        "net_by_fold": [
+          -4,
+          1,
+          -1,
+          1,
+          0,
+          -2,
+          2,
+          0
+        ]
+      }
+    }
+  },
+  "specific_vs_matched": {
+    "awake_paid": {
+      "matched": {
+        "rows": 4921,
+        "errors": 1106,
+        "fixed": 429,
+        "harmed": 250,
+        "net": 179,
+        "net_by_fold": [
+          12,
+          25,
+          23,
+          19,
+          6,
+          31,
+          45,
+          18
+        ]
+      },
+      "matched_prior_restored": {
+        "rows": 4921,
+        "errors": 1003,
+        "fixed": 297,
+        "harmed": 221,
+        "net": 76,
+        "net_by_fold": [
+          10,
+          5,
+          13,
+          -2,
+          14,
+          19,
+          6,
+          11
+        ]
+      }
+    },
+    "sleep_unpaid": {
+      "matched": {
+        "rows": 3037,
+        "errors": 554,
+        "fixed": 64,
+        "harmed": 60,
+        "net": 4,
+        "net_by_fold": [
+          -1,
+          1,
+          -4,
+          2,
+          -1,
+          4,
+          3,
+          0
+        ]
+      },
+      "matched_prior_restored": {
+        "rows": 3037,
+        "errors": 569,
+        "fixed": 102,
+        "harmed": 83,
+        "net": 19,
+        "net_by_fold": [
+          1,
+          1,
+          -3,
+          2,
+          7,
+          6,
+          4,
+          1
+        ]
+      }
+    }
+  },
+  "test_changes": {
+    "specific": 367,
+    "matched": 402,
+    "matched_prior_restored": 378,
+    "context_only": 169,
+    "with_global": 76,
+    "without_matched": 192
+  }
+}
