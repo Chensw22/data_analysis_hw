@@ -1,0 +1,254 @@
+{
+  "accuracy": {
+    "raw": 0.8109973541930289,
+    "anonymous": 0.8083515472219027,
+    "identity": 0.8103071436788221,
+    "reassigned": 0.8042102841366617,
+    "mean": 0.7860347405958817
+  },
+  "rules": {
+    "raw": {
+      "test_changes": 378,
+      "by_fold": [
+        -3,
+        -4,
+        -6,
+        -12,
+        -37,
+        -19,
+        -4,
+        -33
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 279,
+          "harmed": 397
+        },
+        "blind": {
+          "fixed": 3,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 38,
+          "harmed": 53
+        }
+      }
+    },
+    "anonymous": {
+      "test_changes": 435,
+      "by_fold": [
+        -10,
+        -15,
+        -16,
+        -21,
+        -33,
+        -6,
+        2,
+        -34
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 286,
+          "harmed": 419
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 33,
+          "harmed": 56
+        }
+      }
+    },
+    "identity": {
+      "test_changes": 452,
+      "by_fold": [
+        -14,
+        -21,
+        -12,
+        -19,
+        -12,
+        -10,
+        -3,
+        -32
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 314,
+          "harmed": 437
+        },
+        "blind": {
+          "fixed": 3,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 41,
+          "harmed": 69
+        }
+      }
+    },
+    "reassigned": {
+      "test_changes": 493,
+      "by_fold": [
+        -13,
+        -11,
+        -12,
+        -27,
+        -39,
+        -21,
+        -9,
+        -44
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 328,
+          "harmed": 504
+        },
+        "blind": {
+          "fixed": 4,
+          "harmed": 12
+        },
+        "fresh": {
+          "fixed": 44,
+          "harmed": 64
+        }
+      }
+    },
+    "mean": {
+      "test_changes": 522,
+      "by_fold": [
+        -48,
+        -36,
+        -28,
+        -50,
+        -41,
+        -31,
+        -40,
+        -47
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 351,
+          "harmed": 672
+        },
+        "blind": {
+          "fixed": 2,
+          "harmed": 19
+        },
+        "fresh": {
+          "fixed": 40,
+          "harmed": 91
+        }
+      }
+    },
+    "over_anonymous": {
+      "test_changes": 202,
+      "by_fold": [
+        -13,
+        -12,
+        -7,
+        -8,
+        -1,
+        3,
+        -6,
+        -12
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 172,
+          "harmed": 228
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 18,
+          "harmed": 33
+        }
+      }
+    },
+    "over_reassigned": {
+      "test_changes": 316,
+      "by_fold": [
+        -19,
+        -30,
+        -20,
+        -20,
+        -13,
+        -5,
+        -21,
+        -31
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 249,
+          "harmed": 408
+        },
+        "blind": {
+          "fixed": 16,
+          "harmed": 27
+        },
+        "fresh": {
+          "fixed": 29,
+          "harmed": 65
+        }
+      }
+    },
+    "identity_only": {
+      "test_changes": 87,
+      "by_fold": [
+        -5,
+        -9,
+        -2,
+        -5,
+        1,
+        0,
+        -5,
+        -2
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 69,
+          "harmed": 96
+        },
+        "blind": {
+          "fixed": 2,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 13,
+          "harmed": 21
+        }
+      }
+    },
+    "both_increments": {
+      "test_changes": 143,
+      "by_fold": [
+        -7,
+        -12,
+        -9,
+        -7,
+        -2,
+        1,
+        -5,
+        -9
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 114,
+          "harmed": 164
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 8,
+          "harmed": 28
+        }
+      }
+    }
+  }
+}
