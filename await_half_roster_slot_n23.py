@@ -109,9 +109,13 @@ CHAMPION_FARE_SIX = QueuedExport('proposal_n26_champion_fare_six', 'rebase_fare_
     HISTORICAL_VETO.out/'queue_status.json',
     '主账号额度已刷新。即将评测直接从九票公榜最佳出发的账单与六模型版，共改判 111 人。',
     'de14c99a507fb7073023908d8a26987064d134c0e77eaec6c77302caf7a76461', model='scores.npz')
+JOINT_FARE_FOUNDATIONS = QueuedExport('proposal_n26_joint_fare_foundations', 'export_joint_fare_foundations_n26.py',
+    CHAMPION_FARE_SIX.out/'queue_status.json',
+    '111 人版已有正式成绩。即将评测票价 TabICL 与 Nori 都支持的新增 50 人。',
+    '9ba377aa456f04b417e0b78cfebc2009828a6c3cd434714d6a4a457876517f01', model='inputs.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
                                   AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE,
-                                  TABNET_ATTENTION, HISTORICAL_VETO, CHAMPION_FARE_SIX)}
+                                  TABNET_ATTENTION, HISTORICAL_VETO, CHAMPION_FARE_SIX, JOINT_FARE_FOUNDATIONS)}
 
 
 def reserve_available(union, expected_digest, official_match, last_submission_date, today, remaining):

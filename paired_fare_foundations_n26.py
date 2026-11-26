@@ -4,7 +4,7 @@ import numpy as np
 from threadpoolctl import threadpool_limits
 
 from arbitration_against_scored_nine_n26 import champions
-from exhaustive_family_quorums_n26 import summary
+from exhaustive_family_quorums_n26 import inputs,summary
 from full_roster_booking_validation_n23 import data,ROOT
 from held_expert_portfolios_n26 import DECK,SIX,panel_predictions,sources
 from nori_booking_regression_n26 import packet_dir
@@ -45,6 +45,8 @@ def evaluate():
     assert np.isfinite(raw).all() and np.isfinite(fine).all()
     acts=policies(anchor,enabled&(a==anchor),raw,fine)
     masks=dict(all=known,fresh=known&~np.isin(g,g[hi]),earlier_agreement=known&v['common']&(v['anchor']==a))
+    _,current,_=inputs()
+    masks['eleven_release_agreement']=current['common'] & (a==anchor)
     out={}
     for key,act in acts.items():
         out[key]={n:summary(act,y!=anchor,m,f) for n,m in masks.items()}
