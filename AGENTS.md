@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 26 日北京时间 08:36，主账号官方返回本周期已提交 10 次，剩余 0 次，累计 100 次；最佳 81.739%，第 113 / 2,209，第三名 83.937%。原十个候选中直接组合因前两版公榜均低于最佳而跳过，历史否决备用版已消耗第十次。十次均有正式回执，今日最高 81.692% 来自本地 82.185% 的随机字段版。本地明显提升即可提交，无固定 83% 门槛。完整结果见 reports/nov23_matched_learning_curve/nov26_official_queue_results.json。
+
 - 11 月 26 日核对同一批冻结文件，历史记录之外的 1,033 名验证乘客中有 978 名独行、55 名来自双人订单、无人来自三人及以上订单。正式测试集相应为 2,340、908、1,029 人。选模涉及多人订单时可参考完整八折的 1,652 名双人订单乘客和 2,145 名更大订单乘客。逐候选的改判方向、订单数和覆盖空缺见 reports/nov23_matched_learning_curve/frozen_release_order_mix.json。
 
 - 11 月 26 日北京时间 06:54，主账号剩余 0 次，最佳 81.739%，第 113 / 2,206，第三名 83.937%。下一轮十个候选尚无回执。Mac 条件备用任务 com.chensw22.spaceship.historicalveto26.once 已启动（导出提交 2d83321），初始状态 awaiting_predecessor。只有原组合因两个前序成绩不足而跳过、最后一份 TabNet 已在同一 UTC 日期取得正式成绩、且主账号尚有额度时才弹窗提交。见 reports/proposal_n26_historical_veto/manifest.json 和 artifacts/proposal_n26_historical_veto/queue_status.json。
