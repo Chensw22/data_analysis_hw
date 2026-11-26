@@ -1,0 +1,2733 @@
+{
+  "test_feature_support": {
+    "rows": 4277,
+    "own": 2211,
+    "peer": 1220,
+    "nonpayer_with_paying_peer": 668
+  },
+  "checkpoint": "a13b2bc31d8db24d17bae6d04844e0adf669e446087b0b7a34c7b05045d61323",
+  "features": [
+    "eight inferred own-deck probabilities",
+    "inferred probability of registered deck",
+    "number of other members with complete positive bills",
+    "mean eight-deck posterior among eligible other members"
+  ],
+  "split": "Eight held booking folds; five inner booking folds for training-row fare densities. No Transported labels in posterior inference.",
+  "known_rows": 8532,
+  "baseline_accuracy": 0.8284106891701828,
+  "scopes": {
+    "all": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 8693,
+          "accuracy": 0.8090417577361095,
+          "brier": 0.125063465402617,
+          "logloss": 0.3854032182688731
+        },
+        "own": {
+          "rows": 8693,
+          "accuracy": 0.8154837225353733,
+          "brier": 0.12055802206048734,
+          "logloss": 0.3743330832145676
+        },
+        "peer": {
+          "rows": 8693,
+          "accuracy": 0.815253652363971,
+          "brier": 0.12160628597282523,
+          "logloss": 0.3774610841981408
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 51,
+          "harmed": 69,
+          "net": -18,
+          "fold_net": [
+            0,
+            -2,
+            -3,
+            -3,
+            1,
+            -5,
+            -1,
+            -5
+          ]
+        },
+        "independent_peer": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 36,
+          "harmed": 37,
+          "net": -1,
+          "fold_net": [
+            -2,
+            -1,
+            3,
+            -7,
+            1,
+            1,
+            4,
+            0
+          ]
+        },
+        "union": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 87,
+          "harmed": 106,
+          "net": -19,
+          "fold_net": [
+            -2,
+            -3,
+            0,
+            -10,
+            2,
+            -4,
+            3,
+            -5
+          ]
+        },
+        "both_models": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 35,
+          "harmed": 44,
+          "net": -9,
+          "fold_net": [
+            -2,
+            -3,
+            -2,
+            0,
+            -1,
+            1,
+            0,
+            -2
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4,
+          "fold_net": [
+            1,
+            -2,
+            -1,
+            1,
+            -2,
+            1,
+            -1,
+            -1
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 96,
+          "harmed": 120,
+          "net": -24,
+          "fold_net": [
+            -2,
+            -7,
+            -5,
+            -3,
+            2,
+            -6,
+            4,
+            -7
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 72,
+          "harmed": 104,
+          "net": -32,
+          "fold_net": [
+            -2,
+            -3,
+            -6,
+            -11,
+            -3,
+            3,
+            -2,
+            -8
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 146,
+          "harmed": 182,
+          "net": -36,
+          "fold_net": [
+            -4,
+            -9,
+            -5,
+            -9,
+            1,
+            -4,
+            4,
+            -10
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 290,
+          "harmed": 405,
+          "net": -115,
+          "fold_net": [
+            -6,
+            -24,
+            -11,
+            -4,
+            -25,
+            -13,
+            -7,
+            -25
+          ]
+        },
+        "own": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 271,
+          "harmed": 336,
+          "net": -65,
+          "fold_net": [
+            -4,
+            -16,
+            -6,
+            -9,
+            -15,
+            1,
+            1,
+            -17
+          ]
+        },
+        "peer": {
+          "rows": 8532,
+          "errors": 1464,
+          "fixed": 328,
+          "harmed": 396,
+          "net": -68,
+          "fold_net": [
+            -17,
+            -21,
+            -2,
+            2,
+            -10,
+            -5,
+            -2,
+            -13
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 8693,
+        "errors": 1604,
+        "fixed": 257,
+        "harmed": 259,
+        "net": -2,
+        "fold_net": [
+          -11,
+          -4,
+          -1,
+          11,
+          8,
+          -8,
+          0,
+          3
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 8693,
+          "errors": 1660,
+          "fixed": 301,
+          "harmed": 245,
+          "net": 56,
+          "fold_net": [
+            3,
+            8,
+            7,
+            -5,
+            11,
+            14,
+            8,
+            10
+          ]
+        },
+        "peer": {
+          "rows": 8693,
+          "errors": 1660,
+          "fixed": 385,
+          "harmed": 331,
+          "net": 54,
+          "fold_net": [
+            -8,
+            4,
+            6,
+            6,
+            19,
+            6,
+            8,
+            13
+          ]
+        }
+      }
+    },
+    "awake_paid": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 4921,
+          "accuracy": 0.8191424507213981,
+          "brier": 0.12794595721038224,
+          "logloss": 0.4043663267778676
+        },
+        "own": {
+          "rows": 4921,
+          "accuracy": 0.829302987197724,
+          "brier": 0.1194316575844257,
+          "logloss": 0.38034181169494286
+        },
+        "peer": {
+          "rows": 4921,
+          "accuracy": 0.828896565738671,
+          "brier": 0.1199898435539688,
+          "logloss": 0.37953642587803516
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 48,
+          "harmed": 67,
+          "net": -19,
+          "fold_net": [
+            1,
+            -2,
+            -4,
+            -3,
+            0,
+            -5,
+            -1,
+            -5
+          ]
+        },
+        "independent_peer": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 10,
+          "harmed": 6,
+          "net": 4,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -3,
+            3,
+            0,
+            1,
+            3
+          ]
+        },
+        "union": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 58,
+          "harmed": 73,
+          "net": -15,
+          "fold_net": [
+            1,
+            -3,
+            -3,
+            -6,
+            3,
+            -5,
+            0,
+            -2
+          ]
+        },
+        "both_models": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 33,
+          "harmed": 43,
+          "net": -10,
+          "fold_net": [
+            -2,
+            -3,
+            -3,
+            0,
+            -1,
+            1,
+            0,
+            -2
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 5,
+          "harmed": 11,
+          "net": -6,
+          "fold_net": [
+            0,
+            -2,
+            -2,
+            1,
+            -2,
+            1,
+            -1,
+            -1
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 93,
+          "harmed": 117,
+          "net": -24,
+          "fold_net": [
+            -2,
+            -7,
+            -5,
+            -3,
+            1,
+            -6,
+            4,
+            -6
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 20,
+          "harmed": 45,
+          "net": -25,
+          "fold_net": [
+            -1,
+            -4,
+            -6,
+            -7,
+            -1,
+            4,
+            -7,
+            -3
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 92,
+          "harmed": 123,
+          "net": -31,
+          "fold_net": [
+            -2,
+            -11,
+            -5,
+            -5,
+            2,
+            -4,
+            -2,
+            -4
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 179,
+          "harmed": 252,
+          "net": -73,
+          "fold_net": [
+            -2,
+            -18,
+            -14,
+            7,
+            -13,
+            -2,
+            -13,
+            -18
+          ]
+        },
+        "own": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 154,
+          "harmed": 177,
+          "net": -23,
+          "fold_net": [
+            0,
+            -9,
+            -10,
+            3,
+            -5,
+            2,
+            3,
+            -7
+          ]
+        },
+        "peer": {
+          "rows": 4905,
+          "errors": 809,
+          "fixed": 167,
+          "harmed": 193,
+          "net": -26,
+          "fold_net": [
+            -10,
+            -13,
+            -10,
+            7,
+            -1,
+            3,
+            2,
+            -4
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 4921,
+        "errors": 840,
+        "fixed": 117,
+        "harmed": 119,
+        "net": -2,
+        "fold_net": [
+          -9,
+          -4,
+          -1,
+          4,
+          5,
+          -1,
+          0,
+          4
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 4921,
+          "errors": 890,
+          "fixed": 213,
+          "harmed": 163,
+          "net": 50,
+          "fold_net": [
+            2,
+            9,
+            4,
+            -4,
+            8,
+            5,
+            16,
+            10
+          ]
+        },
+        "peer": {
+          "rows": 4921,
+          "errors": 890,
+          "fixed": 230,
+          "harmed": 182,
+          "net": 48,
+          "fold_net": [
+            -7,
+            5,
+            3,
+            0,
+            13,
+            4,
+            16,
+            14
+          ]
+        }
+      }
+    },
+    "no_positive": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 3653,
+          "accuracy": 0.7930468108404052,
+          "brier": 0.12219021165442565,
+          "logloss": 0.36209206306786634
+        },
+        "own": {
+          "rows": 3653,
+          "accuracy": 0.7944155488639474,
+          "brier": 0.12299278424734891,
+          "logloss": 0.3685000973071947
+        },
+        "peer": {
+          "rows": 3653,
+          "accuracy": 0.7944155488639474,
+          "brier": 0.12492875122687709,
+          "logloss": 0.3773304218211028
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "independent_peer": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 26,
+          "harmed": 31,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            2,
+            -4,
+            -2,
+            1,
+            3,
+            -3
+          ]
+        },
+        "union": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 26,
+          "harmed": 31,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            2,
+            -4,
+            -2,
+            1,
+            3,
+            -3
+          ]
+        },
+        "both_models": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 51,
+          "harmed": 56,
+          "net": -5,
+          "fold_net": [
+            -2,
+            2,
+            0,
+            -4,
+            -2,
+            0,
+            6,
+            -5
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 51,
+          "harmed": 56,
+          "net": -5,
+          "fold_net": [
+            -2,
+            2,
+            0,
+            -4,
+            -2,
+            0,
+            6,
+            -5
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 108,
+          "harmed": 149,
+          "net": -41,
+          "fold_net": [
+            -3,
+            -7,
+            2,
+            -11,
+            -12,
+            -10,
+            6,
+            -6
+          ]
+        },
+        "own": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 113,
+          "harmed": 155,
+          "net": -42,
+          "fold_net": [
+            -3,
+            -7,
+            2,
+            -12,
+            -10,
+            -1,
+            -2,
+            -9
+          ]
+        },
+        "peer": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 159,
+          "harmed": 201,
+          "net": -42,
+          "fold_net": [
+            -7,
+            -8,
+            7,
+            -5,
+            -8,
+            -8,
+            -4,
+            -9
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 3653,
+        "errors": 751,
+        "fixed": 138,
+        "harmed": 138,
+        "net": 0,
+        "fold_net": [
+          -3,
+          0,
+          1,
+          7,
+          4,
+          -7,
+          0,
+          -2
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 3653,
+          "errors": 756,
+          "fixed": 82,
+          "harmed": 77,
+          "net": 5,
+          "fold_net": [
+            1,
+            0,
+            2,
+            -1,
+            3,
+            8,
+            -8,
+            0
+          ]
+        },
+        "peer": {
+          "rows": 3653,
+          "errors": 756,
+          "fixed": 149,
+          "harmed": 144,
+          "net": 5,
+          "fold_net": [
+            -2,
+            0,
+            3,
+            6,
+            7,
+            1,
+            -8,
+            -2
+          ]
+        }
+      }
+    },
+    "all_fees_recorded_zero": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 3247,
+          "accuracy": 0.7970434246997228,
+          "brier": 0.12174557147670143,
+          "logloss": 0.361683638747651
+        },
+        "own": {
+          "rows": 3247,
+          "accuracy": 0.7991992608561749,
+          "brier": 0.12218546413312972,
+          "logloss": 0.36567237429710464
+        },
+        "peer": {
+          "rows": 3247,
+          "accuracy": 0.7961194949183862,
+          "brier": 0.12477641160835508,
+          "logloss": 0.3764495105057639
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "independent_peer": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 23,
+          "harmed": 28,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            3,
+            -4,
+            -2,
+            2,
+            1,
+            -3
+          ]
+        },
+        "union": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 23,
+          "harmed": 28,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            3,
+            -4,
+            -2,
+            2,
+            1,
+            -3
+          ]
+        },
+        "both_models": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 45,
+          "harmed": 51,
+          "net": -6,
+          "fold_net": [
+            -2,
+            1,
+            0,
+            -5,
+            -2,
+            0,
+            5,
+            -3
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 45,
+          "harmed": 51,
+          "net": -6,
+          "fold_net": [
+            -2,
+            1,
+            0,
+            -5,
+            -2,
+            0,
+            5,
+            -3
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 98,
+          "harmed": 125,
+          "net": -27,
+          "fold_net": [
+            -3,
+            -6,
+            2,
+            -10,
+            -7,
+            -4,
+            6,
+            -5
+          ]
+        },
+        "own": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 101,
+          "harmed": 127,
+          "net": -26,
+          "fold_net": [
+            -2,
+            -5,
+            1,
+            -8,
+            -5,
+            1,
+            -3,
+            -5
+          ]
+        },
+        "peer": {
+          "rows": 3103,
+          "errors": 560,
+          "fixed": 138,
+          "harmed": 174,
+          "net": -36,
+          "fold_net": [
+            -7,
+            -6,
+            9,
+            -8,
+            -6,
+            -3,
+            -6,
+            -9
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 3247,
+        "errors": 652,
+        "fixed": 113,
+        "harmed": 123,
+        "net": -10,
+        "fold_net": [
+          -4,
+          0,
+          4,
+          0,
+          1,
+          -4,
+          -1,
+          -6
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 3247,
+          "errors": 659,
+          "fixed": 69,
+          "harmed": 62,
+          "net": 7,
+          "fold_net": [
+            2,
+            1,
+            1,
+            2,
+            3,
+            4,
+            -9,
+            3
+          ]
+        },
+        "peer": {
+          "rows": 3247,
+          "errors": 659,
+          "fixed": 128,
+          "harmed": 131,
+          "net": -3,
+          "fold_net": [
+            -2,
+            1,
+            5,
+            2,
+            4,
+            0,
+            -10,
+            -3
+          ]
+        }
+      }
+    },
+    "common": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 7870,
+          "accuracy": 0.8416772554002542,
+          "brier": 0.10890090813134086,
+          "logloss": 0.344712115724679
+        },
+        "own": {
+          "rows": 7870,
+          "accuracy": 0.8423125794155019,
+          "brier": 0.10751277679946034,
+          "logloss": 0.34196795060290686
+        },
+        "peer": {
+          "rows": 7870,
+          "accuracy": 0.8420584498094028,
+          "brier": 0.10871745643897597,
+          "logloss": 0.34547467636744944
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 22,
+          "harmed": 39,
+          "net": -17,
+          "fold_net": [
+            -1,
+            -1,
+            -1,
+            -4,
+            -1,
+            -2,
+            -4,
+            -3
+          ]
+        },
+        "independent_peer": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 30,
+          "harmed": 28,
+          "net": 2,
+          "fold_net": [
+            -2,
+            -1,
+            2,
+            -4,
+            0,
+            5,
+            3,
+            -1
+          ]
+        },
+        "union": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 52,
+          "harmed": 67,
+          "net": -15,
+          "fold_net": [
+            -3,
+            -2,
+            1,
+            -8,
+            -1,
+            3,
+            -1,
+            -4
+          ]
+        },
+        "both_models": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 14,
+          "harmed": 22,
+          "net": -8,
+          "fold_net": [
+            -2,
+            -1,
+            0,
+            -2,
+            -1,
+            1,
+            -2,
+            -1
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 2,
+          "harmed": 5,
+          "net": -3,
+          "fold_net": [
+            -1,
+            -1,
+            1,
+            1,
+            -1,
+            0,
+            -1,
+            -1
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 47,
+          "harmed": 61,
+          "net": -14,
+          "fold_net": [
+            -3,
+            -4,
+            -1,
+            0,
+            2,
+            -4,
+            1,
+            -5
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 41,
+          "harmed": 74,
+          "net": -33,
+          "fold_net": [
+            -4,
+            -3,
+            -6,
+            -7,
+            -2,
+            -1,
+            -4,
+            -6
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 79,
+          "harmed": 107,
+          "net": -28,
+          "fold_net": [
+            -5,
+            -6,
+            -2,
+            -4,
+            3,
+            -4,
+            -1,
+            -9
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 132,
+          "harmed": 212,
+          "net": -80,
+          "fold_net": [
+            -4,
+            -16,
+            -11,
+            -8,
+            -15,
+            -13,
+            -2,
+            -11
+          ]
+        },
+        "own": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 140,
+          "harmed": 215,
+          "net": -75,
+          "fold_net": [
+            -5,
+            -14,
+            -7,
+            -15,
+            -18,
+            -6,
+            -2,
+            -8
+          ]
+        },
+        "peer": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 184,
+          "harmed": 261,
+          "net": -77,
+          "fold_net": [
+            -17,
+            -21,
+            -2,
+            -9,
+            -12,
+            -7,
+            -5,
+            -4
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 7870,
+        "errors": 1241,
+        "fixed": 167,
+        "harmed": 169,
+        "net": -2,
+        "fold_net": [
+          -12,
+          -7,
+          5,
+          6,
+          6,
+          -1,
+          -3,
+          4
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 7870,
+          "errors": 1246,
+          "fixed": 139,
+          "harmed": 134,
+          "net": 5,
+          "fold_net": [
+            -1,
+            2,
+            4,
+            -7,
+            -3,
+            7,
+            0,
+            3
+          ]
+        },
+        "peer": {
+          "rows": 7870,
+          "errors": 1246,
+          "fixed": 200,
+          "harmed": 197,
+          "net": 3,
+          "fold_net": [
+            -13,
+            -5,
+            9,
+            -1,
+            3,
+            6,
+            -3,
+            7
+          ]
+        }
+      },
+      "against_previous_eleven": {
+        "raw": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 132,
+          "harmed": 212,
+          "net": -80,
+          "fold_net": [
+            -4,
+            -16,
+            -11,
+            -8,
+            -15,
+            -13,
+            -2,
+            -11
+          ]
+        },
+        "own": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 140,
+          "harmed": 215,
+          "net": -75,
+          "fold_net": [
+            -5,
+            -14,
+            -7,
+            -15,
+            -18,
+            -6,
+            -2,
+            -8
+          ]
+        },
+        "peer": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 184,
+          "harmed": 261,
+          "net": -77,
+          "fold_net": [
+            -17,
+            -21,
+            -2,
+            -9,
+            -12,
+            -7,
+            -5,
+            -4
+          ]
+        }
+      }
+    },
+    "no_positive_with_paying_peer": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 1305,
+          "accuracy": 0.8268199233716476,
+          "brier": 0.11013379198052517,
+          "logloss": 0.33212976291424745
+        },
+        "own": {
+          "rows": 1305,
+          "accuracy": 0.8229885057471265,
+          "brier": 0.10993126608578835,
+          "logloss": 0.33052655307485146
+        },
+        "peer": {
+          "rows": 1305,
+          "accuracy": 0.8306513409961686,
+          "brier": 0.11077353371765446,
+          "logloss": 0.3368759817409814
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "independent_peer": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 26,
+          "harmed": 31,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            2,
+            -4,
+            -2,
+            1,
+            3,
+            -3
+          ]
+        },
+        "union": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 26,
+          "harmed": 31,
+          "net": -5,
+          "fold_net": [
+            -2,
+            0,
+            2,
+            -4,
+            -2,
+            1,
+            3,
+            -3
+          ]
+        },
+        "both_models": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 51,
+          "harmed": 56,
+          "net": -5,
+          "fold_net": [
+            -2,
+            2,
+            0,
+            -4,
+            -2,
+            0,
+            6,
+            -5
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 51,
+          "harmed": 56,
+          "net": -5,
+          "fold_net": [
+            -2,
+            2,
+            0,
+            -4,
+            -2,
+            0,
+            6,
+            -5
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 50,
+          "harmed": 53,
+          "net": -3,
+          "fold_net": [
+            2,
+            -1,
+            0,
+            -6,
+            2,
+            -4,
+            10,
+            -6
+          ]
+        },
+        "own": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 42,
+          "harmed": 49,
+          "net": -7,
+          "fold_net": [
+            2,
+            -1,
+            -1,
+            -3,
+            -1,
+            0,
+            4,
+            -7
+          ]
+        },
+        "peer": {
+          "rows": 1253,
+          "errors": 202,
+          "fixed": 64,
+          "harmed": 62,
+          "net": 2,
+          "fold_net": [
+            -1,
+            3,
+            4,
+            -4,
+            -1,
+            0,
+            7,
+            -6
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 1305,
+        "errors": 231,
+        "fixed": 66,
+        "harmed": 56,
+        "net": 10,
+        "fold_net": [
+          -2,
+          4,
+          2,
+          0,
+          1,
+          0,
+          4,
+          1
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 1305,
+          "errors": 226,
+          "fixed": 26,
+          "harmed": 31,
+          "net": -5,
+          "fold_net": [
+            -1,
+            0,
+            -1,
+            2,
+            -2,
+            3,
+            -6,
+            0
+          ]
+        },
+        "peer": {
+          "rows": 1305,
+          "errors": 226,
+          "fixed": 64,
+          "harmed": 59,
+          "net": 5,
+          "fold_net": [
+            -3,
+            4,
+            1,
+            2,
+            -1,
+            3,
+            -2,
+            1
+          ]
+        }
+      }
+    },
+    "new_orders": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 1044,
+          "accuracy": 0.7816091954022989,
+          "brier": 0.13844084703581908,
+          "logloss": 0.4155726621691299
+        },
+        "own": {
+          "rows": 1044,
+          "accuracy": 0.7998084291187739,
+          "brier": 0.13145519471331257,
+          "logloss": 0.3975112710568851
+        },
+        "peer": {
+          "rows": 1044,
+          "accuracy": 0.8026819923371648,
+          "brier": 0.12874883568812845,
+          "logloss": 0.3866728780217871
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 4,
+          "harmed": 11,
+          "net": -7,
+          "fold_net": [
+            -1,
+            0,
+            -2,
+            -1,
+            0,
+            -1,
+            0,
+            -2
+          ]
+        },
+        "independent_peer": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 1,
+          "harmed": 0,
+          "net": 1,
+          "fold_net": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "union": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 5,
+          "harmed": 11,
+          "net": -6,
+          "fold_net": [
+            -1,
+            0,
+            -1,
+            -1,
+            0,
+            -1,
+            0,
+            -2
+          ]
+        },
+        "both_models": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 2,
+          "harmed": 9,
+          "net": -7,
+          "fold_net": [
+            0,
+            0,
+            -2,
+            -1,
+            -1,
+            -1,
+            0,
+            -2
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 11,
+          "harmed": 15,
+          "net": -4,
+          "fold_net": [
+            0,
+            -1,
+            -1,
+            -1,
+            2,
+            0,
+            -2,
+            -1
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 1,
+          "harmed": 2,
+          "net": -1,
+          "fold_net": [
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 12,
+          "harmed": 15,
+          "net": -3,
+          "fold_net": [
+            0,
+            -1,
+            0,
+            -1,
+            2,
+            0,
+            -2,
+            -1
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 38,
+          "harmed": 66,
+          "net": -28,
+          "fold_net": [
+            -7,
+            -2,
+            1,
+            -3,
+            -3,
+            -3,
+            -4,
+            -7
+          ]
+        },
+        "own": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 37,
+          "harmed": 46,
+          "net": -9,
+          "fold_net": [
+            -4,
+            -4,
+            1,
+            -3,
+            1,
+            -2,
+            1,
+            1
+          ]
+        },
+        "peer": {
+          "rows": 1033,
+          "errors": 193,
+          "fixed": 42,
+          "harmed": 49,
+          "net": -7,
+          "fold_net": [
+            -5,
+            -4,
+            1,
+            2,
+            1,
+            -3,
+            3,
+            -2
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 1044,
+        "errors": 209,
+        "fixed": 30,
+        "harmed": 27,
+        "net": 3,
+        "fold_net": [
+          -1,
+          0,
+          0,
+          5,
+          0,
+          -1,
+          3,
+          -3
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 1044,
+          "errors": 228,
+          "fixed": 50,
+          "harmed": 31,
+          "net": 19,
+          "fold_net": [
+            3,
+            -2,
+            0,
+            0,
+            4,
+            1,
+            5,
+            8
+          ]
+        },
+        "peer": {
+          "rows": 1044,
+          "errors": 228,
+          "fixed": 58,
+          "harmed": 36,
+          "net": 22,
+          "fold_net": [
+            2,
+            -2,
+            0,
+            5,
+            4,
+            0,
+            8,
+            5
+          ]
+        }
+      }
+    },
+    "paying_peer": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 2449,
+          "accuracy": 0.8338097182523478,
+          "brier": 0.11050911949307157,
+          "logloss": 0.34210269614385197
+        },
+        "own": {
+          "rows": 2449,
+          "accuracy": 0.8305430788076766,
+          "brier": 0.10878783480659769,
+          "logloss": 0.335461904950955
+        },
+        "peer": {
+          "rows": 2449,
+          "accuracy": 0.8374846876276031,
+          "brier": 0.11013073053308481,
+          "logloss": 0.34016011414677283
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 14,
+          "harmed": 17,
+          "net": -3,
+          "fold_net": [
+            2,
+            -1,
+            0,
+            0,
+            -3,
+            0,
+            0,
+            -1
+          ]
+        },
+        "independent_peer": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 36,
+          "harmed": 37,
+          "net": -1,
+          "fold_net": [
+            -2,
+            -1,
+            3,
+            -7,
+            1,
+            1,
+            4,
+            0
+          ]
+        },
+        "union": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 50,
+          "harmed": 54,
+          "net": -4,
+          "fold_net": [
+            0,
+            -2,
+            3,
+            -7,
+            -2,
+            1,
+            4,
+            -1
+          ]
+        },
+        "both_models": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4,
+          "fold_net": [
+            1,
+            -2,
+            -1,
+            1,
+            -2,
+            1,
+            -1,
+            -1
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4,
+          "fold_net": [
+            1,
+            -2,
+            -1,
+            1,
+            -2,
+            1,
+            -1,
+            -1
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 23,
+          "harmed": 26,
+          "net": -3,
+          "fold_net": [
+            1,
+            -1,
+            -1,
+            -1,
+            -2,
+            -2,
+            4,
+            -1
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 72,
+          "harmed": 104,
+          "net": -32,
+          "fold_net": [
+            -2,
+            -3,
+            -6,
+            -11,
+            -3,
+            3,
+            -2,
+            -8
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 73,
+          "harmed": 88,
+          "net": -15,
+          "fold_net": [
+            -1,
+            -3,
+            -1,
+            -7,
+            -3,
+            0,
+            4,
+            -4
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 88,
+          "harmed": 100,
+          "net": -12,
+          "fold_net": [
+            2,
+            -6,
+            -4,
+            -4,
+            -3,
+            -1,
+            8,
+            -4
+          ]
+        },
+        "own": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 77,
+          "harmed": 97,
+          "net": -20,
+          "fold_net": [
+            1,
+            -6,
+            -2,
+            -1,
+            -11,
+            3,
+            5,
+            -9
+          ]
+        },
+        "peer": {
+          "rows": 2388,
+          "errors": 369,
+          "fixed": 100,
+          "harmed": 104,
+          "net": -4,
+          "fold_net": [
+            -1,
+            -4,
+            2,
+            -4,
+            -3,
+            4,
+            9,
+            -7
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 2449,
+        "errors": 415,
+        "fixed": 99,
+        "harmed": 82,
+        "net": 17,
+        "fold_net": [
+          -1,
+          2,
+          1,
+          -2,
+          10,
+          -1,
+          6,
+          2
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 2449,
+          "errors": 407,
+          "fixed": 65,
+          "harmed": 73,
+          "net": -8,
+          "fold_net": [
+            -2,
+            0,
+            2,
+            2,
+            -7,
+            4,
+            -3,
+            -4
+          ]
+        },
+        "peer": {
+          "rows": 2449,
+          "errors": 407,
+          "fixed": 110,
+          "harmed": 101,
+          "net": 9,
+          "fold_net": [
+            -3,
+            2,
+            3,
+            0,
+            3,
+            3,
+            3,
+            -2
+          ]
+        }
+      }
+    },
+    "positive_bill_complete": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 4538,
+          "accuracy": 0.8232701630674306,
+          "brier": 0.12524041822223186,
+          "logloss": 0.3962359318367969
+        },
+        "own": {
+          "rows": 4538,
+          "accuracy": 0.8358307624504187,
+          "brier": 0.11502766748729168,
+          "logloss": 0.3668724530260118
+        },
+        "peer": {
+          "rows": 4538,
+          "accuracy": 0.8364918466284706,
+          "brier": 0.11568018407482267,
+          "logloss": 0.36713178760143617
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 51,
+          "harmed": 69,
+          "net": -18,
+          "fold_net": [
+            0,
+            -2,
+            -3,
+            -3,
+            1,
+            -5,
+            -1,
+            -5
+          ]
+        },
+        "independent_peer": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 9,
+          "harmed": 6,
+          "net": 3,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -3,
+            3,
+            0,
+            1,
+            2
+          ]
+        },
+        "union": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 60,
+          "harmed": 75,
+          "net": -15,
+          "fold_net": [
+            0,
+            -3,
+            -2,
+            -6,
+            4,
+            -5,
+            0,
+            -3
+          ]
+        },
+        "both_models": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 35,
+          "harmed": 44,
+          "net": -9,
+          "fold_net": [
+            -2,
+            -3,
+            -2,
+            0,
+            -1,
+            1,
+            0,
+            -2
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4,
+          "fold_net": [
+            1,
+            -2,
+            -1,
+            1,
+            -2,
+            1,
+            -1,
+            -1
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 96,
+          "harmed": 120,
+          "net": -24,
+          "fold_net": [
+            -2,
+            -7,
+            -5,
+            -3,
+            2,
+            -6,
+            4,
+            -7
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 19,
+          "harmed": 46,
+          "net": -27,
+          "fold_net": [
+            0,
+            -5,
+            -6,
+            -7,
+            -1,
+            2,
+            -7,
+            -3
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 93,
+          "harmed": 124,
+          "net": -31,
+          "fold_net": [
+            -2,
+            -11,
+            -5,
+            -5,
+            3,
+            -5,
+            -1,
+            -5
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 164,
+          "harmed": 236,
+          "net": -72,
+          "fold_net": [
+            0,
+            -18,
+            -13,
+            9,
+            -14,
+            -4,
+            -13,
+            -19
+          ]
+        },
+        "own": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 139,
+          "harmed": 154,
+          "net": -15,
+          "fold_net": [
+            1,
+            -8,
+            -6,
+            7,
+            -5,
+            1,
+            5,
+            -10
+          ]
+        },
+        "peer": {
+          "rows": 4525,
+          "errors": 723,
+          "fixed": 150,
+          "harmed": 163,
+          "net": -13,
+          "fold_net": [
+            -8,
+            -9,
+            -5,
+            11,
+            -1,
+            4,
+            2,
+            -7
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 4538,
+        "errors": 745,
+        "fixed": 104,
+        "harmed": 101,
+        "net": 3,
+        "fold_net": [
+          -8,
+          -1,
+          0,
+          4,
+          4,
+          2,
+          -2,
+          4
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 4538,
+          "errors": 802,
+          "fixed": 203,
+          "harmed": 146,
+          "net": 57,
+          "fold_net": [
+            1,
+            10,
+            7,
+            -2,
+            9,
+            6,
+            18,
+            8
+          ]
+        },
+        "peer": {
+          "rows": 4538,
+          "errors": 802,
+          "fixed": 220,
+          "harmed": 160,
+          "net": 60,
+          "fold_net": [
+            -7,
+            9,
+            7,
+            2,
+            13,
+            8,
+            16,
+            12
+          ]
+        }
+      }
+    },
+    "common_nonpayer_with_paying_peer": {
+      "predictive_quality": {
+        "raw": {
+          "rows": 1186,
+          "accuracy": 0.8549747048903878,
+          "brier": 0.09564478735394645,
+          "logloss": 0.29471325692938527
+        },
+        "own": {
+          "rows": 1186,
+          "accuracy": 0.851602023608769,
+          "brier": 0.0951737980127338,
+          "logloss": 0.2921765798461437
+        },
+        "peer": {
+          "rows": 1186,
+          "accuracy": 0.8608768971332209,
+          "brier": 0.09525814258037416,
+          "logloss": 0.2963942244975778
+        }
+      },
+      "versus_111": {
+        "own": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "independent_peer": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 22,
+          "harmed": 25,
+          "net": -3,
+          "fold_net": [
+            -2,
+            0,
+            1,
+            -3,
+            -2,
+            4,
+            2,
+            -3
+          ]
+        },
+        "union": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 22,
+          "harmed": 25,
+          "net": -3,
+          "fold_net": [
+            -2,
+            0,
+            1,
+            -3,
+            -2,
+            4,
+            2,
+            -3
+          ]
+        },
+        "both_models": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_confirms_own": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "own_log_odds_shift": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "peer_log_odds_shift": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 32,
+          "harmed": 39,
+          "net": -7,
+          "fold_net": [
+            -1,
+            1,
+            -1,
+            -2,
+            -2,
+            0,
+            2,
+            -4
+          ]
+        },
+        "combined_log_odds_shift": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 32,
+          "harmed": 39,
+          "net": -7,
+          "fold_net": [
+            -1,
+            1,
+            -1,
+            -2,
+            -2,
+            0,
+            2,
+            -4
+          ]
+        }
+      },
+      "raw_standalone": {
+        "raw": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 30,
+          "harmed": 38,
+          "net": -8,
+          "fold_net": [
+            2,
+            -3,
+            -1,
+            -4,
+            2,
+            -7,
+            7,
+            -4
+          ]
+        },
+        "own": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 26,
+          "harmed": 38,
+          "net": -12,
+          "fold_net": [
+            3,
+            -3,
+            -2,
+            -1,
+            -2,
+            -5,
+            3,
+            -5
+          ]
+        },
+        "peer": {
+          "rows": 1186,
+          "errors": 164,
+          "fixed": 43,
+          "harmed": 44,
+          "net": -1,
+          "fold_net": [
+            0,
+            1,
+            2,
+            -2,
+            -2,
+            0,
+            4,
+            -4
+          ]
+        }
+      },
+      "peer_versus_own": {
+        "rows": 1186,
+        "errors": 176,
+        "fixed": 48,
+        "harmed": 37,
+        "net": 11,
+        "fold_net": [
+          -3,
+          4,
+          4,
+          -1,
+          0,
+          5,
+          1,
+          1
+        ]
+      },
+      "changed_versus_raw": {
+        "own": {
+          "rows": 1186,
+          "errors": 172,
+          "fixed": 17,
+          "harmed": 21,
+          "net": -4,
+          "fold_net": [
+            1,
+            0,
+            -1,
+            3,
+            -4,
+            2,
+            -4,
+            -1
+          ]
+        },
+        "peer": {
+          "rows": 1186,
+          "errors": 172,
+          "fixed": 48,
+          "harmed": 41,
+          "net": 7,
+          "fold_net": [
+            -2,
+            4,
+            3,
+            2,
+            -4,
+            7,
+            -3,
+            0
+          ]
+        }
+      }
+    }
+  }
+}
