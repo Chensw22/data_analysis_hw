@@ -1,0 +1,676 @@
+{
+  "completed_folds": [
+    0
+  ],
+  "files": {
+    "0_edges.npz": {
+      "rows": 1056,
+      "seconds": 75.09464937500888,
+      "min_median_max_context_labels": [
+        6.0,
+        15.0,
+        24.0
+      ],
+      "sha256": "2e2e42b243e9df3c3cb808a2e772d198662a4ebab120fd354c2203c3495ba2ec"
+    },
+    "0_no_edges.npz": {
+      "rows": 1056,
+      "seconds": 83.95812200001092,
+      "min_median_max_context_labels": [
+        17.0,
+        27.0,
+        29.0
+      ],
+      "sha256": "a211fb593e2935a3eaf89aa906986b80daed473c7f2f799773e25f9642ca2b08"
+    }
+  },
+  "fold_results": {
+    "0": {
+      "accuracy_edges": 0.6865530303030303,
+      "accuracy_no_edges": 0.740530303030303
+    }
+  },
+  "available": {
+    "Mitra_calibrated": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 873,
+        "fixed": 17,
+        "harmed": 19,
+        "net": -2
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 873,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 868,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 860,
+        "fixed": 32,
+        "harmed": 40,
+        "net": -8
+      }
+    },
+    "Mitra_plus_RTJ_edges": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 870,
+        "fixed": 13,
+        "harmed": 18,
+        "net": -5
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 870,
+        "fixed": 6,
+        "harmed": 9,
+        "net": -3
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 866,
+        "fixed": 2,
+        "harmed": 4,
+        "net": -2
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 858,
+        "fixed": 30,
+        "harmed": 40,
+        "net": -10
+      }
+    },
+    "Mitra_plus_RTJ_no_edges": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 875,
+        "fixed": 16,
+        "harmed": 16,
+        "net": 0
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 875,
+        "fixed": 8,
+        "harmed": 6,
+        "net": 2
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 869,
+        "fixed": 3,
+        "harmed": 2,
+        "net": 1
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 863,
+        "fixed": 32,
+        "harmed": 37,
+        "net": -5
+      }
+    },
+    "Mitra_plus_both": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 869,
+        "fixed": 17,
+        "harmed": 23,
+        "net": -6
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 869,
+        "fixed": 9,
+        "harmed": 13,
+        "net": -4
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 864,
+        "fixed": 4,
+        "harmed": 8,
+        "net": -4
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 857,
+        "fixed": 32,
+        "harmed": 43,
+        "net": -11
+      }
+    },
+    "edges": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 725,
+        "fixed": 71,
+        "harmed": 221,
+        "net": -150
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 725,
+        "fixed": 67,
+        "harmed": 215,
+        "net": -148
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 725,
+        "fixed": 53,
+        "harmed": 196,
+        "net": -143
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 718,
+        "fixed": 74,
+        "harmed": 224,
+        "net": -150
+      }
+    },
+    "no_edges": {
+      "against_Mitra": {
+        "rows": 1056,
+        "original_correct": 875,
+        "correct": 782,
+        "fixed": 58,
+        "harmed": 151,
+        "net": -93
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1056,
+        "original_correct": 873,
+        "correct": 782,
+        "fixed": 59,
+        "harmed": 150,
+        "net": -91
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 787,
+        "fixed": 45,
+        "harmed": 126,
+        "net": -81
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 770,
+        "fixed": 59,
+        "harmed": 157,
+        "net": -98
+      }
+    },
+    "edge_ablation": {
+      "rows": 1056,
+      "original_correct": 782,
+      "correct": 725,
+      "fixed": 109,
+      "harmed": 166,
+      "net": -57
+    }
+  },
+  "known_frozen": {
+    "Mitra_calibrated": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 860,
+        "fixed": 12,
+        "harmed": 18,
+        "net": -6
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 860,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 868,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 860,
+        "fixed": 32,
+        "harmed": 40,
+        "net": -8
+      }
+    },
+    "Mitra_plus_RTJ_edges": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 858,
+        "fixed": 9,
+        "harmed": 17,
+        "net": -8
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 858,
+        "fixed": 6,
+        "harmed": 8,
+        "net": -2
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 866,
+        "fixed": 2,
+        "harmed": 4,
+        "net": -2
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 858,
+        "fixed": 30,
+        "harmed": 40,
+        "net": -10
+      }
+    },
+    "Mitra_plus_RTJ_no_edges": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 863,
+        "fixed": 12,
+        "harmed": 15,
+        "net": -3
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 863,
+        "fixed": 8,
+        "harmed": 5,
+        "net": 3
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 869,
+        "fixed": 3,
+        "harmed": 2,
+        "net": 1
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 863,
+        "fixed": 32,
+        "harmed": 37,
+        "net": -5
+      }
+    },
+    "Mitra_plus_both": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 857,
+        "fixed": 13,
+        "harmed": 22,
+        "net": -9
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 857,
+        "fixed": 9,
+        "harmed": 12,
+        "net": -3
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 864,
+        "fixed": 4,
+        "harmed": 8,
+        "net": -4
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 857,
+        "fixed": 32,
+        "harmed": 43,
+        "net": -11
+      }
+    },
+    "edges": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 718,
+        "fixed": 66,
+        "harmed": 214,
+        "net": -148
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 718,
+        "fixed": 65,
+        "harmed": 207,
+        "net": -142
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 725,
+        "fixed": 53,
+        "harmed": 196,
+        "net": -143
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 718,
+        "fixed": 74,
+        "harmed": 224,
+        "net": -150
+      }
+    },
+    "no_edges": {
+      "against_Mitra": {
+        "rows": 1038,
+        "original_correct": 866,
+        "correct": 770,
+        "fixed": 53,
+        "harmed": 149,
+        "net": -96
+      },
+      "against_calibrated_Mitra": {
+        "rows": 1038,
+        "original_correct": 860,
+        "correct": 770,
+        "fixed": 54,
+        "harmed": 144,
+        "net": -90
+      },
+      "incremental_flips_only": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 787,
+        "fixed": 45,
+        "harmed": 126,
+        "net": -81
+      },
+      "against_TabNet_release": {
+        "rows": 1038,
+        "original_correct": 868,
+        "correct": 770,
+        "fixed": 59,
+        "harmed": 157,
+        "net": -98
+      }
+    },
+    "edge_ablation": {
+      "rows": 1038,
+      "original_correct": 770,
+      "correct": 718,
+      "fixed": 106,
+      "harmed": 158,
+      "net": -52
+    }
+  },
+  "eleven_agree": {
+    "Mitra_calibrated": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 821,
+        "fixed": 10,
+        "harmed": 12,
+        "net": -2
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 821,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 825,
+        "fixed": 0,
+        "harmed": 0,
+        "net": 0
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 821,
+        "fixed": 8,
+        "harmed": 12,
+        "net": -4
+      }
+    },
+    "Mitra_plus_RTJ_edges": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 821,
+        "fixed": 8,
+        "harmed": 10,
+        "net": -2
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 821,
+        "fixed": 6,
+        "harmed": 6,
+        "net": 0
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 824,
+        "fixed": 2,
+        "harmed": 3,
+        "net": -1
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 821,
+        "fixed": 7,
+        "harmed": 11,
+        "net": -4
+      }
+    },
+    "Mitra_plus_RTJ_no_edges": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 821,
+        "fixed": 9,
+        "harmed": 11,
+        "net": -2
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 821,
+        "fixed": 5,
+        "harmed": 5,
+        "net": 0
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 826,
+        "fixed": 3,
+        "harmed": 2,
+        "net": 1
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 821,
+        "fixed": 8,
+        "harmed": 12,
+        "net": -4
+      }
+    },
+    "Mitra_plus_both": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 820,
+        "fixed": 11,
+        "harmed": 14,
+        "net": -3
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 820,
+        "fixed": 8,
+        "harmed": 9,
+        "net": -1
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 823,
+        "fixed": 4,
+        "harmed": 6,
+        "net": -2
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 820,
+        "fixed": 9,
+        "harmed": 14,
+        "net": -5
+      }
+    },
+    "edges": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 685,
+        "fixed": 57,
+        "harmed": 195,
+        "net": -138
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 685,
+        "fixed": 56,
+        "harmed": 192,
+        "net": -136
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 686,
+        "fixed": 50,
+        "harmed": 189,
+        "net": -139
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 685,
+        "fixed": 55,
+        "harmed": 195,
+        "net": -140
+      }
+    },
+    "no_edges": {
+      "against_Mitra": {
+        "rows": 964,
+        "original_correct": 823,
+        "correct": 743,
+        "fixed": 45,
+        "harmed": 125,
+        "net": -80
+      },
+      "against_calibrated_Mitra": {
+        "rows": 964,
+        "original_correct": 821,
+        "correct": 743,
+        "fixed": 47,
+        "harmed": 125,
+        "net": -78
+      },
+      "incremental_flips_only": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 748,
+        "fixed": 43,
+        "harmed": 120,
+        "net": -77
+      },
+      "against_TabNet_release": {
+        "rows": 964,
+        "original_correct": 825,
+        "correct": 743,
+        "fixed": 46,
+        "harmed": 128,
+        "net": -82
+      }
+    },
+    "edge_ablation": {
+      "rows": 964,
+      "original_correct": 743,
+      "correct": 685,
+      "fixed": 93,
+      "harmed": 151,
+      "net": -58
+    }
+  },
+  "scope": "Each retained fold has two complete matched RT-J files. Query labels are placeholders through sampling and inference. Personal cabin, deck, side, party size and planet information is matched; no_edges removes passenger-to-booking and passenger-to-cabin graph links. Both branches retain planet links. Meta-model fits use separate bookings inside the same base fold."
+}
