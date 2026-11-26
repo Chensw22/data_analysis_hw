@@ -16,6 +16,7 @@ from rtj_checkpoint_setup_n26 import OUT, WEIGHTS
 DB = 'spaceship-orders'
 TASK = 'transport'
 REPORT = ROOT/'reports/nov23_matched_learning_curve/rtj_order_smoke.json'
+CONTEXT_POLICY='mask_foreign_query_task_nodes_v1'
 
 
 def prepare(outer=None,mode='edges'):
@@ -121,6 +122,26 @@ def use_sdpa(device):
     return dict(float32_cpu=float((observed-expected).abs().max()),runtime_bfloat16=float((runtime_observed-runtime_ref).abs().max()))
 
 
+def training_labels_only(iterator, tables, removed):
+    """Blank every other held-out task row before the released evaluator or model sees it."""
+    for batch in iterator:
+        nodes=batch['node_idxs']
+        target=batch['is_targets']
+        query=tables[f'{TASK}:Test']
+        training=tables[f'{TASK}:Train']
+        is_query=(nodes>=query['node_idx_offset'])&(nodes<query['node_idx_offset']+query['num_nodes'])
+        is_train=(nodes>=training['node_idx_offset'])&(nodes<training['node_idx_offset']+training['num_nodes'])
+        assert (is_query[target]).all() and ((target.sum(1)==1)|~batch['batch_mask']).all()
+        forbidden=is_query&~target&~batch['is_padding']
+        removed.extend(forbidden[batch['batch_mask']].sum(1).tolist())
+        batch['is_padding'] |= forbidden
+        batch['number_values'][forbidden]=0
+        # The only remaining visible task cells belong to the query or labeled training rows.
+        visible_context=batch['is_task_nodes']&~target&~batch['is_padding']
+        assert is_train[visible_context].all()
+        yield batch
+
+
 def run(ctx,device,outer=None,mode='edges'):
     import torch
     from rt import RelationalTransformer
@@ -146,12 +167,17 @@ def run(ctx,device,outer=None,mode='edges'):
         device=device,ctx_size_list=[ctx],local_ctx_size=min(96,ctx),bfs_width=16,num_walks=512,walk_length=12,
         tokens_per_gpu=ctx*bs,items_per_task=len(ids)+bs,num_workers=0,prefetch_factor=None,prefer_latest=True,
         shuffle_seed=0,context_seed=0,mmap_populate=False,vector_db_path=None,db_cutoff=None)
+    tables=json.loads((OUT/'pre'/dbname/'table_info.json').read_text())
+    removed=[]
+    for task,iterator in evaluator.eval_loader_iters.items():
+        evaluator.eval_loader_iters[task]=training_labels_only(iterator,tables,removed)
     now=perf_counter()
     with torch.inference_mode():
         _,_,_,out,nlabels,nodes=next(iter(evaluator.evaluate_raw([(model,'')],[ctx],with_node_idxs=True)))
     offset=_seed_offset(str(OUT/'pre'),dbname,TASK,'test',model.config['embedder'])
     index=nodes-offset
     np.testing.assert_array_equal(np.sort(index),np.arange(len(ids)))
+    assert len(removed)==len(ids)
     logits=out[''][np.argsort(index)]
     print('held logits',logits.tolist()[:16], 'context labels',np.asarray(nlabels).tolist()[:16],flush=True)
     assert np.isfinite(logits).all() and np.std(logits)>0
@@ -159,6 +185,7 @@ def run(ctx,device,outer=None,mode='edges'):
                 embedder_revision=src['embedder']['revision'],rt_version=version('relational-transformer'),
                 torch_version=torch.__version__,device=device,ctx=ctx,attention_backend='torch SDPA using official mask_mod and scale',
                 kernel_check_max_error=kernel_error,preprocessing_seconds=pre_time,
+                context_policy=CONTEXT_POLICY,masked_query_context_cells=int(sum(removed)),
                 forward_and_sampling_seconds=perf_counter()-now,query_passenger_ids=ids.tolist(),
                 in_context_training_label_counts=np.asarray(nlabels)[np.argsort(index)].tolist(),logits=logits.tolist(),
                 correct=int(((logits>0)==y).sum()),query_rows=len(y),eval_labels_in_db=False)
@@ -172,6 +199,7 @@ def run(ctx,device,outer=None,mode='edges'):
         temp=dest.with_suffix('.tmp.npz')
         np.savez_compressed(temp,ids=ids,y=y,logits=logits,index_order=np.sort(index),ctx=ctx,
                             train_bookings=meta['training_bookings'],context_labels=np.asarray(nlabels)[np.argsort(index)],
+                            context_policy=CONTEXT_POLICY,masked_query_context_cells=np.asarray(removed)[np.argsort(index)],
                             elapsed=report['forward_and_sampling_seconds'],weights=WEIGHTS,
                             torch_version=torch.__version__,rt_version=version('relational-transformer'))
         temp.replace(dest)
@@ -194,7 +222,7 @@ if __name__=='__main__':
                 dest=OUT/'oof'/f'{k}_{mode}.npz'
                 if dest.exists():
                     with np.load(dest,allow_pickle=False) as z:
-                        assert int(z['ctx'])==args.ctx and str(z['weights'])==WEIGHTS
+                        assert int(z['ctx'])==args.ctx and str(z['weights'])==WEIGHTS and str(z['context_policy'])==CONTEXT_POLICY
                     continue
                 run(args.ctx,args.device,k,mode)
     else: run(args.ctx,args.device,args.fold,args.mode)
