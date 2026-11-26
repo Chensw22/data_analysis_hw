@@ -1,0 +1,171 @@
+{
+  "accuracy": {
+    "ordinary": 0.8090417577361095,
+    "paired": 0.8089267226504083,
+    "permuted": 0.7863798458529851
+  },
+  "rules": {
+    "ordinary": {
+      "test_changes": 399,
+      "by_fold": [
+        -15,
+        -11,
+        -16,
+        -7,
+        -30,
+        -6,
+        -30,
+        -22
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 309,
+          "harmed": 446
+        },
+        "blind": {
+          "fixed": 8,
+          "harmed": 6
+        },
+        "fresh": {
+          "fixed": 44,
+          "harmed": 70
+        }
+      }
+    },
+    "paired": {
+      "test_changes": 331,
+      "by_fold": [
+        -14,
+        -14,
+        -18,
+        -5,
+        -23,
+        -13,
+        -20,
+        -32
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 239,
+          "harmed": 378
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 26,
+          "harmed": 51
+        }
+      }
+    },
+    "permuted": {
+      "test_changes": 392,
+      "by_fold": [
+        -50,
+        -31,
+        -39,
+        -56,
+        -37,
+        -28,
+        -33,
+        -57
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 379,
+          "harmed": 710
+        },
+        "blind": {
+          "fixed": 17,
+          "harmed": 61
+        },
+        "fresh": {
+          "fixed": 50,
+          "harmed": 96
+        }
+      }
+    },
+    "only_paired": {
+      "test_changes": 72,
+      "by_fold": [
+        0,
+        2,
+        2,
+        -2,
+        -2,
+        -11,
+        -1,
+        -10
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 46,
+          "harmed": 68
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 7
+        }
+      }
+    },
+    "only_permuted": {
+      "test_changes": 65,
+      "by_fold": [
+        -33,
+        -14,
+        -20,
+        -45,
+        -21,
+        -16,
+        -8,
+        -28
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 152,
+          "harmed": 337
+        },
+        "blind": {
+          "fixed": 13,
+          "harmed": 58
+        },
+        "fresh": {
+          "fixed": 19,
+          "harmed": 35
+        }
+      }
+    },
+    "paired_with_ordinary": {
+      "test_changes": 182,
+      "by_fold": [
+        -10,
+        -15,
+        -18,
+        8,
+        -19,
+        2,
+        -15,
+        -20
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 149,
+          "harmed": 236
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 19,
+          "harmed": 33
+        }
+      }
+    }
+  }
+}
