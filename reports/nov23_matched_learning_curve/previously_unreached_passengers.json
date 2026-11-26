@@ -1,0 +1,303 @@
+{
+  "previous_model_outputs": 127,
+  "new_models": [
+    "clauses",
+    "soft_matching",
+    "Nori384",
+    "Nori1536",
+    "Nori_full",
+    "capsules"
+  ],
+  "scopes": {
+    "all_common": {
+      "total": {
+        "rows": 7870,
+        "wrong": 1166,
+        "correct": 6704
+      },
+      "unchallenged": {
+        "rows": 5874,
+        "wrong": 566,
+        "correct": 5308
+      },
+      "each": {
+        "clauses": {
+          "rows": 448,
+          "wrong": 167,
+          "correct": 281
+        },
+        "soft_matching": {
+          "rows": 798,
+          "wrong": 213,
+          "correct": 585
+        },
+        "Nori384": {
+          "rows": 886,
+          "wrong": 264,
+          "correct": 622
+        },
+        "Nori1536": {
+          "rows": 674,
+          "wrong": 247,
+          "correct": 427
+        },
+        "Nori_full": {
+          "rows": 344,
+          "wrong": 132,
+          "correct": 212
+        },
+        "capsules": {
+          "rows": 510,
+          "wrong": 184,
+          "correct": 326
+        }
+      },
+      "family_only": {
+        "nori": {
+          "rows": 640,
+          "wrong": 196,
+          "correct": 444
+        },
+        "boolean": {
+          "rows": 88,
+          "wrong": 29,
+          "correct": 59
+        },
+        "matching": {
+          "rows": 288,
+          "wrong": 43,
+          "correct": 245
+        },
+        "capsules": {
+          "rows": 147,
+          "wrong": 42,
+          "correct": 105
+        }
+      },
+      "by_family_count": {
+        "0": {
+          "rows": 5874,
+          "wrong": 566,
+          "correct": 5308
+        },
+        "1": {
+          "rows": 1163,
+          "wrong": 310,
+          "correct": 853
+        },
+        "2": {
+          "rows": 572,
+          "wrong": 179,
+          "correct": 393
+        },
+        "3": {
+          "rows": 211,
+          "wrong": 92,
+          "correct": 119
+        },
+        "4": {
+          "rows": 50,
+          "wrong": 19,
+          "correct": 31
+        }
+      }
+    },
+    "no_previous_model_challenges": {
+      "total": {
+        "rows": 3201,
+        "wrong": 172,
+        "correct": 3029
+      },
+      "unchallenged": {
+        "rows": 3160,
+        "wrong": 168,
+        "correct": 2992
+      },
+      "each": {
+        "clauses": {
+          "rows": 1,
+          "wrong": 0,
+          "correct": 1
+        },
+        "soft_matching": {
+          "rows": 0,
+          "wrong": 0,
+          "correct": 0
+        },
+        "Nori384": {
+          "rows": 32,
+          "wrong": 3,
+          "correct": 29
+        },
+        "Nori1536": {
+          "rows": 3,
+          "wrong": 2,
+          "correct": 1
+        },
+        "Nori_full": {
+          "rows": 1,
+          "wrong": 0,
+          "correct": 1
+        },
+        "capsules": {
+          "rows": 7,
+          "wrong": 0,
+          "correct": 7
+        }
+      },
+      "family_only": {
+        "nori": {
+          "rows": 33,
+          "wrong": 4,
+          "correct": 29
+        },
+        "boolean": {
+          "rows": 1,
+          "wrong": 0,
+          "correct": 1
+        },
+        "matching": {
+          "rows": 0,
+          "wrong": 0,
+          "correct": 0
+        },
+        "capsules": {
+          "rows": 7,
+          "wrong": 0,
+          "correct": 7
+        }
+      },
+      "by_family_count": {
+        "0": {
+          "rows": 3160,
+          "wrong": 168,
+          "correct": 2992
+        },
+        "1": {
+          "rows": 41,
+          "wrong": 4,
+          "correct": 37
+        },
+        "2": {
+          "rows": 0,
+          "wrong": 0,
+          "correct": 0
+        },
+        "3": {
+          "rows": 0,
+          "wrong": 0,
+          "correct": 0
+        },
+        "4": {
+          "rows": 0,
+          "wrong": 0,
+          "correct": 0
+        }
+      }
+    }
+  },
+  "mutually_exclusive_manifest_groups": {
+    "sleep_no_positive_bill_predicted_False": {
+      "silent_before": {
+        "rows": 0,
+        "wrong": 0,
+        "correct": 0
+      },
+      "silent_after": {
+        "rows": 0,
+        "wrong": 0,
+        "correct": 0
+      },
+      "solo_after": {
+        "rows": 0,
+        "wrong": 0,
+        "correct": 0
+      }
+    },
+    "sleep_no_positive_bill_predicted_True": {
+      "silent_before": {
+        "rows": 1605,
+        "wrong": 44,
+        "correct": 1561
+      },
+      "silent_after": {
+        "rows": 1599,
+        "wrong": 42,
+        "correct": 1557
+      },
+      "solo_after": {
+        "rows": 683,
+        "wrong": 23,
+        "correct": 660
+      }
+    },
+    "awake_positive_bill_predicted_False": {
+      "silent_before": {
+        "rows": 1435,
+        "wrong": 127,
+        "correct": 1308
+      },
+      "silent_after": {
+        "rows": 1402,
+        "wrong": 125,
+        "correct": 1277
+      },
+      "solo_after": {
+        "rows": 998,
+        "wrong": 101,
+        "correct": 897
+      }
+    },
+    "awake_positive_bill_predicted_True": {
+      "silent_before": {
+        "rows": 4,
+        "wrong": 0,
+        "correct": 4
+      },
+      "silent_after": {
+        "rows": 3,
+        "wrong": 0,
+        "correct": 3
+      },
+      "solo_after": {
+        "rows": 2,
+        "wrong": 0,
+        "correct": 2
+      }
+    },
+    "other_predicted_False": {
+      "silent_before": {
+        "rows": 18,
+        "wrong": 0,
+        "correct": 18
+      },
+      "silent_after": {
+        "rows": 18,
+        "wrong": 0,
+        "correct": 18
+      },
+      "solo_after": {
+        "rows": 15,
+        "wrong": 0,
+        "correct": 15
+      }
+    },
+    "other_predicted_True": {
+      "silent_before": {
+        "rows": 139,
+        "wrong": 1,
+        "correct": 138
+      },
+      "silent_after": {
+        "rows": 138,
+        "wrong": 1,
+        "correct": 137
+      },
+      "solo_after": {
+        "rows": 11,
+        "wrong": 0,
+        "correct": 11
+      }
+    }
+  }
+}
