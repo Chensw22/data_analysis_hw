@@ -1,0 +1,282 @@
+{
+  "prior": {
+    "historical": {
+      "versions": 7,
+      "edits_across_files": 535,
+      "public_gain_pp_per_edit": -0.003628037383177536,
+      "local_overestimate_pp_per_edit": 0.006291485212566143
+    },
+    "eight_known": {
+      "versions": 4,
+      "edits_across_files": 288,
+      "public_gain_pp_per_edit": -0.004059027777777732,
+      "local_overestimate_pp_per_edit": 0.008093318850646423
+    }
+  },
+  "performance": {
+    "fixed_incumbent": {
+      "versions": 9,
+      "mean_error_pp": 0.40255555555555045,
+      "mean_absolute_error_pp": 0.40255555555555045,
+      "predicted_gains": 0,
+      "sign_correct": 0,
+      "spearman": null
+    },
+    "frozen_local": {
+      "versions": 9,
+      "mean_error_pp": 0.8681166555782065,
+      "mean_absolute_error_pp": 0.8681166555782065,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.15
+    },
+    "historical_prior_edit_loss": {
+      "versions": 9,
+      "mean_error_pp": -0.25976282450674865,
+      "mean_absolute_error_pp": 0.3549129802699895,
+      "predicted_gains": 0,
+      "sign_correct": 9,
+      "spearman": 0.26666666666666666
+    },
+    "historical_subtract_prior_optimism": {
+      "versions": 9,
+      "mean_error_pp": -0.2804289226713682,
+      "mean_absolute_error_pp": 0.33542848591946106,
+      "predicted_gains": 0,
+      "sign_correct": 9,
+      "spearman": 0.6333333333333333
+    },
+    "eight_known_prior_edit_loss": {
+      "versions": 9,
+      "mean_error_pp": -0.3384425154320954,
+      "mean_absolute_error_pp": 0.39183449074073956,
+      "predicted_gains": 0,
+      "sign_correct": 9,
+      "spearman": 0.26666666666666666
+    },
+    "eight_known_subtract_prior_optimism": {
+      "versions": 9,
+      "mean_error_pp": -0.6093636634898018,
+      "mean_absolute_error_pp": 0.6244764172401792,
+      "predicted_gains": 0,
+      "sign_correct": 9,
+      "spearman": 0.41666666666666663
+    },
+    "all_eight_folds_raw": {
+      "versions": 9,
+      "mean_error_pp": 0.8700765223732824,
+      "mean_absolute_error_pp": 0.8700765223732824,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.08333333333333334
+    },
+    "all_eight_folds_size_and_direction": {
+      "versions": 9,
+      "mean_error_pp": 0.8686029299703528,
+      "mean_absolute_error_pp": 0.8686029299703528,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.08333333333333334
+    },
+    "outside_historical_orders_raw": {
+      "versions": 9,
+      "mean_error_pp": 1.3275851349897765,
+      "mean_absolute_error_pp": 1.3275851349897765,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.07595545253127499
+    },
+    "inside_historical_orders_raw": {
+      "versions": 9,
+      "mean_error_pp": 0.8070539331170031,
+      "mean_absolute_error_pp": 0.8070539331170031,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.09999999999999999
+    },
+    "inside_historical_orders_size_and_direction": {
+      "versions": 9,
+      "mean_error_pp": 0.8225212487269443,
+      "mean_absolute_error_pp": 0.8225212487269443,
+      "predicted_gains": 9,
+      "sign_correct": 0,
+      "spearman": -0.016666666666666666
+    },
+    "outside_historical_orders_size_and_direction": {
+      "versions": 0,
+      "reason": "All candidates have at least one edited test stratum absent from this source."
+    }
+  },
+  "per_candidate": {
+    "fields": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.1175143080786004,
+      "historical_prior_edit_loss": -0.10884112149532607,
+      "historical_subtract_prior_optimism": -0.07123024829838388,
+      "eight_known_prior_edit_loss": -0.12177083333333195,
+      "eight_known_subtract_prior_optimism": -0.12528525744079227,
+      "all_eight_folds_raw": 0.12892639474917955,
+      "all_eight_folds_size_and_direction": 0.10335831004524014,
+      "outside_historical_orders_raw": 0.0968054211035818,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.13335111348179757,
+      "inside_historical_orders_size_and_direction": 0.11413185023054502
+    },
+    "awake": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.1702351364518276,
+      "historical_prior_edit_loss": -0.48978504672896733,
+      "historical_subtract_prior_optimism": -0.6791153672446016,
+      "eight_known_prior_edit_loss": -0.5479687499999938,
+      "eight_known_subtract_prior_optimism": -0.9223629083854396,
+      "all_eight_folds_raw": 0.17580872011251758,
+      "all_eight_folds_size_and_direction": 0.1736473243048106,
+      "outside_historical_orders_raw": 0.0968054211035818,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.1866915588745166,
+      "inside_historical_orders_size_and_direction": 0.23012187994031838
+    },
+    "filtered": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.2106820099419544,
+      "historical_prior_edit_loss": -0.14874953271027896,
+      "historical_subtract_prior_optimism": -0.04726888377325744,
+      "eight_known_prior_edit_loss": -0.16642013888888701,
+      "eight_known_subtract_prior_optimism": -0.12114406293454894,
+      "all_eight_folds_raw": 0.2226910454758556,
+      "all_eight_folds_size_and_direction": 0.21770626278160388,
+      "outside_historical_orders_raw": 0.2904162633107454,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.21336178157087612,
+      "inside_historical_orders_size_and_direction": 0.2308297141123889
+    },
+    "band": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.2341261318829433,
+      "historical_prior_edit_loss": -0.31563925233644563,
+      "historical_subtract_prior_optimism": -0.31323308161031116,
+      "eight_known_prior_edit_loss": -0.35313541666666265,
+      "eight_known_subtract_prior_optimism": -0.4699926081232956,
+      "all_eight_folds_raw": 0.1875293014533521,
+      "all_eight_folds_size_and_direction": 0.18320020979595447,
+      "outside_historical_orders_raw": 0.484027105517909,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.14668622482997734,
+      "inside_historical_orders_size_and_direction": 0.10670361734191522
+    },
+    "all_three": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.3981608616844077,
+      "historical_prior_edit_loss": -0.7763999999999927,
+      "historical_subtract_prior_optimism": -0.948216973804747,
+      "eight_known_prior_edit_loss": -0.8686319444444346,
+      "eight_known_subtract_prior_optimism": -1.333809372353927,
+      "all_eight_folds_raw": 0.3984997655883732,
+      "all_eight_folds_size_and_direction": 0.40593818315171054,
+      "outside_historical_orders_raw": 0.5808325266214908,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.3733831177490332,
+      "inside_historical_orders_size_and_direction": 0.4011608664958318
+    },
+    "review": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.338152788004337,
+      "historical_prior_edit_loss": -0.8924971962616738,
+      "historical_subtract_prior_optimism": -1.209552574286934,
+      "eight_known_prior_edit_loss": -0.998520833333322,
+      "eight_known_subtract_prior_optimism": -1.6528036492546834,
+      "all_eight_folds_raw": 0.3398968588842007,
+      "all_eight_folds_size_and_direction": 0.34464703275814534,
+      "outside_historical_orders_raw": 0.484027105517909,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.3200426723563142,
+      "inside_historical_orders_size_and_direction": 0.3557157223457503
+    },
+    "fare": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.7214753879271003,
+      "historical_prior_edit_loss": -1.0738990654205507,
+      "historical_subtract_prior_optimism": -1.140804234992478,
+      "eight_known_prior_edit_loss": -1.2014722222222085,
+      "eight_known_subtract_prior_optimism": -1.674146991864241,
+      "all_eight_folds_raw": 0.7501172058134083,
+      "all_eight_folds_size_and_direction": 0.7446294585491824,
+      "outside_historical_orders_raw": 1.8393030009680542,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.600080010668089,
+      "inside_historical_orders_size_and_direction": 0.6194102399120758
+    },
+    "six": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 0.933477239689498,
+      "historical_prior_edit_loss": -1.0448747663551303,
+      "historical_subtract_prior_optimism": -0.8784705015295512,
+      "eight_known_prior_edit_loss": -1.1689999999999867,
+      "eight_known_subtract_prior_optimism": -1.3973985892966723,
+      "all_eight_folds_raw": 0.9493670886075949,
+      "all_eight_folds_size_and_direction": 0.9504365772325676,
+      "outside_historical_orders_raw": 2.2265246853823815,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.773436458194426,
+      "inside_historical_orders_size_and_direction": 0.8001062933173904
+    },
+    "tabnet": {
+      "fixed_incumbent": 0.0,
+      "frozen_local": 1.066226036543236,
+      "historical_prior_edit_loss": -1.110179439252326,
+      "historical_subtract_prior_optimism": -0.8589684385020036,
+      "eight_known_prior_edit_loss": -1.2420624999999859,
+      "eight_known_subtract_prior_optimism": -1.4103295317545694,
+      "all_eight_folds_raw": 1.0548523206751055,
+      "all_eight_folds_size_and_direction": 1.0708630111140072,
+      "outside_historical_orders_raw": 2.2265246853823815,
+      "outside_historical_orders_size_and_direction": null,
+      "inside_historical_orders_raw": 0.8934524603280437,
+      "inside_historical_orders_size_and_direction": 0.9215110548463287
+    }
+  },
+  "direct_stage_comparisons": {
+    "awake_to_filtered": {
+      "local_net": 4,
+      "public_gain_pp": 0.5140000000000033,
+      "same_direction": true
+    },
+    "all_three_to_review": {
+      "local_net": -5,
+      "public_gain_pp": 0.14000000000000679,
+      "same_direction": false
+    },
+    "review_to_fare": {
+      "local_net": 35,
+      "public_gain_pp": 0.4209999999999936,
+      "same_direction": true
+    },
+    "fare_to_six": {
+      "local_net": 17,
+      "public_gain_pp": 0.14000000000000679,
+      "same_direction": true
+    },
+    "six_to_tabnet": {
+      "local_net": 9,
+      "public_gain_pp": -0.046999999999997044,
+      "same_direction": false
+    },
+    "tabnet_to_reserve": {
+      "local_net": 5,
+      "public_gain_pp": 0.09399999999999409,
+      "same_direction": true
+    }
+  },
+  "public_gain_pp": {
+    "fields": -0.046999999999997044,
+    "awake": -0.5839999999999956,
+    "filtered": -0.06999999999999229,
+    "band": -0.537999999999994,
+    "all_three": -0.8879999999999999,
+    "review": -0.7479999999999931,
+    "fare": -0.3269999999999995,
+    "six": -0.18699999999999273,
+    "tabnet": -0.23399999999998977
+  },
+  "scope": "Retrospective diagnostics. Slopes are estimated solely on Nov 25 aggregate receipts. Related submissions share an incumbent and changed passengers. No individual test labels are used. A missing test stratum is never treated as a zero-effect estimate."
+}
