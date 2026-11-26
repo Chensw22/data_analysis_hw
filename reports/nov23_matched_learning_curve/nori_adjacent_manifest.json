@@ -1,0 +1,1458 @@
+{
+  "checkpoint": "a13b2bc31d8db24d17bae6d04844e0adf669e446087b0b7a34c7b05045d61323",
+  "previous_related": "neighbor_booking_composition_n26.py uses boosted trees, nearest 4/24 cabin numbers and a half-track displacement",
+  "reference": "frozen 161 (46 repairs and 33 harms vs 111 on 8532 known rows)",
+  "context": "all published passenger fields, excluding the target order; complete order assignments permuted within each deck/side",
+  "neighbor_orders_each_side": 6,
+  "permutation_seed": 903151,
+  "features": [
+    "orders",
+    "orders_per_100_ids",
+    "passengers_per_order",
+    "sleep",
+    "any_spend",
+    "RoomService_used",
+    "FoodCourt_used",
+    "ShoppingMall_used",
+    "Spa_used",
+    "VRDeck_used"
+  ],
+  "train_coverage": 8494,
+  "test_coverage": 4177,
+  "same_passenger_activity_brier_unlabeled": {
+    "sleep": {
+      "rows": 12371,
+      "real": 0.22098607333445214,
+      "permuted": 0.218743862174339
+    },
+    "any_spend": {
+      "rows": 12082,
+      "real": 0.21961578795045947,
+      "permuted": 0.21758590542726478
+    },
+    "RoomService_used": {
+      "rows": 12412,
+      "real": 0.2155233844208648,
+      "permuted": 0.2152918111666784
+    },
+    "FoodCourt_used": {
+      "rows": 12390,
+      "real": 0.23091835410809985,
+      "permuted": 0.23125317798286865
+    },
+    "ShoppingMall_used": {
+      "rows": 12370,
+      "real": 0.2151861226596089,
+      "permuted": 0.21365314764064144
+    },
+    "Spa_used": {
+      "rows": 12390,
+      "real": 0.23635517781923324,
+      "permuted": 0.23658586494492584
+    },
+    "VRDeck_used": {
+      "rows": 12407,
+      "real": 0.2327981962430277,
+      "permuted": 0.23137683750357702
+    }
+  },
+  "results": {
+    "all": {
+      "score": {
+        "raw": {
+          "rows": 8693,
+          "accuracy": 0.8090417577361095,
+          "brier": 0.125063465402617,
+          "logloss": 0.3854032182688731
+        },
+        "real": {
+          "rows": 8693,
+          "accuracy": 0.8078914068790981,
+          "brier": 0.12524090752457057,
+          "logloss": 0.38547428145713836
+        },
+        "permuted": {
+          "rows": 8693,
+          "accuracy": 0.8091567928218106,
+          "brier": 0.12431535237617879,
+          "logloss": 0.3826025596135127
+        }
+      },
+      "vs_raw": {
+        "rows": 8693,
+        "errors": 1660,
+        "fixed": 260,
+        "harmed": 270,
+        "net": -10,
+        "fold_net": [
+          -6,
+          11,
+          -3,
+          2,
+          10,
+          -10,
+          -13,
+          -1
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 8693,
+        "errors": 1659,
+        "fixed": 196,
+        "harmed": 207,
+        "net": -11,
+        "fold_net": [
+          2,
+          0,
+          11,
+          10,
+          -3,
+          -11,
+          -21,
+          1
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.0062911987949547405,
+        0.003990497080931963
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.005858107712411445,
+        0.0033273358269863902
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 284,
+          "harmed": 412,
+          "net": -128,
+          "fold_net": [
+            -7,
+            -22,
+            -8,
+            -5,
+            -29,
+            -14,
+            -13,
+            -30
+          ]
+        },
+        "shuffled": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 256,
+          "harmed": 387,
+          "net": -131,
+          "fold_net": [
+            -15,
+            -13,
+            -19,
+            -13,
+            -19,
+            -14,
+            -6,
+            -32
+          ]
+        },
+        "true_neighbors": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 277,
+          "harmed": 420,
+          "net": -143,
+          "fold_net": [
+            -14,
+            -12,
+            -10,
+            -4,
+            -20,
+            -24,
+            -24,
+            -35
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 55,
+          "harmed": 75,
+          "net": -20,
+          "fold_net": [
+            -1,
+            -2,
+            1,
+            -3,
+            0,
+            -9,
+            -8,
+            2
+          ]
+        },
+        "corroborated": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 15,
+          "harmed": 36,
+          "net": -21,
+          "fold_net": [
+            -3,
+            -4,
+            1,
+            -1,
+            -1,
+            -7,
+            -3,
+            -3
+          ]
+        },
+        "independent_both": {
+          "rows": 8532,
+          "errors": 1451,
+          "fixed": 8,
+          "harmed": 11,
+          "net": -3,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -2,
+            1,
+            -2,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "observed": {
+      "score": {
+        "raw": {
+          "rows": 8494,
+          "accuracy": 0.809512597127384,
+          "brier": 0.1247391778491057,
+          "logloss": 0.3843318429670259
+        },
+        "real": {
+          "rows": 8494,
+          "accuracy": 0.808570755827643,
+          "brier": 0.1249336121238859,
+          "logloss": 0.3846158208393911
+        },
+        "permuted": {
+          "rows": 8494,
+          "accuracy": 0.809512597127384,
+          "brier": 0.12407795494771312,
+          "logloss": 0.3818607146454623
+        }
+      },
+      "vs_raw": {
+        "rows": 8494,
+        "errors": 1618,
+        "fixed": 255,
+        "harmed": 263,
+        "net": -8,
+        "fold_net": [
+          -7,
+          11,
+          -3,
+          2,
+          11,
+          -9,
+          -12,
+          -1
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 8494,
+        "errors": 1618,
+        "fixed": 195,
+        "harmed": 203,
+        "net": -8,
+        "fold_net": [
+          2,
+          0,
+          11,
+          10,
+          -2,
+          -10,
+          -20,
+          1
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.0061423320849121445,
+        0.004258649485430157
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.005625349963756189,
+        0.0037416673642742017
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 281,
+          "harmed": 403,
+          "net": -122,
+          "fold_net": [
+            -6,
+            -23,
+            -6,
+            -5,
+            -29,
+            -11,
+            -13,
+            -29
+          ]
+        },
+        "shuffled": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 253,
+          "harmed": 379,
+          "net": -126,
+          "fold_net": [
+            -15,
+            -14,
+            -17,
+            -13,
+            -19,
+            -11,
+            -6,
+            -31
+          ]
+        },
+        "true_neighbors": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 274,
+          "harmed": 409,
+          "net": -135,
+          "fold_net": [
+            -14,
+            -13,
+            -8,
+            -4,
+            -19,
+            -20,
+            -23,
+            -34
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 55,
+          "harmed": 75,
+          "net": -20,
+          "fold_net": [
+            -1,
+            -2,
+            1,
+            -3,
+            0,
+            -9,
+            -8,
+            2
+          ]
+        },
+        "corroborated": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 15,
+          "harmed": 36,
+          "net": -21,
+          "fold_net": [
+            -3,
+            -4,
+            1,
+            -1,
+            -1,
+            -7,
+            -3,
+            -3
+          ]
+        },
+        "independent_both": {
+          "rows": 8333,
+          "errors": 1415,
+          "fixed": 8,
+          "harmed": 11,
+          "net": -3,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -2,
+            1,
+            -2,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "single": {
+      "score": {
+        "raw": {
+          "rows": 4805,
+          "accuracy": 0.7931321540062435,
+          "brier": 0.13555369473154533,
+          "logloss": 0.4163561169365069
+        },
+        "real": {
+          "rows": 4805,
+          "accuracy": 0.7954214360041624,
+          "brier": 0.13556576958901728,
+          "logloss": 0.41594043184612584
+        },
+        "permuted": {
+          "rows": 4805,
+          "accuracy": 0.7943808532778356,
+          "brier": 0.13435333138343278,
+          "logloss": 0.4111748458033285
+        }
+      },
+      "vs_raw": {
+        "rows": 4805,
+        "errors": 994,
+        "fixed": 164,
+        "harmed": 153,
+        "net": 11,
+        "fold_net": [
+          -1,
+          7,
+          6,
+          1,
+          9,
+          -4,
+          -8,
+          1
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 4805,
+        "errors": 988,
+        "fixed": 123,
+        "harmed": 118,
+        "net": 5,
+        "fold_net": [
+          6,
+          1,
+          10,
+          5,
+          0,
+          -4,
+          -19,
+          6
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.004973788448116042,
+        0.00955235244395371
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.00529244966445659,
+        0.007373615117110077
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 161,
+          "harmed": 252,
+          "net": -91,
+          "fold_net": [
+            -9,
+            -18,
+            -4,
+            3,
+            -18,
+            -10,
+            -17,
+            -18
+          ]
+        },
+        "shuffled": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 138,
+          "harmed": 224,
+          "net": -86,
+          "fold_net": [
+            -16,
+            -12,
+            -9,
+            -2,
+            -10,
+            -8,
+            -7,
+            -22
+          ]
+        },
+        "true_neighbors": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 160,
+          "harmed": 243,
+          "net": -83,
+          "fold_net": [
+            -10,
+            -11,
+            0,
+            3,
+            -9,
+            -13,
+            -24,
+            -19
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 41,
+          "harmed": 43,
+          "net": -2,
+          "fold_net": [
+            2,
+            1,
+            2,
+            -1,
+            2,
+            -4,
+            -8,
+            4
+          ]
+        },
+        "corroborated": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 12,
+          "harmed": 23,
+          "net": -11,
+          "fold_net": [
+            -2,
+            -2,
+            2,
+            -1,
+            1,
+            -4,
+            -4,
+            -1
+          ]
+        },
+        "independent_both": {
+          "rows": 4735,
+          "errors": 864,
+          "fixed": 5,
+          "harmed": 8,
+          "net": -3,
+          "fold_net": [
+            0,
+            0,
+            1,
+            -2,
+            0,
+            -1,
+            -2,
+            1
+          ]
+        }
+      }
+    },
+    "no_positive": {
+      "score": {
+        "raw": {
+          "rows": 3653,
+          "accuracy": 0.7930468108404052,
+          "brier": 0.12219021165442565,
+          "logloss": 0.36209206306786634
+        },
+        "real": {
+          "rows": 3653,
+          "accuracy": 0.7952367916780728,
+          "brier": 0.12294354688359516,
+          "logloss": 0.36287431436828016
+        },
+        "permuted": {
+          "rows": 3653,
+          "accuracy": 0.7966055297016151,
+          "brier": 0.12115083899936697,
+          "logloss": 0.3571202455475495
+        }
+      },
+      "vs_raw": {
+        "rows": 3653,
+        "errors": 756,
+        "fixed": 151,
+        "harmed": 143,
+        "net": 8,
+        "fold_net": [
+          4,
+          6,
+          -2,
+          4,
+          6,
+          -5,
+          -9,
+          4
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 3653,
+        "errors": 743,
+        "fixed": 126,
+        "harmed": 131,
+        "net": -5,
+        "fold_net": [
+          -2,
+          0,
+          10,
+          6,
+          -2,
+          -12,
+          -7,
+          2
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.006981519859440075,
+        0.011361481534775416
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.010201830100672968,
+        0.00746435405358838
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 108,
+          "harmed": 149,
+          "net": -41,
+          "fold_net": [
+            -3,
+            -7,
+            2,
+            -11,
+            -12,
+            -10,
+            6,
+            -6
+          ]
+        },
+        "shuffled": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 107,
+          "harmed": 137,
+          "net": -30,
+          "fold_net": [
+            3,
+            -3,
+            -7,
+            -13,
+            -7,
+            -3,
+            4,
+            -4
+          ]
+        },
+        "true_neighbors": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 123,
+          "harmed": 160,
+          "net": -37,
+          "fold_net": [
+            1,
+            -2,
+            0,
+            -8,
+            -7,
+            -14,
+            -1,
+            -6
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 41,
+          "harmed": 47,
+          "net": -6,
+          "fold_net": [
+            0,
+            1,
+            1,
+            -3,
+            0,
+            -5,
+            -2,
+            2
+          ]
+        },
+        "corroborated": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 10,
+          "harmed": 18,
+          "net": -8,
+          "fold_net": [
+            -1,
+            -3,
+            1,
+            -1,
+            -1,
+            -2,
+            0,
+            -1
+          ]
+        },
+        "independent_both": {
+          "rows": 3508,
+          "errors": 642,
+          "fixed": 6,
+          "harmed": 9,
+          "net": -3,
+          "fold_net": [
+            0,
+            -2,
+            1,
+            -1,
+            1,
+            -2,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "no_positive_single": {
+      "score": {
+        "raw": {
+          "rows": 1624,
+          "accuracy": 0.7610837438423645,
+          "brier": 0.1373493450555656,
+          "logloss": 0.40297119072636634
+        },
+        "real": {
+          "rows": 1624,
+          "accuracy": 0.7690886699507389,
+          "brier": 0.13803761418723096,
+          "logloss": 0.40492270690520643
+        },
+        "permuted": {
+          "rows": 1624,
+          "accuracy": 0.7647783251231527,
+          "brier": 0.13568439648612968,
+          "logloss": 0.3954730320691942
+        }
+      },
+      "vs_raw": {
+        "rows": 1624,
+        "errors": 388,
+        "fixed": 86,
+        "harmed": 73,
+        "net": 13,
+        "fold_net": [
+          6,
+          5,
+          3,
+          3,
+          5,
+          -2,
+          -9,
+          2
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 1624,
+        "errors": 382,
+        "fixed": 77,
+        "harmed": 70,
+        "net": 7,
+        "fold_net": [
+          2,
+          1,
+          7,
+          3,
+          -1,
+          -3,
+          -9,
+          7
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.007213165487810444,
+        0.023223017704559215
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.010325503200988607,
+        0.01894619285616102
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 47,
+          "harmed": 73,
+          "net": -26,
+          "fold_net": [
+            -3,
+            -7,
+            0,
+            -4,
+            -10,
+            -4,
+            0,
+            2
+          ]
+        },
+        "shuffled": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 37,
+          "harmed": 58,
+          "net": -21,
+          "fold_net": [
+            1,
+            -3,
+            -5,
+            -5,
+            -5,
+            -1,
+            -1,
+            -2
+          ]
+        },
+        "true_neighbors": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 53,
+          "harmed": 69,
+          "net": -16,
+          "fold_net": [
+            3,
+            -2,
+            1,
+            -2,
+            -5,
+            -5,
+            -8,
+            2
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 29,
+          "harmed": 23,
+          "net": 6,
+          "fold_net": [
+            3,
+            3,
+            1,
+            -1,
+            1,
+            -1,
+            -4,
+            4
+          ]
+        },
+        "corroborated": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            -1,
+            -2,
+            0
+          ]
+        },
+        "independent_both": {
+          "rows": 1554,
+          "errors": 323,
+          "fixed": 3,
+          "harmed": 6,
+          "net": -3,
+          "fold_net": [
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            -1,
+            -2,
+            1
+          ]
+        }
+      }
+    },
+    "shared_eleven": {
+      "score": {
+        "raw": {
+          "rows": 7870,
+          "accuracy": 0.8416772554002542,
+          "brier": 0.10890090813134086,
+          "logloss": 0.344712115724679
+        },
+        "real": {
+          "rows": 7870,
+          "accuracy": 0.842566709021601,
+          "brier": 0.10919402984520003,
+          "logloss": 0.34492084564440956
+        },
+        "permuted": {
+          "rows": 7870,
+          "accuracy": 0.8439644218551461,
+          "brier": 0.10803907973474706,
+          "logloss": 0.3419797131482286
+        }
+      },
+      "vs_raw": {
+        "rows": 7870,
+        "errors": 1246,
+        "fixed": 165,
+        "harmed": 158,
+        "net": 7,
+        "fold_net": [
+          -2,
+          3,
+          2,
+          4,
+          1,
+          -5,
+          -5,
+          9
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 7870,
+        "errors": 1228,
+        "fixed": 123,
+        "harmed": 134,
+        "net": -11,
+        "fold_net": [
+          0,
+          -1,
+          5,
+          5,
+          -3,
+          -11,
+          -10,
+          4
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.003573408403507649,
+        0.005352315646201423
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.005481991309396514,
+        0.002686565642306298
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 127,
+          "harmed": 210,
+          "net": -83,
+          "fold_net": [
+            -3,
+            -15,
+            -10,
+            -9,
+            -17,
+            -13,
+            -3,
+            -13
+          ]
+        },
+        "shuffled": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 118,
+          "harmed": 183,
+          "net": -65,
+          "fold_net": [
+            -5,
+            -11,
+            -13,
+            -10,
+            -13,
+            -7,
+            2,
+            -8
+          ]
+        },
+        "true_neighbors": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 133,
+          "harmed": 209,
+          "net": -76,
+          "fold_net": [
+            -5,
+            -12,
+            -8,
+            -5,
+            -16,
+            -18,
+            -8,
+            -4
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 40,
+          "harmed": 56,
+          "net": -16,
+          "fold_net": [
+            -1,
+            -4,
+            1,
+            -2,
+            0,
+            -6,
+            -6,
+            2
+          ]
+        },
+        "corroborated": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 8,
+          "harmed": 24,
+          "net": -16,
+          "fold_net": [
+            -2,
+            -5,
+            1,
+            0,
+            -1,
+            -5,
+            -3,
+            -1
+          ]
+        },
+        "independent_both": {
+          "rows": 7870,
+          "errors": 1163,
+          "fixed": 3,
+          "harmed": 7,
+          "net": -4,
+          "fold_net": [
+            0,
+            -2,
+            1,
+            -1,
+            1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      },
+      "vs_eleven_decision": {
+        "raw": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 132,
+          "harmed": 212,
+          "net": -80,
+          "fold_net": [
+            -4,
+            -16,
+            -11,
+            -8,
+            -15,
+            -13,
+            -2,
+            -11
+          ]
+        },
+        "real": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 136,
+          "harmed": 209,
+          "net": -73,
+          "fold_net": [
+            -6,
+            -13,
+            -9,
+            -4,
+            -14,
+            -18,
+            -7,
+            -2
+          ]
+        },
+        "permuted": {
+          "rows": 7870,
+          "errors": 1166,
+          "fixed": 124,
+          "harmed": 186,
+          "net": -62,
+          "fold_net": [
+            -6,
+            -12,
+            -14,
+            -9,
+            -11,
+            -7,
+            3,
+            -6
+          ]
+        }
+      }
+    },
+    "new_orders": {
+      "score": {
+        "raw": {
+          "rows": 1044,
+          "accuracy": 0.7816091954022989,
+          "brier": 0.13844084703581908,
+          "logloss": 0.4155726621691299
+        },
+        "real": {
+          "rows": 1044,
+          "accuracy": 0.789272030651341,
+          "brier": 0.1406444022846057,
+          "logloss": 0.42378836712344925
+        },
+        "permuted": {
+          "rows": 1044,
+          "accuracy": 0.7806513409961686,
+          "brier": 0.13793682751312436,
+          "logloss": 0.41457568958779967
+        }
+      },
+      "vs_raw": {
+        "rows": 1044,
+        "errors": 228,
+        "fixed": 44,
+        "harmed": 36,
+        "net": 8,
+        "fold_net": [
+          1,
+          2,
+          -2,
+          5,
+          3,
+          -4,
+          4,
+          -1
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 1044,
+        "errors": 229,
+        "fixed": 28,
+        "harmed": 19,
+        "net": 9,
+        "fold_net": [
+          3,
+          5,
+          3,
+          3,
+          1,
+          -2,
+          -4,
+          0
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.009126439927949596,
+        0.024452110426033884
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        -0.004246355847105832,
+        0.021487735157450658
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 39,
+          "harmed": 66,
+          "net": -27,
+          "fold_net": [
+            -8,
+            -1,
+            2,
+            -2,
+            -4,
+            -2,
+            -4,
+            -8
+          ]
+        },
+        "shuffled": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 30,
+          "harmed": 60,
+          "net": -30,
+          "fold_net": [
+            -10,
+            -4,
+            -3,
+            -1,
+            -2,
+            -4,
+            3,
+            -9
+          ]
+        },
+        "true_neighbors": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 38,
+          "harmed": 59,
+          "net": -21,
+          "fold_net": [
+            -7,
+            1,
+            0,
+            1,
+            -1,
+            -6,
+            0,
+            -9
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 10,
+          "harmed": 8,
+          "net": 2,
+          "fold_net": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            -2,
+            0,
+            0
+          ]
+        },
+        "corroborated": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 3,
+          "harmed": 5,
+          "net": -2,
+          "fold_net": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            -2,
+            0,
+            -1
+          ]
+        },
+        "independent_both": {
+          "rows": 1033,
+          "errors": 194,
+          "fixed": 2,
+          "harmed": 1,
+          "net": 1,
+          "fold_net": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "historically_all_wrong_546": {
+      "score": {
+        "raw": {
+          "rows": 546,
+          "accuracy": 0.03663003663003663,
+          "brier": 0.5775859309689804,
+          "logloss": 1.6783210195220581
+        },
+        "real": {
+          "rows": 546,
+          "accuracy": 0.045787545787545784,
+          "brier": 0.5810352492473705,
+          "logloss": 1.692761683037225
+        },
+        "permuted": {
+          "rows": 546,
+          "accuracy": 0.029304029304029304,
+          "brier": 0.5768611989754562,
+          "logloss": 1.6770398373393003
+        }
+      },
+      "vs_raw": {
+        "rows": 546,
+        "errors": 526,
+        "fixed": 15,
+        "harmed": 10,
+        "net": 5,
+        "fold_net": [
+          1,
+          1,
+          1,
+          1,
+          3,
+          -1,
+          -2,
+          1
+        ]
+      },
+      "vs_shuffled": {
+        "rows": 546,
+        "errors": 530,
+        "fixed": 15,
+        "harmed": 6,
+        "net": 9,
+        "fold_net": [
+          2,
+          0,
+          1,
+          2,
+          3,
+          1,
+          -2,
+          2
+        ]
+      },
+      "vs_raw_cluster_accuracy_95": [
+        -0.008787562265813885,
+        0.027102580580832203
+      ],
+      "vs_shuffled_cluster_accuracy_95": [
+        5.538020362678281e-05,
+        0.032911652763406185
+      ],
+      "vs_161": {
+        "raw": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 14,
+          "harmed": 54,
+          "net": -40,
+          "fold_net": [
+            -6,
+            -3,
+            -4,
+            -3,
+            -8,
+            -3,
+            -5,
+            -8
+          ]
+        },
+        "shuffled": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 11,
+          "harmed": 56,
+          "net": -45,
+          "fold_net": [
+            -7,
+            -2,
+            -4,
+            -5,
+            -9,
+            -4,
+            -5,
+            -9
+          ]
+        },
+        "true_neighbors": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 17,
+          "harmed": 52,
+          "net": -35,
+          "fold_net": [
+            -5,
+            -2,
+            -3,
+            -2,
+            -6,
+            -3,
+            -7,
+            -7
+          ]
+        },
+        "true_neighbors_only": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 9,
+          "harmed": 0,
+          "net": 9,
+          "fold_net": [
+            2,
+            1,
+            1,
+            2,
+            1,
+            0,
+            0,
+            2
+          ]
+        },
+        "corroborated": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "independent_both": {
+          "rows": 540,
+          "errors": 481,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  }
+}
