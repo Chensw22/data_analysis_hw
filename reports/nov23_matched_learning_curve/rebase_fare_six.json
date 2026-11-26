@@ -1,0 +1,233 @@
+{
+  "local": {
+    "historical": {
+      "fare": {
+        "all": {
+          "rows": 6954,
+          "errors": 1286,
+          "fixed": 115,
+          "harmed": 76,
+          "net": 39,
+          "net_by_fold": [
+            10,
+            10,
+            19
+          ]
+        }
+      },
+      "six_alone": {
+        "all": {
+          "rows": 6954,
+          "errors": 1286,
+          "fixed": 14,
+          "harmed": 11,
+          "net": 3,
+          "net_by_fold": [
+            1,
+            0,
+            2
+          ]
+        }
+      },
+      "joint": {
+        "all": {
+          "rows": 6954,
+          "errors": 1286,
+          "fixed": 126,
+          "harmed": 78,
+          "net": 48,
+          "net_by_fold": [
+            12,
+            14,
+            22
+          ]
+        }
+      }
+    },
+    "full": {
+      "fare": {
+        "all": {
+          "rows": 8532,
+          "errors": 1531,
+          "fixed": 137,
+          "harmed": 88,
+          "net": 49,
+          "net_by_fold": [
+            0,
+            8,
+            11,
+            -5,
+            6,
+            6,
+            2,
+            21
+          ]
+        },
+        "outside_historical_orders": {
+          "rows": 1033,
+          "errors": 213,
+          "fixed": 33,
+          "harmed": 14,
+          "net": 19,
+          "net_by_fold": [
+            1,
+            2,
+            3,
+            2,
+            2,
+            1,
+            -1,
+            9
+          ]
+        },
+        "earlier_releases_agree": {
+          "rows": 3702,
+          "errors": 245,
+          "fixed": 23,
+          "harmed": 9,
+          "net": 14,
+          "net_by_fold": [
+            3,
+            2,
+            4,
+            -1,
+            4,
+            -1,
+            0,
+            3
+          ]
+        }
+      },
+      "six_alone": {
+        "all": {
+          "rows": 8532,
+          "errors": 1531,
+          "fixed": 14,
+          "harmed": 7,
+          "net": 7,
+          "net_by_fold": [
+            -1,
+            3,
+            -1,
+            -1,
+            4,
+            0,
+            2,
+            1
+          ]
+        },
+        "outside_historical_orders": {
+          "rows": 1033,
+          "errors": 213,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "earlier_releases_agree": {
+          "rows": 3702,
+          "errors": 245,
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "net_by_fold": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "joint": {
+        "all": {
+          "rows": 8532,
+          "errors": 1531,
+          "fixed": 146,
+          "harmed": 79,
+          "net": 67,
+          "net_by_fold": [
+            2,
+            12,
+            11,
+            -4,
+            8,
+            10,
+            7,
+            21
+          ]
+        },
+        "outside_historical_orders": {
+          "rows": 1033,
+          "errors": 213,
+          "fixed": 32,
+          "harmed": 12,
+          "net": 20,
+          "net_by_fold": [
+            1,
+            2,
+            3,
+            2,
+            1,
+            2,
+            0,
+            9
+          ]
+        },
+        "earlier_releases_agree": {
+          "rows": 3702,
+          "errors": 245,
+          "fixed": 23,
+          "harmed": 5,
+          "net": 18,
+          "net_by_fold": [
+            4,
+            2,
+            4,
+            -1,
+            4,
+            1,
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "test": {
+    "rows": 4277,
+    "sha256": "9ba377aa456f04b417e0b78cfebc2009828a6c3cd434714d6a4a457876517f01",
+    "valid": true,
+    "version": "n26_champion_fare_six",
+    "training_rows": 8693,
+    "parents": {
+      "proposal_n24_selected_dissent": "5ab295e3a24cd7b04ed92c66ccef6dea971866416437fa6f5d1af9cadc359223",
+      "proposal_n26_consensus_review": "8df14a7bb4a404fcfceff3abf7f7c44e9b855b50fca72a2bb2b1d090514c4459",
+      "proposal_n26_fare_deck": "a8a864dacdedd6d720f581922b4c5247c7adc7b0636ec1a0aa7cc580b37f5aae",
+      "proposal_n26_six_way_dispute": "222a2a6549b2b49a39452c58f203196ae20a150875766f330752bbf8de69bf2d"
+    },
+    "input_artifact_hashes": {
+      "fare": "ed93bcbfdbd916343763dbef0d8b2b53d961c75af89c2254076da0d8a9e1b752",
+      "six": "842386920db4a4d423dc9cc413cfe21a39a204be1d2c0c8ee5bd6cf6a8dfb0d0"
+    },
+    "model_sha256": "b974a96996ab0b8410825bc46d0730c8ce54c6ccc856448d061ef8792a7133d0",
+    "reload_difference": 0,
+    "changes_from_champion": {
+      "fare": 100,
+      "six_alone": 17,
+      "joint": 111
+    }
+  }
+}

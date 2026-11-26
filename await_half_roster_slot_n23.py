@@ -105,9 +105,13 @@ HISTORICAL_VETO = QueuedExport('proposal_n26_historical_veto', 'export_historica
     TABNET_ATTENTION.out/'queue_status.json',
     '组合版已跳过，主账号仍有本轮额度。即将评测从两批历史订单选出的备用版。',
     '4f5d0389d8f01e1c375b41521a88c87849f7183106d2537eb12bb9cca168f943', model='composition.json')
+CHAMPION_FARE_SIX = QueuedExport('proposal_n26_champion_fare_six', 'rebase_fare_six_n26.py',
+    HISTORICAL_VETO.out/'queue_status.json',
+    '主账号额度已刷新。即将评测直接从九票公榜最佳出发的账单与六模型版，共改判 111 人。',
+    'de14c99a507fb7073023908d8a26987064d134c0e77eaec6c77302caf7a76461', model='scores.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
                                   AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE,
-                                  TABNET_ATTENTION, HISTORICAL_VETO)}
+                                  TABNET_ATTENTION, HISTORICAL_VETO, CHAMPION_FARE_SIX)}
 
 
 def reserve_available(union, expected_digest, official_match, last_submission_date, today, remaining):
