@@ -83,7 +83,7 @@ def prepare(outer=None,mode='edges'):
 
 def use_sdpa(device):
     """The released module imports a compiled FlexAttention kernel. Apply the same
-    query/key mask and scale with PyTorch's CPU scaled-dot-product attention.
+    query/key mask and scale with PyTorch's device-native scaled-dot-product attention.
     The Stanford module's projections, normalization, gates and forward stay intact.
     """
     import torch

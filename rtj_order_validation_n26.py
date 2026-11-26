@@ -5,6 +5,7 @@ import json
 import numpy as np
 from scipy.special import expit,logit
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import GroupKFold
 from threadpoolctl import threadpool_limits
 
@@ -46,6 +47,8 @@ def evaluate():
     scores=np.full((len(y),2),np.nan)
     context=np.full_like(scores,np.nan)
     report=dict(completed_folds=[],files={},fold_results={},context_policy=CONTEXT_POLICY,
+                inference=dict(context_cells=512,local_context=96,bfs_width=16,random_walks=512,walk_length=12,
+                               quickstart_context_cells=8192,upstream='https://github.com/stanford-star/relational-transformer/blob/cf91f4566c685043fb3db560dd44b237d494a7f3/notebooks/quickstart.ipynb'),
                 prior_run='Superseded unmasked diagnostics remain in artifacts/nov26_rtj_probe/oof_placeholder_diagnostic. The released static-graph sampler can place other query rows’ zero placeholders in context. Current results mask all foreign query task cells before model forward and verify that every visible context label belongs to the training range.')
     for k in np.unique(f):
         ids=np.flatnonzero(f==k)
@@ -59,7 +62,7 @@ def evaluate():
                 np.testing.assert_array_equal(z['y'],y[ids])
                 np.testing.assert_array_equal(z['index_order'],np.arange(len(ids)))
                 assert int(z['train_bookings'])==len(set(g[f!=k])) and str(z['weights'])==WEIGHTS
-                assert str(z['context_policy'])==CONTEXT_POLICY
+                assert str(z['context_policy'])==CONTEXT_POLICY and int(z['ctx'])==report['inference']['context_cells']
                 scores[ids,j]=z['logits']
                 context[ids,j]=z['context_labels']
                 assert np.isfinite(scores[ids,j]).all() and np.std(scores[ids,j])>0
@@ -68,7 +71,9 @@ def evaluate():
                     min_median_max_context_labels=np.quantile(z['context_labels'],[0,.5,1]).tolist(),
                     sha256=hashlib.sha256(path.read_bytes()).hexdigest())
         report['fold_results'][str(k)]=dict(accuracy_edges=float(np.mean((scores[ids,0]>0)==y[ids])),
-                accuracy_no_edges=float(np.mean((scores[ids,1]>0)==y[ids])))
+                accuracy_no_edges=float(np.mean((scores[ids,1]>0)==y[ids])),
+                auc_edges=float(roc_auc_score(y[ids],scores[ids,0])),
+                auc_no_edges=float(roc_auc_score(y[ids],scores[ids,1])))
     known=np.isfinite(scores).all(1)
     assert known.any()
     mitra=p>=.5
@@ -80,14 +85,16 @@ def evaluate():
     strength=np.log1p(context)/3
     core=np.column_stack([om,strength,om[:,None]*strength])
     enriched=np.column_stack([core,scores,scores*strength,scores*np.abs(om[:,None])/3])
-    pred={name:np.zeros(len(y),bool) for name in modes}
+    fitted_modes=modes+['RTJ_edges_calibrated','RTJ_no_edges_calibrated']
+    features=[om[:,None],np.column_stack([om,scores[:,0]]),np.column_stack([om,scores[:,1]]),
+              np.column_stack([om,scores]),core,enriched,scores[:,[0]],scores[:,[1]]]
+    pred={name:np.zeros(len(y),bool) for name in fitted_modes}
     for k in report['completed_folds']:
         ids=np.flatnonzero(f==k)
         for a,b in GroupKFold(4,shuffle=True,random_state=5128).split(ids,groups=g[ids]):
             t,q=ids[a],ids[b]
             assert not np.isin(g[t],g[q]).any()
-            for name,x in zip(modes,[om[:,None],np.column_stack([om,scores[:,0]]),
-                                     np.column_stack([om,scores[:,1]]),np.column_stack([om,scores]),core,enriched],strict=True):
+            for name,x in zip(fitted_modes,features,strict=True):
                 fit=LogisticRegression(C=.4,max_iter=300).fit(x[t],y[t])
                 pred[name][q]=fit.predict(x[q])
     pred['edges']=scores[:,0]>0
