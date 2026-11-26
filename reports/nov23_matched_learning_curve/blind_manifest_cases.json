@@ -1,0 +1,294 @@
+{
+  "distance": "Require equal origin, destination, sleep, VIP, deck, side, exact booking size and each bill missing/zero/positive state. In the close match: known age within 3 years, known berth number within 100, each positive bill differs by at most max(50,15% of the larger bill). The broad match doubles all continuous tolerances. One closest passenger per external training booking, with no use of truth in choosing neighbors.",
+  "all_known": {
+    "close": {
+      "rows": 8532,
+      "errors": 1451,
+      "fixed": 37,
+      "harmed": 50,
+      "net": -13,
+      "net_by_fold": [
+        -1,
+        -1,
+        4,
+        -4,
+        -3,
+        -1,
+        -6,
+        -1
+      ],
+      "wrong": {
+        "rows": 1451,
+        "with_match": 277,
+        "three_bookings": 126,
+        "mixed_labels": 134,
+        "all_neighbors_support_original": 101
+      },
+      "right": {
+        "rows": 7081,
+        "with_match": 1161,
+        "three_bookings": 392,
+        "mixed_labels": 194,
+        "all_neighbors_support_original": 901
+      }
+    },
+    "broad": {
+      "rows": 8532,
+      "errors": 1451,
+      "fixed": 64,
+      "harmed": 70,
+      "net": -6,
+      "net_by_fold": [
+        -2,
+        -3,
+        3,
+        -1,
+        -6,
+        1,
+        0,
+        2
+      ],
+      "wrong": {
+        "rows": 1451,
+        "with_match": 379,
+        "three_bookings": 234,
+        "mixed_labels": 227,
+        "all_neighbors_support_original": 112
+      },
+      "right": {
+        "rows": 7081,
+        "with_match": 1717,
+        "three_bookings": 916,
+        "mixed_labels": 403,
+        "all_neighbors_support_original": 1244
+      }
+    }
+  },
+  "unanimous_31": {
+    "close": {
+      "rows": 3861,
+      "errors": 266,
+      "fixed": 3,
+      "harmed": 5,
+      "net": -2,
+      "net_by_fold": [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        -1,
+        -1,
+        0
+      ],
+      "wrong": {
+        "rows": 266,
+        "with_match": 49,
+        "three_bookings": 21,
+        "mixed_labels": 18,
+        "all_neighbors_support_original": 27
+      },
+      "right": {
+        "rows": 3595,
+        "with_match": 778,
+        "three_bookings": 248,
+        "mixed_labels": 48,
+        "all_neighbors_support_original": 724
+      }
+    },
+    "broad": {
+      "rows": 3861,
+      "errors": 266,
+      "fixed": 2,
+      "harmed": 0,
+      "net": 2,
+      "net_by_fold": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "wrong": {
+        "rows": 266,
+        "with_match": 68,
+        "three_bookings": 42,
+        "mixed_labels": 33,
+        "all_neighbors_support_original": 31
+      },
+      "right": {
+        "rows": 3595,
+        "with_match": 1137,
+        "three_bookings": 608,
+        "mixed_labels": 129,
+        "all_neighbors_support_original": 1002
+      }
+    }
+  },
+  "awake_paid_negative": {
+    "close": {
+      "rows": 1719,
+      "errors": 150,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0,
+      "net_by_fold": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wrong": {
+        "rows": 150,
+        "with_match": 0,
+        "three_bookings": 0,
+        "mixed_labels": 0,
+        "all_neighbors_support_original": 0
+      },
+      "right": {
+        "rows": 1569,
+        "with_match": 2,
+        "three_bookings": 0,
+        "mixed_labels": 0,
+        "all_neighbors_support_original": 2
+      }
+    },
+    "broad": {
+      "rows": 1719,
+      "errors": 150,
+      "fixed": 0,
+      "harmed": 0,
+      "net": 0,
+      "net_by_fold": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wrong": {
+        "rows": 150,
+        "with_match": 5,
+        "three_bookings": 0,
+        "mixed_labels": 0,
+        "all_neighbors_support_original": 5
+      },
+      "right": {
+        "rows": 1569,
+        "with_match": 23,
+        "three_bookings": 0,
+        "mixed_labels": 0,
+        "all_neighbors_support_original": 20
+      }
+    }
+  },
+  "sleeping_no_positive": {
+    "close": {
+      "rows": 1789,
+      "errors": 95,
+      "fixed": 3,
+      "harmed": 5,
+      "net": -2,
+      "net_by_fold": [
+        0,
+        0,
+        1,
+        -2,
+        1,
+        -1,
+        -1,
+        0
+      ],
+      "wrong": {
+        "rows": 95,
+        "with_match": 47,
+        "three_bookings": 21,
+        "mixed_labels": 18,
+        "all_neighbors_support_original": 25
+      },
+      "right": {
+        "rows": 1694,
+        "with_match": 749,
+        "three_bookings": 246,
+        "mixed_labels": 47,
+        "all_neighbors_support_original": 696
+      }
+    },
+    "broad": {
+      "rows": 1789,
+      "errors": 95,
+      "fixed": 2,
+      "harmed": 0,
+      "net": 2,
+      "net_by_fold": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "wrong": {
+        "rows": 95,
+        "with_match": 60,
+        "three_bookings": 41,
+        "mixed_labels": 33,
+        "all_neighbors_support_original": 23
+      },
+      "right": {
+        "rows": 1694,
+        "with_match": 1047,
+        "three_bookings": 600,
+        "mixed_labels": 127,
+        "all_neighbors_support_original": 917
+      }
+    },
+    "closest_opposite_truth_example": {
+      "distance": 0.03,
+      "passengers": [
+        {
+          "PassengerId": "8356_01",
+          "HomePlanet": "Earth",
+          "CryoSleep": true,
+          "Cabin": "G/1361/P",
+          "Destination": "PSO J318.5-22",
+          "Age": 19.0,
+          "VIP": false,
+          "RoomService": 0.0,
+          "FoodCourt": 0.0,
+          "ShoppingMall": 0.0,
+          "Spa": 0.0,
+          "VRDeck": 0.0,
+          "Transported": false
+        },
+        {
+          "PassengerId": "8332_01",
+          "HomePlanet": "Earth",
+          "CryoSleep": true,
+          "Cabin": "G/1358/P",
+          "Destination": "PSO J318.5-22",
+          "Age": 19.0,
+          "VIP": false,
+          "RoomService": 0.0,
+          "FoodCourt": 0.0,
+          "ShoppingMall": 0.0,
+          "Spa": 0.0,
+          "VRDeck": 0.0,
+          "Transported": true
+        }
+      ]
+    }
+  }
+}
