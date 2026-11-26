@@ -1,0 +1,573 @@
+{
+  "accuracy": {
+    "ordinal": 0.8154837225353733,
+    "indicator": 0.814448406764063,
+    "rotated": 0.813643161164155
+  },
+  "test_changes": {
+    "ordinal": 320,
+    "indicator": 319,
+    "rotated": 331,
+    "both": 218,
+    "nominal_only": 59,
+    "with_fare_tabicl": 66
+  },
+  "against_161": {
+    "ordinal": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 225,
+        "harmed": 303,
+        "net": -78,
+        "net_by_fold": [
+          -5,
+          -14,
+          -3,
+          -10,
+          -19,
+          0,
+          -5,
+          -22
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 128,
+        "harmed": 206,
+        "net": -78,
+        "net_by_fold": [
+          -4,
+          -13,
+          -6,
+          -16,
+          -20,
+          -6,
+          -3,
+          -10
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 32,
+        "harmed": 40,
+        "net": -8,
+        "net_by_fold": [
+          -5,
+          -3,
+          2,
+          -2,
+          0,
+          -1,
+          1,
+          0
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 28,
+        "harmed": 40,
+        "net": -12,
+        "net_by_fold": [
+          3,
+          -1,
+          -4,
+          0,
+          -7,
+          2,
+          -3,
+          -2
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 52,
+        "harmed": 81,
+        "net": -29,
+        "net_by_fold": [
+          -1,
+          -3,
+          -1,
+          -5,
+          -8,
+          -7,
+          -2,
+          -2
+        ]
+      }
+    },
+    "indicator": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 249,
+        "harmed": 325,
+        "net": -76,
+        "net_by_fold": [
+          -11,
+          -14,
+          -14,
+          4,
+          -15,
+          -4,
+          0,
+          -22
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 139,
+        "harmed": 201,
+        "net": -62,
+        "net_by_fold": [
+          -6,
+          -14,
+          -10,
+          -6,
+          -15,
+          -4,
+          0,
+          -7
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 37,
+        "harmed": 38,
+        "net": -1,
+        "net_by_fold": [
+          -4,
+          -2,
+          0,
+          3,
+          2,
+          3,
+          0,
+          -3
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 29,
+        "harmed": 41,
+        "net": -12,
+        "net_by_fold": [
+          2,
+          -3,
+          -4,
+          1,
+          -5,
+          -2,
+          1,
+          -2
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 46,
+        "harmed": 65,
+        "net": -19,
+        "net_by_fold": [
+          -2,
+          -8,
+          -2,
+          -1,
+          -4,
+          -4,
+          0,
+          2
+        ]
+      }
+    },
+    "rotated": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 267,
+        "harmed": 351,
+        "net": -84,
+        "net_by_fold": [
+          -5,
+          -6,
+          -13,
+          -2,
+          -26,
+          -9,
+          2,
+          -25
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 140,
+        "harmed": 219,
+        "net": -79,
+        "net_by_fold": [
+          -7,
+          -8,
+          -10,
+          -11,
+          -21,
+          -12,
+          1,
+          -11
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 39,
+        "harmed": 43,
+        "net": -4,
+        "net_by_fold": [
+          -6,
+          -2,
+          2,
+          2,
+          -2,
+          -1,
+          5,
+          -2
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 26,
+        "harmed": 39,
+        "net": -13,
+        "net_by_fold": [
+          3,
+          1,
+          -7,
+          -1,
+          -8,
+          0,
+          0,
+          -1
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 48,
+        "harmed": 82,
+        "net": -34,
+        "net_by_fold": [
+          -5,
+          -7,
+          -1,
+          -4,
+          -4,
+          -10,
+          0,
+          -3
+        ]
+      }
+    },
+    "both": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 190,
+        "harmed": 226,
+        "net": -36,
+        "net_by_fold": [
+          -7,
+          -4,
+          -12,
+          5,
+          -13,
+          -2,
+          11,
+          -14
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 97,
+        "harmed": 131,
+        "net": -34,
+        "net_by_fold": [
+          -6,
+          -6,
+          -8,
+          -4,
+          -12,
+          -4,
+          7,
+          -1
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 28,
+        "harmed": 28,
+        "net": 0,
+        "net_by_fold": [
+          -4,
+          -2,
+          -2,
+          3,
+          1,
+          1,
+          3,
+          0
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 17,
+        "harmed": 21,
+        "net": -4,
+        "net_by_fold": [
+          1,
+          1,
+          -3,
+          1,
+          -6,
+          2,
+          0,
+          0
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 35,
+        "harmed": 45,
+        "net": -10,
+        "net_by_fold": [
+          -3,
+          -6,
+          -1,
+          0,
+          -2,
+          -4,
+          3,
+          3
+        ]
+      }
+    },
+    "nominal_only": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 41,
+        "harmed": 65,
+        "net": -24,
+        "net_by_fold": [
+          -3,
+          2,
+          -7,
+          4,
+          -5,
+          -8,
+          0,
+          -7
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 20,
+        "harmed": 36,
+        "net": -16,
+        "net_by_fold": [
+          -3,
+          0,
+          -3,
+          -1,
+          -2,
+          -4,
+          -1,
+          -2
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 5,
+        "harmed": 7,
+        "net": -2,
+        "net_by_fold": [
+          0,
+          0,
+          -3,
+          2,
+          -1,
+          1,
+          1,
+          -2
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 1,
+        "harmed": 5,
+        "net": -4,
+        "net_by_fold": [
+          -2,
+          -1,
+          0,
+          0,
+          -1,
+          -1,
+          1,
+          0
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 3,
+        "harmed": 9,
+        "net": -6,
+        "net_by_fold": [
+          0,
+          -2,
+          0,
+          0,
+          0,
+          -2,
+          -1,
+          -1
+        ]
+      }
+    },
+    "with_fare_tabicl": {
+      "all": {
+        "rows": 8532,
+        "errors": 1451,
+        "fixed": 45,
+        "harmed": 56,
+        "net": -11,
+        "net_by_fold": [
+          0,
+          -5,
+          0,
+          1,
+          -2,
+          1,
+          2,
+          -8
+        ]
+      },
+      "common": {
+        "rows": 7849,
+        "errors": 1154,
+        "fixed": 23,
+        "harmed": 39,
+        "net": -16,
+        "net_by_fold": [
+          0,
+          -6,
+          -3,
+          -3,
+          -1,
+          -1,
+          3,
+          -5
+        ]
+      },
+      "historical_unseen": {
+        "rows": 1033,
+        "errors": 194,
+        "fixed": 3,
+        "harmed": 4,
+        "net": -1,
+        "net_by_fold": [
+          0,
+          -2,
+          0,
+          1,
+          1,
+          -1,
+          0,
+          0
+        ]
+      },
+      "awake_paid_negative": {
+        "rows": 3467,
+        "errors": 417,
+        "fixed": 1,
+        "harmed": 1,
+        "net": 0,
+        "net_by_fold": [
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      "sleeping_no_spend_positive": {
+        "rows": 2716,
+        "errors": 382,
+        "fixed": 3,
+        "harmed": 8,
+        "net": -5,
+        "net_by_fold": [
+          -1,
+          -4,
+          0,
+          1,
+          -1,
+          0,
+          1,
+          -1
+        ]
+      }
+    }
+  },
+  "indicator_vs_ordinal": {
+    "rows": 8693,
+    "errors": 1604,
+    "fixed": 182,
+    "harmed": 191,
+    "net": -9,
+    "net_by_fold": [
+      -6,
+      1,
+      -15,
+      12,
+      4,
+      -5,
+      1,
+      -1
+    ]
+  },
+  "rotated_vs_ordinal": {
+    "rows": 8693,
+    "errors": 1604,
+    "fixed": 225,
+    "harmed": 241,
+    "net": -16,
+    "net_by_fold": [
+      1,
+      8,
+      -16,
+      11,
+      -8,
+      -11,
+      3,
+      -4
+    ]
+  }
+}
