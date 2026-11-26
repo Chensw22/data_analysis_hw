@@ -40,6 +40,7 @@ def get_votes(raw, y, g, f, with_rtj):
                 with np.load(ART / f'nov26_rtj_probe/oof/{k}_{mode}.npz') as z:
                     np.testing.assert_array_equal(z['ids'], ids[q])
                     np.testing.assert_array_equal(z['y'], y[q])
+                    assert str(z['context_policy']) == 'mask_foreign_query_task_nodes_v1'
                     assert np.isfinite(z['logits']).all() and str(z['weights']) == WEIGHTS
                     arr[q] = z['logits'] > 0
     models['capsules'] = capsules
