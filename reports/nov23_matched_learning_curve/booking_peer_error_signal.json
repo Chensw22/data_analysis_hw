@@ -1,0 +1,410 @@
+{
+  "pair_audit": {
+    "all_known_parties": {
+      "rows": 3797,
+      "errors": 587,
+      "pairs": 4275,
+      "quantities": [
+        "both_wrong_pairs",
+        "same_direction_wrong_pairs",
+        "wrong_people_with_wrong_peer"
+      ],
+      "observed": [
+        201,
+        128,
+        240
+      ],
+      "shuffle_mean": [
+        180.6,
+        104.5,
+        239.8
+      ],
+      "shuffle_interval": [
+        [
+          160.0,
+          87.0,
+          219.0
+        ],
+        [
+          204.55,
+          123.0,
+          262.0
+        ]
+      ],
+      "upper_tail": [
+        0.056,
+        0.012,
+        0.494
+      ]
+    },
+    "release_consensus": {
+      "rows": 3522,
+      "errors": 453,
+      "pairs": 3614,
+      "quantities": [
+        "both_wrong_pairs",
+        "same_direction_wrong_pairs",
+        "wrong_people_with_wrong_peer"
+      ],
+      "observed": [
+        117,
+        80,
+        160
+      ],
+      "shuffle_mean": [
+        99.56,
+        59.87,
+        147.92
+      ],
+      "shuffle_interval": [
+        [
+          84.0,
+          46.0,
+          128.0
+        ],
+        [
+          116.55000000000001,
+          74.55000000000001,
+          167.0
+        ]
+      ],
+      "upper_tail": [
+        0.028,
+        0.012,
+        0.118
+      ]
+    }
+  },
+  "placebo_changed_train": 3551,
+  "placebo_changed_test": 1930,
+  "corrections": {
+    "person": {
+      "scopes": {
+        "all_known_parties": {
+          "rows": 3797,
+          "errors": 587,
+          "fixed": 114,
+          "harmed": 131,
+          "net": -17,
+          "net_by_fold": [
+            0,
+            -1,
+            -6,
+            -7,
+            -3,
+            -5,
+            11,
+            -6
+          ]
+        },
+        "two": {
+          "rows": 1652,
+          "errors": 218,
+          "fixed": 30,
+          "harmed": 35,
+          "net": -5,
+          "net_by_fold": [
+            0,
+            1,
+            -2,
+            -4,
+            -2,
+            -2,
+            5,
+            -1
+          ]
+        },
+        "three_or_more": {
+          "rows": 2145,
+          "errors": 369,
+          "fixed": 84,
+          "harmed": 96,
+          "net": -12,
+          "net_by_fold": [
+            0,
+            -2,
+            -4,
+            -3,
+            -1,
+            -3,
+            6,
+            -5
+          ]
+        },
+        "release_consensus": {
+          "rows": 3522,
+          "errors": 453,
+          "fixed": 47,
+          "harmed": 66,
+          "net": -19,
+          "net_by_fold": [
+            2,
+            -1,
+            -6,
+            -5,
+            -2,
+            -9,
+            4,
+            -2
+          ]
+        }
+      },
+      "test_changes": 59
+    },
+    "real_peers": {
+      "scopes": {
+        "all_known_parties": {
+          "rows": 3797,
+          "errors": 587,
+          "fixed": 106,
+          "harmed": 145,
+          "net": -39,
+          "net_by_fold": [
+            -8,
+            1,
+            -8,
+            -7,
+            -5,
+            -7,
+            2,
+            -7
+          ]
+        },
+        "two": {
+          "rows": 1652,
+          "errors": 218,
+          "fixed": 26,
+          "harmed": 39,
+          "net": -13,
+          "net_by_fold": [
+            -5,
+            3,
+            -3,
+            -4,
+            -1,
+            -3,
+            3,
+            -3
+          ]
+        },
+        "three_or_more": {
+          "rows": 2145,
+          "errors": 369,
+          "fixed": 80,
+          "harmed": 106,
+          "net": -26,
+          "net_by_fold": [
+            -3,
+            -2,
+            -5,
+            -3,
+            -4,
+            -4,
+            -1,
+            -4
+          ]
+        },
+        "release_consensus": {
+          "rows": 3522,
+          "errors": 453,
+          "fixed": 43,
+          "harmed": 82,
+          "net": -39,
+          "net_by_fold": [
+            -6,
+            -1,
+            -7,
+            -7,
+            -3,
+            -9,
+            -2,
+            -4
+          ]
+        }
+      },
+      "test_changes": 62
+    },
+    "placebo_peers": {
+      "scopes": {
+        "all_known_parties": {
+          "rows": 3797,
+          "errors": 587,
+          "fixed": 108,
+          "harmed": 137,
+          "net": -29,
+          "net_by_fold": [
+            -1,
+            -2,
+            -4,
+            -9,
+            -6,
+            -7,
+            8,
+            -8
+          ]
+        },
+        "two": {
+          "rows": 1652,
+          "errors": 218,
+          "fixed": 27,
+          "harmed": 45,
+          "net": -18,
+          "net_by_fold": [
+            -1,
+            1,
+            -2,
+            -7,
+            -3,
+            -5,
+            2,
+            -3
+          ]
+        },
+        "three_or_more": {
+          "rows": 2145,
+          "errors": 369,
+          "fixed": 81,
+          "harmed": 92,
+          "net": -11,
+          "net_by_fold": [
+            0,
+            -3,
+            -2,
+            -2,
+            -3,
+            -2,
+            6,
+            -5
+          ]
+        },
+        "release_consensus": {
+          "rows": 3522,
+          "errors": 453,
+          "fixed": 46,
+          "harmed": 72,
+          "net": -26,
+          "net_by_fold": [
+            0,
+            -2,
+            -2,
+            -7,
+            -6,
+            -9,
+            4,
+            -4
+          ]
+        }
+      },
+      "test_changes": 67
+    },
+    "real_peers_only": {
+      "scopes": {
+        "all_known_parties": {
+          "rows": 3797,
+          "errors": 587,
+          "fixed": 9,
+          "harmed": 18,
+          "net": -9,
+          "net_by_fold": [
+            -4,
+            2,
+            -2,
+            -2,
+            -1,
+            0,
+            -1,
+            -1
+          ]
+        },
+        "two": {
+          "rows": 1652,
+          "errors": 218,
+          "fixed": 2,
+          "harmed": 6,
+          "net": -4,
+          "net_by_fold": [
+            -2,
+            0,
+            -1,
+            -1,
+            0,
+            1,
+            0,
+            -1
+          ]
+        },
+        "three_or_more": {
+          "rows": 2145,
+          "errors": 369,
+          "fixed": 7,
+          "harmed": 12,
+          "net": -5,
+          "net_by_fold": [
+            -2,
+            2,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            0
+          ]
+        },
+        "release_consensus": {
+          "rows": 3522,
+          "errors": 453,
+          "fixed": 5,
+          "harmed": 16,
+          "net": -11,
+          "net_by_fold": [
+            -4,
+            1,
+            -2,
+            -2,
+            0,
+            -1,
+            -1,
+            -2
+          ]
+        }
+      },
+      "test_changes": 8
+    }
+  },
+  "real_vs_control": {
+    "person": {
+      "rows": 3797,
+      "errors": 604,
+      "fixed": 27,
+      "harmed": 49,
+      "net": -22,
+      "net_by_fold": [
+        -8,
+        2,
+        -2,
+        0,
+        -2,
+        -2,
+        -9,
+        -1
+      ]
+    },
+    "placebo_peers": {
+      "rows": 3797,
+      "errors": 616,
+      "fixed": 47,
+      "harmed": 57,
+      "net": -10,
+      "net_by_fold": [
+        -7,
+        3,
+        -4,
+        2,
+        1,
+        0,
+        -6,
+        1
+      ]
+    }
+  }
+}
