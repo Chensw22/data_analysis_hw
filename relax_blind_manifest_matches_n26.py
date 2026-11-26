@@ -27,13 +27,14 @@ def run():
     assert (scopes['awake_blind']&wrong).sum()==150
     out={}
     acts={}
-    support={}
+    cache={}
     for omission in (None,'registration','cabin','bill','size'):
         counts,rates,_,_=match(frame,y,g,fold,omit=omission)
         name=omission or 'none'
         n_ref,p=counts['close'],rates['close']
         active=(n_ref>=3)&np.where(base,p<.5,p>.5)
-        support[name]=n_ref
+        cache[name+'_support']=n_ref
+        cache[name+'_rate']=p
         acts[name]=active
         out[name]=dict(test_changes=int(active[n:].sum()),scopes={s:{
             **summary(active[:n],wrong,m,f),
@@ -46,6 +47,9 @@ def run():
     two=(relaxed.sum(axis=1)>=2)&~acts['none']
     out['two_relaxations_only']=dict(test_changes=int(two[n:].sum()),
                     scopes={s:summary(two[:n],wrong,m,f) for s,m in scopes.items()})
+    folder=ROOT/'artifacts/nov26_relax_blind_matches'
+    folder.mkdir(exist_ok=True)
+    np.savez_compressed(folder/'aligned.npz',passenger=frame.PassengerId.to_numpy(str),fold=f,y=y,**cache)
     REPORT.write_text(json.dumps(out,indent=2)+'\n')
     for k,row in out.items():
         print(k,row['scopes']['all']['net'],row['scopes']['awake_blind']['fixed'],row['scopes']['awake_blind']['harmed'],flush=True)
