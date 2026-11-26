@@ -1,0 +1,302 @@
+{
+  "method": "Eight grouped first-stage folds, within-fold four held booking splits; membership in the common-error subset and anchor direction are excluded from fitting.",
+  "standalone": {
+    "main": {
+      "accuracy": 0.8213505119061314,
+      "logloss": 0.3628257985527612
+    },
+    "magnitude": {
+      "accuracy": 0.821005406649028,
+      "logloss": 0.3631224752187722
+    },
+    "named": {
+      "accuracy": 0.8212354768204302,
+      "logloss": 0.36397982052167877
+    }
+  },
+  "scopes": {
+    "known": {
+      "rows": 8532,
+      "errors": 1451
+    },
+    "fresh": {
+      "rows": 1033,
+      "errors": 194
+    },
+    "common31": {
+      "rows": 3861,
+      "errors": 266
+    },
+    "common31_with_mask_dissent": {
+      "rows": 979,
+      "errors": 94
+    }
+  },
+  "changes": {
+    "main": {
+      "test": 167,
+      "known_fold_net": [
+        -2,
+        -7,
+        4,
+        1,
+        -11,
+        9,
+        2,
+        -20
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 176,
+          "harmed": 200
+        },
+        "fresh": {
+          "fixed": 17,
+          "harmed": 30
+        },
+        "common31": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      }
+    },
+    "magnitude": {
+      "test": 169,
+      "known_fold_net": [
+        -4,
+        -8,
+        8,
+        0,
+        -6,
+        9,
+        -8,
+        -19
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 181,
+          "harmed": 209
+        },
+        "fresh": {
+          "fixed": 16,
+          "harmed": 31
+        },
+        "common31": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      }
+    },
+    "named": {
+      "test": 172,
+      "known_fold_net": [
+        -9,
+        -15,
+        1,
+        3,
+        -1,
+        8,
+        4,
+        -19
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 181,
+          "harmed": 209
+        },
+        "fresh": {
+          "fixed": 20,
+          "harmed": 28
+        },
+        "common31": {
+          "fixed": 1,
+          "harmed": 1
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      }
+    },
+    "relative_to_main": {
+      "test": 19,
+      "known_fold_net": [
+        -1,
+        -5,
+        1,
+        -2,
+        2,
+        3,
+        1,
+        3
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 65,
+          "harmed": 63
+        },
+        "fresh": {
+          "fixed": 9,
+          "harmed": 2
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "relative_to_magnitude": {
+      "test": 12,
+      "known_fold_net": [
+        1,
+        -6,
+        1,
+        -4,
+        1,
+        1,
+        5,
+        -6
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 56,
+          "harmed": 63
+        },
+        "fresh": {
+          "fixed": 8,
+          "harmed": 2
+        },
+        "common31": {
+          "fixed": 1,
+          "harmed": 1
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      }
+    },
+    "independent": {
+      "test": 7,
+      "known_fold_net": [
+        -1,
+        -8,
+        2,
+        -2,
+        4,
+        -1,
+        1,
+        0
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 18,
+          "harmed": 23
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 0
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "adds_to_both": {
+      "test": 13,
+      "known_fold_net": [
+        0,
+        -7,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        -2
+      ],
+      "scopes": {
+        "known": {
+          "fixed": 13,
+          "harmed": 25
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 2
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common31_with_mask_dissent": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    }
+  },
+  "fewest_hidden_facilities": {
+    "0": {
+      "fixed": 1,
+      "harmed": 4
+    },
+    "1": {
+      "fixed": 24,
+      "harmed": 163
+    },
+    "2": {
+      "fixed": 31,
+      "harmed": 281
+    },
+    "3": {
+      "fixed": 27,
+      "harmed": 231
+    },
+    "4": {
+      "fixed": 6,
+      "harmed": 128
+    },
+    "5": {
+      "fixed": 5,
+      "harmed": 78
+    }
+  },
+  "single_hidden_facility": {
+    "Spa": {
+      "fixed": 10,
+      "harmed": 69
+    },
+    "FoodCourt": {
+      "fixed": 1,
+      "harmed": 8
+    },
+    "VRDeck": {
+      "fixed": 7,
+      "harmed": 54
+    },
+    "RoomService": {
+      "fixed": 14,
+      "harmed": 41
+    },
+    "ShoppingMall": {
+      "fixed": 0,
+      "harmed": 7
+    }
+  }
+}
