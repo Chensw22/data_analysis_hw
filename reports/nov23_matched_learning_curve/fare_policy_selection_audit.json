@@ -1,0 +1,734 @@
+{
+  "label_lineage": {
+    "historical": {
+      "query_rows": 6954,
+      "meta_fits": 9,
+      "query_rows_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_neural_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_neural_model_generating_query_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_query_features": 0
+    },
+    "full": {
+      "query_rows": 8532,
+      "meta_fits": 24,
+      "query_rows_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_neural_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_neural_model_generating_query_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_query_features": 0
+    },
+    "historical_to_new": {
+      "query_rows": 1033,
+      "meta_fits": 1,
+      "query_rows_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_neural_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_neural_model_generating_query_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_query_features": 0
+    },
+    "bookingmix": {
+      "query_rows": 6055,
+      "meta_fits": 15,
+      "query_rows_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_direct_meta_train": 0,
+      "query_rows_with_booking_in_neural_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_neural_model_generating_query_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_meta_train_features": 0,
+      "query_rows_with_booking_in_tabnet_model_generating_query_features": 0
+    }
+  },
+  "fare_policy_results": {
+    "historical": {
+      "rows": 6954,
+      "bookings": 5201,
+      "audited_policies": 16,
+      "frozen_fare": {
+        "fixed": 108,
+        "harmed": 87,
+        "net": 21
+      },
+      "global_winner": {
+        "choice": "both_new",
+        "fixed": 47,
+        "harmed": 17,
+        "net": 30
+      },
+      "grouped_outer_selection": {
+        "fixed": 47,
+        "harmed": 17,
+        "net": 30,
+        "folds": {
+          "0": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 15,
+              "harmed": 7,
+              "net": 8
+            },
+            "rows": 2318
+          },
+          "1": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 19,
+              "harmed": 4,
+              "net": 15
+            },
+            "rows": 2318
+          },
+          "2": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 13,
+              "harmed": 6,
+              "net": 7
+            },
+            "rows": 2318
+          }
+        }
+      },
+      "historical_choice": {
+        "choice": "both_new",
+        "fixed": 47,
+        "harmed": 17,
+        "net": 30
+      },
+      "all_policies": {
+        "tree_coarse": {
+          "fixed": 119,
+          "harmed": 135,
+          "net": -16
+        },
+        "tree_coarse_new": {
+          "fixed": 52,
+          "harmed": 70,
+          "net": -18
+        },
+        "tree_fine": {
+          "fixed": 143,
+          "harmed": 125,
+          "net": 18
+        },
+        "tree_fine_new": {
+          "fixed": 75,
+          "harmed": 66,
+          "net": 9
+        },
+        "tree_displaced": {
+          "fixed": 105,
+          "harmed": 124,
+          "net": -19
+        },
+        "tree_displaced_new": {
+          "fixed": 41,
+          "harmed": 55,
+          "net": -14
+        },
+        "tree_increment": {
+          "fixed": 53,
+          "harmed": 56,
+          "net": -3
+        },
+        "neural_coarse": {
+          "fixed": 119,
+          "harmed": 121,
+          "net": -2
+        },
+        "neural_coarse_new": {
+          "fixed": 77,
+          "harmed": 61,
+          "net": 16
+        },
+        "neural_fine": {
+          "fixed": 151,
+          "harmed": 145,
+          "net": 6
+        },
+        "neural_fine_new": {
+          "fixed": 108,
+          "harmed": 87,
+          "net": 21
+        },
+        "neural_displaced": {
+          "fixed": 97,
+          "harmed": 124,
+          "net": -27
+        },
+        "neural_displaced_new": {
+          "fixed": 59,
+          "harmed": 64,
+          "net": -5
+        },
+        "neural_increment": {
+          "fixed": 97,
+          "harmed": 90,
+          "net": 7
+        },
+        "both_new": {
+          "fixed": 47,
+          "harmed": 17,
+          "net": 30
+        },
+        "one_new_both_confirm": {
+          "fixed": 65,
+          "harmed": 44,
+          "net": 21
+        }
+      }
+    },
+    "full": {
+      "rows": 8532,
+      "bookings": 6147,
+      "audited_policies": 16,
+      "frozen_fare": {
+        "fixed": 132,
+        "harmed": 97,
+        "net": 35
+      },
+      "global_winner": {
+        "choice": "neural_fine",
+        "fixed": 190,
+        "harmed": 154,
+        "net": 36
+      },
+      "grouped_outer_selection": {
+        "fixed": 176,
+        "harmed": 149,
+        "net": 27,
+        "folds": {
+          "0": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 17,
+              "harmed": 15,
+              "net": 2
+            },
+            "rows": 1038
+          },
+          "1": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 20,
+              "harmed": 15,
+              "net": 5
+            },
+            "rows": 1034
+          },
+          "2": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 24,
+              "harmed": 19,
+              "net": 5
+            },
+            "rows": 1114
+          },
+          "3": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 19,
+              "harmed": 22,
+              "net": -3
+            },
+            "rows": 1054
+          },
+          "4": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 17,
+              "harmed": 10,
+              "net": 7
+            },
+            "rows": 1097
+          },
+          "5": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 24,
+              "harmed": 32,
+              "net": -8
+            },
+            "rows": 1052
+          },
+          "6": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 24,
+              "harmed": 17,
+              "net": 7
+            },
+            "rows": 1097
+          },
+          "7": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 31,
+              "harmed": 19,
+              "net": 12
+            },
+            "rows": 1046
+          }
+        }
+      },
+      "historical_choice": {
+        "choice": "both_new",
+        "fixed": 47,
+        "harmed": 24,
+        "net": 23
+      },
+      "all_policies": {
+        "tree_coarse": {
+          "fixed": 158,
+          "harmed": 159,
+          "net": -1
+        },
+        "tree_coarse_new": {
+          "fixed": 72,
+          "harmed": 60,
+          "net": 12
+        },
+        "tree_fine": {
+          "fixed": 165,
+          "harmed": 161,
+          "net": 4
+        },
+        "tree_fine_new": {
+          "fixed": 81,
+          "harmed": 70,
+          "net": 11
+        },
+        "tree_displaced": {
+          "fixed": 126,
+          "harmed": 145,
+          "net": -19
+        },
+        "tree_displaced_new": {
+          "fixed": 38,
+          "harmed": 43,
+          "net": -5
+        },
+        "tree_increment": {
+          "fixed": 65,
+          "harmed": 82,
+          "net": -17
+        },
+        "neural_coarse": {
+          "fixed": 148,
+          "harmed": 135,
+          "net": 13
+        },
+        "neural_coarse_new": {
+          "fixed": 87,
+          "harmed": 78,
+          "net": 9
+        },
+        "neural_fine": {
+          "fixed": 190,
+          "harmed": 154,
+          "net": 36
+        },
+        "neural_fine_new": {
+          "fixed": 132,
+          "harmed": 97,
+          "net": 35
+        },
+        "neural_displaced": {
+          "fixed": 121,
+          "harmed": 145,
+          "net": -24
+        },
+        "neural_displaced_new": {
+          "fixed": 66,
+          "harmed": 74,
+          "net": -8
+        },
+        "neural_increment": {
+          "fixed": 108,
+          "harmed": 120,
+          "net": -12
+        },
+        "both_new": {
+          "fixed": 47,
+          "harmed": 24,
+          "net": 23
+        },
+        "one_new_both_confirm": {
+          "fixed": 77,
+          "harmed": 56,
+          "net": 21
+        }
+      }
+    },
+    "historical_to_new": {
+      "rows": 1033,
+      "bookings": 1006,
+      "audited_policies": 16,
+      "frozen_fare": {
+        "fixed": 26,
+        "harmed": 14,
+        "net": 12
+      },
+      "global_winner": {
+        "choice": "neural_fine",
+        "fixed": 34,
+        "harmed": 21,
+        "net": 13
+      },
+      "grouped_outer_selection": {
+        "fixed": 29,
+        "harmed": 20,
+        "net": 9,
+        "folds": {
+          "0": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 2,
+              "harmed": 1,
+              "net": 1
+            },
+            "rows": 123
+          },
+          "1": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 2,
+              "harmed": 1,
+              "net": 1
+            },
+            "rows": 113
+          },
+          "2": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 3,
+              "harmed": 1,
+              "net": 2
+            },
+            "rows": 140
+          },
+          "3": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 2,
+              "harmed": 3,
+              "net": -1
+            },
+            "rows": 106
+          },
+          "4": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 3,
+              "harmed": 1,
+              "net": 2
+            },
+            "rows": 135
+          },
+          "5": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 5,
+              "harmed": 7,
+              "net": -2
+            },
+            "rows": 147
+          },
+          "6": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 5,
+              "harmed": 5,
+              "net": 0
+            },
+            "rows": 128
+          },
+          "7": {
+            "choice": "neural_fine",
+            "held": {
+              "fixed": 7,
+              "harmed": 1,
+              "net": 6
+            },
+            "rows": 141
+          }
+        }
+      },
+      "historical_choice": {
+        "choice": "both_new",
+        "fixed": 8,
+        "harmed": 1,
+        "net": 7
+      },
+      "all_policies": {
+        "tree_coarse": {
+          "fixed": 23,
+          "harmed": 23,
+          "net": 0
+        },
+        "tree_coarse_new": {
+          "fixed": 11,
+          "harmed": 10,
+          "net": 1
+        },
+        "tree_fine": {
+          "fixed": 26,
+          "harmed": 20,
+          "net": 6
+        },
+        "tree_fine_new": {
+          "fixed": 15,
+          "harmed": 9,
+          "net": 6
+        },
+        "tree_displaced": {
+          "fixed": 22,
+          "harmed": 21,
+          "net": 1
+        },
+        "tree_displaced_new": {
+          "fixed": 8,
+          "harmed": 8,
+          "net": 0
+        },
+        "tree_increment": {
+          "fixed": 7,
+          "harmed": 11,
+          "net": -4
+        },
+        "neural_coarse": {
+          "fixed": 22,
+          "harmed": 19,
+          "net": 3
+        },
+        "neural_coarse_new": {
+          "fixed": 12,
+          "harmed": 10,
+          "net": 2
+        },
+        "neural_fine": {
+          "fixed": 34,
+          "harmed": 21,
+          "net": 13
+        },
+        "neural_fine_new": {
+          "fixed": 26,
+          "harmed": 14,
+          "net": 12
+        },
+        "neural_displaced": {
+          "fixed": 19,
+          "harmed": 24,
+          "net": -5
+        },
+        "neural_displaced_new": {
+          "fixed": 9,
+          "harmed": 11,
+          "net": -2
+        },
+        "neural_increment": {
+          "fixed": 16,
+          "harmed": 14,
+          "net": 2
+        },
+        "both_new": {
+          "fixed": 8,
+          "harmed": 1,
+          "net": 7
+        },
+        "one_new_both_confirm": {
+          "fixed": 12,
+          "harmed": 10,
+          "net": 2
+        }
+      }
+    },
+    "bookingmix": {
+      "rows": 6055,
+      "bookings": 5331,
+      "audited_policies": 16,
+      "frozen_fare": {
+        "fixed": 104,
+        "harmed": 85,
+        "net": 19
+      },
+      "global_winner": {
+        "choice": "neural_fine_new",
+        "fixed": 104,
+        "harmed": 85,
+        "net": 19
+      },
+      "grouped_outer_selection": {
+        "fixed": 72,
+        "harmed": 62,
+        "net": 10,
+        "folds": {
+          "0": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 12,
+              "harmed": 9,
+              "net": 3
+            },
+            "rows": 761
+          },
+          "1": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 2,
+              "harmed": 0,
+              "net": 2
+            },
+            "rows": 762
+          },
+          "2": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 3,
+              "harmed": 2,
+              "net": 1
+            },
+            "rows": 772
+          },
+          "3": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 10,
+              "harmed": 14,
+              "net": -4
+            },
+            "rows": 753
+          },
+          "4": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 13,
+              "harmed": 9,
+              "net": 4
+            },
+            "rows": 747
+          },
+          "5": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 10,
+              "harmed": 18,
+              "net": -8
+            },
+            "rows": 758
+          },
+          "6": {
+            "choice": "neural_fine_new",
+            "held": {
+              "fixed": 12,
+              "harmed": 8,
+              "net": 4
+            },
+            "rows": 747
+          },
+          "7": {
+            "choice": "both_new",
+            "held": {
+              "fixed": 10,
+              "harmed": 2,
+              "net": 8
+            },
+            "rows": 755
+          }
+        }
+      },
+      "historical_choice": {
+        "choice": "both_new",
+        "fixed": 38,
+        "harmed": 20,
+        "net": 18
+      },
+      "all_policies": {
+        "tree_coarse": {
+          "fixed": 105,
+          "harmed": 132,
+          "net": -27
+        },
+        "tree_coarse_new": {
+          "fixed": 51,
+          "harmed": 53,
+          "net": -2
+        },
+        "tree_fine": {
+          "fixed": 118,
+          "harmed": 136,
+          "net": -18
+        },
+        "tree_fine_new": {
+          "fixed": 65,
+          "harmed": 61,
+          "net": 4
+        },
+        "tree_displaced": {
+          "fixed": 82,
+          "harmed": 125,
+          "net": -43
+        },
+        "tree_displaced_new": {
+          "fixed": 28,
+          "harmed": 39,
+          "net": -11
+        },
+        "tree_increment": {
+          "fixed": 57,
+          "harmed": 68,
+          "net": -11
+        },
+        "neural_coarse": {
+          "fixed": 104,
+          "harmed": 117,
+          "net": -13
+        },
+        "neural_coarse_new": {
+          "fixed": 67,
+          "harmed": 65,
+          "net": 2
+        },
+        "neural_fine": {
+          "fixed": 137,
+          "harmed": 135,
+          "net": 2
+        },
+        "neural_fine_new": {
+          "fixed": 104,
+          "harmed": 85,
+          "net": 19
+        },
+        "neural_displaced": {
+          "fixed": 71,
+          "harmed": 122,
+          "net": -51
+        },
+        "neural_displaced_new": {
+          "fixed": 37,
+          "harmed": 65,
+          "net": -28
+        },
+        "neural_increment": {
+          "fixed": 88,
+          "harmed": 99,
+          "net": -11
+        },
+        "both_new": {
+          "fixed": 38,
+          "harmed": 20,
+          "net": 18
+        },
+        "one_new_both_confirm": {
+          "fixed": 58,
+          "harmed": 53,
+          "net": 5
+        }
+      }
+    }
+  },
+  "scope": "Audited fare and TabNet base model training indices; observed labels available to the review/meta calibrator checked against its stored inputs. The 16-rule exercise diagnoses selection reuse, conditional on the existing candidate menu and upstream frozen parent. Only historical_to_new is completely disjoint from historical discovery orders. It is a retrospective check, not a prospective untouched test."
+}
