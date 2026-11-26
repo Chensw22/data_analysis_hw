@@ -1,0 +1,504 @@
+{
+  "source": "https://github.com/jclopezsDS/kaggle-spaceship-titanic/blob/7ed4f703bc57e3e32784965f02416d89d8fe1d3d/notebooks/05_titanic_spaceship_prediction.ipynb",
+  "code_cells": [
+    40,
+    43,
+    48,
+    51,
+    60,
+    71,
+    72,
+    73,
+    76
+  ],
+  "weights": [
+    0.4766,
+    0.2901,
+    0.2333
+  ],
+  "clustered_fields": [
+    "Age",
+    "CabinNumber",
+    "RoomService",
+    "FoodCourt",
+    "ShoppingMall",
+    "Spa",
+    "VRDeck",
+    "Expenditure",
+    "TotalExp"
+  ],
+  "related_local_controls": [
+    "broad_chained_tree_ensemble_n23.py: posterior numeric imputation and three-tree voting",
+    "full_roster_permutation_selection_n24.py: 191-feature permutation selection"
+  ],
+  "published_claim": "82.02% per author README; not a score of these models",
+  "fidelity": "Isolates numerical cluster OHE plus smoothed within-cluster outcome log odds from cell 60. Nine fields; six fixed transforms and published fallback K=25. Uses group-held target encoding, never target-encodes a training order with its own labels. Uses the local three-tree settings, single seed and shared one-hot base; keeps fold-median cluster fill, no surnames, no ExtraTrees imputation, Optuna or target-driven transform selection. Original notebook fits cluster outcome counts before CV, and downstream trees use stratified passenger folds.",
+  "original_imputation": "Cell 40 uses joint unlabeled train+test, IterativeImputer with 100 ExtraTrees, max_depth=15, min_samples_split=5, max_iter=10, seed=42. Cell 48 defines Expenditure as RoomService+Spa+VRDeck; TotalExp includes all five. Cells 71-73 derive downstream hyperparameters through Optuna (100+80+40 trials per model) rather than specifying one numerical winner in the training function.",
+  "original_validation": "The published run_optimized_nested_cv_ensemble_with_saving fits the three weights via 75 Optuna trials using the validation labels in each passenger-stratified fold, then scores the optimized weights on those same labels. Its reported CV has a different selection and split design.",
+  "standalone": {
+    "plain": {
+      "correct": 7083,
+      "accuracy": 0.8147935120211665,
+      "brier": 0.12181888238719561
+    },
+    "cluster": {
+      "correct": 7093,
+      "accuracy": 0.8159438628781779,
+      "brier": 0.12217484476752663
+    },
+    "cluster_woe": {
+      "correct": 7070,
+      "accuracy": 0.8132980559070516,
+      "brier": 0.1230939386753835
+    }
+  },
+  "paired": {
+    "plain_to_cluster": {
+      "fixed": 143,
+      "harmed": 133,
+      "net": 10,
+      "fold_net": [
+        4,
+        -4,
+        -3,
+        1,
+        -4,
+        4,
+        3,
+        9
+      ]
+    },
+    "cluster_to_woe": {
+      "fixed": 122,
+      "harmed": 145,
+      "net": -23,
+      "fold_net": [
+        -9,
+        -2,
+        -1,
+        2,
+        1,
+        -5,
+        -7,
+        -2
+      ]
+    },
+    "plain_to_woe": {
+      "fixed": 163,
+      "harmed": 176,
+      "net": -13,
+      "fold_net": [
+        -5,
+        -6,
+        -4,
+        3,
+        -3,
+        -1,
+        -4,
+        7
+      ]
+    }
+  },
+  "scopes": {
+    "known": {
+      "rows": 8532,
+      "errors": 1451,
+      "rules": {
+        "plain": {
+          "fixed": 216,
+          "harmed": 304,
+          "net": -88,
+          "fold_net": [
+            -4,
+            -6,
+            -1,
+            1,
+            -18,
+            -14,
+            -11,
+            -35
+          ]
+        },
+        "cluster": {
+          "fixed": 242,
+          "harmed": 323,
+          "net": -81,
+          "fold_net": [
+            -2,
+            -11,
+            -5,
+            1,
+            -22,
+            -10,
+            -4,
+            -28
+          ]
+        },
+        "cluster_woe": {
+          "fixed": 239,
+          "harmed": 335,
+          "net": -96,
+          "fold_net": [
+            -11,
+            -10,
+            -4,
+            3,
+            -20,
+            -16,
+            -8,
+            -30
+          ]
+        },
+        "new_cluster": {
+          "fixed": 71,
+          "harmed": 79,
+          "net": -8,
+          "fold_net": [
+            0,
+            -2,
+            -4,
+            1,
+            -2,
+            -2,
+            3,
+            -2
+          ]
+        },
+        "new_woe": {
+          "fixed": 44,
+          "harmed": 50,
+          "net": -6,
+          "fold_net": [
+            -8,
+            2,
+            -2,
+            0,
+            1,
+            -1,
+            0,
+            2
+          ]
+        },
+        "both_cluster_models": {
+          "fixed": 40,
+          "harmed": 47,
+          "net": -7,
+          "fold_net": [
+            2,
+            -3,
+            -1,
+            2,
+            -3,
+            -1,
+            0,
+            -3
+          ]
+        }
+      }
+    },
+    "fresh": {
+      "rows": 1033,
+      "errors": 194,
+      "rules": {
+        "plain": {
+          "fixed": 23,
+          "harmed": 42,
+          "net": -19,
+          "fold_net": [
+            -4,
+            -4,
+            -1,
+            2,
+            1,
+            -4,
+            -1,
+            -8
+          ]
+        },
+        "cluster": {
+          "fixed": 27,
+          "harmed": 41,
+          "net": -14,
+          "fold_net": [
+            -2,
+            -3,
+            -3,
+            2,
+            -1,
+            0,
+            -1,
+            -6
+          ]
+        },
+        "cluster_woe": {
+          "fixed": 26,
+          "harmed": 48,
+          "net": -22,
+          "fold_net": [
+            -6,
+            -4,
+            -2,
+            4,
+            -1,
+            -2,
+            -2,
+            -9
+          ]
+        },
+        "new_cluster": {
+          "fixed": 11,
+          "harmed": 13,
+          "net": -2,
+          "fold_net": [
+            0,
+            2,
+            -2,
+            0,
+            -2,
+            1,
+            0,
+            -1
+          ]
+        },
+        "new_woe": {
+          "fixed": 6,
+          "harmed": 7,
+          "net": -1,
+          "fold_net": [
+            -3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            -1
+          ]
+        },
+        "both_cluster_models": {
+          "fixed": 6,
+          "harmed": 7,
+          "net": -1,
+          "fold_net": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "retained855": {
+      "rows": 7055,
+      "errors": 855,
+      "rules": {
+        "plain": {
+          "fixed": 26,
+          "harmed": 38,
+          "net": -12,
+          "fold_net": [
+            -1,
+            -3,
+            1,
+            0,
+            -2,
+            -4,
+            1,
+            -4
+          ]
+        },
+        "cluster": {
+          "fixed": 39,
+          "harmed": 50,
+          "net": -11,
+          "fold_net": [
+            -1,
+            -3,
+            -3,
+            2,
+            0,
+            -4,
+            2,
+            -4
+          ]
+        },
+        "cluster_woe": {
+          "fixed": 32,
+          "harmed": 55,
+          "net": -23,
+          "fold_net": [
+            -6,
+            -2,
+            -3,
+            2,
+            1,
+            -11,
+            -1,
+            -3
+          ]
+        },
+        "new_cluster": {
+          "fixed": 23,
+          "harmed": 26,
+          "net": -3,
+          "fold_net": [
+            0,
+            0,
+            -4,
+            3,
+            0,
+            0,
+            1,
+            -3
+          ]
+        },
+        "new_woe": {
+          "fixed": 9,
+          "harmed": 15,
+          "net": -6,
+          "fold_net": [
+            -4,
+            2,
+            -2,
+            -1,
+            1,
+            -2,
+            -1,
+            1
+          ]
+        },
+        "both_cluster_models": {
+          "fixed": 11,
+          "harmed": 15,
+          "net": -4,
+          "fold_net": [
+            0,
+            -1,
+            -2,
+            4,
+            -1,
+            -1,
+            -1,
+            -2
+          ]
+        }
+      }
+    },
+    "silent266": {
+      "rows": 3861,
+      "errors": 266,
+      "rules": {
+        "plain": {
+          "fixed": 1,
+          "harmed": 0,
+          "net": 1,
+          "fold_net": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "cluster": {
+          "fixed": 1,
+          "harmed": 3,
+          "net": -2,
+          "fold_net": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            -1
+          ]
+        },
+        "cluster_woe": {
+          "fixed": 2,
+          "harmed": 0,
+          "net": 2,
+          "fold_net": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "new_cluster": {
+          "fixed": 1,
+          "harmed": 3,
+          "net": -2,
+          "fold_net": [
+            0,
+            0,
+            -1,
+            1,
+            -1,
+            0,
+            0,
+            -1
+          ]
+        },
+        "new_woe": {
+          "fixed": 0,
+          "harmed": 0,
+          "net": 0,
+          "fold_net": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "both_cluster_models": {
+          "fixed": 1,
+          "harmed": 0,
+          "net": 1,
+          "fold_net": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "test": {
+    "rows": 4277,
+    "vs_161": {
+      "plain": 311,
+      "cluster": 318,
+      "cluster_woe": 335,
+      "new_cluster": 74,
+      "new_woe": 54,
+      "both_cluster_models": 38
+    },
+    "pairwise_edits": {
+      "plain_cluster": 141,
+      "cluster_woe": 141,
+      "plain_woe": 160
+    }
+  }
+}
