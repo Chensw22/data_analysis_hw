@@ -1,0 +1,386 @@
+{
+  "wide": {
+    "oracle": {
+      "known": {
+        "patterns": 2921,
+        "singles": 2693,
+        "errors_in_indistinguishable_patterns": 561,
+        "hindsight_net": 900
+      },
+      "blind": {
+        "patterns": 254,
+        "singles": 174,
+        "errors_in_indistinguishable_patterns": 234,
+        "hindsight_net": 34
+      }
+    },
+    "oracle_by_configuration": {
+      "known": {
+        "patterns": 5349,
+        "singles": 5080,
+        "errors_in_indistinguishable_patterns": 189,
+        "hindsight_net": 1264
+      },
+      "blind": {
+        "patterns": 1414,
+        "singles": 1240,
+        "errors_in_indistinguishable_patterns": 115,
+        "hindsight_net": 152
+      }
+    },
+    "identity_backoff": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 189,
+          "harmed": 323
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 19,
+          "harmed": 47
+        }
+      },
+      "net_by_fold": [
+        -13,
+        -11,
+        -18,
+        -6,
+        -14,
+        -15,
+        -19,
+        -38
+      ]
+    },
+    "identity_shrink": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 197,
+          "harmed": 311
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 20,
+          "harmed": 41
+        }
+      },
+      "net_by_fold": [
+        -9,
+        -8,
+        -18,
+        -1,
+        -17,
+        -12,
+        -17,
+        -32
+      ]
+    },
+    "counts_backoff": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 247,
+          "harmed": 386
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 29,
+          "harmed": 54
+        }
+      },
+      "net_by_fold": [
+        -19,
+        -7,
+        -28,
+        -7,
+        -18,
+        -10,
+        -18,
+        -32
+      ]
+    },
+    "counts_shrink": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 273,
+          "harmed": 399
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 34,
+          "harmed": 60
+        }
+      },
+      "net_by_fold": [
+        -15,
+        -7,
+        -25,
+        -5,
+        -15,
+        -12,
+        -17,
+        -30
+      ]
+    },
+    "new_identity": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 27,
+          "harmed": 49
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 5
+        }
+      },
+      "net_by_fold": [
+        -2,
+        -3,
+        2,
+        -2,
+        -1,
+        -4,
+        -2,
+        -10
+      ]
+    },
+    "conditional_identity": {
+      "test_edits": null,
+      "scopes": {
+        "known": {
+          "fixed": 181,
+          "harmed": 225
+        },
+        "blind": {
+          "fixed": 4,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 23,
+          "harmed": 24
+        }
+      },
+      "net_by_fold": [
+        -2,
+        0,
+        -5,
+        -21,
+        -12,
+        -1,
+        12,
+        -15
+      ]
+    }
+  },
+  "deployable": {
+    "oracle": {
+      "known": {
+        "patterns": 1537,
+        "singles": 1292,
+        "errors_in_indistinguishable_patterns": 911,
+        "hindsight_net": 570
+      },
+      "blind": {
+        "patterns": 29,
+        "singles": 19,
+        "errors_in_indistinguishable_patterns": 261,
+        "hindsight_net": 7
+      }
+    },
+    "oracle_by_configuration": {
+      "known": {
+        "patterns": 2923,
+        "singles": 2707,
+        "errors_in_indistinguishable_patterns": 508,
+        "hindsight_net": 953
+      },
+      "blind": {
+        "patterns": 210,
+        "singles": 144,
+        "errors_in_indistinguishable_patterns": 228,
+        "hindsight_net": 39
+      }
+    },
+    "identity_backoff": {
+      "test_edits": 354,
+      "scopes": {
+        "known": {
+          "fixed": 230,
+          "harmed": 360
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 25,
+          "harmed": 47
+        }
+      },
+      "net_by_fold": [
+        -9,
+        -7,
+        -14,
+        -20,
+        -15,
+        -13,
+        -22,
+        -30
+      ]
+    },
+    "identity_shrink": {
+      "test_edits": 342,
+      "scopes": {
+        "known": {
+          "fixed": 257,
+          "harmed": 365
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 25,
+          "harmed": 46
+        }
+      },
+      "net_by_fold": [
+        -5,
+        -2,
+        -24,
+        -10,
+        -20,
+        -7,
+        -13,
+        -27
+      ]
+    },
+    "counts_backoff": {
+      "test_edits": 374,
+      "scopes": {
+        "known": {
+          "fixed": 260,
+          "harmed": 446
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 66
+        }
+      },
+      "net_by_fold": [
+        -18,
+        -14,
+        -18,
+        -26,
+        -14,
+        -17,
+        -26,
+        -53
+      ]
+    },
+    "counts_shrink": {
+      "test_edits": 371,
+      "scopes": {
+        "known": {
+          "fixed": 273,
+          "harmed": 469
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 28,
+          "harmed": 72
+        }
+      },
+      "net_by_fold": [
+        -22,
+        -17,
+        -14,
+        -27,
+        -14,
+        -20,
+        -30,
+        -52
+      ]
+    },
+    "new_identity": {
+      "test_edits": 32,
+      "scopes": {
+        "known": {
+          "fixed": 32,
+          "harmed": 36
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 3
+        }
+      },
+      "net_by_fold": [
+        -2,
+        1,
+        0,
+        -2,
+        -2,
+        0,
+        2,
+        -1
+      ]
+    },
+    "conditional_identity": {
+      "test_edits": 184,
+      "scopes": {
+        "known": {
+          "fixed": 216,
+          "harmed": 222
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 24,
+          "harmed": 27
+        }
+      },
+      "net_by_fold": [
+        7,
+        14,
+        -9,
+        -1,
+        -18,
+        3,
+        7,
+        -9
+      ]
+    }
+  }
+}
