@@ -1,0 +1,248 @@
+{
+  "models": {
+    "direct": {
+      "accuracy": 0.8084665823076038,
+      "log_loss": 0.3858399803464369
+    },
+    "independent": {
+      "accuracy": 0.8058207753364777,
+      "log_loss": 0.3950339644377473
+    },
+    "real": {
+      "accuracy": 0.8068560911077879,
+      "log_loss": 0.3968231017941043
+    },
+    "sham": {
+      "accuracy": 0.8050155297365696,
+      "log_loss": 0.4005512168121867
+    }
+  },
+  "held_discrimination": [
+    [
+      0.7862283853224394,
+      0.6224803895909987
+    ],
+    [
+      0.7801863727529332,
+      0.6242154351850111
+    ]
+  ],
+  "rules": {
+    "independent": {
+      "test_changes": 384,
+      "by_fold": [
+        -25,
+        -15,
+        -21,
+        -2,
+        -23,
+        -20,
+        -17,
+        -39
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 273,
+          "harmed": 435
+        },
+        "fresh": {
+          "fixed": 35,
+          "harmed": 59
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 4
+        }
+      }
+    },
+    "direct": {
+      "test_changes": 325,
+      "by_fold": [
+        -10,
+        -11,
+        -12,
+        -10,
+        -27,
+        -13,
+        -13,
+        -36
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 236,
+          "harmed": 368
+        },
+        "fresh": {
+          "fixed": 24,
+          "harmed": 54
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "real": {
+      "test_changes": 415,
+      "by_fold": [
+        -26,
+        -12,
+        -18,
+        -8,
+        -15,
+        -18,
+        -14,
+        -40
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 298,
+          "harmed": 449
+        },
+        "fresh": {
+          "fixed": 50,
+          "harmed": 62
+        },
+        "blind": {
+          "fixed": 2,
+          "harmed": 5
+        }
+      }
+    },
+    "sham": {
+      "test_changes": 433,
+      "by_fold": [
+        -20,
+        -12,
+        -13,
+        0,
+        -27,
+        -32,
+        -15,
+        -48
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 327,
+          "harmed": 494
+        },
+        "fresh": {
+          "fixed": 52,
+          "harmed": 72
+        },
+        "blind": {
+          "fixed": 3,
+          "harmed": 11
+        }
+      }
+    },
+    "real_on_anchor": {
+      "test_changes": 132,
+      "by_fold": [
+        0,
+        -8,
+        -3,
+        -12,
+        -1,
+        0,
+        -1,
+        -13
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 113,
+          "harmed": 151
+        },
+        "fresh": {
+          "fixed": 23,
+          "harmed": 16
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 2
+        }
+      }
+    },
+    "sham_on_anchor": {
+      "test_changes": 159,
+      "by_fold": [
+        -3,
+        -8,
+        6,
+        3,
+        -19,
+        -4,
+        -9,
+        -17
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 134,
+          "harmed": 185
+        },
+        "fresh": {
+          "fixed": 24,
+          "harmed": 23
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 2
+        }
+      }
+    },
+    "exclusive": {
+      "test_changes": 27,
+      "by_fold": [
+        -2,
+        -2,
+        -4,
+        -6,
+        -2,
+        -4,
+        1,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 14,
+          "harmed": 33
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "confirmed": {
+      "test_changes": 4,
+      "by_fold": [
+        -1,
+        -3,
+        -2,
+        -1,
+        0,
+        1,
+        1,
+        2
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 4,
+          "harmed": 7
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 1
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}
