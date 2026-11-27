@@ -1,0 +1,62 @@
+{
+  "version": "n27_fifty_fare_adjudication",
+  "rule": "level_fifty_random_up",
+  "evidence": "reports/nov23_matched_learning_curve/fifty_fare_adjudication_n27.json",
+  "result": {
+    "scopes": {
+      "all": {
+        "fixed": 8,
+        "harmed": 5
+      },
+      "fresh": {
+        "fixed": 2,
+        "harmed": 0
+      },
+      "common": {
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "by_fold": [
+      -2,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0,
+      3
+    ],
+    "test": 7,
+    "in_50": 7
+  },
+  "ordered": {
+    "scopes": {
+      "all": {
+        "fixed": 7,
+        "harmed": 5
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "common": {
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "by_fold": [
+      -2,
+      1,
+      0,
+      0,
+      -2,
+      1,
+      0,
+      4
+    ],
+    "test": 7,
+    "in_50": 7
+  },
+  "fresh_order_warning": "Only two additional correctly classified historical-unseen passengers in the random validation and zero edits in ordered validation."
+}
