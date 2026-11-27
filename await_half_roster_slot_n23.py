@@ -113,9 +113,13 @@ JOINT_FARE_FOUNDATIONS = QueuedExport('proposal_n26_joint_fare_foundations', 'ex
     CHAMPION_FARE_SIX.out/'queue_status.json',
     '111 人版已有正式成绩。即将评测票价 TabICL 与 Nori 都支持的新增 50 人。',
     '9ba377aa456f04b417e0b78cfebc2009828a6c3cd434714d6a4a457876517f01', model='inputs.npz')
+CONDITIONAL_PARTY = QueuedExport('proposal_n27_conditional_party_allocation', 'export_conditional_party_allocation_n27.py',
+    ROOT/'reports/proposal_n27_directional_foundation/online_attempts/20261127T003738914510Z.json',
+    'Kaggle 主账号已有可用额度，即将提交多人订单条件分配版。该版相对 82.370% 方向版改判 48 笔订单的 56 名乘客。',
+    '896917528f6b3a49a415a467379ef34fc7b5de42eb42a4b3469467685ebd6d04', model='inputs.npz')
 JOBS = {job.name: job for job in (HALF, ADAPTIVE, SELECTED, SOLO_RANDOM, NET_EDITS, CONFIRMED_FIELDS,
                                   AWAKE_PERSONAL, CONFIRMED_UNION, AWAKE_FILTER, DISPUTE_BAND, JOINT_DISPUTE, CONSENSUS_REVIEW, FARE_DECK, SIX_WAY_DISPUTE,
-                                  TABNET_ATTENTION, HISTORICAL_VETO, CHAMPION_FARE_SIX, JOINT_FARE_FOUNDATIONS)}
+                                  TABNET_ATTENTION, HISTORICAL_VETO, CHAMPION_FARE_SIX, JOINT_FARE_FOUNDATIONS, CONDITIONAL_PARTY)}
 
 
 def reserve_available(union, expected_digest, official_match, last_submission_date, today, remaining):
