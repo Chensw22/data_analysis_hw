@@ -65,7 +65,8 @@ def run(export):
     np.testing.assert_array_equal(target,actual)
     reps=[]
     summary={}
-    for name,side in [('ordered',splits(g,f,'contiguous'))]+[(str(i),partition(g,'increment_replica_'+str(i),4)) for i in range(8)]:
+    masks={}
+    for name,side in [('random',splits(g,f,'random')),('ordered',splits(g,f,'contiguous'))]+[(str(i),partition(g,'increment_replica_'+str(i),4)) for i in range(8)]:
         cv=np.empty((n,2))
         lock=np.empty(n,bool)
         for k in range(8):
@@ -77,13 +78,19 @@ def run(export):
         flag=activation(np.column_stack([cv,native[:n]]),first[:n])&divided[:n]&~lock
         err=first[:n]!=y
         summary[name]=dict(all=count(flag,known,err),fresh=count(flag,known&fresh,err),old=count(flag,blind,err))
-        if name!='ordered':reps.append(flag)
+        if name in ('ordered','random'):
+            masks[name]=np.r_[flag,actual]
+            masks[name+'_parent']=first^np.r_[lock,official[n:]]
+        else:reps.append(flag)
     flag=np.mean(reps,axis=0)>.5
     summary['majority']={s:count(flag,m,err) for s,m in [('all',known),('fresh',fresh&known),('old',blind)]}
     with np.load(ART/'nov27_payment_state_routes/aligned.npz') as z:
         route=z['random'][n:].any(1)
     report=dict(splits=summary,changed=int(actual.sum()),overlap_payment_states=int((actual&route).sum()),
                 versus_payment_states=int((actual!=route).sum()))
+    cache=ART/'nov27_repeated_architecture_increment'
+    cache.mkdir(exist_ok=True)
+    np.savez_compressed(cache/'aligned.npz',passenger=ids,y=y,fold=f,**masks)
     REPORT.write_text(json.dumps(report,indent=2)+'\n')
     print(report,flush=True)
     if not export:return
