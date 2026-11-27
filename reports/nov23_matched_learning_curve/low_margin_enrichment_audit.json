@@ -1,0 +1,2324 @@
+{
+  "parent": "proposal_n27_directional_foundation",
+  "published_verified": true,
+  "denominators": {
+    "all_train": 8693,
+    "known": {
+      "rows": 8532,
+      "errors": 1435
+    },
+    "all_seven_match_parent": {
+      "rows": 7020,
+      "errors": 862
+    },
+    "two_state": {
+      "rows": 6518,
+      "errors": 776
+    },
+    "other_behavior": {
+      "rows": 502,
+      "errors": 86
+    },
+    "31_way_unanimous_and_two_state": {
+      "rows": 3617,
+      "errors": 253
+    },
+    "self_unanimous_but_opposes_parent": {
+      "rows": 14,
+      "errors": 9
+    },
+    "self_unanimous_but_opposes_parent_in_two_states": {
+      "rows": 11,
+      "errors": 7
+    },
+    "seven_plus_111_agreement": {
+      "rows": 7011,
+      "errors": 860
+    },
+    "historically_unseen_rows": 1033,
+    "unknown_rows_entire_train": 161,
+    "if_seven_agree_to_each_other_only": {
+      "two_state": {
+        "rows": 6529,
+        "errors": 783
+      },
+      "reviewed": {
+        "rows": 1626,
+        "errors": 487
+      },
+      "newly_reviewed": {
+        "rows": 11,
+        "errors": 7
+      },
+      "dropped": {
+        "rows": 8,
+        "errors": 1
+      },
+      "test_reviewed": 821
+    }
+  },
+  "test_review_coverage": {
+    "awake_paid": {
+      "eligible": 1981,
+      "selected": 495
+    },
+    "sleep_zero": {
+      "eligible": 1296,
+      "selected": 324
+    }
+  },
+  "missingness": {
+    "awake_complete": {
+      "eligible": 3639,
+      "errors": 416,
+      "selected": 875,
+      "selected_errors": 219,
+      "other": 2764,
+      "other_errors": 197,
+      "rate_selected": 0.2502857142857143,
+      "rate_other": 0.07127351664254704,
+      "risk_difference": 0.17901219764316723,
+      "recall": 0.5264423076923077,
+      "relative_risk": 3.5116229151559097
+    },
+    "awake_partial": {
+      "eligible": 371,
+      "errors": 60,
+      "selected": 124,
+      "selected_errors": 34,
+      "other": 247,
+      "other_errors": 26,
+      "rate_selected": 0.27419354838709675,
+      "rate_other": 0.10526315789473684,
+      "risk_difference": 0.16893039049235992,
+      "recall": 0.5666666666666667,
+      "relative_risk": 2.6048387096774195
+    },
+    "sleep_complete": {
+      "eligible": 2224,
+      "errors": 260,
+      "selected": 541,
+      "selected_errors": 196,
+      "other": 1683,
+      "other_errors": 64,
+      "rate_selected": 0.36229205175600737,
+      "rate_other": 0.038027332144979206,
+      "risk_difference": 0.32426471961102815,
+      "recall": 0.7538461538461538,
+      "relative_risk": 9.527148798521257
+    },
+    "sleep_partial": {
+      "eligible": 284,
+      "errors": 40,
+      "selected": 83,
+      "selected_errors": 32,
+      "other": 201,
+      "other_errors": 8,
+      "rate_selected": 0.3855421686746988,
+      "rate_other": 0.03980099502487562,
+      "risk_difference": 0.3457411736498232,
+      "recall": 0.8,
+      "relative_risk": 9.686746987951809
+    }
+  },
+  "protocols": {
+    "published": {
+      "all": {
+        "eligible": 6518,
+        "errors": 776,
+        "selected": 1623,
+        "selected_errors": 481,
+        "other": 4895,
+        "other_errors": 295,
+        "rate_selected": 0.2963647566235367,
+        "rate_other": 0.0602655771195097,
+        "risk_difference": 0.23609917950402698,
+        "recall": 0.6198453608247423,
+        "relative_risk": 4.91764570736343
+      },
+      "awake": {
+        "eligible": 4010,
+        "errors": 476,
+        "selected": 999,
+        "selected_errors": 253,
+        "other": 3011,
+        "other_errors": 223,
+        "rate_selected": 0.25325325325325326,
+        "rate_other": 0.07406177349717702,
+        "risk_difference": 0.17919147975607624,
+        "recall": 0.5315126050420168,
+        "relative_risk": 3.419486751325316
+      },
+      "sleep": {
+        "eligible": 2508,
+        "errors": 300,
+        "selected": 624,
+        "selected_errors": 228,
+        "other": 1884,
+        "other_errors": 72,
+        "rate_selected": 0.36538461538461536,
+        "rate_other": 0.03821656050955414,
+        "risk_difference": 0.32716805487506123,
+        "recall": 0.76,
+        "relative_risk": 9.560897435897436
+      },
+      "known_historical_orders": {
+        "eligible": 5725,
+        "errors": 669,
+        "selected": 1391,
+        "selected_errors": 410,
+        "other": 4334,
+        "other_errors": 259,
+        "rate_selected": 0.29475197699496763,
+        "rate_other": 0.05976003691739732,
+        "risk_difference": 0.23499194007757032,
+        "recall": 0.6128550074738416,
+        "relative_risk": 4.93225895095054
+      },
+      "historical_outside": {
+        "eligible": 793,
+        "errors": 107,
+        "selected": 232,
+        "selected_errors": 71,
+        "other": 561,
+        "other_errors": 36,
+        "rate_selected": 0.30603448275862066,
+        "rate_other": 0.06417112299465241,
+        "risk_difference": 0.24186335976396825,
+        "recall": 0.6635514018691588,
+        "relative_risk": 4.769037356321838
+      },
+      "solo": {
+        "eligible": 3702,
+        "errors": 503,
+        "selected": 1051,
+        "selected_errors": 312,
+        "other": 2651,
+        "other_errors": 191,
+        "rate_selected": 0.29686013320647003,
+        "rate_other": 0.07204828366654092,
+        "risk_difference": 0.2248118495399291,
+        "recall": 0.6202783300198808,
+        "relative_risk": 4.120294309582995
+      },
+      "party": {
+        "eligible": 2816,
+        "errors": 273,
+        "selected": 572,
+        "selected_errors": 169,
+        "other": 2244,
+        "other_errors": 104,
+        "rate_selected": 0.29545454545454547,
+        "rate_other": 0.04634581105169341,
+        "risk_difference": 0.24910873440285206,
+        "recall": 0.6190476190476191,
+        "relative_risk": 6.375
+      },
+      "awake_parent_0": {
+        "eligible": 3279,
+        "errors": 362,
+        "selected": 634,
+        "selected_errors": 149,
+        "other": 2645,
+        "other_errors": 213,
+        "rate_selected": 0.23501577287066247,
+        "rate_other": 0.08052930056710775,
+        "risk_difference": 0.15448647230355472,
+        "recall": 0.4116022099447514,
+        "relative_risk": 2.918388353253062
+      },
+      "awake_parent_1": {
+        "eligible": 731,
+        "errors": 114,
+        "selected": 365,
+        "selected_errors": 104,
+        "other": 366,
+        "other_errors": 10,
+        "rate_selected": 0.28493150684931506,
+        "rate_other": 0.0273224043715847,
+        "risk_difference": 0.2576091024777304,
+        "recall": 0.9122807017543859,
+        "relative_risk": 10.428493150684933
+      },
+      "sleep_parent_0": {
+        "eligible": 31,
+        "errors": 14,
+        "selected": 31,
+        "selected_errors": 14,
+        "other": 0,
+        "other_errors": 0,
+        "rate_selected": 0.45161290322580644,
+        "rate_other": null,
+        "risk_difference": null,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "sleep_parent_1": {
+        "eligible": 2477,
+        "errors": 286,
+        "selected": 593,
+        "selected_errors": 214,
+        "other": 1884,
+        "other_errors": 72,
+        "rate_selected": 0.3608768971332209,
+        "rate_other": 0.03821656050955414,
+        "risk_difference": 0.3226603366236668,
+        "recall": 0.7482517482517482,
+        "relative_risk": 9.442945474985947
+      },
+      "order_ci": {
+        "all": {
+          "orders": 5047,
+          "unadjusted_95": [
+            0.2134060598909855,
+            0.2591951295733452
+          ],
+          "adjusted_difference": 0.2386748343706131,
+          "adjusted_95": [
+            0.21556798405945302,
+            0.26221557110548016
+          ],
+          "selected_without_comparison": 31,
+          "cells": 8,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "awake": {
+          "orders": 3522,
+          "unadjusted_95": [
+            0.15122337639331818,
+            0.20804763846099375
+          ],
+          "adjusted_difference": 0.19018496572971344,
+          "adjusted_95": [
+            0.16191312149167061,
+            0.21917003281414507
+          ],
+          "selected_without_comparison": 0,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "sleep": {
+          "orders": 2072,
+          "unadjusted_95": [
+            0.28986782059073446,
+            0.36596977338194847
+          ],
+          "adjusted_difference": 0.32036346197128296,
+          "adjusted_95": [
+            0.28160210251808165,
+            0.3600512817502022
+          ],
+          "selected_without_comparison": 31,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "historical_outside": {
+          "orders": 777,
+          "unadjusted_95": [
+            0.17972315512597561,
+            0.3050682850182056
+          ],
+          "adjusted_difference": 0.2575393319129944,
+          "adjusted_95": [
+            0.19632395170629025,
+            0.3198331527411938
+          ],
+          "selected_without_comparison": 5,
+          "cells": 7,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        }
+      },
+      "per_original_fold": [
+        {
+          "eligible": 812,
+          "errors": 95,
+          "selected": 203,
+          "selected_errors": 66,
+          "other": 609,
+          "other_errors": 29,
+          "rate_selected": 0.3251231527093596,
+          "rate_other": 0.047619047619047616,
+          "risk_difference": 0.277504105090312,
+          "recall": 0.6947368421052632,
+          "relative_risk": 6.827586206896552
+        },
+        {
+          "eligible": 794,
+          "errors": 96,
+          "selected": 197,
+          "selected_errors": 62,
+          "other": 597,
+          "other_errors": 34,
+          "rate_selected": 0.3147208121827411,
+          "rate_other": 0.05695142378559464,
+          "risk_difference": 0.25776938839714647,
+          "recall": 0.6458333333333334,
+          "relative_risk": 5.526127202149896
+        },
+        {
+          "eligible": 877,
+          "errors": 103,
+          "selected": 218,
+          "selected_errors": 64,
+          "other": 659,
+          "other_errors": 39,
+          "rate_selected": 0.29357798165137616,
+          "rate_other": 0.05918057663125948,
+          "risk_difference": 0.2343974050201167,
+          "recall": 0.6213592233009708,
+          "relative_risk": 4.960715125852741
+        },
+        {
+          "eligible": 818,
+          "errors": 105,
+          "selected": 204,
+          "selected_errors": 62,
+          "other": 614,
+          "other_errors": 43,
+          "rate_selected": 0.30392156862745096,
+          "rate_other": 0.07003257328990228,
+          "risk_difference": 0.23388899533754867,
+          "recall": 0.5904761904761905,
+          "relative_risk": 4.339717282261741
+        },
+        {
+          "eligible": 837,
+          "errors": 106,
+          "selected": 208,
+          "selected_errors": 64,
+          "other": 629,
+          "other_errors": 42,
+          "rate_selected": 0.3076923076923077,
+          "rate_other": 0.06677265500794913,
+          "risk_difference": 0.24091965268435858,
+          "recall": 0.6037735849056604,
+          "relative_risk": 4.608058608058609
+        },
+        {
+          "eligible": 749,
+          "errors": 87,
+          "selected": 187,
+          "selected_errors": 57,
+          "other": 562,
+          "other_errors": 30,
+          "rate_selected": 0.3048128342245989,
+          "rate_other": 0.05338078291814947,
+          "risk_difference": 0.25143205130644947,
+          "recall": 0.6551724137931034,
+          "relative_risk": 5.7101604278074864
+        },
+        {
+          "eligible": 845,
+          "errors": 104,
+          "selected": 210,
+          "selected_errors": 56,
+          "other": 635,
+          "other_errors": 48,
+          "rate_selected": 0.26666666666666666,
+          "rate_other": 0.07559055118110236,
+          "risk_difference": 0.1910761154855643,
+          "recall": 0.5384615384615384,
+          "relative_risk": 3.5277777777777777
+        },
+        {
+          "eligible": 786,
+          "errors": 80,
+          "selected": 196,
+          "selected_errors": 50,
+          "other": 590,
+          "other_errors": 30,
+          "rate_selected": 0.25510204081632654,
+          "rate_other": 0.05084745762711865,
+          "risk_difference": 0.2042545831892079,
+          "recall": 0.625,
+          "relative_risk": 5.017006802721088
+        }
+      ],
+      "per_ordered_block": [
+        {
+          "eligible": 805,
+          "errors": 98,
+          "selected": 212,
+          "selected_errors": 66,
+          "other": 593,
+          "other_errors": 32,
+          "rate_selected": 0.3113207547169811,
+          "rate_other": 0.05396290050590219,
+          "risk_difference": 0.25735785421107893,
+          "recall": 0.673469387755102,
+          "relative_risk": 5.769162735849057
+        },
+        {
+          "eligible": 775,
+          "errors": 118,
+          "selected": 204,
+          "selected_errors": 77,
+          "other": 571,
+          "other_errors": 41,
+          "rate_selected": 0.37745098039215685,
+          "rate_other": 0.07180385288966724,
+          "risk_difference": 0.3056471275024896,
+          "recall": 0.652542372881356,
+          "relative_risk": 5.256695361071258
+        },
+        {
+          "eligible": 800,
+          "errors": 103,
+          "selected": 216,
+          "selected_errors": 73,
+          "other": 584,
+          "other_errors": 30,
+          "rate_selected": 0.33796296296296297,
+          "rate_other": 0.05136986301369863,
+          "risk_difference": 0.28659309994926435,
+          "recall": 0.7087378640776699,
+          "relative_risk": 6.579012345679013
+        },
+        {
+          "eligible": 849,
+          "errors": 98,
+          "selected": 214,
+          "selected_errors": 46,
+          "other": 635,
+          "other_errors": 52,
+          "rate_selected": 0.21495327102803738,
+          "rate_other": 0.08188976377952756,
+          "risk_difference": 0.13306350724850982,
+          "recall": 0.46938775510204084,
+          "relative_risk": 2.6249101365923795
+        },
+        {
+          "eligible": 813,
+          "errors": 71,
+          "selected": 186,
+          "selected_errors": 44,
+          "other": 627,
+          "other_errors": 27,
+          "rate_selected": 0.23655913978494625,
+          "rate_other": 0.0430622009569378,
+          "risk_difference": 0.19349693882800845,
+          "recall": 0.6197183098591549,
+          "relative_risk": 5.4934289127837514
+        },
+        {
+          "eligible": 860,
+          "errors": 87,
+          "selected": 186,
+          "selected_errors": 48,
+          "other": 674,
+          "other_errors": 39,
+          "rate_selected": 0.25806451612903225,
+          "rate_other": 0.057863501483679525,
+          "risk_difference": 0.20020101464535273,
+          "recall": 0.5517241379310345,
+          "relative_risk": 4.459884201819686
+        },
+        {
+          "eligible": 780,
+          "errors": 87,
+          "selected": 180,
+          "selected_errors": 51,
+          "other": 600,
+          "other_errors": 36,
+          "rate_selected": 0.2833333333333333,
+          "rate_other": 0.06,
+          "risk_difference": 0.22333333333333333,
+          "recall": 0.5862068965517241,
+          "relative_risk": 4.722222222222222
+        },
+        {
+          "eligible": 836,
+          "errors": 114,
+          "selected": 225,
+          "selected_errors": 76,
+          "other": 611,
+          "other_errors": 38,
+          "rate_selected": 0.3377777777777778,
+          "rate_other": 0.062193126022913256,
+          "risk_difference": 0.2755846517548645,
+          "recall": 0.6666666666666666,
+          "relative_risk": 5.431111111111111
+        }
+      ],
+      "per_random_block": [
+        {
+          "eligible": 801,
+          "errors": 108,
+          "selected": 199,
+          "selected_errors": 65,
+          "other": 602,
+          "other_errors": 43,
+          "rate_selected": 0.32663316582914576,
+          "rate_other": 0.07142857142857142,
+          "risk_difference": 0.2552045944005743,
+          "recall": 0.6018518518518519,
+          "relative_risk": 4.572864321608041
+        },
+        {
+          "eligible": 823,
+          "errors": 106,
+          "selected": 215,
+          "selected_errors": 68,
+          "other": 608,
+          "other_errors": 38,
+          "rate_selected": 0.31627906976744186,
+          "rate_other": 0.0625,
+          "risk_difference": 0.25377906976744186,
+          "recall": 0.6415094339622641,
+          "relative_risk": 5.06046511627907
+        },
+        {
+          "eligible": 797,
+          "errors": 103,
+          "selected": 219,
+          "selected_errors": 65,
+          "other": 578,
+          "other_errors": 38,
+          "rate_selected": 0.2968036529680365,
+          "rate_other": 0.0657439446366782,
+          "risk_difference": 0.2310597083313583,
+          "recall": 0.6310679611650486,
+          "relative_risk": 4.514539774092766
+        },
+        {
+          "eligible": 834,
+          "errors": 88,
+          "selected": 227,
+          "selected_errors": 58,
+          "other": 607,
+          "other_errors": 30,
+          "rate_selected": 0.2555066079295154,
+          "rate_other": 0.04942339373970346,
+          "risk_difference": 0.20608321418981196,
+          "recall": 0.6590909090909091,
+          "relative_risk": 5.169750367107195
+        },
+        {
+          "eligible": 811,
+          "errors": 88,
+          "selected": 196,
+          "selected_errors": 51,
+          "other": 615,
+          "other_errors": 37,
+          "rate_selected": 0.2602040816326531,
+          "rate_other": 0.06016260162601626,
+          "risk_difference": 0.2000414800066368,
+          "recall": 0.5795454545454546,
+          "relative_risk": 4.325013789299503
+        },
+        {
+          "eligible": 816,
+          "errors": 103,
+          "selected": 188,
+          "selected_errors": 55,
+          "other": 628,
+          "other_errors": 48,
+          "rate_selected": 0.2925531914893617,
+          "rate_other": 0.07643312101910828,
+          "risk_difference": 0.21612007047025344,
+          "recall": 0.5339805825242718,
+          "relative_risk": 3.827570921985816
+        },
+        {
+          "eligible": 852,
+          "errors": 87,
+          "selected": 198,
+          "selected_errors": 56,
+          "other": 654,
+          "other_errors": 31,
+          "rate_selected": 0.2828282828282828,
+          "rate_other": 0.047400611620795105,
+          "risk_difference": 0.2354276712074877,
+          "recall": 0.6436781609195402,
+          "relative_risk": 5.966764418377322
+        },
+        {
+          "eligible": 784,
+          "errors": 93,
+          "selected": 181,
+          "selected_errors": 63,
+          "other": 603,
+          "other_errors": 30,
+          "rate_selected": 0.34806629834254144,
+          "rate_other": 0.04975124378109453,
+          "risk_difference": 0.2983150545614469,
+          "recall": 0.6774193548387096,
+          "relative_risk": 6.996132596685083
+        }
+      ],
+      "overlap_with_published": 1623
+    },
+    "held_random": {
+      "all": {
+        "eligible": 6518,
+        "errors": 776,
+        "selected": 1608,
+        "selected_errors": 478,
+        "other": 4910,
+        "other_errors": 298,
+        "rate_selected": 0.2972636815920398,
+        "rate_other": 0.06069246435845214,
+        "risk_difference": 0.23657121723358768,
+        "recall": 0.615979381443299,
+        "relative_risk": 4.897868042338643
+      },
+      "awake": {
+        "eligible": 4010,
+        "errors": 476,
+        "selected": 995,
+        "selected_errors": 252,
+        "other": 3015,
+        "other_errors": 224,
+        "rate_selected": 0.25326633165829143,
+        "rate_other": 0.07429519071310116,
+        "risk_difference": 0.1789711409451903,
+        "recall": 0.5294117647058824,
+        "relative_risk": 3.4089195979899496
+      },
+      "sleep": {
+        "eligible": 2508,
+        "errors": 300,
+        "selected": 613,
+        "selected_errors": 226,
+        "other": 1895,
+        "other_errors": 74,
+        "rate_selected": 0.36867862969004894,
+        "rate_other": 0.03905013192612137,
+        "risk_difference": 0.32962849776392755,
+        "recall": 0.7533333333333333,
+        "relative_risk": 9.44116220625193
+      },
+      "known_historical_orders": {
+        "eligible": 5725,
+        "errors": 669,
+        "selected": 1378,
+        "selected_errors": 407,
+        "other": 4347,
+        "other_errors": 262,
+        "rate_selected": 0.295355587808418,
+        "rate_other": 0.060271451575799405,
+        "risk_difference": 0.23508413623261856,
+        "recall": 0.6083707025411061,
+        "relative_risk": 4.9004226725312705
+      },
+      "historical_outside": {
+        "eligible": 793,
+        "errors": 107,
+        "selected": 230,
+        "selected_errors": 71,
+        "other": 563,
+        "other_errors": 36,
+        "rate_selected": 0.30869565217391304,
+        "rate_other": 0.06394316163410302,
+        "risk_difference": 0.24475249053981002,
+        "recall": 0.6635514018691588,
+        "relative_risk": 4.827657004830918
+      },
+      "solo": {
+        "eligible": 3702,
+        "errors": 503,
+        "selected": 1041,
+        "selected_errors": 310,
+        "other": 2661,
+        "other_errors": 193,
+        "rate_selected": 0.297790585975024,
+        "rate_other": 0.07252912438932732,
+        "risk_difference": 0.22526146158569668,
+        "recall": 0.6163021868787276,
+        "relative_risk": 4.105806991085694
+      },
+      "party": {
+        "eligible": 2816,
+        "errors": 273,
+        "selected": 567,
+        "selected_errors": 168,
+        "other": 2249,
+        "other_errors": 105,
+        "rate_selected": 0.2962962962962963,
+        "rate_other": 0.04668741662961316,
+        "risk_difference": 0.2496088796666831,
+        "recall": 0.6153846153846154,
+        "relative_risk": 6.346384479717813
+      },
+      "awake_parent_0": {
+        "eligible": 3279,
+        "errors": 362,
+        "selected": 632,
+        "selected_errors": 149,
+        "other": 2647,
+        "other_errors": 213,
+        "rate_selected": 0.23575949367088608,
+        "rate_other": 0.08046845485455233,
+        "risk_difference": 0.15529103881633377,
+        "recall": 0.4116022099447514,
+        "relative_risk": 2.9298374636001663
+      },
+      "awake_parent_1": {
+        "eligible": 731,
+        "errors": 114,
+        "selected": 363,
+        "selected_errors": 103,
+        "other": 368,
+        "other_errors": 11,
+        "rate_selected": 0.2837465564738292,
+        "rate_other": 0.029891304347826088,
+        "risk_difference": 0.2538552521260031,
+        "recall": 0.9035087719298246,
+        "relative_risk": 9.492612071124467
+      },
+      "sleep_parent_0": {
+        "eligible": 31,
+        "errors": 14,
+        "selected": 31,
+        "selected_errors": 14,
+        "other": 0,
+        "other_errors": 0,
+        "rate_selected": 0.45161290322580644,
+        "rate_other": null,
+        "risk_difference": null,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "sleep_parent_1": {
+        "eligible": 2477,
+        "errors": 286,
+        "selected": 582,
+        "selected_errors": 212,
+        "other": 1895,
+        "other_errors": 74,
+        "rate_selected": 0.3642611683848797,
+        "rate_other": 0.03905013192612137,
+        "risk_difference": 0.3252110364587583,
+        "recall": 0.7412587412587412,
+        "relative_risk": 9.328039379585771
+      },
+      "order_ci": {
+        "all": {
+          "orders": 5047,
+          "unadjusted_95": [
+            0.2139180526137352,
+            0.25992239713668824
+          ],
+          "adjusted_difference": 0.2384808361530304,
+          "adjusted_95": [
+            0.21537255719304085,
+            0.2621548995375633
+          ],
+          "selected_without_comparison": 31,
+          "cells": 8,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "awake": {
+          "orders": 3522,
+          "unadjusted_95": [
+            0.1507766529917717,
+            0.2079419996589422
+          ],
+          "adjusted_difference": 0.18910878896713257,
+          "adjusted_95": [
+            0.16043514460325242,
+            0.2180966205894947
+          ],
+          "selected_without_comparison": 0,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "sleep": {
+          "orders": 2072,
+          "unadjusted_95": [
+            0.2909616522490978,
+            0.3688344247639179
+          ],
+          "adjusted_difference": 0.32288843393325806,
+          "adjusted_95": [
+            0.2831828072667122,
+            0.36245830506086346
+          ],
+          "selected_without_comparison": 31,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "historical_outside": {
+          "orders": 777,
+          "unadjusted_95": [
+            0.1819365330040455,
+            0.30758797526359555
+          ],
+          "adjusted_difference": 0.26056939363479614,
+          "adjusted_95": [
+            0.19964810498058796,
+            0.3229376018047333
+          ],
+          "selected_without_comparison": 5,
+          "cells": 7,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        }
+      },
+      "per_original_fold": [
+        {
+          "eligible": 812,
+          "errors": 95,
+          "selected": 202,
+          "selected_errors": 66,
+          "other": 610,
+          "other_errors": 29,
+          "rate_selected": 0.32673267326732675,
+          "rate_other": 0.047540983606557376,
+          "risk_difference": 0.27919168966076935,
+          "recall": 0.6947368421052632,
+          "relative_risk": 6.872652782519632
+        },
+        {
+          "eligible": 794,
+          "errors": 96,
+          "selected": 195,
+          "selected_errors": 60,
+          "other": 599,
+          "other_errors": 36,
+          "rate_selected": 0.3076923076923077,
+          "rate_other": 0.06010016694490818,
+          "risk_difference": 0.24759214074739952,
+          "recall": 0.625,
+          "relative_risk": 5.11965811965812
+        },
+        {
+          "eligible": 877,
+          "errors": 103,
+          "selected": 216,
+          "selected_errors": 64,
+          "other": 661,
+          "other_errors": 39,
+          "rate_selected": 0.2962962962962963,
+          "rate_other": 0.059001512859304085,
+          "risk_difference": 0.2372947834369922,
+          "recall": 0.6213592233009708,
+          "relative_risk": 5.021842355175688
+        },
+        {
+          "eligible": 818,
+          "errors": 105,
+          "selected": 205,
+          "selected_errors": 62,
+          "other": 613,
+          "other_errors": 43,
+          "rate_selected": 0.3024390243902439,
+          "rate_other": 0.0701468189233279,
+          "risk_difference": 0.23229220546691598,
+          "recall": 0.5904761904761905,
+          "relative_risk": 4.311514463981848
+        },
+        {
+          "eligible": 837,
+          "errors": 106,
+          "selected": 205,
+          "selected_errors": 64,
+          "other": 632,
+          "other_errors": 42,
+          "rate_selected": 0.3121951219512195,
+          "rate_other": 0.06645569620253164,
+          "risk_difference": 0.24573942574868787,
+          "recall": 0.6037735849056604,
+          "relative_risk": 4.697793263646923
+        },
+        {
+          "eligible": 749,
+          "errors": 87,
+          "selected": 185,
+          "selected_errors": 57,
+          "other": 564,
+          "other_errors": 30,
+          "rate_selected": 0.3081081081081081,
+          "rate_other": 0.05319148936170213,
+          "risk_difference": 0.254916618746406,
+          "recall": 0.6551724137931034,
+          "relative_risk": 5.792432432432433
+        },
+        {
+          "eligible": 845,
+          "errors": 104,
+          "selected": 206,
+          "selected_errors": 55,
+          "other": 639,
+          "other_errors": 49,
+          "rate_selected": 0.2669902912621359,
+          "rate_other": 0.07668231611893583,
+          "risk_difference": 0.19030797514320008,
+          "recall": 0.5288461538461539,
+          "relative_risk": 3.4817713493164257
+        },
+        {
+          "eligible": 786,
+          "errors": 80,
+          "selected": 194,
+          "selected_errors": 50,
+          "other": 592,
+          "other_errors": 30,
+          "rate_selected": 0.25773195876288657,
+          "rate_other": 0.05067567567567568,
+          "risk_difference": 0.20705628308721089,
+          "recall": 0.625,
+          "relative_risk": 5.085910652920961
+        }
+      ],
+      "per_ordered_block": [
+        {
+          "eligible": 805,
+          "errors": 98,
+          "selected": 208,
+          "selected_errors": 65,
+          "other": 597,
+          "other_errors": 33,
+          "rate_selected": 0.3125,
+          "rate_other": 0.05527638190954774,
+          "risk_difference": 0.25722361809045224,
+          "recall": 0.6632653061224489,
+          "relative_risk": 5.653409090909091
+        },
+        {
+          "eligible": 775,
+          "errors": 118,
+          "selected": 205,
+          "selected_errors": 77,
+          "other": 570,
+          "other_errors": 41,
+          "rate_selected": 0.375609756097561,
+          "rate_other": 0.07192982456140351,
+          "risk_difference": 0.30367993153615747,
+          "recall": 0.652542372881356,
+          "relative_risk": 5.221891731112433
+        },
+        {
+          "eligible": 800,
+          "errors": 103,
+          "selected": 217,
+          "selected_errors": 73,
+          "other": 583,
+          "other_errors": 30,
+          "rate_selected": 0.33640552995391704,
+          "rate_other": 0.051457975986277875,
+          "risk_difference": 0.28494755396763916,
+          "recall": 0.7087378640776699,
+          "relative_risk": 6.537480798771121
+        },
+        {
+          "eligible": 849,
+          "errors": 98,
+          "selected": 211,
+          "selected_errors": 45,
+          "other": 638,
+          "other_errors": 53,
+          "rate_selected": 0.2132701421800948,
+          "rate_other": 0.08307210031347963,
+          "risk_difference": 0.13019804186661516,
+          "recall": 0.45918367346938777,
+          "relative_risk": 2.567289636054726
+        },
+        {
+          "eligible": 813,
+          "errors": 71,
+          "selected": 184,
+          "selected_errors": 44,
+          "other": 629,
+          "other_errors": 27,
+          "rate_selected": 0.2391304347826087,
+          "rate_other": 0.04292527821939587,
+          "risk_difference": 0.19620515656321283,
+          "recall": 0.6197183098591549,
+          "relative_risk": 5.57085346215781
+        },
+        {
+          "eligible": 860,
+          "errors": 87,
+          "selected": 184,
+          "selected_errors": 48,
+          "other": 676,
+          "other_errors": 39,
+          "rate_selected": 0.2608695652173913,
+          "rate_other": 0.057692307692307696,
+          "risk_difference": 0.2031772575250836,
+          "recall": 0.5517241379310345,
+          "relative_risk": 4.521739130434782
+        },
+        {
+          "eligible": 780,
+          "errors": 87,
+          "selected": 175,
+          "selected_errors": 50,
+          "other": 605,
+          "other_errors": 37,
+          "rate_selected": 0.2857142857142857,
+          "rate_other": 0.06115702479338843,
+          "risk_difference": 0.22455726092089728,
+          "recall": 0.5747126436781609,
+          "relative_risk": 4.671814671814672
+        },
+        {
+          "eligible": 836,
+          "errors": 114,
+          "selected": 224,
+          "selected_errors": 76,
+          "other": 612,
+          "other_errors": 38,
+          "rate_selected": 0.3392857142857143,
+          "rate_other": 0.06209150326797386,
+          "risk_difference": 0.27719421101774044,
+          "recall": 0.6666666666666666,
+          "relative_risk": 5.464285714285714
+        }
+      ],
+      "per_random_block": [
+        {
+          "eligible": 801,
+          "errors": 108,
+          "selected": 200,
+          "selected_errors": 65,
+          "other": 601,
+          "other_errors": 43,
+          "rate_selected": 0.325,
+          "rate_other": 0.07154742096505824,
+          "risk_difference": 0.2534525790349418,
+          "recall": 0.6018518518518519,
+          "relative_risk": 4.542441860465116
+        },
+        {
+          "eligible": 823,
+          "errors": 106,
+          "selected": 209,
+          "selected_errors": 67,
+          "other": 614,
+          "other_errors": 39,
+          "rate_selected": 0.32057416267942584,
+          "rate_other": 0.06351791530944625,
+          "risk_difference": 0.25705624736997956,
+          "recall": 0.6320754716981132,
+          "relative_risk": 5.0469880996196785
+        },
+        {
+          "eligible": 797,
+          "errors": 103,
+          "selected": 219,
+          "selected_errors": 65,
+          "other": 578,
+          "other_errors": 38,
+          "rate_selected": 0.2968036529680365,
+          "rate_other": 0.0657439446366782,
+          "risk_difference": 0.2310597083313583,
+          "recall": 0.6310679611650486,
+          "relative_risk": 4.514539774092766
+        },
+        {
+          "eligible": 834,
+          "errors": 88,
+          "selected": 228,
+          "selected_errors": 58,
+          "other": 606,
+          "other_errors": 30,
+          "rate_selected": 0.2543859649122807,
+          "rate_other": 0.04950495049504951,
+          "risk_difference": 0.20488101441723122,
+          "recall": 0.6590909090909091,
+          "relative_risk": 5.13859649122807
+        },
+        {
+          "eligible": 811,
+          "errors": 88,
+          "selected": 194,
+          "selected_errors": 51,
+          "other": 617,
+          "other_errors": 37,
+          "rate_selected": 0.26288659793814434,
+          "rate_other": 0.059967585089141004,
+          "risk_difference": 0.20291901284900332,
+          "recall": 0.5795454545454546,
+          "relative_risk": 4.383811646698245
+        },
+        {
+          "eligible": 816,
+          "errors": 103,
+          "selected": 188,
+          "selected_errors": 55,
+          "other": 628,
+          "other_errors": 48,
+          "rate_selected": 0.2925531914893617,
+          "rate_other": 0.07643312101910828,
+          "risk_difference": 0.21612007047025344,
+          "recall": 0.5339805825242718,
+          "relative_risk": 3.827570921985816
+        },
+        {
+          "eligible": 852,
+          "errors": 87,
+          "selected": 195,
+          "selected_errors": 55,
+          "other": 657,
+          "other_errors": 32,
+          "rate_selected": 0.28205128205128205,
+          "rate_other": 0.0487062404870624,
+          "risk_difference": 0.23334504156421965,
+          "recall": 0.632183908045977,
+          "relative_risk": 5.790865384615385
+        },
+        {
+          "eligible": 784,
+          "errors": 93,
+          "selected": 175,
+          "selected_errors": 62,
+          "other": 609,
+          "other_errors": 31,
+          "rate_selected": 0.35428571428571426,
+          "rate_other": 0.05090311986863711,
+          "risk_difference": 0.30338259441707716,
+          "recall": 0.6666666666666666,
+          "relative_risk": 6.959999999999999
+        }
+      ],
+      "overlap_with_published": 1595
+    },
+    "held_ordered": {
+      "all": {
+        "eligible": 6518,
+        "errors": 776,
+        "selected": 1633,
+        "selected_errors": 488,
+        "other": 4885,
+        "other_errors": 288,
+        "rate_selected": 0.2988364972443356,
+        "rate_other": 0.05895598771750256,
+        "risk_difference": 0.23988050952683304,
+        "recall": 0.6288659793814433,
+        "relative_risk": 5.068806559161734
+      },
+      "awake": {
+        "eligible": 4010,
+        "errors": 476,
+        "selected": 1003,
+        "selected_errors": 256,
+        "other": 3007,
+        "other_errors": 220,
+        "rate_selected": 0.25523429710867396,
+        "rate_other": 0.07316262055204523,
+        "risk_difference": 0.18207167655662873,
+        "recall": 0.5378151260504201,
+        "relative_risk": 3.4885887791171935
+      },
+      "sleep": {
+        "eligible": 2508,
+        "errors": 300,
+        "selected": 630,
+        "selected_errors": 232,
+        "other": 1878,
+        "other_errors": 68,
+        "rate_selected": 0.3682539682539683,
+        "rate_other": 0.0362087326943557,
+        "risk_difference": 0.3320452355596126,
+        "recall": 0.7733333333333333,
+        "relative_risk": 10.170308123249301
+      },
+      "known_historical_orders": {
+        "eligible": 5725,
+        "errors": 669,
+        "selected": 1399,
+        "selected_errors": 416,
+        "other": 4326,
+        "other_errors": 253,
+        "rate_selected": 0.29735525375268046,
+        "rate_other": 0.0584835876098012,
+        "risk_difference": 0.23887166614287925,
+        "recall": 0.6218236173393124,
+        "relative_risk": 5.084422244008284
+      },
+      "historical_outside": {
+        "eligible": 793,
+        "errors": 107,
+        "selected": 234,
+        "selected_errors": 72,
+        "other": 559,
+        "other_errors": 35,
+        "rate_selected": 0.3076923076923077,
+        "rate_other": 0.0626118067978533,
+        "risk_difference": 0.2450805008944544,
+        "recall": 0.6728971962616822,
+        "relative_risk": 4.9142857142857155
+      },
+      "solo": {
+        "eligible": 3702,
+        "errors": 503,
+        "selected": 1059,
+        "selected_errors": 318,
+        "other": 2643,
+        "other_errors": 185,
+        "rate_selected": 0.3002832861189802,
+        "rate_other": 0.06999621642073402,
+        "risk_difference": 0.2302870696982462,
+        "recall": 0.6322067594433399,
+        "relative_risk": 4.2899931092565655
+      },
+      "party": {
+        "eligible": 2816,
+        "errors": 273,
+        "selected": 574,
+        "selected_errors": 170,
+        "other": 2242,
+        "other_errors": 103,
+        "rate_selected": 0.2961672473867596,
+        "rate_other": 0.04594112399643176,
+        "risk_difference": 0.25022612339032785,
+        "recall": 0.6227106227106227,
+        "relative_risk": 6.446669598457428
+      },
+      "awake_parent_0": {
+        "eligible": 3279,
+        "errors": 362,
+        "selected": 636,
+        "selected_errors": 152,
+        "other": 2643,
+        "other_errors": 210,
+        "rate_selected": 0.2389937106918239,
+        "rate_other": 0.07945516458569807,
+        "risk_difference": 0.15953854610612583,
+        "recall": 0.4198895027624309,
+        "relative_risk": 3.0079065588499554
+      },
+      "awake_parent_1": {
+        "eligible": 731,
+        "errors": 114,
+        "selected": 367,
+        "selected_errors": 104,
+        "other": 364,
+        "other_errors": 10,
+        "rate_selected": 0.28337874659400547,
+        "rate_other": 0.027472527472527472,
+        "risk_difference": 0.255906219121478,
+        "recall": 0.9122807017543859,
+        "relative_risk": 10.3149863760218
+      },
+      "sleep_parent_0": {
+        "eligible": 31,
+        "errors": 14,
+        "selected": 31,
+        "selected_errors": 14,
+        "other": 0,
+        "other_errors": 0,
+        "rate_selected": 0.45161290322580644,
+        "rate_other": null,
+        "risk_difference": null,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "sleep_parent_1": {
+        "eligible": 2477,
+        "errors": 286,
+        "selected": 599,
+        "selected_errors": 218,
+        "other": 1878,
+        "other_errors": 68,
+        "rate_selected": 0.3639398998330551,
+        "rate_other": 0.0362087326943557,
+        "risk_difference": 0.3277311671386994,
+        "recall": 0.7622377622377622,
+        "relative_risk": 10.051163704212904
+      },
+      "order_ci": {
+        "all": {
+          "orders": 5047,
+          "unadjusted_95": [
+            0.2173090897500515,
+            0.2626871563494205
+          ],
+          "adjusted_difference": 0.2424553781747818,
+          "adjusted_95": [
+            0.21948007084429264,
+            0.26576087176799773
+          ],
+          "selected_without_comparison": 31,
+          "cells": 8,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "awake": {
+          "orders": 3522,
+          "unadjusted_95": [
+            0.15389341078698635,
+            0.21126905642449856
+          ],
+          "adjusted_difference": 0.19242636859416962,
+          "adjusted_95": [
+            0.16390930898487568,
+            0.22154944390058517
+          ],
+          "selected_without_comparison": 0,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "sleep": {
+          "orders": 2072,
+          "unadjusted_95": [
+            0.29492040574550626,
+            0.3710252605378628
+          ],
+          "adjusted_difference": 0.3262268602848053,
+          "adjusted_95": [
+            0.2883106224238873,
+            0.36616149395704267
+          ],
+          "selected_without_comparison": 31,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "historical_outside": {
+          "orders": 777,
+          "unadjusted_95": [
+            0.18318507224321365,
+            0.30717478394508363
+          ],
+          "adjusted_difference": 0.2595829665660858,
+          "adjusted_95": [
+            0.19871214255690575,
+            0.3212455093860626
+          ],
+          "selected_without_comparison": 5,
+          "cells": 7,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        }
+      },
+      "per_original_fold": [
+        {
+          "eligible": 812,
+          "errors": 95,
+          "selected": 204,
+          "selected_errors": 67,
+          "other": 608,
+          "other_errors": 28,
+          "rate_selected": 0.3284313725490196,
+          "rate_other": 0.046052631578947366,
+          "risk_difference": 0.28237874097007226,
+          "recall": 0.7052631578947368,
+          "relative_risk": 7.131652661064426
+        },
+        {
+          "eligible": 794,
+          "errors": 96,
+          "selected": 201,
+          "selected_errors": 62,
+          "other": 593,
+          "other_errors": 34,
+          "rate_selected": 0.30845771144278605,
+          "rate_other": 0.05733558178752108,
+          "risk_difference": 0.251122129655265,
+          "recall": 0.6458333333333334,
+          "relative_risk": 5.379865378987415
+        },
+        {
+          "eligible": 877,
+          "errors": 103,
+          "selected": 220,
+          "selected_errors": 66,
+          "other": 657,
+          "other_errors": 37,
+          "rate_selected": 0.3,
+          "rate_other": 0.0563165905631659,
+          "risk_difference": 0.2436834094368341,
+          "recall": 0.6407766990291263,
+          "relative_risk": 5.327027027027027
+        },
+        {
+          "eligible": 818,
+          "errors": 105,
+          "selected": 202,
+          "selected_errors": 61,
+          "other": 616,
+          "other_errors": 44,
+          "rate_selected": 0.30198019801980197,
+          "rate_other": 0.07142857142857142,
+          "risk_difference": 0.23055162659123055,
+          "recall": 0.580952380952381,
+          "relative_risk": 4.227722772277228
+        },
+        {
+          "eligible": 837,
+          "errors": 106,
+          "selected": 210,
+          "selected_errors": 66,
+          "other": 627,
+          "other_errors": 40,
+          "rate_selected": 0.3142857142857143,
+          "rate_other": 0.06379585326953748,
+          "risk_difference": 0.2504898610161768,
+          "recall": 0.6226415094339622,
+          "relative_risk": 4.926428571428572
+        },
+        {
+          "eligible": 749,
+          "errors": 87,
+          "selected": 188,
+          "selected_errors": 57,
+          "other": 561,
+          "other_errors": 30,
+          "rate_selected": 0.30319148936170215,
+          "rate_other": 0.053475935828877004,
+          "risk_difference": 0.24971555353282515,
+          "recall": 0.6551724137931034,
+          "relative_risk": 5.669680851063831
+        },
+        {
+          "eligible": 845,
+          "errors": 104,
+          "selected": 211,
+          "selected_errors": 57,
+          "other": 634,
+          "other_errors": 47,
+          "rate_selected": 0.27014218009478674,
+          "rate_other": 0.07413249211356467,
+          "risk_difference": 0.1960096879812221,
+          "recall": 0.5480769230769231,
+          "relative_risk": 3.6440455782998895
+        },
+        {
+          "eligible": 786,
+          "errors": 80,
+          "selected": 197,
+          "selected_errors": 52,
+          "other": 589,
+          "other_errors": 28,
+          "rate_selected": 0.2639593908629442,
+          "rate_other": 0.04753820033955857,
+          "risk_difference": 0.2164211905233856,
+          "recall": 0.65,
+          "relative_risk": 5.552574329224076
+        }
+      ],
+      "per_ordered_block": [
+        {
+          "eligible": 805,
+          "errors": 98,
+          "selected": 210,
+          "selected_errors": 65,
+          "other": 595,
+          "other_errors": 33,
+          "rate_selected": 0.30952380952380953,
+          "rate_other": 0.05546218487394958,
+          "risk_difference": 0.25406162464985993,
+          "recall": 0.6632653061224489,
+          "relative_risk": 5.580808080808081
+        },
+        {
+          "eligible": 775,
+          "errors": 118,
+          "selected": 203,
+          "selected_errors": 77,
+          "other": 572,
+          "other_errors": 41,
+          "rate_selected": 0.3793103448275862,
+          "rate_other": 0.07167832167832168,
+          "risk_difference": 0.3076320231492645,
+          "recall": 0.652542372881356,
+          "relative_risk": 5.291841883936081
+        },
+        {
+          "eligible": 800,
+          "errors": 103,
+          "selected": 217,
+          "selected_errors": 73,
+          "other": 583,
+          "other_errors": 30,
+          "rate_selected": 0.33640552995391704,
+          "rate_other": 0.051457975986277875,
+          "risk_difference": 0.28494755396763916,
+          "recall": 0.7087378640776699,
+          "relative_risk": 6.537480798771121
+        },
+        {
+          "eligible": 849,
+          "errors": 98,
+          "selected": 218,
+          "selected_errors": 49,
+          "other": 631,
+          "other_errors": 49,
+          "rate_selected": 0.22477064220183487,
+          "rate_other": 0.07765451664025357,
+          "risk_difference": 0.14711612556158132,
+          "recall": 0.5,
+          "relative_risk": 2.8944954128440368
+        },
+        {
+          "eligible": 813,
+          "errors": 71,
+          "selected": 186,
+          "selected_errors": 45,
+          "other": 627,
+          "other_errors": 26,
+          "rate_selected": 0.24193548387096775,
+          "rate_other": 0.04146730462519936,
+          "risk_difference": 0.20046817924576837,
+          "recall": 0.6338028169014085,
+          "relative_risk": 5.834367245657568
+        },
+        {
+          "eligible": 860,
+          "errors": 87,
+          "selected": 187,
+          "selected_errors": 47,
+          "other": 673,
+          "other_errors": 40,
+          "rate_selected": 0.25133689839572193,
+          "rate_other": 0.05943536404160475,
+          "risk_difference": 0.19190153435411716,
+          "recall": 0.5402298850574713,
+          "relative_risk": 4.228743315508022
+        },
+        {
+          "eligible": 780,
+          "errors": 87,
+          "selected": 177,
+          "selected_errors": 51,
+          "other": 603,
+          "other_errors": 36,
+          "rate_selected": 0.288135593220339,
+          "rate_other": 0.05970149253731343,
+          "risk_difference": 0.22843410068302555,
+          "recall": 0.5862068965517241,
+          "relative_risk": 4.826271186440678
+        },
+        {
+          "eligible": 836,
+          "errors": 114,
+          "selected": 235,
+          "selected_errors": 81,
+          "other": 601,
+          "other_errors": 33,
+          "rate_selected": 0.3446808510638298,
+          "rate_other": 0.05490848585690516,
+          "risk_difference": 0.2897723652069246,
+          "recall": 0.7105263157894737,
+          "relative_risk": 6.277369439071567
+        }
+      ],
+      "per_random_block": [
+        {
+          "eligible": 801,
+          "errors": 108,
+          "selected": 202,
+          "selected_errors": 66,
+          "other": 599,
+          "other_errors": 42,
+          "rate_selected": 0.32673267326732675,
+          "rate_other": 0.07011686143572621,
+          "risk_difference": 0.25661581183160054,
+          "recall": 0.6111111111111112,
+          "relative_risk": 4.65983026874116
+        },
+        {
+          "eligible": 823,
+          "errors": 106,
+          "selected": 216,
+          "selected_errors": 67,
+          "other": 607,
+          "other_errors": 39,
+          "rate_selected": 0.3101851851851852,
+          "rate_other": 0.0642504118616145,
+          "risk_difference": 0.24593477332357067,
+          "recall": 0.6320754716981132,
+          "relative_risk": 4.827754036087369
+        },
+        {
+          "eligible": 797,
+          "errors": 103,
+          "selected": 221,
+          "selected_errors": 67,
+          "other": 576,
+          "other_errors": 36,
+          "rate_selected": 0.3031674208144796,
+          "rate_other": 0.0625,
+          "risk_difference": 0.24066742081447962,
+          "recall": 0.6504854368932039,
+          "relative_risk": 4.850678733031674
+        },
+        {
+          "eligible": 834,
+          "errors": 88,
+          "selected": 231,
+          "selected_errors": 60,
+          "other": 603,
+          "other_errors": 28,
+          "rate_selected": 0.2597402597402597,
+          "rate_other": 0.04643449419568822,
+          "risk_difference": 0.21330576554457148,
+          "recall": 0.6818181818181818,
+          "relative_risk": 5.5936920222634505
+        },
+        {
+          "eligible": 811,
+          "errors": 88,
+          "selected": 196,
+          "selected_errors": 51,
+          "other": 615,
+          "other_errors": 37,
+          "rate_selected": 0.2602040816326531,
+          "rate_other": 0.06016260162601626,
+          "risk_difference": 0.2000414800066368,
+          "recall": 0.5795454545454546,
+          "relative_risk": 4.325013789299503
+        },
+        {
+          "eligible": 816,
+          "errors": 103,
+          "selected": 190,
+          "selected_errors": 57,
+          "other": 626,
+          "other_errors": 46,
+          "rate_selected": 0.3,
+          "rate_other": 0.07348242811501597,
+          "risk_difference": 0.226517571884984,
+          "recall": 0.5533980582524272,
+          "relative_risk": 4.082608695652174
+        },
+        {
+          "eligible": 852,
+          "errors": 87,
+          "selected": 195,
+          "selected_errors": 56,
+          "other": 657,
+          "other_errors": 31,
+          "rate_selected": 0.28717948717948716,
+          "rate_other": 0.0471841704718417,
+          "risk_difference": 0.23999531670764546,
+          "recall": 0.6436781609195402,
+          "relative_risk": 6.0863523573200995
+        },
+        {
+          "eligible": 784,
+          "errors": 93,
+          "selected": 182,
+          "selected_errors": 64,
+          "other": 602,
+          "other_errors": 29,
+          "rate_selected": 0.3516483516483517,
+          "rate_other": 0.04817275747508306,
+          "risk_difference": 0.30347559417326864,
+          "recall": 0.6881720430107527,
+          "relative_risk": 7.29973474801061
+        }
+      ],
+      "overlap_with_published": 1606
+    },
+    "historic_to_fresh": {
+      "all": {
+        "eligible": 793,
+        "errors": 107,
+        "selected": 239,
+        "selected_errors": 72,
+        "other": 554,
+        "other_errors": 35,
+        "rate_selected": 0.301255230125523,
+        "rate_other": 0.0631768953068592,
+        "risk_difference": 0.2380783348186638,
+        "recall": 0.6728971962616822,
+        "relative_risk": 4.7684399282725645
+      },
+      "awake": {
+        "eligible": 537,
+        "errors": 70,
+        "selected": 153,
+        "selected_errors": 41,
+        "other": 384,
+        "other_errors": 29,
+        "rate_selected": 0.2679738562091503,
+        "rate_other": 0.07552083333333333,
+        "risk_difference": 0.192453022875817,
+        "recall": 0.5857142857142857,
+        "relative_risk": 3.548343475321163
+      },
+      "sleep": {
+        "eligible": 256,
+        "errors": 37,
+        "selected": 86,
+        "selected_errors": 31,
+        "other": 170,
+        "other_errors": 6,
+        "rate_selected": 0.36046511627906974,
+        "rate_other": 0.03529411764705882,
+        "risk_difference": 0.32517099863201093,
+        "recall": 0.8378378378378378,
+        "relative_risk": 10.213178294573643
+      },
+      "known_historical_orders": {
+        "eligible": 0,
+        "errors": 0,
+        "selected": 0,
+        "selected_errors": 0,
+        "other": 0,
+        "other_errors": 0,
+        "rate_selected": null,
+        "rate_other": null,
+        "risk_difference": null,
+        "recall": null,
+        "relative_risk": null
+      },
+      "historical_outside": {
+        "eligible": 793,
+        "errors": 107,
+        "selected": 239,
+        "selected_errors": 72,
+        "other": 554,
+        "other_errors": 35,
+        "rate_selected": 0.301255230125523,
+        "rate_other": 0.0631768953068592,
+        "risk_difference": 0.2380783348186638,
+        "recall": 0.6728971962616822,
+        "relative_risk": 4.7684399282725645
+      },
+      "solo": {
+        "eligible": 750,
+        "errors": 106,
+        "selected": 228,
+        "selected_errors": 71,
+        "other": 522,
+        "other_errors": 35,
+        "rate_selected": 0.31140350877192985,
+        "rate_other": 0.06704980842911877,
+        "risk_difference": 0.24435370034281106,
+        "recall": 0.6698113207547169,
+        "relative_risk": 4.64436090225564
+      },
+      "party": {
+        "eligible": 43,
+        "errors": 1,
+        "selected": 11,
+        "selected_errors": 1,
+        "other": 32,
+        "other_errors": 0,
+        "rate_selected": 0.09090909090909091,
+        "rate_other": 0.0,
+        "risk_difference": 0.09090909090909091,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "awake_parent_0": {
+        "eligible": 445,
+        "errors": 49,
+        "selected": 96,
+        "selected_errors": 20,
+        "other": 349,
+        "other_errors": 29,
+        "rate_selected": 0.20833333333333334,
+        "rate_other": 0.0830945558739255,
+        "risk_difference": 0.12523877745940784,
+        "recall": 0.40816326530612246,
+        "relative_risk": 2.507183908045977
+      },
+      "awake_parent_1": {
+        "eligible": 92,
+        "errors": 21,
+        "selected": 57,
+        "selected_errors": 21,
+        "other": 35,
+        "other_errors": 0,
+        "rate_selected": 0.3684210526315789,
+        "rate_other": 0.0,
+        "risk_difference": 0.3684210526315789,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "sleep_parent_0": {
+        "eligible": 5,
+        "errors": 2,
+        "selected": 5,
+        "selected_errors": 2,
+        "other": 0,
+        "other_errors": 0,
+        "rate_selected": 0.4,
+        "rate_other": null,
+        "risk_difference": null,
+        "recall": 1.0,
+        "relative_risk": null
+      },
+      "sleep_parent_1": {
+        "eligible": 251,
+        "errors": 35,
+        "selected": 81,
+        "selected_errors": 29,
+        "other": 170,
+        "other_errors": 6,
+        "rate_selected": 0.35802469135802467,
+        "rate_other": 0.03529411764705882,
+        "risk_difference": 0.32273057371096586,
+        "recall": 0.8285714285714286,
+        "relative_risk": 10.1440329218107
+      },
+      "order_ci": {
+        "all": {
+          "orders": 777,
+          "unadjusted_95": [
+            0.17757285833358766,
+            0.29929636269807813
+          ],
+          "adjusted_difference": 0.25281915068626404,
+          "adjusted_95": [
+            0.19339784905314444,
+            0.31325976103544234
+          ],
+          "selected_without_comparison": 5,
+          "cells": 7,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "awake": {
+          "orders": 534,
+          "unadjusted_95": [
+            0.11766856405884027,
+            0.26893976628780364
+          ],
+          "adjusted_difference": 0.21750396490097046,
+          "adjusted_95": [
+            0.1450129088014364,
+            0.29253816455602644
+          ],
+          "selected_without_comparison": 0,
+          "cells": 4,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "sleep": {
+          "orders": 252,
+          "unadjusted_95": [
+            0.22507226653397083,
+            0.43374326601624485
+          ],
+          "adjusted_difference": 0.31952565908432007,
+          "adjusted_95": [
+            0.21579982861876487,
+            0.43153789341449733
+          ],
+          "selected_without_comparison": 5,
+          "cells": 3,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        },
+        "historical_outside": {
+          "orders": 777,
+          "unadjusted_95": [
+            0.17757285833358766,
+            0.29929636269807813
+          ],
+          "adjusted_difference": 0.25281915068626404,
+          "adjusted_95": [
+            0.19339784905314444,
+            0.31325976103544234
+          ],
+          "selected_without_comparison": 5,
+          "cells": 7,
+          "standardization": "Within behavior, frozen parent decision and solo/party; weighted to the selected passenger composition using supported cells."
+        }
+      },
+      "per_original_fold": [
+        {
+          "eligible": 94,
+          "errors": 12,
+          "selected": 33,
+          "selected_errors": 11,
+          "other": 61,
+          "other_errors": 1,
+          "rate_selected": 0.3333333333333333,
+          "rate_other": 0.01639344262295082,
+          "risk_difference": 0.3169398907103825,
+          "recall": 0.9166666666666666,
+          "relative_risk": 20.333333333333332
+        },
+        {
+          "eligible": 88,
+          "errors": 10,
+          "selected": 22,
+          "selected_errors": 6,
+          "other": 66,
+          "other_errors": 4,
+          "rate_selected": 0.2727272727272727,
+          "rate_other": 0.06060606060606061,
+          "risk_difference": 0.2121212121212121,
+          "recall": 0.6,
+          "relative_risk": 4.499999999999999
+        },
+        {
+          "eligible": 113,
+          "errors": 21,
+          "selected": 38,
+          "selected_errors": 15,
+          "other": 75,
+          "other_errors": 6,
+          "rate_selected": 0.39473684210526316,
+          "rate_other": 0.08,
+          "risk_difference": 0.31473684210526315,
+          "recall": 0.7142857142857143,
+          "relative_risk": 4.934210526315789
+        },
+        {
+          "eligible": 86,
+          "errors": 13,
+          "selected": 22,
+          "selected_errors": 7,
+          "other": 64,
+          "other_errors": 6,
+          "rate_selected": 0.3181818181818182,
+          "rate_other": 0.09375,
+          "risk_difference": 0.22443181818181818,
+          "recall": 0.5384615384615384,
+          "relative_risk": 3.393939393939394
+        },
+        {
+          "eligible": 104,
+          "errors": 15,
+          "selected": 44,
+          "selected_errors": 12,
+          "other": 60,
+          "other_errors": 3,
+          "rate_selected": 0.2727272727272727,
+          "rate_other": 0.05,
+          "risk_difference": 0.22272727272727272,
+          "recall": 0.8,
+          "relative_risk": 5.454545454545454
+        },
+        {
+          "eligible": 107,
+          "errors": 11,
+          "selected": 34,
+          "selected_errors": 8,
+          "other": 73,
+          "other_errors": 3,
+          "rate_selected": 0.23529411764705882,
+          "rate_other": 0.0410958904109589,
+          "risk_difference": 0.19419822723609992,
+          "recall": 0.7272727272727273,
+          "relative_risk": 5.7254901960784315
+        },
+        {
+          "eligible": 99,
+          "errors": 12,
+          "selected": 21,
+          "selected_errors": 6,
+          "other": 78,
+          "other_errors": 6,
+          "rate_selected": 0.2857142857142857,
+          "rate_other": 0.07692307692307693,
+          "risk_difference": 0.20879120879120877,
+          "recall": 0.5,
+          "relative_risk": 3.714285714285714
+        },
+        {
+          "eligible": 102,
+          "errors": 13,
+          "selected": 25,
+          "selected_errors": 7,
+          "other": 77,
+          "other_errors": 6,
+          "rate_selected": 0.28,
+          "rate_other": 0.07792207792207792,
+          "risk_difference": 0.2020779220779221,
+          "recall": 0.5384615384615384,
+          "relative_risk": 3.5933333333333337
+        }
+      ],
+      "per_ordered_block": [
+        {
+          "eligible": 89,
+          "errors": 13,
+          "selected": 33,
+          "selected_errors": 11,
+          "other": 56,
+          "other_errors": 2,
+          "rate_selected": 0.3333333333333333,
+          "rate_other": 0.03571428571428571,
+          "risk_difference": 0.2976190476190476,
+          "recall": 0.8461538461538461,
+          "relative_risk": 9.333333333333334
+        },
+        {
+          "eligible": 93,
+          "errors": 17,
+          "selected": 31,
+          "selected_errors": 12,
+          "other": 62,
+          "other_errors": 5,
+          "rate_selected": 0.3870967741935484,
+          "rate_other": 0.08064516129032258,
+          "risk_difference": 0.3064516129032258,
+          "recall": 0.7058823529411765,
+          "relative_risk": 4.8
+        },
+        {
+          "eligible": 87,
+          "errors": 14,
+          "selected": 30,
+          "selected_errors": 9,
+          "other": 57,
+          "other_errors": 5,
+          "rate_selected": 0.3,
+          "rate_other": 0.08771929824561403,
+          "risk_difference": 0.21228070175438596,
+          "recall": 0.6428571428571429,
+          "relative_risk": 3.42
+        },
+        {
+          "eligible": 97,
+          "errors": 11,
+          "selected": 26,
+          "selected_errors": 6,
+          "other": 71,
+          "other_errors": 5,
+          "rate_selected": 0.23076923076923078,
+          "rate_other": 0.07042253521126761,
+          "risk_difference": 0.16034669555796316,
+          "recall": 0.5454545454545454,
+          "relative_risk": 3.276923076923077
+        },
+        {
+          "eligible": 105,
+          "errors": 11,
+          "selected": 28,
+          "selected_errors": 7,
+          "other": 77,
+          "other_errors": 4,
+          "rate_selected": 0.25,
+          "rate_other": 0.05194805194805195,
+          "risk_difference": 0.19805194805194803,
+          "recall": 0.6363636363636364,
+          "relative_risk": 4.8125
+        },
+        {
+          "eligible": 98,
+          "errors": 12,
+          "selected": 22,
+          "selected_errors": 5,
+          "other": 76,
+          "other_errors": 7,
+          "rate_selected": 0.22727272727272727,
+          "rate_other": 0.09210526315789473,
+          "risk_difference": 0.13516746411483255,
+          "recall": 0.4166666666666667,
+          "relative_risk": 2.4675324675324677
+        },
+        {
+          "eligible": 120,
+          "errors": 16,
+          "selected": 34,
+          "selected_errors": 12,
+          "other": 86,
+          "other_errors": 4,
+          "rate_selected": 0.35294117647058826,
+          "rate_other": 0.046511627906976744,
+          "risk_difference": 0.3064295485636115,
+          "recall": 0.75,
+          "relative_risk": 7.588235294117648
+        },
+        {
+          "eligible": 104,
+          "errors": 13,
+          "selected": 35,
+          "selected_errors": 10,
+          "other": 69,
+          "other_errors": 3,
+          "rate_selected": 0.2857142857142857,
+          "rate_other": 0.043478260869565216,
+          "risk_difference": 0.24223602484472048,
+          "recall": 0.7692307692307693,
+          "relative_risk": 6.571428571428571
+        }
+      ],
+      "per_random_block": [
+        {
+          "eligible": 99,
+          "errors": 13,
+          "selected": 31,
+          "selected_errors": 7,
+          "other": 68,
+          "other_errors": 6,
+          "rate_selected": 0.22580645161290322,
+          "rate_other": 0.08823529411764706,
+          "risk_difference": 0.13757115749525617,
+          "recall": 0.5384615384615384,
+          "relative_risk": 2.5591397849462365
+        },
+        {
+          "eligible": 81,
+          "errors": 15,
+          "selected": 27,
+          "selected_errors": 12,
+          "other": 54,
+          "other_errors": 3,
+          "rate_selected": 0.4444444444444444,
+          "rate_other": 0.05555555555555555,
+          "risk_difference": 0.38888888888888884,
+          "recall": 0.8,
+          "relative_risk": 8.0
+        },
+        {
+          "eligible": 102,
+          "errors": 15,
+          "selected": 35,
+          "selected_errors": 12,
+          "other": 67,
+          "other_errors": 3,
+          "rate_selected": 0.34285714285714286,
+          "rate_other": 0.04477611940298507,
+          "risk_difference": 0.29808102345415777,
+          "recall": 0.8,
+          "relative_risk": 7.6571428571428575
+        },
+        {
+          "eligible": 109,
+          "errors": 11,
+          "selected": 29,
+          "selected_errors": 5,
+          "other": 80,
+          "other_errors": 6,
+          "rate_selected": 0.1724137931034483,
+          "rate_other": 0.075,
+          "risk_difference": 0.09741379310344829,
+          "recall": 0.45454545454545453,
+          "relative_risk": 2.298850574712644
+        },
+        {
+          "eligible": 111,
+          "errors": 14,
+          "selected": 33,
+          "selected_errors": 10,
+          "other": 78,
+          "other_errors": 4,
+          "rate_selected": 0.30303030303030304,
+          "rate_other": 0.05128205128205128,
+          "risk_difference": 0.2517482517482518,
+          "recall": 0.7142857142857143,
+          "relative_risk": 5.909090909090909
+        },
+        {
+          "eligible": 101,
+          "errors": 18,
+          "selected": 35,
+          "selected_errors": 11,
+          "other": 66,
+          "other_errors": 7,
+          "rate_selected": 0.3142857142857143,
+          "rate_other": 0.10606060606060606,
+          "risk_difference": 0.2082251082251082,
+          "recall": 0.6111111111111112,
+          "relative_risk": 2.963265306122449
+        },
+        {
+          "eligible": 91,
+          "errors": 5,
+          "selected": 25,
+          "selected_errors": 4,
+          "other": 66,
+          "other_errors": 1,
+          "rate_selected": 0.16,
+          "rate_other": 0.015151515151515152,
+          "risk_difference": 0.14484848484848484,
+          "recall": 0.8,
+          "relative_risk": 10.56
+        },
+        {
+          "eligible": 99,
+          "errors": 16,
+          "selected": 24,
+          "selected_errors": 11,
+          "other": 75,
+          "other_errors": 5,
+          "rate_selected": 0.4583333333333333,
+          "rate_other": 0.06666666666666667,
+          "risk_difference": 0.39166666666666666,
+          "recall": 0.6875,
+          "relative_risk": 6.875
+        }
+      ],
+      "overlap_with_published": 231
+    }
+  },
+  "quartiles": {
+    "all": {
+      "cells": [
+        {
+          "rows": 1623,
+          "errors": 481
+        },
+        {
+          "rows": 1632,
+          "errors": 171
+        },
+        {
+          "rows": 1629,
+          "errors": 91
+        },
+        {
+          "rows": 1634,
+          "errors": 33
+        }
+      ],
+      "ranking_auc": 0.7996975621842313
+    },
+    "awake": {
+      "cells": [
+        {
+          "rows": 999,
+          "errors": 253
+        },
+        {
+          "rows": 1004,
+          "errors": 111
+        },
+        {
+          "rows": 1003,
+          "errors": 80
+        },
+        {
+          "rows": 1004,
+          "errors": 32
+        }
+      ],
+      "ranking_auc": 0.7282821023146101
+    },
+    "sleep": {
+      "cells": [
+        {
+          "rows": 624,
+          "errors": 228
+        },
+        {
+          "rows": 628,
+          "errors": 60
+        },
+        {
+          "rows": 626,
+          "errors": 11
+        },
+        {
+          "rows": 630,
+          "errors": 1
+        }
+      ],
+      "ranking_auc": 0.8703540157004832
+    },
+    "fresh": {
+      "cells": [
+        {
+          "rows": 232,
+          "errors": 71
+        },
+        {
+          "rows": 205,
+          "errors": 21
+        },
+        {
+          "rows": 192,
+          "errors": 10
+        },
+        {
+          "rows": 164,
+          "errors": 5
+        }
+      ],
+      "ranking_auc": 0.7855576142339445
+    }
+  },
+  "semantics": [
+    "All rates use the registered 16-change parent and the same seven held-order scores. Two are correlated composites, including the median of the three foundation scores, so votes are not independent.",
+    "In the published rule, percentile ranks are computed within each of the eight held folds and each of the two behaviors with ties assigned average ranks. Fixed-margin reference checks estimate a threshold using different whole bookings within the original held fold; each reference/query pair was unseen by the same underlying models.",
+    "Random/contiguous blocks are pseudo holdouts for the margin selection only. Their scores, trained original model and parent are shared, and booking number is an ordering proxy. No full ensemble was retrained on contiguous outer regions.",
+    "The historical-outside mask excludes every booking represented in the original historical cache, but the aggregate results of this subpopulation have been consulted in prior project iterations. This is not a pristine final evaluation.",
+    "Two behavior groups and the 25% review budget were inspected in prior work. The intervals resample whole bookings conditional on that choice; they do not account for exploratory selection.",
+    "No-positive-spend includes partially missing bills, as in the source. Error enrichment measures the precision of review; reversing all reviewed predictions is a distinct decision."
+  ]
+}

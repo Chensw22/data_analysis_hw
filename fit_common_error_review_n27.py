@@ -1,4 +1,5 @@
 """Train a correction model specifically on low-margin cases from the two largest common-error populations."""
+import argparse
 import json
 
 import numpy as np
@@ -14,7 +15,7 @@ from repeated_archive_misses_n26 import ART, cohort, count
 from unanimous_error_reach_n27 import inputs
 
 
-def evaluate():
+def evaluate(matched_parent=False):
     raw, frame, y, groups, folds, first, edits, _, scores, alternatives = inputs()
     n = len(y)
     _, _, known, fresh = cohort(raw, y, folds)
@@ -28,12 +29,26 @@ def evaluate():
     }
     fold_with_test = np.r_[folds, np.full(len(frame) - n, 8)]
     eligible = common & np.r_[known, np.ones(len(frame) - n, dtype=bool)]
+    if matched_parent:
+        eligible &= vote == anchor
     margin = np.min(np.abs(scores - 0.5), axis=1)
     # Use raw expert opinions. Every training label for a correction model belongs to
     # the same outer held fold as its query, so the underlying experts never saw either.
     opinions = np.column_stack([scores, *alternatives.values()])
     directed = logit(np.clip(np.where(vote[:, None], 1 - opinions, opinions), 0.005, 0.995))
     design = np.column_stack([vote, directed])
+    if matched_parent:
+        new_opinions = []
+        for folder, filename in [('nov27_manifest_tree_mixture', 'scores.npz'),
+                                 ('nov27_field_pair_evidence', 'aligned.npz')]:
+            with np.load(ART / folder / filename) as bank:
+                np.testing.assert_array_equal(bank['passenger'], frame.PassengerId.to_numpy(str))
+                np.testing.assert_array_equal(bank['fold'], folds)
+                np.testing.assert_array_equal(bank['y'], y)
+                new_opinions.append(bank['random'])
+        new_scores = np.column_stack(new_opinions)
+        pair_odds = logit(np.clip(np.where(vote[:, None], 1-new_scores, new_scores), 0.005, 0.995))
+        augmented = np.column_stack([design, pair_odds])
     target = vote[:n] != y
     wrong = anchor[:n] != y
     saved, report = {}, {}
@@ -44,10 +59,15 @@ def evaluate():
             rows = np.flatnonzero(use & (fold_with_test == fold))
             review[rows] = rankdata(margin[rows]) / len(rows) <= 0.25
         test_rows = np.flatnonzero(review & (fold_with_test == 8))
+        modes = [('all_in_population', use, design), ('review_only', review, design)]
+        if matched_parent:
+            with np.load(ART / 'nov27_low_margin_enrichment_audit/masks.npz') as audit:
+                np.testing.assert_array_equal(review[:n], audit['published'] & population[:n])
+            modes.append(('review_plus_field_pairs', review, augmented))
         for protocol in ('random', 'contiguous'):
             part = splits(groups, folds, protocol)
             output = {}
-            for mode, scope in [('all_in_population', use), ('review_only', review)]:
+            for mode, scope, features in modes:
                 actions = np.zeros(len(frame), dtype=bool)
                 test_votes = []
                 for fold in range(8):
@@ -60,8 +80,8 @@ def evaluate():
                             q = np.flatnonzero(review[:n] & (folds == fold) & (part == held))
                             assert not np.isin(groups[train], groups[q]).any()
                         model = LogisticRegression(C=0.1, max_iter=300)
-                        model.fit(design[:n][train], target[train])
-                        flip = model.predict(design[q]) & (anchor[q] == vote[q])
+                        model.fit(features[:n][train], target[train])
+                        flip = model.predict(features[q]) & (anchor[q] == vote[q])
                         if held is None:
                             test_votes.append(flip)
                         else:
@@ -77,10 +97,11 @@ def evaluate():
     for name in populations:
         np.testing.assert_array_equal(saved[f'{name}_random_review_only'][n:],
                                       saved[f'{name}_contiguous_review_only'][n:])
-    path = ART / 'nov27_common_error_review_fit'
+    tag = 'common_error_review_exact' if matched_parent else 'common_error_review_fit'
+    path = ART / ('nov27_' + tag)
     path.mkdir(exist_ok=True)
     np.savez_compressed(path / 'aligned.npz', passenger=frame.PassengerId.to_numpy(str), fold=folds, y=y, **saved)
-    (ROOT / 'reports/nov23_matched_learning_curve/common_error_review_fit.json').write_text(
+    (ROOT / 'reports/nov23_matched_learning_curve' / (tag + '.json')).write_text(
         json.dumps(report, indent=2) + '\n')
     for name, protocols in report.items():
         for protocol, modes in protocols.items():
@@ -88,5 +109,8 @@ def evaluate():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--matched-parent', action='store_true', help='Use the exact published parent and cohort for the field-pair comparison')
+    args = parser.parse_args()
     with threadpool_limits(1):
-        evaluate()
+        evaluate(args.matched_parent)
