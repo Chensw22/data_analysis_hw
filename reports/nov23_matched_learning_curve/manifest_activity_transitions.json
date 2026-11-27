@@ -1,0 +1,408 @@
+{
+  "random": {
+    "standalone": {
+      "additive": {
+        "accuracy": 0.7984585298516047,
+        "log_loss": 0.4303793774593139
+      },
+      "symmetric": {
+        "accuracy": 0.7913263545381342,
+        "log_loss": 0.45013775394596417
+      },
+      "asymmetric": {
+        "accuracy": 0.7948924421948694,
+        "log_loss": 0.4320284473828623
+      }
+    },
+    "rules": {
+      "asymmetric": {
+        "scopes": {
+          "all": {
+            "fixed": 300,
+            "harmed": 575
+          },
+          "new_orders": {
+            "fixed": 35,
+            "harmed": 78
+          },
+          "unanimous": {
+            "fixed": 51,
+            "harmed": 147
+          },
+          "awake_paid": {
+            "fixed": 34,
+            "harmed": 93
+          },
+          "sleep_zero": {
+            "fixed": 11,
+            "harmed": 22
+          }
+        },
+        "fold_net": [
+          -26,
+          -25,
+          -34,
+          -35,
+          -40,
+          -29,
+          -36,
+          -50
+        ],
+        "test_changes": 469
+      },
+      "new_vs_additive": {
+        "scopes": {
+          "all": {
+            "fixed": 74,
+            "harmed": 170
+          },
+          "new_orders": {
+            "fixed": 11,
+            "harmed": 23
+          },
+          "unanimous": {
+            "fixed": 21,
+            "harmed": 93
+          },
+          "awake_paid": {
+            "fixed": 19,
+            "harmed": 69
+          },
+          "sleep_zero": {
+            "fixed": 1,
+            "harmed": 8
+          }
+        },
+        "fold_net": [
+          -9,
+          -8,
+          -11,
+          -6,
+          -20,
+          -10,
+          -24,
+          -8
+        ],
+        "test_changes": 137
+      },
+      "new_vs_both": {
+        "scopes": {
+          "all": {
+            "fixed": 15,
+            "harmed": 44
+          },
+          "new_orders": {
+            "fixed": 3,
+            "harmed": 7
+          },
+          "unanimous": {
+            "fixed": 3,
+            "harmed": 17
+          },
+          "awake_paid": {
+            "fixed": 2,
+            "harmed": 7
+          },
+          "sleep_zero": {
+            "fixed": 1,
+            "harmed": 8
+          }
+        },
+        "fold_net": [
+          -2,
+          -6,
+          1,
+          0,
+          -11,
+          -5,
+          -3,
+          -3
+        ],
+        "test_changes": 38
+      },
+      "incremental": {
+        "scopes": {
+          "all": {
+            "fixed": 84,
+            "harmed": 136
+          },
+          "new_orders": {
+            "fixed": 11,
+            "harmed": 18
+          },
+          "unanimous": {
+            "fixed": 5,
+            "harmed": 22
+          },
+          "awake_paid": {
+            "fixed": 4,
+            "harmed": 17
+          },
+          "sleep_zero": {
+            "fixed": 0,
+            "harmed": 5
+          }
+        },
+        "fold_net": [
+          -2,
+          -3,
+          -10,
+          -12,
+          -2,
+          -10,
+          -5,
+          -8
+        ],
+        "test_changes": 117
+      }
+    }
+  },
+  "ordered": {
+    "standalone": {
+      "additive": {
+        "accuracy": 0.7976532842516968,
+        "log_loss": 0.43706621168914456
+      },
+      "symmetric": {
+        "accuracy": 0.7891406879098125,
+        "log_loss": 0.45191726420333717
+      },
+      "asymmetric": {
+        "accuracy": 0.7915564247095364,
+        "log_loss": 0.4387200923643721
+      }
+    },
+    "rules": {
+      "asymmetric": {
+        "scopes": {
+          "all": {
+            "fixed": 303,
+            "harmed": 604
+          },
+          "new_orders": {
+            "fixed": 37,
+            "harmed": 80
+          },
+          "unanimous": {
+            "fixed": 57,
+            "harmed": 177
+          },
+          "awake_paid": {
+            "fixed": 36,
+            "harmed": 106
+          },
+          "sleep_zero": {
+            "fixed": 15,
+            "harmed": 36
+          }
+        },
+        "fold_net": [
+          -46,
+          -26,
+          -27,
+          -40,
+          -53,
+          -60,
+          -25,
+          -24
+        ],
+        "test_changes": 469
+      },
+      "new_vs_additive": {
+        "scopes": {
+          "all": {
+            "fixed": 70,
+            "harmed": 182
+          },
+          "new_orders": {
+            "fixed": 10,
+            "harmed": 23
+          },
+          "unanimous": {
+            "fixed": 21,
+            "harmed": 108
+          },
+          "awake_paid": {
+            "fixed": 17,
+            "harmed": 75
+          },
+          "sleep_zero": {
+            "fixed": 2,
+            "harmed": 19
+          }
+        },
+        "fold_net": [
+          -25,
+          -17,
+          -12,
+          -8,
+          -19,
+          -17,
+          -5,
+          -9
+        ],
+        "test_changes": 137
+      },
+      "new_vs_both": {
+        "scopes": {
+          "all": {
+            "fixed": 20,
+            "harmed": 57
+          },
+          "new_orders": {
+            "fixed": 3,
+            "harmed": 5
+          },
+          "unanimous": {
+            "fixed": 7,
+            "harmed": 35
+          },
+          "awake_paid": {
+            "fixed": 5,
+            "harmed": 15
+          },
+          "sleep_zero": {
+            "fixed": 2,
+            "harmed": 19
+          }
+        },
+        "fold_net": [
+          -13,
+          -8,
+          -3,
+          2,
+          -4,
+          -4,
+          -1,
+          -6
+        ],
+        "test_changes": 38
+      },
+      "incremental": {
+        "scopes": {
+          "all": {
+            "fixed": 78,
+            "harmed": 133
+          },
+          "new_orders": {
+            "fixed": 11,
+            "harmed": 17
+          },
+          "unanimous": {
+            "fixed": 4,
+            "harmed": 31
+          },
+          "awake_paid": {
+            "fixed": 3,
+            "harmed": 14
+          },
+          "sleep_zero": {
+            "fixed": 0,
+            "harmed": 16
+          }
+        },
+        "fold_net": [
+          -15,
+          0,
+          -11,
+          -8,
+          -10,
+          -13,
+          4,
+          -2
+        ],
+        "test_changes": 117
+      }
+    }
+  },
+  "repeat": {
+    "asymmetric": {
+      "all": {
+        "fixed": 281,
+        "harmed": 529
+      },
+      "new_orders": {
+        "fixed": 32,
+        "harmed": 70
+      },
+      "unanimous": {
+        "fixed": 46,
+        "harmed": 127
+      },
+      "awake_paid": {
+        "fixed": 30,
+        "harmed": 79
+      },
+      "sleep_zero": {
+        "fixed": 11,
+        "harmed": 22
+      }
+    },
+    "new_vs_additive": {
+      "all": {
+        "fixed": 51,
+        "harmed": 124
+      },
+      "new_orders": {
+        "fixed": 8,
+        "harmed": 16
+      },
+      "unanimous": {
+        "fixed": 14,
+        "harmed": 67
+      },
+      "awake_paid": {
+        "fixed": 12,
+        "harmed": 50
+      },
+      "sleep_zero": {
+        "fixed": 1,
+        "harmed": 8
+      }
+    },
+    "new_vs_both": {
+      "all": {
+        "fixed": 9,
+        "harmed": 27
+      },
+      "new_orders": {
+        "fixed": 2,
+        "harmed": 3
+      },
+      "unanimous": {
+        "fixed": 2,
+        "harmed": 11
+      },
+      "awake_paid": {
+        "fixed": 1,
+        "harmed": 2
+      },
+      "sleep_zero": {
+        "fixed": 1,
+        "harmed": 8
+      }
+    },
+    "incremental": {
+      "all": {
+        "fixed": 65,
+        "harmed": 111
+      },
+      "new_orders": {
+        "fixed": 8,
+        "harmed": 15
+      },
+      "unanimous": {
+        "fixed": 3,
+        "harmed": 17
+      },
+      "awake_paid": {
+        "fixed": 2,
+        "harmed": 12
+      },
+      "sleep_zero": {
+        "fixed": 0,
+        "harmed": 5
+      }
+    }
+  }
+}
