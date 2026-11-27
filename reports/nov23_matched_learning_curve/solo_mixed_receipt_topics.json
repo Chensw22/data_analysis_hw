@@ -1,0 +1,918 @@
+{
+  "coverage": {
+    "all": {
+      "rows": 8532,
+      "errors": 1435
+    },
+    "solo": {
+      "rows": 4735,
+      "errors": 860
+    },
+    "paid_solo": {
+      "rows": 3181,
+      "errors": 537
+    },
+    "common_solo": {
+      "rows": 3839,
+      "errors": 525
+    },
+    "fresh": {
+      "rows": 1033,
+      "errors": 193
+    },
+    "fresh_solo": {
+      "rows": 978,
+      "errors": 188
+    },
+    "harder": {
+      "rows": 3861,
+      "errors": 266
+    }
+  },
+  "method": "Five mixed-membership service profiles per passenger, holding each facility out when scoring its registered value; six positive-amount quantiles and zero per service. No outcome or numerical identifier enters the profile learning.",
+  "control": "Shuffle each service independently within training origin, payment count, total spending stratum and solo status, preserving its within-stratum marginal distribution.",
+  "previous": [
+    "full_roster_latent_profiles_n24.py",
+    "solo_selection_likelihood_n26.py",
+    "conditional_basket_energy_n26.py",
+    "solo_conditional_splines_n25.py"
+  ],
+  "protocols": {
+    "random": {
+      "standalone": {
+        "all_paid": {
+          "rows": 5040,
+          "baseline_true_shuffled_accuracy": [
+            0.8166666666666667,
+            0.8192460317460317,
+            0.8132936507936508
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8394401332511048,
+            1.833843178772258
+          ]
+        },
+        "paid_solo": {
+          "rows": 3181,
+          "baseline_true_shuffled_accuracy": [
+            0.803520905375668,
+            0.8072933039924552,
+            0.8025778057214712
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8307850777450656,
+            1.8207112541183839
+          ]
+        },
+        "solo_common": {
+          "rows": 2574,
+          "baseline_true_shuffled_accuracy": [
+            0.8648018648018648,
+            0.8706293706293706,
+            0.8613053613053613
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8338629025928228,
+            1.825739212441511
+          ]
+        }
+      },
+      "rules": {
+        "baseline": {
+          "scopes": {
+            "all": {
+              "fixed": 144,
+              "harmed": 258
+            },
+            "solo": {
+              "fixed": 92,
+              "harmed": 180
+            },
+            "paid_solo": {
+              "fixed": 92,
+              "harmed": 180
+            },
+            "common_solo": {
+              "fixed": 8,
+              "harmed": 27
+            },
+            "fresh": {
+              "fixed": 18,
+              "harmed": 44
+            },
+            "fresh_solo": {
+              "fixed": 18,
+              "harmed": 42
+            },
+            "harder": {
+              "fixed": 1,
+              "harmed": 0
+            }
+          },
+          "test": 222,
+          "common_test": 26,
+          "fold_net": [
+            -14,
+            -15,
+            -15,
+            4,
+            -21,
+            -18,
+            -14,
+            -21
+          ]
+        },
+        "profiles": {
+          "scopes": {
+            "all": {
+              "fixed": 171,
+              "harmed": 273
+            },
+            "solo": {
+              "fixed": 115,
+              "harmed": 191
+            },
+            "paid_solo": {
+              "fixed": 115,
+              "harmed": 191
+            },
+            "common_solo": {
+              "fixed": 23,
+              "harmed": 27
+            },
+            "fresh": {
+              "fixed": 28,
+              "harmed": 54
+            },
+            "fresh_solo": {
+              "fixed": 28,
+              "harmed": 52
+            },
+            "harder": {
+              "fixed": 3,
+              "harmed": 3
+            }
+          },
+          "test": 233,
+          "common_test": 24,
+          "fold_net": [
+            -5,
+            -19,
+            -20,
+            0,
+            -27,
+            -7,
+            -1,
+            -23
+          ]
+        },
+        "shuffled": {
+          "scopes": {
+            "all": {
+              "fixed": 156,
+              "harmed": 283
+            },
+            "solo": {
+              "fixed": 97,
+              "harmed": 188
+            },
+            "paid_solo": {
+              "fixed": 97,
+              "harmed": 188
+            },
+            "common_solo": {
+              "fixed": 11,
+              "harmed": 39
+            },
+            "fresh": {
+              "fixed": 22,
+              "harmed": 48
+            },
+            "fresh_solo": {
+              "fixed": 22,
+              "harmed": 45
+            },
+            "harder": {
+              "fixed": 1,
+              "harmed": 4
+            }
+          },
+          "test": 243,
+          "common_test": 29,
+          "fold_net": [
+            -12,
+            -17,
+            -25,
+            -3,
+            -21,
+            -16,
+            -8,
+            -25
+          ]
+        },
+        "profiles_only": {
+          "scopes": {
+            "all": {
+              "fixed": 37,
+              "harmed": 45
+            },
+            "solo": {
+              "fixed": 24,
+              "harmed": 38
+            },
+            "paid_solo": {
+              "fixed": 24,
+              "harmed": 38
+            },
+            "common_solo": {
+              "fixed": 12,
+              "harmed": 10
+            },
+            "fresh": {
+              "fixed": 9,
+              "harmed": 12
+            },
+            "fresh_solo": {
+              "fixed": 9,
+              "harmed": 12
+            },
+            "harder": {
+              "fixed": 3,
+              "harmed": 3
+            }
+          },
+          "test": 30,
+          "common_test": 9,
+          "fold_net": [
+            3,
+            -2,
+            -3,
+            -2,
+            -2,
+            -1,
+            2,
+            -3
+          ]
+        },
+        "new_direction": {
+          "scopes": {
+            "all": {
+              "fixed": 72,
+              "harmed": 82
+            },
+            "solo": {
+              "fixed": 47,
+              "harmed": 62
+            },
+            "paid_solo": {
+              "fixed": 47,
+              "harmed": 62
+            },
+            "common_solo": {
+              "fixed": 19,
+              "harmed": 15
+            },
+            "fresh": {
+              "fixed": 16,
+              "harmed": 22
+            },
+            "fresh_solo": {
+              "fixed": 16,
+              "harmed": 22
+            },
+            "harder": {
+              "fixed": 3,
+              "harmed": 3
+            }
+          },
+          "test": 77,
+          "common_test": 17,
+          "fold_net": [
+            3,
+            -3,
+            -7,
+            -5,
+            -7,
+            3,
+            8,
+            -2
+          ]
+        },
+        "contrast_only": {
+          "scopes": {
+            "all": {
+              "fixed": 57,
+              "harmed": 71
+            },
+            "solo": {
+              "fixed": 34,
+              "harmed": 54
+            },
+            "paid_solo": {
+              "fixed": 34,
+              "harmed": 54
+            },
+            "common_solo": {
+              "fixed": 9,
+              "harmed": 12
+            },
+            "fresh": {
+              "fixed": 10,
+              "harmed": 11
+            },
+            "fresh_solo": {
+              "fixed": 9,
+              "harmed": 11
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 1
+            }
+          },
+          "test": 54,
+          "common_test": 10,
+          "fold_net": [
+            -2,
+            -5,
+            -5,
+            -2,
+            -2,
+            2,
+            -3,
+            3
+          ]
+        },
+        "confirmed_contrast": {
+          "scopes": {
+            "all": {
+              "fixed": 37,
+              "harmed": 45
+            },
+            "solo": {
+              "fixed": 22,
+              "harmed": 35
+            },
+            "paid_solo": {
+              "fixed": 22,
+              "harmed": 35
+            },
+            "common_solo": {
+              "fixed": 5,
+              "harmed": 4
+            },
+            "fresh": {
+              "fixed": 6,
+              "harmed": 9
+            },
+            "fresh_solo": {
+              "fixed": 6,
+              "harmed": 9
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "test": 35,
+          "common_test": 4,
+          "fold_net": [
+            1,
+            -3,
+            -3,
+            -2,
+            -2,
+            2,
+            1,
+            -2
+          ]
+        },
+        "profiles_only_solo": {
+          "scopes": {
+            "all": {
+              "fixed": 24,
+              "harmed": 38
+            },
+            "solo": {
+              "fixed": 24,
+              "harmed": 38
+            },
+            "paid_solo": {
+              "fixed": 24,
+              "harmed": 38
+            },
+            "common_solo": {
+              "fixed": 12,
+              "harmed": 10
+            },
+            "fresh": {
+              "fixed": 9,
+              "harmed": 12
+            },
+            "fresh_solo": {
+              "fixed": 9,
+              "harmed": 12
+            },
+            "harder": {
+              "fixed": 3,
+              "harmed": 2
+            }
+          },
+          "test": 18,
+          "common_test": 9,
+          "fold_net": [
+            0,
+            -1,
+            -3,
+            -3,
+            -1,
+            -2,
+            0,
+            -4
+          ]
+        },
+        "confirmed_contrast_solo": {
+          "scopes": {
+            "all": {
+              "fixed": 22,
+              "harmed": 35
+            },
+            "solo": {
+              "fixed": 22,
+              "harmed": 35
+            },
+            "paid_solo": {
+              "fixed": 22,
+              "harmed": 35
+            },
+            "common_solo": {
+              "fixed": 5,
+              "harmed": 4
+            },
+            "fresh": {
+              "fixed": 6,
+              "harmed": 9
+            },
+            "fresh_solo": {
+              "fixed": 6,
+              "harmed": 9
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "test": 17,
+          "common_test": 4,
+          "fold_net": [
+            0,
+            -2,
+            -3,
+            -2,
+            -1,
+            -2,
+            0,
+            -3
+          ]
+        }
+      }
+    },
+    "contiguous": {
+      "standalone": {
+        "all_paid": {
+          "rows": 5040,
+          "baseline_true_shuffled_accuracy": [
+            0.8182539682539682,
+            0.8130952380952381,
+            0.8158730158730159
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8360251553804163,
+            1.8292954242386201
+          ]
+        },
+        "paid_solo": {
+          "rows": 3181,
+          "baseline_true_shuffled_accuracy": [
+            0.8098082364036466,
+            0.8028921722728701,
+            0.8050927381326627
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8279357988998772,
+            1.8201482638355135
+          ]
+        },
+        "solo_common": {
+          "rows": 2574,
+          "baseline_true_shuffled_accuracy": [
+            0.8663558663558664,
+            0.8651903651903652,
+            0.8644133644133644
+          ],
+          "true_shuffled_leave_one_service_nll": [
+            1.8313427853928246,
+            1.8238510120877545
+          ]
+        }
+      },
+      "rules": {
+        "baseline": {
+          "scopes": {
+            "all": {
+              "fixed": 165,
+              "harmed": 270
+            },
+            "solo": {
+              "fixed": 112,
+              "harmed": 180
+            },
+            "paid_solo": {
+              "fixed": 112,
+              "harmed": 180
+            },
+            "common_solo": {
+              "fixed": 19,
+              "harmed": 34
+            },
+            "fresh": {
+              "fixed": 29,
+              "harmed": 42
+            },
+            "fresh_solo": {
+              "fixed": 29,
+              "harmed": 42
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 3
+            }
+          },
+          "test": 222,
+          "common_test": 26,
+          "fold_net": [
+            -15,
+            -4,
+            -19,
+            -19,
+            -7,
+            -22,
+            -6,
+            -13
+          ]
+        },
+        "profiles": {
+          "scopes": {
+            "all": {
+              "fixed": 174,
+              "harmed": 303
+            },
+            "solo": {
+              "fixed": 118,
+              "harmed": 208
+            },
+            "paid_solo": {
+              "fixed": 118,
+              "harmed": 208
+            },
+            "common_solo": {
+              "fixed": 23,
+              "harmed": 41
+            },
+            "fresh": {
+              "fixed": 32,
+              "harmed": 46
+            },
+            "fresh_solo": {
+              "fixed": 32,
+              "harmed": 43
+            },
+            "harder": {
+              "fixed": 2,
+              "harmed": 4
+            }
+          },
+          "test": 233,
+          "common_test": 24,
+          "fold_net": [
+            -18,
+            -8,
+            -19,
+            -27,
+            -13,
+            -30,
+            -5,
+            -9
+          ]
+        },
+        "shuffled": {
+          "scopes": {
+            "all": {
+              "fixed": 178,
+              "harmed": 294
+            },
+            "solo": {
+              "fixed": 116,
+              "harmed": 199
+            },
+            "paid_solo": {
+              "fixed": 116,
+              "harmed": 199
+            },
+            "common_solo": {
+              "fixed": 18,
+              "harmed": 38
+            },
+            "fresh": {
+              "fixed": 25,
+              "harmed": 45
+            },
+            "fresh_solo": {
+              "fixed": 25,
+              "harmed": 43
+            },
+            "harder": {
+              "fixed": 1,
+              "harmed": 1
+            }
+          },
+          "test": 243,
+          "common_test": 29,
+          "fold_net": [
+            -24,
+            -8,
+            -19,
+            -16,
+            -5,
+            -35,
+            -10,
+            1
+          ]
+        },
+        "profiles_only": {
+          "scopes": {
+            "all": {
+              "fixed": 23,
+              "harmed": 51
+            },
+            "solo": {
+              "fixed": 15,
+              "harmed": 39
+            },
+            "paid_solo": {
+              "fixed": 15,
+              "harmed": 39
+            },
+            "common_solo": {
+              "fixed": 7,
+              "harmed": 15
+            },
+            "fresh": {
+              "fixed": 2,
+              "harmed": 9
+            },
+            "fresh_solo": {
+              "fixed": 2,
+              "harmed": 8
+            },
+            "harder": {
+              "fixed": 2,
+              "harmed": 3
+            }
+          },
+          "test": 30,
+          "common_test": 9,
+          "fold_net": [
+            -1,
+            -6,
+            -2,
+            -11,
+            -6,
+            -3,
+            -1,
+            2
+          ]
+        },
+        "new_direction": {
+          "scopes": {
+            "all": {
+              "fixed": 54,
+              "harmed": 102
+            },
+            "solo": {
+              "fixed": 37,
+              "harmed": 76
+            },
+            "paid_solo": {
+              "fixed": 37,
+              "harmed": 76
+            },
+            "common_solo": {
+              "fixed": 12,
+              "harmed": 25
+            },
+            "fresh": {
+              "fixed": 8,
+              "harmed": 20
+            },
+            "fresh_solo": {
+              "fixed": 8,
+              "harmed": 17
+            },
+            "harder": {
+              "fixed": 2,
+              "harmed": 3
+            }
+          },
+          "test": 77,
+          "common_test": 17,
+          "fold_net": [
+            -8,
+            -7,
+            -4,
+            -13,
+            -7,
+            -7,
+            -2,
+            0
+          ]
+        },
+        "contrast_only": {
+          "scopes": {
+            "all": {
+              "fixed": 47,
+              "harmed": 65
+            },
+            "solo": {
+              "fixed": 30,
+              "harmed": 44
+            },
+            "paid_solo": {
+              "fixed": 30,
+              "harmed": 44
+            },
+            "common_solo": {
+              "fixed": 13,
+              "harmed": 9
+            },
+            "fresh": {
+              "fixed": 5,
+              "harmed": 7
+            },
+            "fresh_solo": {
+              "fixed": 4,
+              "harmed": 7
+            },
+            "harder": {
+              "fixed": 1,
+              "harmed": 1
+            }
+          },
+          "test": 54,
+          "common_test": 10,
+          "fold_net": [
+            -1,
+            -1,
+            2,
+            -7,
+            -4,
+            -2,
+            -3,
+            -2
+          ]
+        },
+        "confirmed_contrast": {
+          "scopes": {
+            "all": {
+              "fixed": 25,
+              "harmed": 41
+            },
+            "solo": {
+              "fixed": 17,
+              "harmed": 29
+            },
+            "paid_solo": {
+              "fixed": 17,
+              "harmed": 29
+            },
+            "common_solo": {
+              "fixed": 4,
+              "harmed": 4
+            },
+            "fresh": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "fresh_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "test": 35,
+          "common_test": 4,
+          "fold_net": [
+            -2,
+            -3,
+            1,
+            -3,
+            -5,
+            0,
+            -3,
+            -1
+          ]
+        },
+        "profiles_only_solo": {
+          "scopes": {
+            "all": {
+              "fixed": 15,
+              "harmed": 39
+            },
+            "solo": {
+              "fixed": 15,
+              "harmed": 39
+            },
+            "paid_solo": {
+              "fixed": 15,
+              "harmed": 39
+            },
+            "common_solo": {
+              "fixed": 7,
+              "harmed": 15
+            },
+            "fresh": {
+              "fixed": 2,
+              "harmed": 8
+            },
+            "fresh_solo": {
+              "fixed": 2,
+              "harmed": 8
+            },
+            "harder": {
+              "fixed": 2,
+              "harmed": 2
+            }
+          },
+          "test": 18,
+          "common_test": 9,
+          "fold_net": [
+            -2,
+            -4,
+            -1,
+            -6,
+            -6,
+            -6,
+            -1,
+            2
+          ]
+        },
+        "confirmed_contrast_solo": {
+          "scopes": {
+            "all": {
+              "fixed": 17,
+              "harmed": 29
+            },
+            "solo": {
+              "fixed": 17,
+              "harmed": 29
+            },
+            "paid_solo": {
+              "fixed": 17,
+              "harmed": 29
+            },
+            "common_solo": {
+              "fixed": 4,
+              "harmed": 4
+            },
+            "fresh": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "fresh_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "harder": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "test": 17,
+          "common_test": 4,
+          "fold_net": [
+            -1,
+            -2,
+            1,
+            -2,
+            -5,
+            0,
+            -2,
+            -1
+          ]
+        }
+      }
+    }
+  }
+}
