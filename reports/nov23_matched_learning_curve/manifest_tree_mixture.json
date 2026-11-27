@@ -1,0 +1,316 @@
+{
+  "random": {
+    "scores": {
+      "independent": {
+        "accuracy": 0.7591165305418153,
+        "log_loss": 0.7138691675053345
+      },
+      "single_tree": {
+        "accuracy": 0.7885655124813068,
+        "log_loss": 0.4729867277733725
+      },
+      "tree_mixture": {
+        "accuracy": 0.7823536178534453,
+        "log_loss": 0.5079687243939865
+      }
+    },
+    "edits": {
+      "mixture": {
+        "scopes": {
+          "all": {
+            "fixed": 369,
+            "harmed": 742
+          },
+          "fresh": {
+            "fixed": 48,
+            "harmed": 105
+          },
+          "unanimous": {
+            "fixed": 122,
+            "harmed": 319
+          },
+          "awake_paid": {
+            "fixed": 82,
+            "harmed": 257
+          },
+          "sleep_zero": {
+            "fixed": 14,
+            "harmed": 17
+          }
+        },
+        "fold_net": [
+          -45,
+          -58,
+          -40,
+          -52,
+          -39,
+          -32,
+          -46,
+          -61
+        ],
+        "test": 588
+      },
+      "unique_to_mixture": {
+        "scopes": {
+          "all": {
+            "fixed": 4,
+            "harmed": 11
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "unanimous": {
+            "fixed": 1,
+            "harmed": 8
+          },
+          "awake_paid": {
+            "fixed": 0,
+            "harmed": 6
+          },
+          "sleep_zero": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        },
+        "fold_net": [
+          -2,
+          -3,
+          0,
+          -1,
+          -1,
+          1,
+          0,
+          -1
+        ],
+        "test": 3
+      },
+      "increment_vs_tree": {
+        "scopes": {
+          "all": {
+            "fixed": 223,
+            "harmed": 322
+          },
+          "fresh": {
+            "fixed": 26,
+            "harmed": 46
+          },
+          "unanimous": {
+            "fixed": 69,
+            "harmed": 79
+          },
+          "awake_paid": {
+            "fixed": 34,
+            "harmed": 39
+          },
+          "sleep_zero": {
+            "fixed": 14,
+            "harmed": 17
+          }
+        },
+        "fold_net": [
+          -22,
+          -12,
+          -14,
+          -15,
+          -9,
+          -7,
+          -7,
+          -13
+        ],
+        "test": 293
+      }
+    }
+  },
+  "ordered": {
+    "scores": {
+      "independent": {
+        "accuracy": 0.7598067410560221,
+        "log_loss": 0.7178383246282206
+      },
+      "single_tree": {
+        "accuracy": 0.7858046704244794,
+        "log_loss": 0.4750010373590387
+      },
+      "tree_mixture": {
+        "accuracy": 0.7825836880248476,
+        "log_loss": 0.5140640898904031
+      }
+    },
+    "edits": {
+      "mixture": {
+        "scopes": {
+          "all": {
+            "fixed": 377,
+            "harmed": 746
+          },
+          "fresh": {
+            "fixed": 53,
+            "harmed": 106
+          },
+          "unanimous": {
+            "fixed": 123,
+            "harmed": 317
+          },
+          "awake_paid": {
+            "fixed": 83,
+            "harmed": 252
+          },
+          "sleep_zero": {
+            "fixed": 14,
+            "harmed": 17
+          }
+        },
+        "fold_net": [
+          -31,
+          -33,
+          -34,
+          -70,
+          -64,
+          -77,
+          -27,
+          -33
+        ],
+        "test": 588
+      },
+      "unique_to_mixture": {
+        "scopes": {
+          "all": {
+            "fixed": 6,
+            "harmed": 10
+          },
+          "fresh": {
+            "fixed": 2,
+            "harmed": 0
+          },
+          "unanimous": {
+            "fixed": 2,
+            "harmed": 7
+          },
+          "awake_paid": {
+            "fixed": 1,
+            "harmed": 4
+          },
+          "sleep_zero": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        },
+        "fold_net": [
+          1,
+          -4,
+          0,
+          0,
+          -2,
+          1,
+          0,
+          0
+        ],
+        "test": 3
+      },
+      "increment_vs_tree": {
+        "scopes": {
+          "all": {
+            "fixed": 238,
+            "harmed": 320
+          },
+          "fresh": {
+            "fixed": 31,
+            "harmed": 45
+          },
+          "unanimous": {
+            "fixed": 70,
+            "harmed": 78
+          },
+          "awake_paid": {
+            "fixed": 36,
+            "harmed": 37
+          },
+          "sleep_zero": {
+            "fixed": 13,
+            "harmed": 17
+          }
+        },
+        "fold_net": [
+          -8,
+          -10,
+          4,
+          -20,
+          -16,
+          -24,
+          4,
+          -12
+        ],
+        "test": 293
+      }
+    }
+  },
+  "both_protocols": {
+    "mixture": {
+      "all": {
+        "fixed": 359,
+        "harmed": 698
+      },
+      "fresh": {
+        "fixed": 46,
+        "harmed": 101
+      },
+      "unanimous": {
+        "fixed": 116,
+        "harmed": 282
+      },
+      "awake_paid": {
+        "fixed": 77,
+        "harmed": 223
+      },
+      "sleep_zero": {
+        "fixed": 14,
+        "harmed": 17
+      }
+    },
+    "unique_to_mixture": {
+      "all": {
+        "fixed": 1,
+        "harmed": 2
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "unanimous": {
+        "fixed": 1,
+        "harmed": 1
+      },
+      "awake_paid": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "sleep_zero": {
+        "fixed": 0,
+        "harmed": 0
+      }
+    },
+    "increment_vs_tree": {
+      "all": {
+        "fixed": 210,
+        "harmed": 288
+      },
+      "fresh": {
+        "fixed": 23,
+        "harmed": 41
+      },
+      "unanimous": {
+        "fixed": 64,
+        "harmed": 70
+      },
+      "awake_paid": {
+        "fixed": 31,
+        "harmed": 31
+      },
+      "sleep_zero": {
+        "fixed": 13,
+        "harmed": 17
+      }
+    }
+  }
+}
