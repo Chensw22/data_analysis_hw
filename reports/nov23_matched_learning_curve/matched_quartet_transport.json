@@ -1,0 +1,417 @@
+{
+  "accuracy": {
+    "ordinary": 0.8086966524790061,
+    "random": 0.8100770735074198,
+    "matched": 0.8083515472219027,
+    "random_same_counts": 0.8100770735074198
+  },
+  "sets": [
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3818,
+        3335
+      ],
+      "matched": [
+        3818,
+        2063
+      ],
+      "random_same_counts": [
+        3818,
+        2063
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3820,
+        3358
+      ],
+      "matched": [
+        3820,
+        2066
+      ],
+      "random_same_counts": [
+        3820,
+        2066
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3780,
+        3311
+      ],
+      "matched": [
+        3780,
+        2024
+      ],
+      "random_same_counts": [
+        3780,
+        2024
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3810,
+        3313
+      ],
+      "matched": [
+        3810,
+        2006
+      ],
+      "random_same_counts": [
+        3810,
+        2006
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3784,
+        3300
+      ],
+      "matched": [
+        3784,
+        2000
+      ],
+      "random_same_counts": [
+        3784,
+        2000
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3810,
+        3339
+      ],
+      "matched": [
+        3810,
+        2040
+      ],
+      "random_same_counts": [
+        3810,
+        2040
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3784,
+        3282
+      ],
+      "matched": [
+        3784,
+        2011
+      ],
+      "random_same_counts": [
+        3784,
+        2011
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        3814,
+        3352
+      ],
+      "matched": [
+        3814,
+        2031
+      ],
+      "random_same_counts": [
+        3814,
+        2031
+      ]
+    },
+    {
+      "ordinary": [
+        0,
+        0
+      ],
+      "random": [
+        4346,
+        3795
+      ],
+      "matched": [
+        4346,
+        2334
+      ],
+      "random_same_counts": [
+        4346,
+        2334
+      ]
+    }
+  ],
+  "rules": {
+    "ordinary": {
+      "test_changes": 343,
+      "by_fold": [
+        -12,
+        -8,
+        -13,
+        -7,
+        -28,
+        -22,
+        -7,
+        -36
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 235,
+          "harmed": 368
+        },
+        "fresh": {
+          "fixed": 24,
+          "harmed": 51
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "random": {
+      "test_changes": 361,
+      "by_fold": [
+        -8,
+        -11,
+        -19,
+        -4,
+        -20,
+        -18,
+        -10,
+        -36
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 242,
+          "harmed": 368
+        },
+        "fresh": {
+          "fixed": 26,
+          "harmed": 53
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      }
+    },
+    "matched": {
+      "test_changes": 340,
+      "by_fold": [
+        -8,
+        -11,
+        -14,
+        -4,
+        -29,
+        -14,
+        -11,
+        -42
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 256,
+          "harmed": 389
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 60
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "random_same_counts": {
+      "test_changes": 347,
+      "by_fold": [
+        0,
+        -10,
+        -15,
+        -5,
+        -26,
+        -17,
+        -14,
+        -35
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 238,
+          "harmed": 360
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 51
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "against_ordinary": {
+      "test_changes": 127,
+      "by_fold": [
+        8,
+        -8,
+        -3,
+        -4,
+        -7,
+        -1,
+        9,
+        -9
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 121,
+          "harmed": 136
+        },
+        "fresh": {
+          "fixed": 19,
+          "harmed": 13
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "against_random": {
+      "test_changes": 129,
+      "by_fold": [
+        -5,
+        -9,
+        -5,
+        -2,
+        -10,
+        4,
+        11,
+        -9
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 118,
+          "harmed": 143
+        },
+        "fresh": {
+          "fixed": 11,
+          "harmed": 15
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "against_random_same_counts": {
+      "test_changes": 133,
+      "by_fold": [
+        -2,
+        -2,
+        -8,
+        -7,
+        -9,
+        2,
+        16,
+        -14
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 126,
+          "harmed": 150
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 13
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      }
+    },
+    "matched_only": {
+      "test_changes": 38,
+      "by_fold": [
+        0,
+        -5,
+        0,
+        -3,
+        -3,
+        4,
+        -2,
+        -4
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 30,
+          "harmed": 43
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "both_increments": {
+      "test_changes": 73,
+      "by_fold": [
+        1,
+        -6,
+        -4,
+        -3,
+        -7,
+        1,
+        10,
+        -7
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 75,
+          "harmed": 90
+        },
+        "fresh": {
+          "fixed": 10,
+          "harmed": 7
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}
