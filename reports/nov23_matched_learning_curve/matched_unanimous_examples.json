@@ -1,0 +1,414 @@
+{
+  "all": {
+    "unanimous": 7020,
+    "errors": 862,
+    "false_positive": 452,
+    "false_negative": 410,
+    "matched_different_booking": 749,
+    "exact": 0,
+    "nearest_distance_quartiles": [
+      0.7579247434969469,
+      1.335257985892198,
+      1.9948247234267176
+    ],
+    "examples": [
+      {
+        "error": {
+          "id": "8356_01",
+          "order": "8356",
+          "age": 19,
+          "cabin": "G/1361/P",
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "8332_01",
+          "order": "8332",
+          "age": 19,
+          "cabin": "G/1358/P",
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 0.01499999999999968,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "PSO J318.5-22",
+          "sleep": "True",
+          "deck": "G",
+          "side": "P",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "True",
+          "paid": "False"
+        }
+      },
+      {
+        "error": {
+          "id": "2584_01",
+          "order": "2584",
+          "age": 21,
+          "cabin": "G/417/P",
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            null,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "3963_01",
+          "order": "3963",
+          "age": 20,
+          "cabin": "G/648/P",
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 1.335257985892198,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "PSO J318.5-22",
+          "sleep": NaN,
+          "deck": "G",
+          "side": "P",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "True",
+          "paid": "False"
+        }
+      }
+    ]
+  },
+  "sleep_zero": {
+    "unanimous": 2508,
+    "errors": 300,
+    "false_positive": 286,
+    "false_negative": 14,
+    "matched_different_booking": 273,
+    "exact": 0,
+    "nearest_distance_quartiles": [
+      0.2666666666666666,
+      0.6689315693286155,
+      1.1871347391466935
+    ],
+    "examples": [
+      {
+        "error": {
+          "id": "8356_01",
+          "order": "8356",
+          "age": 19,
+          "cabin": "G/1361/P",
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "8332_01",
+          "order": "8332",
+          "age": 19,
+          "cabin": "G/1358/P",
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 0.01499999999999968,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "PSO J318.5-22",
+          "sleep": "True",
+          "deck": "G",
+          "side": "P",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "True",
+          "paid": "False"
+        }
+      },
+      {
+        "error": {
+          "id": "6363_07",
+          "order": "6363",
+          "age": null,
+          "cabin": "G/1026/P",
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            null,
+            0,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "6302_07",
+          "order": "6302",
+          "age": null,
+          "cabin": "G/1015/P",
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 0.6689315693286155,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "TRAPPIST-1e",
+          "sleep": "True",
+          "deck": "G",
+          "side": "P",
+          "vip": "False",
+          "group_size": "7",
+          "decision": "True",
+          "paid": "False"
+        }
+      }
+    ]
+  },
+  "awake_paid": {
+    "unanimous": 4010,
+    "errors": 476,
+    "false_positive": 114,
+    "false_negative": 362,
+    "matched_different_booking": 430,
+    "exact": 0,
+    "nearest_distance_quartiles": [
+      1.2221070059510188,
+      1.6616625977770816,
+      2.3904444540274747
+    ],
+    "examples": [
+      {
+        "error": {
+          "id": "5985_01",
+          "order": "5985",
+          "age": 24,
+          "cabin": "F/1234/P",
+          "true": true,
+          "pred": false,
+          "bills": [
+            276,
+            0,
+            0,
+            0,
+            489
+          ]
+        },
+        "matching_correct": {
+          "id": "5652_01",
+          "order": "5652",
+          "age": 24,
+          "cabin": "F/1171/P",
+          "true": false,
+          "pred": false,
+          "bills": [
+            215,
+            0,
+            0,
+            0,
+            350
+          ]
+        },
+        "normalized_distance": 0.34418952920676626,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "TRAPPIST-1e",
+          "sleep": "False",
+          "deck": "F",
+          "side": "P",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "False",
+          "paid": "True"
+        }
+      },
+      {
+        "error": {
+          "id": "6061_01",
+          "order": "6061",
+          "age": 18,
+          "cabin": "F/1153/S",
+          "true": true,
+          "pred": false,
+          "bills": [
+            33,
+            0,
+            455,
+            167,
+            48
+          ]
+        },
+        "matching_correct": {
+          "id": "4757_01",
+          "order": "4757",
+          "age": 24,
+          "cabin": "F/896/S",
+          "true": false,
+          "pred": false,
+          "bills": [
+            185,
+            0,
+            476,
+            1810,
+            53
+          ]
+        },
+        "normalized_distance": 1.6617836172109683,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "TRAPPIST-1e",
+          "sleep": "False",
+          "deck": "F",
+          "side": "S",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "False",
+          "paid": "True"
+        }
+      }
+    ]
+  },
+  "solo_sleep_zero": {
+    "unanimous": 1184,
+    "errors": 177,
+    "false_positive": 170,
+    "false_negative": 7,
+    "matched_different_booking": 170,
+    "exact": 0,
+    "nearest_distance_quartiles": [
+      0.19748410931351185,
+      0.33184544187031617,
+      0.7324880264244298
+    ],
+    "examples": [
+      {
+        "error": {
+          "id": "8356_01",
+          "order": "8356",
+          "age": 19,
+          "cabin": "G/1361/P",
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "8332_01",
+          "order": "8332",
+          "age": 19,
+          "cabin": "G/1358/P",
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 0.01499999999999968,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "PSO J318.5-22",
+          "sleep": "True",
+          "deck": "G",
+          "side": "P",
+          "vip": "False",
+          "group_size": "1",
+          "decision": "True",
+          "paid": "False"
+        }
+      },
+      {
+        "error": {
+          "id": "2479_01",
+          "order": "2479",
+          "age": 21,
+          "cabin": null,
+          "true": false,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "matching_correct": {
+          "id": "5105_01",
+          "order": "5105",
+          "age": 16,
+          "cabin": null,
+          "true": true,
+          "pred": true,
+          "bills": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "normalized_distance": 0.33333333333333326,
+        "shared_fields": {
+          "planet": "Earth",
+          "dest": "PSO J318.5-22",
+          "sleep": "True",
+          "deck": NaN,
+          "side": NaN,
+          "vip": "False",
+          "group_size": "1",
+          "decision": "True",
+          "paid": "False"
+        }
+      }
+    ]
+  }
+}
