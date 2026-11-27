@@ -1,0 +1,551 @@
+{
+  "random": {
+    "anchor_coverage": 8532,
+    "models_correct_all": {
+      "raw": 7132,
+      "price": 7120,
+      "displaced": 7124
+    },
+    "rules": {
+      "novelty_both_controls": {
+        "test_changes": 36,
+        "folds": [
+          0,
+          -4,
+          -6,
+          -2,
+          -3,
+          1,
+          -2,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 16,
+            "harmed": 32
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 5
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "false_positives": {
+            "fixed": 11,
+            "harmed": 17
+          },
+          "false_negatives": {
+            "fixed": 5,
+            "harmed": 15
+          }
+        }
+      },
+      "likelihood": {
+        "test_changes": 237,
+        "folds": [
+          -6,
+          -14,
+          -13,
+          -20,
+          -20,
+          -17,
+          -23,
+          -15
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 137,
+            "harmed": 265
+          },
+          "fresh": {
+            "fixed": 28,
+            "harmed": 46
+          },
+          "common": {
+            "fixed": 6,
+            "harmed": 28
+          },
+          "false_positives": {
+            "fixed": 85,
+            "harmed": 142
+          },
+          "false_negatives": {
+            "fixed": 52,
+            "harmed": 123
+          }
+        }
+      },
+      "displaced_likelihood": {
+        "test_changes": 231,
+        "folds": [
+          -3,
+          -30,
+          -18,
+          -9,
+          -11,
+          -1,
+          -17,
+          -8
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 163,
+            "harmed": 260
+          },
+          "fresh": {
+            "fixed": 33,
+            "harmed": 41
+          },
+          "common": {
+            "fixed": 1,
+            "harmed": 16
+          },
+          "false_positives": {
+            "fixed": 118,
+            "harmed": 182
+          },
+          "false_negatives": {
+            "fixed": 45,
+            "harmed": 78
+          }
+        }
+      },
+      "model_increment": {
+        "test_changes": 78,
+        "folds": [
+          -4,
+          -5,
+          -9,
+          8,
+          -2,
+          4,
+          1,
+          -4
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 65,
+            "harmed": 76
+          },
+          "fresh": {
+            "fixed": 11,
+            "harmed": 13
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 37,
+            "harmed": 47
+          },
+          "false_negatives": {
+            "fixed": 28,
+            "harmed": 29
+          }
+        }
+      },
+      "displaced_increment": {
+        "test_changes": 81,
+        "folds": [
+          2,
+          -16,
+          -3,
+          -1,
+          2,
+          -1,
+          1,
+          -9
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 72,
+            "harmed": 97
+          },
+          "fresh": {
+            "fixed": 15,
+            "harmed": 11
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 44,
+            "harmed": 59
+          },
+          "false_negatives": {
+            "fixed": 28,
+            "harmed": 38
+          }
+        }
+      },
+      "paired_confirmation": {
+        "test_changes": 18,
+        "folds": [
+          -1,
+          -1,
+          -1,
+          2,
+          -3,
+          2,
+          2,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 9,
+            "harmed": 9
+          },
+          "fresh": {
+            "fixed": 1,
+            "harmed": 4
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 6,
+            "harmed": 5
+          },
+          "false_negatives": {
+            "fixed": 3,
+            "harmed": 4
+          }
+        }
+      }
+    },
+    "facilities": {
+      "RoomService": {
+        "positive_train": 2935,
+        "positive_test": 1469,
+        "raw_heldout_logloss": 0.3805053782886103,
+        "peak_heldout_logloss": 0.39350637953622986,
+        "displaced_heldout_logloss": 0.3912601329809704,
+        "common_errors": 113,
+        "common_errors_correct_price_tree": 1,
+        "common_errors_correct_raw_tree": 1
+      },
+      "FoodCourt": {
+        "positive_train": 3054,
+        "positive_test": 1481,
+        "raw_heldout_logloss": 0.37749516089556495,
+        "peak_heldout_logloss": 0.3948569639866977,
+        "displaced_heldout_logloss": 0.3939911792914684,
+        "common_errors": 85,
+        "common_errors_correct_price_tree": 0,
+        "common_errors_correct_raw_tree": 1
+      },
+      "ShoppingMall": {
+        "positive_train": 2898,
+        "positive_test": 1435,
+        "raw_heldout_logloss": 0.40210989057730634,
+        "peak_heldout_logloss": 0.4267849165332383,
+        "displaced_heldout_logloss": 0.42510360496489663,
+        "common_errors": 102,
+        "common_errors_correct_price_tree": 0,
+        "common_errors_correct_raw_tree": 1
+      },
+      "Spa": {
+        "positive_train": 3186,
+        "positive_test": 1565,
+        "raw_heldout_logloss": 0.34287526751087877,
+        "peak_heldout_logloss": 0.3593139541119897,
+        "displaced_heldout_logloss": 0.3584864446530196,
+        "common_errors": 96,
+        "common_errors_correct_price_tree": 0,
+        "common_errors_correct_raw_tree": 1
+      },
+      "VRDeck": {
+        "positive_train": 3010,
+        "positive_test": 1440,
+        "raw_heldout_logloss": 0.3513354993690214,
+        "peak_heldout_logloss": 0.3767109793473288,
+        "displaced_heldout_logloss": 0.3746191498059654,
+        "common_errors": 97,
+        "common_errors_correct_price_tree": 0,
+        "common_errors_correct_raw_tree": 1
+      }
+    }
+  },
+  "ordered": {
+    "anchor_coverage": 8532,
+    "models_correct_all": {
+      "raw": 7117,
+      "price": 7089,
+      "displaced": 7106
+    },
+    "rules": {
+      "novelty_both_controls": {
+        "test_changes": 36,
+        "folds": [
+          -2,
+          -4,
+          0,
+          -5,
+          1,
+          -3,
+          -5,
+          -1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 20,
+            "harmed": 39
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 7
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 11,
+            "harmed": 23
+          },
+          "false_negatives": {
+            "fixed": 9,
+            "harmed": 16
+          }
+        }
+      },
+      "likelihood": {
+        "test_changes": 237,
+        "folds": [
+          -19,
+          -14,
+          -13,
+          -11,
+          -21,
+          -27,
+          -2,
+          -8
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 155,
+            "harmed": 270
+          },
+          "fresh": {
+            "fixed": 31,
+            "harmed": 44
+          },
+          "common": {
+            "fixed": 6,
+            "harmed": 25
+          },
+          "false_positives": {
+            "fixed": 85,
+            "harmed": 151
+          },
+          "false_negatives": {
+            "fixed": 70,
+            "harmed": 119
+          }
+        }
+      },
+      "displaced_likelihood": {
+        "test_changes": 231,
+        "folds": [
+          -20,
+          -10,
+          -5,
+          -16,
+          -18,
+          -31,
+          -3,
+          -13
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 156,
+            "harmed": 272
+          },
+          "fresh": {
+            "fixed": 28,
+            "harmed": 47
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 19
+          },
+          "false_positives": {
+            "fixed": 107,
+            "harmed": 181
+          },
+          "false_negatives": {
+            "fixed": 49,
+            "harmed": 91
+          }
+        }
+      },
+      "model_increment": {
+        "test_changes": 78,
+        "folds": [
+          -5,
+          -7,
+          -4,
+          -16,
+          -3,
+          -11,
+          -1,
+          -4
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 52,
+            "harmed": 103
+          },
+          "fresh": {
+            "fixed": 11,
+            "harmed": 16
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 31,
+            "harmed": 64
+          },
+          "false_negatives": {
+            "fixed": 21,
+            "harmed": 39
+          }
+        }
+      },
+      "displaced_increment": {
+        "test_changes": 81,
+        "folds": [
+          -5,
+          8,
+          -1,
+          -7,
+          1,
+          -4,
+          -2,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 64,
+            "harmed": 76
+          },
+          "fresh": {
+            "fixed": 10,
+            "harmed": 11
+          },
+          "common": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 32,
+            "harmed": 41
+          },
+          "false_negatives": {
+            "fixed": 32,
+            "harmed": 35
+          }
+        }
+      },
+      "paired_confirmation": {
+        "test_changes": 18,
+        "folds": [
+          1,
+          -3,
+          -1,
+          -5,
+          -1,
+          -1,
+          0,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 8,
+            "harmed": 20
+          },
+          "fresh": {
+            "fixed": 3,
+            "harmed": 5
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "false_positives": {
+            "fixed": 5,
+            "harmed": 11
+          },
+          "false_negatives": {
+            "fixed": 3,
+            "harmed": 9
+          }
+        }
+      }
+    },
+    "facilities": {
+      "RoomService": {
+        "positive_train": 2935,
+        "positive_test": 1469,
+        "raw_heldout_logloss": 0.3829437519952588,
+        "peak_heldout_logloss": 0.3931448265516538,
+        "displaced_heldout_logloss": 0.394397680554578,
+        "common_errors": 113,
+        "common_errors_correct_price_tree": 3,
+        "common_errors_correct_raw_tree": 5
+      },
+      "FoodCourt": {
+        "positive_train": 3054,
+        "positive_test": 1481,
+        "raw_heldout_logloss": 0.37918182416717344,
+        "peak_heldout_logloss": 0.3968633457408972,
+        "displaced_heldout_logloss": 0.3947529947702589,
+        "common_errors": 85,
+        "common_errors_correct_price_tree": 2,
+        "common_errors_correct_raw_tree": 3
+      },
+      "ShoppingMall": {
+        "positive_train": 2898,
+        "positive_test": 1435,
+        "raw_heldout_logloss": 0.40385208834260305,
+        "peak_heldout_logloss": 0.43121688109748557,
+        "displaced_heldout_logloss": 0.4258972920557993,
+        "common_errors": 102,
+        "common_errors_correct_price_tree": 1,
+        "common_errors_correct_raw_tree": 3
+      },
+      "Spa": {
+        "positive_train": 3186,
+        "positive_test": 1565,
+        "raw_heldout_logloss": 0.34327809263086734,
+        "peak_heldout_logloss": 0.3600848247814013,
+        "displaced_heldout_logloss": 0.3608298870537187,
+        "common_errors": 96,
+        "common_errors_correct_price_tree": 3,
+        "common_errors_correct_raw_tree": 5
+      },
+      "VRDeck": {
+        "positive_train": 3010,
+        "positive_test": 1440,
+        "raw_heldout_logloss": 0.3547506653678679,
+        "peak_heldout_logloss": 0.3769506729724087,
+        "displaced_heldout_logloss": 0.3801657251681522,
+        "common_errors": 97,
+        "common_errors_correct_price_tree": 3,
+        "common_errors_correct_raw_tree": 5
+      }
+    }
+  },
+  "notes": [
+    "Each of two price-model validation splits holds out whole orders; inner training embeddings exclude entire validation orders.",
+    "The same official parent replay and native margin, trained on the original randomized outer fold, are used in both comparisons. The alternative split independently refits the facility learner only.",
+    "The historical-outside subset is included in the full set. Sharp charge centers are compared to centers displaced by 13 units within their 32-unit band."
+  ]
+}
