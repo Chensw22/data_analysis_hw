@@ -1,6 +1,7 @@
 """Verify scored files, changed decisions, rank snapshots and public gains for a Kaggle day."""
 import argparse
 import json
+from datetime import datetime, timezone
 from decimal import Decimal
 from pathlib import Path
 
@@ -12,7 +13,7 @@ ROOT=Path(__file__).resolve().parent
 STUDY=ROOT/'reports/nov23_matched_learning_curve'
 
 
-def run(day):
+def run(day, verify_live=False):
     ids=pd.read_csv(ROOT/'data/raw/test.csv',usecols=['PassengerId']).PassengerId
     n=len(ids)
     assert json.loads((STUDY/'clean_fare_target_capacity.json').read_text())['compatible_denominators']==[n]
@@ -52,11 +53,28 @@ def run(day):
     report=dict(day_utc=day,rows=n,completed=len(results),current_best=best['public_score'],required_correct=threshold,
         remaining_to_exceed_85=threshold-correct_count(str(best['public_score']),n),results=results,
         scope='Aggregates inferred from official scores under the previously checked compatible denominator; comparison uses the highest-scoring recorded parent. No passenger-specific test labels are inferred.')
-    (STUDY/('official_submissions_'+day+'.json')).write_text(json.dumps(report,indent=2)+'\n')
+    output=STUDY/('official_submissions_'+day+'.json')
+    if verify_live:
+        from await_service_pair_slot_n23 import available
+        from await_half_roster_slot_n23 import snapshot
+        if datetime.now(timezone.utc).date().isoformat()!=day:
+            raise ValueError('Live balance is only available for the current UTC date.')
+        api,limits=available()
+        rank,third=snapshot(api)
+        assert limits['numToday']==len(results)
+        report['official_snapshot']=dict(at_utc=datetime.now(timezone.utc).isoformat(),limits=limits,
+            account_rank=rank,third_place_score=third)
+    elif output.exists():
+        prior=json.loads(output.read_text())
+        if prior['results']==results and 'official_snapshot' in prior:
+            report['official_snapshot']=prior['official_snapshot']
+    output.write_text(json.dumps(report,indent=2)+'\n')
     print([(r['ref'],r['score'],r['changed'],r['net']) for r in results])
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('day',default='2026-11-27',nargs='?')
-    run(parser.parse_args().day)
+    parser.add_argument('--verify-live',action='store_true')
+    args=parser.parse_args()
+    run(args.day,args.verify_live)
