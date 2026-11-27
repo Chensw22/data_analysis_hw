@@ -1,0 +1,409 @@
+{
+  "complete_known_multi": {
+    "passengers": 3608,
+    "errors": 525,
+    "orders_with_errors": 401,
+    "max_net_correct_preserving_hard_counts": 84,
+    "max_shared_correct_without_harm": 43
+  },
+  "random": {
+    "mixed_train_orders": [
+      697,
+      705,
+      693,
+      697,
+      680,
+      700,
+      702,
+      705,
+      797
+    ],
+    "rules": {
+      "ordinary": {
+        "scopes": {
+          "all": {
+            "fixed": 81,
+            "harmed": 123
+          },
+          "multi": {
+            "fixed": 81,
+            "harmed": 123
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 2
+          },
+          "shared": {
+            "fixed": 13,
+            "harmed": 24
+          },
+          "shared_multi": {
+            "fixed": 13,
+            "harmed": 24
+          }
+        },
+        "fold_net": [
+          -5,
+          -4,
+          -7,
+          -9,
+          -10,
+          -2,
+          -1,
+          -4
+        ],
+        "test": 117
+      },
+      "conditioned": {
+        "scopes": {
+          "all": {
+            "fixed": 99,
+            "harmed": 130
+          },
+          "multi": {
+            "fixed": 99,
+            "harmed": 130
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 2
+          },
+          "shared": {
+            "fixed": 15,
+            "harmed": 34
+          },
+          "shared_multi": {
+            "fixed": 15,
+            "harmed": 34
+          }
+        },
+        "fold_net": [
+          -1,
+          0,
+          -4,
+          -8,
+          -10,
+          0,
+          -4,
+          -4
+        ],
+        "test": 140
+      },
+      "increment": {
+        "scopes": {
+          "all": {
+            "fixed": 67,
+            "harmed": 64
+          },
+          "multi": {
+            "fixed": 67,
+            "harmed": 64
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "shared": {
+            "fixed": 4,
+            "harmed": 16
+          },
+          "shared_multi": {
+            "fixed": 4,
+            "harmed": 16
+          }
+        },
+        "fold_net": [
+          2,
+          2,
+          1,
+          -5,
+          -1,
+          3,
+          3,
+          -2
+        ],
+        "test": 87
+      },
+      "supported_increment": {
+        "scopes": {
+          "all": {
+            "fixed": 44,
+            "harmed": 30
+          },
+          "multi": {
+            "fixed": 44,
+            "harmed": 30
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "shared": {
+            "fixed": 1,
+            "harmed": 4
+          },
+          "shared_multi": {
+            "fixed": 1,
+            "harmed": 4
+          }
+        },
+        "fold_net": [
+          3,
+          0,
+          4,
+          -1,
+          2,
+          4,
+          -1,
+          3
+        ],
+        "test": 56
+      }
+    }
+  },
+  "ordered": {
+    "mixed_train_orders": [
+      682,
+      703,
+      702,
+      707,
+      711,
+      677,
+      710,
+      687,
+      797
+    ],
+    "rules": {
+      "ordinary": {
+        "scopes": {
+          "all": {
+            "fixed": 82,
+            "harmed": 128
+          },
+          "multi": {
+            "fixed": 82,
+            "harmed": 128
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "shared": {
+            "fixed": 14,
+            "harmed": 28
+          },
+          "shared_multi": {
+            "fixed": 14,
+            "harmed": 28
+          }
+        },
+        "fold_net": [
+          -6,
+          -7,
+          -5,
+          -12,
+          -4,
+          -8,
+          0,
+          -4
+        ],
+        "test": 117
+      },
+      "conditioned": {
+        "scopes": {
+          "all": {
+            "fixed": 94,
+            "harmed": 131
+          },
+          "multi": {
+            "fixed": 94,
+            "harmed": 131
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 2
+          },
+          "shared": {
+            "fixed": 13,
+            "harmed": 36
+          },
+          "shared_multi": {
+            "fixed": 13,
+            "harmed": 36
+          }
+        },
+        "fold_net": [
+          -12,
+          2,
+          -1,
+          -11,
+          -5,
+          -7,
+          1,
+          -4
+        ],
+        "test": 140
+      },
+      "increment": {
+        "scopes": {
+          "all": {
+            "fixed": 59,
+            "harmed": 63
+          },
+          "multi": {
+            "fixed": 59,
+            "harmed": 63
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "shared": {
+            "fixed": 8,
+            "harmed": 12
+          },
+          "shared_multi": {
+            "fixed": 8,
+            "harmed": 12
+          }
+        },
+        "fold_net": [
+          -4,
+          7,
+          0,
+          2,
+          -6,
+          -2,
+          6,
+          -7
+        ],
+        "test": 87
+      },
+      "supported_increment": {
+        "scopes": {
+          "all": {
+            "fixed": 40,
+            "harmed": 29
+          },
+          "multi": {
+            "fixed": 40,
+            "harmed": 29
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "shared": {
+            "fixed": 3,
+            "harmed": 3
+          },
+          "shared_multi": {
+            "fixed": 3,
+            "harmed": 3
+          }
+        },
+        "fold_net": [
+          1,
+          5,
+          2,
+          1,
+          -2,
+          0,
+          5,
+          -1
+        ],
+        "test": 56
+      }
+    }
+  },
+  "repeat": {
+    "ordinary": {
+      "all": {
+        "fixed": 73,
+        "harmed": 108
+      },
+      "multi": {
+        "fixed": 73,
+        "harmed": 108
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "shared": {
+        "fixed": 12,
+        "harmed": 17
+      },
+      "shared_multi": {
+        "fixed": 12,
+        "harmed": 17
+      }
+    },
+    "conditioned": {
+      "all": {
+        "fixed": 87,
+        "harmed": 115
+      },
+      "multi": {
+        "fixed": 87,
+        "harmed": 115
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 2
+      },
+      "shared": {
+        "fixed": 11,
+        "harmed": 29
+      },
+      "shared_multi": {
+        "fixed": 11,
+        "harmed": 29
+      }
+    },
+    "increment": {
+      "all": {
+        "fixed": 52,
+        "harmed": 55
+      },
+      "multi": {
+        "fixed": 52,
+        "harmed": 55
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "shared": {
+        "fixed": 4,
+        "harmed": 12
+      },
+      "shared_multi": {
+        "fixed": 4,
+        "harmed": 12
+      }
+    },
+    "supported_increment": {
+      "all": {
+        "fixed": 33,
+        "harmed": 25
+      },
+      "multi": {
+        "fixed": 33,
+        "harmed": 25
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "shared": {
+        "fixed": 1,
+        "harmed": 3
+      },
+      "shared_multi": {
+        "fixed": 1,
+        "harmed": 3
+      }
+    }
+  }
+}
