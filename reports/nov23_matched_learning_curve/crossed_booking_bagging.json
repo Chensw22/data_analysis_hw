@@ -1,0 +1,926 @@
+{
+  "parent": "proposal_n27_directional_foundation",
+  "parent_sha256": "896917528f6b3a49a415a467379ef34fc7b5de42eb42a4b3469467685ebd6d04",
+  "full_seed_variation": {
+    "changed_vs_single": 62,
+    "mean_passenger_sd": 0.010949637717861376
+  },
+  "random": {
+    "scores": {
+      "oof": {
+        "rows": 8693,
+        "mean_absolute_probability_delta": 0.012222036558129848,
+        "mean_per_person_bag_sd": 0.024343952213688094,
+        "threshold_crossings": 180,
+        "all_eight_agree": 7759,
+        "unanimous_contradictions_of_single": 6,
+        "full_correct": 7099,
+        "bag_correct": 7111
+      },
+      "test": {
+        "rows": 4277,
+        "mean_absolute_probability_delta": 0.012055347667151842,
+        "mean_per_person_bag_sd": 0.02302696416991416,
+        "threshold_crossings": 78,
+        "all_eight_agree": 3813,
+        "unanimous_contradictions_of_single": 3,
+        "mean_absolute_delta_vs_full_seed_bag": 0.007552919064558324,
+        "flips_vs_full_seed_bag": 46
+      }
+    },
+    "rules": {
+      "single_control_random": {
+        "test_changes": 6,
+        "folds": [
+          3,
+          3,
+          0,
+          -1,
+          3,
+          -1,
+          5,
+          -3
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 40,
+            "harmed": 31
+          },
+          "fresh": {
+            "fixed": 6,
+            "harmed": 4
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "single_control_ordered": {
+        "test_changes": 6,
+        "folds": [
+          4,
+          3,
+          2,
+          -3,
+          1,
+          -2,
+          4,
+          3
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 38,
+            "harmed": 26
+          },
+          "fresh": {
+            "fixed": 7,
+            "harmed": 3
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "single_control_joint": {
+        "test_changes": 6,
+        "folds": [
+          4,
+          3,
+          0,
+          -1,
+          2,
+          -4,
+          5,
+          3
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 32,
+            "harmed": 20
+          },
+          "fresh": {
+            "fixed": 5,
+            "harmed": 3
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_random": {
+        "test_changes": 6,
+        "folds": [
+          -3,
+          3,
+          0,
+          0,
+          0,
+          -1,
+          -2,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 9,
+            "harmed": 12
+          },
+          "fresh": {
+            "fixed": 3,
+            "harmed": 3
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_ordered": {
+        "test_changes": 6,
+        "folds": [
+          -1,
+          3,
+          0,
+          -3,
+          -4,
+          1,
+          -1,
+          1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 9,
+            "harmed": 13
+          },
+          "fresh": {
+            "fixed": 2,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_joint": {
+        "test_changes": 6,
+        "folds": [
+          -1,
+          3,
+          0,
+          -1,
+          0,
+          1,
+          -3,
+          1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 6,
+            "harmed": 6
+          },
+          "fresh": {
+            "fixed": 2,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_random": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 3
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_random": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "logodds_increment_q6": {
+        "test_changes": 32,
+        "folds": [
+          -3,
+          -1,
+          -4,
+          5,
+          -4,
+          -4,
+          -2,
+          1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 23,
+            "harmed": 35
+          },
+          "fresh": {
+            "fixed": 5,
+            "harmed": 2
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "logodds_increment_q8": {
+        "test_changes": 15,
+        "folds": [
+          -1,
+          0,
+          -4,
+          2,
+          -3,
+          0,
+          0,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 12,
+            "harmed": 20
+          },
+          "fresh": {
+            "fixed": 3,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      }
+    }
+  },
+  "ordered": {
+    "scores": {
+      "oof": {
+        "rows": 8693,
+        "mean_absolute_probability_delta": 0.01303383554458936,
+        "mean_per_person_bag_sd": 0.024720633654172753,
+        "threshold_crossings": 159,
+        "all_eight_agree": 7758,
+        "unanimous_contradictions_of_single": 6,
+        "full_correct": 7126,
+        "bag_correct": 7127
+      },
+      "test": {
+        "rows": 4277,
+        "mean_absolute_probability_delta": 0.011807764503070342,
+        "mean_per_person_bag_sd": 0.02258204079497583,
+        "threshold_crossings": 76,
+        "all_eight_agree": 3803,
+        "unanimous_contradictions_of_single": 3,
+        "mean_absolute_delta_vs_full_seed_bag": 0.007131869937890607,
+        "flips_vs_full_seed_bag": 44
+      }
+    },
+    "rules": {
+      "single_control_random": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          -1,
+          -4,
+          0,
+          -1,
+          6,
+          -3
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 22,
+            "harmed": 25
+          },
+          "fresh": {
+            "fixed": 6,
+            "harmed": 4
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "single_control_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          -1,
+          -2,
+          -6,
+          0,
+          3,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 14,
+            "harmed": 22
+          },
+          "fresh": {
+            "fixed": 6,
+            "harmed": 3
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "single_control_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          -1,
+          -3,
+          0,
+          -1,
+          3,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 9,
+            "harmed": 13
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 2
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_random": {
+        "test_changes": 0,
+        "folds": [
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 2,
+            "harmed": 6
+          },
+          "fresh": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 6
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "bag_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 5
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_random": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          2,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 2,
+            "harmed": 1
+          },
+          "fresh": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          -2,
+          -1,
+          0,
+          1,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 1,
+            "harmed": 5
+          },
+          "fresh": {
+            "fixed": 1,
+            "harmed": 1
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "independent_support_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          1,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 1,
+            "harmed": 1
+          },
+          "fresh": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_random": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_ordered": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "new_consensus_joint": {
+        "test_changes": 0,
+        "folds": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "logodds_increment_q6": {
+        "test_changes": 33,
+        "folds": [
+          1,
+          2,
+          2,
+          -1,
+          0,
+          -7,
+          -1,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 21,
+            "harmed": 27
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 3
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      },
+      "logodds_increment_q8": {
+        "test_changes": 16,
+        "folds": [
+          -1,
+          1,
+          0,
+          0,
+          2,
+          -2,
+          -1,
+          -2
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 14,
+            "harmed": 17
+          },
+          "fresh": {
+            "fixed": 0,
+            "harmed": 2
+          },
+          "common": {
+            "fixed": 0,
+            "harmed": 0
+          }
+        }
+      }
+    }
+  },
+  "cross_protocol_same_passenger": {
+    "single_control": {
+      "test_changes": 0,
+      "scopes": {
+        "all": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "bag": {
+      "test_changes": 0,
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "independent_support": {
+      "test_changes": 0,
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "new_consensus": {
+      "test_changes": 0,
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "logodds_increment_q6": {
+      "test_changes": 23,
+      "scopes": {
+        "all": {
+          "fixed": 3,
+          "harmed": 5
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "logodds_increment_q8": {
+      "test_changes": 11,
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  },
+  "notes": [
+    "Each of eight nested models omits the complete outer booking fold and its own inner deletion fold. Crossed random/contiguous folds share fits; their results overlap.",
+    "The nested validation reference uses seven eighths of the training data and its bags use roughly 49/64; the test reference uses all training orders and its bags seven eighths.",
+    "All decision thresholds are calibrated on different bookings in the same external fold. Two independent calibration partitions assess threshold fragility.",
+    "The same cross-fitted champion replay is used as reference for both validations; the new fare models are independently refit per protocol. The deployed ensembles are real predictions from training-sized leave-fold models."
+  ]
+}

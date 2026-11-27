@@ -1,0 +1,796 @@
+{
+  "gap_counts": {
+    "interior_missing_berths": 189,
+    "potentially_explained_by_missing_cabin_order": 173,
+    "both_sides_same_number": 0,
+    "unregistered_bookings": 161,
+    "common_solo_with_cabin": 168,
+    "common_solo_near_hole": 24,
+    "seven_solo_total": 1184,
+    "seven_solo_near_hole": 131
+  },
+  "previous_work": [
+    "cabin_change_points.py",
+    "synchronized_cabin_segments_n23.py",
+    "unlabeled_cabin_activity_segments_n26.py",
+    "cross_deck_booking_clock_n27.py"
+  ],
+  "results": {
+    "random": {
+      "base_real_placebo_accuracy": {
+        "all": [
+          0.8120326699643391,
+          0.8105372138502244,
+          0.8116875647072357
+        ],
+        "solo_sleep": [
+          0.785234899328859,
+          0.7798657718120805,
+          0.7845637583892617
+        ],
+        "seven_solo": [
+          0.8462837837837838,
+          0.8454391891891891,
+          0.8471283783783784
+        ]
+      },
+      "base_real_placebo_logloss": {
+        "all": [
+          0.3841929876305979,
+          0.3842837626923796,
+          0.3847663884708082
+        ],
+        "solo_sleep": [
+          0.38418200718087414,
+          0.3838896652347617,
+          0.38645721291414625
+        ],
+        "seven_solo": [
+          0.3059901649789289,
+          0.3053276191347147,
+          0.3078049344632772
+        ]
+      },
+      "rules": {
+        "base": {
+          "test": 354,
+          "scopes": {
+            "all": {
+              "fixed": 243,
+              "harmed": 366
+            },
+            "new": {
+              "fixed": 28,
+              "harmed": 53
+            },
+            "common_solo": {
+              "fixed": 6,
+              "harmed": 11
+            },
+            "solo_sleep": {
+              "fixed": 50,
+              "harmed": 51
+            },
+            "older_common": {
+              "fixed": 1,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            -5,
+            -13,
+            -26,
+            2,
+            -21,
+            -18,
+            -4,
+            -38
+          ]
+        },
+        "real": {
+          "test": 351,
+          "scopes": {
+            "all": {
+              "fixed": 245,
+              "harmed": 385
+            },
+            "new": {
+              "fixed": 32,
+              "harmed": 54
+            },
+            "common_solo": {
+              "fixed": 9,
+              "harmed": 15
+            },
+            "solo_sleep": {
+              "fixed": 51,
+              "harmed": 60
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            0,
+            -16,
+            -30,
+            -3,
+            -23,
+            -21,
+            -10,
+            -37
+          ]
+        },
+        "placebo": {
+          "test": 363,
+          "scopes": {
+            "all": {
+              "fixed": 242,
+              "harmed": 371
+            },
+            "new": {
+              "fixed": 28,
+              "harmed": 54
+            },
+            "common_solo": {
+              "fixed": 7,
+              "harmed": 11
+            },
+            "solo_sleep": {
+              "fixed": 49,
+              "harmed": 52
+            },
+            "older_common": {
+              "fixed": 2,
+              "harmed": 1
+            }
+          },
+          "fold_net": [
+            -8,
+            -13,
+            -29,
+            4,
+            -21,
+            -19,
+            -8,
+            -35
+          ]
+        },
+        "real_only": {
+          "test": 11,
+          "scopes": {
+            "all": {
+              "fixed": 13,
+              "harmed": 21
+            },
+            "new": {
+              "fixed": 4,
+              "harmed": 1
+            },
+            "common_solo": {
+              "fixed": 3,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 4,
+              "harmed": 10
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            3,
+            -1,
+            -1,
+            -2,
+            1,
+            -3,
+            -3,
+            -2
+          ]
+        },
+        "anchor_shift": {
+          "test": 55,
+          "scopes": {
+            "all": {
+              "fixed": 39,
+              "harmed": 39
+            },
+            "new": {
+              "fixed": 7,
+              "harmed": 6
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "solo_sleep": {
+              "fixed": 14,
+              "harmed": 17
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -1,
+            -4,
+            0,
+            -2,
+            2,
+            1,
+            2
+          ]
+        },
+        "placebo_shift": {
+          "test": 32,
+          "scopes": {
+            "all": {
+              "fixed": 12,
+              "harmed": 31
+            },
+            "new": {
+              "fixed": 0,
+              "harmed": 5
+            },
+            "common_solo": {
+              "fixed": 1,
+              "harmed": 0
+            },
+            "solo_sleep": {
+              "fixed": 2,
+              "harmed": 12
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -3,
+            1,
+            -6,
+            -3,
+            -1,
+            -2,
+            -7
+          ]
+        },
+        "real_shift_only": {
+          "test": 47,
+          "scopes": {
+            "all": {
+              "fixed": 36,
+              "harmed": 32
+            },
+            "new": {
+              "fixed": 7,
+              "harmed": 4
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "solo_sleep": {
+              "fixed": 13,
+              "harmed": 13
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -1,
+            -4,
+            2,
+            -1,
+            3,
+            0,
+            3
+          ]
+        },
+        "real_only_solo_sleep": {
+          "test": 4,
+          "scopes": {
+            "all": {
+              "fixed": 4,
+              "harmed": 10
+            },
+            "new": {
+              "fixed": 2,
+              "harmed": 1
+            },
+            "common_solo": {
+              "fixed": 3,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 4,
+              "harmed": 10
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -1,
+            -1,
+            -1,
+            0,
+            -2,
+            -2,
+            -1
+          ]
+        },
+        "anchor_shift_solo_sleep": {
+          "test": 16,
+          "scopes": {
+            "all": {
+              "fixed": 14,
+              "harmed": 17
+            },
+            "new": {
+              "fixed": 3,
+              "harmed": 4
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "solo_sleep": {
+              "fixed": 14,
+              "harmed": 17
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            3,
+            -1,
+            -1,
+            -3,
+            -2,
+            1,
+            0,
+            0
+          ]
+        },
+        "real_shift_only_solo_sleep": {
+          "test": 12,
+          "scopes": {
+            "all": {
+              "fixed": 13,
+              "harmed": 13
+            },
+            "new": {
+              "fixed": 3,
+              "harmed": 3
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 4
+            },
+            "solo_sleep": {
+              "fixed": 13,
+              "harmed": 13
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            3,
+            0,
+            -1,
+            -2,
+            -1,
+            1,
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "contiguous": {
+      "base_real_placebo_accuracy": {
+        "all": [
+          0.8108823191073278,
+          0.8107672840216266,
+          0.8097319682503163
+        ],
+        "solo_sleep": [
+          0.7791946308724832,
+          0.7778523489932886,
+          0.7771812080536913
+        ],
+        "seven_solo": [
+          0.839527027027027,
+          0.839527027027027,
+          0.8412162162162162
+        ]
+      },
+      "base_real_placebo_logloss": {
+        "all": [
+          0.38739553307825075,
+          0.38778284790078227,
+          0.38795924098451934
+        ],
+        "solo_sleep": [
+          0.392368404408206,
+          0.3925588087733087,
+          0.39362915390048336
+        ],
+        "seven_solo": [
+          0.31492094177542834,
+          0.3146039554781686,
+          0.31606615268976573
+        ]
+      },
+      "rules": {
+        "base": {
+          "test": 354,
+          "scopes": {
+            "all": {
+              "fixed": 283,
+              "harmed": 423
+            },
+            "new": {
+              "fixed": 39,
+              "harmed": 59
+            },
+            "common_solo": {
+              "fixed": 15,
+              "harmed": 28
+            },
+            "solo_sleep": {
+              "fixed": 70,
+              "harmed": 79
+            },
+            "older_common": {
+              "fixed": 4,
+              "harmed": 5
+            }
+          },
+          "fold_net": [
+            -40,
+            -7,
+            -3,
+            -26,
+            -16,
+            -25,
+            -2,
+            -21
+          ]
+        },
+        "real": {
+          "test": 351,
+          "scopes": {
+            "all": {
+              "fixed": 282,
+              "harmed": 425
+            },
+            "new": {
+              "fixed": 39,
+              "harmed": 59
+            },
+            "common_solo": {
+              "fixed": 15,
+              "harmed": 28
+            },
+            "solo_sleep": {
+              "fixed": 68,
+              "harmed": 81
+            },
+            "older_common": {
+              "fixed": 3,
+              "harmed": 6
+            }
+          },
+          "fold_net": [
+            -38,
+            -9,
+            -3,
+            -25,
+            -18,
+            -26,
+            -6,
+            -18
+          ]
+        },
+        "placebo": {
+          "test": 363,
+          "scopes": {
+            "all": {
+              "fixed": 267,
+              "harmed": 417
+            },
+            "new": {
+              "fixed": 33,
+              "harmed": 56
+            },
+            "common_solo": {
+              "fixed": 13,
+              "harmed": 24
+            },
+            "solo_sleep": {
+              "fixed": 59,
+              "harmed": 74
+            },
+            "older_common": {
+              "fixed": 3,
+              "harmed": 5
+            }
+          },
+          "fold_net": [
+            -37,
+            -9,
+            -8,
+            -27,
+            -18,
+            -28,
+            -1,
+            -22
+          ]
+        },
+        "real_only": {
+          "test": 11,
+          "scopes": {
+            "all": {
+              "fixed": 11,
+              "harmed": 15
+            },
+            "new": {
+              "fixed": 1,
+              "harmed": 3
+            },
+            "common_solo": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "solo_sleep": {
+              "fixed": 3,
+              "harmed": 7
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 1
+            }
+          },
+          "fold_net": [
+            -2,
+            -3,
+            0,
+            2,
+            0,
+            0,
+            -3,
+            2
+          ]
+        },
+        "anchor_shift": {
+          "test": 55,
+          "scopes": {
+            "all": {
+              "fixed": 35,
+              "harmed": 42
+            },
+            "new": {
+              "fixed": 5,
+              "harmed": 4
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 9,
+              "harmed": 18
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            -3,
+            -3,
+            2,
+            -4,
+            1,
+            0,
+            0,
+            0
+          ]
+        },
+        "placebo_shift": {
+          "test": 32,
+          "scopes": {
+            "all": {
+              "fixed": 13,
+              "harmed": 25
+            },
+            "new": {
+              "fixed": 0,
+              "harmed": 2
+            },
+            "common_solo": {
+              "fixed": 1,
+              "harmed": 0
+            },
+            "solo_sleep": {
+              "fixed": 2,
+              "harmed": 6
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            -5,
+            -1,
+            -1,
+            -3,
+            -1,
+            0,
+            1,
+            -2
+          ]
+        },
+        "real_shift_only": {
+          "test": 47,
+          "scopes": {
+            "all": {
+              "fixed": 33,
+              "harmed": 34
+            },
+            "new": {
+              "fixed": 5,
+              "harmed": 3
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 9,
+              "harmed": 17
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            -1,
+            -2,
+            3,
+            -1,
+            1,
+            -1,
+            -1,
+            1
+          ]
+        },
+        "real_only_solo_sleep": {
+          "test": 4,
+          "scopes": {
+            "all": {
+              "fixed": 3,
+              "harmed": 7
+            },
+            "new": {
+              "fixed": 1,
+              "harmed": 0
+            },
+            "common_solo": {
+              "fixed": 1,
+              "harmed": 2
+            },
+            "solo_sleep": {
+              "fixed": 3,
+              "harmed": 7
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 1
+            }
+          },
+          "fold_net": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -5,
+            0
+          ]
+        },
+        "anchor_shift_solo_sleep": {
+          "test": 16,
+          "scopes": {
+            "all": {
+              "fixed": 9,
+              "harmed": 18
+            },
+            "new": {
+              "fixed": 2,
+              "harmed": 2
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 9,
+              "harmed": 18
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -2,
+            -1,
+            -1,
+            -1,
+            0,
+            -4,
+            -2
+          ]
+        },
+        "real_shift_only_solo_sleep": {
+          "test": 12,
+          "scopes": {
+            "all": {
+              "fixed": 9,
+              "harmed": 17
+            },
+            "new": {
+              "fixed": 2,
+              "harmed": 1
+            },
+            "common_solo": {
+              "fixed": 2,
+              "harmed": 5
+            },
+            "solo_sleep": {
+              "fixed": 9,
+              "harmed": 17
+            },
+            "older_common": {
+              "fixed": 0,
+              "harmed": 0
+            }
+          },
+          "fold_net": [
+            2,
+            -2,
+            0,
+            -1,
+            -1,
+            0,
+            -4,
+            -2
+          ]
+        }
+      }
+    }
+  }
+}
