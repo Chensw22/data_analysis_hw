@@ -177,6 +177,8 @@ def run():
     OUT.mkdir(exist_ok=True)
     np.savez_compressed(OUT/'test_actions.npz',passenger=test.PassengerId.to_numpy(str),base=testbank['base'],**frozen_actions)
     np.savez_compressed(OUT/'against16.npz',passenger=test.PassengerId.to_numpy(str),base=registered.Transported.to_numpy(),**variants)
+    for tag,act in test_acts.items():
+        np.savez_compressed(OUT/('test_'+tag+'.npz'),passenger=test.PassengerId.to_numpy(str),base=testbank['base'],**act)
     for tag,act in train_acts.items():np.savez_compressed(OUT/(tag+'.npz'),**act)
     REPORT.write_text(json.dumps(answer,indent=2)+'\n')
     for key in frozen_actions:

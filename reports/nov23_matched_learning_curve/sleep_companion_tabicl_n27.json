@@ -1,0 +1,1620 @@
+{
+  "cross_booking_shared_cabin_rows": 0,
+  "prior_controls": [
+    "joint_party_tabicl_n26.py",
+    "manifest_sleep_contrast_n26.py",
+    "peer_attribute_surprise_n23.py"
+  ],
+  "support": "all target-scope passengers from training bookings; full 8-fold and independent test refit",
+  "placebo": "rotate same-size bookings ordered after random tie breaking on first passenger origin and deck, keep within-party registration slot",
+  "common_error_description": {
+    "solo": {
+      "agree": 1184,
+      "errors": 177,
+      "actually_transported": 7
+    },
+    "has_peer": {
+      "agree": 1324,
+      "errors": 123,
+      "actually_transported": 7
+    },
+    "any_peer_paid": {
+      "agree": 887,
+      "errors": 83,
+      "actually_transported": 5
+    },
+    "all_peers_unpaid": {
+      "agree": 437,
+      "errors": 40,
+      "actually_transported": 2
+    },
+    "earth": {
+      "agree": 920,
+      "errors": 262,
+      "actually_transported": 7
+    }
+  },
+  "rows": {
+    "all": 8532,
+    "focus": 3508,
+    "fresh": 1033,
+    "sleep": 2925,
+    "party": 3797,
+    "seven_sleep": 2508,
+    "seven_sleep_party": 1324
+  },
+  "errors": {
+    "all": 1435,
+    "focus": 634,
+    "fresh": 193,
+    "sleep": 476,
+    "party": 575,
+    "seven_sleep": 300,
+    "seven_sleep_party": 123
+  },
+  "reference_seven_errors": 300,
+  "anchor_differences_seven": 0,
+  "party_seven_reference_errors": 123,
+  "models": {
+    "plain": {
+      "target": 0.8009854913769504,
+      "sleepers": 0.8162660520250247,
+      "party_sleepers": 0.8506787330316742,
+      "party": 0.8215869886643666
+    },
+    "placebo": {
+      "target": 0.7949630440733644,
+      "sleepers": 0.8146196904840303,
+      "party_sleepers": 0.8526179702650291,
+      "party": 0.8171513060620995
+    },
+    "real": {
+      "target": 0.7966055297016151,
+      "sleepers": 0.815607507408627,
+      "party_sleepers": 0.8519715578539108,
+      "party": 0.8186298669295219
+    }
+  },
+  "rules": {
+    "plain": {
+      "test": 55,
+      "orders": 42,
+      "scopes": {
+        "all": {
+          "fixed": 35,
+          "harmed": 54
+        },
+        "focus": {
+          "fixed": 35,
+          "harmed": 54
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 16,
+          "harmed": 32
+        },
+        "party": {
+          "fixed": 35,
+          "harmed": 54
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        5,
+        2,
+        -8,
+        -3,
+        -4,
+        -9,
+        5,
+        -7
+      ]
+    },
+    "placebo": {
+      "test": 74,
+      "orders": 59,
+      "scopes": {
+        "all": {
+          "fixed": 50,
+          "harmed": 76
+        },
+        "focus": {
+          "fixed": 50,
+          "harmed": 76
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 31,
+          "harmed": 43
+        },
+        "party": {
+          "fixed": 50,
+          "harmed": 76
+        },
+        "seven_sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 1,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        -2,
+        1,
+        -5,
+        -3,
+        -2,
+        -15,
+        5,
+        -5
+      ]
+    },
+    "real": {
+      "test": 69,
+      "orders": 54,
+      "scopes": {
+        "all": {
+          "fixed": 51,
+          "harmed": 70
+        },
+        "focus": {
+          "fixed": 51,
+          "harmed": 70
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 29,
+          "harmed": 40
+        },
+        "party": {
+          "fixed": 51,
+          "harmed": 70
+        },
+        "seven_sleep": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "seven_sleep_party": {
+          "fixed": 4,
+          "harmed": 5
+        }
+      },
+      "folds": [
+        -1,
+        1,
+        -3,
+        -4,
+        -7,
+        -2,
+        3,
+        -6
+      ]
+    },
+    "induced": {
+      "test": 38,
+      "orders": 33,
+      "scopes": {
+        "all": {
+          "fixed": 29,
+          "harmed": 34
+        },
+        "focus": {
+          "fixed": 29,
+          "harmed": 34
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 18,
+          "harmed": 19
+        },
+        "party": {
+          "fixed": 29,
+          "harmed": 34
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        -3,
+        1,
+        2,
+        -2,
+        -3,
+        2,
+        -1,
+        -1
+      ]
+    },
+    "real_only": {
+      "test": 25,
+      "orders": 23,
+      "scopes": {
+        "all": {
+          "fixed": 17,
+          "harmed": 22
+        },
+        "focus": {
+          "fixed": 17,
+          "harmed": 22
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 7,
+          "harmed": 12
+        },
+        "party": {
+          "fixed": 17,
+          "harmed": 22
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        -1,
+        1,
+        0,
+        -2,
+        -4,
+        3,
+        -1,
+        -1
+      ]
+    },
+    "confirmed": {
+      "test": 31,
+      "orders": 24,
+      "scopes": {
+        "all": {
+          "fixed": 22,
+          "harmed": 36
+        },
+        "focus": {
+          "fixed": 22,
+          "harmed": 36
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 11,
+          "harmed": 21
+        },
+        "party": {
+          "fixed": 22,
+          "harmed": 36
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        2,
+        0,
+        -5,
+        -2,
+        -4,
+        -4,
+        4,
+        -5
+      ]
+    },
+    "unopposed_control": {
+      "test": 34,
+      "orders": 30,
+      "scopes": {
+        "all": {
+          "fixed": 25,
+          "harmed": 34
+        },
+        "focus": {
+          "fixed": 25,
+          "harmed": 34
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 11,
+          "harmed": 20
+        },
+        "party": {
+          "fixed": 25,
+          "harmed": 34
+        },
+        "seven_sleep": {
+          "fixed": 3,
+          "harmed": 5
+        },
+        "seven_sleep_party": {
+          "fixed": 3,
+          "harmed": 5
+        }
+      },
+      "folds": [
+        0,
+        0,
+        -1,
+        -2,
+        -6,
+        2,
+        0,
+        -2
+      ]
+    },
+    "plain_risk_random": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 42,
+          "harmed": 45
+        },
+        "focus": {
+          "fixed": 42,
+          "harmed": 45
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 16,
+          "harmed": 19
+        },
+        "party": {
+          "fixed": 42,
+          "harmed": 45
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 4
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 4
+        }
+      },
+      "folds": [
+        -2,
+        -1,
+        0,
+        -1,
+        0,
+        -4,
+        5,
+        0
+      ]
+    },
+    "plain_change_random": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 15,
+          "harmed": 12
+        },
+        "focus": {
+          "fixed": 15,
+          "harmed": 12
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 5,
+          "harmed": 7
+        },
+        "party": {
+          "fixed": 15,
+          "harmed": 12
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "folds": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        -2,
+        3,
+        0
+      ]
+    },
+    "plain_risk_contiguous": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 50,
+          "harmed": 45
+        },
+        "focus": {
+          "fixed": 50,
+          "harmed": 45
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 27,
+          "harmed": 22
+        },
+        "party": {
+          "fixed": 50,
+          "harmed": 45
+        },
+        "seven_sleep": {
+          "fixed": 6,
+          "harmed": 4
+        },
+        "seven_sleep_party": {
+          "fixed": 6,
+          "harmed": 4
+        }
+      },
+      "folds": [
+        -1,
+        -2,
+        -3,
+        0,
+        -2,
+        7,
+        8,
+        -2
+      ]
+    },
+    "plain_change_contiguous": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 14,
+          "harmed": 17
+        },
+        "focus": {
+          "fixed": 14,
+          "harmed": 17
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 5,
+          "harmed": 7
+        },
+        "party": {
+          "fixed": 14,
+          "harmed": 17
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "folds": [
+        0,
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        3,
+        -2
+      ]
+    },
+    "placebo_risk_random": {
+      "test": 3,
+      "orders": 3,
+      "scopes": {
+        "all": {
+          "fixed": 45,
+          "harmed": 48
+        },
+        "focus": {
+          "fixed": 45,
+          "harmed": 48
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 18,
+          "harmed": 22
+        },
+        "party": {
+          "fixed": 45,
+          "harmed": 48
+        },
+        "seven_sleep": {
+          "fixed": 5,
+          "harmed": 6
+        },
+        "seven_sleep_party": {
+          "fixed": 5,
+          "harmed": 6
+        }
+      },
+      "folds": [
+        -1,
+        -3,
+        0,
+        -1,
+        -3,
+        -1,
+        6,
+        0
+      ]
+    },
+    "placebo_change_random": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 10,
+          "harmed": 15
+        },
+        "focus": {
+          "fixed": 10,
+          "harmed": 15
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 4,
+          "harmed": 9
+        },
+        "party": {
+          "fixed": 10,
+          "harmed": 15
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "folds": [
+        -1,
+        -2,
+        0,
+        0,
+        -1,
+        -4,
+        3,
+        0
+      ]
+    },
+    "placebo_risk_contiguous": {
+      "test": 3,
+      "orders": 3,
+      "scopes": {
+        "all": {
+          "fixed": 53,
+          "harmed": 50
+        },
+        "focus": {
+          "fixed": 53,
+          "harmed": 50
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 30,
+          "harmed": 20
+        },
+        "party": {
+          "fixed": 53,
+          "harmed": 50
+        },
+        "seven_sleep": {
+          "fixed": 7,
+          "harmed": 4
+        },
+        "seven_sleep_party": {
+          "fixed": 7,
+          "harmed": 4
+        }
+      },
+      "folds": [
+        -1,
+        -2,
+        -3,
+        -1,
+        -2,
+        6,
+        8,
+        -2
+      ]
+    },
+    "placebo_change_contiguous": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 11,
+          "harmed": 18
+        },
+        "focus": {
+          "fixed": 11,
+          "harmed": 18
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 7,
+          "harmed": 9
+        },
+        "party": {
+          "fixed": 11,
+          "harmed": 18
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "folds": [
+        0,
+        -1,
+        -2,
+        -1,
+        0,
+        -3,
+        2,
+        -2
+      ]
+    },
+    "real_risk_random": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 42,
+          "harmed": 47
+        },
+        "focus": {
+          "fixed": 42,
+          "harmed": 47
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 17,
+          "harmed": 19
+        },
+        "party": {
+          "fixed": 42,
+          "harmed": 47
+        },
+        "seven_sleep": {
+          "fixed": 1,
+          "harmed": 4
+        },
+        "seven_sleep_party": {
+          "fixed": 1,
+          "harmed": 4
+        }
+      },
+      "folds": [
+        -2,
+        0,
+        0,
+        0,
+        -1,
+        -4,
+        3,
+        -1
+      ]
+    },
+    "real_change_random": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 19,
+          "harmed": 16
+        },
+        "focus": {
+          "fixed": 19,
+          "harmed": 16
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 9,
+          "harmed": 7
+        },
+        "party": {
+          "fixed": 19,
+          "harmed": 16
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        -2,
+        1,
+        0,
+        0,
+        -2,
+        2,
+        5,
+        -1
+      ]
+    },
+    "real_risk_contiguous": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 52,
+          "harmed": 50
+        },
+        "focus": {
+          "fixed": 52,
+          "harmed": 50
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 29,
+          "harmed": 25
+        },
+        "party": {
+          "fixed": 52,
+          "harmed": 50
+        },
+        "seven_sleep": {
+          "fixed": 7,
+          "harmed": 5
+        },
+        "seven_sleep_party": {
+          "fixed": 7,
+          "harmed": 5
+        }
+      },
+      "folds": [
+        -1,
+        -2,
+        -2,
+        0,
+        -3,
+        5,
+        7,
+        -2
+      ]
+    },
+    "real_change_contiguous": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 20,
+          "harmed": 21
+        },
+        "focus": {
+          "fixed": 20,
+          "harmed": 21
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 10,
+          "harmed": 10
+        },
+        "party": {
+          "fixed": 20,
+          "harmed": 21
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        -2,
+        1,
+        2,
+        -2
+      ]
+    },
+    "real_risk_both": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 28,
+          "harmed": 29
+        },
+        "focus": {
+          "fixed": 28,
+          "harmed": 29
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 13,
+          "harmed": 16
+        },
+        "party": {
+          "fixed": 28,
+          "harmed": 29
+        },
+        "seven_sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 1,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        -3,
+        0,
+        0,
+        0,
+        -3,
+        5,
+        0
+      ]
+    },
+    "plain_risk_both": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 29,
+          "harmed": 26
+        },
+        "focus": {
+          "fixed": 29,
+          "harmed": 26
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 13,
+          "harmed": 14
+        },
+        "party": {
+          "fixed": 29,
+          "harmed": 26
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        -1,
+        -2,
+        0,
+        0,
+        0,
+        -1,
+        7,
+        0
+      ]
+    },
+    "placebo_risk_both": {
+      "test": 3,
+      "orders": 3,
+      "scopes": {
+        "all": {
+          "fixed": 35,
+          "harmed": 34
+        },
+        "focus": {
+          "fixed": 35,
+          "harmed": 34
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 18,
+          "harmed": 17
+        },
+        "party": {
+          "fixed": 35,
+          "harmed": 34
+        },
+        "seven_sleep": {
+          "fixed": 5,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 5,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        -4,
+        0,
+        0,
+        -2,
+        1,
+        6,
+        0
+      ]
+    },
+    "novel_risk": {
+      "test": 1,
+      "orders": 1,
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 0,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "party": {
+          "fixed": 0,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "folds": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ]
+    },
+    "real_change_both": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 14,
+          "harmed": 11
+        },
+        "focus": {
+          "fixed": 14,
+          "harmed": 11
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 8,
+          "harmed": 7
+        },
+        "party": {
+          "fixed": 14,
+          "harmed": 11
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0
+      ]
+    },
+    "plain_change_both": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 12,
+          "harmed": 11
+        },
+        "focus": {
+          "fixed": 12,
+          "harmed": 11
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 5,
+          "harmed": 6
+        },
+        "party": {
+          "fixed": 12,
+          "harmed": 11
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        2,
+        0
+      ]
+    },
+    "placebo_change_both": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 7,
+          "harmed": 12
+        },
+        "focus": {
+          "fixed": 7,
+          "harmed": 12
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "sleep": {
+          "fixed": 4,
+          "harmed": 8
+        },
+        "party": {
+          "fixed": 7,
+          "harmed": 12
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "folds": [
+        0,
+        -2,
+        0,
+        0,
+        -1,
+        -4,
+        2,
+        0
+      ]
+    },
+    "novel_change": {
+      "test": 1,
+      "orders": 1,
+      "scopes": {
+        "all": {
+          "fixed": 3,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 3,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 3,
+          "harmed": 2
+        },
+        "party": {
+          "fixed": 3,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      },
+      "folds": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        -1,
+        2,
+        0
+      ]
+    },
+    "real_seven_sleep": {
+      "test": 5,
+      "orders": 4,
+      "scopes": {
+        "all": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "focus": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "party": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "seven_sleep": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "seven_sleep_party": {
+          "fixed": 4,
+          "harmed": 5
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        2,
+        -2,
+        -1,
+        0,
+        0
+      ]
+    },
+    "plain_seven_sleep": {
+      "test": 2,
+      "orders": 2,
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "party": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        -1,
+        1
+      ]
+    },
+    "placebo_seven_sleep": {
+      "test": 9,
+      "orders": 8,
+      "scopes": {
+        "all": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "party": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 1,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        -2,
+        0,
+        1
+      ]
+    },
+    "induced_seven_sleep": {
+      "test": 5,
+      "orders": 4,
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "party": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    "real_only_seven_sleep": {
+      "test": 4,
+      "orders": 3,
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "party": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ]
+    },
+    "confirmed_seven_sleep": {
+      "test": 0,
+      "orders": 0,
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "focus": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "party": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "seven_sleep": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 2,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        0,
+        -1,
+        1
+      ]
+    },
+    "real_risk_both_seven_sleep": {
+      "test": 0,
+      "orders": 0,
+      "scopes": {
+        "all": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "focus": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "party": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "seven_sleep_party": {
+          "fixed": 1,
+          "harmed": 3
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ]
+    },
+    "real_change_both_seven_sleep": {
+      "test": 0,
+      "orders": 0,
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "focus": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "sleep": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "party": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "seven_sleep": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "seven_sleep_party": {
+          "fixed": 0,
+          "harmed": 2
+        }
+      },
+      "folds": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        0
+      ]
+    }
+  }
+}
