@@ -1,0 +1,1520 @@
+{
+  "random": {
+    "rules": {
+      "ordinary": {
+        "test_changes": 351,
+        "folds": [
+          -13,
+          -14,
+          -27,
+          -9,
+          -23,
+          -14,
+          -9,
+          -41
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 225,
+            "harmed": 375
+          },
+          "fresh": {
+            "fixed": 25,
+            "harmed": 58
+          },
+          "common31": {
+            "fixed": 0,
+            "harmed": 1
+          },
+          "negative": {
+            "fixed": 98,
+            "harmed": 141
+          },
+          "positive": {
+            "fixed": 127,
+            "harmed": 234
+          }
+        }
+      },
+      "observable": {
+        "test_changes": 403,
+        "folds": [
+          -20,
+          -16,
+          -27,
+          -7,
+          -28,
+          -26,
+          -9,
+          -33
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 260,
+            "harmed": 426
+          },
+          "fresh": {
+            "fixed": 26,
+            "harmed": 58
+          },
+          "common31": {
+            "fixed": 1,
+            "harmed": 1
+          },
+          "negative": {
+            "fixed": 118,
+            "harmed": 146
+          },
+          "positive": {
+            "fixed": 142,
+            "harmed": 280
+          }
+        }
+      },
+      "shuffled": {
+        "test_changes": 324,
+        "folds": [
+          -16,
+          -17,
+          -22,
+          -5,
+          -21,
+          -14,
+          -12,
+          -34
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 223,
+            "harmed": 364
+          },
+          "fresh": {
+            "fixed": 21,
+            "harmed": 50
+          },
+          "common31": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "negative": {
+            "fixed": 103,
+            "harmed": 143
+          },
+          "positive": {
+            "fixed": 120,
+            "harmed": 221
+          }
+        }
+      },
+      "over_ordinary": {
+        "test_changes": 237,
+        "folds": [
+          -8,
+          -14,
+          3,
+          -1,
+          -13,
+          -14,
+          0,
+          -24
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 176,
+            "harmed": 247
+          },
+          "fresh": {
+            "fixed": 22,
+            "harmed": 32
+          },
+          "common31": {
+            "fixed": 1,
+            "harmed": 4
+          },
+          "negative": {
+            "fixed": 70,
+            "harmed": 82
+          },
+          "positive": {
+            "fixed": 106,
+            "harmed": 165
+          }
+        }
+      },
+      "over_shuffled": {
+        "test_changes": 248,
+        "folds": [
+          -16,
+          -17,
+          -7,
+          -4,
+          -17,
+          -19,
+          -1,
+          -17
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 173,
+            "harmed": 271
+          },
+          "fresh": {
+            "fixed": 20,
+            "harmed": 35
+          },
+          "common31": {
+            "fixed": 1,
+            "harmed": 4
+          },
+          "negative": {
+            "fixed": 69,
+            "harmed": 90
+          },
+          "positive": {
+            "fixed": 104,
+            "harmed": 181
+          }
+        }
+      },
+      "both_increments": {
+        "test_changes": 195,
+        "folds": [
+          -10,
+          -13,
+          1,
+          -3,
+          -12,
+          -10,
+          1,
+          -17
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 144,
+            "harmed": 207
+          },
+          "fresh": {
+            "fixed": 19,
+            "harmed": 24
+          },
+          "common31": {
+            "fixed": 1,
+            "harmed": 3
+          },
+          "negative": {
+            "fixed": 58,
+            "harmed": 69
+          },
+          "positive": {
+            "fixed": 86,
+            "harmed": 138
+          }
+        }
+      },
+      "supported": {
+        "test_changes": 145,
+        "folds": [
+          -6,
+          -2,
+          -3,
+          1,
+          -10,
+          -8,
+          4,
+          -7
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 103,
+            "harmed": 134
+          },
+          "fresh": {
+            "fixed": 12,
+            "harmed": 11
+          },
+          "common31": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "negative": {
+            "fixed": 44,
+            "harmed": 50
+          },
+          "positive": {
+            "fixed": 59,
+            "harmed": 84
+          }
+        }
+      },
+      "only_observable": {
+        "test_changes": 111,
+        "folds": [
+          -11,
+          0,
+          -6,
+          0,
+          -7,
+          -10,
+          1,
+          0
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 73,
+            "harmed": 106
+          },
+          "fresh": {
+            "fixed": 10,
+            "harmed": 14
+          },
+          "common31": {
+            "fixed": 1,
+            "harmed": 1
+          },
+          "negative": {
+            "fixed": 28,
+            "harmed": 34
+          },
+          "positive": {
+            "fixed": 45,
+            "harmed": 72
+          }
+        }
+      }
+    },
+    "objectives": {
+      "ordinary": {
+        "accuracy": 0.8086966524790061,
+        "worst_group_loss": 0.7571988302443291
+      },
+      "observable": {
+        "accuracy": 0.8066260209363856,
+        "worst_group_loss": 0.7908557167315964
+      },
+      "shuffled": {
+        "accuracy": 0.8097319682503163,
+        "worst_group_loss": 0.7526770850376143
+      }
+    },
+    "groups": {
+      "?|other_paid": {
+        "rows": 75,
+        "base_errors": 11,
+        "blind_errors": 4,
+        "logloss": {
+          "ordinary": 0.3989689087046237,
+          "observable": 0.4056642573511303,
+          "shuffled": 0.41062717220245926
+        }
+      },
+      "?|sleep": {
+        "rows": 75,
+        "base_errors": 11,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.36394362728037294,
+          "observable": 0.351595742335474,
+          "shuffled": 0.3657484402200269
+        }
+      },
+      "Earth|other_paid|1": {
+        "rows": 1317,
+        "base_errors": 142,
+        "blind_errors": 68,
+        "logloss": {
+          "ordinary": 0.37440305562552045,
+          "observable": 0.37840782724343003,
+          "shuffled": 0.3755593910322342
+        }
+      },
+      "Earth|other_paid|2": {
+        "rows": 213,
+        "base_errors": 22,
+        "blind_errors": 9,
+        "logloss": {
+          "ordinary": 0.3957948832968322,
+          "observable": 0.40105994536608314,
+          "shuffled": 0.3935032252454405
+        }
+      },
+      "Earth|other_paid|3": {
+        "rows": 195,
+        "base_errors": 22,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.36771480993888783,
+          "observable": 0.36466575446584465,
+          "shuffled": 0.3747026344000804
+        }
+      },
+      "Earth|retail|1": {
+        "rows": 865,
+        "base_errors": 239,
+        "blind_errors": 17,
+        "logloss": {
+          "ordinary": 0.5725498405270536,
+          "observable": 0.5772120092413894,
+          "shuffled": 0.5717626473841276
+        }
+      },
+      "Earth|retail|2": {
+        "rows": 144,
+        "base_errors": 39,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6144043884996839,
+          "observable": 0.626498580655714,
+          "shuffled": 0.6199095386840907
+        }
+      },
+      "Earth|retail|3": {
+        "rows": 137,
+        "base_errors": 34,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.5380189981651751,
+          "observable": 0.5568170544133928,
+          "shuffled": 0.5421313337166835
+        }
+      },
+      "Earth|sleep|1": {
+        "rows": 827,
+        "base_errors": 247,
+        "blind_errors": 53,
+        "logloss": {
+          "ordinary": 0.5824154456288935,
+          "observable": 0.587861644009437,
+          "shuffled": 0.5814263104432571
+        }
+      },
+      "Earth|sleep|2": {
+        "rows": 172,
+        "base_errors": 41,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.5844854705861059,
+          "observable": 0.5933828760839257,
+          "shuffled": 0.5851268346380046
+        }
+      },
+      "Earth|sleep|3": {
+        "rows": 383,
+        "base_errors": 121,
+        "blind_errors": 18,
+        "logloss": {
+          "ordinary": 0.6059797314802269,
+          "observable": 0.6149054896795956,
+          "shuffled": 0.6055589256295137
+        }
+      },
+      "Earth|zero|1": {
+        "rows": 61,
+        "base_errors": 23,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6832587265760404,
+          "observable": 0.6943108294602709,
+          "shuffled": 0.6872272518259992
+        }
+      },
+      "Earth|zero|2": {
+        "rows": 51,
+        "base_errors": 22,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.7571988302443291,
+          "observable": 0.7908557167315964,
+          "shuffled": 0.7526770850376143
+        }
+      },
+      "Earth|zero|3": {
+        "rows": 237,
+        "base_errors": 80,
+        "blind_errors": 4,
+        "logloss": {
+          "ordinary": 0.625876391019772,
+          "observable": 0.6444256812400543,
+          "shuffled": 0.6246210763196657
+        }
+      },
+      "Europa|other_paid|1": {
+        "rows": 205,
+        "base_errors": 15,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.22422907153565433,
+          "observable": 0.23528292239735138,
+          "shuffled": 0.2186520101980685
+        }
+      },
+      "Europa|other_paid|2": {
+        "rows": 183,
+        "base_errors": 12,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.1711628453982755,
+          "observable": 0.19919813786002488,
+          "shuffled": 0.17444139082824295
+        }
+      },
+      "Europa|other_paid|3": {
+        "rows": 205,
+        "base_errors": 21,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.21627836133047573,
+          "observable": 0.23047590008010344,
+          "shuffled": 0.2179701683723262
+        }
+      },
+      "Europa|retail|1": {
+        "rows": 205,
+        "base_errors": 37,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.35590652820685964,
+          "observable": 0.36314943397926636,
+          "shuffled": 0.356749649926219
+        }
+      },
+      "Europa|retail|2": {
+        "rows": 144,
+        "base_errors": 21,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.32631709588671437,
+          "observable": 0.31827497423581697,
+          "shuffled": 0.3336418741095159
+        }
+      },
+      "Europa|retail|3": {
+        "rows": 168,
+        "base_errors": 25,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.33840250210159467,
+          "observable": 0.36743708049731183,
+          "shuffled": 0.3489974038180538
+        }
+      },
+      "Europa|sleep|1": {
+        "rows": 296,
+        "base_errors": 2,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.0474373887026424,
+          "observable": 0.07876508702798332,
+          "shuffled": 0.04812917730361303
+        }
+      },
+      "Europa|sleep|2": {
+        "rows": 303,
+        "base_errors": 3,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.05073317977131742,
+          "observable": 0.06718854054200211,
+          "shuffled": 0.050435234897450186
+        }
+      },
+      "Europa|sleep|3": {
+        "rows": 312,
+        "base_errors": 5,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.08023049406189066,
+          "observable": 0.09324405506045694,
+          "shuffled": 0.0799869064492123
+        }
+      },
+      "Europa|zero": {
+        "rows": 57,
+        "base_errors": 18,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.4996961703561703,
+          "observable": 0.474688214426533,
+          "shuffled": 0.48421077412838764
+        }
+      },
+      "Europa|zero|3": {
+        "rows": 53,
+        "base_errors": 3,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.16206308572816633,
+          "observable": 0.19211830994912696,
+          "shuffled": 0.16095428154287506
+        }
+      },
+      "Mars|other_paid|1": {
+        "rows": 348,
+        "base_errors": 34,
+        "blind_errors": 22,
+        "logloss": {
+          "ordinary": 0.3106889159534949,
+          "observable": 0.31095799545621783,
+          "shuffled": 0.3060748161616898
+        }
+      },
+      "Mars|other_paid|2": {
+        "rows": 170,
+        "base_errors": 11,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.23288959055180453,
+          "observable": 0.2493743026085476,
+          "shuffled": 0.23942216233172425
+        }
+      },
+      "Mars|other_paid|3": {
+        "rows": 128,
+        "base_errors": 16,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.3690168587290496,
+          "observable": 0.36251725642620647,
+          "shuffled": 0.3611746153816393
+        }
+      },
+      "Mars|retail|1": {
+        "rows": 174,
+        "base_errors": 51,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.5430143760329725,
+          "observable": 0.5445968478560789,
+          "shuffled": 0.5395309942610836
+        }
+      },
+      "Mars|retail|2": {
+        "rows": 70,
+        "base_errors": 21,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6117664564101156,
+          "observable": 0.5941261105435319,
+          "shuffled": 0.5915966294226928
+        }
+      },
+      "Mars|retail|3": {
+        "rows": 56,
+        "base_errors": 12,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6299390721469302,
+          "observable": 0.6475396057994363,
+          "shuffled": 0.6376320912666011
+        }
+      },
+      "Mars|sleep|1": {
+        "rows": 329,
+        "base_errors": 25,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.17250646022266924,
+          "observable": 0.2047361021053751,
+          "shuffled": 0.1741760845737405
+        }
+      },
+      "Mars|sleep|2": {
+        "rows": 148,
+        "base_errors": 12,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.17820620495435838,
+          "observable": 0.2090042356785915,
+          "shuffled": 0.17932903281804513
+        }
+      },
+      "Mars|sleep|3": {
+        "rows": 192,
+        "base_errors": 9,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.1043772676126481,
+          "observable": 0.1474217029290931,
+          "shuffled": 0.10644877860021736
+        }
+      },
+      "Mars|zero": {
+        "rows": 53,
+        "base_errors": 6,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.41344980829124234,
+          "observable": 0.46427151184505844,
+          "shuffled": 0.421057025353228
+        }
+      },
+      "Mars|zero|3": {
+        "rows": 91,
+        "base_errors": 3,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.19241917941907422,
+          "observable": 0.26111024070784145,
+          "shuffled": 0.18944288984507196
+        }
+      },
+      "rare": {
+        "rows": 51,
+        "base_errors": 19,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.7262155036582288,
+          "observable": 0.7167914539313617,
+          "shuffled": 0.7274520385143219
+        }
+      }
+    }
+  },
+  "ordered": {
+    "rules": {
+      "ordinary": {
+        "test_changes": 351,
+        "folds": [
+          -26,
+          -5,
+          -9,
+          -20,
+          -17,
+          -25,
+          -15,
+          -5
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 299,
+            "harmed": 421
+          },
+          "fresh": {
+            "fixed": 42,
+            "harmed": 52
+          },
+          "common31": {
+            "fixed": 3,
+            "harmed": 3
+          },
+          "negative": {
+            "fixed": 117,
+            "harmed": 142
+          },
+          "positive": {
+            "fixed": 182,
+            "harmed": 279
+          }
+        }
+      },
+      "observable": {
+        "test_changes": 403,
+        "folds": [
+          -18,
+          -11,
+          -17,
+          -19,
+          -24,
+          -35,
+          -22,
+          -10
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 303,
+            "harmed": 459
+          },
+          "fresh": {
+            "fixed": 38,
+            "harmed": 65
+          },
+          "common31": {
+            "fixed": 4,
+            "harmed": 4
+          },
+          "negative": {
+            "fixed": 121,
+            "harmed": 156
+          },
+          "positive": {
+            "fixed": 182,
+            "harmed": 303
+          }
+        }
+      },
+      "shuffled": {
+        "test_changes": 324,
+        "folds": [
+          -25,
+          -6,
+          -11,
+          -23,
+          -21,
+          -32,
+          -7,
+          -11
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 303,
+            "harmed": 439
+          },
+          "fresh": {
+            "fixed": 39,
+            "harmed": 58
+          },
+          "common31": {
+            "fixed": 4,
+            "harmed": 4
+          },
+          "negative": {
+            "fixed": 125,
+            "harmed": 153
+          },
+          "positive": {
+            "fixed": 178,
+            "harmed": 286
+          }
+        }
+      },
+      "over_ordinary": {
+        "test_changes": 237,
+        "folds": [
+          -11,
+          -17,
+          -17,
+          -6,
+          -5,
+          -24,
+          -7,
+          -15
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 151,
+            "harmed": 253
+          },
+          "fresh": {
+            "fixed": 13,
+            "harmed": 30
+          },
+          "common31": {
+            "fixed": 5,
+            "harmed": 2
+          },
+          "negative": {
+            "fixed": 59,
+            "harmed": 99
+          },
+          "positive": {
+            "fixed": 92,
+            "harmed": 154
+          }
+        }
+      },
+      "over_shuffled": {
+        "test_changes": 248,
+        "folds": [
+          -12,
+          -7,
+          -9,
+          -10,
+          -2,
+          -26,
+          -6,
+          -15
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 153,
+            "harmed": 240
+          },
+          "fresh": {
+            "fixed": 12,
+            "harmed": 26
+          },
+          "common31": {
+            "fixed": 3,
+            "harmed": 2
+          },
+          "negative": {
+            "fixed": 60,
+            "harmed": 90
+          },
+          "positive": {
+            "fixed": 93,
+            "harmed": 150
+          }
+        }
+      },
+      "both_increments": {
+        "test_changes": 195,
+        "folds": [
+          -12,
+          -11,
+          -12,
+          -9,
+          0,
+          -23,
+          -8,
+          -11
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 124,
+            "harmed": 210
+          },
+          "fresh": {
+            "fixed": 11,
+            "harmed": 23
+          },
+          "common31": {
+            "fixed": 3,
+            "harmed": 2
+          },
+          "negative": {
+            "fixed": 50,
+            "harmed": 85
+          },
+          "positive": {
+            "fixed": 74,
+            "harmed": 125
+          }
+        }
+      },
+      "supported": {
+        "test_changes": 145,
+        "folds": [
+          -2,
+          -3,
+          -7,
+          -5,
+          -1,
+          -16,
+          -6,
+          -8
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 93,
+            "harmed": 141
+          },
+          "fresh": {
+            "fixed": 8,
+            "harmed": 13
+          },
+          "common31": {
+            "fixed": 2,
+            "harmed": 1
+          },
+          "negative": {
+            "fixed": 42,
+            "harmed": 63
+          },
+          "positive": {
+            "fixed": 51,
+            "harmed": 78
+          }
+        }
+      },
+      "only_observable": {
+        "test_changes": 111,
+        "folds": [
+          -1,
+          -4,
+          -5,
+          -4,
+          -10,
+          -6,
+          -11,
+          -4
+        ],
+        "scopes": {
+          "all": {
+            "fixed": 58,
+            "harmed": 103
+          },
+          "fresh": {
+            "fixed": 7,
+            "harmed": 17
+          },
+          "common31": {
+            "fixed": 2,
+            "harmed": 3
+          },
+          "negative": {
+            "fixed": 22,
+            "harmed": 39
+          },
+          "positive": {
+            "fixed": 36,
+            "harmed": 64
+          }
+        }
+      }
+    },
+    "objectives": {
+      "ordinary": {
+        "accuracy": 0.8124928103071437,
+        "worst_group_loss": 0.7100589165568524
+      },
+      "observable": {
+        "accuracy": 0.8075463016219947,
+        "worst_group_loss": 0.7223030063811621
+      },
+      "shuffled": {
+        "accuracy": 0.8105372138502244,
+        "worst_group_loss": 0.708547077604847
+      }
+    },
+    "groups": {
+      "?|other_paid": {
+        "rows": 75,
+        "base_errors": 11,
+        "blind_errors": 4,
+        "logloss": {
+          "ordinary": 0.40558288279463867,
+          "observable": 0.4021705031913346,
+          "shuffled": 0.40755505352894267
+        }
+      },
+      "?|sleep": {
+        "rows": 75,
+        "base_errors": 11,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.3994922615644576,
+          "observable": 0.3776617289371352,
+          "shuffled": 0.3749652718991596
+        }
+      },
+      "Earth|other_paid|1": {
+        "rows": 1317,
+        "base_errors": 142,
+        "blind_errors": 68,
+        "logloss": {
+          "ordinary": 0.3893737103860977,
+          "observable": 0.38804834345165456,
+          "shuffled": 0.38858485998701825
+        }
+      },
+      "Earth|other_paid|2": {
+        "rows": 213,
+        "base_errors": 22,
+        "blind_errors": 9,
+        "logloss": {
+          "ordinary": 0.38856728586927225,
+          "observable": 0.4045883183054617,
+          "shuffled": 0.3937366455687309
+        }
+      },
+      "Earth|other_paid|3": {
+        "rows": 195,
+        "base_errors": 22,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.36893371983328893,
+          "observable": 0.3744627001586052,
+          "shuffled": 0.3730062244848524
+        }
+      },
+      "Earth|retail|1": {
+        "rows": 865,
+        "base_errors": 239,
+        "blind_errors": 17,
+        "logloss": {
+          "ordinary": 0.5624475700137314,
+          "observable": 0.5694513906937566,
+          "shuffled": 0.5631673643574395
+        }
+      },
+      "Earth|retail|2": {
+        "rows": 144,
+        "base_errors": 39,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.622012861642964,
+          "observable": 0.6205689662347672,
+          "shuffled": 0.6238729006897574
+        }
+      },
+      "Earth|retail|3": {
+        "rows": 137,
+        "base_errors": 34,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.5099251795750004,
+          "observable": 0.5390329556385303,
+          "shuffled": 0.5187083953621432
+        }
+      },
+      "Earth|sleep|1": {
+        "rows": 827,
+        "base_errors": 247,
+        "blind_errors": 53,
+        "logloss": {
+          "ordinary": 0.5906085466160272,
+          "observable": 0.5942622209441963,
+          "shuffled": 0.5902003751949293
+        }
+      },
+      "Earth|sleep|2": {
+        "rows": 172,
+        "base_errors": 41,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.579047283616467,
+          "observable": 0.5671718044510888,
+          "shuffled": 0.5746158561545442
+        }
+      },
+      "Earth|sleep|3": {
+        "rows": 383,
+        "base_errors": 121,
+        "blind_errors": 18,
+        "logloss": {
+          "ordinary": 0.5924408354386569,
+          "observable": 0.5909527118917558,
+          "shuffled": 0.5919848273233355
+        }
+      },
+      "Earth|zero|1": {
+        "rows": 61,
+        "base_errors": 23,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6676891382801897,
+          "observable": 0.6740782414985156,
+          "shuffled": 0.6686010290416524
+        }
+      },
+      "Earth|zero|2": {
+        "rows": 51,
+        "base_errors": 22,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.7100589165568524,
+          "observable": 0.7223030063811621,
+          "shuffled": 0.708547077604847
+        }
+      },
+      "Earth|zero|3": {
+        "rows": 237,
+        "base_errors": 80,
+        "blind_errors": 4,
+        "logloss": {
+          "ordinary": 0.6107996699666624,
+          "observable": 0.6229684286059315,
+          "shuffled": 0.613376194881229
+        }
+      },
+      "Europa|other_paid|1": {
+        "rows": 205,
+        "base_errors": 15,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.20567458033767658,
+          "observable": 0.23329594179443122,
+          "shuffled": 0.20482026961305824
+        }
+      },
+      "Europa|other_paid|2": {
+        "rows": 183,
+        "base_errors": 12,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.1788589712700997,
+          "observable": 0.20089953260071688,
+          "shuffled": 0.17514373581826392
+        }
+      },
+      "Europa|other_paid|3": {
+        "rows": 205,
+        "base_errors": 21,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.23167177078238985,
+          "observable": 0.26518447923400795,
+          "shuffled": 0.2321066133931313
+        }
+      },
+      "Europa|retail|1": {
+        "rows": 205,
+        "base_errors": 37,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.3414221625690512,
+          "observable": 0.37194726149721835,
+          "shuffled": 0.34391301339214003
+        }
+      },
+      "Europa|retail|2": {
+        "rows": 144,
+        "base_errors": 21,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.33009463617250057,
+          "observable": 0.3189002195370877,
+          "shuffled": 0.32487298574932744
+        }
+      },
+      "Europa|retail|3": {
+        "rows": 168,
+        "base_errors": 25,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.3429050022761578,
+          "observable": 0.36614525872771303,
+          "shuffled": 0.33893755829527106
+        }
+      },
+      "Europa|sleep|1": {
+        "rows": 296,
+        "base_errors": 2,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.049169776051577255,
+          "observable": 0.07951290522557568,
+          "shuffled": 0.049210357395845276
+        }
+      },
+      "Europa|sleep|2": {
+        "rows": 303,
+        "base_errors": 3,
+        "blind_errors": 3,
+        "logloss": {
+          "ordinary": 0.05374594302708128,
+          "observable": 0.07089973943726025,
+          "shuffled": 0.053914750806249384
+        }
+      },
+      "Europa|sleep|3": {
+        "rows": 312,
+        "base_errors": 5,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.08275320743448926,
+          "observable": 0.09553500741124892,
+          "shuffled": 0.08063141113272157
+        }
+      },
+      "Europa|zero": {
+        "rows": 57,
+        "base_errors": 18,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.4947066641842947,
+          "observable": 0.5058905328859417,
+          "shuffled": 0.49246939327269496
+        }
+      },
+      "Europa|zero|3": {
+        "rows": 53,
+        "base_errors": 3,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.1797270923102558,
+          "observable": 0.20798047953222984,
+          "shuffled": 0.19084124838317673
+        }
+      },
+      "Mars|other_paid|1": {
+        "rows": 348,
+        "base_errors": 34,
+        "blind_errors": 22,
+        "logloss": {
+          "ordinary": 0.30934054250600346,
+          "observable": 0.31435286901367665,
+          "shuffled": 0.3108520084707524
+        }
+      },
+      "Mars|other_paid|2": {
+        "rows": 170,
+        "base_errors": 11,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.21996176326964859,
+          "observable": 0.22595607395963518,
+          "shuffled": 0.2200272669666532
+        }
+      },
+      "Mars|other_paid|3": {
+        "rows": 128,
+        "base_errors": 16,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.38083185632975236,
+          "observable": 0.3756139999621858,
+          "shuffled": 0.3754229539686248
+        }
+      },
+      "Mars|retail|1": {
+        "rows": 174,
+        "base_errors": 51,
+        "blind_errors": 6,
+        "logloss": {
+          "ordinary": 0.5411071869673659,
+          "observable": 0.5363656190134645,
+          "shuffled": 0.5392071687561364
+        }
+      },
+      "Mars|retail|2": {
+        "rows": 70,
+        "base_errors": 21,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6059298995603812,
+          "observable": 0.6026756646716849,
+          "shuffled": 0.6033073206672181
+        }
+      },
+      "Mars|retail|3": {
+        "rows": 56,
+        "base_errors": 12,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.6321542684790261,
+          "observable": 0.6262734914481783,
+          "shuffled": 0.6388824467972165
+        }
+      },
+      "Mars|sleep|1": {
+        "rows": 329,
+        "base_errors": 25,
+        "blind_errors": 5,
+        "logloss": {
+          "ordinary": 0.18662221521219177,
+          "observable": 0.21720068845020277,
+          "shuffled": 0.18696524493127245
+        }
+      },
+      "Mars|sleep|2": {
+        "rows": 148,
+        "base_errors": 12,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.1764871800006955,
+          "observable": 0.21062099288814878,
+          "shuffled": 0.1756949236222757
+        }
+      },
+      "Mars|sleep|3": {
+        "rows": 192,
+        "base_errors": 9,
+        "blind_errors": 1,
+        "logloss": {
+          "ordinary": 0.11051094242081407,
+          "observable": 0.15664391414574222,
+          "shuffled": 0.10438202286280485
+        }
+      },
+      "Mars|zero": {
+        "rows": 53,
+        "base_errors": 6,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.44096323415540517,
+          "observable": 0.47851946157013325,
+          "shuffled": 0.4473873432398005
+        }
+      },
+      "Mars|zero|3": {
+        "rows": 91,
+        "base_errors": 3,
+        "blind_errors": 0,
+        "logloss": {
+          "ordinary": 0.1963649303858513,
+          "observable": 0.26961901002703653,
+          "shuffled": 0.1954172697773716
+        }
+      },
+      "rare": {
+        "rows": 51,
+        "base_errors": 19,
+        "blind_errors": 2,
+        "logloss": {
+          "ordinary": 0.6989839664838332,
+          "observable": 0.6952055287951863,
+          "shuffled": 0.6949267515135291
+        }
+      }
+    }
+  },
+  "replicated_same_person": {
+    "ordinary": {
+      "all": {
+        "fixed": 156,
+        "harmed": 266
+      },
+      "fresh": {
+        "fixed": 16,
+        "harmed": 35
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "negative": {
+        "fixed": 66,
+        "harmed": 86
+      },
+      "positive": {
+        "fixed": 90,
+        "harmed": 180
+      }
+    },
+    "observable": {
+      "all": {
+        "fixed": 180,
+        "harmed": 301
+      },
+      "fresh": {
+        "fixed": 17,
+        "harmed": 36
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "negative": {
+        "fixed": 86,
+        "harmed": 102
+      },
+      "positive": {
+        "fixed": 94,
+        "harmed": 199
+      }
+    },
+    "shuffled": {
+      "all": {
+        "fixed": 162,
+        "harmed": 255
+      },
+      "fresh": {
+        "fixed": 11,
+        "harmed": 35
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "negative": {
+        "fixed": 73,
+        "harmed": 85
+      },
+      "positive": {
+        "fixed": 89,
+        "harmed": 170
+      }
+    },
+    "over_ordinary": {
+      "all": {
+        "fixed": 86,
+        "harmed": 133
+      },
+      "fresh": {
+        "fixed": 9,
+        "harmed": 18
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "negative": {
+        "fixed": 39,
+        "harmed": 57
+      },
+      "positive": {
+        "fixed": 47,
+        "harmed": 76
+      }
+    },
+    "over_shuffled": {
+      "all": {
+        "fixed": 77,
+        "harmed": 130
+      },
+      "fresh": {
+        "fixed": 7,
+        "harmed": 15
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "negative": {
+        "fixed": 34,
+        "harmed": 52
+      },
+      "positive": {
+        "fixed": 43,
+        "harmed": 78
+      }
+    },
+    "both_increments": {
+      "all": {
+        "fixed": 64,
+        "harmed": 101
+      },
+      "fresh": {
+        "fixed": 6,
+        "harmed": 12
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 1
+      },
+      "negative": {
+        "fixed": 30,
+        "harmed": 46
+      },
+      "positive": {
+        "fixed": 34,
+        "harmed": 55
+      }
+    },
+    "supported": {
+      "all": {
+        "fixed": 50,
+        "harmed": 63
+      },
+      "fresh": {
+        "fixed": 5,
+        "harmed": 7
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "negative": {
+        "fixed": 27,
+        "harmed": 33
+      },
+      "positive": {
+        "fixed": 23,
+        "harmed": 30
+      }
+    },
+    "only_observable": {
+      "all": {
+        "fixed": 16,
+        "harmed": 23
+      },
+      "fresh": {
+        "fixed": 0,
+        "harmed": 2
+      },
+      "common31": {
+        "fixed": 0,
+        "harmed": 0
+      },
+      "negative": {
+        "fixed": 10,
+        "harmed": 9
+      },
+      "positive": {
+        "fixed": 6,
+        "harmed": 14
+      }
+    }
+  }
+}

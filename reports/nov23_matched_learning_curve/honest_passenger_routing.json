@@ -1,0 +1,246 @@
+{
+  "groups": {
+    "all": {
+      "random": {
+        "rows": 8532,
+        "errors": 1435,
+        "all_seven_agree_rows": 7020,
+        "all_seven_wrong": 862,
+        "one_or_more_recovers": 573,
+        "one_or_more_harms": 939
+      },
+      "contiguous": {
+        "rows": 8532,
+        "errors": 1445,
+        "all_seven_agree_rows": 7019,
+        "all_seven_wrong": 861,
+        "one_or_more_recovers": 584,
+        "one_or_more_harms": 929
+      }
+    },
+    "awake_paying": {
+      "random": {
+        "rows": 4905,
+        "errors": 788,
+        "all_seven_agree_rows": 4010,
+        "all_seven_wrong": 476,
+        "one_or_more_recovers": 312,
+        "one_or_more_harms": 583
+      },
+      "contiguous": {
+        "rows": 4905,
+        "errors": 795,
+        "all_seven_agree_rows": 4008,
+        "all_seven_wrong": 475,
+        "one_or_more_recovers": 320,
+        "one_or_more_harms": 577
+      }
+    },
+    "asleep_unpaid": {
+      "random": {
+        "rows": 2925,
+        "errors": 476,
+        "all_seven_agree_rows": 2508,
+        "all_seven_wrong": 300,
+        "one_or_more_recovers": 176,
+        "one_or_more_harms": 241
+      },
+      "contiguous": {
+        "rows": 2925,
+        "errors": 479,
+        "all_seven_agree_rows": 2509,
+        "all_seven_wrong": 300,
+        "one_or_more_recovers": 179,
+        "one_or_more_harms": 237
+      }
+    },
+    "former_unanimous": {
+      "random": {
+        "rows": 3861,
+        "errors": 266,
+        "all_seven_agree_rows": 3849,
+        "all_seven_wrong": 265,
+        "one_or_more_recovers": 1,
+        "one_or_more_harms": 11
+      },
+      "contiguous": {
+        "rows": 3861,
+        "errors": 266,
+        "all_seven_agree_rows": 3849,
+        "all_seven_wrong": 265,
+        "one_or_more_recovers": 1,
+        "one_or_more_harms": 11
+      }
+    }
+  },
+  "rules": {
+    "depth_0": {
+      "random": {
+        "scopes": {
+          "all": {
+            "fixed": 26,
+            "harmed": 45
+          },
+          "unanimous": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 6
+          }
+        },
+        "folds": [
+          -2,
+          -7,
+          -6,
+          0,
+          -7,
+          -2,
+          5,
+          0
+        ],
+        "test_changes": 0
+      },
+      "contiguous": {
+        "scopes": {
+          "all": {
+            "fixed": 36,
+            "harmed": 71
+          },
+          "unanimous": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 6,
+            "harmed": 13
+          }
+        },
+        "folds": [
+          -1,
+          0,
+          -5,
+          -3,
+          -7,
+          -10,
+          -9,
+          0
+        ],
+        "test_changes": 0
+      }
+    },
+    "depth_1": {
+      "random": {
+        "scopes": {
+          "all": {
+            "fixed": 23,
+            "harmed": 45
+          },
+          "unanimous": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 6
+          }
+        },
+        "folds": [
+          -2,
+          -7,
+          -6,
+          0,
+          -7,
+          -1,
+          1,
+          0
+        ],
+        "test_changes": 0
+      },
+      "contiguous": {
+        "scopes": {
+          "all": {
+            "fixed": 37,
+            "harmed": 73
+          },
+          "unanimous": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 7,
+            "harmed": 13
+          }
+        },
+        "folds": [
+          -1,
+          0,
+          -5,
+          -3,
+          -7,
+          -11,
+          -9,
+          0
+        ],
+        "test_changes": 0
+      }
+    },
+    "depth_2": {
+      "random": {
+        "scopes": {
+          "all": {
+            "fixed": 23,
+            "harmed": 45
+          },
+          "unanimous": {
+            "fixed": 0,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 4,
+            "harmed": 6
+          }
+        },
+        "folds": [
+          -2,
+          -7,
+          -6,
+          0,
+          -7,
+          -1,
+          1,
+          0
+        ],
+        "test_changes": 0
+      },
+      "contiguous": {
+        "scopes": {
+          "all": {
+            "fixed": 37,
+            "harmed": 73
+          },
+          "unanimous": {
+            "fixed": 1,
+            "harmed": 0
+          },
+          "fresh": {
+            "fixed": 7,
+            "harmed": 13
+          }
+        },
+        "folds": [
+          -1,
+          0,
+          -5,
+          -3,
+          -7,
+          -11,
+          -9,
+          0
+        ],
+        "test_changes": 0
+      }
+    }
+  }
+}

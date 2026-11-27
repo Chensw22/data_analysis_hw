@@ -1,0 +1,298 @@
+{
+  "standalone": {
+    "independent": {
+      "accuracy": 0.7462326009432877,
+      "loss": 0.8439844351597757
+    },
+    "context": {
+      "accuracy": 0.7401357414011274,
+      "loss": 0.565942445956096
+    },
+    "tree": {
+      "accuracy": 0.8103071436788221,
+      "loss": 0.3839351792849102
+    }
+  },
+  "rules": {
+    "independent": {
+      "test_changes": 785,
+      "overlap_16": 14,
+      "by_fold": [
+        -72,
+        -88,
+        -101,
+        -98,
+        -83,
+        -70,
+        -84,
+        -93
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 392,
+          "harmed": 1081
+        },
+        "fresh": {
+          "fixed": 51,
+          "harmed": 151
+        },
+        "blind": {
+          "fixed": 13,
+          "harmed": 133
+        }
+      }
+    },
+    "context": {
+      "test_changes": 958,
+      "overlap_16": 11,
+      "by_fold": [
+        -80,
+        -72,
+        -86,
+        -124,
+        -89,
+        -84,
+        -97,
+        -105
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 466,
+          "harmed": 1203
+        },
+        "fresh": {
+          "fixed": 68,
+          "harmed": 173
+        },
+        "blind": {
+          "fixed": 41,
+          "harmed": 246
+        }
+      }
+    },
+    "tree": {
+      "test_changes": 357,
+      "overlap_16": 6,
+      "by_fold": [
+        -7,
+        -14,
+        -19,
+        -10,
+        -24,
+        -21,
+        -17,
+        -35
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 228,
+          "harmed": 375
+        },
+        "fresh": {
+          "fixed": 24,
+          "harmed": 57
+        },
+        "blind": {
+          "fixed": 2,
+          "harmed": 2
+        }
+      }
+    },
+    "exclusive": {
+      "test_changes": 417,
+      "overlap_16": 0,
+      "by_fold": [
+        -44,
+        -25,
+        -27,
+        -56,
+        -39,
+        -25,
+        -51,
+        -51
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 219,
+          "harmed": 537
+        },
+        "fresh": {
+          "fixed": 38,
+          "harmed": 71
+        },
+        "blind": {
+          "fixed": 33,
+          "harmed": 176
+        }
+      }
+    },
+    "increment": {
+      "test_changes": 1366,
+      "overlap_16": 0,
+      "by_fold": [
+        -137,
+        -126,
+        -137,
+        -131,
+        -160,
+        -123,
+        -132,
+        -172
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 798,
+          "harmed": 1916
+        },
+        "fresh": {
+          "fixed": 111,
+          "harmed": 270
+        },
+        "blind": {
+          "fixed": 151,
+          "harmed": 627
+        }
+      }
+    },
+    "confirmed": {
+      "test_changes": 67,
+      "overlap_16": 0,
+      "by_fold": [
+        3,
+        -6,
+        0,
+        -4,
+        -9,
+        -6,
+        2,
+        -2
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 45,
+          "harmed": 67
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 12
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "held_random": {
+      "test_changes": 0,
+      "overlap_16": 0,
+      "by_fold": [
+        0,
+        0,
+        2,
+        0,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 4,
+          "harmed": 3
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      }
+    },
+    "held_ordered": {
+      "test_changes": 0,
+      "overlap_16": 0,
+      "by_fold": [
+        0,
+        0,
+        0,
+        -6,
+        -1,
+        0,
+        0,
+        -1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 2,
+          "harmed": 10
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 3
+        }
+      }
+    },
+    "tree_adjusted_random": {
+      "test_changes": 42,
+      "overlap_16": 0,
+      "by_fold": [
+        0,
+        -3,
+        0,
+        -2,
+        -1,
+        7,
+        4,
+        -4
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 55,
+          "harmed": 54
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 3
+        },
+        "blind": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      }
+    },
+    "tree_adjusted_ordered": {
+      "test_changes": 42,
+      "overlap_16": 0,
+      "by_fold": [
+        0,
+        -3,
+        -1,
+        2,
+        -4,
+        2,
+        -1,
+        -4
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 43,
+          "harmed": 52
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 3
+        },
+        "blind": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}
