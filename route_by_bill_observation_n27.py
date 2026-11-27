@@ -40,7 +40,7 @@ def run(export):
         np.testing.assert_array_equal(z['passenger'],ids[n:])
         np.testing.assert_array_equal(z['base'],first[n:])
         test_actions={k:z[k] for k in ['real','paths','control']}
-    report={}; test_flags=None
+    report={}; test_flags=None; align={}
     for model in test_actions:
         for scheme in ['random','ordered']:
             with np.load(directory/f'full_{scheme}.npz') as z:
@@ -55,8 +55,12 @@ def run(export):
                     folds=[int(delta[known&(f==k)].sum()) for k in range(8)],test=int(a[n:].sum()))
             report.setdefault(model,{})[scheme]={k:report_one(v) for k,v in zip(['partial','zero','paid','union'],[*sets.T,rule])}
             if model=='real':
+                align[scheme]=sets
                 if test_flags is None:test_flags=sets[n:]
                 else:np.testing.assert_array_equal(sets[n:],test_flags)
+    cache=ART/'nov27_payment_state_routes'
+    cache.mkdir(exist_ok=True)
+    np.savez_compressed(cache/'aligned.npz',passenger=ids,y=y,fold=f,parent=current,**align)
     REPORT.write_text(json.dumps(report,indent=2)+'\n')
     for k,r in report.items():print(k,r['random']['union'],r['ordered']['union'])
     print('parts',report['real']['random'])
