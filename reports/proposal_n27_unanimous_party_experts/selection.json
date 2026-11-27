@@ -1,0 +1,79 @@
+{
+  "version": "n27_unanimous_party_experts",
+  "rule": "Among seven unanimous ordinary predictions, override when party and solo-specific gradient tree and logistic spline both favor the opposite label and each absolute log-odds change over its own global model exceeds the absolute median foundation log-odds.",
+  "current": "proposal_n27_directional_foundation",
+  "metrics": {
+    "random": {
+      "all": {
+        "fixed": 5,
+        "harmed": 2
+      },
+      "fresh": {
+        "fixed": 1,
+        "harmed": 1
+      },
+      "folds": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        1,
+        -2,
+        1
+      ],
+      "test": 3,
+      "precision": 0.7142857142857143
+    },
+    "contiguous": {
+      "all": {
+        "fixed": 7,
+        "harmed": 4
+      },
+      "fresh": {
+        "fixed": 1,
+        "harmed": 1
+      },
+      "folds": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1,
+        -1,
+        2
+      ],
+      "test": 3,
+      "precision": 0.6363636363636364
+    }
+  },
+  "evidence": "reports/nov23_matched_learning_curve/broad_population_expert_crosscheck.json",
+  "test_seven_probability_ranges": [
+    {
+      "passenger": "0318_01",
+      "lowest": 0.53093607377354,
+      "highest": 0.6058533787727356,
+      "parent": true
+    },
+    {
+      "passenger": "0843_01",
+      "lowest": 0.5477884411811829,
+      "highest": 0.6095603704452515,
+      "parent": true
+    },
+    {
+      "passenger": "1616_01",
+      "lowest": 0.5282579360538516,
+      "highest": 0.6798613712516498,
+      "parent": true
+    }
+  ],
+  "local_validation": "Both global and party/solo tree and spline architectures refit on each of eight random-order folds and eight contiguous-order folds; original seven opinion sources and scored parent unchanged between protocols.",
+  "limitations": "Exploratory selection from 30 declared policy comparisons. The seven ordinary OOF outputs and the anchor are fixed across both protocols. The new expert architectures are independently refitted in both splits; 1,033 historically unseen passengers are 1 fixed and 1 harmed in each.",
+  "test_changed": [
+    "0318_01",
+    "0843_01",
+    "1616_01"
+  ]
+}

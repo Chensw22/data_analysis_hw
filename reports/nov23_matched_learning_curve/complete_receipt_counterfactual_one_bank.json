@@ -1,0 +1,2326 @@
+{
+  "oracle": {
+    "bank0": {
+      "complete": {
+        "reference_errors": 1253,
+        "original_correct": 258,
+        "rescued_by_any_delete": 214,
+        "all_six_miss": 781,
+        "all_five_correct": 3
+      },
+      "paid": {
+        "reference_errors": 701,
+        "original_correct": 166,
+        "rescued_by_any_delete": 171,
+        "all_six_miss": 364,
+        "all_five_correct": 3
+      },
+      "fresh": {
+        "reference_errors": 105,
+        "original_correct": 23,
+        "rescued_by_any_delete": 22,
+        "all_six_miss": 60,
+        "all_five_correct": 1
+      },
+      "zero": {
+        "reference_errors": 552,
+        "original_correct": 92,
+        "rescued_by_any_delete": 43,
+        "all_six_miss": 417,
+        "all_five_correct": 0
+      },
+      "seven_agree": {
+        "reference_errors": 419,
+        "original_correct": 20,
+        "rescued_by_any_delete": 88,
+        "all_six_miss": 311,
+        "all_five_correct": 1
+      },
+      "common": {
+        "reference_errors": 141,
+        "original_correct": 1,
+        "rescued_by_any_delete": 9,
+        "all_six_miss": 131,
+        "all_five_correct": 0
+      }
+    },
+    "banks_mean": {
+      "complete": {
+        "reference_errors": 1253,
+        "original_correct": 258,
+        "rescued_by_any_delete": 214,
+        "all_six_miss": 781,
+        "all_five_correct": 3
+      },
+      "paid": {
+        "reference_errors": 701,
+        "original_correct": 166,
+        "rescued_by_any_delete": 171,
+        "all_six_miss": 364,
+        "all_five_correct": 3
+      },
+      "fresh": {
+        "reference_errors": 105,
+        "original_correct": 23,
+        "rescued_by_any_delete": 22,
+        "all_six_miss": 60,
+        "all_five_correct": 1
+      },
+      "zero": {
+        "reference_errors": 552,
+        "original_correct": 92,
+        "rescued_by_any_delete": 43,
+        "all_six_miss": 417,
+        "all_five_correct": 0
+      },
+      "seven_agree": {
+        "reference_errors": 419,
+        "original_correct": 20,
+        "rescued_by_any_delete": 88,
+        "all_six_miss": 311,
+        "all_five_correct": 1
+      },
+      "common": {
+        "reference_errors": 141,
+        "original_correct": 1,
+        "rescued_by_any_delete": 9,
+        "all_six_miss": 131,
+        "all_five_correct": 0
+      }
+    },
+    "tree": {
+      "complete": {
+        "reference_errors": 1253,
+        "original_correct": 238,
+        "rescued_by_any_delete": 295,
+        "all_six_miss": 720,
+        "all_five_correct": 2
+      },
+      "paid": {
+        "reference_errors": 701,
+        "original_correct": 135,
+        "rescued_by_any_delete": 226,
+        "all_six_miss": 340,
+        "all_five_correct": 2
+      },
+      "fresh": {
+        "reference_errors": 105,
+        "original_correct": 19,
+        "rescued_by_any_delete": 33,
+        "all_six_miss": 53,
+        "all_five_correct": 1
+      },
+      "zero": {
+        "reference_errors": 552,
+        "original_correct": 103,
+        "rescued_by_any_delete": 69,
+        "all_six_miss": 380,
+        "all_five_correct": 0
+      },
+      "seven_agree": {
+        "reference_errors": 419,
+        "original_correct": 23,
+        "rescued_by_any_delete": 119,
+        "all_six_miss": 277,
+        "all_five_correct": 1
+      },
+      "common": {
+        "reference_errors": 141,
+        "original_correct": 1,
+        "rescued_by_any_delete": 13,
+        "all_six_miss": 127,
+        "all_five_correct": 0
+      }
+    }
+  },
+  "anchor": "proposal_n27_directional_foundation",
+  "eligible_train": 4538,
+  "eligible_test": 2211,
+  "complete_train": 7785,
+  "complete_test": 3822,
+  "original_common_errors": 141,
+  "native": {
+    "bank0": {
+      "original": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6294,
+          "accuracy": 0.8084778420038535,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3702,
+          "accuracy": 0.8157778757161745,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "average": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6289,
+          "accuracy": 0.8078355812459859,
+          "fixed": 104,
+          "harmed": 109
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3687,
+          "accuracy": 0.8124724548259145,
+          "fixed": 68,
+          "harmed": 83
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2602,
+          "accuracy": 0.8013550970126271,
+          "fixed": 36,
+          "harmed": 26
+        }
+      },
+      "largest": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6141,
+          "accuracy": 0.7888246628131022,
+          "fixed": 128,
+          "harmed": 281
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3549,
+          "accuracy": 0.7820625826355223,
+          "fixed": 128,
+          "harmed": 281
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "surprise": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6150,
+          "accuracy": 0.789980732177264,
+          "fixed": 128,
+          "harmed": 272
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3558,
+          "accuracy": 0.7840458351696783,
+          "fixed": 128,
+          "harmed": 272
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "banks_mean": {
+      "original": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6294,
+          "accuracy": 0.8084778420038535,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3702,
+          "accuracy": 0.8157778757161745,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "average": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6289,
+          "accuracy": 0.8078355812459859,
+          "fixed": 104,
+          "harmed": 109
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3687,
+          "accuracy": 0.8124724548259145,
+          "fixed": 68,
+          "harmed": 83
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2602,
+          "accuracy": 0.8013550970126271,
+          "fixed": 36,
+          "harmed": 26
+        }
+      },
+      "largest": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6141,
+          "accuracy": 0.7888246628131022,
+          "fixed": 128,
+          "harmed": 281
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3549,
+          "accuracy": 0.7820625826355223,
+          "fixed": 128,
+          "harmed": 281
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "surprise": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6150,
+          "accuracy": 0.789980732177264,
+          "fixed": 128,
+          "harmed": 272
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3558,
+          "accuracy": 0.7840458351696783,
+          "fixed": 128,
+          "harmed": 272
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2592,
+          "accuracy": 0.7982753310748383,
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "tree": {
+      "original": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6291,
+          "accuracy": 0.8080924855491329,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3698,
+          "accuracy": 0.8148964301454386,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2593,
+          "accuracy": 0.7985833076686172,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "average": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6291,
+          "accuracy": 0.8080924855491329,
+          "fixed": 133,
+          "harmed": 133
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3687,
+          "accuracy": 0.8124724548259145,
+          "fixed": 71,
+          "harmed": 82
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2604,
+          "accuracy": 0.8019710502001848,
+          "fixed": 62,
+          "harmed": 51
+        }
+      },
+      "largest": {
+        "complete": {
+          "rows": 7785,
+          "correct": 5875,
+          "accuracy": 0.7546563904945408,
+          "fixed": 222,
+          "harmed": 638
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3282,
+          "accuracy": 0.7232260907888938,
+          "fixed": 222,
+          "harmed": 638
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2593,
+          "accuracy": 0.7985833076686172,
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "surprise": {
+        "complete": {
+          "rows": 7785,
+          "correct": 6080,
+          "accuracy": 0.7809890815671162,
+          "fixed": 137,
+          "harmed": 348
+        },
+        "paid": {
+          "rows": 4538,
+          "correct": 3487,
+          "accuracy": 0.7684001762891142,
+          "fixed": 137,
+          "harmed": 348
+        },
+        "zero": {
+          "rows": 3247,
+          "correct": 2593,
+          "accuracy": 0.7985833076686172,
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  },
+  "fits": {
+    "largest_random": {
+      "mean": 0.04992407786549421,
+      "median": 4.8268503012644085e-06
+    },
+    "surprise_random": {
+      "mean": 0.0922875766652446,
+      "median": 0.024477606383530096
+    },
+    "average_random": {
+      "mean": 0.057326992939584306,
+      "median": 4.0346959411823265e-06
+    },
+    "largest_ordered": {
+      "mean": 0.05166074504041246,
+      "median": 5.869374296857198e-06
+    },
+    "surprise_ordered": {
+      "mean": 0.08617016583837396,
+      "median": 0.005418974110034055
+    },
+    "average_ordered": {
+      "mean": 0.055299589852842335,
+      "median": 4.0346959411823265e-06
+    }
+  },
+  "results": {
+    "bank0_original_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 166,
+          "harmed": 296
+        },
+        "paid": {
+          "fixed": 166,
+          "harmed": 296
+        },
+        "fresh": {
+          "fixed": 23,
+          "harmed": 43
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 20,
+          "harmed": 61
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 2
+        }
+      },
+      "fold_net": [
+        -12,
+        -18,
+        -10,
+        -10,
+        -16,
+        -16,
+        -19,
+        -29
+      ],
+      "test": 225
+    },
+    "bank0_average_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 178,
+          "harmed": 323
+        },
+        "paid": {
+          "fixed": 178,
+          "harmed": 323
+        },
+        "fresh": {
+          "fixed": 26,
+          "harmed": 43
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 26,
+          "harmed": 83
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 6
+        }
+      },
+      "fold_net": [
+        -14,
+        -25,
+        -12,
+        -20,
+        -15,
+        -16,
+        -15,
+        -28
+      ],
+      "test": 247
+    },
+    "bank0_largest_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 201,
+          "harmed": 484
+        },
+        "paid": {
+          "fixed": 201,
+          "harmed": 484
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 55
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 52,
+          "harmed": 232
+        },
+        "common": {
+          "fixed": 5,
+          "harmed": 40
+        }
+      },
+      "fold_net": [
+        -25,
+        -50,
+        -31,
+        -39,
+        -45,
+        -25,
+        -27,
+        -41
+      ],
+      "test": 344
+    },
+    "bank0_largest_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 71,
+          "harmed": 119
+        },
+        "paid": {
+          "fixed": 71,
+          "harmed": 119
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 17
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 16,
+          "harmed": 47
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        0,
+        -3,
+        -8,
+        -10,
+        -15,
+        1,
+        -9,
+        -4
+      ],
+      "test": 77
+    },
+    "bank0_largest_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "paid": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 14
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 11,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        -5,
+        -9,
+        -13,
+        1,
+        -4,
+        -2
+      ],
+      "test": 56
+    },
+    "bank0_largest_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 50,
+          "harmed": 63
+        },
+        "paid": {
+          "fixed": 50,
+          "harmed": 63
+        },
+        "fresh": {
+          "fixed": 6,
+          "harmed": 10
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 3,
+          "harmed": 9
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -3,
+        1,
+        -1,
+        6,
+        -2,
+        -7,
+        -1,
+        -6
+      ],
+      "test": 55
+    },
+    "bank0_surprise_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 199,
+          "harmed": 473
+        },
+        "paid": {
+          "fixed": 199,
+          "harmed": 473
+        },
+        "fresh": {
+          "fixed": 30,
+          "harmed": 65
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 51,
+          "harmed": 224
+        },
+        "common": {
+          "fixed": 3,
+          "harmed": 45
+        }
+      },
+      "fold_net": [
+        -35,
+        -37,
+        -22,
+        -43,
+        -34,
+        -33,
+        -29,
+        -41
+      ],
+      "test": 346
+    },
+    "bank0_surprise_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 76,
+          "harmed": 115
+        },
+        "paid": {
+          "fixed": 76,
+          "harmed": 115
+        },
+        "fresh": {
+          "fixed": 13,
+          "harmed": 23
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 16,
+          "harmed": 46
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 5
+        }
+      },
+      "fold_net": [
+        -4,
+        -6,
+        1,
+        -12,
+        -10,
+        -3,
+        0,
+        -5
+      ],
+      "test": 99
+    },
+    "bank0_surprise_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "paid": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 18
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 14,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 4
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        2,
+        -9,
+        -7,
+        -4,
+        1,
+        -4
+      ],
+      "test": 79
+    },
+    "bank0_surprise_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 50,
+          "harmed": 62
+        },
+        "paid": {
+          "fixed": 50,
+          "harmed": 62
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 8
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 4,
+          "harmed": 8
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -1,
+        4,
+        -5,
+        8,
+        -2,
+        -3,
+        -7,
+        -6
+      ],
+      "test": 62
+    },
+    "banks_mean_original_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 166,
+          "harmed": 296
+        },
+        "paid": {
+          "fixed": 166,
+          "harmed": 296
+        },
+        "fresh": {
+          "fixed": 23,
+          "harmed": 43
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 20,
+          "harmed": 61
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 2
+        }
+      },
+      "fold_net": [
+        -12,
+        -18,
+        -10,
+        -10,
+        -16,
+        -16,
+        -19,
+        -29
+      ],
+      "test": 225
+    },
+    "banks_mean_average_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 178,
+          "harmed": 323
+        },
+        "paid": {
+          "fixed": 178,
+          "harmed": 323
+        },
+        "fresh": {
+          "fixed": 26,
+          "harmed": 43
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 26,
+          "harmed": 83
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 6
+        }
+      },
+      "fold_net": [
+        -14,
+        -25,
+        -12,
+        -20,
+        -15,
+        -16,
+        -15,
+        -28
+      ],
+      "test": 247
+    },
+    "banks_mean_largest_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 201,
+          "harmed": 484
+        },
+        "paid": {
+          "fixed": 201,
+          "harmed": 484
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 55
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 52,
+          "harmed": 232
+        },
+        "common": {
+          "fixed": 5,
+          "harmed": 40
+        }
+      },
+      "fold_net": [
+        -25,
+        -50,
+        -31,
+        -39,
+        -45,
+        -25,
+        -27,
+        -41
+      ],
+      "test": 344
+    },
+    "banks_mean_largest_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 71,
+          "harmed": 119
+        },
+        "paid": {
+          "fixed": 71,
+          "harmed": 119
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 17
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 16,
+          "harmed": 47
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        0,
+        -3,
+        -8,
+        -10,
+        -15,
+        1,
+        -9,
+        -4
+      ],
+      "test": 77
+    },
+    "banks_mean_largest_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "paid": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 14
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 11,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        -5,
+        -9,
+        -13,
+        1,
+        -4,
+        -2
+      ],
+      "test": 56
+    },
+    "banks_mean_largest_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 50,
+          "harmed": 63
+        },
+        "paid": {
+          "fixed": 50,
+          "harmed": 63
+        },
+        "fresh": {
+          "fixed": 6,
+          "harmed": 10
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 3,
+          "harmed": 9
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -3,
+        1,
+        -1,
+        6,
+        -2,
+        -7,
+        -1,
+        -6
+      ],
+      "test": 55
+    },
+    "banks_mean_surprise_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 199,
+          "harmed": 473
+        },
+        "paid": {
+          "fixed": 199,
+          "harmed": 473
+        },
+        "fresh": {
+          "fixed": 30,
+          "harmed": 65
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 51,
+          "harmed": 224
+        },
+        "common": {
+          "fixed": 3,
+          "harmed": 45
+        }
+      },
+      "fold_net": [
+        -35,
+        -37,
+        -22,
+        -43,
+        -34,
+        -33,
+        -29,
+        -41
+      ],
+      "test": 346
+    },
+    "banks_mean_surprise_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 76,
+          "harmed": 115
+        },
+        "paid": {
+          "fixed": 76,
+          "harmed": 115
+        },
+        "fresh": {
+          "fixed": 13,
+          "harmed": 23
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 16,
+          "harmed": 46
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 5
+        }
+      },
+      "fold_net": [
+        -4,
+        -6,
+        1,
+        -12,
+        -10,
+        -3,
+        0,
+        -5
+      ],
+      "test": 99
+    },
+    "banks_mean_surprise_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "paid": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 18
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 14,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 4
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        2,
+        -9,
+        -7,
+        -4,
+        1,
+        -4
+      ],
+      "test": 79
+    },
+    "banks_mean_surprise_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 50,
+          "harmed": 62
+        },
+        "paid": {
+          "fixed": 50,
+          "harmed": 62
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 8
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 4,
+          "harmed": 8
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -1,
+        4,
+        -5,
+        8,
+        -2,
+        -3,
+        -7,
+        -6
+      ],
+      "test": 62
+    },
+    "tree_original_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 135,
+          "harmed": 266
+        },
+        "paid": {
+          "fixed": 135,
+          "harmed": 266
+        },
+        "fresh": {
+          "fixed": 19,
+          "harmed": 44
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 23,
+          "harmed": 47
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -19,
+        -17,
+        -20,
+        -17,
+        -10,
+        -13,
+        -10,
+        -25
+      ],
+      "test": 214
+    },
+    "tree_average_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 168,
+          "harmed": 310
+        },
+        "paid": {
+          "fixed": 168,
+          "harmed": 310
+        },
+        "fresh": {
+          "fixed": 27,
+          "harmed": 52
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 44,
+          "harmed": 78
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        -17,
+        -23,
+        -24,
+        -13,
+        -9,
+        -16,
+        -13,
+        -27
+      ],
+      "test": 251
+    },
+    "tree_largest_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 249,
+          "harmed": 799
+        },
+        "paid": {
+          "fixed": 249,
+          "harmed": 799
+        },
+        "fresh": {
+          "fixed": 41,
+          "harmed": 109
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 106,
+          "harmed": 542
+        },
+        "common": {
+          "fixed": 12,
+          "harmed": 120
+        }
+      },
+      "fold_net": [
+        -53,
+        -93,
+        -75,
+        -63,
+        -72,
+        -54,
+        -63,
+        -77
+      ],
+      "test": 506
+    },
+    "tree_largest_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 109,
+          "harmed": 212
+        },
+        "paid": {
+          "fixed": 109,
+          "harmed": 212
+        },
+        "fresh": {
+          "fixed": 13,
+          "harmed": 30
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 34,
+          "harmed": 113
+        },
+        "common": {
+          "fixed": 3,
+          "harmed": 15
+        }
+      },
+      "fold_net": [
+        -12,
+        -23,
+        -17,
+        -18,
+        -15,
+        1,
+        -15,
+        -4
+      ],
+      "test": 146
+    },
+    "tree_largest_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 105,
+          "harmed": 195
+        },
+        "paid": {
+          "fixed": 105,
+          "harmed": 195
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 30
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 32,
+          "harmed": 105
+        },
+        "common": {
+          "fixed": 3,
+          "harmed": 13
+        }
+      },
+      "fold_net": [
+        -10,
+        -20,
+        -14,
+        -15,
+        -15,
+        1,
+        -13,
+        -4
+      ],
+      "test": 136
+    },
+    "tree_largest_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 42,
+          "harmed": 70
+        },
+        "paid": {
+          "fixed": 42,
+          "harmed": 70
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 11
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 3,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        -3,
+        -3,
+        -4,
+        -2,
+        -4,
+        -3,
+        1,
+        -10
+      ],
+      "test": 76
+    },
+    "tree_surprise_direct": {
+      "scopes": {
+        "complete": {
+          "fixed": 196,
+          "harmed": 542
+        },
+        "paid": {
+          "fixed": 196,
+          "harmed": 542
+        },
+        "fresh": {
+          "fixed": 28,
+          "harmed": 82
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 66,
+          "harmed": 277
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 55
+        }
+      },
+      "fold_net": [
+        -41,
+        -53,
+        -36,
+        -44,
+        -44,
+        -35,
+        -38,
+        -55
+      ],
+      "test": 361
+    },
+    "tree_surprise_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 69,
+          "harmed": 136
+        },
+        "paid": {
+          "fixed": 69,
+          "harmed": 136
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 22
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 18,
+          "harmed": 61
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 11
+        }
+      },
+      "fold_net": [
+        -12,
+        -15,
+        1,
+        -16,
+        -10,
+        -3,
+        -12,
+        0
+      ],
+      "test": 87
+    },
+    "tree_surprise_restore": {
+      "scopes": {
+        "complete": {
+          "fixed": 62,
+          "harmed": 116
+        },
+        "paid": {
+          "fixed": 62,
+          "harmed": 116
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 19
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 15,
+          "harmed": 53
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 8
+        }
+      },
+      "fold_net": [
+        -8,
+        -13,
+        0,
+        -10,
+        -10,
+        -1,
+        -11,
+        -1
+      ],
+      "test": 77
+    },
+    "tree_surprise_reinforce": {
+      "scopes": {
+        "complete": {
+          "fixed": 32,
+          "harmed": 44
+        },
+        "paid": {
+          "fixed": 32,
+          "harmed": 44
+        },
+        "fresh": {
+          "fixed": 5,
+          "harmed": 7
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 3,
+          "harmed": 3
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        -5,
+        1,
+        -2,
+        -1,
+        0,
+        -6
+      ],
+      "test": 45
+    },
+    "largest_replicated": {
+      "scopes": {
+        "complete": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "paid": {
+          "fixed": 55,
+          "harmed": 92
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 14
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 11,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        -5,
+        -9,
+        -13,
+        1,
+        -4,
+        -2
+      ],
+      "test": 56
+    },
+    "largest_tree_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 44,
+          "harmed": 76
+        },
+        "paid": {
+          "fixed": 44,
+          "harmed": 76
+        },
+        "fresh": {
+          "fixed": 5,
+          "harmed": 13
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 9,
+          "harmed": 33
+        },
+        "common": {
+          "fixed": 2,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        -1,
+        -4,
+        -5,
+        -9,
+        -9,
+        1,
+        -3,
+        -2
+      ],
+      "test": 42
+    },
+    "largest_tree_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 35,
+          "harmed": 64
+        },
+        "paid": {
+          "fixed": 35,
+          "harmed": 64
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 11
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 6,
+          "harmed": 27
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 1
+        }
+      },
+      "fold_net": [
+        0,
+        -3,
+        -3,
+        -10,
+        -8,
+        -1,
+        -2,
+        -2
+      ],
+      "test": 32
+    },
+    "largest_reinforce_tree": {
+      "scopes": {
+        "complete": {
+          "fixed": 13,
+          "harmed": 22
+        },
+        "paid": {
+          "fixed": 13,
+          "harmed": 22
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        -2,
+        1,
+        -2,
+        -4,
+        1,
+        -4
+      ],
+      "test": 36
+    },
+    "surprise_replicated": {
+      "scopes": {
+        "complete": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "paid": {
+          "fixed": 69,
+          "harmed": 95
+        },
+        "fresh": {
+          "fixed": 12,
+          "harmed": 18
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 14,
+          "harmed": 37
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 4
+        }
+      },
+      "fold_net": [
+        -2,
+        -3,
+        2,
+        -9,
+        -7,
+        -4,
+        1,
+        -4
+      ],
+      "test": 79
+    },
+    "surprise_tree_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 55,
+          "harmed": 82
+        },
+        "paid": {
+          "fixed": 55,
+          "harmed": 82
+        },
+        "fresh": {
+          "fixed": 8,
+          "harmed": 17
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 11,
+          "harmed": 32
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 3
+        }
+      },
+      "fold_net": [
+        -1,
+        -3,
+        1,
+        -7,
+        -9,
+        -4,
+        0,
+        -4
+      ],
+      "test": 67
+    },
+    "surprise_tree_paired": {
+      "scopes": {
+        "complete": {
+          "fixed": 38,
+          "harmed": 57
+        },
+        "paid": {
+          "fixed": 38,
+          "harmed": 57
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 12
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 9,
+          "harmed": 23
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 3
+        }
+      },
+      "fold_net": [
+        -2,
+        -4,
+        2,
+        -5,
+        -6,
+        -2,
+        -3,
+        1
+      ],
+      "test": 48
+    },
+    "surprise_reinforce_tree": {
+      "scopes": {
+        "complete": {
+          "fixed": 16,
+          "harmed": 15
+        },
+        "paid": {
+          "fixed": 16,
+          "harmed": 15
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        2,
+        1,
+        -1,
+        4,
+        0,
+        -2,
+        1,
+        -4
+      ],
+      "test": 20
+    },
+    "largest_random_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 9,
+          "harmed": 10
+        },
+        "paid": {
+          "fixed": 9,
+          "harmed": 10
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "test": 6
+    },
+    "largest_random_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 6,
+          "harmed": 7
+        },
+        "paid": {
+          "fixed": 6,
+          "harmed": 7
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        0,
+        1,
+        -1,
+        -2,
+        0,
+        0
+      ],
+      "test": 2
+    },
+    "surprise_random_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 13,
+          "harmed": 14
+        },
+        "paid": {
+          "fixed": 13,
+          "harmed": 14
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 3
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -2,
+        1
+      ],
+      "test": 16
+    },
+    "surprise_random_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 7,
+          "harmed": 8
+        },
+        "paid": {
+          "fixed": 7,
+          "harmed": 8
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        1,
+        1,
+        -1,
+        0,
+        -1,
+        -2,
+        1
+      ],
+      "test": 8
+    },
+    "average_random_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 8,
+          "harmed": 9
+        },
+        "paid": {
+          "fixed": 8,
+          "harmed": 9
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 0
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        -2,
+        0,
+        -1
+      ],
+      "test": 9
+    },
+    "largest_ordered_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 9,
+          "harmed": 11
+        },
+        "paid": {
+          "fixed": 9,
+          "harmed": 11
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        -2,
+        0
+      ],
+      "test": 6
+    },
+    "largest_ordered_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 5,
+          "harmed": 8
+        },
+        "paid": {
+          "fixed": 5,
+          "harmed": 8
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        0,
+        0,
+        1,
+        -1,
+        -2,
+        -1,
+        0
+      ],
+      "test": 2
+    },
+    "surprise_ordered_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 15,
+          "harmed": 13
+        },
+        "paid": {
+          "fixed": 15,
+          "harmed": 13
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        3
+      ],
+      "test": 16
+    },
+    "surprise_ordered_confirmed": {
+      "scopes": {
+        "complete": {
+          "fixed": 8,
+          "harmed": 7
+        },
+        "paid": {
+          "fixed": 8,
+          "harmed": 7
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        1,
+        1,
+        -1,
+        0,
+        -1,
+        0,
+        1
+      ],
+      "test": 8
+    },
+    "average_ordered_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 10,
+          "harmed": 9
+        },
+        "paid": {
+          "fixed": 10,
+          "harmed": 9
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 0
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        -1,
+        1,
+        -1
+      ],
+      "test": 9
+    }
+  }
+}

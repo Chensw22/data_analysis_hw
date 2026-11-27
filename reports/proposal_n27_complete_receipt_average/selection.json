@@ -1,0 +1,172 @@
+{
+  "version": "n27_complete_receipt_average",
+  "rule": "Apply the mean change in log odds under five equally weighted service deletions, using nonnegative shrinkage calibrated within held-out orders. Preserve the reference prediction when the change stays on its existing side.",
+  "results": {
+    "random_average_random_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 10,
+          "harmed": 6
+        },
+        "paid": {
+          "fixed": 10,
+          "harmed": 6
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 0
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "test": 10
+    },
+    "random_average_ordered_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 13,
+          "harmed": 6
+        },
+        "paid": {
+          "fixed": 13,
+          "harmed": 6
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 0
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "common": {
+          "fixed": 1,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        1,
+        1,
+        1
+      ],
+      "test": 10
+    },
+    "ordered_average_random_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 13,
+          "harmed": 7
+        },
+        "paid": {
+          "fixed": 13,
+          "harmed": 7
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 0
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        2,
+        -1,
+        1
+      ],
+      "test": 10
+    },
+    "ordered_average_ordered_calibrated": {
+      "scopes": {
+        "complete": {
+          "fixed": 14,
+          "harmed": 7
+        },
+        "paid": {
+          "fixed": 14,
+          "harmed": 7
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 1
+        },
+        "zero": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "seven_agree": {
+          "fixed": 1,
+          "harmed": 1
+        },
+        "common": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      },
+      "fold_net": [
+        0,
+        3,
+        0,
+        1,
+        0,
+        3,
+        -1,
+        1
+      ],
+      "test": 10
+    }
+  },
+  "weights": [
+    4.0346959411823265e-06,
+    4.0346959411823265e-06,
+    0.060843835477920244,
+    4.0346959411823265e-06,
+    4.0346959411823265e-06,
+    0.3760684322486618,
+    0.08609503776157885,
+    4.0346959411823265e-06
+  ]
+}
