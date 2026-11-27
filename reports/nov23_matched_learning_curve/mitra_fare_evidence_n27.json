@@ -1,0 +1,612 @@
+{
+  "support_count": 384,
+  "checkpoint": "Mitra v2",
+  "new_features": [
+    "expected_deck_index",
+    "maximum_deck_probability",
+    "registered_deck_probability"
+  ],
+  "accuracy": {
+    "raw": 0.7840791441389624,
+    "fare": 0.7808581617393305,
+    "shuffled": 0.7802829863108248
+  },
+  "111": {
+    "raw": {
+      "test_changes": 611,
+      "fold_net": [
+        -30,
+        -30,
+        -38,
+        -39,
+        -49,
+        -41,
+        -43,
+        -61
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 368,
+          "harmed": 699
+        },
+        "fresh": {
+          "fixed": 35,
+          "harmed": 103
+        },
+        "blind31": {
+          "fixed": 5,
+          "harmed": 27
+        }
+      }
+    },
+    "fare": {
+      "test_changes": 577,
+      "fold_net": [
+        -34,
+        -34,
+        -56,
+        -47,
+        -47,
+        -36,
+        -40,
+        -66
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 386,
+          "harmed": 746
+        },
+        "fresh": {
+          "fixed": 39,
+          "harmed": 105
+        },
+        "blind31": {
+          "fixed": 15,
+          "harmed": 40
+        }
+      }
+    },
+    "added": {
+      "test_changes": 38,
+      "fold_net": [
+        -3,
+        -9,
+        -18,
+        -11,
+        -2,
+        -5,
+        -5,
+        -4
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 41,
+          "harmed": 98
+        },
+        "fresh": {
+          "fixed": 10,
+          "harmed": 12
+        },
+        "blind31": {
+          "fixed": 6,
+          "harmed": 14
+        }
+      }
+    },
+    "supported": {
+      "test_changes": 39,
+      "fold_net": [
+        -1,
+        -2,
+        -4,
+        -1,
+        0,
+        -2,
+        3,
+        -9
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 32,
+          "harmed": 48
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 6
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "all_three": {
+      "test_changes": 16,
+      "fold_net": [
+        1,
+        0,
+        0,
+        2,
+        1,
+        0,
+        2,
+        -1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 13,
+          "harmed": 8
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "with_tabicl": {
+      "test_changes": 20,
+      "fold_net": [
+        0,
+        1,
+        0,
+        -1,
+        1,
+        -3,
+        3,
+        -2
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 17,
+          "harmed": 18
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 2
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "with_nori": {
+      "test_changes": 35,
+      "fold_net": [
+        0,
+        -3,
+        -4,
+        2,
+        0,
+        1,
+        2,
+        -8
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 28,
+          "harmed": 38
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 6
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "adjudicate_50": {
+      "test_changes": 30,
+      "fold_net": [
+        2,
+        1,
+        -3,
+        1,
+        3,
+        1,
+        4,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 25,
+          "harmed": 16
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 5
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "adjudicate_50_both": {
+      "test_changes": 23,
+      "fold_net": [
+        1,
+        1,
+        -3,
+        -1,
+        2,
+        0,
+        4,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 20,
+          "harmed": 16
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 5
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "specific": {
+      "test_changes": 26,
+      "fold_net": [
+        -1,
+        -9,
+        -12,
+        -7,
+        -2,
+        -4,
+        -3,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 28,
+          "harmed": 66
+        },
+        "fresh": {
+          "fixed": 8,
+          "harmed": 8
+        },
+        "blind31": {
+          "fixed": 4,
+          "harmed": 10
+        }
+      }
+    },
+    "specific_with_support": {
+      "test_changes": 7,
+      "fold_net": [
+        3,
+        0,
+        -1,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 10,
+          "harmed": 4
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 0
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  },
+  "161": {
+    "raw": {
+      "test_changes": 609,
+      "fold_net": [
+        -31,
+        -28,
+        -35,
+        -40,
+        -53,
+        -42,
+        -49,
+        -66
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 362,
+          "harmed": 706
+        },
+        "fresh": {
+          "fixed": 35,
+          "harmed": 102
+        },
+        "blind31": {
+          "fixed": 5,
+          "harmed": 27
+        }
+      }
+    },
+    "fare": {
+      "test_changes": 567,
+      "fold_net": [
+        -35,
+        -32,
+        -53,
+        -48,
+        -51,
+        -37,
+        -46,
+        -71
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 378,
+          "harmed": 751
+        },
+        "fresh": {
+          "fixed": 38,
+          "harmed": 103
+        },
+        "blind31": {
+          "fixed": 15,
+          "harmed": 40
+        }
+      }
+    },
+    "added": {
+      "test_changes": 34,
+      "fold_net": [
+        -4,
+        -9,
+        -18,
+        -13,
+        -2,
+        -7,
+        -5,
+        -5
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 37,
+          "harmed": 100
+        },
+        "fresh": {
+          "fixed": 9,
+          "harmed": 12
+        },
+        "blind31": {
+          "fixed": 6,
+          "harmed": 14
+        }
+      }
+    },
+    "supported": {
+      "test_changes": 23,
+      "fold_net": [
+        -2,
+        -2,
+        -4,
+        -3,
+        -1,
+        -2,
+        0,
+        -8
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 19,
+          "harmed": 41
+        },
+        "fresh": {
+          "fixed": 2,
+          "harmed": 4
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "all_three": {
+      "test_changes": 0,
+      "fold_net": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "with_tabicl": {
+      "test_changes": 4,
+      "fold_net": [
+        -1,
+        1,
+        0,
+        -3,
+        0,
+        -3,
+        0,
+        -1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 4,
+          "harmed": 11
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "with_nori": {
+      "test_changes": 19,
+      "fold_net": [
+        -1,
+        -3,
+        -4,
+        0,
+        -1,
+        1,
+        -1,
+        -7
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 15,
+          "harmed": 31
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 4
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "adjudicate_50": {
+      "test_changes": 20,
+      "fold_net": [
+        1,
+        3,
+        0,
+        0,
+        -1,
+        0,
+        -2,
+        -5
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 17,
+          "harmed": 21
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "adjudicate_50_both": {
+      "test_changes": 17,
+      "fold_net": [
+        1,
+        3,
+        0,
+        0,
+        -2,
+        1,
+        -2,
+        -4
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 16,
+          "harmed": 19
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "specific": {
+      "test_changes": 23,
+      "fold_net": [
+        -2,
+        -9,
+        -12,
+        -9,
+        -3,
+        -6,
+        -3,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 23,
+          "harmed": 67
+        },
+        "fresh": {
+          "fixed": 7,
+          "harmed": 8
+        },
+        "blind31": {
+          "fixed": 4,
+          "harmed": 10
+        }
+      }
+    },
+    "specific_with_support": {
+      "test_changes": 2,
+      "fold_net": [
+        2,
+        0,
+        -1,
+        2,
+        -1,
+        -1,
+        0,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 5,
+          "harmed": 4
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 0
+        },
+        "blind31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}

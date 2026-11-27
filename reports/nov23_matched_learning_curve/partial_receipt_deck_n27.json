@@ -1,0 +1,279 @@
+{
+  "auxiliary_deck": [
+    {
+      "aligned": {
+        "count": 750,
+        "accuracy": 0.6186666666666667
+      },
+      "shifted": {
+        "count": 750,
+        "accuracy": 0.4866666666666667
+      }
+    },
+    {
+      "aligned": {
+        "count": 7279,
+        "accuracy": 0.5749416128589092
+      },
+      "shifted": {
+        "count": 7279,
+        "accuracy": 0.48234647616430826
+      }
+    }
+  ],
+  "missing_train": 908,
+  "missing_test": 455,
+  "missing_accuracy": {
+    "base": 0.7863436123348018,
+    "augmented": 0.7984581497797357,
+    "aligned": 0.7808370044052864,
+    "shifted": 0.8006607929515418
+  },
+  "rules": {
+    "base": {
+      "test_edits": 30,
+      "net_by_fold": [
+        -2,
+        -5,
+        -2,
+        -1,
+        -2,
+        3,
+        -1,
+        -2
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 26,
+          "harmed": 38
+        },
+        "missing": {
+          "fixed": 26,
+          "harmed": 38
+        },
+        "missing_paid": {
+          "fixed": 13,
+          "harmed": 27
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "augmented": {
+      "test_edits": 30,
+      "net_by_fold": [
+        1,
+        0,
+        -1,
+        -1,
+        -3,
+        3,
+        0,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 33,
+          "harmed": 34
+        },
+        "missing": {
+          "fixed": 33,
+          "harmed": 34
+        },
+        "missing_paid": {
+          "fixed": 18,
+          "harmed": 24
+        },
+        "fresh": {
+          "fixed": 4,
+          "harmed": 5
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "aligned": {
+      "test_edits": 33,
+      "net_by_fold": [
+        -2,
+        -8,
+        -1,
+        1,
+        -4,
+        -1,
+        0,
+        -1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 29,
+          "harmed": 45
+        },
+        "missing": {
+          "fixed": 29,
+          "harmed": 45
+        },
+        "missing_paid": {
+          "fixed": 16,
+          "harmed": 33
+        },
+        "fresh": {
+          "fixed": 3,
+          "harmed": 6
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "shifted": {
+      "test_edits": 35,
+      "net_by_fold": [
+        2,
+        -4,
+        3,
+        0,
+        -2,
+        1,
+        1,
+        1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 32,
+          "harmed": 30
+        },
+        "missing": {
+          "fixed": 32,
+          "harmed": 30
+        },
+        "missing_paid": {
+          "fixed": 19,
+          "harmed": 19
+        },
+        "fresh": {
+          "fixed": 6,
+          "harmed": 3
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "aligned_exclusive": {
+      "test_edits": 7,
+      "net_by_fold": [
+        -3,
+        -3,
+        0,
+        1,
+        -2,
+        -1,
+        0,
+        -1
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 6,
+          "harmed": 15
+        },
+        "missing": {
+          "fixed": 6,
+          "harmed": 15
+        },
+        "missing_paid": {
+          "fixed": 4,
+          "harmed": 14
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 2
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 1
+        }
+      }
+    },
+    "two_deck_estimates": {
+      "test_edits": 3,
+      "net_by_fold": [
+        0,
+        -1,
+        0,
+        1,
+        0,
+        -2,
+        0,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "missing": {
+          "fixed": 1,
+          "harmed": 3
+        },
+        "missing_paid": {
+          "fixed": 0,
+          "harmed": 1
+        },
+        "fresh": {
+          "fixed": 0,
+          "harmed": 0
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    },
+    "censor_only": {
+      "test_edits": 8,
+      "net_by_fold": [
+        1,
+        1,
+        1,
+        0,
+        -1,
+        1,
+        1,
+        0
+      ],
+      "scopes": {
+        "all": {
+          "fixed": 12,
+          "harmed": 8
+        },
+        "missing": {
+          "fixed": 12,
+          "harmed": 8
+        },
+        "missing_paid": {
+          "fixed": 8,
+          "harmed": 5
+        },
+        "fresh": {
+          "fixed": 1,
+          "harmed": 2
+        },
+        "common31": {
+          "fixed": 0,
+          "harmed": 0
+        }
+      }
+    }
+  }
+}
