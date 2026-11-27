@@ -11,7 +11,6 @@ from threadpoolctl import threadpool_limits
 
 from full_roster_booking_validation_n23 import ROOT
 from manifest_activity_transitions_n27 import design
-from price_implied_deck_n26 import FEES
 from repeated_archive_misses_n26 import ART, cohort, count
 from unanimous_error_reach_n27 import inputs
 
@@ -68,6 +67,13 @@ def transfer(prior, evidence, bookings):
     return result
 
 
+def passenger_matrix(frame):
+    reg, act = design(frame)
+    planet = frame.HomePlanet.fillna('?')
+    return np.column_stack([reg, act, *[act * planet.eq(p).to_numpy()[:,None] for p in ['Earth','Europa']],
+                            frame.PassengerId.str.split('_').str[1].astype(int).to_numpy()/8])
+
+
 def run():
     raw, frame, y, g, fold, first, changed, _, opinions, _ = inputs()
     n = len(y)
@@ -84,10 +90,7 @@ def run():
     prior_logit = np.where(parent, 1., -1.) * np.maximum(1e-6, abs(logit(references.clip(.002,.998))))
     prior = expit(prior_logit)
     np.testing.assert_array_equal(prior >= .5, parent)
-    reg, act = design(frame)
-    planet = frame.HomePlanet.fillna('?')
-    x = np.column_stack([reg, act, *[act * planet.eq(p).to_numpy()[:,None] for p in ['Earth','Europa']],
-                         frame.PassengerId.str.split('_').str[1].astype(int).to_numpy()/8])
+    x = passenger_matrix(frame)
     seq = np.zeros(n, int)
     for k, ids in enumerate(np.array_split(np.unique(g), 8)):
         seq[np.isin(g, ids)] = k
