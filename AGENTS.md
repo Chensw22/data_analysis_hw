@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 28 日 22:35 北京时间，主账号前四份正式成绩依次为多人条件分配 82.183%、完整账单逐项遮盖 82.370%、登记消费分歧版 82.277%、独立八人架构版 82.230%。当日已用 4 次，剩余 6 次。当前最佳 82.370%，第 98 / 2,221，第三名 84.264%。正式回执见下述四项在 reports/nov23_matched_learning_curve/RESULTS.md 中的链接。
+
 - 11 月 28 日 22:26 北京时间，56 人条件分配版已完成（59056549），公开得分 82.183%。本次提交后官方剩余 9 次。最佳仍为 82.370%，第 98 / 2,221 名，第三名 84.264%。下方 27 日等待任务已结束。见 reports/proposal_n27_conditional_party_allocation/followup_result.json。
 
 - 11 月 27 日 09:54 北京时间，主账号官方剩余 0 次。已冻结多人订单条件分配版，相对 82.370% 方向版改判 48 笔订单中的 56 人。随机、连续整单留出分别 44 修 30 伤、40 修 29 伤，历史档案外没有改判。Mac 单次任务 com.chensw22.spaceship.conditionalparty56.once 已启动，冻结提交 d343e55f08d5a118b20b8a1a3a5c5b8eba4b02e8。执行进度以 artifacts/proposal_n27_conditional_party_allocation/queue_status.json、launchctl 和官方回执为准，上传前弹窗。
