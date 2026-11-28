@@ -1,0 +1,257 @@
+{
+  "n": 8693,
+  "known_rows": 8532,
+  "base_13": 0.8116875647072357,
+  "augmented_18": 0.8104221787645232,
+  "vs_13": {
+    "fixed": 196,
+    "harmed": 207
+  },
+  "parent_sha": "896917528f6b3a49a415a467379ef34fc7b5de42eb42a4b3469467685ebd6d04",
+  "parent_known": 0.8318096577590248,
+  "rules": {
+    "standalone": {
+      "all": {
+        "fixed": 231,
+        "harmed": 371
+      },
+      "fresh": {
+        "fixed": 31,
+        "harmed": 50
+      },
+      "seven": {
+        "fixed": 15,
+        "harmed": 25
+      },
+      "four": {
+        "fixed": 171,
+        "harmed": 319
+      },
+      "four_and_seven": {
+        "fixed": 13,
+        "harmed": 22
+      },
+      "known_accuracy": 0.8154008438818565,
+      "fold_net": [
+        -10,
+        -18,
+        -23,
+        -17,
+        -24,
+        -7,
+        -17,
+        -24
+      ]
+    },
+    "new_dissent": {
+      "all": {
+        "fixed": 89,
+        "harmed": 135
+      },
+      "fresh": {
+        "fixed": 14,
+        "harmed": 16
+      },
+      "seven": {
+        "fixed": 12,
+        "harmed": 20
+      },
+      "four": {
+        "fixed": 74,
+        "harmed": 121
+      },
+      "four_and_seven": {
+        "fixed": 10,
+        "harmed": 18
+      },
+      "known_accuracy": 0.826418190342241,
+      "fold_net": [
+        1,
+        -8,
+        -6,
+        -7,
+        -14,
+        -2,
+        -8,
+        -2
+      ]
+    },
+    "increment": {
+      "all": {
+        "fixed": 105,
+        "harmed": 140
+      },
+      "fresh": {
+        "fixed": 18,
+        "harmed": 20
+      },
+      "seven": {
+        "fixed": 8,
+        "harmed": 14
+      },
+      "four": {
+        "fixed": 76,
+        "harmed": 118
+      },
+      "four_and_seven": {
+        "fixed": 6,
+        "harmed": 11
+      },
+      "known_accuracy": 0.8277074542897328,
+      "fold_net": [
+        1,
+        -5,
+        -8,
+        -3,
+        -12,
+        -3,
+        -4,
+        -1
+      ]
+    }
+  },
+  "provenance": {
+    "backbone": "Frozen TabICL v2, two estimators, CPU",
+    "raw_inputs": 13,
+    "additional_inputs": 5,
+    "name_used": false,
+    "comparison": "Same eight shuffled whole-booking folds, seeds and contexts. Original 13-field fold 0 recomputed and matched cache within 2e-6.",
+    "parent": "proposal_n27_directional_foundation",
+    "known_subset": "8,532 rows with verified incumbent local decisions",
+    "rank_reference": "Training bookings only. All members of the same booking removed for context ranks. Global, origin, origin/nonzero-service-count, then origin/count/age-band smoothed midranks.",
+    "rules": "standalone uses the 18 fields alone; new_dissent only for disagreements introduced by the five new fields; increment applies the new-minus-old logit change to a signed median reference confidence.",
+    "caution": "Single eight-fold split, previously examined competition labels. Reuse of the same folds does not constitute an independent second validation."
+  },
+  "cohorts": {
+    "all": {
+      "rows": 8532,
+      "parent_errors": 1435,
+      "base13_vs_parent": {
+        "fixed": 194,
+        "harmed": 318
+      },
+      "aug18_vs_parent": {
+        "fixed": 231,
+        "harmed": 371
+      },
+      "net_changes_18_vs_13": {
+        "fixed": 171,
+        "harmed": 187
+      }
+    },
+    "fresh": {
+      "rows": 1033,
+      "parent_errors": 193,
+      "base13_vs_parent": {
+        "fixed": 24,
+        "harmed": 46
+      },
+      "aug18_vs_parent": {
+        "fixed": 31,
+        "harmed": 50
+      },
+      "net_changes_18_vs_13": {
+        "fixed": 26,
+        "harmed": 23
+      }
+    },
+    "seven": {
+      "rows": 7020,
+      "parent_errors": 862,
+      "base13_vs_parent": {
+        "fixed": 8,
+        "harmed": 14
+      },
+      "aug18_vs_parent": {
+        "fixed": 15,
+        "harmed": 25
+      },
+      "net_changes_18_vs_13": {
+        "fixed": 21,
+        "harmed": 25
+      }
+    },
+    "four": {
+      "rows": 8291,
+      "parent_errors": 1307,
+      "base13_vs_parent": {
+        "fixed": 142,
+        "harmed": 267
+      },
+      "aug18_vs_parent": {
+        "fixed": 171,
+        "harmed": 319
+      },
+      "net_changes_18_vs_13": {
+        "fixed": 143,
+        "harmed": 166
+      }
+    },
+    "four_and_seven": {
+      "rows": 6977,
+      "parent_errors": 836,
+      "base13_vs_parent": {
+        "fixed": 8,
+        "harmed": 13
+      },
+      "aug18_vs_parent": {
+        "fixed": 13,
+        "harmed": 22
+      },
+      "net_changes_18_vs_13": {
+        "fixed": 19,
+        "harmed": 23
+      }
+    }
+  },
+  "standalone_fold_scores": [
+    {
+      "fold": 0,
+      "n": 1056,
+      "base13": 863,
+      "aug18": 870
+    },
+    {
+      "fold": 1,
+      "n": 1053,
+      "base13": 863,
+      "aug18": 861
+    },
+    {
+      "fold": 2,
+      "n": 1130,
+      "base13": 928,
+      "aug18": 924
+    },
+    {
+      "fold": 3,
+      "n": 1073,
+      "base13": 873,
+      "aug18": 861
+    },
+    {
+      "fold": 4,
+      "n": 1122,
+      "base13": 914,
+      "aug18": 908
+    },
+    {
+      "fold": 5,
+      "n": 1072,
+      "base13": 850,
+      "aug18": 854
+    },
+    {
+      "fold": 6,
+      "n": 1124,
+      "base13": 903,
+      "aug18": 904
+    },
+    {
+      "fold": 7,
+      "n": 1063,
+      "base13": 862,
+      "aug18": 863
+    }
+  ]
+}
