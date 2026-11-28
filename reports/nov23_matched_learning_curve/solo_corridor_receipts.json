@@ -1,0 +1,273 @@
+{
+  "payer_blind_bill_prediction": {
+    "baseline": {
+      "n": 6590,
+      "mse": 7.161660666818251,
+      "mse_by_service": {
+        "RoomService": 6.744751166121914,
+        "FoodCourt": 6.6674642438941865,
+        "ShoppingMall": 7.260616131117249,
+        "Spa": 7.82631040193048,
+        "VRDeck": 7.309161391027457
+      }
+    },
+    "corridor": {
+      "n": 6590,
+      "mse": 7.847846626404045,
+      "mse_by_service": {
+        "RoomService": 7.25893229156374,
+        "FoodCourt": 7.255863167433838,
+        "ShoppingMall": 8.061893889115417,
+        "Spa": 8.614175173305417,
+        "VRDeck": 8.048368610601818
+      }
+    },
+    "displaced": {
+      "n": 6590,
+      "mse": 8.03427103605611,
+      "mse_by_service": {
+        "RoomService": 7.526311132376405,
+        "FoodCourt": 7.4696906003243235,
+        "ShoppingMall": 8.118556539484807,
+        "Spa": 8.871247384803407,
+        "VRDeck": 8.185549523291597
+      }
+    }
+  },
+  "known_target": 1554,
+  "shared_errors_with_local_donors": 185,
+  "random": {
+    "accuracy": {
+      "base": 0.7876447876447876,
+      "real": 0.7773487773487774,
+      "displaced": 0.7722007722007722
+    },
+    "rules": {
+      "real": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 77,
+            "harmed": 98
+          },
+          "fresh": {
+            "fixed": 22,
+            "harmed": 12
+          },
+          "shared": {
+            "fixed": 23,
+            "harmed": 49
+          }
+        },
+        "fold_net": [
+          9,
+          -4,
+          -8,
+          -6,
+          -8,
+          -1,
+          1,
+          -4
+        ],
+        "test": 90
+      },
+      "displaced": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 62,
+            "harmed": 91
+          },
+          "fresh": {
+            "fixed": 13,
+            "harmed": 17
+          },
+          "shared": {
+            "fixed": 22,
+            "harmed": 34
+          }
+        },
+        "fold_net": [
+          3,
+          0,
+          -8,
+          -11,
+          -3,
+          -5,
+          0,
+          -5
+        ],
+        "test": 83
+      },
+      "only_real": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 28,
+            "harmed": 43
+          },
+          "fresh": {
+            "fixed": 7,
+            "harmed": 7
+          },
+          "shared": {
+            "fixed": 10,
+            "harmed": 27
+          }
+        },
+        "fold_net": [
+          0,
+          -6,
+          -3,
+          2,
+          -4,
+          -3,
+          -1,
+          0
+        ],
+        "test": 33
+      },
+      "supported_increment": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 32,
+            "harmed": 42
+          },
+          "fresh": {
+            "fixed": 9,
+            "harmed": 5
+          },
+          "shared": {
+            "fixed": 8,
+            "harmed": 24
+          }
+        },
+        "fold_net": [
+          1,
+          -4,
+          -5,
+          0,
+          -4,
+          2,
+          1,
+          -1
+        ],
+        "test": 33
+      }
+    }
+  },
+  "ordered": {
+    "accuracy": {
+      "base": 0.7734877734877735,
+      "real": 0.7709137709137709,
+      "displaced": 0.7631917631917632
+    },
+    "rules": {
+      "real": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 77,
+            "harmed": 106
+          },
+          "fresh": {
+            "fixed": 18,
+            "harmed": 22
+          },
+          "shared": {
+            "fixed": 27,
+            "harmed": 45
+          }
+        },
+        "fold_net": [
+          -6,
+          9,
+          -12,
+          -3,
+          -4,
+          -2,
+          -5,
+          -6
+        ],
+        "test": 90
+      },
+      "displaced": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 59,
+            "harmed": 101
+          },
+          "fresh": {
+            "fixed": 11,
+            "harmed": 14
+          },
+          "shared": {
+            "fixed": 18,
+            "harmed": 41
+          }
+        },
+        "fold_net": [
+          -7,
+          -1,
+          -8,
+          -5,
+          -5,
+          -7,
+          -4,
+          -5
+        ],
+        "test": 83
+      },
+      "only_real": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 22,
+            "harmed": 31
+          },
+          "fresh": {
+            "fixed": 9,
+            "harmed": 9
+          },
+          "shared": {
+            "fixed": 10,
+            "harmed": 15
+          }
+        },
+        "fold_net": [
+          0,
+          2,
+          -5,
+          -2,
+          -1,
+          1,
+          -1,
+          -3
+        ],
+        "test": 33
+      },
+      "supported_increment": {
+        "scopes": {
+          "solo_unpaid": {
+            "fixed": 33,
+            "harmed": 29
+          },
+          "fresh": {
+            "fixed": 10,
+            "harmed": 6
+          },
+          "shared": {
+            "fixed": 12,
+            "harmed": 12
+          }
+        },
+        "fold_net": [
+          3,
+          8,
+          -4,
+          -2,
+          0,
+          0,
+          -1,
+          0
+        ],
+        "test": 33
+      }
+    }
+  }
+}
