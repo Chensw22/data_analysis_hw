@@ -1,5 +1,7 @@
 # 项目约定
 
+- 11 月 28 日 22:26 北京时间，56 人条件分配版已完成（59056549），公开得分 82.183%。本次提交后官方剩余 9 次。最佳仍为 82.370%，第 98 / 2,221 名，第三名 84.264%。下方 27 日等待任务已结束。见 reports/proposal_n27_conditional_party_allocation/followup_result.json。
+
 - 11 月 27 日 09:54 北京时间，主账号官方剩余 0 次。已冻结多人订单条件分配版，相对 82.370% 方向版改判 48 笔订单中的 56 人。随机、连续整单留出分别 44 修 30 伤、40 修 29 伤，历史档案外没有改判。Mac 单次任务 com.chensw22.spaceship.conditionalparty56.once 已启动，冻结提交 d343e55f08d5a118b20b8a1a3a5c5b8eba4b02e8。执行进度以 artifacts/proposal_n27_conditional_party_allocation/queue_status.json、launchctl 和官方回执为准，上传前弹窗。
 
 - 11 月 27 日 09:28 北京时间，主账号本轮 10 次全部正式评分，可用额度 0。原先 81.739%，本轮最高 82.370%，方向校准版、按账单分流版和 18 订单联合版同分。第 98 / 2,221 名，第三名 84.054%。最后的 59 人版得 82.160%（58975157）。严格超过 85% 按兼容的 4,277 人分母还差净判对 113 人。本地明显提升即可提交，83% 无硬性门槛。全日核查见 reports/nov23_matched_learning_curve/official_submissions_2026-11-27.json。
