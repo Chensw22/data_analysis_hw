@@ -1,0 +1,1057 @@
+{
+  "official": {
+    "56": {
+      "ref": "59056549",
+      "score": "0.82183",
+      "sha256": "03ef0f3c158db1e9f6e83f8d275327e02c299b6dc3bb95d53cbf72802ee5ab53"
+    },
+    "16": {
+      "ref": "58973378",
+      "score": "0.82370",
+      "sha256": "896917528f6b3a49a415a467379ef34fc7b5de42eb42a4b3469467685ebd6d04"
+    },
+    "68": {
+      "ref": "58974639",
+      "score": "0.82370",
+      "sha256": "ff0d13280ff95de2ebc432bc82ec3e59d38ca4542ec2425c4b7e7a64957d366e"
+    },
+    "18": {
+      "ref": "58975011",
+      "score": "0.82370",
+      "sha256": "0fbb1625d3d18ec16cb797d186b40c5f6afd6378aa46f5131b30a9386c0e7bb5"
+    },
+    "59": {
+      "ref": "58975157",
+      "score": "0.82160",
+      "sha256": "911d1bd9abf1ab37283852ab5cc924e6488dbce5f528e7cdde1baae08584fba4"
+    }
+  },
+  "test_comparisons": {
+    "16": {
+      "distance": 56,
+      "changed_vs_16": 0,
+      "overlap_passengers": 0,
+      "overlapping_orders": 0,
+      "candidate_vs_other": {
+        "passengers": 56,
+        "orders": 48,
+        "population_size": {
+          "2": 21,
+          "3": 11,
+          "4": 3,
+          "5": 6,
+          "6": 4,
+          "7": 6,
+          "8": 5
+        },
+        "edits_per_order": {
+          "1": 41,
+          "2": 6,
+          "3": 1
+        },
+        "to_true": 28,
+        "to_false": 28
+      },
+      "official_net": -8,
+      "public_fixed": 24,
+      "public_harmed": 32
+    },
+    "68": {
+      "distance": 110,
+      "changed_vs_16": 68,
+      "overlap_passengers": 7,
+      "overlapping_orders": 8,
+      "candidate_vs_other": {
+        "passengers": 110,
+        "orders": 102,
+        "population_size": {
+          "1": 40,
+          "2": 24,
+          "3": 20,
+          "4": 4,
+          "5": 6,
+          "6": 4,
+          "7": 6,
+          "8": 6
+        },
+        "edits_per_order": {
+          "1": 96,
+          "2": 4,
+          "3": 2
+        },
+        "to_true": 45,
+        "to_false": 65
+      },
+      "official_net": -8,
+      "public_fixed": 51,
+      "public_harmed": 59
+    },
+    "18": {
+      "distance": 68,
+      "changed_vs_16": 18,
+      "overlap_passengers": 3,
+      "overlapping_orders": 4,
+      "candidate_vs_other": {
+        "passengers": 68,
+        "orders": 61,
+        "population_size": {
+          "1": 12,
+          "2": 19,
+          "3": 13,
+          "4": 3,
+          "5": 5,
+          "6": 4,
+          "7": 6,
+          "8": 6
+        },
+        "edits_per_order": {
+          "1": 56,
+          "2": 3,
+          "3": 2
+        },
+        "to_true": 41,
+        "to_false": 27
+      },
+      "official_net": -8,
+      "public_fixed": 30,
+      "public_harmed": 38
+    },
+    "59": {
+      "distance": 89,
+      "changed_vs_16": 59,
+      "overlap_passengers": 13,
+      "overlapping_orders": 14,
+      "candidate_vs_other": {
+        "passengers": 89,
+        "orders": 81,
+        "population_size": {
+          "1": 12,
+          "2": 29,
+          "3": 19,
+          "4": 5,
+          "5": 6,
+          "6": 5,
+          "7": 6,
+          "8": 7
+        },
+        "edits_per_order": {
+          "1": 75,
+          "2": 4,
+          "3": 2
+        },
+        "to_true": 47,
+        "to_false": 42
+      },
+      "official_net": 1,
+      "public_fixed": 45,
+      "public_harmed": 44
+    }
+  },
+  "known_rows": 8532,
+  "unknown_rows": 161,
+  "fresh_distribution": {
+    "all": 1033,
+    "multi": 55,
+    "three_or_more": 0
+  },
+  "random": {
+    "against": {
+      "16": {
+        "all": {
+          "rows": 8532,
+          "edits": 74,
+          "fixed": 44,
+          "harmed": 30
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 74,
+          "fixed": 44,
+          "harmed": 30
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 5,
+          "fixed": 1,
+          "harmed": 4
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 57,
+          "fixed": 37,
+          "harmed": 20
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 57,
+          "fixed": 37,
+          "harmed": 20
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 48,
+          "fixed": 37,
+          "harmed": 11
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 9,
+          "fixed": 0,
+          "harmed": 9
+        },
+        "composition": {
+          "passengers": 74,
+          "orders": 65,
+          "population_size": {
+            "2": 14,
+            "3": 20,
+            "4": 6,
+            "5": 7,
+            "6": 9,
+            "7": 8,
+            "8": 10
+          },
+          "edits_per_order": {
+            "1": 56,
+            "2": 9
+          },
+          "to_true": 51,
+          "to_false": 23
+        },
+        "conditional_on_cached_decisions_unknown_rows": 18,
+        "fold_net": [
+          3,
+          0,
+          4,
+          -1,
+          2,
+          4,
+          -1,
+          3
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -333,
+          367
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 17,
+          "fixed": 7,
+          "harmed": 10
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4059,
+            "edits": 23,
+            "fixed": 11,
+            "harmed": 12
+          },
+          "True": {
+            "rows": 4473,
+            "edits": 51,
+            "fixed": 33,
+            "harmed": 18
+          }
+        },
+        "all_fold_net": 14,
+        "orders_helped_tied_harmed": [
+          36,
+          5,
+          24
+        ],
+        "local_net_booking_bootstrap_95": [
+          -3.0,
+          31.0
+        ],
+        "public_projection": {
+          "expected_net": 6.910256624221802,
+          "predictive_95": [
+            -14.0,
+            26.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            23,
+            51
+          ],
+          "test_changes": [
+            28,
+            28
+          ]
+        }
+      },
+      "18": {
+        "all": {
+          "rows": 8532,
+          "edits": 106,
+          "fixed": 55,
+          "harmed": 51
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 7,
+          "fixed": 1,
+          "harmed": 6
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 84,
+          "fixed": 47,
+          "harmed": 37
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 13,
+          "fixed": 4,
+          "harmed": 9
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 87,
+          "fixed": 48,
+          "harmed": 39
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 65,
+          "fixed": 40,
+          "harmed": 25
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 53,
+          "fixed": 37,
+          "harmed": 16
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 12,
+          "fixed": 3,
+          "harmed": 9
+        },
+        "composition": {
+          "passengers": 106,
+          "orders": 96,
+          "population_size": {
+            "1": 22,
+            "2": 15,
+            "3": 26,
+            "4": 6,
+            "5": 8,
+            "6": 9,
+            "7": 9,
+            "8": 11
+          },
+          "edits_per_order": {
+            "1": 86,
+            "2": 10
+          },
+          "to_true": 71,
+          "to_false": 35
+        },
+        "conditional_on_cached_decisions_unknown_rows": 20,
+        "fold_net": [
+          -2,
+          0,
+          5,
+          -5,
+          2,
+          2,
+          0,
+          2
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -341,
+          359
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 19,
+          "fixed": 7,
+          "harmed": 12
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4059,
+            "edits": 35,
+            "fixed": 16,
+            "harmed": 19
+          },
+          "True": {
+            "rows": 4473,
+            "edits": 71,
+            "fixed": 39,
+            "harmed": 32
+          }
+        },
+        "all_fold_net": 4,
+        "orders_helped_tied_harmed": [
+          46,
+          6,
+          44
+        ],
+        "local_net_booking_bootstrap_95": [
+          -16.0,
+          24.0
+        ],
+        "public_projection": {
+          "expected_net": 1.7361111044883728,
+          "predictive_95": [
+            -20.0,
+            24.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            35,
+            71
+          ],
+          "test_changes": [
+            27,
+            41
+          ]
+        }
+      },
+      "68": {
+        "all": {
+          "rows": 8532,
+          "edits": 233,
+          "fixed": 120,
+          "harmed": 113
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 21,
+          "fixed": 9,
+          "harmed": 12
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 124,
+          "fixed": 64,
+          "harmed": 60
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 27,
+          "fixed": 9,
+          "harmed": 18
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 1,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 212,
+          "fixed": 112,
+          "harmed": 100
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 103,
+          "fixed": 56,
+          "harmed": 47
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 84,
+          "fixed": 46,
+          "harmed": 38
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 19,
+          "fixed": 10,
+          "harmed": 9
+        },
+        "composition": {
+          "passengers": 233,
+          "orders": 215,
+          "population_size": {
+            "1": 109,
+            "2": 37,
+            "3": 24,
+            "4": 9,
+            "5": 11,
+            "6": 8,
+            "7": 24,
+            "8": 11
+          },
+          "edits_per_order": {
+            "1": 200,
+            "2": 12,
+            "3": 3
+          },
+          "to_true": 131,
+          "to_false": 102
+        },
+        "conditional_on_cached_decisions_unknown_rows": 18,
+        "fold_net": [
+          8,
+          -1,
+          4,
+          -5,
+          2,
+          3,
+          -3,
+          -1
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -338,
+          362
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 21,
+          "fixed": 8,
+          "harmed": 13
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4059,
+            "edits": 102,
+            "fixed": 53,
+            "harmed": 49
+          },
+          "True": {
+            "rows": 4473,
+            "edits": 131,
+            "fixed": 67,
+            "harmed": 64
+          }
+        },
+        "all_fold_net": 7,
+        "orders_helped_tied_harmed": [
+          106,
+          7,
+          102
+        ],
+        "local_net_booking_bootstrap_95": [
+          -22.0,
+          37.0
+        ],
+        "public_projection": {
+          "expected_net": 3.5469967126846313,
+          "predictive_95": [
+            -24.0,
+            30.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            102,
+            131
+          ],
+          "test_changes": [
+            65,
+            45
+          ]
+        }
+      }
+    },
+    "all_three_positive_in_shared_booking_bootstraps": 0.49883333333333335,
+    "order_cutoffs": [
+      "Each of the eight folds excludes whole bookings in this allocation model. Both protocols share the original parent and foundation prior."
+    ]
+  },
+  "ordered": {
+    "against": {
+      "16": {
+        "all": {
+          "rows": 8532,
+          "edits": 69,
+          "fixed": 40,
+          "harmed": 29
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 69,
+          "fixed": 40,
+          "harmed": 29
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 6,
+          "fixed": 3,
+          "harmed": 3
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 50,
+          "fixed": 31,
+          "harmed": 19
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 50,
+          "fixed": 31,
+          "harmed": 19
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 39,
+          "fixed": 31,
+          "harmed": 8
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 11,
+          "fixed": 0,
+          "harmed": 11
+        },
+        "composition": {
+          "passengers": 69,
+          "orders": 63,
+          "population_size": {
+            "2": 12,
+            "3": 23,
+            "4": 5,
+            "5": 6,
+            "6": 9,
+            "7": 7,
+            "8": 7
+          },
+          "edits_per_order": {
+            "1": 58,
+            "2": 4,
+            "3": 1
+          },
+          "to_true": 46,
+          "to_false": 23
+        },
+        "conditional_on_cached_decisions_unknown_rows": 17,
+        "fold_net": [
+          1,
+          5,
+          2,
+          1,
+          -2,
+          0,
+          5,
+          -1
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -338,
+          362
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 19,
+          "fixed": 9,
+          "harmed": 10
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4064,
+            "edits": 23,
+            "fixed": 11,
+            "harmed": 12
+          },
+          "True": {
+            "rows": 4468,
+            "edits": 46,
+            "fixed": 29,
+            "harmed": 17
+          }
+        },
+        "all_fold_net": 11,
+        "orders_helped_tied_harmed": [
+          35,
+          2,
+          26
+        ],
+        "local_net_booking_bootstrap_95": [
+          -5.0,
+          27.0
+        ],
+        "public_projection": {
+          "expected_net": 5.9822680950164795,
+          "predictive_95": [
+            -14.0,
+            26.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            23,
+            46
+          ],
+          "test_changes": [
+            28,
+            28
+          ]
+        }
+      },
+      "18": {
+        "all": {
+          "rows": 8532,
+          "edits": 104,
+          "fixed": 52,
+          "harmed": 52
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 6,
+          "fixed": 1,
+          "harmed": 5
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 78,
+          "fixed": 42,
+          "harmed": 36
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 16,
+          "fixed": 7,
+          "harmed": 9
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 0,
+          "fixed": 0,
+          "harmed": 0
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 85,
+          "fixed": 44,
+          "harmed": 41
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 59,
+          "fixed": 34,
+          "harmed": 25
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 46,
+          "fixed": 32,
+          "harmed": 14
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 13,
+          "fixed": 2,
+          "harmed": 11
+        },
+        "composition": {
+          "passengers": 104,
+          "orders": 97,
+          "population_size": {
+            "1": 26,
+            "2": 14,
+            "3": 27,
+            "4": 6,
+            "5": 6,
+            "6": 10,
+            "7": 7,
+            "8": 8
+          },
+          "edits_per_order": {
+            "1": 90,
+            "2": 7
+          },
+          "to_true": 73,
+          "to_false": 31
+        },
+        "conditional_on_cached_decisions_unknown_rows": 20,
+        "fold_net": [
+          0,
+          3,
+          2,
+          0,
+          -2,
+          -3,
+          6,
+          -6
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -347,
+          353
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 19,
+          "fixed": 8,
+          "harmed": 11
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4064,
+            "edits": 31,
+            "fixed": 13,
+            "harmed": 18
+          },
+          "True": {
+            "rows": 4468,
+            "edits": 73,
+            "fixed": 39,
+            "harmed": 34
+          }
+        },
+        "all_fold_net": 0,
+        "orders_helped_tied_harmed": [
+          46,
+          4,
+          47
+        ],
+        "local_net_booking_bootstrap_95": [
+          -20.0,
+          19.0
+        ],
+        "public_projection": {
+          "expected_net": -1.4484789371490479,
+          "predictive_95": [
+            -22.0,
+            20.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            31,
+            73
+          ],
+          "test_changes": [
+            27,
+            41
+          ]
+        }
+      },
+      "68": {
+        "all": {
+          "rows": 8532,
+          "edits": 232,
+          "fixed": 118,
+          "harmed": 114
+        },
+        "fresh": {
+          "rows": 1033,
+          "edits": 27,
+          "fixed": 15,
+          "harmed": 12
+        },
+        "multi": {
+          "rows": 3797,
+          "edits": 123,
+          "fixed": 61,
+          "harmed": 62
+        },
+        "seven": {
+          "rows": 7020,
+          "edits": 29,
+          "fixed": 12,
+          "harmed": 17
+        },
+        "prior_31": {
+          "rows": 3861,
+          "edits": 1,
+          "fixed": 0,
+          "harmed": 1
+        },
+        "complete_known_orders": {
+          "rows": 8343,
+          "edits": 209,
+          "fixed": 108,
+          "harmed": 101
+        },
+        "complete_multi": {
+          "rows": 3608,
+          "edits": 100,
+          "fixed": 51,
+          "harmed": 49
+        },
+        "posthoc_order_with_parent16_error": {
+          "rows": 1247,
+          "edits": 78,
+          "fixed": 39,
+          "harmed": 39
+        },
+        "posthoc_order_parent16_all_correct": {
+          "rows": 2361,
+          "edits": 22,
+          "fixed": 12,
+          "harmed": 10
+        },
+        "composition": {
+          "passengers": 232,
+          "orders": 217,
+          "population_size": {
+            "1": 109,
+            "2": 35,
+            "3": 29,
+            "4": 8,
+            "5": 11,
+            "6": 8,
+            "7": 23,
+            "8": 9
+          },
+          "edits_per_order": {
+            "1": 206,
+            "2": 7,
+            "3": 4
+          },
+          "to_true": 133,
+          "to_false": 99
+        },
+        "conditional_on_cached_decisions_unknown_rows": 17,
+        "fold_net": [
+          2,
+          -3,
+          4,
+          -6,
+          0,
+          -2,
+          6,
+          3
+        ],
+        "unrestricted_unknown_order_bounds": [
+          -343,
+          357
+        ],
+        "known_members_in_partly_unknown_orders": {
+          "rows": 189,
+          "edits": 23,
+          "fixed": 10,
+          "harmed": 13
+        },
+        "by_new_class": {
+          "False": {
+            "rows": 4064,
+            "edits": 99,
+            "fixed": 53,
+            "harmed": 46
+          },
+          "True": {
+            "rows": 4468,
+            "edits": 133,
+            "fixed": 65,
+            "harmed": 68
+          }
+        },
+        "all_fold_net": 4,
+        "orders_helped_tied_harmed": [
+          107,
+          4,
+          106
+        ],
+        "local_net_booking_bootstrap_95": [
+          -25.0,
+          33.0
+        ],
+        "public_projection": {
+          "expected_net": 3.5425415635108948,
+          "predictive_95": [
+            -24.0,
+            30.0
+          ],
+          "directions": [
+            "to_false",
+            "to_true"
+          ],
+          "local_support": [
+            99,
+            133
+          ],
+          "test_changes": [
+            65,
+            45
+          ]
+        }
+      }
+    },
+    "all_three_positive_in_shared_booking_bootstraps": 0.35008333333333336,
+    "order_cutoffs": [
+      "Each of the eight folds excludes whole bookings in this allocation model. Both protocols share the original parent and foundation prior."
+    ]
+  },
+  "method_notes": [
+    "Compared actual 56-child and actual other release decisions directly. The candidate is always attached to the registered 16-change parent; no parent replacement or re-optimization.",
+    "Training uses the observed total transported in labeled training orders for a conditional likelihood. Query allocation sums over every possible total given the frozen probabilities. Decision reconstruction for both OOF protocols and 4,277 competition passengers reads no query outcomes. Full-coverage denominators compare wrong-to-right and right-to-wrong.",
+    "Orders containing parent16 errors are a diagnostic outcome-defined slice only. Its complement is included in the primary paired comparison. Restricting to this slice or only to wrong rows gives an optimistic impression. The rule and four candidate variants were examined using the same validation set; the paired intervals condition on that choice.",
+    "Bootstrap resamples whole known bookings jointly across contrasts. The separate prospective-style interval conditions on test changes to each output class and uses common within-order outcome ranks, as in paired_public_transfer_uncertainty_n27.py. The official result is already known; these are descriptive retrospective checks.",
+    "The official net against each score-tied parent is the same but the number of changed rows, and hence aggregate fixes and harms, differ. No test labels or individual test outcomes are reconstructed. Unknown OOF baseline rows are excluded; unrestricted numerical bounds are conservative."
+  ],
+  "selection_sensitivity": {
+    "random": {
+      "original_four_rules": {
+        "ordinary": -42,
+        "conditioned": -31,
+        "increment": 3,
+        "supported_increment": 14
+      },
+      "earlier_placebos": {
+        "shuffled_0": -16,
+        "shuffled_1": -1,
+        "shuffled_2": -3,
+        "actual": 14,
+        "actual_and_majority": -2,
+        "actual_without_majority": 16,
+        "shuffled_majority_only": -4
+      }
+    },
+    "ordered": {
+      "original_four_rules": {
+        "ordinary": -46,
+        "conditioned": -37,
+        "increment": -4,
+        "supported_increment": 11
+      },
+      "earlier_placebos": {
+        "shuffled_0": 4,
+        "shuffled_1": 9,
+        "shuffled_2": 16,
+        "actual": 11,
+        "actual_and_majority": 11,
+        "actual_without_majority": 0,
+        "shuffled_majority_only": 2
+      }
+    }
+  }
+}
