@@ -28,6 +28,8 @@ def run():
         ('proposal_n28_unanimous_payment_dispatch', None, [('results',s,BASE,'all') for s in ['random','ordered']]),
         ('proposal_n28_repeated_block_response', STUDIES/'matched_block_response_export_n28.json', [('cohorts','all')]),
     ]
+    for name in ['proposal_n28_joint_foundation_raw','proposal_n28_tied_raw_crosscheck']:
+        sources.append((name,None,[('evidence',s,'all') for s in ['random','ordered']]))
     def submission(name):
         return pd.read_csv(ROOT/'artifacts'/name/'submission.csv').set_index('PassengerId').Transported
     base = submission(BASE)
