@@ -30,6 +30,8 @@ def run():
     ]
     for name in ['proposal_n28_joint_foundation_raw','proposal_n28_tied_raw_crosscheck']:
         sources.append((name,None,[('evidence',s,'all') for s in ['random','ordered']]))
+    sources.append(('proposal_n28_profile_and_bill_review',None,
+                    [('evidence',s,'direction','all') for s in ['random','ordered']]))
     def submission(name):
         return pd.read_csv(ROOT/'artifacts'/name/'submission.csv').set_index('PassengerId').Transported
     base = submission(BASE)
